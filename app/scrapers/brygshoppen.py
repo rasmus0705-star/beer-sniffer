@@ -1,0 +1,126 @@
+import requests
+import re
+from app.utils.detect_type import detect_type
+
+
+def scrape_brygshoppen():
+    items = []
+    page = 1
+
+    allowed_types = {
+        '', 'Quadrupel', 'Frugtøl', 'Gose', 'Tripel', 'Strong Ale', 'Stout',
+        'Kölsch', 'Brown Ale', 'Hvedeøl - Witte', 'Strong Dark Ale', 'Pastry',
+        'Pastry Sour', 'Golden Ale', 'Bock', 'Dark Ale', 'Lambic', 'Barley Wine',
+        'Blonde Ale', 'Belgian Blonde', 'Sour / Berliner Weisse', 'Winter Ale',
+        'Lager', 'Scotch Ale', 'Saison - Farmhouse Ale', 'Dubbel', 'Pastry Stout',
+        'Pale Ale', 'Pilsner', 'Blond', 'India Pale Ale (IPA)', 'Imperial Stout',
+        'Flanders Red Ale', 'Sour', 'Porter - Stout'
+    }
+
+    skip_keywords = [
+        "glas", "glass", "krus", "opener", "trøje", "t-shirt",
+        "cap", "hat", "gave", "gavekort", "merchandise", "sodavand",
+        "juice", "spiritus", "whisky", "gin", "rom", "vin", "wine",
+        "snack", "chips", "nødder", "tilbehør", "renser", "brush",
+        "børste", "tap", "pumpe", "slange", "pant", "ølglas",
+        "chokolade", "chocolate", "fustage", "fadøl", "keg", "anker"
+    ]
+
+    while True:
+        url = f"https://brygshoppen.dk/products.json?limit=250&page={page}"
+        response = requests.get(url)
+        data = response.json()
+
+        products = data.get("products", [])
+        if not products:
+            break
+
+        for product in products:
+            name = product.get("title")
+            if not name:
+                continue
+
+            if any(kw in name.lower() for kw in skip_keywords):
+                continue
+
+            product_type = product.get("product_type", "")
+            if product_type not in allowed_types:
+                continue
+
+            variants = product.get("variants", [])
+            if not variants:
+                continue
+
+            variant = variants[0]
+
+            if not variant.get("available"):
+                continue
+
+            try:
+                price = float(variant.get("price"))
+            except:
+                continue
+
+            old_price = variant.get("compare_at_price")
+            if old_price:
+                old_price = float(old_price)
+
+            discount = None
+            if old_price and old_price > price:
+                discount = round((old_price - price) / old_price * 100, 1)
+
+            handle = product.get("handle")
+            product_url = f"https://brygshoppen.dk/products/{handle}"
+
+            image = None
+            if product.get("image") and product["image"]:
+                image = product["image"].get("src")
+            elif product.get("images") and len(product["images"]) > 0:
+                image = product["images"][0].get("src")
+
+            volume = None
+            volume_match = re.search(r"(\d+(?:[.,]\d+)?)\s*(cl|ml|l)\b", name.lower())
+            if volume_match:
+                val = float(volume_match.group(1).replace(",", "."))
+                unit = volume_match.group(2)
+                if unit == "l":
+                    val = val * 100
+                elif unit == "ml":
+                    val = val / 10
+                if val > 75:
+                    continue
+                volume = val
+            else:
+                if "33cl" in name.lower():
+                    volume = 33
+                elif "44cl" in name.lower():
+                    volume = 44
+                elif "50cl" in name.lower():
+                    volume = 50
+
+            abv = None
+            match = re.search(r"(\d+[.,]\d+)%", name)
+            if match:
+                abv = float(match.group(1).replace(",", "."))
+
+            item = {
+                "name": name,
+                "price": price,
+                "old_price": old_price,
+                "discount_pct": discount,
+                "url": product_url,
+                "shop_name": "Brygshoppen",
+                "volume_cl": volume,
+                "abv": abv,
+                "image": image,
+                "type": detect_type(name) or (product_type if product_type else None),
+                "brewery": product.get("vendor") or None,
+                "category": "øl",
+            }
+
+            items.append(item)
+
+        print(f"📦 Side {page}: {len(products)} produkter hentet")
+        page += 1
+
+    return items
