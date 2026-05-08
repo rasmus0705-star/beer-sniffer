@@ -19,7 +19,6 @@ def find_best_match(normalized_name, volume, beers):
             best_score = score
             best_beer = beer
 
-    # 🔥 threshold
     if best_score >= 85:
         return best_beer
 
@@ -29,13 +28,19 @@ def find_best_match(normalized_name, volume, beers):
 def ingest_batch(db: Session, items: list[dict]):
     beers = db.query(Beer).all()
 
+    # Slet alle eksisterende priser før vi indsætter nye
+    # Dette forhindrer duplikerede priser
+    shop_names = list(set(item["shop_name"] for item in items))
+    db.query(Price).filter(Price.shop_name.in_(shop_names)).delete(synchronize_session=False)
+    db.commit()
+
     for item in items:
         normalized = normalize_name(item["name"])
         volume = item.get("volume_cl")
 
         beer = find_best_match(normalized, volume, beers)
 
-        # 🔥 create hvis ikke fundet
+        # Opret øl hvis ikke fundet
         if not beer:
             beer = Beer(
                 name=item["name"],
@@ -49,14 +54,13 @@ def ingest_batch(db: Session, items: list[dict]):
             db.add(beer)
             db.commit()
             db.refresh(beer)
-
             beers.append(beer)
 
-        # 🔥 update image hvis mangler
+        # Opdater billede hvis mangler
         if not beer.image and item.get("image"):
             beer.image = item["image"]
 
-        # 🔥 price
+        # Tilføj ny pris
         price = Price(
             beer_id=beer.id,
             shop_name=item["shop_name"],
@@ -68,7 +72,7 @@ def ingest_batch(db: Session, items: list[dict]):
         )
         db.add(price)
 
-        # 🔥 history
+        # Prishistorik — kun hvis prisen har ændret sig
         last = (
             db.query(PriceHistory)
             .filter(PriceHistory.beer_id == beer.id)
@@ -84,7 +88,7 @@ def ingest_batch(db: Session, items: list[dict]):
             )
             db.add(history)
 
-        # 🔥 alerts
+        # Prisalarmer
         alerts = db.query(PriceAlert).filter(
             PriceAlert.beer_id == beer.id,
             PriceAlert.active == True
