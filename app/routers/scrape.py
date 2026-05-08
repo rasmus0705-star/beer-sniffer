@@ -5,7 +5,6 @@ from app.scrapers.brygshoppen import scrape_brygshoppen
 from app.scrapers.agoodcase import scrape_agoodcase
 from app.scrapers.beershoppen import scrape_beershoppen
 from app.scrapers.bestofbeers import scrape_bestofbeers
-from app.scrapers.belgiskbryg import scrape_belgiskbryg
 from app.services.ingest import ingest_batch
 
 router = APIRouter()
@@ -20,7 +19,6 @@ def scrape_all(db: Session = Depends(get_db)):
         ("agoodcase", scrape_agoodcase),
         ("beershoppen", scrape_beershoppen),
         ("bestofbeers", scrape_bestofbeers),
-        ("belgiskbryg", scrape_belgiskbryg),
     ]:
         try:
             items = func()
