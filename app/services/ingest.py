@@ -5,16 +5,13 @@ from app.models import Beer, Price, PriceHistory, PriceAlert
 from app.utils.normalize import normalize_name
 
 
-def find_best_match(normalized_name, volume, beers):
+def find_best_match(normalized_name, volume, beers_by_volume):
+    candidates = beers_by_volume.get(volume, [])
     best_score = 0
     best_beer = None
 
-    for beer in beers:
-        if beer.volume_cl != volume:
-            continue
-
+    for beer in candidates:
         score = fuzz.ratio(normalized_name, beer.normalized_name)
-
         if score > best_score:
             best_score = score
             best_beer = beer
@@ -26,19 +23,29 @@ def find_best_match(normalized_name, volume, beers):
 
 
 def ingest_batch(db: Session, items: list[dict]):
-    beers = db.query(Beer).all()
+    # Byg et volume-indekseret dictionary for hurtig opslag
+    all_beers = db.query(Beer).all()
+    beers_by_volume = {}
+    for beer in all_beers:
+        vol = beer.volume_cl
+        if vol not in beers_by_volume:
+            beers_by_volume[vol] = []
+        beers_by_volume[vol].append(beer)
 
-    # Slet alle eksisterende priser før vi indsætter nye
-    # Dette forhindrer duplikerede priser
+    # Slet gamle priser for de butikker vi opdaterer
     shop_names = list(set(item["shop_name"] for item in items))
     db.query(Price).filter(Price.shop_name.in_(shop_names)).delete(synchronize_session=False)
     db.commit()
 
-    for item in items:
+    new_prices = []
+    new_histories = []
+    commit_interval = 100
+
+    for i, item in enumerate(items):
         normalized = normalize_name(item["name"])
         volume = item.get("volume_cl")
 
-        beer = find_best_match(normalized, volume, beers)
+        beer = find_best_match(normalized, volume, beers_by_volume)
 
         # Opret øl hvis ikke fundet
         if not beer:
@@ -52,16 +59,18 @@ def ingest_batch(db: Session, items: list[dict]):
                 image=item.get("image"),
             )
             db.add(beer)
-            db.commit()
-            db.refresh(beer)
-            beers.append(beer)
+            db.flush()
+
+            if volume not in beers_by_volume:
+                beers_by_volume[volume] = []
+            beers_by_volume[volume].append(beer)
 
         # Opdater billede hvis mangler
         if not beer.image and item.get("image"):
             beer.image = item["image"]
 
-        # Tilføj ny pris
-        price = Price(
+        # Saml priser
+        new_prices.append(Price(
             beer_id=beer.id,
             shop_name=item["shop_name"],
             price_dkk=item["price"],
@@ -69,34 +78,39 @@ def ingest_batch(db: Session, items: list[dict]):
             discount_pct=item.get("discount_pct"),
             url=item.get("url"),
             available=True,
-        )
-        db.add(price)
+        ))
 
-        # Prishistorik — kun hvis prisen har ændret sig
+        # Prishistorik
         last = (
             db.query(PriceHistory)
-            .filter(PriceHistory.beer_id == beer.id)
+            .filter(
+                PriceHistory.beer_id == beer.id,
+                PriceHistory.shop_name == item["shop_name"]
+            )
             .order_by(PriceHistory.created_at.desc())
             .first()
         )
 
         if not last or last.price_dkk != item["price"]:
-            history = PriceHistory(
+            new_histories.append(PriceHistory(
                 beer_id=beer.id,
                 price_dkk=item["price"],
                 shop_name=item["shop_name"],
-            )
-            db.add(history)
+            ))
 
-        # Prisalarmer
-        alerts = db.query(PriceAlert).filter(
-            PriceAlert.beer_id == beer.id,
-            PriceAlert.active == True
-        ).all()
+        # Commit hver 100 øl
+        if (i + 1) % commit_interval == 0:
+            db.add_all(new_prices)
+            db.add_all(new_histories)
+            db.commit()
+            new_prices = []
+            new_histories = []
+            print(f"✅ Gemt {i + 1} / {len(items)} øl")
 
-        for alert in alerts:
-            if item["price"] <= alert.target_price:
-                print(f"🔥 ALERT: {beer.name} now {item['price']} kr")
-                alert.active = False
-
+    # Gem resten
+    if new_prices:
+        db.add_all(new_prices)
+    if new_histories:
+        db.add_all(new_histories)
     db.commit()
+    print(f"✅ Ingest færdig — {len(items)} øl behandlet")
