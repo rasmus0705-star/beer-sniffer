@@ -727,14 +727,6 @@
                 document.getElementById('loading').style.display = 'none';
                 document.getElementById('result-count').style.display = 'block';
                 gtag('event','side_indlaedt',{antal_oel:allBeers.length});
-                const maxPrice = Math.ceil(Math.max(...allBeers.map(b => b.min_price||0), 500));
-                document.getElementById('price-min').max = maxPrice;
-                document.getElementById('price-max').max = maxPrice;
-                document.getElementById('price-max').value = maxPrice;
-                document.getElementById('price-min').value = 0;
-                document.getElementById('range-fill').style.left = '0%';
-                document.getElementById('range-fill').style.width = '100%';
-                document.getElementById('price-val').textContent = '0–' + maxPrice + ' kr';
                 const types = [...new Set(allBeers.map(b => b.type).filter(Boolean))].sort();
                 const typeMenu = document.getElementById('type-menu');
                 typeMenu.innerHTML = `<div class="dropdown-item" data-type="__all__"><span class="check"></span> Ryd valg</div><div class="dropdown-divider"></div>` + types.map(t => `<div class="dropdown-item" data-type="${t}"><span class="check"></span> ${t}</div>`).join('');
