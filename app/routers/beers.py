@@ -1,15 +1,17 @@
 from fastapi import APIRouter, Depends
 from fastapi.responses import HTMLResponse, JSONResponse
 from sqlalchemy.orm import Session, joinedload
+from sqlalchemy import func
 import time
 
 from app.database import get_db
-from app.models import Beer, PriceHistory, PriceAlert
+from app.models import Beer, Price, PriceHistory, PriceAlert
 
 router = APIRouter()
 
 # ── Cache ──
 _cache = {"data": None, "timestamp": 0}
+_stats_cache = {"data": None, "timestamp": 0}
 CACHE_TTL = 3600  # 1 time i sekunder
 
 
@@ -17,13 +19,39 @@ def clear_cache():
     """Kaldes efter scraping så cache opdateres med nye priser"""
     _cache["data"] = None
     _cache["timestamp"] = 0
+    _stats_cache["data"] = None
+    _stats_cache["timestamp"] = 0
+
+
+@router.get("/stats")
+def get_stats(db: Session = Depends(get_db)):
+    now = time.time()
+
+    if _stats_cache["data"] is not None and (now - _stats_cache["timestamp"]) < CACHE_TTL:
+        return JSONResponse(content=_stats_cache["data"])
+
+    total = db.query(Beer).count()
+    deals = db.query(Price).filter(Price.discount_pct > 0).distinct(Price.beer_id).count()
+    shops = db.query(Price.shop_name).distinct().count()
+    cheapest = db.query(func.min(Price.price_dkk)).scalar() or 0
+
+    result = {
+        "total": total,
+        "deals": deals,
+        "shops": shops,
+        "cheapest": round(cheapest, 0)
+    }
+
+    _stats_cache["data"] = result
+    _stats_cache["timestamp"] = now
+
+    return JSONResponse(content=result)
 
 
 @router.get("/beers-with-prices")
 def get_beers(db: Session = Depends(get_db)):
     now = time.time()
 
-    # Returner cached data hvis det er mindre end 1 time gammelt
     if _cache["data"] is not None and (now - _cache["timestamp"]) < CACHE_TTL:
         return JSONResponse(content=_cache["data"])
 
@@ -35,7 +63,7 @@ def get_beers(db: Session = Depends(get_db)):
         if not beer.prices:
             continue
 
-        # Dedupliker priser — samme butik+pris tælles kun én gang
+        # Dedupliker priser
         seen = set()
         unique_prices = []
         for p in beer.prices:
@@ -79,10 +107,8 @@ def get_beers(db: Session = Depends(get_db)):
             ]
         })
 
-    # Sorter efter billigste pris
     result.sort(key=lambda b: b["cheapest_price"])
 
-    # Gem i cache
     _cache["data"] = result
     _cache["timestamp"] = now
 
@@ -100,8 +126,6 @@ def ui():
             body { font-family: Arial; background: #f5f5f5; padding: 20px; }
             .filters { margin-bottom: 15px; }
             input, select { padding: 8px; margin-right: 10px; }
-            .top { margin-bottom: 20px; }
-            .top h2 { margin-bottom: 10px; }
             .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 20px; }
             .card { position: relative; background: white; border-radius: 12px; padding: 15px; box-shadow: 0 2px 6px rgba(0,0,0,0.1); }
             .badge { position: absolute; top: 10px; left: 10px; background: red; color: white; padding: 5px 8px; border-radius: 6px; font-size: 12px; font-weight: bold; }
