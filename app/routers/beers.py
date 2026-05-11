@@ -1,7 +1,7 @@
-from fastapi import APIRouter, Depends
+from fastapi import APIRouter, Depends, Query
 from fastapi.responses import HTMLResponse, JSONResponse
 from sqlalchemy.orm import Session, joinedload
-from sqlalchemy import func
+from sqlalchemy import func, or_
 import time
 
 from app.database import get_db
@@ -12,58 +12,29 @@ router = APIRouter()
 # ── Cache ──
 _cache = {"data": None, "timestamp": 0}
 _stats_cache = {"data": None, "timestamp": 0}
-CACHE_TTL = 3600  # 1 time i sekunder
+CACHE_TTL = 3600
 
 
 def clear_cache():
-    """Kaldes efter scraping så cache opdateres med nye priser"""
     _cache["data"] = None
     _cache["timestamp"] = 0
     _stats_cache["data"] = None
     _stats_cache["timestamp"] = 0
 
 
-@router.get("/stats")
-def get_stats(db: Session = Depends(get_db)):
+def build_beer_list(db: Session):
+    """Bygger og returnerer komplet øl-liste med deduplicerede priser"""
     now = time.time()
-
-    if _stats_cache["data"] is not None and (now - _stats_cache["timestamp"]) < CACHE_TTL:
-        return JSONResponse(content=_stats_cache["data"])
-
-    total = db.query(Beer).count()
-    deals = db.query(Price).filter(Price.discount_pct > 0).distinct(Price.beer_id).count()
-    shops = db.query(Price.shop_name).distinct().count()
-    cheapest = db.query(func.min(Price.price_dkk)).scalar() or 0
-
-    result = {
-        "total": total,
-        "deals": deals,
-        "shops": shops,
-        "cheapest": round(cheapest, 0)
-    }
-
-    _stats_cache["data"] = result
-    _stats_cache["timestamp"] = now
-
-    return JSONResponse(content=result)
-
-
-@router.get("/beers-with-prices")
-def get_beers(db: Session = Depends(get_db)):
-    now = time.time()
-
     if _cache["data"] is not None and (now - _cache["timestamp"]) < CACHE_TTL:
-        return JSONResponse(content=_cache["data"])
+        return _cache["data"]
 
     beers = db.query(Beer).options(joinedload(Beer.prices)).all()
-
     result = []
 
     for beer in beers:
         if not beer.prices:
             continue
 
-        # Dedupliker priser
         seen = set()
         unique_prices = []
         for p in beer.prices:
@@ -108,85 +79,106 @@ def get_beers(db: Session = Depends(get_db)):
         })
 
     result.sort(key=lambda b: b["cheapest_price"])
-
     _cache["data"] = result
     _cache["timestamp"] = now
+    return result
 
+
+@router.get("/stats")
+def get_stats(db: Session = Depends(get_db)):
+    now = time.time()
+    if _stats_cache["data"] is not None and (now - _stats_cache["timestamp"]) < CACHE_TTL:
+        return JSONResponse(content=_stats_cache["data"])
+
+    total = db.query(Beer).count()
+    deals = db.query(Price).filter(Price.discount_pct > 0).distinct(Price.beer_id).count()
+    shops = db.query(Price.shop_name).distinct().count()
+    cheapest = db.query(func.min(Price.price_dkk)).scalar() or 0
+
+    result = {
+        "total": total,
+        "deals": deals,
+        "shops": shops,
+        "cheapest": round(cheapest, 0)
+    }
+
+    _stats_cache["data"] = result
+    _stats_cache["timestamp"] = now
     return JSONResponse(content=result)
 
 
-# ── UI ──
+@router.get("/beers")
+def get_beers_paginated(
+    db: Session = Depends(get_db),
+    page: int = Query(1, ge=1),
+    limit: int = Query(50, ge=1, le=200),
+    q: str = Query(None),
+    shop: str = Query(None),
+    sort: str = Query("price-asc"),
+    deals_only: bool = Query(False),
+    min_price: float = Query(None),
+    max_price: float = Query(None),
+):
+    all_beers = build_beer_list(db)
+    filtered = all_beers
+
+    # Søgning
+    if q:
+        q_lower = q.lower()
+        filtered = [b for b in filtered if q_lower in b["name"].lower() or q_lower in (b.get("brewery") or "").lower()]
+
+    # Butik filter
+    if shop and shop != "all":
+        filtered = [b for b in filtered if any(p["shop_name"] == shop for p in b["prices"])]
+
+    # Kun tilbud
+    if deals_only:
+        filtered = [b for b in filtered if b["max_discount_pct"] > 0]
+
+    # Prisfilter
+    if min_price is not None:
+        filtered = [b for b in filtered if b["min_price"] >= min_price]
+    if max_price is not None:
+        filtered = [b for b in filtered if b["min_price"] <= max_price]
+
+    # Sortering
+    if sort == "price-asc":
+        filtered.sort(key=lambda b: b["min_price"])
+    elif sort == "price-desc":
+        filtered.sort(key=lambda b: b["min_price"], reverse=True)
+    elif sort == "discount":
+        filtered.sort(key=lambda b: b["max_discount_pct"], reverse=True)
+    elif sort == "name":
+        filtered.sort(key=lambda b: b["name"])
+    elif sort == "shops":
+        filtered.sort(key=lambda b: len(b["prices"]), reverse=True)
+
+    total = len(filtered)
+    start = (page - 1) * limit
+    end = start + limit
+    page_data = filtered[start:end]
+
+    return JSONResponse(content={
+        "beers": page_data,
+        "total": total,
+        "page": page,
+        "limit": limit,
+        "pages": (total + limit - 1) // limit,
+        "has_more": end < total
+    })
+
+
+@router.get("/beers-with-prices")
+def get_beers_legacy(db: Session = Depends(get_db)):
+    """Bevares for bagudkompatibilitet"""
+    return JSONResponse(content=build_beer_list(db))
+
+
 @router.get("/ui", response_class=HTMLResponse)
 def ui():
     return """
-    <html>
-    <head>
-        <title>BeerSniffer</title>
-        <style>
-            body { font-family: Arial; background: #f5f5f5; padding: 20px; }
-            .filters { margin-bottom: 15px; }
-            input, select { padding: 8px; margin-right: 10px; }
-            .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 20px; }
-            .card { position: relative; background: white; border-radius: 12px; padding: 15px; box-shadow: 0 2px 6px rgba(0,0,0,0.1); }
-            .badge { position: absolute; top: 10px; left: 10px; background: red; color: white; padding: 5px 8px; border-radius: 6px; font-size: 12px; font-weight: bold; }
-            .top-card { border: 2px solid gold; }
-            img { width: 100%; height: 180px; object-fit: cover; border-radius: 8px; background: #eee; }
-            .price { font-size: 18px; font-weight: bold; }
-            button { margin-top: 6px; width: 100%; padding: 8px; border: none; border-radius: 6px; cursor: pointer; }
-            .buy { background: #2ecc71; color: white; }
-        </style>
-    </head>
-    <body>
-        <h1>🍺 BeerSniffer</h1>
-        <div class="filters">
-            <input id="search" placeholder="Søg..." oninput="applyFilters()" />
-            <input id="maxPrice" type="number" placeholder="Max pris" oninput="applyFilters()" />
-            <select id="sort" onchange="applyFilters()">
-                <option value="default">Sortering</option>
-                <option value="discount">Bedste tilbud</option>
-                <option value="price">Billigste først</option>
-            </select>
-            <label><input type="checkbox" id="onlyDeals" onchange="applyFilters()" /> Kun tilbud</label>
-        </div>
-        <div class="top"><h2>🔥 Top 10 deals</h2><div class="grid" id="top"></div></div>
-        <div class="grid" id="grid"></div>
-        <script>
-        let allBeers = [];
-        function render(list, elementId, highlightTop=false) {
-            const grid = document.getElementById(elementId);
-            grid.innerHTML = "";
-            list.forEach(beer => {
-                const card = document.createElement("div");
-                card.className = "card";
-                if (highlightTop) card.classList.add("top-card");
-                card.innerHTML = `
-                    ${beer.discount_pct ? `<div class="badge">-${beer.discount_pct}%</div>` : ""}
-                    <img src="${beer.image || 'https://via.placeholder.com/200'}" />
-                    <h3>${beer.name}</h3>
-                    <div class="price">${beer.cheapest_price} kr</div>
-                    <div>${beer.shop}</div>
-                    <button class="buy" onclick="window.open('${beer.prices[0].url}')">Køb</button>
-                `;
-                grid.appendChild(card);
-            });
-        }
-        function applyFilters() {
-            let filtered = [...allBeers];
-            const search = document.getElementById("search").value.toLowerCase();
-            const maxPrice = document.getElementById("maxPrice").value;
-            const onlyDeals = document.getElementById("onlyDeals").checked;
-            const sort = document.getElementById("sort").value;
-            if (search) filtered = filtered.filter(b => b.name.toLowerCase().includes(search));
-            if (maxPrice) filtered = filtered.filter(b => b.cheapest_price <= maxPrice);
-            if (onlyDeals) filtered = filtered.filter(b => b.discount_pct > 0);
-            if (sort === "discount") filtered.sort((a, b) => b.discount_pct - a.discount_pct);
-            if (sort === "price") filtered.sort((a, b) => a.cheapest_price - b.cheapest_price);
-            render(filtered, "grid");
-            const topDeals = [...allBeers].filter(b => b.discount_pct > 0).sort((a, b) => b.discount_pct - a.discount_pct).slice(0, 10);
-            render(topDeals, "top", true);
-        }
-        fetch("/beers-with-prices").then(res => res.json()).then(data => { allBeers = data; applyFilters(); });
-        </script>
-    </body>
-    </html>
+    <html><head><title>BeerSniffer</title></head>
+    <body><h1>🍺 BeerSniffer API</h1>
+    <p>Brug <a href="/docs">/docs</a> for API dokumentation.</p>
+    </body></html>
     """
