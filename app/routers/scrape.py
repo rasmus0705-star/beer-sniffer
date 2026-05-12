@@ -10,7 +10,6 @@ import os
 
 router = APIRouter()
 
-
 def verify_api_key(x_api_key: str = Header(None)):
     expected = os.getenv("SCRAPE_API_KEY")
     if not expected or x_api_key != expected:
@@ -36,7 +35,25 @@ def scrape_all(db: Session = Depends(get_db), _: None = Depends(verify_api_key))
     return {"status": "ok", "results": results, "total": len(all_items)}
 
 @router.get("/scrape-brygshoppen")
-def scrape(db: Session = Depends(get_db), _: None = Depends(verify_api_key)):
+def scrape_b(db: Session = Depends(get_db), _: None = Depends(verify_api_key)):
     items = scrape_brygshoppen()
+    ingest_batch(db, items)
+    return {"status": "ok", "count": len(items)}
+
+@router.get("/scrape-agoodcase")
+def scrape_a(db: Session = Depends(get_db), _: None = Depends(verify_api_key)):
+    items = scrape_agoodcase()
+    ingest_batch(db, items)
+    return {"status": "ok", "count": len(items)}
+
+@router.get("/scrape-beershoppen")
+def scrape_bs(db: Session = Depends(get_db), _: None = Depends(verify_api_key)):
+    items = scrape_beershoppen()
+    ingest_batch(db, items)
+    return {"status": "ok", "count": len(items)}
+
+@router.get("/scrape-bestofbeers")
+def scrape_bob(db: Session = Depends(get_db), _: None = Depends(verify_api_key)):
+    items = scrape_bestofbeers()
     ingest_batch(db, items)
     return {"status": "ok", "count": len(items)}
