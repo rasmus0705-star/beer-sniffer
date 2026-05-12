@@ -93,32 +93,40 @@ def scrape_agoodcase():
                         "price_per_unit": round(v_price / qty, 2),
                         "total_price": v_price,
                         "variant_title": v_title,
+                        "variant": v,
                     })
                 else:
                     if single_variant is None:
                         single_variant = v
 
-            if single_variant is None:
-                for v in variants:
-                    if v.get("available"):
-                        try:
-                            float(v.get("price", 0))
-                            single_variant = v
-                            break
-                        except:
-                            continue
+            # Hvis ingen enkeltpris findes, brug billigste bulk-variant og vis pris per stk
+            bulk_only = False
+            if single_variant is None and bulk_variants:
+                bulk_variants.sort(key=lambda x: x["price_per_unit"])
+                cheapest_bulk = bulk_variants[0]
+                single_variant = cheapest_bulk["variant"]
+                bulk_only = True
+                bulk_qty = cheapest_bulk["qty"]
+                bulk_price_per_unit = cheapest_bulk["price_per_unit"]
+                bulk_total = cheapest_bulk["total_price"]
 
             if single_variant is None:
                 continue
 
             try:
-                price = float(single_variant.get("price"))
+                if bulk_only:
+                    # Vis pris per stk og tilføj antal til navn
+                    price = bulk_price_per_unit
+                    display_name = f"{name} ({bulk_qty} stk.)"
+                    old_price_raw = single_variant.get("compare_at_price")
+                    old_price = round(float(old_price_raw) / bulk_qty, 2) if old_price_raw else None
+                else:
+                    price = float(single_variant.get("price"))
+                    display_name = name
+                    old_price_raw = single_variant.get("compare_at_price")
+                    old_price = float(old_price_raw) if old_price_raw else None
             except:
                 continue
-
-            old_price = single_variant.get("compare_at_price")
-            if old_price:
-                old_price = float(old_price)
 
             discount = None
             if old_price and old_price > price:
@@ -163,10 +171,19 @@ def scrape_agoodcase():
                 if match:
                     abv = float(match.group(1).replace(",", "."))
 
-            bulk_variants.sort(key=lambda x: x["qty"])
+            # Fjern variant info fra bulk_variants (ikke serialiserbar)
+            clean_bulk = []
+            for b in bulk_variants:
+                clean_bulk.append({
+                    "qty": b["qty"],
+                    "price_per_unit": b["price_per_unit"],
+                    "total_price": b["total_price"],
+                    "variant_title": b["variant_title"],
+                })
+            clean_bulk.sort(key=lambda x: x["qty"])
 
             item = {
-                "name": name,
+                "name": display_name,
                 "price": price,
                 "old_price": old_price,
                 "discount_pct": discount,
@@ -178,7 +195,7 @@ def scrape_agoodcase():
                 "type": detect_type(name) or (product_type if product_type else None),
                 "brewery": product.get("vendor") or None,
                 "category": "smagekasse" if is_smagekasse else "øl",
-                "bulk_discounts": bulk_variants if bulk_variants else None,
+                "bulk_discounts": clean_bulk if clean_bulk else None,
             }
 
             items.append(item)
