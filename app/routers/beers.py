@@ -120,25 +120,38 @@ def get_beers_paginated(
     deals_only: bool = Query(False),
     min_price: float = Query(None),
     max_price: float = Query(None),
+    abv_min: float = Query(None),
+    abv_max: float = Query(None),
 ):
     all_beers = build_beer_list(db)
     filtered = all_beers
 
+    # Søgning
     if q:
         q_lower = q.lower()
         filtered = [b for b in filtered if q_lower in b["name"].lower() or q_lower in (b.get("brewery") or "").lower()]
 
+    # Butik
     if shop and shop != "all":
         filtered = [b for b in filtered if any(p["shop_name"] == shop for p in b["prices"])]
 
+    # Kun tilbud
     if deals_only:
         filtered = [b for b in filtered if b["max_discount_pct"] > 0]
 
+    # Pris
     if min_price is not None:
         filtered = [b for b in filtered if b["min_price"] >= min_price]
     if max_price is not None:
         filtered = [b for b in filtered if b["min_price"] <= max_price]
 
+    # ABV — filtrer kun øl med kendt ABV inden for intervallet
+    if abv_min is not None:
+        filtered = [b for b in filtered if b.get("abv") is not None and b["abv"] >= abv_min]
+    if abv_max is not None:
+        filtered = [b for b in filtered if b.get("abv") is not None and b["abv"] <= abv_max]
+
+    # Sortering
     if sort == "price-asc":
         filtered.sort(key=lambda b: b["min_price"])
     elif sort == "price-desc":
