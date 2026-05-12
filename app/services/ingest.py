@@ -23,7 +23,10 @@ def find_best_match(normalized_name, volume, beers_by_volume):
 
 
 def ingest_batch(db: Session, items: list[dict]):
-    # Byg et volume-indekseret dictionary for hurtig opslag
+    if not items:
+        return
+
+    # Byg volume-indekseret dictionary for hurtig opslag
     all_beers = db.query(Beer).all()
     beers_by_volume = {}
     for beer in all_beers:
@@ -32,14 +35,11 @@ def ingest_batch(db: Session, items: list[dict]):
             beers_by_volume[vol] = []
         beers_by_volume[vol].append(beer)
 
-    # Slet gamle priser for de butikker vi opdaterer
     shop_names = list(set(item["shop_name"] for item in items))
-    db.query(Price).filter(Price.shop_name.in_(shop_names)).delete(synchronize_session=False)
-    db.commit()
 
+    # ── TRIN 1: Gem alle nye priser i en midlertidig liste ──
     new_prices = []
     new_histories = []
-    commit_interval = 100
 
     for i, item in enumerate(items):
         normalized = normalize_name(item["name"])
@@ -69,7 +69,7 @@ def ingest_batch(db: Session, items: list[dict]):
         if not beer.image and item.get("image"):
             beer.image = item["image"]
 
-        # Saml priser
+        # Saml nye priser
         new_prices.append(Price(
             beer_id=beer.id,
             shop_name=item["shop_name"],
@@ -98,19 +98,24 @@ def ingest_batch(db: Session, items: list[dict]):
                 shop_name=item["shop_name"],
             ))
 
-        # Commit hver 100 øl
-        if (i + 1) % commit_interval == 0:
-            db.add_all(new_prices)
-            db.add_all(new_histories)
-            db.commit()
-            new_prices = []
-            new_histories = []
-            print(f"✅ Gemt {i + 1} / {len(items)} øl")
+        # Log fremgang hver 100 øl
+        if (i + 1) % 100 == 0:
+            print(f"✅ Behandlet {i + 1} / {len(items)} øl")
 
-    # Gem resten
-    if new_prices:
-        db.add_all(new_prices)
-    if new_histories:
-        db.add_all(new_histories)
+    # ── TRIN 2: Alle øl er behandlet — nu sletter vi gamle priser og gemmer nye ──
+    # Dette sker atomisk så siden aldrig viser ufuldstændig data
+    print(f"💾 Gemmer {len(new_prices)} priser...")
+    db.query(Price).filter(Price.shop_name.in_(shop_names)).delete(synchronize_session=False)
+    db.add_all(new_prices)
+    db.add_all(new_histories)
+
+    # Prisalarmer
+    alerts = db.query(PriceAlert).filter(PriceAlert.active == True).all()
+    for alert in alerts:
+        for price in new_prices:
+            if price.beer_id == alert.beer_id and price.price_dkk <= alert.target_price:
+                print(f"🔥 ALERT: beer_id {alert.beer_id} now {price.price_dkk} kr")
+                alert.active = False
+
     db.commit()
     print(f"✅ Ingest færdig — {len(items)} øl behandlet")
