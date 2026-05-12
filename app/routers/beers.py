@@ -23,7 +23,6 @@ def clear_cache():
 
 
 def build_beer_list(db: Session):
-    """Bygger og returnerer komplet øl-liste med deduplicerede priser"""
     now = time.time()
     if _cache["data"] is not None and (now - _cache["timestamp"]) < CACHE_TTL:
         return _cache["data"]
@@ -35,7 +34,7 @@ def build_beer_list(db: Session):
         if not beer.prices:
             continue
 
-        # Dedupliker priser — én pris per butik (behold den billigste)
+        # Dedupliker — én pris per butik (behold billigste)
         shop_best = {}
         for p in beer.prices:
             shop = p.shop_name
@@ -43,7 +42,6 @@ def build_beer_list(db: Session):
                 shop_best[shop] = p
 
         unique_prices = list(shop_best.values())
-
         if not unique_prices:
             continue
 
@@ -94,13 +92,15 @@ def get_stats(db: Session = Depends(get_db)):
     active_beer_ids = db.query(Price.beer_id).distinct().subquery()
     total = db.query(Beer).filter(Beer.id.in_(active_beer_ids)).count()
     deals = db.query(Price.beer_id).filter(Price.discount_pct > 0).distinct().count()
-    shops = db.query(Price.shop_name).distinct().count()
+    shops = db.query(Price.shop_name).distinct().all()
+    shop_names = sorted([s[0] for s in shops if s[0]])
     cheapest = db.query(func.min(Price.price_dkk)).scalar() or 0
 
     result = {
         "total": total,
         "deals": deals,
-        "shops": shops,
+        "shops": len(shop_names),
+        "shop_names": shop_names,
         "cheapest": round(cheapest, 0)
     }
 

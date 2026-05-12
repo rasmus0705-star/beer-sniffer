@@ -687,6 +687,23 @@ async function init() {
         document.getElementById('stat-shops').textContent = s.shops;
         document.getElementById('stat-cheapest').textContent = s.cheapest;
         document.getElementById('shop-count-inline').textContent = s.shops;
+
+        // Byg shop menu fra stats — alle butikker er med
+        const shops = s.shop_names || [];
+        const shopMenu = document.getElementById('shop-menu');
+        shopMenu.innerHTML = '<div class="dropdown-item selected" data-shop="all"><span class="check">✓</span> Alle butikker</div><div class="dropdown-divider"></div>' +
+            shops.map(sh => '<div class="dropdown-item" data-shop="' + sh + '"><span class="check"></span> ' + sh + '</div>').join('');
+        shopMenu.querySelectorAll('.dropdown-item').forEach(item => {
+            item.addEventListener('click', e => {
+                e.stopPropagation();
+                currentShop = item.dataset.shop;
+                updateShopBtn();
+                fetchPage(1);
+                document.getElementById('shop-dropdown').classList.remove('open');
+                shopMenu.style.display = 'none';
+                if (currentShop !== 'all') gtag('event', 'butik_filter', { butik: currentShop });
+            });
+        });
     }).catch(() => {});
 
     // Hent butikker til dropdown
@@ -797,22 +814,7 @@ async function init() {
     // Hent første side øl
     await fetchPage(1);
 
-    // Byg shop menu fra hentede øl
-    const shops = [...new Set(allBeers.flatMap(b => (b.prices || []).map(p => p.shop_name)))].filter(Boolean).sort();
-    const shopMenu = document.getElementById('shop-menu');
-    shopMenu.innerHTML = `<div class="dropdown-item selected" data-shop="all"><span class="check">✓</span> Alle butikker</div><div class="dropdown-divider"></div>` +
-        shops.map(s => `<div class="dropdown-item" data-shop="${s}"><span class="check"></span> ${s}</div>`).join('');
-    shopMenu.querySelectorAll('.dropdown-item').forEach(item => {
-        item.addEventListener('click', e => {
-            e.stopPropagation();
-            currentShop = item.dataset.shop;
-            updateShopBtn();
-            fetchPage(1);
-            document.getElementById('shop-dropdown').classList.remove('open');
-            shopMenu.style.display = 'none';
-            if (currentShop !== 'all') gtag('event', 'butik_filter', { butik: currentShop });
-        });
-    });
+    // Shop menu bygges fra /stats ved opstart
 
     // Sæt pris max ud fra data
     const maxP = Math.ceil(Math.max(...allBeers.map(b => b.min_price || 0), 500));
