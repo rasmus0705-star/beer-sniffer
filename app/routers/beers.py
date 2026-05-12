@@ -1,7 +1,7 @@
 from fastapi import APIRouter, Depends, Query
 from fastapi.responses import HTMLResponse, JSONResponse
 from sqlalchemy.orm import Session, joinedload
-from sqlalchemy import func, or_
+from sqlalchemy import func
 import time
 
 from app.database import get_db
@@ -90,8 +90,10 @@ def get_stats(db: Session = Depends(get_db)):
     if _stats_cache["data"] is not None and (now - _stats_cache["timestamp"]) < CACHE_TTL:
         return JSONResponse(content=_stats_cache["data"])
 
-    total = db.query(Beer).count()
-    deals = db.query(Price).filter(Price.discount_pct > 0).distinct(Price.beer_id).count()
+    # Kun øl med aktive priser
+    active_beer_ids = db.query(Price.beer_id).distinct().subquery()
+    total = db.query(Beer).filter(Beer.id.in_(active_beer_ids)).count()
+    deals = db.query(Price.beer_id).filter(Price.discount_pct > 0).distinct().count()
     shops = db.query(Price.shop_name).distinct().count()
     cheapest = db.query(func.min(Price.price_dkk)).scalar() or 0
 
@@ -122,26 +124,21 @@ def get_beers_paginated(
     all_beers = build_beer_list(db)
     filtered = all_beers
 
-    # Søgning
     if q:
         q_lower = q.lower()
         filtered = [b for b in filtered if q_lower in b["name"].lower() or q_lower in (b.get("brewery") or "").lower()]
 
-    # Butik filter
     if shop and shop != "all":
         filtered = [b for b in filtered if any(p["shop_name"] == shop for p in b["prices"])]
 
-    # Kun tilbud
     if deals_only:
         filtered = [b for b in filtered if b["max_discount_pct"] > 0]
 
-    # Prisfilter
     if min_price is not None:
         filtered = [b for b in filtered if b["min_price"] >= min_price]
     if max_price is not None:
         filtered = [b for b in filtered if b["min_price"] <= max_price]
 
-    # Sortering
     if sort == "price-asc":
         filtered.sort(key=lambda b: b["min_price"])
     elif sort == "price-desc":
