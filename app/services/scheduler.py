@@ -31,4 +31,4 @@ def run_scraper():
 
 
 scheduler = BackgroundScheduler()
-scheduler.add_job(run_scraper, "cron", hour=6, minute=0)
+scheduler.add_job(run_scraper, "cron", hour=6, minute=0, misfire_grace_time=3600)
