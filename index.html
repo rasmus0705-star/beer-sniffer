@@ -158,8 +158,6 @@
         .card-actions{margin-top:0.5rem;}
         .untappd-btn{display:block;text-align:center;padding:0.42rem;background:rgba(255,196,0,0.06);border:1px solid rgba(255,196,0,0.18);border-radius:7px;color:#ffc400;font-size:0.68rem;text-decoration:none;transition:all 0.2s;letter-spacing:0.1em;text-transform:uppercase;}
         .untappd-btn:hover{background:#ffc400;color:#000;}
-        .price-drop-badge{display:inline-flex;align-items:center;gap:0.3rem;background:rgba(74,158,255,0.12);border:1px solid rgba(74,158,255,0.3);color:#4a9eff;font-size:0.65rem;font-weight:700;padding:0.2rem 0.5rem;border-radius:4px;margin-top:0.3rem;}
-        .price-drop-badge::before{content:'📉';}
         .shipping-btn,.bulk-btn{width:26px;height:26px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;font-size:0.78rem;cursor:pointer;flex-shrink:0;position:relative;transition:all 0.2s;line-height:1;}
         .shipping-btn{background:var(--surface3);border:1px solid var(--border-light);color:var(--text-muted);}
         .shipping-btn:hover{border-color:#4a9eff;color:#4a9eff;background:rgba(74,158,255,0.1);}
@@ -254,7 +252,6 @@
         </div>
         <button class="filter-btn active" data-filter="all">Alle</button>
         <button class="filter-btn" data-filter="deals">🔥 Tilbud</button>
-        <button class="filter-btn" data-filter="price-drop">📉 Prisfald</button>
         <button class="filter-btn" data-filter="favs">❤️ Favoritter <span id="fav-count-badge"></span></button>
         <button class="filter-btn" data-filter="alcohol-free">🚫 Alkoholfri</button>
         <button class="filter-btn" data-filter="smagekasse">📦 Smagekasser</button>
@@ -269,7 +266,6 @@
                 <div class="dropdown-item" data-sort="price-desc"><span class="check"></span> Pris: Høj → Lav</div>
                 <div class="dropdown-item" data-sort="discount"><span class="check"></span> Størst rabat</div>
                 <div class="dropdown-item" data-sort="name"><span class="check"></span> Navn A–Z</div>
-                        <div class="dropdown-item" data-sort="price-drop"><span class="check"></span> Største prisfald</div>
             </div>
         </div>
         <div class="range-wrap">
@@ -452,7 +448,6 @@ function makeBeerCard(b, delay) {
     const bShop = esc(best.shop_name || '');
     const totalInclShipping = totalWithShipping(best.shop_name, minPrice);
     const totalLabel = totalInclShipping !== null ? `<span class="price-row-total">Bedst inkl. fragt: ${totalInclShipping.toFixed(0)} kr</span>` : '';
-    const priceDropLabel = b.price_drop ? `<span class="price-drop-badge">Faldet ${b.price_drop.toFixed(0)} kr siden sidst</span>` : '';
 
     return `<div class="card" style="animation-delay:${delay}s">
         ${maxDiscount > 0 ? `<div class="ribbon">−${maxDiscount}%</div>` : ''}
@@ -483,7 +478,6 @@ function makeBeerCard(b, delay) {
                         </div>
                         ${best.old_price ? `<span class="price-row-save">Spar ${(best.old_price - minPrice).toFixed(0)} kr</span>` : ''}
                         ${totalLabel}
-                        ${priceDropLabel}
                     </div>
                     <div class="price-row-right">
                         ${shippingBtnHTML(best.shop_name, minPrice)}

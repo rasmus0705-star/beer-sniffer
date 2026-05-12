@@ -23,43 +23,26 @@ def clear_cache():
 
 
 def build_beer_list(db: Session):
-    """Bygger og returnerer komplet øl-liste med deduplicerede priser og prisfald"""
+    """Bygger og returnerer komplet øl-liste med deduplicerede priser"""
     now = time.time()
     if _cache["data"] is not None and (now - _cache["timestamp"]) < CACHE_TTL:
         return _cache["data"]
 
     beers = db.query(Beer).options(joinedload(Beer.prices)).all()
-
-    # Hent seneste to prishistorik-poster per øl+butik for at beregne prisfald
-    # Vi henter alle på én gang for effektivitet
-    history_query = db.query(PriceHistory).order_by(
-        PriceHistory.beer_id,
-        PriceHistory.shop_name,
-        PriceHistory.created_at.desc()
-    ).all()
-
-    # Byg dictionary: {(beer_id, shop_name): [nyeste, næstnyeste]}
-    history_map = {}
-    for h in history_query:
-        key = (h.beer_id, h.shop_name)
-        if key not in history_map:
-            history_map[key] = []
-        if len(history_map[key]) < 2:
-            history_map[key].append(h.price_dkk)
-
     result = []
 
     for beer in beers:
         if not beer.prices:
             continue
 
-        seen = set()
-        unique_prices = []
+        # Dedupliker priser — én pris per butik (behold den billigste)
+        shop_best = {}
         for p in beer.prices:
-            key = (p.shop_name, p.price_dkk)
-            if key not in seen:
-                seen.add(key)
-                unique_prices.append(p)
+            shop = p.shop_name
+            if shop not in shop_best or p.price_dkk < shop_best[shop].price_dkk:
+                shop_best[shop] = p
+
+        unique_prices = list(shop_best.values())
 
         if not unique_prices:
             continue
@@ -67,18 +50,6 @@ def build_beer_list(db: Session):
         sorted_prices = sorted(unique_prices, key=lambda p: p.price_dkk)
         cheapest = sorted_prices[0]
         max_discount = max((p.discount_pct or 0) for p in sorted_prices)
-
-        # Beregn prisfald for billigste pris
-        hist_key = (beer.id, cheapest.shop_name)
-        hist = history_map.get(hist_key, [])
-        price_drop = None
-        previous_price = None
-        if len(hist) >= 2:
-            current = hist[0]
-            previous = hist[1]
-            if current < previous:
-                price_drop = round(previous - current, 2)
-                previous_price = previous
 
         result.append({
             "id": beer.id,
@@ -94,8 +65,6 @@ def build_beer_list(db: Session):
             "volume_cl": beer.volume_cl,
             "brewery": beer.brewery,
             "category": beer.category if hasattr(beer, "category") else None,
-            "price_drop": price_drop,
-            "previous_price": previous_price,
             "prices": [
                 {
                     "shop": p.shop_name,
@@ -122,7 +91,6 @@ def get_stats(db: Session = Depends(get_db)):
     if _stats_cache["data"] is not None and (now - _stats_cache["timestamp"]) < CACHE_TTL:
         return JSONResponse(content=_stats_cache["data"])
 
-    # Kun øl med aktive priser
     active_beer_ids = db.query(Price.beer_id).distinct().subquery()
     total = db.query(Beer).filter(Beer.id.in_(active_beer_ids)).count()
     deals = db.query(Price.beer_id).filter(Price.discount_pct > 0).distinct().count()
@@ -150,7 +118,6 @@ def get_beers_paginated(
     shop: str = Query(None),
     sort: str = Query("price-asc"),
     deals_only: bool = Query(False),
-    price_drop_only: bool = Query(False),
     min_price: float = Query(None),
     max_price: float = Query(None),
 ):
@@ -167,9 +134,6 @@ def get_beers_paginated(
     if deals_only:
         filtered = [b for b in filtered if b["max_discount_pct"] > 0]
 
-    if price_drop_only:
-        filtered = [b for b in filtered if b.get("price_drop")]
-
     if min_price is not None:
         filtered = [b for b in filtered if b["min_price"] >= min_price]
     if max_price is not None:
@@ -185,8 +149,6 @@ def get_beers_paginated(
         filtered.sort(key=lambda b: b["name"])
     elif sort == "shops":
         filtered.sort(key=lambda b: len(b["prices"]), reverse=True)
-    elif sort == "price-drop":
-        filtered.sort(key=lambda b: b.get("price_drop") or 0, reverse=True)
 
     total = len(filtered)
     start = (page - 1) * limit
@@ -205,7 +167,6 @@ def get_beers_paginated(
 
 @router.get("/beers-with-prices")
 def get_beers_legacy(db: Session = Depends(get_db)):
-    """Bevares for bagudkompatibilitet"""
     return JSONResponse(content=build_beer_list(db))
 
 
