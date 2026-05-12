@@ -10,6 +10,11 @@ import os
 
 router = APIRouter()
 
+@router.get("/test-key")
+def test_key():
+    expected = os.getenv("SCRAPE_API_KEY")
+    return {"key_set": expected is not None, "key_length": len(expected) if expected else 0}
+
 def verify_api_key(x_api_key: str = Header(None)):
     expected = os.getenv("SCRAPE_API_KEY")
     if not expected or x_api_key != expected:
