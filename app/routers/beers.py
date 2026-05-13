@@ -123,7 +123,7 @@ def get_beers_paginated(
     deals_only: bool = Query(False),
     alcohol_free: bool = Query(False),
     smagekasse: bool = Query(False),
-    beer_type: str = Query(None),
+    beer_types: str = Query(None),  # kommasepareret multi-select
     min_price: float = Query(None),
     max_price: float = Query(None),
     abv_min: float = Query(None),
