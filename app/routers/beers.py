@@ -45,7 +45,6 @@ def normalize_name(name: str, abv=None, volume=None):
         "india pale ale": "ipa",
         "west coast ipa": "ipa",
         "new england ipa": "neipa",
-        "new england india pale ale": "neipa",
     }
 
     for old, new in replacements.items():
@@ -60,14 +59,16 @@ def normalize_name(name: str, abv=None, volume=None):
     # fjern specialtegn
     name = re.sub(r"[^a-z0-9\s]", " ", name)
 
-    # ord der ikke hjælper matching
+    # ekstra spaces væk
+    name = re.sub(r"\s+", " ", name).strip()
+
+    # stopord
     blacklist = {
         "beer",
         "ale",
         "brewery",
         "brouwerij",
         "bryggeri",
-        "trappist",
         "belgian",
         "belgisk",
         "abbey",
@@ -88,30 +89,22 @@ def normalize_name(name: str, abv=None, volume=None):
         if len(word) <= 1:
             continue
 
-        if word not in words:
-            words.append(word)
-
-    words = sorted(words)
+        words.append(word)
 
     clean_name = " ".join(words)
 
-    # rund ABV lidt grovere
+    # special matches
+    special_matches = {
+        "trappist tripel westmalle": "westmalle tripel",
+        "westmalle trappist tripel": "westmalle tripel",
+    }
+
+    if clean_name in special_matches:
+        clean_name = special_matches[clean_name]
+
+    # ABV afrundes
     abv_key = round(float(abv), 0) if abv is not None else "na"
 
-    # volume bruges kun til debug / fremtid
-    if volume is not None:
-
-        vol = float(volume)
-
-        if vol < 10:
-            vol = vol * 100
-
-        vol_key = round(vol)
-
-    else:
-        vol_key = "na"
-
-    # matcher kun på navn + abv
     return f"{clean_name}|{abv_key}"
 
 
@@ -141,16 +134,6 @@ def build_beer_list(db: Session):
             beer.abv,
             beer.volume_cl
         )
-
-        # DEBUG WESTMALLE
-        if "westmalle" in beer.name.lower():
-
-            print("DEBUG WESTMALLE")
-            print("NAME:", beer.name)
-            print("ABV:", beer.abv)
-            print("VOL:", beer.volume_cl)
-            print("KEY:", key)
-            print("-------------------")
 
         if key not in grouped:
 
@@ -242,7 +225,7 @@ def get_stats(db: Session = Depends(get_db)):
 
     active_beer_ids = db.query(
         Price.beer_id
-    ).distinct().subquery()
+    ).distinct()
 
     total = db.query(Beer).filter(
         Beer.id.in_(active_beer_ids)
