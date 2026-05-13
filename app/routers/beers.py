@@ -21,64 +21,108 @@ def clear_cache():
     _stats_cache["timestamp"] = 0
 
 
+def normalize_name(name: str):
+    if not name:
+        return ""
+
+    return (
+        name.lower()
+        .replace("ø", "oe")
+        .replace("æ", "ae")
+        .replace("å", "aa")
+        .strip()
+    )
+
+
 def build_beer_list(db: Session):
     now = time.time()
+
     if _cache["data"] is not None and (now - _cache["timestamp"]) < CACHE_TTL:
         return _cache["data"]
 
     beers = db.query(Beer).options(joinedload(Beer.prices)).all()
-    result = []
+
+    grouped = {}
 
     for beer in beers:
+
         if not beer.prices:
             continue
 
-        shop_best = {}
-        for p in beer.prices:
-            shop = p.shop_name
-            if shop not in shop_best or p.price_dkk < shop_best[shop].price_dkk:
-                shop_best[shop] = p
+        key = normalize_name(beer.name)
 
-        unique_prices = list(shop_best.values())
-        if not unique_prices:
+        if key not in grouped:
+            grouped[key] = {
+                "id": beer.id,
+                "name": beer.name,
+                "image": beer.image,
+                "type": beer.type,
+                "abv": beer.abv,
+                "volume_cl": beer.volume_cl,
+                "brewery": beer.brewery,
+                "category": beer.category if hasattr(beer, "category") else None,
+                "prices": []
+            }
+
+        for p in beer.prices:
+
+            grouped[key]["prices"].append({
+                "shop": p.shop_name,
+                "shop_name": p.shop_name,
+                "price": p.price_dkk,
+                "price_dkk": p.price_dkk,
+                "url": p.url,
+                "discount_pct": p.discount_pct or 0,
+                "old_price": p.old_price if hasattr(p, "old_price") else None,
+            })
+
+    result = []
+
+    for beer in grouped.values():
+
+        unique_shops = {}
+
+        for p in beer["prices"]:
+
+            shop = p["shop_name"]
+
+            if (
+                shop not in unique_shops
+                or p["price"] < unique_shops[shop]["price"]
+            ):
+                unique_shops[shop] = p
+
+        prices = sorted(
+            unique_shops.values(),
+            key=lambda x: x["price"]
+        )
+
+        if not prices:
             continue
 
-        sorted_prices = sorted(unique_prices, key=lambda p: p.price_dkk)
-        cheapest = sorted_prices[0]
-        max_discount = max((p.discount_pct or 0) for p in sorted_prices)
+        cheapest = prices[0]
 
-        result.append({
-            "id": beer.id,
-            "name": beer.name,
-            "image": beer.image,
-            "cheapest_price": cheapest.price_dkk,
-            "min_price": cheapest.price_dkk,
-            "shop": cheapest.shop_name,
-            "discount_pct": cheapest.discount_pct or 0,
-            "max_discount_pct": max_discount,
-            "type": beer.type,
-            "abv": beer.abv,
-            "volume_cl": beer.volume_cl,
-            "brewery": beer.brewery,
-            "category": beer.category if hasattr(beer, "category") else None,
-            "prices": [
-                {
-                    "shop": p.shop_name,
-                    "shop_name": p.shop_name,
-                    "price": p.price_dkk,
-                    "price_dkk": p.price_dkk,
-                    "url": p.url,
-                    "discount_pct": p.discount_pct,
-                    "old_price": p.old_price if hasattr(p, "old_price") else None,
-                }
-                for p in sorted_prices
-            ]
-        })
+        max_discount = max(
+            (p["discount_pct"] or 0)
+            for p in prices
+        )
+
+        beer["prices"] = prices
+        beer["cheapest_price"] = cheapest["price"]
+        beer["min_price"] = cheapest["price"]
+        beer["shop"] = cheapest["shop_name"]
+        beer["discount_pct"] = cheapest["discount_pct"]
+        beer["max_discount_pct"] = max_discount
+
+        result.append(beer)
 
     result.sort(key=lambda b: b["cheapest_price"])
+
     _cache["data"] = result
     _cache["timestamp"] = now
+
     return result
+
 
 
 @router.get("/stats")
