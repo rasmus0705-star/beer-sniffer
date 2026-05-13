@@ -2,7 +2,8 @@ from fastapi import APIRouter, Depends, Query
 from fastapi.responses import HTMLResponse, JSONResponse
 from sqlalchemy.orm import Session, joinedload
 from sqlalchemy import func
-import time
+import time 
+import re
 
 from app.database import get_db
 from app.models import Beer, Price, PriceHistory, PriceAlert
@@ -21,17 +22,53 @@ def clear_cache():
     _stats_cache["timestamp"] = 0
 
 
-def normalize_name(name: str):
+def normalize_name(name: str, abv=None, volume=None):
     if not name:
         return ""
 
-    return (
-        name.lower()
-        .replace("ø", "oe")
+    name = name.lower()
+
+    # danske bogstaver
+    name = (
+        name.replace("ø", "oe")
         .replace("æ", "ae")
         .replace("å", "aa")
-        .strip()
     )
+
+    # ensret forskellige navne
+    replacements = {
+        "trippel": "tripel",
+        "india pale ale": "ipa",
+        "west coast ipa": "ipa",
+    }
+
+    for old, new in replacements.items():
+        name = name.replace(old, new)
+
+    # fjern alkohol %
+    name = re.sub(r"\d+[.,]?\d*\s?%", "", name)
+
+    # fjern størrelse
+    name = re.sub(r"\d+[.,]?\d*\s?(cl|ml|l)", "", name)
+
+    # fjern specialtegn
+    name = re.sub(r"[^a-z0-9\s]", " ", name)
+
+    # fjern ekstra spaces
+    name = re.sub(r"\s+", " ", name)
+
+    # sorter ordene
+    words = sorted(name.strip().split())
+
+    clean_name = " ".join(words)
+
+    # ABV som ekstra match
+    abv_key = round(float(abv), 1) if abv is not None else "na"
+
+    # størrelse som ekstra match
+    vol_key = round(float(volume), 0) if volume is not None else "na"
+
+    return f"{clean_name}|{abv_key}|{vol_key}"
 
 
 def build_beer_list(db: Session):
@@ -49,7 +86,11 @@ def build_beer_list(db: Session):
         if not beer.prices:
             continue
 
-        key = normalize_name(beer.name)
+        key = normalize_name(
+    beer.name,
+    beer.abv,
+    beer.volume_cl
+)
 
         if key not in grouped:
             grouped[key] = {
