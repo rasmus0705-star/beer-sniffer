@@ -38,13 +38,15 @@ def normalize_name(name: str, abv=None, volume=None):
         .replace("å", "aa")
     )
 
-    # ensret stavemåder
+    # ensret forskellige stavemåder
     replacements = {
         "trippel": "tripel",
         "tripple": "tripel",
+        "tripel": "tripel",
         "india pale ale": "ipa",
         "west coast ipa": "ipa",
         "new england ipa": "neipa",
+        "new england india pale ale": "neipa",
     }
 
     for old, new in replacements.items():
@@ -53,22 +55,23 @@ def normalize_name(name: str, abv=None, volume=None):
     # fjern alkohol %
     name = re.sub(r"\d+[.,]?\d*\s?%", "", name)
 
-    # fjern størrelse
+    # fjern størrelser
     name = re.sub(r"\d+[.,]?\d*\s?(cl|ml|l)", "", name)
 
     # fjern specialtegn
     name = re.sub(r"[^a-z0-9\s]", " ", name)
 
-    # ekstra spaces væk
+    # fjern ekstra spaces
     name = re.sub(r"\s+", " ", name).strip()
 
-    # stopord
+    # ord der ikke hjælper grouping
     blacklist = {
         "beer",
         "ale",
         "brewery",
         "brouwerij",
         "bryggeri",
+        "trappist",
         "belgian",
         "belgisk",
         "abbey",
@@ -91,21 +94,36 @@ def normalize_name(name: str, abv=None, volume=None):
 
         words.append(word)
 
+    # fjern dubletter
+    words = list(set(words))
+
+    # sorter ordene
+    words.sort()
+
     clean_name = " ".join(words)
 
-    # special matches
-    special_matches = {
-        "trappist tripel westmalle": "westmalle tripel",
-        "westmalle trappist tripel": "westmalle tripel",
-    }
+    # ABV
+    abv_key = (
+        round(float(abv), 0)
+        if abv is not None
+        else "na"
+    )
 
-    if clean_name in special_matches:
-        clean_name = special_matches[clean_name]
+    # VOLUME
+    if volume is not None:
 
-    # ABV afrundes
-    abv_key = round(float(abv), 0) if abv is not None else "na"
+        vol = float(volume)
 
-    return f"{clean_name}|{abv_key}"
+        # hvis værdi er liter → omregn til cl
+        if vol < 10:
+            vol = vol * 100
+
+        vol_key = round(vol)
+
+    else:
+        vol_key = "na"
+
+    return f"{clean_name}|{abv_key}|{vol_key}"
 
 
 def build_beer_list(db: Session):
@@ -158,7 +176,11 @@ def build_beer_list(db: Session):
                 "price_dkk": p.price_dkk,
                 "url": p.url,
                 "discount_pct": p.discount_pct or 0,
-                "old_price": p.old_price if hasattr(p, "old_price") else None,
+                "old_price": (
+                    p.old_price
+                    if hasattr(p, "old_price")
+                    else None
+                ),
             })
 
     result = []
