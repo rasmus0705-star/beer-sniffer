@@ -23,6 +23,7 @@ def clear_cache():
 
 
 def normalize_name(name: str, abv=None, volume=None):
+
     if not name:
         return ""
 
@@ -57,7 +58,7 @@ def normalize_name(name: str, abv=None, volume=None):
     # fjern specialtegn
     name = re.sub(r"[^a-z0-9\s]", " ", name)
 
-    # ord der ikke hjælper til matching
+    # ord der ikke hjælper matching
     blacklist = {
         "beer",
         "ale",
@@ -92,22 +93,37 @@ def normalize_name(name: str, abv=None, volume=None):
 
     clean_name = " ".join(words)
 
-    # rund ABV lidt grovere
+    # ABV bruges stadig
     abv_key = round(float(abv), 0) if abv is not None else "na"
 
-    # rund volumen lidt grovere
-    vol_key = round(float(volume), -1) if volume is not None else "na"
+    # volume bruges kun hvis den findes
+    if volume is not None:
 
-    return f"{clean_name}|{abv_key}|{vol_key}"
+        vol = float(volume)
+
+        # konverter liter til cl
+        if vol < 10:
+            vol = vol * 100
+
+        vol_key = round(vol)
+
+    else:
+        vol_key = "na"
+
+    # matcher kun på navn + ABV
+    return f"{clean_name}|{abv_key}"
 
 
 def build_beer_list(db: Session):
+
     now = time.time()
 
     if _cache["data"] is not None and (now - _cache["timestamp"]) < CACHE_TTL:
         return _cache["data"]
 
-    beers = db.query(Beer).options(joinedload(Beer.prices)).all()
+    beers = db.query(Beer).options(
+        joinedload(Beer.prices)
+    ).all()
 
     grouped = {}
 
@@ -123,6 +139,7 @@ def build_beer_list(db: Session):
         )
 
         if key not in grouped:
+
             grouped[key] = {
                 "id": beer.id,
                 "name": beer.name,
@@ -188,7 +205,9 @@ def build_beer_list(db: Session):
 
         result.append(beer)
 
-    result.sort(key=lambda b: b["cheapest_price"])
+    result.sort(
+        key=lambda b: b["cheapest_price"]
+    )
 
     _cache["data"] = result
     _cache["timestamp"] = now
@@ -198,24 +217,33 @@ def build_beer_list(db: Session):
 
 @router.get("/stats")
 def get_stats(db: Session = Depends(get_db)):
+
     now = time.time()
 
     if _stats_cache["data"] is not None and (now - _stats_cache["timestamp"]) < CACHE_TTL:
         return JSONResponse(content=_stats_cache["data"])
 
-    active_beer_ids = db.query(Price.beer_id).distinct().subquery()
+    active_beer_ids = db.query(
+        Price.beer_id
+    ).distinct().subquery()
 
     total = db.query(Beer).filter(
         Beer.id.in_(active_beer_ids)
     ).count()
 
-    deals = db.query(Price.beer_id).filter(
+    deals = db.query(
+        Price.beer_id
+    ).filter(
         Price.discount_pct > 0
     ).distinct().count()
 
-    shops = db.query(Price.shop_name).distinct().all()
+    shops = db.query(
+        Price.shop_name
+    ).distinct().all()
 
-    shop_names = sorted([s[0] for s in shops if s[0]])
+    shop_names = sorted([
+        s[0] for s in shops if s[0]
+    ])
 
     cheapest = db.query(
         func.min(Price.price_dkk)
@@ -223,13 +251,11 @@ def get_stats(db: Session = Depends(get_db)):
 
     all_beers = build_beer_list(db)
 
-    types = sorted(
-        list(set(
-            b["type"]
-            for b in all_beers
-            if b.get("type")
-        ))
-    )
+    types = sorted(list(set(
+        b["type"]
+        for b in all_beers
+        if b.get("type")
+    )))
 
     result = {
         "total": total,
@@ -263,12 +289,14 @@ def get_beers_paginated(
     abv_min: float = Query(None),
     abv_max: float = Query(None),
 ):
+
     all_beers = build_beer_list(db)
 
     filtered = all_beers
 
     # søgning
     if q:
+
         q_lower = q.lower()
 
         filtered = [
@@ -279,6 +307,7 @@ def get_beers_paginated(
 
     # butik
     if shop and shop != "all":
+
         filtered = [
             b for b in filtered
             if any(
@@ -289,6 +318,7 @@ def get_beers_paginated(
 
     # tilbud
     if deals_only:
+
         filtered = [
             b for b in filtered
             if b["max_discount_pct"] > 0
@@ -296,6 +326,7 @@ def get_beers_paginated(
 
     # alkoholfri
     if alcohol_free:
+
         filtered = [
             b for b in filtered
             if b.get("abv") is not None
@@ -304,12 +335,16 @@ def get_beers_paginated(
 
     # smagekasser
     if smagekasse:
+
         filtered = [
             b for b in filtered
             if b.get("category") == "smagekasse"
         ]
+
     else:
+
         if not q:
+
             filtered = [
                 b for b in filtered
                 if b.get("category") != "smagekasse"
@@ -325,6 +360,7 @@ def get_beers_paginated(
         ]
 
         if types_list:
+
             filtered = [
                 b for b in filtered
                 if b.get("type") in types_list
@@ -332,12 +368,14 @@ def get_beers_paginated(
 
     # pris
     if min_price is not None:
+
         filtered = [
             b for b in filtered
             if b["min_price"] >= min_price
         ]
 
     if max_price is not None:
+
         filtered = [
             b for b in filtered
             if b["min_price"] <= max_price
@@ -345,6 +383,7 @@ def get_beers_paginated(
 
     # ABV
     if abv_min is not None:
+
         filtered = [
             b for b in filtered
             if b.get("abv") is not None
@@ -352,6 +391,7 @@ def get_beers_paginated(
         ]
 
     if abv_max is not None:
+
         filtered = [
             b for b in filtered
             if b.get("abv") is not None
@@ -360,24 +400,33 @@ def get_beers_paginated(
 
     # sortering
     if sort == "price-asc":
-        filtered.sort(key=lambda b: b["min_price"])
+
+        filtered.sort(
+            key=lambda b: b["min_price"]
+        )
 
     elif sort == "price-desc":
+
         filtered.sort(
             key=lambda b: b["min_price"],
             reverse=True
         )
 
     elif sort == "discount":
+
         filtered.sort(
             key=lambda b: b["max_discount_pct"],
             reverse=True
         )
 
     elif sort == "name":
-        filtered.sort(key=lambda b: b["name"])
+
+        filtered.sort(
+            key=lambda b: b["name"]
+        )
 
     elif sort == "shops":
+
         filtered.sort(
             key=lambda b: len(b["prices"]),
             reverse=True
@@ -401,12 +450,17 @@ def get_beers_paginated(
 
 
 @router.get("/beers-with-prices")
-def get_beers_legacy(db: Session = Depends(get_db)):
-    return JSONResponse(content=build_beer_list(db))
+def get_beers_legacy(
+    db: Session = Depends(get_db)
+):
+    return JSONResponse(
+        content=build_beer_list(db)
+    )
 
 
 @router.get("/ui", response_class=HTMLResponse)
 def ui():
+
     return """
     <html>
         <head>
