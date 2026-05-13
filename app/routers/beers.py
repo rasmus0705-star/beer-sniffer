@@ -12,14 +12,12 @@ router = APIRouter()
 
 _cache = {"data": None, "timestamp": 0}
 _stats_cache = {"data": None, "timestamp": 0}
-
 CACHE_TTL = 3600
 
 
 def clear_cache():
     _cache["data"] = None
     _cache["timestamp"] = 0
-
     _stats_cache["data"] = None
     _stats_cache["timestamp"] = 0
 
@@ -38,15 +36,13 @@ def normalize_name(name: str, abv=None, volume=None):
         .replace("å", "aa")
     )
 
-    # ensret forskellige stavemåder
+    # ensret stavemåder
     replacements = {
         "trippel": "tripel",
         "tripple": "tripel",
         "tripel": "tripel",
         "india pale ale": "ipa",
         "west coast ipa": "ipa",
-        "new england ipa": "neipa",
-        "new england india pale ale": "neipa",
     }
 
     for old, new in replacements.items():
@@ -58,72 +54,53 @@ def normalize_name(name: str, abv=None, volume=None):
     # fjern størrelser
     name = re.sub(r"\d+[.,]?\d*\s?(cl|ml|l)", "", name)
 
-    # fjern specialtegn
+    # specialtegn væk
     name = re.sub(r"[^a-z0-9\s]", " ", name)
 
-    # fjern ekstra spaces
+    # ryd spaces
     name = re.sub(r"\s+", " ", name).strip()
 
-    # ord der ikke hjælper grouping
-    blacklist = {
+    # ord vi ignorerer
+    ignore_words = {
         "beer",
         "ale",
+        "trappist",
+        "westmalle",
+        "bryggeri",
         "brewery",
         "brouwerij",
-        "bryggeri",
-        "trappist",
-        "belgian",
-        "belgisk",
-        "abbey",
-        "strong",
         "premium",
         "classic",
         "original",
-        "stk",
+        "strong",
+        "belgian",
     }
 
     words = []
 
     for word in name.split():
 
-        if word in blacklist:
+        if word in ignore_words:
             continue
 
-        if len(word) <= 1:
+        if len(word) <= 2:
             continue
 
         words.append(word)
 
-    # fjern dubletter
-    words = list(set(words))
-
-    # sorter ordene
-    words.sort()
+    # unikke ord + sortering
+    words = sorted(set(words))
 
     clean_name = " ".join(words)
 
-    # ABV
+    # ABV som ekstra sikkerhed
     abv_key = (
-        round(float(abv), 0)
+        round(float(abv), 1)
         if abv is not None
         else "na"
     )
 
-    # VOLUME
-    if volume is not None:
-
-        vol = float(volume)
-
-        # hvis værdi er liter → omregn til cl
-        if vol < 10:
-            vol = vol * 100
-
-        vol_key = round(vol)
-
-    else:
-        vol_key = "na"
-
-    return f"{clean_name}|{abv_key}|{vol_key}"
+    return f"{clean_name}|{abv_key}"
 
 
 def build_beer_list(db: Session):
@@ -176,11 +153,7 @@ def build_beer_list(db: Session):
                 "price_dkk": p.price_dkk,
                 "url": p.url,
                 "discount_pct": p.discount_pct or 0,
-                "old_price": (
-                    p.old_price
-                    if hasattr(p, "old_price")
-                    else None
-                ),
+                "old_price": p.old_price if hasattr(p, "old_price") else None,
             })
 
     result = []
@@ -193,7 +166,6 @@ def build_beer_list(db: Session):
 
             shop = p["shop_name"]
 
-            # behold billigste pris pr butik
             if (
                 shop not in unique_shops
                 or p["price"] < unique_shops[shop]["price"]
@@ -224,9 +196,7 @@ def build_beer_list(db: Session):
 
         result.append(beer)
 
-    result.sort(
-        key=lambda b: b["cheapest_price"]
-    )
+    result.sort(key=lambda b: b["cheapest_price"])
 
     _cache["data"] = result
     _cache["timestamp"] = now
@@ -247,7 +217,7 @@ def get_stats(db: Session = Depends(get_db)):
 
     active_beer_ids = db.query(
         Price.beer_id
-    ).distinct()
+    ).distinct().subquery()
 
     total = db.query(Beer).filter(
         Beer.id.in_(active_beer_ids)
@@ -264,7 +234,9 @@ def get_stats(db: Session = Depends(get_db)):
     ).distinct().all()
 
     shop_names = sorted([
-        s[0] for s in shops if s[0]
+        s[0]
+        for s in shops
+        if s[0]
     ])
 
     cheapest = db.query(
@@ -323,8 +295,10 @@ def get_beers_paginated(
 
         filtered = [
             b for b in filtered
-            if q_lower in b["name"].lower()
-            or q_lower in (b.get("brewery") or "").lower()
+            if (
+                q_lower in b["name"].lower()
+                or q_lower in (b.get("brewery") or "").lower()
+            )
         ]
 
     # butik
@@ -351,8 +325,10 @@ def get_beers_paginated(
 
         filtered = [
             b for b in filtered
-            if b.get("abv") is not None
-            and b["abv"] <= 0.5
+            if (
+                b.get("abv") is not None
+                and b["abv"] <= 0.5
+            )
         ]
 
     # smagekasser
@@ -372,7 +348,7 @@ def get_beers_paginated(
                 if b.get("category") != "smagekasse"
             ]
 
-    # øltyper
+    # typer
     if beer_types and beer_types != "all":
 
         types_list = [
@@ -403,21 +379,25 @@ def get_beers_paginated(
             if b["min_price"] <= max_price
         ]
 
-    # ABV
+    # abv
     if abv_min is not None:
 
         filtered = [
             b for b in filtered
-            if b.get("abv") is not None
-            and b["abv"] >= abv_min
+            if (
+                b.get("abv") is not None
+                and b["abv"] >= abv_min
+            )
         ]
 
     if abv_max is not None:
 
         filtered = [
             b for b in filtered
-            if b.get("abv") is not None
-            and b["abv"] <= abv_max
+            if (
+                b.get("abv") is not None
+                and b["abv"] <= abv_max
+            )
         ]
 
     # sortering
@@ -472,9 +452,8 @@ def get_beers_paginated(
 
 
 @router.get("/beers-with-prices")
-def get_beers_legacy(
-    db: Session = Depends(get_db)
-):
+def get_beers_legacy(db: Session = Depends(get_db)):
+
     return JSONResponse(
         content=build_beer_list(db)
     )
@@ -490,7 +469,10 @@ def ui():
         </head>
         <body>
             <h1>🍺 BeerSniffer API</h1>
-            <p>Brug <a href="/docs">/docs</a> for API dokumentation.</p>
+            <p>
+                Brug <a href="/docs">/docs</a>
+                for API dokumentation.
+            </p>
         </body>
     </html>
     """
