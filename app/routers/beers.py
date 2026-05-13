@@ -12,12 +12,14 @@ router = APIRouter()
 
 _cache = {"data": None, "timestamp": 0}
 _stats_cache = {"data": None, "timestamp": 0}
+
 CACHE_TTL = 3600
 
 
 def clear_cache():
     _cache["data"] = None
     _cache["timestamp"] = 0
+
     _stats_cache["data"] = None
     _stats_cache["timestamp"] = 0
 
@@ -52,7 +54,7 @@ def normalize_name(name: str, abv=None, volume=None):
     # fjern alkohol %
     name = re.sub(r"\d+[.,]?\d*\s?%", "", name)
 
-    # fjern størrelser
+    # fjern størrelse
     name = re.sub(r"\d+[.,]?\d*\s?(cl|ml|l)", "", name)
 
     # fjern specialtegn
@@ -93,15 +95,14 @@ def normalize_name(name: str, abv=None, volume=None):
 
     clean_name = " ".join(words)
 
-    # ABV bruges stadig
+    # rund ABV lidt grovere
     abv_key = round(float(abv), 0) if abv is not None else "na"
 
-    # volume bruges kun hvis den findes
+    # volume bruges kun til debug / fremtid
     if volume is not None:
 
         vol = float(volume)
 
-        # konverter liter til cl
         if vol < 10:
             vol = vol * 100
 
@@ -110,7 +111,7 @@ def normalize_name(name: str, abv=None, volume=None):
     else:
         vol_key = "na"
 
-    # matcher kun på navn + ABV
+    # matcher kun på navn + abv
     return f"{clean_name}|{abv_key}"
 
 
@@ -118,7 +119,10 @@ def build_beer_list(db: Session):
 
     now = time.time()
 
-    if _cache["data"] is not None and (now - _cache["timestamp"]) < CACHE_TTL:
+    if (
+        _cache["data"] is not None
+        and (now - _cache["timestamp"]) < CACHE_TTL
+    ):
         return _cache["data"]
 
     beers = db.query(Beer).options(
@@ -137,6 +141,16 @@ def build_beer_list(db: Session):
             beer.abv,
             beer.volume_cl
         )
+
+        # DEBUG WESTMALLE
+        if "westmalle" in beer.name.lower():
+
+            print("DEBUG WESTMALLE")
+            print("NAME:", beer.name)
+            print("ABV:", beer.abv)
+            print("VOL:", beer.volume_cl)
+            print("KEY:", key)
+            print("-------------------")
 
         if key not in grouped:
 
@@ -220,7 +234,10 @@ def get_stats(db: Session = Depends(get_db)):
 
     now = time.time()
 
-    if _stats_cache["data"] is not None and (now - _stats_cache["timestamp"]) < CACHE_TTL:
+    if (
+        _stats_cache["data"] is not None
+        and (now - _stats_cache["timestamp"]) < CACHE_TTL
+    ):
         return JSONResponse(content=_stats_cache["data"])
 
     active_beer_ids = db.query(
@@ -350,7 +367,7 @@ def get_beers_paginated(
                 if b.get("category") != "smagekasse"
             ]
 
-    # typer
+    # øltyper
     if beer_types and beer_types != "all":
 
         types_list = [
