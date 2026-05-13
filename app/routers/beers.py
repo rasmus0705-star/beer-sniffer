@@ -158,8 +158,11 @@ def get_beers_paginated(
             filtered = [b for b in filtered if b.get("category") != "smagekasse"]
 
     # Stilart
-    if beer_type and beer_type != "all":
-        filtered = [b for b in filtered if b.get("type") == beer_type]
+    # Stilart — multi-select via kommasepareret liste
+    if beer_types and beer_types != "all":
+        types_list = [t.strip() for t in beer_types.split(',') if t.strip()]
+        if types_list:
+            filtered = [b for b in filtered if b.get("type") in types_list]
 
     # Pris
     if min_price is not None:
