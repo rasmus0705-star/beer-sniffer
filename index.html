@@ -12,19 +12,13 @@
     <meta property="og:description" content="Sammenlign priser på specialøl fra danske webshops. Opdateres dagligt.">
     <meta property="og:url" content="https://www.beersniffer.dk">
     <meta property="og:type" content="website">
-    <link rel="canonical" href="https://www.beersniffer.dk">
+    <link rel="canonical" href="https://beersniffer.dk">
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
     <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"BeerSniffer","url":"https://www.beersniffer.dk","potentialAction":{"@type":"SearchAction","target":"https://www.beersniffer.dk/?q={search_term_string}","query-input":"required name=search_term_string"}}</script>
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-WLVKNJ5DS2"></script>
     <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-WLVKNJ5DS2');</script>
     <style>
-        :root {
-            --bg:#0a0805;--surface:#141009;--surface2:#1e1810;--surface3:#252018;
-            --gold:#c8920e;--gold-light:#f0b832;--gold-dim:#7a5a08;--amber:#d4620a;
-            --text:#f0e6d0;--text-muted:#7a6e5a;--text-dim:#4a4238;
-            --border:#28200e;--border-light:#3a3020;
-            --discount:#3dba6f;--discount-dark:#1a5a35;
-        }
+        :root{--bg:#0a0805;--surface:#141009;--surface2:#1e1810;--surface3:#252018;--gold:#c8920e;--gold-light:#f0b832;--gold-dim:#7a5a08;--amber:#d4620a;--text:#f0e6d0;--text-muted:#7a6e5a;--text-dim:#4a4238;--border:#28200e;--border-light:#3a3020;--discount:#3dba6f;--discount-dark:#1a5a35;}
         *{margin:0;padding:0;box-sizing:border-box;}
         body{background:var(--bg);color:var(--text);font-family:'DM Sans',sans-serif;min-height:100vh;overflow-x:hidden;}
         body::after{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");pointer-events:none;z-index:9999;}
@@ -40,7 +34,6 @@
         .brand-name{font-family:'Bebas Neue',sans-serif;font-size:clamp(5rem,11vw,8.5rem);line-height:0.88;letter-spacing:0.04em;background:linear-gradient(160deg,var(--gold-light) 0%,var(--gold) 35%,var(--amber) 65%,#8a4a05 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
         .brand-divider{height:1px;width:100%;background:linear-gradient(90deg,transparent,var(--gold),transparent);opacity:0.3;margin:0.4rem 0;}
         .brand-tagline{font-size:0.8rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--text-muted);font-weight:300;}
-        .brand-updated{font-size:0.68rem;color:var(--text-dim);margin-top:0.5rem;letter-spacing:0.05em;}
         .hero-cta{display:flex;gap:0.6rem;margin-top:0.8rem;flex-wrap:wrap;}
         .cta-btn{background:linear-gradient(135deg,var(--gold),var(--gold-light));border:none;color:#000;font-weight:700;padding:0.55rem 1rem;border-radius:8px;cursor:pointer;font-size:0.8rem;transition:all 0.2s;}
         .cta-btn:hover{transform:translateY(-1px);box-shadow:0 6px 20px rgba(200,146,14,0.4);}
@@ -53,42 +46,58 @@
         .stat:last-child{border-right:none;}
         .stat-number{font-family:'Bebas Neue',sans-serif;font-size:2.2rem;color:var(--gold-light);line-height:1;}
         .stat-label{font-size:0.62rem;letter-spacing:0.25em;text-transform:uppercase;color:var(--text-muted);margin-top:0.2rem;}
-        .controls-outer{position:sticky;top:0;z-index:500;background:rgba(10,8,5,0.97);backdrop-filter:blur(16px);border-bottom:1px solid var(--border);overflow-x:auto;overflow-y:visible;scrollbar-width:none;}
-        .controls-outer::-webkit-scrollbar{display:none;}
+
+        /* ── FILTERBAR ── */
+        .controls-outer{position:sticky;top:0;z-index:500;background:rgba(10,8,5,0.97);backdrop-filter:blur(16px);border-bottom:1px solid var(--border);}
         .controls-outer.sticky-active{box-shadow:0 6px 20px rgba(0,0,0,0.6);border-bottom:1px solid var(--gold);}
-        .controls{padding:0.9rem 2rem;display:flex;gap:0.7rem;flex-wrap:nowrap;align-items:center;justify-content:flex-start;min-width:max-content;}
-        .search-wrap{position:relative;flex:1;max-width:360px;min-width:180px;}
-        .search-wrap svg{position:absolute;left:0.9rem;top:50%;transform:translateY(-50%);color:var(--text-muted);width:15px;height:15px;}
-        input[type="text"]{width:100%;background:var(--surface2);border:1px solid var(--border-light);border-radius:8px;padding:0.62rem 1rem 0.62rem 2.4rem;color:var(--text);font-family:'DM Sans',sans-serif;font-size:0.85rem;outline:none;transition:border-color 0.2s;}
-        input[type="text"]:focus{border-color:var(--gold);}
-        input[type="text"]::placeholder{color:var(--text-muted);}
-        .filter-btn{background:var(--surface2);border:1px solid var(--border-light);border-radius:999px;padding:0.55rem 1rem;color:var(--text);font-family:'DM Sans',sans-serif;font-size:0.82rem;cursor:pointer;transition:all 0.15s;white-space:nowrap;}
-        .filter-btn.active{background:linear-gradient(135deg,var(--gold),var(--gold-light));color:#000;border-color:var(--gold);font-weight:700;box-shadow:0 0 12px rgba(200,146,14,0.5);}
-        .filter-btn:hover{transform:translateY(-1px);box-shadow:0 4px 12px rgba(0,0,0,0.4);border-color:var(--gold);}
-        .dropdown{position:relative;}
-        .dropdown-btn{background:var(--surface2);border:1px solid var(--border-light);border-radius:8px;padding:0.62rem 1rem;color:var(--text);font-family:'DM Sans',sans-serif;font-size:0.82rem;cursor:pointer;transition:all 0.2s;white-space:nowrap;display:flex;align-items:center;gap:0.4rem;user-select:none;}
-        .dropdown-btn:hover,.dropdown-btn.has-value{border-color:var(--gold);}
-        .arrow{font-size:0.6rem;transition:transform 0.2s;opacity:0.5;}
-        .dropdown.open .arrow{transform:rotate(180deg);}
-        .dropdown-menu{display:none;position:fixed;background:var(--surface2);border:1px solid var(--border-light);border-radius:10px;min-width:200px;max-height:320px;overflow-y:auto;z-index:99999;box-shadow:0 12px 40px rgba(0,0,0,0.8);padding:0.4rem;}
-        .dropdown-item{padding:0.5rem 0.75rem;border-radius:6px;cursor:pointer;font-size:0.82rem;color:var(--text);transition:all 0.15s;display:flex;align-items:center;gap:0.5rem;}
-        .dropdown-item:hover{background:var(--surface3);}
-        .dropdown-item.selected{color:#000;background:linear-gradient(135deg,var(--gold),var(--gold-light));font-weight:600;}
-        .check{width:14px;height:14px;border:1px solid var(--border-light);border-radius:3px;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:0.6rem;}
-        .dropdown-item.selected .check{background:var(--gold);border-color:var(--gold);color:#000;}
-        .dropdown-divider{height:1px;background:var(--border);margin:0.3rem 0.4rem;}
-        .dropdown-menu::-webkit-scrollbar{width:4px;}
-        .dropdown-menu::-webkit-scrollbar-thumb{background:var(--border-light);border-radius:2px;}
-        .range-wrap{display:flex;align-items:center;gap:0.6rem;white-space:nowrap;}
-        .dual-range-wrap{position:relative;width:120px;height:20px;}
+        .filterbar{max-width:1440px;margin:0 auto;}
+
+        /* Top række — altid synlig */
+        .filterbar-top{display:flex;gap:0.6rem;padding:0.75rem 1.5rem;align-items:center;flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;}
+        .filterbar-top::-webkit-scrollbar{display:none;}
+        .search-wrap{position:relative;flex:1;min-width:180px;max-width:320px;}
+        .search-wrap svg{position:absolute;left:0.75rem;top:50%;transform:translateY(-50%);color:var(--text-muted);width:14px;height:14px;}
+        .search-wrap input{width:100%;background:var(--surface2);border:1px solid var(--border-light);border-radius:8px;padding:0.55rem 1rem 0.55rem 2.2rem;color:var(--text);font-family:'DM Sans',sans-serif;font-size:0.82rem;outline:none;transition:border-color 0.2s;}
+        .search-wrap input:focus{border-color:var(--gold);}
+        .search-wrap input::placeholder{color:var(--text-muted);}
+        .filter-pill{background:var(--surface2);border:1px solid var(--border-light);border-radius:999px;padding:0.45rem 0.9rem;color:var(--text);font-family:'DM Sans',sans-serif;font-size:0.78rem;cursor:pointer;transition:all 0.15s;white-space:nowrap;flex-shrink:0;}
+        .filter-pill.active{background:linear-gradient(135deg,var(--gold),var(--gold-light));color:#000;border-color:var(--gold);font-weight:700;box-shadow:0 0 10px rgba(200,146,14,0.4);}
+        .filter-pill:hover{border-color:var(--gold);}
+        .sort-select{background:var(--surface2);border:1px solid var(--border-light);border-radius:8px;padding:0.5rem 0.75rem;color:var(--text);font-family:'DM Sans',sans-serif;font-size:0.78rem;outline:none;cursor:pointer;white-space:nowrap;flex-shrink:0;}
+        .expand-btn{display:flex;align-items:center;gap:5px;background:var(--surface2);border:1px solid var(--border-light);border-radius:8px;padding:0.5rem 0.9rem;color:var(--text-muted);font-family:'DM Sans',sans-serif;font-size:0.78rem;cursor:pointer;white-space:nowrap;flex-shrink:0;transition:all 0.15s;}
+        .expand-btn.open{border-color:var(--gold);color:var(--gold);}
+        .chevron-icon{font-size:0.6rem;transition:transform 0.2s;opacity:0.6;}
+        .expand-btn.open .chevron-icon{transform:rotate(180deg);}
+
+        /* Udvidelig sektion */
+        .filterbar-expanded{display:none;border-top:1px solid var(--border);}
+        .filterbar-expanded.show{display:block;}
+        .filter-grid{display:grid;grid-template-columns:1fr 1fr 1fr;border-bottom:1px solid var(--border);}
+        .filter-section{padding:1rem 1.5rem;border-right:1px solid var(--border);}
+        .filter-section:last-child{border-right:none;}
+        .fs-label{font-size:0.62rem;color:var(--text-muted);letter-spacing:0.2em;text-transform:uppercase;margin-bottom:0.6rem;}
+        .fpill-group{display:flex;gap:5px;flex-wrap:wrap;}
+        .fpill{background:var(--surface2);border:1px solid var(--border-light);border-radius:999px;padding:4px 10px;font-size:0.75rem;color:var(--text-muted);cursor:pointer;transition:all 0.15s;white-space:nowrap;}
+        .fpill.on{background:rgba(200,146,14,0.15);border-color:var(--gold);color:var(--gold);}
+        .fpill:hover{border-color:var(--gold-dim);}
+
+        /* Dual range */
+        .dual-range-wrap{position:relative;width:100%;height:20px;margin:6px 0 2px;}
         .dual-range-wrap input[type="range"]{position:absolute;width:100%;pointer-events:none;-webkit-appearance:none;height:3px;background:transparent;outline:none;top:50%;transform:translateY(-50%);}
         .dual-range-wrap input[type="range"]::-webkit-slider-thumb{-webkit-appearance:none;width:14px;height:14px;background:var(--gold);border-radius:50%;pointer-events:all;cursor:pointer;}
         .dual-range-track{position:absolute;top:50%;transform:translateY(-50%);width:100%;height:3px;background:var(--border-light);border-radius:2px;z-index:0;}
         .dual-range-fill{position:absolute;height:100%;background:var(--gold);border-radius:2px;}
-        .range-wrap label{font-size:0.74rem;color:var(--text);}
-        input[type="range"]{-webkit-appearance:none;width:110px;height:3px;background:var(--border-light);border-radius:2px;outline:none;cursor:pointer;}
-        input[type="range"]::-webkit-slider-thumb{-webkit-appearance:none;width:14px;height:14px;background:var(--gold);border-radius:50%;}
-        #price-val{font-size:0.76rem;color:var(--text);min-width:70px;}
+        .range-val{font-size:0.72rem;color:var(--text-muted);margin-top:2px;}
+
+        /* Aktive filtre */
+        .active-strip{display:flex;gap:6px;flex-wrap:wrap;padding:0.6rem 1.5rem;align-items:center;background:var(--surface);}
+        .active-label{font-size:0.62rem;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.15em;}
+        .active-chip{display:inline-flex;align-items:center;gap:4px;background:rgba(200,146,14,0.12);border:1px solid rgba(200,146,14,0.3);border-radius:999px;padding:3px 8px 3px 10px;font-size:0.72rem;color:var(--gold);cursor:pointer;}
+        .active-chip:hover{background:rgba(200,146,14,0.2);}
+        .reset-all{font-size:0.72rem;color:var(--text-muted);cursor:pointer;margin-left:auto;padding:3px 8px;border-radius:999px;border:1px solid var(--border-light);}
+        .reset-all:hover{color:var(--text);border-color:var(--border-light);}
+
+        /* Resten af styles */
         .section-wrap{padding:2rem 2rem 0;max-width:1440px;margin:0 auto;display:none;}
         .section-wrap.visible{display:block;}
         .section-header{display:flex;align-items:center;gap:0.75rem;margin-bottom:1.25rem;}
@@ -120,14 +129,13 @@
         .ribbon{position:absolute;top:10px;right:0;background:linear-gradient(135deg,var(--discount),#29a35a);color:#000;font-family:'Bebas Neue',sans-serif;font-size:1rem;padding:0.25rem 0.75rem 0.25rem 0.6rem;border-radius:4px 0 0 4px;box-shadow:-3px 3px 10px rgba(0,0,0,0.5);z-index:10;}
         .ribbon::after{content:'';position:absolute;right:0;bottom:-5px;border-left:5px solid var(--discount-dark);border-bottom:5px solid transparent;}
         .card-img-wrap{position:relative;cursor:pointer;display:block;}
-        .card-img{width:100%;height:180px;object-fit:contain;background:var(--surface2);padding:1rem;display:block;transition:filter 0.2s;}
+        .card-img{width:100%;height:180px;object-fit:contain;background:var(--surface2);padding:1rem;display:block;}
         .card-img-placeholder{width:100%;height:180px;background:var(--surface2);display:flex;align-items:center;justify-content:center;font-size:2.5rem;}
         .img-overlay{position:absolute;inset:0;background:rgba(10,8,5,0.82);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:0.3rem;opacity:0;transition:opacity 0.2s;}
         .card-img-wrap:hover .img-overlay{opacity:1;}
         .img-overlay-label{font-size:0.62rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--text-muted);}
         .img-overlay-price{font-family:'Bebas Neue',sans-serif;font-size:2rem;color:var(--gold-light);line-height:1;}
-        .img-overlay-btn{background:var(--gold);color:#000;font-size:0.72rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;padding:0.4rem 1.2rem;border-radius:6px;text-decoration:none;margin-top:0.2rem;transition:background 0.15s;}
-        .img-overlay-btn:hover{background:var(--gold-light);}
+        .img-overlay-btn{background:var(--gold);color:#000;font-size:0.72rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;padding:0.4rem 1.2rem;border-radius:6px;text-decoration:none;margin-top:0.2rem;}
         .fav-btn{position:absolute;bottom:8px;right:8px;background:rgba(0,0,0,0.55);border:1px solid var(--border-light);border-radius:50%;width:30px;height:30px;display:flex;align-items:center;justify-content:center;cursor:pointer;font-size:0.9rem;transition:all 0.2s;z-index:5;}
         .fav-btn:hover{transform:scale(1.2);}
         .fav-btn.active{background:rgba(220,50,50,0.2);border-color:#e05050;}
@@ -151,26 +159,23 @@
         .price-row-discount{background:linear-gradient(135deg,#3dba6f,#29a35a);color:#000;font-size:0.7rem;font-weight:800;padding:0.25rem 0.5rem;border-radius:5px;box-shadow:0 2px 6px rgba(0,0,0,0.4);}
         .price-row-right{display:flex;align-items:center;gap:0.25rem;flex-shrink:0;}
         .price-row-link{font-size:0.72rem;font-weight:800;color:#000;background:linear-gradient(135deg,#ffd54a,#ffb300);padding:0.4rem 0.75rem;border-radius:7px;text-decoration:none;text-transform:uppercase;letter-spacing:0.05em;box-shadow:0 3px 10px rgba(255,193,7,0.3);transition:all 0.15s;white-space:nowrap;}
-        .price-row-link:hover{transform:translateY(-1px);box-shadow:0 5px 14px rgba(255,193,7,0.45);}
+        .price-row-link:hover{transform:translateY(-1px);}
         .more-shops-toggle{font-size:0.72rem;color:var(--gold);cursor:pointer;padding:0.3rem 0.65rem;background:rgba(200,146,14,0.06);border:1px solid rgba(200,146,14,0.2);border-radius:6px;text-align:center;transition:all 0.2s;margin-top:0.3rem;}
         .more-shops-toggle:hover{background:rgba(200,146,14,0.12);}
         .more-shops{flex-direction:column;gap:0.3rem;margin-top:0.3rem;}
         .card-actions{margin-top:0.5rem;}
         .untappd-btn{display:block;text-align:center;padding:0.42rem;background:rgba(255,196,0,0.06);border:1px solid rgba(255,196,0,0.18);border-radius:7px;color:#ffc400;font-size:0.68rem;text-decoration:none;transition:all 0.2s;letter-spacing:0.1em;text-transform:uppercase;}
         .untappd-btn:hover{background:#ffc400;color:#000;}
-        .shipping-btn,.bulk-btn{width:26px;height:26px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;font-size:0.78rem;cursor:pointer;flex-shrink:0;position:relative;transition:all 0.2s;line-height:1;}
-        .shipping-btn{background:var(--surface3);border:1px solid var(--border-light);color:var(--text-muted);}
+        .shipping-btn{width:26px;height:26px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;font-size:0.78rem;cursor:pointer;flex-shrink:0;position:relative;transition:all 0.2s;line-height:1;background:var(--surface3);border:1px solid var(--border-light);color:var(--text-muted);}
         .shipping-btn:hover{border-color:#4a9eff;color:#4a9eff;background:rgba(74,158,255,0.1);}
         .shipping-btn.free-shipping{border-color:var(--discount);color:var(--discount);background:rgba(61,186,111,0.08);}
         .shipping-btn.no-info{border-color:var(--text-dim);color:var(--text-dim);}
-        .bulk-btn{background:rgba(212,98,10,0.08);border:1px solid rgba(212,98,10,0.3);color:var(--amber);}
-        .bulk-btn:hover{border-color:var(--amber);background:rgba(212,98,10,0.18);}
-        .shipping-tooltip{position:fixed;background:#1c1610;border:1px solid #4a3a20;border-radius:10px;padding:0.75rem 1rem;min-width:200px;max-width:240px;box-shadow:0 12px 40px rgba(0,0,0,0.9),0 0 0 1px rgba(200,146,14,0.1);opacity:0;pointer-events:none;transition:opacity 0.15s,transform 0.15s;transform:translateY(4px);z-index:999999;text-align:left;}
-        .shipping-btn:hover .shipping-tooltip,.shipping-btn.tooltip-open .shipping-tooltip,.bulk-btn:hover .shipping-tooltip,.bulk-btn.tooltip-open .shipping-tooltip{opacity:1;pointer-events:auto;transform:translateY(0);}
+        .shipping-tooltip{position:fixed;background:#1c1610;border:1px solid #4a3a20;border-radius:10px;padding:0.75rem 1rem;min-width:200px;max-width:240px;box-shadow:0 12px 40px rgba(0,0,0,0.9);opacity:0;pointer-events:none;transition:opacity 0.15s,transform 0.15s;transform:translateY(4px);z-index:999999;text-align:left;}
+        .shipping-btn:hover .shipping-tooltip,.shipping-btn.tooltip-open .shipping-tooltip{opacity:1;pointer-events:auto;transform:translateY(0);}
         .tt-row{display:flex;justify-content:space-between;align-items:center;gap:0.75rem;font-size:0.8rem;line-height:1.6;}
         .tt-label{color:#a09070;font-size:0.78rem;}
         .tt-value{color:#f0e6d0;font-weight:600;white-space:nowrap;font-size:0.82rem;}
-        .tt-free{color:var(--discount);font-weight:700;font-size:0.82rem;}
+        .tt-free{color:var(--discount);font-weight:700;}
         .tt-total{color:var(--gold-light);font-weight:700;font-size:0.9rem;}
         .tt-divider{height:1px;background:#3a2a10;margin:0.4rem 0;}
         .tt-title{font-size:0.68rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold);margin-bottom:0.45rem;font-weight:600;}
@@ -201,17 +206,17 @@
             .brand-name{font-size:clamp(3.8rem,18vw,5rem);}
             .stat{padding:0.7rem 0.8rem;max-width:none;}
             .stat-number{font-size:1.6rem;}
-            .controls{padding:0.6rem 0.75rem;gap:0.5rem;}
-            .filter-btn{padding:0.45rem 0.85rem;font-size:0.78rem;}
-            .dropdown-btn{padding:0.45rem 0.85rem;font-size:0.78rem;}
-            .dropdown-menu{position:fixed;left:10px!important;right:10px;top:110px!important;min-width:unset;max-height:65vh;}
+            .filterbar-top{padding:0.6rem 0.75rem;gap:0.5rem;}
+            .filter-pill{padding:0.4rem 0.75rem;font-size:0.75rem;}
+            .filter-grid{grid-template-columns:1fr;}
+            .filter-section{border-right:none;border-bottom:1px solid var(--border);}
             .grid,.favs-grid{grid-template-columns:1fr;gap:0.75rem;}
             .grid-wrap{padding:0.75rem;}
-            .card-img,.card-img-placeholder{height:200px;}
             .top-deals-grid{grid-template-columns:repeat(2,1fr);}
             .hero-cta{flex-direction:column;width:100%;}
             .cta-btn{width:100%;}
             .footer-main{gap:1.5rem;padding:1.5rem 1rem;}
+            .expand-btn span{display:none;}
         }
     </style>
 </head>
@@ -229,7 +234,7 @@
             <p class="brand-tagline">Vi sammenligner priser fra danske butikker, så du altid får den bedste deal</p>
             <div class="hero-cta">
                 <button onclick="document.getElementById('search').focus()" class="cta-btn">🔍 Find billigste øl nu</button>
-                <button onclick="document.getElementById('top-deals-toggle').click()" class="cta-btn secondary">🔥 Spar penge nu</button>
+                <button onclick="toggleTopDeals()" class="cta-btn secondary">🔥 Spar penge nu</button>
             </div>
             <p class="hero-proof">Opdateret dagligt • Priser fra <span id="shop-count-inline">–</span> danske butikker</p>
             <p class="hero-trust">Ingen login &nbsp;•&nbsp; 100% gratis &nbsp;•&nbsp; Opdateres dagligt</p>
@@ -245,40 +250,68 @@
 </div>
 
 <div class="controls-outer" id="controls-outer">
-    <div class="controls">
-        <div class="search-wrap">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-4.35-4.35M17 11A6 6 0 1 1 5 11a6 6 0 0 1 12 0z"/></svg>
-            <input type="text" id="search" placeholder="Søg efter øl eller bryggeri...">
+    <div class="filterbar">
+        <!-- Altid synlig top-række -->
+        <div class="filterbar-top">
+            <div class="search-wrap">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-4.35-4.35M17 11A6 6 0 1 1 5 11a6 6 0 0 1 12 0z"/></svg>
+                <input type="text" id="search" placeholder="Søg efter øl eller bryggeri...">
+            </div>
+            <button class="filter-pill active" data-filter="all">Alle</button>
+            <button class="filter-pill" data-filter="deals">🔥 Tilbud</button>
+            <button class="filter-pill" data-filter="favs">❤️ Favoritter <span id="fav-count-badge"></span></button>
+            <button class="filter-pill" data-filter="alcohol-free">🚫 Alkoholfri</button>
+            <button class="filter-pill" data-filter="smagekasse">📦 Smagekasser</button>
+            <button class="filter-pill" id="top-deals-toggle">🏆 Top 10</button>
+            <select class="sort-select" id="sort-select">
+                <option value="price-asc">Pris: lav → høj</option>
+                <option value="price-desc">Pris: høj → lav</option>
+                <option value="discount">Størst rabat</option>
+                <option value="name">Navn A–Z</option>
+                <option value="shops">Flest butikker</option>
+            </select>
+            <button class="expand-btn" id="expand-btn" onclick="toggleFilters()">
+                ⚙ <span>Filtre</span> <span class="chevron-icon" id="chevron">▼</span>
+            </button>
         </div>
-        <button class="filter-btn active" data-filter="all">Alle</button>
-        <button class="filter-btn" data-filter="deals">🔥 Tilbud</button>
-        <button class="filter-btn" data-filter="favs">❤️ Favoritter <span id="fav-count-badge"></span></button>
-        <button class="filter-btn" data-filter="alcohol-free">🚫 Alkoholfri</button>
-        <button class="filter-btn" data-filter="smagekasse">📦 Smagekasser</button>
-        <div class="dropdown" id="shop-dropdown">
-            <div class="dropdown-btn" id="shop-btn">Butikker <span class="arrow">▼</span></div>
-            <div class="dropdown-menu" id="shop-menu"></div>
-        </div>
-        <div class="dropdown" id="sort-dropdown">
-            <div class="dropdown-btn" id="sort-btn">Sortér efter <span class="arrow">▼</span></div>
-            <div class="dropdown-menu" id="sort-menu">
-                <div class="dropdown-item selected" data-sort="price-asc"><span class="check">✓</span> Pris: Lav → Høj</div>
-                <div class="dropdown-item" data-sort="price-desc"><span class="check"></span> Pris: Høj → Lav</div>
-                <div class="dropdown-item" data-sort="discount"><span class="check"></span> Størst rabat</div>
-                <div class="dropdown-item" data-sort="name"><span class="check"></span> Navn A–Z</div>
+
+        <!-- Udvidelig filtersektion -->
+        <div class="filterbar-expanded" id="filterbar-expanded">
+            <div class="filter-grid">
+                <!-- Butikker -->
+                <div class="filter-section">
+                    <div class="fs-label">Butik</div>
+                    <div class="fpill-group" id="shop-pills">
+                        <span class="fpill on" data-shop="all">Alle butikker</span>
+                    </div>
+                </div>
+                <!-- Sliders -->
+                <div class="filter-section">
+                    <div class="fs-label">Pris per flaske</div>
+                    <div class="dual-range-wrap">
+                        <div class="dual-range-track"><div class="dual-range-fill" id="price-fill"></div></div>
+                        <input type="range" id="price-min" min="0" max="500" value="0" step="5">
+                        <input type="range" id="price-max" min="0" max="500" value="500" step="5">
+                    </div>
+                    <div class="range-val" id="price-val">0–500 kr</div>
+                    <div class="fs-label" style="margin-top:1rem">Alkoholprocent (ABV)</div>
+                    <div class="dual-range-wrap">
+                        <div class="dual-range-track"><div class="dual-range-fill" id="abv-fill"></div></div>
+                        <input type="range" id="abv-min" min="0" max="15" value="0" step="0.5">
+                        <input type="range" id="abv-max" min="0" max="15" value="15" step="0.5">
+                    </div>
+                    <div class="range-val" id="abv-val">0–15%</div>
+                </div>
+                <!-- Nulstil -->
+                <div class="filter-section" style="display:flex;flex-direction:column;justify-content:space-between;">
+                    <div>
+                        <div class="fs-label">Aktive filtre</div>
+                        <div id="active-chips" style="display:flex;gap:5px;flex-wrap:wrap;"></div>
+                    </div>
+                    <button onclick="resetAll()" style="background:var(--surface2);border:1px solid var(--border-light);border-radius:8px;padding:0.5rem 1rem;color:var(--text-muted);font-family:'DM Sans',sans-serif;font-size:0.78rem;cursor:pointer;margin-top:1rem;text-align:left;">Nulstil alle filtre</button>
+                </div>
             </div>
         </div>
-        <div class="range-wrap">
-            <label>Pris</label>
-            <div class="dual-range-wrap">
-                <input type="range" id="price-min" min="0" max="500" value="0" step="10">
-                <input type="range" id="price-max" min="0" max="500" value="500" step="10">
-                <div class="dual-range-track"><div class="dual-range-fill" id="range-fill"></div></div>
-            </div>
-            <span id="price-val">0–500 kr</span>
-        </div>
-        <button class="filter-btn" id="top-deals-toggle">🏆 Top 10 tilbud</button>
-        <button class="filter-btn" id="reset-btn">Nulstil</button>
     </div>
 </div>
 
@@ -296,7 +329,7 @@
     <div id="loading"><div class="spinner"></div><p>Henter øl...</p></div>
     <p class="result-count" id="result-count" style="display:none"></p>
     <div class="grid" id="grid"></div>
-    <div style="text-align:center;margin:2rem 0;"><button id="load-more" class="filter-btn" style="display:none">Vis flere øl ↓</button></div>
+    <div style="text-align:center;margin:2rem 0;"><button id="load-more" class="filter-pill" style="display:none;padding:0.6rem 2rem">Vis flere øl ↓</button></div>
 </div>
 
 <section class="seo-section">
@@ -306,7 +339,7 @@
 
 <footer>
     <div class="footer-disclaimer"><p><strong>📢 Affiliate disclosure:</strong> BeerSniffer kan modtage provision når du køber via vores links. Det koster dig ingenting ekstra og påvirker ikke vores prissammenligning — vi viser altid den billigste pris først.</p></div>
-    <div class="footer-disclaimer" style="background:transparent;"><p>Priser opdateres dagligt, men kan variere. Tjek altid den endelige pris hos forhandleren før køb. Lagerstatus kan ændre sig uden varsel.</p></div>
+    <div class="footer-disclaimer" style="background:transparent;"><p>Priser opdateres dagligt, men kan variere. Tjek altid den endelige pris hos forhandleren før køb. Lagerstatus kan ændre sig uden varsel. BeerSniffer er formidler — køb sker direkte hos forhandleren.</p></div>
     <div class="footer-main">
         <div class="footer-col">
             <span class="footer-col-title">Om BeerSniffer</span>
@@ -330,7 +363,6 @@
 </footer>
 
 <script>
-// ── Konstanter ──
 const API = 'https://beer-sniffer-production-2a11.up.railway.app';
 const PAGE_SIZE = 50;
 const SHIPPING = {
@@ -341,19 +373,12 @@ const SHIPPING = {
 };
 
 // ── State ──
-let allBeers = [];         // Alle øl hentet så langt
-let currentPage = 1;
-let totalPages = 1;
-let totalCount = 0;
-let isLoading = false;
-let currentFilter = 'all';
-let currentShop = 'all';
-let currentSort = 'price-asc';
-let priceMin = 0;
-let priceMax = 500;
+let allBeers = [], currentPage = 1, totalPages = 1, totalCount = 0, isLoading = false;
+let currentFilter = 'all', currentShop = 'all', currentSort = 'price-asc';
+let priceMin = 0, priceMax = 500, abvMin = 0, abvMax = 15;
 let favorites = new Set(JSON.parse(localStorage.getItem('bs_favorites') || '[]'));
 
-// ── Hjælpefunktioner ──
+// ── Helpers ──
 function esc(s) { return (s||'').replace(/'/g,' ').replace(/"/g,' '); }
 
 function totalWithShipping(shopName, price) {
@@ -370,10 +395,7 @@ function positionTooltip(btn) {
     tt.style.transform = 'translateY(-100%)';
     tt.style.left = 'auto';
     tt.style.right = (window.innerWidth - rect.right) + 'px';
-    setTimeout(() => {
-        const ttRect = tt.getBoundingClientRect();
-        if (ttRect.left < 10) { tt.style.right = 'auto'; tt.style.left = '10px'; }
-    }, 0);
+    setTimeout(() => { const r = tt.getBoundingClientRect(); if (r.left < 10) { tt.style.right = 'auto'; tt.style.left = '10px'; } }, 0);
 }
 
 function shippingTooltipHTML(shopName, itemPrice) {
@@ -396,7 +418,17 @@ function shippingBtnHTML(shopName, itemPrice) {
     return `<span class="shipping-btn${cls}" onclick="positionTooltip(this);this.classList.toggle('tooltip-open');event.stopPropagation();event.preventDefault()">🚚<div class="shipping-tooltip">${shippingTooltipHTML(shopName, itemPrice)}</div></span>`;
 }
 
-// ── Normalisér øl fra API ──
+document.addEventListener('click', () => {
+    document.querySelectorAll('.shipping-btn.tooltip-open').forEach(b => b.classList.remove('tooltip-open'));
+});
+
+function trackNewBeers(beers) {
+    const seen = JSON.parse(localStorage.getItem('bs_seen') || '{}');
+    const now = Date.now(), week = 7*24*60*60*1000;
+    beers.forEach(b => { const k = b.normalized_name||b.name; if (!seen[k]) { seen[k]=now; } else if (now-seen[k]<week) {} });
+    localStorage.setItem('bs_seen', JSON.stringify(seen));
+}
+
 function normalizeBeer(b) {
     const rawPrices = b.prices || [];
     const seen = new Set();
@@ -406,58 +438,47 @@ function normalizeBeer(b) {
         url: p.url || '',
         discount_pct: p.discount_pct || 0,
         old_price: p.old_price || null,
-    })).filter(p => {
-        const key = p.shop_name + '|' + p.price;
-        if (seen.has(key)) return false;
-        seen.add(key);
-        return true;
-    }).sort((a, c) => a.price - c.price);
-
-    return {
-        ...b,
-        min_price: b.cheapest_price || b.min_price || (prices[0] ? prices[0].price : 0),
-        max_discount_pct: b.max_discount_pct || b.discount_pct || 0,
-        normalized_name: b.normalized_name || b.name,
-        prices,
-    };
+    })).filter(p => { const k = p.shop_name + '|' + p.price; if (seen.has(k)) return false; seen.add(k); return true; })
+    .sort((a, c) => a.price - c.price);
+    return { ...b, min_price: b.cheapest_price || b.min_price || (prices[0] ? prices[0].price : 0), max_discount_pct: b.max_discount_pct || b.discount_pct || 0, normalized_name: b.normalized_name || b.name, prices };
 }
 
 // ── Favoritter ──
+function savePrefs() {
+    localStorage.setItem('bs_prefs', JSON.stringify({sort:currentSort,filter:currentFilter,shop:currentShop}));
+}
+function loadPrefs() {
+    const p = JSON.parse(localStorage.getItem('bs_prefs')||'{}');
+    if (p.sort) { currentSort=p.sort; document.getElementById('sort-select').value=currentSort; }
+    if (p.shop) currentShop=p.shop;
+    if (p.filter) {
+        currentFilter=p.filter;
+        document.querySelectorAll('.filter-pill[data-filter]').forEach(b=>b.classList.toggle('active',b.dataset.filter===p.filter));
+    }
+}
+
 function saveFavorites() {
     localStorage.setItem('bs_favorites', JSON.stringify([...favorites]));
     document.getElementById('fav-count-badge').textContent = favorites.size > 0 ? `(${favorites.size})` : '';
 }
-
 function toggleFav(key, beerName, shopName) {
     if (favorites.has(key)) favorites.delete(key); else favorites.add(key);
     gtag('event', 'favorit', { beer_name: beerName, shop: shopName });
-    saveFavorites();
-    renderFavs();
-    renderGrid();
+    saveFavorites(); renderFavs(); renderGrid();
 }
 
 // ── Ølkort ──
 function makeBeerCard(b, delay) {
-    const key = b.normalized_name || b.name;
-    const isFav = favorites.has(key);
-    const prices = b.prices || [];
-    const best = prices[0] || {};
-    const minPrice = best.price || 0;
-    const maxDiscount = b.max_discount_pct || 0;
-    const bName = esc(b.name);
-    const bShop = esc(best.shop_name || '');
+    const key = b.normalized_name || b.name, isFav = favorites.has(key);
+    const prices = b.prices || [], best = prices[0] || {}, minPrice = best.price || 0, maxDiscount = b.max_discount_pct || 0;
+    const bName = esc(b.name), bShop = esc(best.shop_name || '');
     const totalInclShipping = totalWithShipping(best.shop_name, minPrice);
     const totalLabel = totalInclShipping !== null ? `<span class="price-row-total">Bedst inkl. fragt: ${totalInclShipping.toFixed(0)} kr</span>` : '';
-
     return `<div class="card" style="animation-delay:${delay}s">
         ${maxDiscount > 0 ? `<div class="ribbon">−${maxDiscount}%</div>` : ''}
         <a class="card-img-wrap" ${best.url ? `href="${best.url}" target="_blank" onclick="gtag('event','billede_klik',{beer_name:'${bName}',shop:'${bShop}',price:${minPrice}})"` : ''}>
             ${b.image ? `<img class="card-img" src="${b.image}" alt="${b.name}" loading="lazy" decoding="async" onerror="this.style.display='none'">` : '<div class="card-img-placeholder">🍺</div>'}
-            <div class="img-overlay">
-                <span class="img-overlay-label">Bedste pris</span>
-                <span class="img-overlay-price">${minPrice.toFixed(2)} kr</span>
-                <span class="img-overlay-btn">Køb nu →</span>
-            </div>
+            <div class="img-overlay"><span class="img-overlay-label">Bedste pris</span><span class="img-overlay-price">${minPrice.toFixed(2)} kr</span><span class="img-overlay-btn">Køb nu →</span></div>
             <button class="fav-btn ${isFav ? 'active' : ''}" onclick="toggleFav('${key.replace(/'/g,"\\'")}','${bName}','${bShop}');event.preventDefault();event.stopPropagation()">${isFav ? '❤️' : '🤍'}</button>
         </a>
         <div class="card-body">
@@ -486,25 +507,11 @@ function makeBeerCard(b, delay) {
                     </div>
                 </div>
                 ${prices.length > 1 ? `
-                <div class="more-shops-toggle" onclick="const ms=this.nextElementSibling;const open=ms.style.display==='flex';ms.style.display=open?'none':'flex';this.textContent=open?'+ ${prices.length - 1} butik${prices.length > 2 ? 'ker' : ''} mere':'▲ Skjul andre butikker'">
-                    + ${prices.length - 1} butik${prices.length > 2 ? 'ker' : ''} mere
+                <div class="more-shops-toggle" onclick="const ms=this.nextElementSibling;const open=ms.style.display==='flex';ms.style.display=open?'none':'flex';this.textContent=open?'+ ${prices.length-1} butik${prices.length>2?'ker':''} mere':'▲ Skjul andre butikker'">
+                    + ${prices.length-1} butik${prices.length>2?'ker':''} mere
                 </div>
                 <div class="more-shops" style="display:none">
-                    ${prices.slice(1).map(p => `
-                    <div class="price-row">
-                        <div class="price-row-left">
-                            <span class="price-row-shop">${p.shop_name}</span>
-                            <div class="price-row-prices">
-                                <span class="price-row-amount">${p.price.toFixed(2)} kr</span>
-                                ${p.old_price ? `<span class="price-row-old">${p.old_price.toFixed(2)} kr</span>` : ''}
-                            </div>
-                        </div>
-                        <div class="price-row-right">
-                            ${shippingBtnHTML(p.shop_name, p.price)}
-                            ${p.discount_pct ? `<span class="price-row-discount">−${p.discount_pct}%</span>` : ''}
-                            ${p.url ? `<a class="price-row-link" href="${p.url}" target="_blank" onclick="gtag('event','koeb_klik',{beer_name:'${bName}',shop:'${esc(p.shop_name)}',price:${p.price}})">Køb →</a>` : ''}
-                        </div>
-                    </div>`).join('')}
+                    ${prices.slice(1).map(p => `<div class="price-row"><div class="price-row-left"><span class="price-row-shop">${p.shop_name}</span><div class="price-row-prices"><span class="price-row-amount">${p.price.toFixed(2)} kr</span>${p.old_price?`<span class="price-row-old">${p.old_price.toFixed(2)} kr</span>`:''}</div></div><div class="price-row-right">${shippingBtnHTML(p.shop_name,p.price)}${p.discount_pct?`<span class="price-row-discount">−${p.discount_pct}%</span>`:''}${p.url?`<a class="price-row-link" href="${p.url}" target="_blank">Køb →</a>`:''}</div></div>`).join('')}
                 </div>` : ''}
             </div>
             <div class="card-actions">
@@ -514,32 +521,22 @@ function makeBeerCard(b, delay) {
     </div>`;
 }
 
-// ── Render grid ──
 function renderGrid() {
     const grid = document.getElementById('grid');
-    const q = document.getElementById('search').value.toLowerCase();
-
-    // Filtrer lokalt på den allerede hentede side
     let beers = allBeers.filter(b => {
         const key = b.normalized_name || b.name;
         if (currentFilter === 'favs' && !favorites.has(key)) return false;
         if (currentFilter === 'alcohol-free' && (b.abv === null || b.abv > 0.5)) return false;
         if (currentFilter === 'smagekasse' && b.category !== 'smagekasse') return false;
-        if (currentFilter !== 'smagekasse' && currentFilter !== 'all' && currentFilter !== 'deals' && currentFilter !== 'favs' && currentFilter !== 'alcohol-free' && b.category === 'smagekasse') return false;
+        if (!['smagekasse','all','deals','favs','alcohol-free'].includes(currentFilter) && b.category === 'smagekasse') return false;
         if (currentFilter === 'deals' && !(b.max_discount_pct > 0)) return false;
         return true;
     });
-
     document.getElementById('result-count').textContent = `Viser ${beers.length} af ${totalCount} øl`;
-
-    if (!beers.length) {
-        grid.innerHTML = `<div class="empty"><div class="empty-icon">${currentFilter === 'favs' ? '❤️' : '🔍'}</div><p>${currentFilter === 'favs' ? 'Ingen favoritter endnu — klik 🤍 på et ølkort' : 'Ingen øl matcher din søgning'}</p></div>`;
-        return;
-    }
+    if (!beers.length) { grid.innerHTML = `<div class="empty"><div class="empty-icon">${currentFilter==='favs'?'❤️':'🔍'}</div><p>${currentFilter==='favs'?'Ingen favoritter endnu — klik 🤍 på et ølkort':'Ingen øl matcher din søgning'}</p></div>`; return; }
     grid.innerHTML = beers.map((b, i) => makeBeerCard(b, Math.min(i * 0.025, 0.6))).join('');
 }
 
-// ── Render favoritter ──
 function renderFavs() {
     const favBeers = allBeers.filter(b => favorites.has(b.normalized_name || b.name));
     document.getElementById('favs-count').textContent = favBeers.length;
@@ -549,29 +546,23 @@ function renderFavs() {
     document.getElementById('favs-grid').innerHTML = favBeers.map((b, i) => makeBeerCard(b, i * 0.05)).join('');
 }
 
-// ── Render Top 10 ──
 function renderTopDeals() {
-    const top = allBeers.filter(b => b.max_discount_pct > 0 && b.category !== 'smagekasse')
-        .sort((a, b) => b.max_discount_pct - a.max_discount_pct).slice(0, 10);
+    const top = allBeers.filter(b => b.max_discount_pct > 0 && b.category !== 'smagekasse').sort((a, b) => b.max_discount_pct - a.max_discount_pct).slice(0, 10);
     if (!top.length) return;
     document.getElementById('top-deals-grid').innerHTML = top.map((b, i) => {
-        const best = [...(b.prices || [])].sort((a, c) => (c.discount_pct || 0) - (a.discount_pct || 0))[0] || {};
-        return `<div class="top-card" style="animation-delay:${i * 0.05}s">
-            <div class="top-card-rank">${i + 1}</div>
-            <div class="top-card-pct">−${b.max_discount_pct}%</div>
-            ${b.image ? `<img class="top-card-img" src="${b.image}" alt="${b.name}" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">` : ''}
-            <div class="top-card-img-placeholder" style="${b.image ? 'display:none' : ''}">🍺</div>
-            <div class="top-card-body">
-                <div class="top-card-shop">${best.shop_name || ''}</div>
-                <div class="top-card-name">${b.name}</div>
-                <div><span class="top-card-price">${(best.price || 0).toFixed(2)} kr</span>${best.old_price ? `<span class="top-card-old">${best.old_price.toFixed(2)} kr</span>` : ''}</div>
-                ${best.url ? `<a class="top-card-link" href="${best.url}" target="_blank" onclick="gtag('event','koeb_klik',{beer_name:'${esc(b.name)}',placering:'top10',rank:${i + 1}})">Køb nu →</a>` : ''}
-            </div>
+        const best = [...(b.prices||[])].sort((a,c)=>(c.discount_pct||0)-(a.discount_pct||0))[0]||{};
+        return `<div class="top-card" style="animation-delay:${i*0.05}s">
+            <div class="top-card-rank">${i+1}</div><div class="top-card-pct">−${b.max_discount_pct}%</div>
+            ${b.image?`<img class="top-card-img" src="${b.image}" alt="${b.name}" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">` :''}
+            <div class="top-card-img-placeholder" style="${b.image?'display:none':''}">🍺</div>
+            <div class="top-card-body"><div class="top-card-shop">${best.shop_name||''}</div><div class="top-card-name">${b.name}</div>
+            <div><span class="top-card-price">${(best.price||0).toFixed(2)} kr</span>${best.old_price?`<span class="top-card-old">${best.old_price.toFixed(2)} kr</span>`:''}</div>
+            ${best.url?`<a class="top-card-link" href="${best.url}" target="_blank" onclick="gtag('event','koeb_klik',{beer_name:'${esc(b.name)}',placering:'top10',rank:${i+1}})">Køb nu →</a>`:''}</div>
         </div>`;
     }).join('');
 }
 
-// ── Byg API URL ──
+// ── API URL ──
 function buildUrl(page) {
     const p = new URLSearchParams({ page, limit: PAGE_SIZE, sort: currentSort });
     const q = document.getElementById('search').value.trim();
@@ -579,11 +570,12 @@ function buildUrl(page) {
     if (currentShop !== 'all') p.set('shop', currentShop);
     if (currentFilter === 'deals') p.set('deals_only', 'true');
     if (priceMin > 0) p.set('min_price', priceMin);
-    if (priceMax < 500) p.set('max_price', priceMax);
+    if (priceMax < parseInt(document.getElementById('price-max').max)) p.set('max_price', priceMax);
+    if (abvMin > 0) p.set('abv_min', abvMin);
+    if (abvMax < 15) p.set('abv_max', abvMax);
     return `${API}/beers?${p}`;
 }
 
-// ── Hent side fra API ──
 async function fetchPage(page, append = false) {
     if (isLoading) return;
     isLoading = true;
@@ -597,156 +589,148 @@ async function fetchPage(page, append = false) {
         const data = await res.json();
         const normalized = (data.beers || []).map(normalizeBeer);
         allBeers = append ? [...allBeers, ...normalized] : normalized;
+        trackNewBeers(normalized);
         currentPage = data.page || page;
         totalPages = data.pages || 1;
         totalCount = data.total || normalized.length;
         document.getElementById('loading').style.display = 'none';
         document.getElementById('result-count').style.display = 'block';
         document.getElementById('load-more').style.display = currentPage < totalPages ? 'block' : 'none';
-        renderGrid();
-        renderFavs();
+        renderGrid(); renderFavs();
         if (!append) renderTopDeals();
-    } catch (e) {
+        updateActiveChips();
+    } catch(e) {
         document.getElementById('loading').innerHTML = '<div class="empty-icon">😢</div><p>Kunne ikke hente øl — prøv igen om lidt</p>';
         console.error(e);
-    } finally {
-        isLoading = false;
+    } finally { isLoading = false; }
+}
+
+// ── Filter UI ──
+function toggleFilters() {
+    const exp = document.getElementById('filterbar-expanded');
+    const btn = document.getElementById('expand-btn');
+    const ch = document.getElementById('chevron');
+    const show = !exp.classList.contains('show');
+    exp.classList.toggle('show', show);
+    btn.classList.toggle('open', show);
+    ch.textContent = show ? '▲' : '▼';
+}
+
+function toggleTopDeals() {
+    const s = document.getElementById('top-deals-section');
+    const btn = document.getElementById('top-deals-toggle');
+    const visible = s.classList.contains('visible');
+    s.classList.toggle('visible', !visible);
+    btn.classList.toggle('active', !visible);
+}
+
+function updateDualRange(type) {
+    const minEl = document.getElementById(type + '-min');
+    const maxEl = document.getElementById(type + '-max');
+    let minV = parseFloat(minEl.value), maxV = parseFloat(maxEl.value);
+    if (minV > maxV) { minEl.value = maxV; minV = maxV; }
+    const minRange = parseFloat(minEl.min), maxRange = parseFloat(minEl.max);
+    const range = maxRange - minRange;
+    const pct1 = ((minV - minRange) / range) * 100;
+    const pct2 = ((maxV - minRange) / range) * 100;
+    document.getElementById(type + '-fill').style.left = pct1 + '%';
+    document.getElementById(type + '-fill').style.width = (pct2 - pct1) + '%';
+    if (type === 'price') {
+        document.getElementById('price-val').textContent = Math.round(minV) + '–' + Math.round(maxV) + ' kr';
+        priceMin = minV; priceMax = maxV;
+    } else {
+        document.getElementById('abv-val').textContent = minV.toFixed(1) + '–' + maxV.toFixed(1) + '%';
+        abvMin = minV; abvMax = maxV;
     }
 }
 
-// ── Setup dropdowns ──
-function setupDropdowns() {
-    document.querySelectorAll('.dropdown').forEach(dd => {
-        const menu = dd.querySelector('.dropdown-menu');
-        if (!menu) return;
-        document.body.appendChild(menu);
-        menu.dataset.dropdownId = dd.id;
-        dd.querySelector('.dropdown-btn').addEventListener('click', e => {
-            e.stopPropagation();
-            const isOpen = menu.style.display === 'block';
-            document.querySelectorAll('.dropdown-menu').forEach(m => {
-                m.style.display = 'none';
-                const pid = m.dataset.dropdownId;
-                if (pid) document.getElementById(pid)?.classList.remove('open');
-            });
-            if (!isOpen) {
-                const rect = dd.querySelector('.dropdown-btn').getBoundingClientRect();
-                menu.style.display = 'block';
-                menu.style.top = (rect.bottom + 6) + 'px';
-                const mw = Math.max(200, menu.offsetWidth);
-                menu.style.left = (rect.left + mw > window.innerWidth - 10 ? window.innerWidth - mw - 10 : rect.left) + 'px';
-                dd.classList.add('open');
-            }
-        });
-    });
-    document.addEventListener('click', () => {
-        document.querySelectorAll('.dropdown-menu').forEach(m => m.style.display = 'none');
-        document.querySelectorAll('.dropdown').forEach(d => d.classList.remove('open'));
-    });
+function updateActiveChips() {
+    const chips = document.getElementById('active-chips');
+    const active = [];
+    if (currentFilter !== 'all') active.push({ label: currentFilter === 'deals' ? '🔥 Tilbud' : currentFilter === 'alcohol-free' ? '🚫 Alkoholfri' : currentFilter === 'smagekasse' ? '📦 Smagekasser' : '❤️ Favoritter', clear: () => { currentFilter = 'all'; document.querySelectorAll('.filter-pill[data-filter]').forEach(b=>b.classList.remove('active')); document.querySelector('[data-filter=all]').classList.add('active'); fetchPage(1); } });
+    if (currentShop !== 'all') active.push({ label: currentShop, clear: () => { currentShop = 'all'; document.querySelectorAll('#shop-pills .fpill').forEach(p=>{p.classList.toggle('on', p.dataset.shop==='all');}); fetchPage(1); } });
+    if (priceMin > 0 || priceMax < parseInt(document.getElementById('price-max').max)) active.push({ label: `${Math.round(priceMin)}–${Math.round(priceMax)} kr`, clear: () => { priceMin=0; priceMax=parseInt(document.getElementById('price-max').max); document.getElementById('price-min').value=0; document.getElementById('price-max').value=priceMax; updateDualRange('price'); fetchPage(1); } });
+    if (abvMin > 0 || abvMax < 15) active.push({ label: `ABV ${abvMin.toFixed(1)}–${abvMax.toFixed(1)}%`, clear: () => { abvMin=0; abvMax=15; document.getElementById('abv-min').value=0; document.getElementById('abv-max').value=15; updateDualRange('abv'); fetchPage(1); } });
+    chips.innerHTML = active.map((a, i) => `<span class="active-chip" onclick="activeActions[${i}]()">${a.label} ✕</span>`).join('');
+    window.activeActions = active.map(a => a.clear);
 }
 
-// ── Opdater sort knap ──
-function updateSortBtn() {
-    document.querySelectorAll('#sort-menu .dropdown-item').forEach(item => {
-        const sel = item.dataset.sort === currentSort;
-        item.classList.toggle('selected', sel);
-        item.querySelector('.check').textContent = sel ? '✓' : '';
-    });
+function resetAll() {
+    currentFilter = 'all'; currentShop = 'all'; currentSort = 'price-asc';
+    priceMin = 0; abvMin = 0; abvMax = 15;
+    const pmx = parseInt(document.getElementById('price-max').max);
+    priceMax = pmx;
+    document.getElementById('search').value = '';
+    document.getElementById('price-min').value = 0;
+    document.getElementById('price-max').value = pmx;
+    document.getElementById('abv-min').value = 0;
+    document.getElementById('abv-max').value = 15;
+    document.getElementById('sort-select').value = 'price-asc';
+    updateDualRange('price'); updateDualRange('abv');
+    document.querySelectorAll('.filter-pill[data-filter]').forEach(b => b.classList.remove('active'));
+    document.querySelector('[data-filter=all]').classList.add('active');
+    document.querySelectorAll('#shop-pills .fpill').forEach(p => p.classList.toggle('on', p.dataset.shop === 'all'));
+    fetchPage(1);
 }
 
-// ── Opdater shop knap ──
-function updateShopBtn() {
-    const btn = document.getElementById('shop-btn');
-    btn.innerHTML = (currentShop === 'all' ? 'Butikker' : currentShop) + ' <span class="arrow">▼</span>';
-    btn.classList.toggle('has-value', currentShop !== 'all');
-}
-
-// ── Pris range ──
-function updateRangeFill() {
-    const minEl = document.getElementById('price-min');
-    const maxEl = document.getElementById('price-max');
-    let minVal = parseInt(minEl.value);
-    let maxVal = parseInt(maxEl.value);
-    if (minVal > maxVal) { minEl.value = maxVal; minVal = maxVal; }
-    const maxRange = parseInt(minEl.max);
-    const pct1 = (minVal / maxRange) * 100;
-    const pct2 = (maxVal / maxRange) * 100;
-    document.getElementById('range-fill').style.left = pct1 + '%';
-    document.getElementById('range-fill').style.width = (pct2 - pct1) + '%';
-    document.getElementById('price-val').textContent = minVal + '–' + maxVal + ' kr';
-    priceMin = minVal;
-    priceMax = maxVal;
-}
+// ── Scroll og tid tracking ──
+(function() {
+    const fired = new Set();
+    window.addEventListener('scroll', function() {
+        const pct = Math.round((window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100);
+        [25,50,75,100].forEach(p => { if (pct >= p && !fired.has(p)) { fired.add(p); gtag('event','scroll_dybde',{procent:p}); } });
+    }, { passive: true });
+})();
+(function() { [30,60,120].forEach(s => setTimeout(() => gtag('event','tid_paa_siden',{sekunder:s}), s*1000)); })();
 
 // ── Init ──
 async function init() {
-    // Hent nøgletal øjeblikkeligt
+    // Stats øjeblikkeligt
     fetch(`${API}/stats`).then(r => r.json()).then(s => {
         document.getElementById('stat-total').textContent = s.total;
         document.getElementById('stat-deals').textContent = s.deals;
         document.getElementById('stat-shops').textContent = s.shops;
         document.getElementById('stat-cheapest').textContent = s.cheapest;
         document.getElementById('shop-count-inline').textContent = s.shops;
+        // Byg shop pills
+        const shops = s.shop_names || [];
+        const shopPills = document.getElementById('shop-pills');
+        shopPills.innerHTML = '<span class="fpill on" data-shop="all">Alle butikker</span>' +
+            shops.map(sh => `<span class="fpill" data-shop="${sh}">${sh}</span>`).join('');
+        shopPills.querySelectorAll('.fpill').forEach(pill => {
+            pill.addEventListener('click', () => {
+                currentShop = pill.dataset.shop;
+                shopPills.querySelectorAll('.fpill').forEach(p => p.classList.toggle('on', p.dataset.shop === currentShop));
+                fetchPage(1);
+                if (currentShop !== 'all') gtag('event', 'butik_filter', { butik: currentShop });
+            });
+        });
     }).catch(() => {});
 
-    // Hent butikker til dropdown
-    fetch(`${API}/beers?limit=1`).then(r => r.json()).then(data => {
-        // Hent alle butikker via stats — byg shop menu manuelt
-    });
-
-    // Setup sort dropdown
-    document.querySelectorAll('#sort-menu .dropdown-item').forEach(item => {
-        item.addEventListener('click', () => {
-            currentSort = item.dataset.sort;
-            updateSortBtn();
-            fetchPage(1);
-            document.getElementById('sort-dropdown').classList.remove('open');
-            document.getElementById('sort-menu').style.display = 'none';
-            gtag('event', 'sortering', { sort: currentSort });
-        });
-    });
-
-    // Setup filter knapper
-    document.querySelectorAll('.filter-btn[data-filter]').forEach(btn => {
+    // Filter pills
+    document.querySelectorAll('.filter-pill[data-filter]').forEach(btn => {
         btn.addEventListener('click', () => {
-            document.querySelectorAll('.filter-btn[data-filter]').forEach(b => b.classList.remove('active'));
+            document.querySelectorAll('.filter-pill[data-filter]').forEach(b => b.classList.remove('active'));
             btn.classList.add('active');
             currentFilter = btn.dataset.filter;
-            if (currentFilter === 'favs') {
-                renderGrid();
-            } else {
-                fetchPage(1);
-            }
+            if (currentFilter === 'favs') { renderGrid(); } else { fetchPage(1); }
             gtag('event', 'filter_klik', { filter: currentFilter });
+            savePrefs();
         });
     });
 
     // Top 10 toggle
-    document.getElementById('top-deals-toggle').addEventListener('click', function () {
-        const s = document.getElementById('top-deals-section');
-        const visible = s.classList.contains('visible');
-        s.classList.toggle('visible', !visible);
-        this.classList.toggle('active', !visible);
-    });
+    document.getElementById('top-deals-toggle').addEventListener('click', toggleTopDeals);
 
-    // Nulstil
-    document.getElementById('reset-btn').addEventListener('click', () => {
-        currentFilter = 'all';
-        currentShop = 'all';
-        currentSort = 'price-asc';
-        priceMin = 0;
-        document.getElementById('search').value = '';
-        document.getElementById('price-min').value = 0;
-        document.getElementById('price-max').value = parseInt(document.getElementById('price-max').max);
-        updateRangeFill();
-        updateSortBtn();
-        updateShopBtn();
-        document.querySelectorAll('.filter-btn[data-filter]').forEach(b => b.classList.remove('active'));
-        document.querySelector('[data-filter=all]').classList.add('active');
+    // Sort
+    document.getElementById('sort-select').addEventListener('change', function() {
+        currentSort = this.value;
         fetchPage(1);
+        gtag('event', 'sortering', { sort: currentSort });
+        savePrefs();
     });
 
-    // Søgning med debounce
+    // Søgning
     let searchTimer;
     document.getElementById('search').addEventListener('input', () => {
         clearTimeout(searchTimer);
@@ -755,15 +739,22 @@ async function init() {
 
     // Pris range
     let rangeTimer;
-    document.getElementById('price-min').addEventListener('input', () => {
-        updateRangeFill();
-        clearTimeout(rangeTimer);
-        rangeTimer = setTimeout(() => fetchPage(1), 600);
+    ['price-min','price-max'].forEach(id => {
+        document.getElementById(id).addEventListener('input', () => {
+            updateDualRange('price');
+            clearTimeout(rangeTimer);
+            rangeTimer = setTimeout(() => fetchPage(1), 600);
+        });
     });
-    document.getElementById('price-max').addEventListener('input', () => {
-        updateRangeFill();
-        clearTimeout(rangeTimer);
-        rangeTimer = setTimeout(() => fetchPage(1), 600);
+
+    // ABV range
+    let abvTimer;
+    ['abv-min','abv-max'].forEach(id => {
+        document.getElementById(id).addEventListener('input', () => {
+            updateDualRange('abv');
+            clearTimeout(abvTimer);
+            abvTimer = setTimeout(() => fetchPage(1), 600);
+        });
     });
 
     // Vis flere
@@ -772,55 +763,36 @@ async function init() {
         gtag('event', 'vis_flere', { side: currentPage + 1 });
     });
 
-    // Sticky controls
+    // Sticky
     window.addEventListener('scroll', () => {
         document.getElementById('controls-outer').classList.toggle('sticky-active', window.scrollY > 10);
     }, { passive: true });
 
-    // Setup dropdowns
-    setupDropdowns();
+    // Load prefs
+    loadPrefs();
 
     // Fav badge
     document.getElementById('fav-count-badge').textContent = favorites.size > 0 ? `(${favorites.size})` : '';
 
-    // Auto-vis Top 10 efter 5 sekunder på desktop
+    // Auto Top 10
     setTimeout(() => {
         if (window.innerWidth > 640) {
             const s = document.getElementById('top-deals-section');
-            if (!s.classList.contains('visible')) {
-                s.classList.add('visible');
-                document.getElementById('top-deals-toggle').classList.add('active');
-            }
+            if (!s.classList.contains('visible')) { s.classList.add('visible'); document.getElementById('top-deals-toggle').classList.add('active'); }
         }
     }, 5000);
 
-    // Hent første side øl
+    // Hent øl
     await fetchPage(1);
 
-    // Byg shop menu fra hentede øl
-    const shops = [...new Set(allBeers.flatMap(b => (b.prices || []).map(p => p.shop_name)))].filter(Boolean).sort();
-    const shopMenu = document.getElementById('shop-menu');
-    shopMenu.innerHTML = `<div class="dropdown-item selected" data-shop="all"><span class="check">✓</span> Alle butikker</div><div class="dropdown-divider"></div>` +
-        shops.map(s => `<div class="dropdown-item" data-shop="${s}"><span class="check"></span> ${s}</div>`).join('');
-    shopMenu.querySelectorAll('.dropdown-item').forEach(item => {
-        item.addEventListener('click', e => {
-            e.stopPropagation();
-            currentShop = item.dataset.shop;
-            updateShopBtn();
-            fetchPage(1);
-            document.getElementById('shop-dropdown').classList.remove('open');
-            shopMenu.style.display = 'none';
-            if (currentShop !== 'all') gtag('event', 'butik_filter', { butik: currentShop });
-        });
-    });
-
-    // Sæt pris max ud fra data
+    // Sæt pris max
     const maxP = Math.ceil(Math.max(...allBeers.map(b => b.min_price || 0), 500));
     document.getElementById('price-min').max = maxP;
     document.getElementById('price-max').max = maxP;
     document.getElementById('price-max').value = maxP;
     priceMax = maxP;
-    updateRangeFill();
+    updateDualRange('price');
+    updateDualRange('abv');
 }
 
 init();

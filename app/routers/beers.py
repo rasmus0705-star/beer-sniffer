@@ -9,7 +9,6 @@ from app.models import Beer, Price, PriceHistory, PriceAlert
 
 router = APIRouter()
 
-# ── Cache ──
 _cache = {"data": None, "timestamp": 0}
 _stats_cache = {"data": None, "timestamp": 0}
 CACHE_TTL = 3600
@@ -34,7 +33,6 @@ def build_beer_list(db: Session):
         if not beer.prices:
             continue
 
-        # Dedupliker — én pris per butik (behold billigste)
         shop_best = {}
         for p in beer.prices:
             shop = p.shop_name
@@ -96,11 +94,16 @@ def get_stats(db: Session = Depends(get_db)):
     shop_names = sorted([s[0] for s in shops if s[0]])
     cheapest = db.query(func.min(Price.price_dkk)).scalar() or 0
 
+    # Hent alle tilgængelige stilarter
+    all_beers = build_beer_list(db)
+    types = sorted(list(set(b["type"] for b in all_beers if b.get("type"))))
+
     result = {
         "total": total,
         "deals": deals,
         "shops": len(shop_names),
         "shop_names": shop_names,
+        "types": types,
         "cheapest": round(cheapest, 0)
     }
 
@@ -118,6 +121,9 @@ def get_beers_paginated(
     shop: str = Query(None),
     sort: str = Query("price-asc"),
     deals_only: bool = Query(False),
+    alcohol_free: bool = Query(False),
+    smagekasse: bool = Query(False),
+    beer_type: str = Query(None),
     min_price: float = Query(None),
     max_price: float = Query(None),
     abv_min: float = Query(None),
@@ -139,13 +145,29 @@ def get_beers_paginated(
     if deals_only:
         filtered = [b for b in filtered if b["max_discount_pct"] > 0]
 
+    # Alkoholfri
+    if alcohol_free:
+        filtered = [b for b in filtered if b.get("abv") is not None and b["abv"] <= 0.5]
+
+    # Smagekasser
+    if smagekasse:
+        filtered = [b for b in filtered if b.get("category") == "smagekasse"]
+    else:
+        # Skjul smagekasser i normal visning medmindre eksplicit valgt
+        if not smagekasse and not q:
+            filtered = [b for b in filtered if b.get("category") != "smagekasse"]
+
+    # Stilart
+    if beer_type and beer_type != "all":
+        filtered = [b for b in filtered if b.get("type") == beer_type]
+
     # Pris
     if min_price is not None:
         filtered = [b for b in filtered if b["min_price"] >= min_price]
     if max_price is not None:
         filtered = [b for b in filtered if b["min_price"] <= max_price]
 
-    # ABV — filtrer kun øl med kendt ABV inden for intervallet
+    # ABV
     if abv_min is not None:
         filtered = [b for b in filtered if b.get("abv") is not None and b["abv"] >= abv_min]
     if abv_max is not None:
@@ -185,9 +207,5 @@ def get_beers_legacy(db: Session = Depends(get_db)):
 
 @router.get("/ui", response_class=HTMLResponse)
 def ui():
-    return """
-    <html><head><title>BeerSniffer</title></head>
-    <body><h1>🍺 BeerSniffer API</h1>
-    <p>Brug <a href="/docs">/docs</a> for API dokumentation.</p>
-    </body></html>
-    """
+    return """<html><head><title>BeerSniffer</title></head>
+    <body><h1>🍺 BeerSniffer API</h1><p>Brug <a href="/docs">/docs</a> for API dokumentation.</p></body></html>"""
