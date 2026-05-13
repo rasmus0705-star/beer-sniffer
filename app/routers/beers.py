@@ -35,7 +35,7 @@ def normalize_name(name: str, abv=None, volume=None):
         .replace("å", "aa")
     )
 
-    # ensret forskellige stavemåder
+    # ensret stavemåder
     replacements = {
         "trippel": "tripel",
         "tripple": "tripel",
@@ -51,39 +51,54 @@ def normalize_name(name: str, abv=None, volume=None):
     # fjern alkohol %
     name = re.sub(r"\d+[.,]?\d*\s?%", "", name)
 
-    # fjern størrelse
+    # fjern størrelser
     name = re.sub(r"\d+[.,]?\d*\s?(cl|ml|l)", "", name)
 
     # fjern specialtegn
     name = re.sub(r"[^a-z0-9\s]", " ", name)
 
-    # ord der ofte skaber dubletter
+    # ord der ikke hjælper til matching
     blacklist = {
         "beer",
         "ale",
-        "bryggeri",
-        "brouwerij",
         "brewery",
+        "brouwerij",
+        "bryggeri",
+        "trappist",
+        "belgian",
+        "belgisk",
+        "abbey",
+        "strong",
+        "premium",
+        "classic",
+        "original",
         "stk",
     }
 
     words = []
 
-    for w in name.split():
+    for word in name.split():
 
-        if w in blacklist:
+        if word in blacklist:
             continue
 
-        if len(w) <= 1:
+        if len(word) <= 1:
             continue
 
-        if w not in words:
-            words.append(w)
+        if word not in words:
+            words.append(word)
 
-    # sorter ordene
     words = sorted(words)
 
-    return " ".join(words)
+    clean_name = " ".join(words)
+
+    # rund ABV lidt grovere
+    abv_key = round(float(abv), 0) if abv is not None else "na"
+
+    # rund volumen lidt grovere
+    vol_key = round(float(volume), -1) if volume is not None else "na"
+
+    return f"{clean_name}|{abv_key}|{vol_key}"
 
 
 def build_beer_list(db: Session):
@@ -142,6 +157,7 @@ def build_beer_list(db: Session):
 
             shop = p["shop_name"]
 
+            # behold billigste pris pr butik
             if (
                 shop not in unique_shops
                 or p["price"] < unique_shops[shop]["price"]
@@ -199,9 +215,7 @@ def get_stats(db: Session = Depends(get_db)):
 
     shops = db.query(Price.shop_name).distinct().all()
 
-    shop_names = sorted([
-        s[0] for s in shops if s[0]
-    ])
+    shop_names = sorted([s[0] for s in shops if s[0]])
 
     cheapest = db.query(
         func.min(Price.price_dkk)
@@ -209,9 +223,13 @@ def get_stats(db: Session = Depends(get_db)):
 
     all_beers = build_beer_list(db)
 
-    types = sorted(list(set(
-        b["type"] for b in all_beers if b.get("type")
-    )))
+    types = sorted(
+        list(set(
+            b["type"]
+            for b in all_beers
+            if b.get("type")
+        ))
+    )
 
     result = {
         "total": total,
@@ -263,7 +281,10 @@ def get_beers_paginated(
     if shop and shop != "all":
         filtered = [
             b for b in filtered
-            if any(p["shop_name"] == shop for p in b["prices"])
+            if any(
+                p["shop_name"] == shop
+                for p in b["prices"]
+            )
         ]
 
     # tilbud
@@ -277,7 +298,8 @@ def get_beers_paginated(
     if alcohol_free:
         filtered = [
             b for b in filtered
-            if b.get("abv") is not None and b["abv"] <= 0.5
+            if b.get("abv") is not None
+            and b["abv"] <= 0.5
         ]
 
     # smagekasser
@@ -287,18 +309,18 @@ def get_beers_paginated(
             if b.get("category") == "smagekasse"
         ]
     else:
-        if not smagekasse and not q:
+        if not q:
             filtered = [
                 b for b in filtered
                 if b.get("category") != "smagekasse"
             ]
 
-    # stilarter
+    # typer
     if beer_types and beer_types != "all":
 
         types_list = [
             t.strip()
-            for t in beer_types.split(',')
+            for t in beer_types.split(",")
             if t.strip()
         ]
 
