@@ -3,6 +3,9 @@ import re
 from app.utils.detect_type import detect_type
 
 
+HEADERS = {"User-Agent": "Mozilla/5.0"}
+
+
 def scrape_beershoppen():
     items = []
     page = 1
@@ -22,8 +25,12 @@ def scrape_beershoppen():
 
     while True:
         url = f"https://beershoppen.dk/products.json?limit=250&page={page}"
-        response = requests.get(url)
-        data = response.json()
+        try:
+            response = requests.get(url, headers=HEADERS, timeout=30)
+            data = response.json()
+        except Exception as e:
+            print(f"❌ Beershoppen fejl på side {page}: {e}")
+            break
 
         products = data.get("products", [])
         if not products:
@@ -75,7 +82,7 @@ def scrape_beershoppen():
             # Filtrer store volumener fra
             volume = None
             is_smagekasse = any(kw in name.lower() for kw in [
-    "smagekasse", "smagekasser", "smagesæt", "smagskasse", "smagssæt", "sæt", "mix", "bundle", "pakke"
+                "smagekasse", "smagekasser", "smagesæt", "smagskasse", "smagssæt", "sæt", "mix", "bundle", "pakke"
             ]) or bool(re.search(r"\d+\s*stk", name.lower()))
             if not is_smagekasse:
                 volume_match = re.search(r"(\d+(?:[.,]\d+)?)\s*(cl|ml|l)\b", name.lower())
@@ -120,7 +127,12 @@ def scrape_beershoppen():
 
             items.append(item)
 
-        print(f"📦 Side {page}: {len(products)} produkter hentet")
+        print(f"📦 Beershoppen side {page}: {len(products)} produkter hentet")
         page += 1
 
     return items
+
+
+if __name__ == "__main__":
+    items = scrape_beershoppen()
+    print(f"\n✅ Total: {len(items)} items")

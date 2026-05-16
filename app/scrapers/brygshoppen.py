@@ -3,6 +3,9 @@ import re
 from app.utils.detect_type import detect_type
 
 
+HEADERS = {"User-Agent": "Mozilla/5.0"}
+
+
 def scrape_brygshoppen():
     items = []
     page = 1
@@ -28,8 +31,12 @@ def scrape_brygshoppen():
 
     while True:
         url = f"https://brygshoppen.dk/products.json?limit=250&page={page}"
-        response = requests.get(url)
-        data = response.json()
+        try:
+            response = requests.get(url, headers=HEADERS, timeout=30)
+            data = response.json()
+        except Exception as e:
+            print(f"❌ Brygshoppen fejl på side {page}: {e}")
+            break
 
         products = data.get("products", [])
         if not products:
@@ -120,7 +127,12 @@ def scrape_brygshoppen():
 
             items.append(item)
 
-        print(f"📦 Side {page}: {len(products)} produkter hentet")
+        print(f"📦 Brygshoppen side {page}: {len(products)} produkter hentet")
         page += 1
 
     return items
+
+
+if __name__ == "__main__":
+    items = scrape_brygshoppen()
+    print(f"\n✅ Total: {len(items)} items")

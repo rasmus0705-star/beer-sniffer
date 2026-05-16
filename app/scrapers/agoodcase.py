@@ -3,6 +3,9 @@ import re
 from app.utils.detect_type import detect_type
 
 
+HEADERS = {"User-Agent": "Mozilla/5.0"}
+
+
 def scrape_agoodcase():
     items = []
     page = 1
@@ -45,10 +48,11 @@ def scrape_agoodcase():
 
     while True:
         url = f"https://agoodcase.dk/products.json?limit=250&page={page}"
-        response = requests.get(url)
         try:
+            response = requests.get(url, headers=HEADERS, timeout=30)
             data = response.json()
-        except Exception:
+        except Exception as e:
+            print(f"❌ A Good Case fejl på side {page}: {e}")
             break
 
         products = data.get("products", [])
@@ -167,7 +171,7 @@ def scrape_agoodcase():
 
             abv = None
             if name:
-                match = re.search(r"(\d+[.,]\d+)%", name)
+                match = re.search(r'(\d+(?:[.,]\d+)?)\s*%', name)
                 if match:
                     abv = float(match.group(1).replace(",", "."))
 
@@ -200,7 +204,12 @@ def scrape_agoodcase():
 
             items.append(item)
 
-        print(f"📦 Side {page}: {len(products)} produkter hentet")
+        print(f"📦 A Good Case side {page}: {len(products)} produkter hentet")
         page += 1
 
     return items
+
+
+if __name__ == "__main__":
+    items = scrape_agoodcase()
+    print(f"\n✅ Total: {len(items)} items")

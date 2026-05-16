@@ -3,6 +3,9 @@ import re
 from app.utils.detect_type import detect_type
 
 
+HEADERS = {"User-Agent": "Mozilla/5.0"}
+
+
 def scrape_bestofbeers():
     items = []
     page = 1
@@ -19,12 +22,21 @@ def scrape_bestofbeers():
 
     while True:
         url = f"https://bestofbeers.dk/wp-json/wc/store/v1/products?per_page={per_page}&page={page}&stock_status=instock"
-        response = requests.get(url, timeout=15)
+        try:
+            response = requests.get(url, headers=HEADERS, timeout=15)
+        except Exception as e:
+            print(f"❌ Best of Beers fejl på side {page}: {e}")
+            break
 
         if response.status_code != 200:
             break
 
-        products = response.json()
+        try:
+            products = response.json()
+        except Exception as e:
+            print(f"❌ Best of Beers JSON fejl på side {page}: {e}")
+            break
+
         if not products:
             break
 
@@ -103,7 +115,7 @@ def scrape_bestofbeers():
 
             items.append(item)
 
-        print(f"📦 Side {page}: {len(products)} produkter hentet")
+        print(f"📦 Best of Beers side {page}: {len(products)} produkter hentet")
         page += 1
 
         # Stop hvis vi har hentet alle
@@ -111,3 +123,8 @@ def scrape_bestofbeers():
             break
 
     return items
+
+
+if __name__ == "__main__":
+    items = scrape_bestofbeers()
+    print(f"\n✅ Total: {len(items)} items")
