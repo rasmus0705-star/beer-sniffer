@@ -8,6 +8,7 @@ from app.services.matching import (
     styles_compatible,
     volumes_compatible,
     abv_compatible,
+    breweries_compatible,
     similarity_score,
     MATCH_THRESHOLD,
 )
@@ -15,16 +16,16 @@ from app.services.matching import (
 
 def find_best_match(item_norm, item_fp, item_vol, item_abv, item_brewery, candidate_beers):
     """
-    Finder bedste eksisterende Beer der matcher dette item.
-    Bruger samme robust logik som beers.py — style fingerprint, ABV/volume gates,
+    Bruger samme robust logik som beers.py — style fingerprint, ABV/volume/brewery gates,
     fuzzy similarity med bonuses.
     """
     best_score = 0.0
     best_beer = None
 
     for beer in candidate_beers:
-        # Hård gate 1: stilarter må ikke konflikte (Dubbel ≠ Tripel)
         beer_fp = style_fingerprint(beer.name)
+
+        # Hård gate 1: stilarter (Dubbel ≠ Tripel)
         if not styles_compatible(item_fp, beer_fp):
             continue
 
@@ -34,6 +35,10 @@ def find_best_match(item_norm, item_fp, item_vol, item_abv, item_brewery, candid
 
         # Hård gate 3: ABV
         if not abv_compatible(item_abv, beer.abv):
+            continue
+
+        # Hård gate 4: bryggeri (NY)
+        if not breweries_compatible(item_brewery, beer.brewery):
             continue
 
         beer_norm = normalize_for_matching(beer.name)
@@ -58,10 +63,8 @@ def ingest_batch(db: Session, items: list[dict]):
     if not items:
         return
 
-    # Hent alle eksisterende øl
     all_beers = db.query(Beer).all()
 
-    # Indekser efter volume for hurtigt opslag — None-volume i sin egen bucket
     beers_by_volume = {}
     beers_with_no_volume = []
     for beer in all_beers:
@@ -73,7 +76,6 @@ def ingest_batch(db: Session, items: list[dict]):
 
     shop_names = list(set(item["shop_name"] for item in items))
 
-    # ── TRIN 1: Find/opret øl og saml priser ──
     new_prices = []
     new_histories = []
 
@@ -85,11 +87,9 @@ def ingest_batch(db: Session, items: list[dict]):
         item_abv = item.get("abv")
         item_brewery = item.get("brewery")
 
-        # Kandidater: samme volume + dem uden volume (kan stadig matche)
         if item_vol is not None:
             candidates = beers_by_volume.get(item_vol, []) + beers_with_no_volume
         else:
-            # Hvis dette item ikke har volume, sammenlign mod alt
             candidates = all_beers
 
         beer = find_best_match(
@@ -97,7 +97,6 @@ def ingest_batch(db: Session, items: list[dict]):
             candidates
         )
 
-        # Opret øl hvis ikke fundet
         if not beer:
             beer = Beer(
                 name=item_name,
@@ -111,14 +110,12 @@ def ingest_batch(db: Session, items: list[dict]):
             db.add(beer)
             db.flush()
 
-            # Tilføj til indeks så efterfølgende items kan matche
             if item_vol is None:
                 beers_with_no_volume.append(beer)
             else:
                 beers_by_volume.setdefault(item_vol, []).append(beer)
             all_beers.append(beer)
 
-        # Opdater manglende metadata (først shop der har et felt vinder)
         if not beer.image and item.get("image"):
             beer.image = item["image"]
         if not beer.brewery and item_brewery:
@@ -130,7 +127,6 @@ def ingest_batch(db: Session, items: list[dict]):
         if beer.volume_cl is None and item_vol is not None:
             beer.volume_cl = item_vol
 
-        # Saml ny pris
         new_prices.append(Price(
             beer_id=beer.id,
             shop_name=item["shop_name"],
@@ -141,7 +137,6 @@ def ingest_batch(db: Session, items: list[dict]):
             available=True,
         ))
 
-        # Prishistorik — kun hvis prisen er ændret
         last = (
             db.query(PriceHistory)
             .filter(
@@ -162,7 +157,6 @@ def ingest_batch(db: Session, items: list[dict]):
         if (i + 1) % 100 == 0:
             print(f"✅ Behandlet {i + 1} / {len(items)} øl")
 
-    # ── TRIN 2: Atomisk swap af priser ──
     print(f"💾 Gemmer {len(new_prices)} priser...")
     db.query(Price).filter(
         Price.shop_name.in_(shop_names)
@@ -170,7 +164,6 @@ def ingest_batch(db: Session, items: list[dict]):
     db.add_all(new_prices)
     db.add_all(new_histories)
 
-    # ── TRIN 3: Prisalarmer ──
     alerts = db.query(PriceAlert).filter(PriceAlert.active == True).all()
     for alert in alerts:
         for price in new_prices:
@@ -180,7 +173,6 @@ def ingest_batch(db: Session, items: list[dict]):
 
     db.commit()
 
-    # ── TRIN 4: Ryd cache så API'en viser de nye priser med det samme ──
     try:
         from app.routers.beers import clear_cache
         clear_cache()

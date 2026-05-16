@@ -2,33 +2,27 @@
 Fælles matching-logik for ølprodukter.
 Bruges af både ingest.py (når øl gemmes) og beers.py (når øl grupperes).
 
-Det er KRITISK at begge filer bruger samme logik — ellers kan to øl
-matches forskelligt ved ingest og display.
+VIGTIGT: ændringer her påvirker BÅDE hvordan øl gemmes OG hvordan de grupperes.
 """
 import re
 from rapidfuzz import fuzz
 
 
-# Eksklusive stilarter — to forskellige af disse må ALDRIG merges
-# Rækkefølgen betyder noget for entydig fingerprinting
 EXCLUSIVE_STYLES = [
-    # Belgiske — kritisk at Dubbel/Tripel/Quad ikke forveksles
     ("QUADRUPEL",      ["quadrupel", "quadruple", " quad "]),
     ("TRIPEL",         ["tripel", "trippel", "tripple"]),
     ("DUBBEL",         ["dubbel"]),
-    # IPA — alle varianter samles under én paraply
     ("IPA",            ["ipa", "india pale ale"]),
-    # Mørke stilarter
     ("IMPERIAL_STOUT", ["imperial stout", "russian imperial"]),
     ("STOUT",          ["stout"]),
     ("PORTER",         ["porter"]),
     ("BARLEYWINE",     ["barleywine", "barley wine"]),
-    # Lyse stilarter
     ("PILSNER",        ["pilsner", "pilsener", " pils "]),
     ("LAGER",          ["lager", "helles"]),
     ("WEIZEN",         ["weizen", "weisse", "witbier", "hvedeoel"]),
     ("SAISON",         ["saison", "farmhouse"]),
-    ("SOUR",           ["sour", "gose", "lambic", "gueuze", "berliner"]),
+    ("GUEUZE",         ["gueuze", "lambic"]),  # delt ud fra SOUR
+    ("SOUR",           ["sour", "gose", "berliner"]),
     ("BOCK",           ["bock"]),
     ("PALE_ALE",       ["pale ale", " apa "]),
     ("BROWN_ALE",      ["brown ale"]),
@@ -38,13 +32,10 @@ EXCLUSIVE_STYLES = [
     ("ALKOHOLFRI",     ["alkoholfri", "alcohol free", "non-alcoholic", "0,0%", "0.0%"]),
 ]
 
-# Synonymer der konverteres FØR fuzzy matching
 SYNONYMS = [
-    # Stavevarianter
     (r"\btrippel\b", "tripel"),
     (r"\btripple\b", "tripel"),
     (r"\bquadruple\b", "quadrupel"),
-    # IPA-varianter — alle reduceres til "ipa"
     (r"\bwest coast ipa\b", "ipa"),
     (r"\bwcipa\b", "ipa"),
     (r"\bnew england ipa\b", "ipa"),
@@ -56,21 +47,17 @@ SYNONYMS = [
     (r"\bimperial ipa\b", "ipa"),
     (r"\bblack ipa\b", "ipa"),
     (r"\bindia pale ale\b", "ipa"),
-    # "trappist" er beskrivelse, ikke ID
     (r"\btrappist\b", ""),
-    # Nationaliteter
     (r"\b(belgisk|dansk|tysk|engelsk|hollandsk|belgian|german|dutch|american)\b", ""),
-    # Generiske ord
     (r"\b(premium|classic|original|strong|special)\b", ""),
     (r"\b(oekologisk|organic|eco|bio)\b", ""),
 ]
 
 
-MATCH_THRESHOLD = 82.0
+MATCH_THRESHOLD = 85.0  # hævet fra 82 for at være strengere
 
 
 def strip_accents(s: str) -> str:
-    """Konverterer danske/europæiske tegn til ASCII."""
     return (s.replace("æ", "ae").replace("ø", "oe").replace("å", "aa")
              .replace("Æ", "ae").replace("Ø", "oe").replace("Å", "aa")
              .replace("é", "e").replace("è", "e").replace("ê", "e")
@@ -79,13 +66,8 @@ def strip_accents(s: str) -> str:
 
 
 def normalize_for_matching(name: str) -> str:
-    """
-    Aggressiv normalisering — fjerner ALT der ikke er identifikator-info.
-    Returnerer den streng der bruges til fuzzy sammenligning.
-    """
     if not name:
         return ""
-
     s = strip_accents(name.lower())
     s = re.sub(r"\d+[.,]?\d*\s?(cl|ml|l|liter)\b\.?", " ", s)
     s = re.sub(r"\d+[.,]\d+\s?%", " ", s)
@@ -97,18 +79,12 @@ def normalize_for_matching(name: str) -> str:
 
     s = re.sub(r"[^a-z0-9\s]", " ", s)
     s = re.sub(r"\s+", " ", s).strip()
-
     return s
 
 
 def style_fingerprint(name: str) -> set:
-    """
-    Returnerer sæt af eksklusive stilarter fundet i navnet.
-    Hård gate: to øl med konflikterende stilarter må aldrig merges.
-    """
     s = " " + strip_accents(name.lower()) + " "
     s = re.sub(r"[-–—_/|*,.()\[\]]", " ", s)
-
     found = set()
     for style, keywords in EXCLUSIVE_STYLES:
         for kw in keywords:
@@ -119,7 +95,6 @@ def style_fingerprint(name: str) -> set:
 
 
 def styles_compatible(fp_a: set, fp_b: set) -> bool:
-    """To øl er stil-kompatible hvis ingen konflikt eller delmængde."""
     if not fp_a or not fp_b:
         return True
     if fp_a == fp_b:
@@ -130,26 +105,93 @@ def styles_compatible(fp_a: set, fp_b: set) -> bool:
 
 
 def volumes_compatible(v_a, v_b) -> bool:
-    """Volume er hård gate (None accepteres)."""
     if v_a is None or v_b is None:
         return True
     return abs(v_a - v_b) < 0.5
 
 
 def abv_compatible(a_a, a_b) -> bool:
-    """ABV er hård gate — max 0.4 procentpoint forskel."""
     if a_a is None or a_b is None:
         return True
     return abs(a_a - a_b) <= 0.4
 
 
+_BREWERY_PREFIXES = [
+    "brouwerij", "brewery", "bryggeri", "bryggeriet", "brauerei",
+    "the ", "het ", "brasserie", "brygghus", "bryghus",
+]
+
+
+def _norm_brewery(b):
+    """
+    Normaliserer et bryggerinavn så fx 'Brouwerij Tilquin' og 'Tilquin' bliver ens.
+    """
+    if not b:
+        return ""
+    s = strip_accents(b.lower()).strip()
+    # Fjern generiske ord der varierer mellem shops
+    for prefix in _BREWERY_PREFIXES:
+        if s.startswith(prefix):
+            s = s[len(prefix):].strip()
+    # Fjern interpunktuation
+    s = re.sub(r"[-–—_/|*,.()\[\]]", " ", s)
+    s = re.sub(r"\s+", " ", s).strip()
+    return s
+
+
+def breweries_compatible(brewery_a, brewery_b) -> bool:
+    """
+    Hård gate: hvis BEGGE har et bryggeri OG de er forskellige → ikke samme øl.
+    Hvis mindst én mangler bryggeri, så lader vi andre gates afgøre det.
+    """
+    bn_a = _norm_brewery(brewery_a)
+    bn_b = _norm_brewery(brewery_b)
+    if not bn_a or not bn_b:
+        return True  # mindst én mangler — fuzzy/style/abv afgør
+    # Ratio (ikke partial_ratio) så korte forskellige navne som "a" vs "b" giver lav score
+    # Token_sort_ratio er god når ordrækkefølgen kan variere
+    score = max(
+        fuzz.ratio(bn_a, bn_b),
+        fuzz.token_sort_ratio(bn_a, bn_b),
+    )
+    return score >= 80
+
+
+def _token_count(s: str) -> int:
+    return len(s.split()) if s else 0
+
+
 def similarity_score(name_a, name_b, abv_a, abv_b, brewery_a, brewery_b, fp_a, fp_b):
-    """Samlet match-score 0-100+ med bonuses for ABV/bryggeri/stil."""
+    """
+    Strengere scoring end før.
+    - Bruger BÅDE token_sort_ratio (god til ordrækkefølge) OG token_set_ratio
+    - Straffer korte navne der har lav reel overlap
+    - Bonuses for matchende ABV/bryggeri/stil
+    """
     if not name_a or not name_b:
         return 0.0
 
-    base = fuzz.token_set_ratio(name_a, name_b)
+    # token_set_ratio er meget tilgivende ved længdeforskelle.
+    # token_sort_ratio er mere konservativ.
+    # Vi tager DET LAVESTE af de to som basis — det forhindrer at
+    # korte navne matches falsk mod lange navne.
+    ts_set = fuzz.token_set_ratio(name_a, name_b)
+    ts_sort = fuzz.token_sort_ratio(name_a, name_b)
+    base = min(ts_set, ts_sort)
 
+    # Hvis navnene er VÆSENTLIGT forskellige i længde, så bør vi være ekstra strenge.
+    # Eksempel: "gueuze" (1 token) vs "tilquin gueuze ancienne cuvee arthur" (5 tokens)
+    tc_a = _token_count(name_a)
+    tc_b = _token_count(name_b)
+    if tc_a > 0 and tc_b > 0:
+        ratio = min(tc_a, tc_b) / max(tc_a, tc_b)
+        if ratio < 0.5:
+            # Stor længdeforskel — straf med op til 15 point
+            base -= 15
+        elif ratio < 0.7:
+            base -= 5
+
+    # Bonuses
     if abv_a is not None and abv_b is not None:
         diff = abs(abv_a - abv_b)
         if diff <= 0.1:
@@ -158,9 +200,7 @@ def similarity_score(name_a, name_b, abv_a, abv_b, brewery_a, brewery_b, fp_a, f
             base += 4
 
     if brewery_a and brewery_b:
-        bn_a = strip_accents(brewery_a.lower()).strip()
-        bn_b = strip_accents(brewery_b.lower()).strip()
-        if bn_a == bn_b and bn_a:
+        if _norm_brewery(brewery_a) == _norm_brewery(brewery_b):
             base += 6
 
     if fp_a and fp_b and fp_a == fp_b:

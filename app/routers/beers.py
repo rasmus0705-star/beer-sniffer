@@ -12,6 +12,7 @@ from app.services.matching import (
     styles_compatible,
     volumes_compatible,
     abv_compatible,
+    breweries_compatible,
     similarity_score,
     MATCH_THRESHOLD,
 )
@@ -33,8 +34,6 @@ def clear_cache():
 def build_beer_list(db: Session):
     """
     Bygger den grupperede ølliste med fuzzy matching på tværs af shops.
-    Bruger samme robuste logik som ingest.py — style fingerprint,
-    ABV/volume gates, fuzzy similarity med bonuses.
     """
     now = time.time()
 
@@ -42,8 +41,6 @@ def build_beer_list(db: Session):
         return _cache["data"]
 
     beers = db.query(Beer).options(joinedload(Beer.prices)).all()
-
-    # Sortér så øl med flest prices behandles først — giver stabile gruppe-ankre
     beers = sorted(beers, key=lambda b: len(b.prices or []), reverse=True)
 
     grouped = {}
@@ -59,7 +56,6 @@ def build_beer_list(db: Session):
         abv = beer.abv
         brewery = beer.brewery
 
-        # Find bedste eksisterende gruppe
         best_key = None
         best_score = 0.0
 
@@ -69,6 +65,8 @@ def build_beer_list(db: Session):
             if not volumes_compatible(vol, g.get("volume_cl")):
                 continue
             if not abv_compatible(abv, g.get("abv")):
+                continue
+            if not breweries_compatible(brewery, g.get("brewery")):
                 continue
 
             score = similarity_score(
@@ -133,7 +131,6 @@ def build_beer_list(db: Session):
                 ],
             }
 
-    # Slutbehandling: dedupliker shops, beregn min/max
     result = []
     for g in grouped.values():
         unique_shops = {}
@@ -168,10 +165,6 @@ def build_beer_list(db: Session):
 
     return result
 
-
-# ──────────────────────────────────────────────────────────────────────
-# ENDPOINTS
-# ──────────────────────────────────────────────────────────────────────
 
 @router.get("/stats")
 def get_stats(db: Session = Depends(get_db)):
