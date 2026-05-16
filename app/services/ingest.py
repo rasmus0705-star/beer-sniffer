@@ -79,6 +79,24 @@ def ingest_batch(db: Session, items: list[dict]):
     if not items:
         return
 
+    # ── Filtrer ugyldige items væk ──
+    # - 0-pris produkter (gratis prøver, "kommer snart" etc.)
+    # - Manglende navn
+    # - Mistænkelige mega-lave priser (under 5 kr — sandsynligvis fejldata eller pant)
+    before_count = len(items)
+    items = [
+        it for it in items
+        if it.get("name")
+        and it.get("price") is not None
+        and it["price"] > 5  # Skipper 0-kr og pant-prisede produkter
+    ]
+    filtered_count = before_count - len(items)
+    if filtered_count > 0:
+        print(f"⚠️ Filtreret {filtered_count} ugyldige items væk (0-pris eller manglende navn)")
+
+    if not items:
+        return
+
     all_beers = db.query(Beer).all()
 
     beers_by_volume = {}

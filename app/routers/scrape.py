@@ -6,6 +6,7 @@ from app.scrapers.agoodcase import scrape_agoodcase
 from app.scrapers.beershoppen import scrape_beershoppen
 from app.scrapers.bestofbeers import scrape_bestofbeers
 from app.scrapers.oeltanken import scrape_oeltanken
+from app.scrapers.beerme import scrape_beerme
 from app.services.ingest import ingest_batch
 from app.models import Beer, Price, PriceHistory
 import os
@@ -20,7 +21,7 @@ def verify_api_key(x_api_key: str = Header(None)):
 
 
 # ──────────────────────────────────────────────────────────────────────
-# RESET — sletter alle øl og priser, bevarer PriceAlert og PriceHistory
+# RESET — sletter alle øl og priser, bevarer PriceAlert
 # ──────────────────────────────────────────────────────────────────────
 
 @router.post("/reset-beers")
@@ -91,6 +92,7 @@ def scrape_all(db: Session = Depends(get_db), _: None = Depends(verify_api_key))
         ("beershoppen", scrape_beershoppen),
         ("bestofbeers", scrape_bestofbeers),
         ("oeltanken", scrape_oeltanken),
+        ("beerme", scrape_beerme),
     ]:
         try:
             items = func()
@@ -133,5 +135,12 @@ def scrape_bob(db: Session = Depends(get_db), _: None = Depends(verify_api_key))
 @router.get("/scrape-oeltanken")
 def scrape_ot(db: Session = Depends(get_db), _: None = Depends(verify_api_key)):
     items = scrape_oeltanken()
+    ingest_batch(db, items)
+    return {"status": "ok", "count": len(items)}
+
+
+@router.get("/scrape-beerme")
+def scrape_bm(db: Session = Depends(get_db), _: None = Depends(verify_api_key)):
+    items = scrape_beerme()
     ingest_batch(db, items)
     return {"status": "ok", "count": len(items)}
