@@ -4,6 +4,7 @@ from app.scrapers.brygshoppen import scrape_brygshoppen
 from app.scrapers.agoodcase import scrape_agoodcase
 from app.scrapers.beershoppen import scrape_beershoppen
 from app.scrapers.beerme import scrape_beerme
+from app.scrapers.oeltanken import scrape_oeltanken
 from app.scrapers.bestofbeers import scrape_bestofbeers
 from app.utils.normalize import normalize_name
 from rapidfuzz import fuzz
@@ -15,6 +16,8 @@ print("🍺 Henter ølpriser fra A Good Case...")
 items += scrape_agoodcase()
 print("🍺 Henter ølpriser fra Beershoppen...")
 items += scrape_beershoppen()
+print("🍺 Henter ølpriser fra Øltanken...")
+items += scrape_oeltanken()
 print("🍺 Henter ølpriser fra Beer Me...")
 items += scrape_beerme()
 print("🍺 Henter ølpriser fra Best of Beers...")

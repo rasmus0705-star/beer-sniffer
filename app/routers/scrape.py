@@ -4,6 +4,7 @@ from app.database import get_db
 from app.scrapers.brygshoppen import scrape_brygshoppen
 from app.scrapers.agoodcase import scrape_agoodcase
 from app.scrapers.beershoppen import scrape_beershoppen
+from app.scrapers.oeltanken import scrape_oeltanken
 from app.scrapers.bestofbeers import scrape_bestofbeers
 from app.services.ingest import ingest_batch
 import os
@@ -22,6 +23,7 @@ def scrape_all(db: Session = Depends(get_db), _: None = Depends(verify_api_key))
     for name, func in [
         ("brygshoppen", scrape_brygshoppen),
         ("agoodcase", scrape_agoodcase),
+        ("oeltanken", scrape_oeltanken),
         ("beershoppen", scrape_beershoppen),
         ("bestofbeers", scrape_bestofbeers),
     ]:
@@ -37,6 +39,12 @@ def scrape_all(db: Session = Depends(get_db), _: None = Depends(verify_api_key))
 @router.get("/scrape-brygshoppen")
 def scrape_b(db: Session = Depends(get_db), _: None = Depends(verify_api_key)):
     items = scrape_brygshoppen()
+    ingest_batch(db, items)
+    return {"status": "ok", "count": len(items)}
+
+@router.get("/scrape-oeltanken")
+def scrape_ot(db: Session = Depends(get_db), _: None = Depends(verify_api_key)):
+    items = scrape_oeltanken()
     ingest_batch(db, items)
     return {"status": "ok", "count": len(items)}
 

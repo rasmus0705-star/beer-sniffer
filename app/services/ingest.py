@@ -1,22 +1,54 @@
 from sqlalchemy.orm import Session
-from rapidfuzz import fuzz
 
 from app.models import Beer, Price, PriceHistory, PriceAlert
 from app.utils.normalize import normalize_name
+from app.services.matching import (
+    normalize_for_matching,
+    style_fingerprint,
+    styles_compatible,
+    volumes_compatible,
+    abv_compatible,
+    similarity_score,
+    MATCH_THRESHOLD,
+)
 
 
-def find_best_match(normalized_name, volume, beers_by_volume):
-    candidates = beers_by_volume.get(volume, [])
-    best_score = 0
+def find_best_match(item_norm, item_fp, item_vol, item_abv, item_brewery, candidate_beers):
+    """
+    Finder bedste eksisterende Beer der matcher dette item.
+    Bruger samme robust logik som beers.py — style fingerprint, ABV/volume gates,
+    fuzzy similarity med bonuses.
+    """
+    best_score = 0.0
     best_beer = None
 
-    for beer in candidates:
-        score = fuzz.ratio(normalized_name, beer.normalized_name)
+    for beer in candidate_beers:
+        # Hård gate 1: stilarter må ikke konflikte (Dubbel ≠ Tripel)
+        beer_fp = style_fingerprint(beer.name)
+        if not styles_compatible(item_fp, beer_fp):
+            continue
+
+        # Hård gate 2: volume
+        if not volumes_compatible(item_vol, beer.volume_cl):
+            continue
+
+        # Hård gate 3: ABV
+        if not abv_compatible(item_abv, beer.abv):
+            continue
+
+        beer_norm = normalize_for_matching(beer.name)
+        score = similarity_score(
+            item_norm, beer_norm,
+            item_abv, beer.abv,
+            item_brewery, beer.brewery,
+            item_fp, beer_fp,
+        )
+
         if score > best_score:
             best_score = score
             best_beer = beer
 
-    if best_score >= 85:
+    if best_score >= MATCH_THRESHOLD:
         return best_beer
 
     return None
@@ -26,50 +58,79 @@ def ingest_batch(db: Session, items: list[dict]):
     if not items:
         return
 
-    # Byg volume-indekseret dictionary for hurtig opslag
+    # Hent alle eksisterende øl
     all_beers = db.query(Beer).all()
+
+    # Indekser efter volume for hurtigt opslag — None-volume i sin egen bucket
     beers_by_volume = {}
+    beers_with_no_volume = []
     for beer in all_beers:
         vol = beer.volume_cl
-        if vol not in beers_by_volume:
-            beers_by_volume[vol] = []
-        beers_by_volume[vol].append(beer)
+        if vol is None:
+            beers_with_no_volume.append(beer)
+        else:
+            beers_by_volume.setdefault(vol, []).append(beer)
 
     shop_names = list(set(item["shop_name"] for item in items))
 
-    # ── TRIN 1: Gem alle nye priser i en midlertidig liste ──
+    # ── TRIN 1: Find/opret øl og saml priser ──
     new_prices = []
     new_histories = []
 
     for i, item in enumerate(items):
-        normalized = normalize_name(item["name"])
-        volume = item.get("volume_cl")
+        item_name = item["name"]
+        item_norm = normalize_for_matching(item_name)
+        item_fp = style_fingerprint(item_name)
+        item_vol = item.get("volume_cl")
+        item_abv = item.get("abv")
+        item_brewery = item.get("brewery")
 
-        beer = find_best_match(normalized, volume, beers_by_volume)
+        # Kandidater: samme volume + dem uden volume (kan stadig matche)
+        if item_vol is not None:
+            candidates = beers_by_volume.get(item_vol, []) + beers_with_no_volume
+        else:
+            # Hvis dette item ikke har volume, sammenlign mod alt
+            candidates = all_beers
+
+        beer = find_best_match(
+            item_norm, item_fp, item_vol, item_abv, item_brewery,
+            candidates
+        )
 
         # Opret øl hvis ikke fundet
         if not beer:
             beer = Beer(
-                name=item["name"],
-                normalized_name=normalized,
-                brewery=item.get("brewery"),
+                name=item_name,
+                normalized_name=normalize_name(item_name),
+                brewery=item_brewery,
                 type=item.get("type"),
-                volume_cl=volume,
-                abv=item.get("abv"),
+                volume_cl=item_vol,
+                abv=item_abv,
                 image=item.get("image"),
             )
             db.add(beer)
             db.flush()
 
-            if volume not in beers_by_volume:
-                beers_by_volume[volume] = []
-            beers_by_volume[volume].append(beer)
+            # Tilføj til indeks så efterfølgende items kan matche
+            if item_vol is None:
+                beers_with_no_volume.append(beer)
+            else:
+                beers_by_volume.setdefault(item_vol, []).append(beer)
+            all_beers.append(beer)
 
-        # Opdater billede hvis mangler
+        # Opdater manglende metadata (først shop der har et felt vinder)
         if not beer.image and item.get("image"):
             beer.image = item["image"]
+        if not beer.brewery and item_brewery:
+            beer.brewery = item_brewery
+        if not beer.type and item.get("type"):
+            beer.type = item["type"]
+        if beer.abv is None and item_abv is not None:
+            beer.abv = item_abv
+        if beer.volume_cl is None and item_vol is not None:
+            beer.volume_cl = item_vol
 
-        # Saml nye priser
+        # Saml ny pris
         new_prices.append(Price(
             beer_id=beer.id,
             shop_name=item["shop_name"],
@@ -80,7 +141,7 @@ def ingest_batch(db: Session, items: list[dict]):
             available=True,
         ))
 
-        # Prishistorik
+        # Prishistorik — kun hvis prisen er ændret
         last = (
             db.query(PriceHistory)
             .filter(
@@ -98,18 +159,18 @@ def ingest_batch(db: Session, items: list[dict]):
                 shop_name=item["shop_name"],
             ))
 
-        # Log fremgang hver 100 øl
         if (i + 1) % 100 == 0:
             print(f"✅ Behandlet {i + 1} / {len(items)} øl")
 
-    # ── TRIN 2: Alle øl er behandlet — nu sletter vi gamle priser og gemmer nye ──
-    # Dette sker atomisk så siden aldrig viser ufuldstændig data
+    # ── TRIN 2: Atomisk swap af priser ──
     print(f"💾 Gemmer {len(new_prices)} priser...")
-    db.query(Price).filter(Price.shop_name.in_(shop_names)).delete(synchronize_session=False)
+    db.query(Price).filter(
+        Price.shop_name.in_(shop_names)
+    ).delete(synchronize_session=False)
     db.add_all(new_prices)
     db.add_all(new_histories)
 
-    # Prisalarmer
+    # ── TRIN 3: Prisalarmer ──
     alerts = db.query(PriceAlert).filter(PriceAlert.active == True).all()
     for alert in alerts:
         for price in new_prices:
@@ -118,4 +179,13 @@ def ingest_batch(db: Session, items: list[dict]):
                 alert.active = False
 
     db.commit()
+
+    # ── TRIN 4: Ryd cache så API'en viser de nye priser med det samme ──
+    try:
+        from app.routers.beers import clear_cache
+        clear_cache()
+        print("🧹 Cache ryddet")
+    except Exception as e:
+        print(f"⚠️ Kunne ikke rydde cache: {e}")
+
     print(f"✅ Ingest færdig — {len(items)} øl behandlet")
