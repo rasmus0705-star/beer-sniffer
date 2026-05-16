@@ -99,7 +99,7 @@ def scrape_brygshoppen():
                     volume = 50
 
             abv = None
-            match = re.search(r"(\d+[.,]\d+)%", name)
+            match = re.search(r"(\d+(?:[.,]\d+)?)\s*%", name)
             if match:
                 abv = float(match.group(1).replace(",", "."))
 

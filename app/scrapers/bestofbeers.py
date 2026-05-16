@@ -78,7 +78,7 @@ def scrape_bestofbeers():
 
             # ABV
             abv = None
-            abv_match = re.search(r'(\d+[.,]\d+)\s*%', name)
+            abv_match = re.search(r'(\d+(?:[.,]\d+)?)\s*%', name)
             if abv_match:
                 abv = float(abv_match.group(1).replace(',', '.'))
 
