@@ -3,7 +3,11 @@ import re
 from app.utils.detect_type import detect_type
 
 
-HEADERS = {"User-Agent": "Mozilla/5.0"}
+HEADERS = {
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+    "Accept": "application/json",
+    "Accept-Language": "da-DK,da;q=0.9,en;q=0.8",
+}
 
 
 def scrape_brygshoppen():

@@ -3,7 +3,11 @@ import re
 from app.utils.detect_type import detect_type
 
 
-HEADERS = {"User-Agent": "Mozilla/5.0"}
+HEADERS = {
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+    "Accept": "application/json",
+    "Accept-Language": "da-DK,da;q=0.9,en;q=0.8",
+}
 
 
 def scrape_bestofbeers():
@@ -48,7 +52,6 @@ def scrape_bestofbeers():
             if any(kw in name.lower() for kw in skip_keywords):
                 continue
 
-            # Pris er i øre
             try:
                 prices_data = product.get("prices", {})
                 price = int(prices_data.get("price", 0)) / 100
@@ -66,14 +69,11 @@ def scrape_bestofbeers():
                 old_price = regular_price
                 discount = round((regular_price - price) / regular_price * 100, 1)
 
-            # URL
             product_url = product.get("permalink") or ''
 
-            # Billede
             images = product.get("images", [])
             image = images[0].get("src") if images else None
 
-            # Volumen
             volume = None
             name_lower = name.lower()
             vol_match = re.search(r'(\d+[.,]?\d*)\s*(cl|ml|l)\.?', name_lower)
@@ -88,7 +88,6 @@ def scrape_bestofbeers():
                     continue
                 volume = val
 
-            # ABV
             abv = None
             abv_match = re.search(r'(\d+(?:[.,]\d+)?)\s*%', name)
             if abv_match:
@@ -118,7 +117,6 @@ def scrape_bestofbeers():
         print(f"📦 Best of Beers side {page}: {len(products)} produkter hentet")
         page += 1
 
-        # Stop hvis vi har hentet alle
         if len(products) < per_page:
             break
 

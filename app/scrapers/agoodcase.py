@@ -3,7 +3,11 @@ import re
 from app.utils.detect_type import detect_type
 
 
-HEADERS = {"User-Agent": "Mozilla/5.0"}
+HEADERS = {
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+    "Accept": "application/json",
+    "Accept-Language": "da-DK,da;q=0.9,en;q=0.8",
+}
 
 
 def scrape_agoodcase():
@@ -103,7 +107,6 @@ def scrape_agoodcase():
                     if single_variant is None:
                         single_variant = v
 
-            # Hvis ingen enkeltpris findes, brug billigste bulk-variant og vis pris per stk
             bulk_only = False
             if single_variant is None and bulk_variants:
                 bulk_variants.sort(key=lambda x: x["price_per_unit"])
@@ -119,7 +122,6 @@ def scrape_agoodcase():
 
             try:
                 if bulk_only:
-                    # Vis pris per stk og tilføj antal til navn
                     price = bulk_price_per_unit
                     display_name = f"{name} ({bulk_qty} stk.)"
                     old_price_raw = single_variant.get("compare_at_price")
@@ -175,7 +177,6 @@ def scrape_agoodcase():
                 if match:
                     abv = float(match.group(1).replace(",", "."))
 
-            # Fjern variant info fra bulk_variants (ikke serialiserbar)
             clean_bulk = []
             for b in bulk_variants:
                 clean_bulk.append({

@@ -3,6 +3,13 @@ import re
 from app.utils.detect_type import detect_type
 
 
+HEADERS = {
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+    "Accept": "application/json",
+    "Accept-Language": "da-DK,da;q=0.9,en;q=0.8",
+}
+
+
 def scrape_oeltanken():
     items = []
     page = 1
@@ -20,18 +27,10 @@ def scrape_oeltanken():
         url = f"https://oltanken.dk/products.json?limit=250&page={page}"
 
         try:
-            response = requests.get(
-                url,
-                headers={
-                    "User-Agent": "Mozilla/5.0"
-                },
-                timeout=30
-            )
-
+            response = requests.get(url, headers=HEADERS, timeout=30)
             data = response.json()
-
         except Exception as e:
-            print(f"❌ Fejl på side {page}: {e}")
+            print(f"❌ Øltanken fejl på side {page}: {e}")
             break
 
         products = data.get("products", [])
@@ -95,10 +94,7 @@ def scrape_oeltanken():
             if images and len(images) > 0:
                 image = images[0].get("src")
 
-            # -------------------------
             # VOLUME
-            # -------------------------
-
             volume = None
 
             text_to_scan = f"""
@@ -139,14 +135,11 @@ def scrape_oeltanken():
                 elif "50cl" in lower_name:
                     volume = 50
 
-            # -------------------------
             # ABV
-            # -------------------------
-
             abv = None
 
             abv_match = re.search(
-                r"(\d+(?:[.,]\d+)?)\s?%",
+                r"(\d+(?:[.,]\d+)?)\s*%",
                 text_to_scan
             )
 
@@ -158,10 +151,7 @@ def scrape_oeltanken():
                 except:
                     pass
 
-            # -------------------------
             # UNTAPPD
-            # -------------------------
-
             untappd_url = None
             untappd_id = None
 
@@ -183,10 +173,7 @@ def scrape_oeltanken():
                 if untappd_url_match:
                     untappd_url = untappd_url_match.group(0)
 
-            # -------------------------
             # TYPE
-            # -------------------------
-
             beer_type = detect_type(name)
 
             if not beer_type:
@@ -194,10 +181,7 @@ def scrape_oeltanken():
                     " ".join(product.get("tags", []))
                 )
 
-            # -------------------------
             # BREWERY
-            # -------------------------
-
             brewery = None
 
             if " - " in name:
@@ -206,58 +190,39 @@ def scrape_oeltanken():
             if not brewery:
                 brewery = product.get("vendor")
 
-            # -------------------------
             # ITEM
-            # -------------------------
-
             item = {
                 "external_id": product.get("id"),
-
                 "name": name,
-
                 "price": price,
-
                 "old_price": old_price,
-
                 "discount_pct": discount,
-
                 "url": product_url,
-
                 "shop_name": "Øltanken",
-
                 "volume_cl": volume,
-
                 "abv": abv,
-
                 "image": image,
-
                 "type": beer_type,
-
                 "brewery": brewery,
-
                 "category": "øl",
-
                 "sku": variant.get("sku"),
-
                 "available": variant.get("available"),
-
                 "untappd_url": untappd_url,
-
                 "untappd_id": untappd_id,
-
                 "tags": product.get("tags", []),
             }
 
             items.append(item)
 
         print(
-            f"📦 Side {page}: "
+            f"📦 Øltanken side {page}: "
             f"{len(products)} produkter hentet"
         )
 
         page += 1
 
     return items
+
 
 if __name__ == "__main__":
     items = scrape_oeltanken()

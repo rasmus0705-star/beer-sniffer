@@ -5,6 +5,11 @@ from app.utils.detect_type import detect_type
 
 FEED_URL = "https://www.partner-ads.com/dk/feed_udlaes.php?partnerid=56605&bannerid=74625&feedid=1666"
 
+HEADERS = {
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+}
+
+
 def scrape_beerme():
     items = []
 
@@ -19,10 +24,9 @@ def scrape_beerme():
         "INTERNE PRODUKTER", "BEER CLUB FRI FRAGT TEST",
         "GLAS", "FREDAGSBAR", "ØL (ARKIV)"
     ]
-    
 
     try:
-        r = requests.get(FEED_URL, timeout=15)
+        r = requests.get(FEED_URL, headers=HEADERS, timeout=15)
         r.encoding = 'iso-8859-1'
         root = ET.fromstring(r.content)
     except Exception as e:
@@ -74,12 +78,12 @@ def scrape_beerme():
             volume = 50
 
         abv = None
-        match = re.search(r'(\d+[.,]\d+)%', name)
+        match = re.search(r'(\d+(?:[.,]\d+)?)\s*%', name)
         if match:
             abv = float(match.group(1).replace(',', '.'))
 
         is_smagekasse = any(kw in name.lower() for kw in [
-        "smagekasse", "smagesæt", "smagskasse", "mix", "bundle", "pakke"
+            "smagekasse", "smagesæt", "smagskasse", "mix", "bundle", "pakke"
         ]) or bool(re.search(r'\d+\s*stk', name.lower())) or category == 'ØLPAKKER'
 
         item = {
@@ -101,3 +105,8 @@ def scrape_beerme():
 
     print(f"📦 Beer Me: {len(items)} produkter hentet")
     return items
+
+
+if __name__ == "__main__":
+    items = scrape_beerme()
+    print(f"\n✅ Total: {len(items)} items")
