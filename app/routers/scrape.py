@@ -30,9 +30,9 @@ def reset_beers(
     _: None = Depends(verify_api_key),
 ):
     """
-    Sletter alle Beer og Price rækker så databasen kan bygges op fra scratch
-    med den nye matching-logik. Kræver ?confirm=YES for at undgå utilsigtede sletninger.
-    Bevarer PriceHistory og PriceAlert.
+    Sletter alle Beer, Price og PriceHistory rækker så databasen kan bygges op
+    fra scratch med den nye matching-logik. Kræver ?confirm=YES.
+    Bevarer PriceAlert.
     """
     if confirm != "YES":
         raise HTTPException(
@@ -40,26 +40,41 @@ def reset_beers(
             detail="Tilføj ?confirm=YES for at bekræfte sletning"
         )
 
-    price_count = db.query(Price).count()
-    beer_count = db.query(Beer).count()
-
-    db.query(Price).delete()
-    db.query(Beer).delete()
-    db.commit()
-
-    # Ryd cache
     try:
-        from app.routers.beers import clear_cache
-        clear_cache()
-    except Exception:
-        pass
+        price_count = db.query(Price).count()
+        beer_count = db.query(Beer).count()
+        history_count = db.query(PriceHistory).count()
 
-    return {
-        "status": "ok",
-        "deleted_prices": price_count,
-        "deleted_beers": beer_count,
-        "next_step": "Kald /scrape-all for at genopbygge databasen",
-    }
+        # Slet i rigtig rækkefølge — først child-tabeller, så parent
+        db.query(PriceHistory).delete(synchronize_session=False)
+        db.commit()
+
+        db.query(Price).delete(synchronize_session=False)
+        db.commit()
+
+        db.query(Beer).delete(synchronize_session=False)
+        db.commit()
+
+        # Ryd cache
+        try:
+            from app.routers.beers import clear_cache
+            clear_cache()
+        except Exception:
+            pass
+
+        return {
+            "status": "ok",
+            "deleted_history": history_count,
+            "deleted_prices": price_count,
+            "deleted_beers": beer_count,
+            "next_step": "Kald /scrape-all for at genopbygge databasen",
+        }
+    except Exception as e:
+        db.rollback()
+        raise HTTPException(
+            status_code=500,
+            detail=f"Reset fejlede: {type(e).__name__}: {str(e)}"
+        )
 
 
 # ──────────────────────────────────────────────────────────────────────
