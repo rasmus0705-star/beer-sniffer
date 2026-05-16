@@ -6,6 +6,7 @@ VIGTIGT: ændringer her påvirker BÅDE hvordan øl gemmes OG hvordan de grupper
 """
 import re
 from rapidfuzz import fuzz
+from html import unescape  # ← Ny import for HTML entity decoding
 
 
 EXCLUSIVE_STYLES = [
@@ -68,6 +69,8 @@ def strip_accents(s: str) -> str:
 def normalize_for_matching(name: str) -> str:
     if not name:
         return ""
+    # Decode HTML entities først (fx &#8211; → –)
+    name = unescape(name)
     s = strip_accents(name.lower())
     s = re.sub(r"\d+[.,]?\d*\s?(cl|ml|l|liter)\b\.?", " ", s)
     s = re.sub(r"\d+[.,]\d+\s?%", " ", s)
@@ -83,6 +86,7 @@ def normalize_for_matching(name: str) -> str:
 
 
 def style_fingerprint(name: str) -> set:
+    name = unescape(name)
     s = " " + strip_accents(name.lower()) + " "
     s = re.sub(r"[-–—_/|*,.()\[\]]", " ", s)
     found = set()
@@ -199,17 +203,22 @@ def similarity_score(name_a, name_b, abv_a, abv_b, brewery_a, brewery_b, fp_a, f
     - Bruger BÅDE token_sort_ratio (god til ordrækkefølge) OG token_set_ratio
     - Straffer korte navne der har lav reel overlap
     - Bonuses for matchende ABV/bryggeri/stil
+
+    Filosofi: når flere uafhængige hårde signaler matcher præcist
+    (samme bryggeri + samme ABV + samme stil + samme volume) er det meget
+    usandsynligt at det er to forskellige øl. Derfor giver vi en stor combo-bonus.
     """
     if not name_a or not name_b:
         return 0.0
 
     # token_set_ratio er meget tilgivende ved længdeforskelle.
     # token_sort_ratio er mere konservativ.
-    # Vi tager DET LAVESTE af de to som basis — det forhindrer at
-    # korte navne matches falsk mod lange navne.
+    # Vi bruger gennemsnittet — det balancerer mellem at fange varianter
+    # som "tripel tripel westmalle" vs "westmalle tripel" og at undgå
+    # falsk match som "gueuze" vs "tilquin gueuze ancienne cuvee arthur".
     ts_set = fuzz.token_set_ratio(name_a, name_b)
     ts_sort = fuzz.token_sort_ratio(name_a, name_b)
-    base = min(ts_set, ts_sort)
+    base = (ts_set + ts_sort) / 2
 
     # Hvis navnene er VÆSENTLIGT forskellige i længde, så bør vi være ekstra strenge.
     # Eksempel: "gueuze" (1 token) vs "tilquin gueuze ancienne cuvee arthur" (5 tokens)
@@ -218,24 +227,42 @@ def similarity_score(name_a, name_b, abv_a, abv_b, brewery_a, brewery_b, fp_a, f
     if tc_a > 0 and tc_b > 0:
         ratio = min(tc_a, tc_b) / max(tc_a, tc_b)
         if ratio < 0.5:
-            # Stor længdeforskel — straf med op til 15 point
             base -= 15
         elif ratio < 0.7:
             base -= 5
+
+    # Tæl hvor mange uafhængige hårde signaler der matcher præcist
+    strong_signals = 0
 
     # Bonuses
     if abv_a is not None and abv_b is not None:
         diff = abs(abv_a - abv_b)
         if diff <= 0.1:
             base += 8
+            strong_signals += 1
         elif diff <= 0.3:
             base += 4
 
     if brewery_a and brewery_b:
-        if _norm_brewery(brewery_a) == _norm_brewery(brewery_b):
-            base += 6
+        bn_a = _norm_brewery(brewery_a)
+        bn_b = _norm_brewery(brewery_b)
+        if bn_a and bn_b:
+            score = max(fuzz.ratio(bn_a, bn_b), fuzz.token_sort_ratio(bn_a, bn_b))
+            if score >= 90:
+                base += 8
+                strong_signals += 1
+            elif score >= 70:
+                base += 4
 
     if fp_a and fp_b and fp_a == fp_b:
         base += 4
+        strong_signals += 1
+
+    # Combo-bonus: hvis 3+ uafhængige signaler matcher præcist, er det med
+    # meget høj sandsynlighed samme øl
+    if strong_signals >= 3:
+        base += 6
+    elif strong_signals >= 2:
+        base += 3
 
     return base
