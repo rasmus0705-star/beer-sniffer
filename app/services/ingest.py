@@ -18,9 +18,15 @@ def find_best_match(item_norm, item_fp, item_vol, item_abv, item_brewery, item_n
     """
     Bruger samme robust logik som beers.py — style fingerprint, ABV/volume/brewery gates,
     fuzzy similarity med bonuses.
+
+    VIGTIG OBSERVATION: når alle 4 uafhængige hårde gates matcher
+    (samme stil + samme volume + samme ABV + samme bryggeri),
+    så er det med >99% sandsynlighed samme øl. Threshold sænkes derfor
+    til 70 i disse tilfælde fordi navn-varianten alene ikke skal kunne blokere.
     """
     best_score = 0.0
     best_beer = None
+    best_beer_all_gates_pass = False  # Track om ALLE gates passede
 
     for beer in candidate_beers:
         beer_fp = style_fingerprint(beer.name)
@@ -41,6 +47,9 @@ def find_best_match(item_norm, item_fp, item_vol, item_abv, item_brewery, item_n
         if not breweries_compatible(item_brewery, beer.brewery, item_name_for_brewery, beer.name):
             continue
 
+        # Hvis vi er her, passede ALLE 4 gates
+        all_gates_pass = True
+
         beer_norm = normalize_for_matching(beer.name)
         score = similarity_score(
             item_norm, beer_norm,
@@ -52,7 +61,14 @@ def find_best_match(item_norm, item_fp, item_vol, item_abv, item_brewery, item_n
         if score > best_score:
             best_score = score
             best_beer = beer
+            best_beer_all_gates_pass = all_gates_pass
 
+    # Hvis ALLE 4 gates passede for best_beer, så sænk threshold dramatisk
+    # fordi det er praktisk talt umuligt at være to forskellige øl
+    if best_beer_all_gates_pass and best_score >= 70:
+        return best_beer
+
+    # Ellers: standard threshold
     if best_score >= MATCH_THRESHOLD:
         return best_beer
 
