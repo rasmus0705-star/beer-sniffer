@@ -66,7 +66,7 @@ def build_beer_list(db: Session):
                 continue
             if not abv_compatible(abv, g.get("abv")):
                 continue
-            if not breweries_compatible(brewery, g.get("brewery")):
+            if not breweries_compatible(brewery, g.get("brewery"), beer.name, g.get("name")):
                 continue
 
             score = similarity_score(

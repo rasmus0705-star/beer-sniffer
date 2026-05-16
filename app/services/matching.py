@@ -139,22 +139,54 @@ def _norm_brewery(b):
     return s
 
 
-def breweries_compatible(brewery_a, brewery_b) -> bool:
+def breweries_compatible(brewery_a, brewery_b, name_a=None, name_b=None) -> bool:
     """
     Hård gate: hvis BEGGE har et bryggeri OG de er forskellige → ikke samme øl.
     Hvis mindst én mangler bryggeri, så lader vi andre gates afgøre det.
+
+    Robusthed: scrapers udleder ofte bryggeri forkert (fx ved at splitte på " - ").
+    Derfor accepterer vi også et match hvis det ene bryggeri-navn faktisk
+    findes som et ord i det andet (eller i øllens navn). Det fanger tilfælde
+    som 'Westmalle' vs 'Westmalle Trappist Trippel'.
     """
     bn_a = _norm_brewery(brewery_a)
     bn_b = _norm_brewery(brewery_b)
+
     if not bn_a or not bn_b:
         return True  # mindst én mangler — fuzzy/style/abv afgør
-    # Ratio (ikke partial_ratio) så korte forskellige navne som "a" vs "b" giver lav score
-    # Token_sort_ratio er god når ordrækkefølgen kan variere
+
+    # Standard fuzzy match
     score = max(
         fuzz.ratio(bn_a, bn_b),
         fuzz.token_sort_ratio(bn_a, bn_b),
     )
-    return score >= 80
+    if score >= 80:
+        return True
+
+    # Robusthed mod dårlig brewery-extraction:
+    # Hvis bryggeri-navnet på den ene optræder som ord i den andens navn,
+    # er det sandsynligvis samme bryggeri
+    tokens_a = set(bn_a.split())
+    tokens_b = set(bn_b.split())
+    # Mindst ét fælles ord der er længere end 3 tegn (undgår "the", "og" osv.)
+    common = {t for t in (tokens_a & tokens_b) if len(t) > 3}
+    if common:
+        return True
+
+    # Sidste check: hvis vi har navnene, så kig om bryggeri-A's hovedord
+    # findes i øllens navn-B og omvendt
+    if name_a and name_b:
+        name_a_lower = strip_accents(name_a.lower())
+        name_b_lower = strip_accents(name_b.lower())
+        # Tag det første "rigtige" ord fra hvert bryggeri-navn
+        for token in bn_a.split():
+            if len(token) > 3 and token in name_b_lower:
+                return True
+        for token in bn_b.split():
+            if len(token) > 3 and token in name_a_lower:
+                return True
+
+    return False
 
 
 def _token_count(s: str) -> int:

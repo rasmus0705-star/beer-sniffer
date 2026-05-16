@@ -14,7 +14,7 @@ from app.services.matching import (
 )
 
 
-def find_best_match(item_norm, item_fp, item_vol, item_abv, item_brewery, candidate_beers):
+def find_best_match(item_norm, item_fp, item_vol, item_abv, item_brewery, item_name_for_brewery, candidate_beers):
     """
     Bruger samme robust logik som beers.py — style fingerprint, ABV/volume/brewery gates,
     fuzzy similarity med bonuses.
@@ -37,8 +37,8 @@ def find_best_match(item_norm, item_fp, item_vol, item_abv, item_brewery, candid
         if not abv_compatible(item_abv, beer.abv):
             continue
 
-        # Hård gate 4: bryggeri (NY)
-        if not breweries_compatible(item_brewery, beer.brewery):
+        # Hård gate 4: bryggeri (NY) — sender også navne for fallback-matching
+        if not breweries_compatible(item_brewery, beer.brewery, item_name_for_brewery, beer.name):
             continue
 
         beer_norm = normalize_for_matching(beer.name)
@@ -93,7 +93,7 @@ def ingest_batch(db: Session, items: list[dict]):
             candidates = all_beers
 
         beer = find_best_match(
-            item_norm, item_fp, item_vol, item_abv, item_brewery,
+            item_norm, item_fp, item_vol, item_abv, item_brewery, item_name,
             candidates
         )
 
