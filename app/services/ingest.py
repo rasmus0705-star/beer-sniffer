@@ -10,28 +10,27 @@ from app.services.matching import (
     abv_compatible,
     breweries_compatible,
     similarity_score,
+    has_meaningful_overlap,
+    required_threshold,
     MATCH_THRESHOLD,
 )
 
 
-def find_best_match(item_norm, item_fp, item_vol, item_abv, item_brewery, item_name_for_brewery, candidate_beers):
+def find_best_match(item_norm, item_fp, item_vol, item_abv, item_brewery, item_name, candidate_beers):
     """
-    Bruger samme robust logik som beers.py — style fingerprint, ABV/volume/brewery gates,
-    fuzzy similarity med bonuses.
-
-    VIGTIG OBSERVATION: når alle 4 uafhængige hårde gates matcher
-    (samme stil + samme volume + samme ABV + samme bryggeri),
-    så er det med >99% sandsynlighed samme øl. Threshold sænkes derfor
-    til 70 i disse tilfælde fordi navn-varianten alene ikke skal kunne blokere.
+    Robust matching:
+    - 4 hårde gates: stil, volume, ABV, bryggeri
+    - Mandatory: navnene skal dele mindst ét meningsfuldt ord
+    - Dynamisk threshold: jo mere data der mangler, jo højere score kræves
     """
     best_score = 0.0
     best_beer = None
-    best_beer_all_gates_pass = False  # Track om ALLE gates passede
+    best_threshold = MATCH_THRESHOLD
 
     for beer in candidate_beers:
         beer_fp = style_fingerprint(beer.name)
 
-        # Hård gate 1: stilarter (Dubbel ≠ Tripel)
+        # Hård gate 1: stilarter
         if not styles_compatible(item_fp, beer_fp):
             continue
 
@@ -43,12 +42,13 @@ def find_best_match(item_norm, item_fp, item_vol, item_abv, item_brewery, item_n
         if not abv_compatible(item_abv, beer.abv):
             continue
 
-        # Hård gate 4: bryggeri (NY) — sender også navne for fallback-matching
-        if not breweries_compatible(item_brewery, beer.brewery, item_name_for_brewery, beer.name):
+        # Hård gate 4: bryggeri
+        if not breweries_compatible(item_brewery, beer.brewery, item_name, beer.name):
             continue
 
-        # Hvis vi er her, passede ALLE 4 gates
-        all_gates_pass = True
+        # Mandatory: navnene skal dele meningsfulde ord
+        if not has_meaningful_overlap(item_name, beer.name):
+            continue
 
         beer_norm = normalize_for_matching(beer.name)
         score = similarity_score(
@@ -58,18 +58,19 @@ def find_best_match(item_norm, item_fp, item_vol, item_abv, item_brewery, item_n
             item_fp, beer_fp,
         )
 
+        # Dynamisk threshold afhængigt af hvor meget data vi har
+        threshold = required_threshold(
+            item_abv, beer.abv,
+            item_vol, beer.volume_cl,
+            item_brewery, beer.brewery,
+        )
+
         if score > best_score:
             best_score = score
             best_beer = beer
-            best_beer_all_gates_pass = all_gates_pass
+            best_threshold = threshold
 
-    # Hvis ALLE 4 gates passede for best_beer, så sænk threshold dramatisk
-    # fordi det er praktisk talt umuligt at være to forskellige øl
-    if best_beer_all_gates_pass and best_score >= 70:
-        return best_beer
-
-    # Ellers: standard threshold
-    if best_score >= MATCH_THRESHOLD:
+    if best_beer and best_score >= best_threshold:
         return best_beer
 
     return None
@@ -79,16 +80,12 @@ def ingest_batch(db: Session, items: list[dict]):
     if not items:
         return
 
-    # ── Filtrer ugyldige items væk ──
-    # - 0-pris produkter (gratis prøver, "kommer snart" etc.)
-    # - Manglende navn
-    # - Mistænkelige mega-lave priser (under 5 kr — sandsynligvis fejldata eller pant)
     before_count = len(items)
     items = [
         it for it in items
         if it.get("name")
         and it.get("price") is not None
-        and it["price"] > 5  # Skipper 0-kr og pant-prisede produkter
+        and it["price"] > 5
     ]
     filtered_count = before_count - len(items)
     if filtered_count > 0:

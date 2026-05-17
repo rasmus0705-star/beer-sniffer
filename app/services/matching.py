@@ -3,10 +3,16 @@ Fælles matching-logik for ølprodukter.
 Bruges af både ingest.py (når øl gemmes) og beers.py (når øl grupperes).
 
 VIGTIGT: ændringer her påvirker BÅDE hvordan øl gemmes OG hvordan de grupperes.
+
+FILOSOFI om manglende data:
+Tidligere lod vi None-værdier "slippe gennem" gates (volume/ABV/brewery).
+Det førte til falske matches når scrapers ikke kunne udlede data fra navnet.
+Nu kræver vi DET MODSATTE: jo mere data der mangler, jo HØJERE fuzzy-score
+skal navnet have for at blive matched.
 """
 import re
 from rapidfuzz import fuzz
-from html import unescape  # ← Ny import for HTML entity decoding
+from html import unescape
 
 
 EXCLUSIVE_STYLES = [
@@ -22,7 +28,7 @@ EXCLUSIVE_STYLES = [
     ("LAGER",          ["lager", "helles"]),
     ("WEIZEN",         ["weizen", "weisse", "witbier", "hvedeoel"]),
     ("SAISON",         ["saison", "farmhouse"]),
-    ("GUEUZE",         ["gueuze", "lambic"]),  # delt ud fra SOUR
+    ("GUEUZE",         ["gueuze", "lambic"]),
     ("SOUR",           ["sour", "gose", "berliner"]),
     ("BOCK",           ["bock"]),
     ("PALE_ALE",       ["pale ale", " apa "]),
@@ -55,7 +61,22 @@ SYNONYMS = [
 ]
 
 
-MATCH_THRESHOLD = 85.0  # hævet fra 82 for at være strengere
+MATCH_THRESHOLD = 85.0  # base threshold når alle data er kendt
+
+
+# Ord der ikke tæller som "meningsfuldt overlap" — generiske ølord
+_STOP_WORDS = {
+    "beer", "ale", "lager", "pils", "pilsner", "stout", "porter",
+    "tripel", "trippel", "tripple", "dubbel", "ipa", "apa",
+    "blond", "blonde", "amber", "barrel", "aged", "imperial",
+    "session", "double", "single", "extra", "strong", "old",
+    "new", "white", "black", "red", "brown", "gold", "golden",
+    "dark", "light", "barley", "wine", "sour", "gose", "saison",
+    "weizen", "weisse", "witbier", "lambic", "gueuze", "bock",
+    "trappist", "abbey", "premium", "classic", "original",
+    "draft", "draught", "fresh", "smooth", "hoppy", "malt", "malty",
+    "the", "with", "and", "from", "for",
+}
 
 
 def strip_accents(s: str) -> str:
@@ -69,7 +90,6 @@ def strip_accents(s: str) -> str:
 def normalize_for_matching(name: str) -> str:
     if not name:
         return ""
-    # Decode HTML entities først (fx &#8211; → –)
     name = unescape(name)
     s = strip_accents(name.lower())
     s = re.sub(r"\d+[.,]?\d*\s?(cl|ml|l|liter)\b\.?", " ", s)
@@ -109,12 +129,14 @@ def styles_compatible(fp_a: set, fp_b: set) -> bool:
 
 
 def volumes_compatible(v_a, v_b) -> bool:
+    """Hård gate når begge kendt. None accepteres for nu — håndteres i score."""
     if v_a is None or v_b is None:
         return True
     return abs(v_a - v_b) < 0.5
 
 
 def abv_compatible(a_a, a_b) -> bool:
+    """Hård gate når begge kendt. None accepteres for nu — håndteres i score."""
     if a_a is None or a_b is None:
         return True
     return abs(a_a - a_b) <= 0.4
@@ -127,17 +149,12 @@ _BREWERY_PREFIXES = [
 
 
 def _norm_brewery(b):
-    """
-    Normaliserer et bryggerinavn så fx 'Brouwerij Tilquin' og 'Tilquin' bliver ens.
-    """
     if not b:
         return ""
     s = strip_accents(b.lower()).strip()
-    # Fjern generiske ord der varierer mellem shops
     for prefix in _BREWERY_PREFIXES:
         if s.startswith(prefix):
             s = s[len(prefix):].strip()
-    # Fjern interpunktuation
     s = re.sub(r"[-–—_/|*,.()\[\]]", " ", s)
     s = re.sub(r"\s+", " ", s).strip()
     return s
@@ -145,52 +162,71 @@ def _norm_brewery(b):
 
 def breweries_compatible(brewery_a, brewery_b, name_a=None, name_b=None) -> bool:
     """
-    Hård gate: hvis BEGGE har et bryggeri OG de er forskellige → ikke samme øl.
-    Hvis mindst én mangler bryggeri, så lader vi andre gates afgøre det.
-
-    Robusthed: scrapers udleder ofte bryggeri forkert (fx ved at splitte på " - ").
-    Derfor accepterer vi også et match hvis det ene bryggeri-navn faktisk
-    findes som et ord i det andet (eller i øllens navn). Det fanger tilfælde
-    som 'Westmalle' vs 'Westmalle Trappist Trippel'.
+    Hård gate når begge har bryggeri.
+    Hvis én mangler bryggeri → tjek om bryggeri-navnet findes i begge øl-navne.
+    Hvis ingen kan bekræftes → lad score afgøre (strengere threshold).
     """
     bn_a = _norm_brewery(brewery_a)
     bn_b = _norm_brewery(brewery_b)
 
-    if not bn_a or not bn_b:
-        return True  # mindst én mangler — fuzzy/style/abv afgør
+    # Hvis begge kendt: standard fuzzy match
+    if bn_a and bn_b:
+        score = max(
+            fuzz.ratio(bn_a, bn_b),
+            fuzz.token_sort_ratio(bn_a, bn_b),
+        )
+        if score >= 80:
+            return True
+        # Eller fælles meningsfulde ord
+        tokens_a = set(bn_a.split())
+        tokens_b = set(bn_b.split())
+        common = {t for t in (tokens_a & tokens_b) if len(t) > 3 and t not in _STOP_WORDS}
+        if common:
+            return True
+        # Eller bryggeri-A optræder i øl-B's navn
+        if name_a and name_b:
+            name_a_lower = strip_accents(name_a.lower())
+            name_b_lower = strip_accents(name_b.lower())
+            for token in bn_a.split():
+                if len(token) > 3 and token not in _STOP_WORDS and token in name_b_lower:
+                    return True
+            for token in bn_b.split():
+                if len(token) > 3 and token not in _STOP_WORDS and token in name_a_lower:
+                    return True
+        return False
 
-    # Standard fuzzy match
-    score = max(
-        fuzz.ratio(bn_a, bn_b),
-        fuzz.token_sort_ratio(bn_a, bn_b),
-    )
-    if score >= 80:
-        return True
-
-    # Robusthed mod dårlig brewery-extraction:
-    # Hvis bryggeri-navnet på den ene optræder som ord i den andens navn,
-    # er det sandsynligvis samme bryggeri
-    tokens_a = set(bn_a.split())
-    tokens_b = set(bn_b.split())
-    # Mindst ét fælles ord der er længere end 3 tegn (undgår "the", "og" osv.)
-    common = {t for t in (tokens_a & tokens_b) if len(t) > 3}
-    if common:
-        return True
-
-    # Sidste check: hvis vi har navnene, så kig om bryggeri-A's hovedord
-    # findes i øllens navn-B og omvendt
-    if name_a and name_b:
+    # Hvis én mangler bryggeri: KRÆV at det kendte bryggeri findes i begge navne
+    known_brewery = bn_a or bn_b
+    if known_brewery and name_a and name_b:
         name_a_lower = strip_accents(name_a.lower())
         name_b_lower = strip_accents(name_b.lower())
-        # Tag det første "rigtige" ord fra hvert bryggeri-navn
-        for token in bn_a.split():
-            if len(token) > 3 and token in name_b_lower:
-                return True
-        for token in bn_b.split():
-            if len(token) > 3 and token in name_a_lower:
-                return True
+        for token in known_brewery.split():
+            if len(token) > 3 and token not in _STOP_WORDS:
+                # Bryggeri-token skal findes i BEGGE øl-navne
+                if token in name_a_lower and token in name_b_lower:
+                    return True
+        return False
 
-    return False
+    # Hvis ingen bryggeri-info overhovedet — lad score afgøre
+    return True
+
+
+def _meaningful_tokens(name: str) -> set:
+    """Returnerer tokens fra navnet der ikke er generiske ølord eller for korte."""
+    if not name:
+        return set()
+    norm = normalize_for_matching(name)
+    return {t for t in norm.split() if len(t) > 3 and t not in _STOP_WORDS}
+
+
+def has_meaningful_overlap(name_a: str, name_b: str) -> bool:
+    """
+    Mandatory check: navnene skal dele mindst ét meningsfuldt ord.
+    Forhindrer at to helt forskellige øl matches blot fordi de begge er fx "Imperial Stout".
+    """
+    tokens_a = _meaningful_tokens(name_a)
+    tokens_b = _meaningful_tokens(name_b)
+    return bool(tokens_a & tokens_b)
 
 
 def _token_count(s: str) -> int:
@@ -199,29 +235,15 @@ def _token_count(s: str) -> int:
 
 def similarity_score(name_a, name_b, abv_a, abv_b, brewery_a, brewery_b, fp_a, fp_b):
     """
-    Strengere scoring end før.
-    - Bruger BÅDE token_sort_ratio (god til ordrækkefølge) OG token_set_ratio
-    - Straffer korte navne der har lav reel overlap
-    - Bonuses for matchende ABV/bryggeri/stil
-
-    Filosofi: når flere uafhængige hårde signaler matcher præcist
-    (samme bryggeri + samme ABV + samme stil + samme volume) er det meget
-    usandsynligt at det er to forskellige øl. Derfor giver vi en stor combo-bonus.
+    Standard score 0-100+ baseret på navne med bonuses.
     """
     if not name_a or not name_b:
         return 0.0
 
-    # token_set_ratio er meget tilgivende ved længdeforskelle.
-    # token_sort_ratio er mere konservativ.
-    # Vi bruger gennemsnittet — det balancerer mellem at fange varianter
-    # som "tripel tripel westmalle" vs "westmalle tripel" og at undgå
-    # falsk match som "gueuze" vs "tilquin gueuze ancienne cuvee arthur".
     ts_set = fuzz.token_set_ratio(name_a, name_b)
     ts_sort = fuzz.token_sort_ratio(name_a, name_b)
     base = (ts_set + ts_sort) / 2
 
-    # Hvis navnene er VÆSENTLIGT forskellige i længde, så bør vi være ekstra strenge.
-    # Eksempel: "gueuze" (1 token) vs "tilquin gueuze ancienne cuvee arthur" (5 tokens)
     tc_a = _token_count(name_a)
     tc_b = _token_count(name_b)
     if tc_a > 0 and tc_b > 0:
@@ -231,10 +253,8 @@ def similarity_score(name_a, name_b, abv_a, abv_b, brewery_a, brewery_b, fp_a, f
         elif ratio < 0.7:
             base -= 5
 
-    # Tæl hvor mange uafhængige hårde signaler der matcher præcist
     strong_signals = 0
 
-    # Bonuses
     if abv_a is not None and abv_b is not None:
         diff = abs(abv_a - abv_b)
         if diff <= 0.1:
@@ -258,11 +278,37 @@ def similarity_score(name_a, name_b, abv_a, abv_b, brewery_a, brewery_b, fp_a, f
         base += 4
         strong_signals += 1
 
-    # Combo-bonus: hvis 3+ uafhængige signaler matcher præcist, er det med
-    # meget høj sandsynlighed samme øl
     if strong_signals >= 3:
         base += 6
     elif strong_signals >= 2:
         base += 3
 
     return base
+
+
+def required_threshold(abv_a, abv_b, vol_a, vol_b, brewery_a, brewery_b):
+    """
+    Beregner hvor højt fuzzy-scoren skal være for at en match accepteres.
+    Jo mere data der mangler, jo strengere bliver kravet.
+
+    - Alle data kendt: 85 (base)
+    - 1 data mangler: 90
+    - 2 data mangler: 95
+    - 3 data mangler: 98 (næsten kun ved identiske navne)
+    """
+    missing = 0
+    if abv_a is None or abv_b is None:
+        missing += 1
+    if vol_a is None or vol_b is None:
+        missing += 1
+    if not _norm_brewery(brewery_a) or not _norm_brewery(brewery_b):
+        missing += 1
+
+    if missing == 0:
+        return 85.0
+    elif missing == 1:
+        return 90.0
+    elif missing == 2:
+        return 95.0
+    else:
+        return 98.0

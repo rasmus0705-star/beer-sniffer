@@ -14,6 +14,8 @@ from app.services.matching import (
     abv_compatible,
     breweries_compatible,
     similarity_score,
+    has_meaningful_overlap,
+    required_threshold,
     MATCH_THRESHOLD,
 )
 
@@ -32,9 +34,6 @@ def clear_cache():
 
 
 def build_beer_list(db: Session):
-    """
-    Bygger den grupperede ølliste med fuzzy matching på tværs af shops.
-    """
     now = time.time()
 
     if _cache["data"] is not None and (now - _cache["timestamp"]) < CACHE_TTL:
@@ -58,6 +57,7 @@ def build_beer_list(db: Session):
 
         best_key = None
         best_score = 0.0
+        best_threshold = MATCH_THRESHOLD
 
         for key, g in grouped.items():
             if not styles_compatible(fp, g["_fingerprint"]):
@@ -68,6 +68,8 @@ def build_beer_list(db: Session):
                 continue
             if not breweries_compatible(brewery, g.get("brewery"), beer.name, g.get("name")):
                 continue
+            if not has_meaningful_overlap(beer.name, g.get("name")):
+                continue
 
             score = similarity_score(
                 norm, g["_normalized"],
@@ -76,11 +78,18 @@ def build_beer_list(db: Session):
                 fp, g["_fingerprint"],
             )
 
+            threshold = required_threshold(
+                abv, g.get("abv"),
+                vol, g.get("volume_cl"),
+                brewery, g.get("brewery"),
+            )
+
             if score > best_score:
                 best_score = score
                 best_key = key
+                best_threshold = threshold
 
-        if best_key and best_score >= MATCH_THRESHOLD:
+        if best_key and best_score >= best_threshold:
             target = grouped[best_key]
             for p in beer.prices:
                 target["prices"].append({
@@ -247,7 +256,6 @@ def get_beers_paginated(
 ):
 
     all_beers = build_beer_list(db)
-
     filtered = all_beers
 
     if q:
