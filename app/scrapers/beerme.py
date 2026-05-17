@@ -10,21 +10,73 @@ HEADERS = {
 }
 
 
-def extract_brewery(name):
+# Mojibake-mønstre fra Beer Me's blandede UTF-8/ISO-8859-1 encoding
+MOJIBAKE_FIXES = [
+    ('Â·', '·'),       # middle dot
+    ('Â\xa0', ' '),    # non-breaking space
+    ('â€"', '–'),      # en-dash
+    ('â€"', '—'),      # em-dash
+    ('â€™', '\''),     # right single quotation
+    ('â€˜', '\''),     # left single quotation
+    ('â€œ', '"'),      # left double quotation
+    ('â€\x9d', '"'),   # right double quotation
+    ('Ã¦', 'æ'),
+    ('Ã¸', 'ø'),
+    ('Ã¥', 'å'),
+    ('Ã†', 'Æ'),
+    ('Ã˜', 'Ø'),
+    ('Ã…', 'Å'),
+    ('Ã©', 'é'),
+    ('Ã¨', 'è'),
+    ('Ãª', 'ê'),
+    ('Ã¤', 'ä'),
+    ('Ã¶', 'ö'),
+    ('Ã¼', 'ü'),
+]
+
+
+def clean_mojibake(text):
+    """Rens forvanskede tegn fra Beer Me's blandede encoding."""
+    if not text:
+        return text
+    for bad, good in MOJIBAKE_FIXES:
+        text = text.replace(bad, good)
+    return text
+
+
+def extract_brewery_from_name(name):
     """
-    Beer Me-navne har formatet "Produktnavn · Bryggeri" eller "Produktnavn - Bryggeri".
-    Sidste del efter separatoren er typisk bryggeriet.
+    Beer Me-navne har konsistent format:
+      "[Produktnavn] - [Stil] fra [Bryggeri]"
+      "[Produktnavn] · [Stil] fra [Bryggeri]"
+      "[Produktnavn] [Stil] fra [Bryggeri]"
     """
     if not name:
         return None
-    for sep in [" · ", " - ", " – ", " | "]:
-        if sep in name:
-            parts = name.split(sep)
-            # Bryggeri er typisk det SIDSTE element
+
+    # Primær: " fra X"
+    fra_match = re.search(r"\bfra\s+(.+?)$", name, re.IGNORECASE)
+    if fra_match:
+        candidate = fra_match.group(1).strip()
+        candidate = re.sub(r"\s*\(.*?\)\s*$", "", candidate).strip()
+        if candidate and len(candidate.split()) <= 5 and not re.match(r"^\d+\s*(cl|ml|%)", candidate.lower()):
+            return candidate
+
+    # Fallback 1: " · " separator
+    if " · " in name:
+        parts = name.split(" · ")
+        candidate = parts[-1].strip()
+        if candidate and len(candidate.split()) <= 5 and not re.search(r"\d+\s*(cl|ml|%)", candidate.lower()):
+            return candidate
+
+    # Fallback 2: " - " separator
+    if " - " in name:
+        parts = name.split(" - ")
+        if len(parts) == 2:
             candidate = parts[-1].strip()
-            # Skal være rimeligt kort (max 4 ord) og ikke kun tal/enheder
             if candidate and len(candidate.split()) <= 4 and not re.search(r"\d+\s*(cl|ml|%)", candidate.lower()):
                 return candidate
+
     return None
 
 
@@ -52,9 +104,9 @@ def scrape_beerme():
         return items
 
     for produkt in root.findall('produkt'):
-        name = produkt.findtext('produktnavn') or ''
-        category = (produkt.findtext('kategorinavn') or '').upper()
-        manufacturer = produkt.findtext('producent') or ''
+        # Rens mojibake fra alle felter
+        name = clean_mojibake(produkt.findtext('produktnavn') or '')
+        category = clean_mojibake((produkt.findtext('kategorinavn') or '').upper())
 
         if not name:
             continue
@@ -87,7 +139,7 @@ def scrape_beerme():
         url = produkt.findtext('vareurl') or ''
         image = produkt.findtext('billedurl') or ''
 
-        # Volume — først tjek navnet, derefter standard patterns
+        # Volume — tjek navnet for cl/ml/l
         volume = None
         name_lower = name.lower()
         vol_match = re.search(r"(\d+(?:[.,]\d+)?)\s*(cl|ml|l)\b", name_lower)
@@ -108,7 +160,7 @@ def scrape_beerme():
             elif '50cl' in name_lower or '50 cl' in name_lower:
                 volume = 50
             elif 'dåse' in name_lower:
-                volume = 33  # standard dåse
+                volume = 33
 
         # ABV
         abv = None
@@ -116,10 +168,8 @@ def scrape_beerme():
         if match:
             abv = float(match.group(1).replace(',', '.'))
 
-        # Brewery — først producent-felt, ellers udled fra navnet
-        brewery = manufacturer.strip() if manufacturer else None
-        if not brewery:
-            brewery = extract_brewery(name)
+        # Bryggeri via " fra X" pattern
+        brewery = extract_brewery_from_name(name)
 
         is_smagekasse = any(kw in name.lower() for kw in [
             "smagekasse", "smagesæt", "smagskasse", "mix", "bundle", "pakke"
@@ -149,11 +199,9 @@ def scrape_beerme():
 if __name__ == "__main__":
     items = scrape_beerme()
     print(f"\n✅ Total: {len(items)} items")
-    # Tjek hvor mange der har brewery
     with_brewery = sum(1 for it in items if it.get("brewery"))
-    print(f"Med bryggeri: {with_brewery}/{len(items)}")
-    if items:
-        print(f"\nFørste 3 items:")
-        for it in items[:3]:
-            print(f"  - {it['name']}")
-            print(f"    Brewery: {it.get('brewery')}, ABV: {it.get('abv')}, Vol: {it.get('volume_cl')}cl")
+    print(f"Med bryggeri: {with_brewery}/{len(items)} ({100*with_brewery//len(items)}%)")
+    print(f"\nFørste 5 items:")
+    for it in items[:5]:
+        print(f"  - {it['name']}")
+        print(f"    → Brewery: {it.get('brewery')}")
