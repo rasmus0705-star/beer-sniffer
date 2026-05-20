@@ -5,6 +5,8 @@ from app.scrapers.agoodcase import scrape_agoodcase
 from app.scrapers.beershoppen import scrape_beershoppen
 from app.scrapers.bestofbeers import scrape_bestofbeers
 from app.scrapers.oeltanken import scrape_oeltanken
+from app.scrapers.beerme import scrape_beerme
+from app.scrapers.vildmedvin import scrape_vildmedvin
 from app.services.ingest import ingest_batch
 
 
@@ -19,6 +21,8 @@ def run_scraper():
             ("beershoppen", scrape_beershoppen),
             ("bestofbeers", scrape_bestofbeers),
             ("oeltanken", scrape_oeltanken),
+            ("beerme", scrape_beerme),
+            ("vildmedvin", scrape_vildmedvin),
         ]:
             try:
                 items = func()
@@ -30,7 +34,6 @@ def run_scraper():
         print(f"✅ Samlet: {len(all_items)} øl gemt")
     finally:
         db.close()
-
 
 
 scheduler = BackgroundScheduler()

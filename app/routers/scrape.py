@@ -7,6 +7,7 @@ from app.scrapers.beershoppen import scrape_beershoppen
 from app.scrapers.bestofbeers import scrape_bestofbeers
 from app.scrapers.oeltanken import scrape_oeltanken
 from app.scrapers.beerme import scrape_beerme
+from app.scrapers.vildmedvin import scrape_vildmedvin
 from app.services.ingest import ingest_batch
 from app.models import Beer, Price, PriceHistory
 import os
@@ -30,11 +31,6 @@ def reset_beers(
     db: Session = Depends(get_db),
     _: None = Depends(verify_api_key),
 ):
-    """
-    Sletter alle Beer, Price og PriceHistory rækker så databasen kan bygges op
-    fra scratch med den nye matching-logik. Kræver ?confirm=YES.
-    Bevarer PriceAlert.
-    """
     if confirm != "YES":
         raise HTTPException(
             status_code=400,
@@ -46,7 +42,6 @@ def reset_beers(
         beer_count = db.query(Beer).count()
         history_count = db.query(PriceHistory).count()
 
-        # Slet i rigtig rækkefølge — først child-tabeller, så parent
         db.query(PriceHistory).delete(synchronize_session=False)
         db.commit()
 
@@ -56,7 +51,6 @@ def reset_beers(
         db.query(Beer).delete(synchronize_session=False)
         db.commit()
 
-        # Ryd cache
         try:
             from app.routers.beers import clear_cache
             clear_cache()
@@ -93,6 +87,7 @@ def scrape_all(db: Session = Depends(get_db), _: None = Depends(verify_api_key))
         ("bestofbeers", scrape_bestofbeers),
         ("oeltanken", scrape_oeltanken),
         ("beerme", scrape_beerme),
+        ("vildmedvin", scrape_vildmedvin),
     ]:
         try:
             items = func()
@@ -142,5 +137,12 @@ def scrape_ot(db: Session = Depends(get_db), _: None = Depends(verify_api_key)):
 @router.get("/scrape-beerme")
 def scrape_bm(db: Session = Depends(get_db), _: None = Depends(verify_api_key)):
     items = scrape_beerme()
+    ingest_batch(db, items)
+    return {"status": "ok", "count": len(items)}
+
+
+@router.get("/scrape-vildmedvin")
+def scrape_vmv(db: Session = Depends(get_db), _: None = Depends(verify_api_key)):
+    items = scrape_vildmedvin()
     ingest_batch(db, items)
     return {"status": "ok", "count": len(items)}
