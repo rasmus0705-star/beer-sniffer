@@ -324,7 +324,7 @@
                 <button onclick="document.getElementById('search').focus()" class="cta-btn">🔍 Find billigste øl nu</button>
                 <button onclick="document.getElementById('top-deals-toggle').click()" class="cta-btn secondary">🔥 Spar penge nu</button>
             </div>
-            <p class="hero-proof">Opdateret dagligt • Priser fra <span id="shop-count-inline">–</span> danske butikker</p>
+            <p class="hero-proof">Opdateret dagligt • <span id="shop-count-inline">–</span> øl sammenlignet</p>
             <p class="hero-trust">Ingen login &nbsp;•&nbsp; 100% gratis &nbsp;•&nbsp; Opdateres dagligt</p>
         </div>
     </div>
@@ -333,7 +333,7 @@
 <div class="stats-bar">
     <div class="stat"><div class="stat-number" id="stat-total">–</div><div class="stat-label">Øl i alt</div></div>
     <div class="stat"><div class="stat-number" id="stat-deals">–</div><div class="stat-label">Aktive tilbud</div></div>
-    <div class="stat"><div class="stat-number" id="stat-shops">–</div><div class="stat-label">Butikker</div></div>
+    <div class="stat"><div class="stat-number" id="stat-shops">–</div><div class="stat-label">Største rabat</div></div>
     <div class="stat"><div class="stat-number" id="stat-cheapest">–</div><div class="stat-label">Billigste (kr)</div></div>
 </div>
 
@@ -982,9 +982,11 @@
             // Sæt stats
             document.getElementById('stat-total').textContent = stats.total || allBeers.length;
             document.getElementById('stat-deals').textContent = stats.deals || allBeers.filter(b => b.max_discount_pct > 0).length;
-            document.getElementById('stat-shops').textContent = stats.shops || (stats.shop_names?.length || 0);
+            // Find største rabat
+            const maxDiscount = Math.max(...allBeers.map(b => b.max_discount_pct || 0), 0);
+            document.getElementById('stat-shops').textContent = maxDiscount > 0 ? maxDiscount + '%' : '–';
             document.getElementById('stat-cheapest').textContent = (stats.cheapest || Math.min(...allBeers.filter(b => b.min_price).map(b => b.min_price))).toFixed(0);
-            document.getElementById('shop-count-inline').textContent = stats.shops || (stats.shop_names?.length || 0);
+            document.getElementById('shop-count-inline').textContent = stats.total || allBeers.length;
 
             // Byg butik checkbox liste — multi-select
             const shopList = document.getElementById('shop-list');
