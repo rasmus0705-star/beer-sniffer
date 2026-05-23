@@ -125,8 +125,8 @@
         /* ── GRID ── */
         .grid-wrap { padding: 1.5rem; max-width: 100%; margin: 0; position: relative; z-index: 1; }
         .result-count { font-size: 0.72rem; color: var(--text-dim); margin-bottom: 1.5rem; letter-spacing: 0.12em; text-transform: uppercase; }
-        .grid { display: grid; grid-template-columns: repeat(auto-fill,minmax(260px,1fr)); gap: 1.2rem; }
-        .favs-grid { display: grid; grid-template-columns: repeat(auto-fill,minmax(260px,1fr)); gap: 1.2rem; margin-bottom: 2rem; padding-bottom: 2rem; border-bottom: 1px solid var(--border); }
+        .grid { display: grid; grid-template-columns: repeat(auto-fill,minmax(230px,1fr)); gap: 1rem; }
+        .favs-grid { display: grid; grid-template-columns: repeat(auto-fill,minmax(230px,1fr)); gap: 1rem; margin-bottom: 2rem; padding-bottom: 2rem; border-bottom: 1px solid var(--border); }
 
         /* ── CARD ── */
         .card { background: var(--surface); border: 1px solid var(--border); border-radius: 14px; overflow: hidden; transition: transform 0.25s,border-color 0.25s,box-shadow 0.25s; animation: fadeUp 0.45s ease both; position: relative; }
@@ -135,8 +135,8 @@
         .ribbon { position: absolute; top: 10px; right: 0; background: linear-gradient(135deg,var(--discount),#29a35a); color: #000; font-family: 'Bebas Neue', sans-serif; font-size: 1rem; padding: 0.25rem 0.75rem 0.25rem 0.6rem; border-radius: 4px 0 0 4px; box-shadow: -3px 3px 10px rgba(0,0,0,0.5); z-index: 10; }
         .ribbon::after { content: ''; position: absolute; right: 0; bottom: -5px; border-left: 5px solid var(--discount-dark); border-bottom: 5px solid transparent; }
         .card-img-wrap { position: relative; cursor: pointer; display: block; }
-        .card-img { width: 100%; height: 180px; object-fit: contain; background: var(--surface2); padding: 1rem; display: block; transition: filter 0.2s; }
-        .card-img-placeholder { width: 100%; height: 180px; background: var(--surface2); display: flex; align-items: center; justify-content: center; font-size: 2.5rem; }
+        .card-img { width: 100%; height: 160px; object-fit: contain; background: var(--surface2); padding: 1rem; display: block; transition: filter 0.2s; }
+        .card-img-placeholder { width: 100%; height: 160px; background: var(--surface2); display: flex; align-items: center; justify-content: center; font-size: 2.5rem; }
         .img-overlay { position: absolute; inset: 0; background: rgba(10,8,5,0.82); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 0.3rem; opacity: 0; transition: opacity 0.2s; }
         .card-img-wrap:hover .img-overlay { opacity: 1; }
         .img-overlay-label { font-size: 0.62rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--text-muted); }
