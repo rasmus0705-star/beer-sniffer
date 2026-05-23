@@ -386,10 +386,10 @@
     // ── State ──
     let allBeers = [], currentPage = 1, totalPages = 1, totalCount = 0, isLoading = false;
     let currentFilter = 'all';
-    let currentShop = 'all';
+    let selectedShops = new Set(); // Multi-select butikker
     let currentSort = 'price-asc';
-    let selectedTypes = new Set();
-    let priceMin = 0, priceMax = 9999;
+    let selectedTypes = new Set(); // Multi-select stilarter
+    let priceMin = 0, priceMax = 500;
     let abvMin = 0, abvMax = 15;
     let favorites = new Set(JSON.parse(localStorage.getItem('bs_favorites') || '[]'));
 
@@ -410,7 +410,7 @@
         localStorage.setItem('bs_prefs', JSON.stringify({
             sort: currentSort,
             types: [...selectedTypes],
-            shop: currentShop,
+            shops: [...selectedShops],
             filter: currentFilter,
             abvMin, abvMax,
         }));
@@ -420,7 +420,7 @@
         const p = JSON.parse(localStorage.getItem('bs_prefs') || '{}');
         if (p.sort) currentSort = p.sort;
         if (p.types) selectedTypes = new Set(p.types);
-        if (p.shop) currentShop = p.shop;
+        if (p.shops) selectedShops = new Set(p.shops);
         if (p.abvMin !== undefined) abvMin = p.abvMin;
         if (p.abvMax !== undefined) abvMax = p.abvMax;
         if (p.filter) {
@@ -599,9 +599,9 @@
             filtered = filtered.filter(b => b.name.toLowerCase().includes(q) || (b.brewery && b.brewery.toLowerCase().includes(q)));
         }
 
-        // Butik filter
-        if (currentShop !== 'all') {
-            filtered = filtered.filter(b => b.prices && b.prices.some(p => p.shop_name === currentShop));
+        // Butik filter (multi-select)
+        if (selectedShops.size > 0) {
+            filtered = filtered.filter(b => b.prices && b.prices.some(p => selectedShops.has(p.shop_name)));
         }
 
         // Stilart filter (multi-select)
@@ -744,10 +744,15 @@
 
     function updateShopBtn() {
         const btn = document.getElementById('shop-btn');
-        btn.innerHTML = (currentShop === 'all' ? 'Butikker' : currentShop) + ' <span class="arrow">▼</span>';
-        btn.classList.toggle('has-value', currentShop !== 'all');
-        document.querySelectorAll('#shop-menu .dropdown-item').forEach(item => {
-            const sel = item.dataset.shop === currentShop;
+        if (selectedShops.size === 0) {
+            btn.innerHTML = 'Butikker <span class="arrow">▼</span>';
+            btn.classList.remove('has-value');
+        } else {
+            btn.innerHTML = `Butikker <span style="background:var(--amber);color:#000;border-radius:4px;padding:0 5px;font-size:0.72rem">${selectedShops.size}</span> <span class="arrow">▼</span>`;
+            btn.classList.add('has-value');
+        }
+        document.querySelectorAll('#shop-menu .dropdown-item[data-shop]').forEach(item => {
+            const sel = selectedShops.has(item.dataset.shop);
             item.classList.toggle('selected', sel);
             item.querySelector('.check').textContent = sel ? '✓' : '';
         });
@@ -798,39 +803,47 @@
             const raw = await res.json();
             dataJSON = raw;
             
-            // Parser data.json
+            // Parser data.json — bemærk stats struktur
             allBeers = (raw.beers || []).map(normalizeBeer);
             
+            // Hent stats
+            const stats = raw.stats || {};
+            
             // Sæt stats
-            document.getElementById('stat-total').textContent = raw.total || allBeers.length;
-            document.getElementById('stat-deals').textContent = raw.deals || allBeers.filter(b => b.max_discount_pct > 0).length;
-            document.getElementById('stat-shops').textContent = raw.shops || (raw.shop_names?.length || 0);
-            document.getElementById('stat-cheapest').textContent = Math.min(...allBeers.filter(b => b.min_price).map(b => b.min_price)).toFixed(0);
-            document.getElementById('shop-count-inline').textContent = raw.shops || (raw.shop_names?.length || 0);
+            document.getElementById('stat-total').textContent = stats.total || allBeers.length;
+            document.getElementById('stat-deals').textContent = stats.deals || allBeers.filter(b => b.max_discount_pct > 0).length;
+            document.getElementById('stat-shops').textContent = stats.shops || (stats.shop_names?.length || 0);
+            document.getElementById('stat-cheapest').textContent = (stats.cheapest || Math.min(...allBeers.filter(b => b.min_price).map(b => b.min_price))).toFixed(0);
+            document.getElementById('shop-count-inline').textContent = stats.shops || (stats.shop_names?.length || 0);
 
-            // Byg butik dropdown
+            // Byg butik dropdown — multi-select
             const shopMenu = document.getElementById('shop-menu');
-            shopMenu.innerHTML = `<div class="dropdown-item selected" data-shop="all"><span class="check">✓</span> Alle butikker</div><div class="dropdown-divider"></div>` +
-                (raw.shop_names || []).map(sh => `<div class="dropdown-item" data-shop="${sh}"><span class="check"></span> ${sh}</div>`).join('');
+            shopMenu.innerHTML = `<div class="dropdown-item" data-shop="__clear__"><span class="check"></span> Ryd valg</div><div class="dropdown-divider"></div>` +
+                (stats.shop_names || []).map(sh => `<div class="dropdown-item" data-shop="${sh}"><span class="check"></span> ${sh}</div>`).join('');
             shopMenu.querySelectorAll('.dropdown-item').forEach(item => {
                 item.addEventListener('click', e => {
                     e.stopPropagation();
-                    currentShop = item.dataset.shop;
+                    if (item.dataset.shop === '__clear__') {
+                        selectedShops.clear();
+                    } else if (selectedShops.has(item.dataset.shop)) {
+                        selectedShops.delete(item.dataset.shop);
+                    } else {
+                        selectedShops.add(item.dataset.shop);
+                        gtag('event', 'butik_filter', { butik: item.dataset.shop });
+                    }
                     currentPage = 1;
                     updateShopBtn();
                     savePrefs();
                     renderGrid();
                     renderFavs();
-                    document.getElementById('shop-dropdown').classList.remove('open');
-                    shopMenu.style.display = 'none';
-                    if (currentShop !== 'all') gtag('event', 'butik_filter', { butik: currentShop });
+                    // Hold dropdown åben ved multi-select
                 });
             });
 
             // Byg stilart dropdown
             const typeMenu = document.getElementById('type-menu');
             typeMenu.innerHTML = `<div class="dropdown-item" data-type="__clear__"><span class="check"></span> Ryd valg</div><div class="dropdown-divider"></div>` +
-                (raw.types || []).map(t => `<div class="dropdown-item" data-type="${t}"><span class="check"></span> ${t}</div>`).join('');
+                (stats.types || []).map(t => `<div class="dropdown-item" data-type="${t}"><span class="check"></span> ${t}</div>`).join('');
             typeMenu.querySelectorAll('.dropdown-item').forEach(item => {
                 item.addEventListener('click', e => {
                     e.stopPropagation();
@@ -862,7 +875,6 @@
             document.getElementById('price-max').max = maxP;
             document.getElementById('price-max').value = maxP;
             priceMax = maxP;
-            updateDualRange('price');
 
             // Hent første side
             document.getElementById('loading').style.display = 'none';
@@ -918,7 +930,7 @@
         // Nulstil
         document.getElementById('reset-btn').addEventListener('click', () => {
             currentFilter = 'all';
-            currentShop = 'all';
+            selectedShops.clear();
             currentSort = 'price-asc';
             currentPage = 1;
             selectedTypes.clear();
