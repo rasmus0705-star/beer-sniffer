@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-05-23T19:51:10.560135",
+  "updated_at": "2026-05-23T20:12:05.349460",
   "stats": {
     "total": 2309,
     "deals": 453,
@@ -7875,7 +7875,7 @@
       "max_discount_pct": 0
     },
     {
-      "id": 15709,
+      "id": 15719,
       "name": "Maître Tripel 8,5% 33cl",
       "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/maitre-tripel-8-5-33cl.png?v=1733847666",
       "type": "Tripel",
@@ -10276,7 +10276,7 @@
       "max_discount_pct": 0
     },
     {
-      "id": 15710,
+      "id": 15720,
       "name": "Imperial Stout 9,3% 33cl",
       "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/imperial-stout-9-3-33cl_e5717b14-1296-4555-8e23-bc8da32992e9.png?v=1753446200",
       "type": "Imperial Stout",
@@ -10492,7 +10492,7 @@
       "max_discount_pct": 0
     },
     {
-      "id": 15712,
+      "id": 15722,
       "name": "It's A Blond 5,9% 33cl",
       "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/its-a-blond-33cl_27db0da2-5945-4111-8396-339312eae8d3.png?v=1773482918",
       "type": "Blond",
@@ -10636,7 +10636,7 @@
       "max_discount_pct": 5.4
     },
     {
-      "id": 15713,
+      "id": 15723,
       "name": "Belgian Brown 6,8% 33cl",
       "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/belgien-brown-33cl.png?v=1753443086",
       "type": "Dubbel",
@@ -16701,7 +16701,7 @@
         {
           "shop_name": "Vild med Vin",
           "price": 41.0,
-          "url": "https://www.vildmedvin.dk/fur-bryghus-lager",
+          "url": "https://www.vildmedvin.dk/fur-bryghus-ale",
           "discount_pct": 0,
           "old_price": null
         }
@@ -18191,30 +18191,6 @@
       "max_discount_pct": 20.0
     },
     {
-      "id": 15158,
-      "name": "Fur Bryghus, Påskebryg - Øl",
-      "image": "https://www.vildmedvin.dk/img/1000/1000/resize/2/4/24706_0.jpg",
-      "type": "Påskeøl",
-      "abv": 7.7,
-      "volume_cl": 50.0,
-      "brewery": null,
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Vild med Vin",
-          "price": 44.0,
-          "url": "https://www.vildmedvin.dk/fur-bryghus-paskebryg",
-          "discount_pct": 0,
-          "old_price": null
-        }
-      ],
-      "cheapest_price": 44.0,
-      "min_price": 44.0,
-      "shop": "Vild med Vin",
-      "discount_pct": 0,
-      "max_discount_pct": 0
-    },
-    {
       "id": 15155,
       "name": "Fur Bryghus, Porter - Øl",
       "image": "https://www.vildmedvin.dk/img/1000/1000/resize/f/u/fur_porter.jpg",
@@ -18228,6 +18204,30 @@
           "shop_name": "Vild med Vin",
           "price": 44.0,
           "url": "https://www.vildmedvin.dk/fur-bryghus-porter",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 44.0,
+      "min_price": 44.0,
+      "shop": "Vild med Vin",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
+      "id": 15158,
+      "name": "Fur Bryghus, Påskebryg - Øl",
+      "image": "https://www.vildmedvin.dk/img/1000/1000/resize/2/4/24706_0.jpg",
+      "type": "Påskeøl",
+      "abv": 7.7,
+      "volume_cl": 50.0,
+      "brewery": null,
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Vild med Vin",
+          "price": 44.0,
+          "url": "https://www.vildmedvin.dk/fur-bryghus-paskebryg",
           "discount_pct": 0,
           "old_price": null
         }
@@ -19110,7 +19110,7 @@
       "max_discount_pct": 0
     },
     {
-      "id": 15706,
+      "id": 15716,
       "name": "Ry Classic 5.6% 50cl",
       "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/ry-classic-5-6-50cl.png?v=1764503652",
       "type": "Lager",
@@ -19518,7 +19518,7 @@
       "max_discount_pct": 0
     },
     {
-      "id": 15711,
+      "id": 15721,
       "name": "Ry Pilsner 5,6% 50cl",
       "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/ry-pilsner.png?v=1747399627",
       "type": "Pilsner",
@@ -20526,7 +20526,7 @@
       "max_discount_pct": 0
     },
     {
-      "id": 15714,
+      "id": 15724,
       "name": "To Øl, #DIPA - Øl",
       "image": "https://www.vildmedvin.dk/img/1000/1000/resize/7/7/7777_1..jpg",
       "type": "Double IPA",
@@ -30110,7 +30110,7 @@
       "max_discount_pct": 0
     },
     {
-      "id": 15707,
+      "id": 15717,
       "name": "Öö 10,5% 33cl",
       "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/oo-10-5-33cl.png?v=1750597033",
       "type": "Imperial Stout",
@@ -42075,7 +42075,7 @@
       "max_discount_pct": 0
     },
     {
-      "id": 15708,
+      "id": 15718,
       "name": "No Way Out B.A. 10,5% 33cl",
       "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/no-way-out-b-a-10-5-33cl.png?v=1750592682",
       "type": "Barley Wine",
@@ -44839,7 +44839,7 @@
       "max_discount_pct": 0
     },
     {
-      "id": 15705,
+      "id": 15715,
       "name": "10 - Imperial Stout 10% 44cl",
       "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/10-imperial-stout-10-44cl_9645d1f7-914c-43d6-b687-b07453f1aaf2.png?v=1761637026",
       "type": "Imperial Stout",
