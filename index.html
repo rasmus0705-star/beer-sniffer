@@ -98,7 +98,7 @@
         #price-val, #abv-val { font-size: 0.76rem; color: var(--text); min-width: 55px; }
 
         /* ── SECTIONS ── */
-        .section-wrap { padding: 2rem 2rem 0; max-width: 1440px; margin: 0 auto; display: none; }
+        .section-wrap { padding: 1.5rem 1.5rem 0; max-width: 100%; margin: 0; display: none; }
         .section-wrap.visible { display: block; }
         .section-header { display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1.25rem; }
         .section-title { font-family: 'Bebas Neue', sans-serif; font-size: 1.6rem; letter-spacing: 0.08em; color: var(--gold-light); }
@@ -123,7 +123,7 @@
         .top-card-link:hover { background: var(--discount); color: #000; }
 
         /* ── GRID ── */
-        .grid-wrap { padding: 2rem; max-width: 1440px; margin: 0 auto; position: relative; z-index: 1; }
+        .grid-wrap { padding: 1.5rem; max-width: 100%; margin: 0; position: relative; z-index: 1; }
         .result-count { font-size: 0.72rem; color: var(--text-dim); margin-bottom: 1.5rem; letter-spacing: 0.12em; text-transform: uppercase; }
         .grid { display: grid; grid-template-columns: repeat(auto-fill,minmax(260px,1fr)); gap: 1.2rem; }
         .favs-grid { display: grid; grid-template-columns: repeat(auto-fill,minmax(260px,1fr)); gap: 1.2rem; margin-bottom: 2rem; padding-bottom: 2rem; border-bottom: 1px solid var(--border); }
@@ -212,8 +212,62 @@
         .footer-col a:hover { color: var(--gold); }
         .footer-bottom { text-align: center; padding: 1rem 2rem; border-top: 1px solid var(--border); font-size: 0.68rem; letter-spacing: 0.1em; text-transform: uppercase; }
 
+        /* ── NY LAYOUT: SIDEBAR + MAIN ── */
+        .layout-wrap { display: flex; max-width: 1600px; margin: 0 auto; min-height: 100vh; }
+        .sidebar { width: 280px; flex-shrink: 0; background: var(--surface); border-right: 1px solid var(--border); padding: 1.5rem 1.25rem; position: sticky; top: 0; height: 100vh; overflow-y: auto; align-self: flex-start; scrollbar-width: thin; scrollbar-color: var(--border-light) transparent; }
+        .sidebar::-webkit-scrollbar { width: 6px; }
+        .sidebar::-webkit-scrollbar-thumb { background: var(--border-light); border-radius: 3px; }
+        .sidebar-section { margin-bottom: 1.5rem; padding-bottom: 1.5rem; border-bottom: 1px solid var(--border); }
+        .sidebar-section:last-child { border-bottom: none; }
+        .sidebar-title { font-family: 'Bebas Neue', sans-serif; font-size: 0.95rem; letter-spacing: 0.15em; color: var(--gold); margin-bottom: 0.7rem; display: flex; align-items: center; justify-content: space-between; }
+        .sidebar-title .count { background: var(--amber); color: #000; border-radius: 10px; padding: 1px 8px; font-size: 0.7rem; font-family: 'DM Sans', sans-serif; }
+        .sidebar-search { width: 100%; }
+        .sidebar-filter-btns { display: flex; flex-direction: column; gap: 0.4rem; }
+        .sidebar-filter-btn { background: var(--surface2); border: 1px solid var(--border-light); border-radius: 8px; padding: 0.55rem 0.85rem; color: var(--text); font-family: 'DM Sans', sans-serif; font-size: 0.85rem; cursor: pointer; transition: all 0.15s; text-align: left; display: flex; align-items: center; justify-content: space-between; }
+        .sidebar-filter-btn.active { background: linear-gradient(135deg,var(--gold),var(--gold-light)); color: #000; border-color: var(--gold); font-weight: 700; box-shadow: 0 0 8px rgba(200,146,14,0.3); }
+        .sidebar-filter-btn:hover { border-color: var(--gold); }
+        .sidebar-checkbox-list { display: flex; flex-direction: column; gap: 0.35rem; max-height: 220px; overflow-y: auto; padding-right: 4px; scrollbar-width: thin; scrollbar-color: var(--border-light) transparent; }
+        .sidebar-checkbox-list::-webkit-scrollbar { width: 4px; }
+        .sidebar-checkbox-list::-webkit-scrollbar-thumb { background: var(--border-light); border-radius: 2px; }
+        .sidebar-checkbox { display: flex; align-items: center; gap: 0.5rem; padding: 0.35rem 0.5rem; border-radius: 6px; cursor: pointer; font-size: 0.83rem; color: var(--text); transition: background 0.15s; }
+        .sidebar-checkbox:hover { background: var(--surface2); }
+        .sidebar-checkbox.selected { background: rgba(200,146,14,0.12); color: var(--gold-light); }
+        .sidebar-checkbox .cb { width: 16px; height: 16px; border: 1px solid var(--border-light); border-radius: 4px; flex-shrink: 0; display: flex; align-items: center; justify-content: center; font-size: 0.7rem; transition: all 0.15s; }
+        .sidebar-checkbox.selected .cb { background: var(--gold); border-color: var(--gold); color: #000; font-weight: 700; }
+        .sidebar-sort { width: 100%; background: var(--surface2); border: 1px solid var(--border-light); border-radius: 8px; padding: 0.55rem 0.85rem; color: var(--text); font-family: 'DM Sans', sans-serif; font-size: 0.85rem; cursor: pointer; }
+        .sidebar-sort:focus { outline: none; border-color: var(--gold); }
+        .sidebar-clear-link { font-size: 0.72rem; color: var(--amber); cursor: pointer; background: none; border: none; padding: 0; text-decoration: underline; }
+        .sidebar-clear-link:hover { color: var(--gold-light); }
+        .sidebar-reset { width: 100%; background: linear-gradient(135deg,var(--amber),var(--gold)); color: #000; font-weight: 700; padding: 0.7rem; border: none; border-radius: 8px; cursor: pointer; font-family: 'DM Sans', sans-serif; font-size: 0.9rem; transition: all 0.15s; }
+        .sidebar-reset:hover { transform: translateY(-1px); box-shadow: 0 6px 18px rgba(212,98,10,0.35); }
+        .main-content { flex: 1; min-width: 0; }
+
+        /* Mobile sidebar */
+        .mobile-filter-toggle { display: none; }
+        .sidebar-mobile-header { display: none; }
+
+        /* Aktive filter chips */
+        .active-filters { display: flex; flex-wrap: wrap; gap: 0.4rem; padding: 1rem 2rem 0; align-items: center; }
+        .active-filters:empty { display: none; }
+        .filter-chip { background: rgba(200,146,14,0.12); border: 1px solid var(--gold-dim); color: var(--gold-light); padding: 0.3rem 0.7rem; border-radius: 999px; font-size: 0.78rem; display: inline-flex; align-items: center; gap: 0.4rem; }
+        .filter-chip .x { cursor: pointer; opacity: 0.7; font-weight: 700; }
+        .filter-chip .x:hover { opacity: 1; color: #e05050; }
+        .active-filters-label { font-size: 0.72rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--text-muted); margin-right: 0.5rem; }
+
         /* ── MOBIL ── */
-        @media (max-width: 640px) {
+        @media (max-width: 900px) {
+            .layout-wrap { display: block; }
+            .sidebar { position: fixed; top: 0; left: -100%; width: 85%; max-width: 360px; height: 100vh; z-index: 9998; transition: left 0.3s ease; box-shadow: 4px 0 30px rgba(0,0,0,0.8); }
+            .sidebar.mobile-open { left: 0; }
+            .sidebar-mobile-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem; padding-bottom: 1rem; border-bottom: 1px solid var(--border); }
+            .sidebar-mobile-close { background: var(--surface2); border: 1px solid var(--border-light); border-radius: 50%; width: 32px; height: 32px; display: flex; align-items: center; justify-content: center; font-size: 1.2rem; cursor: pointer; color: var(--text); }
+            .mobile-filter-toggle { display: flex; position: sticky; top: 0; z-index: 100; background: var(--bg); padding: 0.75rem; border-bottom: 1px solid var(--border); gap: 0.5rem; align-items: center; }
+            .mobile-filter-btn { flex: 1; background: linear-gradient(135deg,var(--gold),var(--gold-light)); color: #000; font-weight: 700; padding: 0.7rem; border: none; border-radius: 8px; cursor: pointer; font-size: 0.9rem; display: flex; align-items: center; justify-content: center; gap: 0.5rem; }
+            .mobile-filter-count { background: rgba(0,0,0,0.3); padding: 0 8px; border-radius: 10px; font-size: 0.75rem; }
+            .mobile-backdrop { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.6); z-index: 9997; }
+            .mobile-backdrop.visible { display: block; }
+        }
+
             .header-inner { flex-direction: column; align-items: center; text-align: center; padding: 1.8rem 1.2rem 1.4rem; gap: 0; }
             .mascot-wrap { margin-right: 0; margin-bottom: -0.5rem; }
             .logo-img { width: 160px; height: 160px; }
@@ -271,57 +325,99 @@
     <div class="stat"><div class="stat-number" id="stat-cheapest">–</div><div class="stat-label">Billigste (kr)</div></div>
 </div>
 
-<div class="controls-outer" id="controls-outer">
-    <div class="controls">
-        <div class="search-wrap">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-4.35-4.35M17 11A6 6 0 1 1 5 11a6 6 0 0 1 12 0z"/></svg>
-            <input type="text" id="search" placeholder="Søg efter øl eller bryggeri...">
-        </div>
-        <button class="filter-btn active" data-filter="all">Alle</button>
-        <button class="filter-btn" data-filter="deals">🔥 Tilbud</button>
-        <button class="filter-btn" data-filter="favs">❤️ Favoritter <span id="fav-count-badge"></span></button>
-        <button class="filter-btn" data-filter="alcohol-free">🚫 Alkoholfri</button>
-        <button class="filter-btn" data-filter="smagekasse">📦 Smagekasser</button>
-        <div class="dropdown" id="shop-dropdown">
-            <div class="dropdown-btn" id="shop-btn">Butikker <span class="arrow">▼</span></div>
-            <div class="dropdown-menu" id="shop-menu"></div>
-        </div>
-        <div class="dropdown" id="type-dropdown">
-            <div class="dropdown-btn" id="type-btn">Stilarter <span class="arrow">▼</span></div>
-            <div class="dropdown-menu" id="type-menu"></div>
-        </div>
-        <div class="dropdown" id="sort-dropdown">
-            <div class="dropdown-btn" id="sort-btn">Sortér efter <span class="arrow">▼</span></div>
-            <div class="dropdown-menu" id="sort-menu">
-                <div class="dropdown-item selected" data-sort="price-asc"><span class="check">✓</span> Pris: Lav → Høj</div>
-                <div class="dropdown-item" data-sort="price-desc"><span class="check"></span> Pris: Høj → Lav</div>
-                <div class="dropdown-item" data-sort="discount"><span class="check"></span> Størst rabat</div>
-                <div class="dropdown-item" data-sort="name"><span class="check"></span> Navn A–Z</div>
-                <div class="dropdown-item" data-sort="shops"><span class="check"></span> Flest butikker</div>
-            </div>
-        </div>
-        <div class="range-wrap">
-            <label>Pris</label>
-            <div class="dual-range-wrap">
-                <input type="range" id="price-min" min="0" max="500" value="0" step="10">
-                <input type="range" id="price-max" min="0" max="500" value="500" step="10">
-                <div class="dual-range-track"><div class="dual-range-fill" id="price-fill"></div></div>
-            </div>
-            <span id="price-val">0–500 kr</span>
-        </div>
-        <div class="range-wrap">
-            <label>ABV</label>
-            <div class="dual-range-wrap">
-                <input type="range" id="abv-min" min="0" max="15" value="0" step="0.5">
-                <input type="range" id="abv-max" min="0" max="15" value="15" step="0.5">
-                <div class="dual-range-track"><div class="dual-range-fill" id="abv-fill"></div></div>
-            </div>
-            <span id="abv-val">0–15%</span>
-        </div>
-        <button class="filter-btn" id="top-deals-toggle">🏆 Top 10 tilbud</button>
-        <button class="filter-btn" id="reset-btn">Nulstil</button>
-    </div>
+<div class="mobile-filter-toggle">
+    <button class="mobile-filter-btn" id="mobile-filter-open">
+        🎛️ Filtrér <span class="mobile-filter-count" id="mobile-filter-count" style="display:none">0</span>
+    </button>
 </div>
+
+<div class="mobile-backdrop" id="mobile-backdrop"></div>
+
+<div class="layout-wrap">
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar-mobile-header">
+            <span style="font-family:'Bebas Neue',sans-serif;font-size:1.2rem;letter-spacing:0.1em;color:var(--gold)">FILTRE</span>
+            <button class="sidebar-mobile-close" id="mobile-filter-close">✕</button>
+        </div>
+
+        <div class="sidebar-section">
+            <div class="sidebar-title">🔍 Søg</div>
+            <div class="search-wrap" style="max-width:none">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-4.35-4.35M17 11A6 6 0 1 1 5 11a6 6 0 0 1 12 0z"/></svg>
+                <input type="text" id="search" placeholder="Søg efter øl eller bryggeri..." class="sidebar-search">
+            </div>
+        </div>
+
+        <div class="sidebar-section">
+            <div class="sidebar-title">⚡ Hurtige filtre</div>
+            <div class="sidebar-filter-btns">
+                <button class="sidebar-filter-btn active" data-filter="all">Alle øl</button>
+                <button class="sidebar-filter-btn" data-filter="deals">🔥 Tilbud</button>
+                <button class="sidebar-filter-btn" data-filter="favs">❤️ Favoritter <span id="fav-count-badge"></span></button>
+                <button class="sidebar-filter-btn" data-filter="alcohol-free">🚫 Alkoholfri</button>
+                <button class="sidebar-filter-btn" data-filter="smagekasse">📦 Smagekasser</button>
+            </div>
+        </div>
+
+        <div class="sidebar-section">
+            <div class="sidebar-title">🔢 Sortér efter</div>
+            <select class="sidebar-sort" id="sort-select">
+                <option value="price-asc">Pris: Lav → Høj</option>
+                <option value="price-desc">Pris: Høj → Lav</option>
+                <option value="discount">Størst rabat</option>
+                <option value="name">Navn A–Z</option>
+                <option value="shops">Flest butikker</option>
+            </select>
+        </div>
+
+        <div class="sidebar-section">
+            <div class="sidebar-title">
+                <span>🏪 Butikker <span class="count" id="shop-count-badge" style="display:none">0</span></span>
+                <button class="sidebar-clear-link" id="clear-shops" style="display:none">Ryd</button>
+            </div>
+            <div class="sidebar-checkbox-list" id="shop-list"></div>
+        </div>
+
+        <div class="sidebar-section">
+            <div class="sidebar-title">
+                <span>🍺 Stilarter <span class="count" id="type-count-badge" style="display:none">0</span></span>
+                <button class="sidebar-clear-link" id="clear-types" style="display:none">Ryd</button>
+            </div>
+            <div class="sidebar-checkbox-list" id="type-list"></div>
+        </div>
+
+        <div class="sidebar-section">
+            <div class="sidebar-title">💰 Pris</div>
+            <div class="range-wrap" style="margin-bottom:0.5rem">
+                <div class="dual-range-wrap" style="width:100%">
+                    <input type="range" id="price-min" min="0" max="500" value="0" step="10">
+                    <input type="range" id="price-max" min="0" max="500" value="500" step="10">
+                    <div class="dual-range-track"><div class="dual-range-fill" id="price-fill"></div></div>
+                </div>
+            </div>
+            <div style="text-align:center"><span id="price-val" style="font-size:0.82rem;color:var(--text)">0–500 kr</span></div>
+        </div>
+
+        <div class="sidebar-section">
+            <div class="sidebar-title">🍻 Alkoholprocent</div>
+            <div class="range-wrap" style="margin-bottom:0.5rem">
+                <div class="dual-range-wrap" style="width:100%">
+                    <input type="range" id="abv-min" min="0" max="15" value="0" step="0.5">
+                    <input type="range" id="abv-max" min="0" max="15" value="15" step="0.5">
+                    <div class="dual-range-track"><div class="dual-range-fill" id="abv-fill"></div></div>
+                </div>
+            </div>
+            <div style="text-align:center"><span id="abv-val" style="font-size:0.82rem;color:var(--text)">0–15%</span></div>
+        </div>
+
+        <div class="sidebar-section">
+            <button class="sidebar-reset" id="reset-btn">🔄 Nulstil alle filtre</button>
+            <button class="sidebar-filter-btn" id="top-deals-toggle" style="margin-top:0.5rem;text-align:center;justify-content:center">🏆 Vis Top 10 tilbud</button>
+        </div>
+    </aside>
+
+    <div class="main-content">
+    <div class="active-filters" id="active-filters"></div>
 
 <div class="section-wrap" id="favs-section">
     <div class="section-header"><span class="section-title">❤️ Mine Favoritter</span><span class="section-badge badge-fav" id="favs-count">0</span></div>
@@ -339,6 +435,8 @@
     <div class="grid" id="grid"></div>
     <div style="text-align:center;margin:2rem 0;"><button id="load-more" class="filter-btn" style="display:none">Vis flere øl ↓</button></div>
 </div>
+    </div><!-- /main-content -->
+</div><!-- /layout-wrap -->
 
 <section class="seo-section">
     <h2>Find de bedste øltilbud online</h2>
@@ -425,7 +523,7 @@
         if (p.abvMax !== undefined) abvMax = p.abvMax;
         if (p.filter) {
             currentFilter = p.filter;
-            document.querySelectorAll('.filter-btn[data-filter]').forEach(b => b.classList.toggle('active', b.dataset.filter === p.filter));
+            document.querySelectorAll('.sidebar-filter-btn[data-filter]').forEach(b => b.classList.toggle('active', b.dataset.filter === p.filter));
         }
     }
 
@@ -701,78 +799,138 @@
         }).join('');
     }
 
-    // ── Setup dropdowns ──
+    // ── Setup dropdowns (ikke længere brugt, behold for kompatibilitet) ──
     function setupDropdowns() {
-        document.querySelectorAll('.dropdown').forEach(dd => {
-            const menu = dd.querySelector('.dropdown-menu');
-            if (!menu) return;
-            document.body.appendChild(menu);
-            menu.dataset.dropdownId = dd.id;
-            dd.querySelector('.dropdown-btn').addEventListener('click', e => {
-                e.stopPropagation();
-                const isOpen = menu.style.display === 'block';
-                document.querySelectorAll('.dropdown-menu').forEach(m => {
-                    m.style.display = 'none';
-                    const pid = m.dataset.dropdownId;
-                    if (pid) document.getElementById(pid)?.classList.remove('open');
-                });
-                if (!isOpen) {
-                    const rect = dd.querySelector('.dropdown-btn').getBoundingClientRect();
-                    menu.style.display = 'block';
-                    menu.style.top = (rect.bottom + 6) + 'px';
-                    const mw = Math.max(200, menu.offsetWidth);
-                    menu.style.left = (rect.left + mw > window.innerWidth - 10 ? window.innerWidth - mw - 10 : rect.left) + 'px';
-                    dd.classList.add('open');
-                }
-            });
-        });
-        document.addEventListener('click', () => {
-            document.querySelectorAll('.dropdown-menu').forEach(m => m.style.display = 'none');
-            document.querySelectorAll('.dropdown').forEach(d => d.classList.remove('open'));
-        });
+        // Tom — vi bruger sidebar nu
     }
 
-    // ── Opdater knapper ──
+    // ── Opdater filter visualiseringer ──
     function updateSortBtn() {
-        document.getElementById('sort-btn').innerHTML = 'Sortér efter <span class="arrow">▼</span>';
-        document.querySelectorAll('#sort-menu .dropdown-item').forEach(item => {
-            const sel = item.dataset.sort === currentSort;
-            item.classList.toggle('selected', sel);
-            item.querySelector('.check').textContent = sel ? '✓' : '';
-        });
+        document.getElementById('sort-select').value = currentSort;
     }
 
     function updateShopBtn() {
-        const btn = document.getElementById('shop-btn');
+        const badge = document.getElementById('shop-count-badge');
+        const clearLink = document.getElementById('clear-shops');
         if (selectedShops.size === 0) {
-            btn.innerHTML = 'Butikker <span class="arrow">▼</span>';
-            btn.classList.remove('has-value');
+            badge.style.display = 'none';
+            clearLink.style.display = 'none';
         } else {
-            btn.innerHTML = `Butikker <span style="background:var(--amber);color:#000;border-radius:4px;padding:0 5px;font-size:0.72rem">${selectedShops.size}</span> <span class="arrow">▼</span>`;
-            btn.classList.add('has-value');
+            badge.style.display = 'inline-block';
+            badge.textContent = selectedShops.size;
+            clearLink.style.display = 'inline-block';
         }
-        document.querySelectorAll('#shop-menu .dropdown-item[data-shop]').forEach(item => {
+        document.querySelectorAll('#shop-list .sidebar-checkbox').forEach(item => {
             const sel = selectedShops.has(item.dataset.shop);
             item.classList.toggle('selected', sel);
-            item.querySelector('.check').textContent = sel ? '✓' : '';
+            item.querySelector('.cb').textContent = sel ? '✓' : '';
         });
     }
 
     function updateTypeBtn() {
-        const btn = document.getElementById('type-btn');
+        const badge = document.getElementById('type-count-badge');
+        const clearLink = document.getElementById('clear-types');
         if (selectedTypes.size === 0) {
-            btn.innerHTML = 'Stilarter <span class="arrow">▼</span>';
-            btn.classList.remove('has-value');
+            badge.style.display = 'none';
+            clearLink.style.display = 'none';
         } else {
-            btn.innerHTML = `Stilarter <span style="background:var(--amber);color:#000;border-radius:4px;padding:0 5px;font-size:0.72rem">${selectedTypes.size}</span> <span class="arrow">▼</span>`;
-            btn.classList.add('has-value');
+            badge.style.display = 'inline-block';
+            badge.textContent = selectedTypes.size;
+            clearLink.style.display = 'inline-block';
         }
-        document.querySelectorAll('#type-menu .dropdown-item[data-type]').forEach(item => {
+        document.querySelectorAll('#type-list .sidebar-checkbox').forEach(item => {
             const sel = selectedTypes.has(item.dataset.type);
             item.classList.toggle('selected', sel);
-            item.querySelector('.check').textContent = sel ? '✓' : '';
+            item.querySelector('.cb').textContent = sel ? '✓' : '';
         });
     }
+
+    // ── Render aktive filter chips ──
+    function renderActiveFilters() {
+        const container = document.getElementById('active-filters');
+        const chips = [];
+        
+        if (currentFilter !== 'all') {
+            const labels = {
+                'deals': '🔥 Tilbud',
+                'favs': '❤️ Favoritter',
+                'alcohol-free': '🚫 Alkoholfri',
+                'smagekasse': '📦 Smagekasser'
+            };
+            chips.push(`<span class="filter-chip">${labels[currentFilter] || currentFilter}<span class="x" onclick="clearFilter('quick')">✕</span></span>`);
+        }
+        
+        selectedShops.forEach(shop => {
+            chips.push(`<span class="filter-chip">🏪 ${shop}<span class="x" onclick="clearFilter('shop','${shop.replace(/'/g, "\\'")}')">✕</span></span>`);
+        });
+        
+        selectedTypes.forEach(type => {
+            chips.push(`<span class="filter-chip">🍺 ${type}<span class="x" onclick="clearFilter('type','${type.replace(/'/g, "\\'")}')">✕</span></span>`);
+        });
+        
+        const searchVal = document.getElementById('search').value.trim();
+        if (searchVal) {
+            chips.push(`<span class="filter-chip">🔍 "${searchVal}"<span class="x" onclick="clearFilter('search')">✕</span></span>`);
+        }
+        
+        const priceMaxEl = parseInt(document.getElementById('price-max').max || 500);
+        if (priceMin > 0 || priceMax < priceMaxEl) {
+            chips.push(`<span class="filter-chip">💰 ${Math.round(priceMin)}–${Math.round(priceMax)} kr<span class="x" onclick="clearFilter('price')">✕</span></span>`);
+        }
+        
+        if (abvMin > 0 || abvMax < 15) {
+            chips.push(`<span class="filter-chip">🍻 ${abvMin.toFixed(1)}–${abvMax.toFixed(1)}%<span class="x" onclick="clearFilter('abv')">✕</span></span>`);
+        }
+        
+        if (chips.length > 0) {
+            container.innerHTML = '<span class="active-filters-label">Aktive filtre:</span>' + chips.join('');
+        } else {
+            container.innerHTML = '';
+        }
+        
+        // Opdater mobil filter count
+        const mobileCount = document.getElementById('mobile-filter-count');
+        if (mobileCount) {
+            if (chips.length > 0) {
+                mobileCount.style.display = 'inline-block';
+                mobileCount.textContent = chips.length;
+            } else {
+                mobileCount.style.display = 'none';
+            }
+        }
+    }
+    
+    // Global function til at fjerne filtre fra chips
+    window.clearFilter = function(type, value) {
+        if (type === 'quick') {
+            currentFilter = 'all';
+            document.querySelectorAll('.sidebar-filter-btn[data-filter]').forEach(b => b.classList.toggle('active', b.dataset.filter === 'all'));
+        } else if (type === 'shop') {
+            selectedShops.delete(value);
+            updateShopBtn();
+        } else if (type === 'type') {
+            selectedTypes.delete(value);
+            updateTypeBtn();
+        } else if (type === 'search') {
+            document.getElementById('search').value = '';
+        } else if (type === 'price') {
+            priceMin = 0;
+            priceMax = parseInt(document.getElementById('price-max').max || 500);
+            document.getElementById('price-min').value = 0;
+            document.getElementById('price-max').value = priceMax;
+            updateDualRange('price');
+        } else if (type === 'abv') {
+            abvMin = 0; abvMax = 15;
+            document.getElementById('abv-min').value = 0;
+            document.getElementById('abv-max').value = 15;
+            updateDualRange('abv');
+        }
+        currentPage = 1;
+        savePrefs();
+        renderGrid();
+        renderFavs();
+        renderActiveFilters();
+    };
 
     // ── Dual range sliders ──
     function updateDualRange(type) {
@@ -816,16 +974,15 @@
             document.getElementById('stat-cheapest').textContent = (stats.cheapest || Math.min(...allBeers.filter(b => b.min_price).map(b => b.min_price))).toFixed(0);
             document.getElementById('shop-count-inline').textContent = stats.shops || (stats.shop_names?.length || 0);
 
-            // Byg butik dropdown — multi-select
-            const shopMenu = document.getElementById('shop-menu');
-            shopMenu.innerHTML = `<div class="dropdown-item" data-shop="__clear__"><span class="check"></span> Ryd valg</div><div class="dropdown-divider"></div>` +
-                (stats.shop_names || []).map(sh => `<div class="dropdown-item" data-shop="${sh}"><span class="check"></span> ${sh}</div>`).join('');
-            shopMenu.querySelectorAll('.dropdown-item').forEach(item => {
+            // Byg butik checkbox liste — multi-select
+            const shopList = document.getElementById('shop-list');
+            shopList.innerHTML = (stats.shop_names || []).map(sh => 
+                `<div class="sidebar-checkbox" data-shop="${sh}"><span class="cb"></span> ${sh}</div>`
+            ).join('');
+            shopList.querySelectorAll('.sidebar-checkbox').forEach(item => {
                 item.addEventListener('click', e => {
                     e.stopPropagation();
-                    if (item.dataset.shop === '__clear__') {
-                        selectedShops.clear();
-                    } else if (selectedShops.has(item.dataset.shop)) {
+                    if (selectedShops.has(item.dataset.shop)) {
                         selectedShops.delete(item.dataset.shop);
                     } else {
                         selectedShops.add(item.dataset.shop);
@@ -836,20 +993,19 @@
                     savePrefs();
                     renderGrid();
                     renderFavs();
-                    // Hold dropdown åben ved multi-select
+                    renderActiveFilters();
                 });
             });
 
-            // Byg stilart dropdown
-            const typeMenu = document.getElementById('type-menu');
-            typeMenu.innerHTML = `<div class="dropdown-item" data-type="__clear__"><span class="check"></span> Ryd valg</div><div class="dropdown-divider"></div>` +
-                (stats.types || []).map(t => `<div class="dropdown-item" data-type="${t}"><span class="check"></span> ${t}</div>`).join('');
-            typeMenu.querySelectorAll('.dropdown-item').forEach(item => {
+            // Byg stilart checkbox liste
+            const typeList = document.getElementById('type-list');
+            typeList.innerHTML = (stats.types || []).map(t => 
+                `<div class="sidebar-checkbox" data-type="${t}"><span class="cb"></span> ${t}</div>`
+            ).join('');
+            typeList.querySelectorAll('.sidebar-checkbox').forEach(item => {
                 item.addEventListener('click', e => {
                     e.stopPropagation();
-                    if (item.dataset.type === '__clear__') {
-                        selectedTypes.clear();
-                    } else if (selectedTypes.has(item.dataset.type)) {
+                    if (selectedTypes.has(item.dataset.type)) {
                         selectedTypes.delete(item.dataset.type);
                     } else {
                         selectedTypes.add(item.dataset.type);
@@ -860,7 +1016,30 @@
                     savePrefs();
                     renderGrid();
                     renderFavs();
+                    renderActiveFilters();
                 });
+            });
+
+            // Clear knapper på sidebar
+            document.getElementById('clear-shops').addEventListener('click', e => {
+                e.stopPropagation();
+                selectedShops.clear();
+                currentPage = 1;
+                updateShopBtn();
+                savePrefs();
+                renderGrid();
+                renderFavs();
+                renderActiveFilters();
+            });
+            document.getElementById('clear-types').addEventListener('click', e => {
+                e.stopPropagation();
+                selectedTypes.clear();
+                currentPage = 1;
+                updateTypeBtn();
+                savePrefs();
+                renderGrid();
+                renderFavs();
+                renderActiveFilters();
             });
 
             setupDropdowns();
@@ -882,6 +1061,7 @@
             renderGrid();
             renderFavs();
             renderTopDeals();
+            renderActiveFilters();
         } catch (err) {
             document.getElementById('loading').innerHTML = '<div class="empty-icon">😢</div><p>Kunne ikke hente øl-data — tjek at data.json findes</p>';
             console.error(err);
@@ -890,30 +1070,26 @@
 
     // ── Init ──
     async function init() {
-        // Sort dropdown
-        document.querySelectorAll('#sort-menu .dropdown-item').forEach(item => {
-            item.addEventListener('click', () => {
-                currentSort = item.dataset.sort;
-                currentPage = 1;
-                updateSortBtn();
-                savePrefs();
-                renderGrid();
-                document.getElementById('sort-dropdown').classList.remove('open');
-                document.getElementById('sort-menu').style.display = 'none';
-                gtag('event', 'sortering', { sort: currentSort });
-            });
+        // Sort select
+        document.getElementById('sort-select').addEventListener('change', function() {
+            currentSort = this.value;
+            currentPage = 1;
+            savePrefs();
+            renderGrid();
+            gtag('event', 'sortering', { sort: currentSort });
         });
 
-        // Filter pills
-        document.querySelectorAll('.filter-btn[data-filter]').forEach(btn => {
+        // Filter pills (sidebar)
+        document.querySelectorAll('.sidebar-filter-btn[data-filter]').forEach(btn => {
             btn.addEventListener('click', () => {
-                document.querySelectorAll('.filter-btn[data-filter]').forEach(b => b.classList.remove('active'));
+                document.querySelectorAll('.sidebar-filter-btn[data-filter]').forEach(b => b.classList.remove('active'));
                 btn.classList.add('active');
                 currentFilter = btn.dataset.filter;
                 currentPage = 1;
                 savePrefs();
                 renderGrid();
                 renderFavs();
+                renderActiveFilters();
                 gtag('event', 'filter_klik', { filter: currentFilter });
             });
         });
@@ -925,6 +1101,22 @@
             s.classList.toggle('visible', !visible);
             this.classList.toggle('active', !visible);
             gtag('event', 'top10_toggle', { action: visible ? 'luk' : 'aaben' });
+        });
+
+        // Mobile sidebar toggle
+        const sidebar = document.getElementById('sidebar');
+        const backdrop = document.getElementById('mobile-backdrop');
+        document.getElementById('mobile-filter-open').addEventListener('click', () => {
+            sidebar.classList.add('mobile-open');
+            backdrop.classList.add('visible');
+        });
+        document.getElementById('mobile-filter-close').addEventListener('click', () => {
+            sidebar.classList.remove('mobile-open');
+            backdrop.classList.remove('visible');
+        });
+        backdrop.addEventListener('click', () => {
+            sidebar.classList.remove('mobile-open');
+            backdrop.classList.remove('visible');
         });
 
         // Nulstil
@@ -945,11 +1137,12 @@
             updateSortBtn();
             updateShopBtn();
             updateTypeBtn();
-            document.querySelectorAll('.filter-btn[data-filter]').forEach(b => b.classList.remove('active'));
-            document.querySelector('[data-filter=all]').classList.add('active');
+            document.querySelectorAll('.sidebar-filter-btn[data-filter]').forEach(b => b.classList.remove('active'));
+            document.querySelector('.sidebar-filter-btn[data-filter=all]').classList.add('active');
             savePrefs();
             renderGrid();
             renderFavs();
+            renderActiveFilters();
             gtag('event', 'nulstil_filter');
         });
 
@@ -961,6 +1154,7 @@
                 if (this.value.length > 1) gtag('event', 'soegning', { search_term: this.value });
                 currentPage = 1;
                 renderGrid();
+                renderActiveFilters();
             }, 400);
         });
 
@@ -969,12 +1163,12 @@
         document.getElementById('price-min').addEventListener('input', () => {
             updateDualRange('price');
             clearTimeout(priceTimer);
-            priceTimer = setTimeout(() => { currentPage = 1; savePrefs(); renderGrid(); }, 600);
+            priceTimer = setTimeout(() => { currentPage = 1; savePrefs(); renderGrid(); renderActiveFilters(); }, 600);
         });
         document.getElementById('price-max').addEventListener('input', () => {
             updateDualRange('price');
             clearTimeout(priceTimer);
-            priceTimer = setTimeout(() => { currentPage = 1; savePrefs(); renderGrid(); }, 600);
+            priceTimer = setTimeout(() => { currentPage = 1; savePrefs(); renderGrid(); renderActiveFilters(); }, 600);
         });
 
         // ABV range
@@ -982,12 +1176,12 @@
         document.getElementById('abv-min').addEventListener('input', () => {
             updateDualRange('abv');
             clearTimeout(abvTimer);
-            abvTimer = setTimeout(() => { currentPage = 1; savePrefs(); renderGrid(); }, 600);
+            abvTimer = setTimeout(() => { currentPage = 1; savePrefs(); renderGrid(); renderActiveFilters(); }, 600);
         });
         document.getElementById('abv-max').addEventListener('input', () => {
             updateDualRange('abv');
             clearTimeout(abvTimer);
-            abvTimer = setTimeout(() => { currentPage = 1; savePrefs(); renderGrid(); }, 600);
+            abvTimer = setTimeout(() => { currentPage = 1; savePrefs(); renderGrid(); renderActiveFilters(); }, 600);
         });
 
         // Vis flere
@@ -997,11 +1191,6 @@
             gtag('event', 'vis_flere', { side: currentPage });
             window.scrollTo({ top: document.getElementById('grid').offsetTop - 100, behavior: 'smooth' });
         });
-
-        // Sticky controls
-        window.addEventListener('scroll', () => {
-            document.getElementById('controls-outer').classList.toggle('sticky-active', window.scrollY > 10);
-        }, { passive: true });
 
         // Fav badge
         document.getElementById('fav-count-badge').textContent = favorites.size > 0 ? `(${favorites.size})` : '';
