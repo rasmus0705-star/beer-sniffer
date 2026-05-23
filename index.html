@@ -372,8 +372,10 @@
 
 <script>
     // ── Konstanter ──
-    const API = 'https://beer-sniffer-production-2a11.up.railway.app';
     const PAGE_SIZE = 50;
+    let dataJSON = null; // Globalt for at gemme hentede data
+
+    // ── Shipping info ──
     const SHIPPING = {
         'A Good Case':   { price: 59,  freeOver: 499, note: 'Levering med Burd eller PostNord' },
         'Brygshoppen':   { price: 70,  freeOver: 499, note: 'Levering med Burd eller DAO' },
@@ -386,12 +388,12 @@
     let currentFilter = 'all';
     let currentShop = 'all';
     let currentSort = 'price-asc';
-    let selectedTypes = new Set(); // Multi-select stilarter
+    let selectedTypes = new Set();
     let priceMin = 0, priceMax = 9999;
     let abvMin = 0, abvMax = 15;
     let favorites = new Set(JSON.parse(localStorage.getItem('bs_favorites') || '[]'));
 
-    // ── Google Analytics tracking ──
+    // ── Analytics ──
     (function () {
         const fired = new Set();
         window.addEventListener('scroll', function () {
@@ -587,22 +589,84 @@
         </div>`;
     }
 
+    // ── Filter + sort lokalt ──
+    function filterAndSortBeers(beers) {
+        let filtered = beers;
+
+        // Søgefilter
+        const q = document.getElementById('search').value.toLowerCase().trim();
+        if (q) {
+            filtered = filtered.filter(b => b.name.toLowerCase().includes(q) || (b.brewery && b.brewery.toLowerCase().includes(q)));
+        }
+
+        // Butik filter
+        if (currentShop !== 'all') {
+            filtered = filtered.filter(b => b.prices && b.prices.some(p => p.shop_name === currentShop));
+        }
+
+        // Stilart filter (multi-select)
+        if (selectedTypes.size > 0) {
+            filtered = filtered.filter(b => b.type && selectedTypes.has(b.type));
+        }
+
+        // Øvrige filtre
+        filtered = filtered.filter(b => {
+            if (currentFilter === 'deals' && (!b.max_discount_pct || b.max_discount_pct === 0)) return false;
+            if (currentFilter === 'alcohol-free' && b.abv && b.abv > 0.5) return false;
+            if (currentFilter === 'smagekasse' && b.category !== 'smagekasse') return false;
+            return true;
+        });
+
+        // Pris filter
+        filtered = filtered.filter(b => {
+            const p = b.min_price || 0;
+            return p >= priceMin && p <= priceMax;
+        });
+
+        // ABV filter
+        filtered = filtered.filter(b => {
+            const a = b.abv || 0;
+            return a >= abvMin && a <= abvMax;
+        });
+
+        // Sortering
+        const sorted = [...filtered];
+        switch (currentSort) {
+            case 'price-asc': sorted.sort((a, b) => (a.min_price || 0) - (b.min_price || 0)); break;
+            case 'price-desc': sorted.sort((a, b) => (b.min_price || 0) - (a.min_price || 0)); break;
+            case 'discount': sorted.sort((a, b) => (b.max_discount_pct || 0) - (a.max_discount_pct || 0)); break;
+            case 'name': sorted.sort((a, b) => a.name.localeCompare(b.name, 'da')); break;
+            case 'shops': sorted.sort((a, b) => (b.prices?.length || 0) - (a.prices?.length || 0)); break;
+        }
+
+        return sorted;
+    }
+
     // ── Render grid ──
     function renderGrid() {
         const grid = document.getElementById('grid');
-        // Favoritter filtreres lokalt da de er gemt i browser
+        
         let beers = currentFilter === 'favs'
             ? allBeers.filter(b => favorites.has(b.normalized_name || b.name))
-            : allBeers;
-        // Korrekt antal: fra API total for alle filtre undtagen favs
-        const displayTotal = currentFilter === 'favs' ? beers.length : totalCount;
-        const displayShowing = currentFilter === 'favs' ? beers.length : allBeers.length;
-        document.getElementById('result-count').textContent = `Viser ${displayShowing} af ${displayTotal} øl`;
+            : filterAndSortBeers(allBeers);
+
+        const displayTotal = beers.length;
+        document.getElementById('result-count').textContent = `Viser ${beers.length} øl`;
+        
         if (!beers.length) {
             grid.innerHTML = `<div class="empty"><div class="empty-icon">${currentFilter === 'favs' ? '❤️' : '🔍'}</div><p>${currentFilter === 'favs' ? 'Ingen favoritter endnu — klik 🤍 på et ølkort' : 'Ingen øl matcher din søgning'}</p></div>`;
             return;
         }
-        grid.innerHTML = beers.map((b, i) => makeBeerCard(b, Math.min(i * 0.025, 0.6))).join('');
+
+        // Pagination
+        const startIdx = (currentPage - 1) * PAGE_SIZE;
+        const endIdx = startIdx + PAGE_SIZE;
+        const pageBeers = beers.slice(startIdx, endIdx);
+        totalPages = Math.ceil(beers.length / PAGE_SIZE);
+        totalCount = beers.length;
+
+        grid.innerHTML = pageBeers.map((b, i) => makeBeerCard(b, Math.min((startIdx + i) * 0.025, 0.6))).join('');
+        document.getElementById('load-more').style.display = currentPage < totalPages ? 'block' : 'none';
     }
 
     // ── Render favoritter ──
@@ -637,57 +701,7 @@
         }).join('');
     }
 
-    // ── Byg API URL — ALLE filtre sendes til API ──
-    function buildUrl(page) {
-        const p = new URLSearchParams({ page, limit: PAGE_SIZE, sort: currentSort });
-        const q = document.getElementById('search').value.trim();
-        if (q) p.set('q', q);
-        if (currentShop !== 'all') p.set('shop', currentShop);
-        // Multi-select stilarter: send kommasepareret liste
-        if (selectedTypes.size > 0) p.set('beer_types', [...selectedTypes].join(','));
-        if (currentFilter === 'deals') p.set('deals_only', 'true');
-        if (currentFilter === 'alcohol-free') p.set('alcohol_free', 'true');
-        if (currentFilter === 'smagekasse') p.set('smagekasse', 'true');
-        if (priceMin > 0) p.set('min_price', priceMin);
-        const pmx = parseInt(document.getElementById('price-max').max || 500);
-        if (priceMax < pmx) p.set('max_price', priceMax);
-        if (abvMin > 0) p.set('abv_min', abvMin);
-        if (abvMax < 15) p.set('abv_max', abvMax);
-        return `${API}/beers?${p}`;
-    }
-
-    // ── Hent side fra API ──
-    async function fetchPage(page, append = false) {
-        if (isLoading) return;
-        isLoading = true;
-        if (!append) {
-            document.getElementById('loading').style.display = 'block';
-            document.getElementById('result-count').style.display = 'none';
-            document.getElementById('grid').innerHTML = '';
-        }
-        try {
-            const res = await fetch(buildUrl(page));
-            const data = await res.json();
-            const normalized = (data.beers || []).map(normalizeBeer);
-            allBeers = append ? [...allBeers, ...normalized] : normalized;
-            currentPage = data.page || page;
-            totalPages = data.pages || 1;
-            totalCount = data.total || normalized.length;
-            document.getElementById('loading').style.display = 'none';
-            document.getElementById('result-count').style.display = 'block';
-            document.getElementById('load-more').style.display = currentPage < totalPages ? 'block' : 'none';
-            renderGrid();
-            renderFavs();
-            if (!append) renderTopDeals();
-        } catch (e) {
-            document.getElementById('loading').innerHTML = '<div class="empty-icon">😢</div><p>Kunne ikke hente øl — prøv igen om lidt</p>';
-            console.error(e);
-        } finally {
-            isLoading = false;
-        }
-    }
-
-    // ── Dropdown setup ──
+    // ── Setup dropdowns ──
     function setupDropdowns() {
         document.querySelectorAll('.dropdown').forEach(dd => {
             const menu = dd.querySelector('.dropdown-menu');
@@ -776,37 +790,47 @@
         }
     }
 
-    // ── Init ──
-    async function init() {
-        // Nøgletal + butikker + stilarter fra stats øjeblikkeligt
-        fetch(`${API}/stats`).then(r => r.json()).then(s => {
-            document.getElementById('stat-total').textContent = s.total;
-            document.getElementById('stat-deals').textContent = s.deals;
-            document.getElementById('stat-shops').textContent = s.shops;
-            document.getElementById('stat-cheapest').textContent = s.cheapest;
-            document.getElementById('shop-count-inline').textContent = s.shops;
+    // ── Hent data fra data.json ──
+    async function loadData() {
+        try {
+            const res = await fetch('data.json');
+            if (!res.ok) throw new Error('Kunne ikke hente data.json');
+            const raw = await res.json();
+            dataJSON = raw;
+            
+            // Parser data.json
+            allBeers = (raw.beers || []).map(normalizeBeer);
+            
+            // Sæt stats
+            document.getElementById('stat-total').textContent = raw.total || allBeers.length;
+            document.getElementById('stat-deals').textContent = raw.deals || allBeers.filter(b => b.max_discount_pct > 0).length;
+            document.getElementById('stat-shops').textContent = raw.shops || (raw.shop_names?.length || 0);
+            document.getElementById('stat-cheapest').textContent = Math.min(...allBeers.filter(b => b.min_price).map(b => b.min_price)).toFixed(0);
+            document.getElementById('shop-count-inline').textContent = raw.shops || (raw.shop_names?.length || 0);
 
             // Byg butik dropdown
             const shopMenu = document.getElementById('shop-menu');
             shopMenu.innerHTML = `<div class="dropdown-item selected" data-shop="all"><span class="check">✓</span> Alle butikker</div><div class="dropdown-divider"></div>` +
-                (s.shop_names || []).map(sh => `<div class="dropdown-item" data-shop="${sh}"><span class="check"></span> ${sh}</div>`).join('');
+                (raw.shop_names || []).map(sh => `<div class="dropdown-item" data-shop="${sh}"><span class="check"></span> ${sh}</div>`).join('');
             shopMenu.querySelectorAll('.dropdown-item').forEach(item => {
                 item.addEventListener('click', e => {
                     e.stopPropagation();
                     currentShop = item.dataset.shop;
+                    currentPage = 1;
                     updateShopBtn();
                     savePrefs();
-                    fetchPage(1);
+                    renderGrid();
+                    renderFavs();
                     document.getElementById('shop-dropdown').classList.remove('open');
                     shopMenu.style.display = 'none';
                     if (currentShop !== 'all') gtag('event', 'butik_filter', { butik: currentShop });
                 });
             });
 
-            // Byg stilart dropdown — multi-select
+            // Byg stilart dropdown
             const typeMenu = document.getElementById('type-menu');
             typeMenu.innerHTML = `<div class="dropdown-item" data-type="__clear__"><span class="check"></span> Ryd valg</div><div class="dropdown-divider"></div>` +
-                (s.types || []).map(t => `<div class="dropdown-item" data-type="${t}"><span class="check"></span> ${t}</div>`).join('');
+                (raw.types || []).map(t => `<div class="dropdown-item" data-type="${t}"><span class="check"></span> ${t}</div>`).join('');
             typeMenu.querySelectorAll('.dropdown-item').forEach(item => {
                 item.addEventListener('click', e => {
                     e.stopPropagation();
@@ -818,10 +842,11 @@
                         selectedTypes.add(item.dataset.type);
                         gtag('event', 'stilart_filter', { stilart: item.dataset.type });
                     }
+                    currentPage = 1;
                     updateTypeBtn();
                     savePrefs();
-                    fetchPage(1);
-                    // Hold dropdown åben ved multi-select
+                    renderGrid();
+                    renderFavs();
                 });
             });
 
@@ -831,19 +856,36 @@
             updateTypeBtn();
             updateSortBtn();
 
-            // Sæt ABV sliders fra gemte prefs
-            document.getElementById('abv-min').value = abvMin;
-            document.getElementById('abv-max').value = abvMax;
-            updateDualRange('abv');
-        }).catch(() => {});
+            // Sæt pris max fra faktiske data
+            const maxP = Math.ceil(Math.max(...allBeers.filter(b => b.min_price).map(b => b.min_price), 500));
+            document.getElementById('price-min').max = maxP;
+            document.getElementById('price-max').max = maxP;
+            document.getElementById('price-max').value = maxP;
+            priceMax = maxP;
+            updateDualRange('price');
 
+            // Hent første side
+            document.getElementById('loading').style.display = 'none';
+            currentPage = 1;
+            renderGrid();
+            renderFavs();
+            renderTopDeals();
+        } catch (err) {
+            document.getElementById('loading').innerHTML = '<div class="empty-icon">😢</div><p>Kunne ikke hente øl-data — tjek at data.json findes</p>';
+            console.error(err);
+        }
+    }
+
+    // ── Init ──
+    async function init() {
         // Sort dropdown
         document.querySelectorAll('#sort-menu .dropdown-item').forEach(item => {
             item.addEventListener('click', () => {
                 currentSort = item.dataset.sort;
+                currentPage = 1;
                 updateSortBtn();
                 savePrefs();
-                fetchPage(1);
+                renderGrid();
                 document.getElementById('sort-dropdown').classList.remove('open');
                 document.getElementById('sort-menu').style.display = 'none';
                 gtag('event', 'sortering', { sort: currentSort });
@@ -856,9 +898,10 @@
                 document.querySelectorAll('.filter-btn[data-filter]').forEach(b => b.classList.remove('active'));
                 btn.classList.add('active');
                 currentFilter = btn.dataset.filter;
+                currentPage = 1;
                 savePrefs();
-                if (currentFilter === 'favs') { renderGrid(); }
-                else { fetchPage(1); }
+                renderGrid();
+                renderFavs();
                 gtag('event', 'filter_klik', { filter: currentFilter });
             });
         });
@@ -877,6 +920,7 @@
             currentFilter = 'all';
             currentShop = 'all';
             currentSort = 'price-asc';
+            currentPage = 1;
             selectedTypes.clear();
             priceMin = 0; abvMin = 0; abvMax = 15;
             document.getElementById('search').value = '';
@@ -892,7 +936,8 @@
             document.querySelectorAll('.filter-btn[data-filter]').forEach(b => b.classList.remove('active'));
             document.querySelector('[data-filter=all]').classList.add('active');
             savePrefs();
-            fetchPage(1);
+            renderGrid();
+            renderFavs();
             gtag('event', 'nulstil_filter');
         });
 
@@ -902,7 +947,8 @@
             clearTimeout(searchTimer);
             searchTimer = setTimeout(() => {
                 if (this.value.length > 1) gtag('event', 'soegning', { search_term: this.value });
-                fetchPage(1);
+                currentPage = 1;
+                renderGrid();
             }, 400);
         });
 
@@ -911,12 +957,12 @@
         document.getElementById('price-min').addEventListener('input', () => {
             updateDualRange('price');
             clearTimeout(priceTimer);
-            priceTimer = setTimeout(() => { savePrefs(); fetchPage(1); }, 600);
+            priceTimer = setTimeout(() => { currentPage = 1; savePrefs(); renderGrid(); }, 600);
         });
         document.getElementById('price-max').addEventListener('input', () => {
             updateDualRange('price');
             clearTimeout(priceTimer);
-            priceTimer = setTimeout(() => { savePrefs(); fetchPage(1); }, 600);
+            priceTimer = setTimeout(() => { currentPage = 1; savePrefs(); renderGrid(); }, 600);
         });
 
         // ABV range
@@ -924,18 +970,20 @@
         document.getElementById('abv-min').addEventListener('input', () => {
             updateDualRange('abv');
             clearTimeout(abvTimer);
-            abvTimer = setTimeout(() => { savePrefs(); fetchPage(1); }, 600);
+            abvTimer = setTimeout(() => { currentPage = 1; savePrefs(); renderGrid(); }, 600);
         });
         document.getElementById('abv-max').addEventListener('input', () => {
             updateDualRange('abv');
             clearTimeout(abvTimer);
-            abvTimer = setTimeout(() => { savePrefs(); fetchPage(1); }, 600);
+            abvTimer = setTimeout(() => { currentPage = 1; savePrefs(); renderGrid(); }, 600);
         });
 
         // Vis flere
         document.getElementById('load-more').addEventListener('click', () => {
-            fetchPage(currentPage + 1, true);
-            gtag('event', 'vis_flere', { side: currentPage + 1 });
+            currentPage++;
+            renderGrid();
+            gtag('event', 'vis_flere', { side: currentPage });
+            window.scrollTo({ top: document.getElementById('grid').offsetTop - 100, behavior: 'smooth' });
         });
 
         // Sticky controls
@@ -946,9 +994,9 @@
         // Fav badge
         document.getElementById('fav-count-badge').textContent = favorites.size > 0 ? `(${favorites.size})` : '';
 
-        // Auto-vis Top 10 efter 5 sekunder på desktop
+        // Auto-vis Top 10
         setTimeout(() => {
-            if (window.innerWidth > 640) {
+            if (window.innerWidth > 640 && allBeers.length > 0) {
                 const s = document.getElementById('top-deals-section');
                 if (!s.classList.contains('visible')) {
                     s.classList.add('visible');
@@ -958,16 +1006,8 @@
             }
         }, 5000);
 
-        // Hent første side øl
-        await fetchPage(1);
-
-        // Sæt pris max ud fra faktiske data
-        const maxP = Math.ceil(Math.max(...allBeers.map(b => b.min_price || 0), 500));
-        document.getElementById('price-min').max = maxP;
-        document.getElementById('price-max').max = maxP;
-        document.getElementById('price-max').value = maxP;
-        priceMax = maxP;
-        updateDualRange('price');
+        // Hent data
+        await loadData();
     }
 
     init();
