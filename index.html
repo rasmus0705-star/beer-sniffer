@@ -765,15 +765,14 @@
     }
 
     // ── Render grid ──
-    function renderGrid() {
+    function renderGrid(append = false) {
         const grid = document.getElementById('grid');
         
         let beers = currentFilter === 'favs'
             ? allBeers.filter(b => favorites.has(b.normalized_name || b.name))
             : filterAndSortBeers(allBeers);
 
-        const displayTotal = beers.length;
-        document.getElementById('result-count').textContent = `Viser ${beers.length} øl`;
+        document.getElementById('result-count').textContent = `Viser ${Math.min(currentPage * PAGE_SIZE, beers.length)} af ${beers.length} øl`;
         
         if (!beers.length) {
             grid.innerHTML = `<div class="empty"><div class="empty-icon">${currentFilter === 'favs' ? '❤️' : '🔍'}</div><p>${currentFilter === 'favs' ? 'Ingen favoritter endnu — klik 🤍 på et ølkort' : 'Ingen øl matcher din søgning'}</p></div>`;
@@ -781,13 +780,22 @@
         }
 
         // Pagination
-        const startIdx = (currentPage - 1) * PAGE_SIZE;
-        const endIdx = startIdx + PAGE_SIZE;
-        const pageBeers = beers.slice(startIdx, endIdx);
         totalPages = Math.ceil(beers.length / PAGE_SIZE);
         totalCount = beers.length;
-
-        grid.innerHTML = pageBeers.map((b, i) => makeBeerCard(b, Math.min((startIdx + i) * 0.025, 0.6))).join('');
+        
+        if (append) {
+            // Tilføj kun næste side (når man klikker "Vis flere")
+            const startIdx = (currentPage - 1) * PAGE_SIZE;
+            const endIdx = startIdx + PAGE_SIZE;
+            const pageBeers = beers.slice(startIdx, endIdx);
+            grid.insertAdjacentHTML('beforeend', pageBeers.map((b, i) => makeBeerCard(b, Math.min(i * 0.025, 0.3))).join(''));
+        } else {
+            // Vis fra side 1 til currentPage (ved filter ændring eller initial)
+            const endIdx = currentPage * PAGE_SIZE;
+            const pageBeers = beers.slice(0, endIdx);
+            grid.innerHTML = pageBeers.map((b, i) => makeBeerCard(b, Math.min(i * 0.025, 0.6))).join('');
+        }
+        
         document.getElementById('load-more').style.display = currentPage < totalPages ? 'block' : 'none';
     }
 
@@ -1213,9 +1221,8 @@
         // Vis flere
         document.getElementById('load-more').addEventListener('click', () => {
             currentPage++;
-            renderGrid();
+            renderGrid(true); // append = true, scroller ikke
             gtag('event', 'vis_flere', { side: currentPage });
-            window.scrollTo({ top: document.getElementById('grid').offsetTop - 100, behavior: 'smooth' });
         });
 
         // Fav badge
