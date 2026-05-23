@@ -152,20 +152,20 @@
         .tag { font-size: 0.6rem; padding: 0.17rem 0.42rem; border-radius: 4px; background: var(--surface3); color: var(--text-muted); border: 1px solid var(--border); }
         .tag-type { background: rgba(200,146,14,0.08); color: var(--gold); border-color: rgba(200,146,14,0.2); }
         .price-rows { display: flex; flex-direction: column; gap: 0.3rem; margin-bottom: 0.7rem; }
-        .price-row { display: flex; align-items: center; justify-content: space-between; padding: 0.45rem 0.65rem; background: var(--surface2); border: 1px solid var(--border); border-radius: 8px; transition: border-color 0.15s; position: relative; }
+        .price-row { display: flex; align-items: center; justify-content: space-between; padding: 0.45rem 0.65rem; background: var(--surface2); border: 1px solid var(--border); border-radius: 8px; transition: border-color 0.15s; position: relative; gap: 0.4rem; flex-wrap: wrap; }
         .price-row:hover { border-color: var(--gold-dim); }
-        .price-row-cheapest { border: 2px solid var(--gold); background: linear-gradient(135deg,rgba(200,146,14,0.18),rgba(200,146,14,0.05)); box-shadow: 0 0 12px rgba(200,146,14,0.2); transform: scale(1.02); }
-        .price-row-left { display: flex; flex-direction: column; min-width: 0; flex: 1; }
-        .price-row-shop { font-size: 0.62rem; letter-spacing: 0.05em; text-transform: uppercase; color: #b8a98a; white-space: nowrap; }
+        .price-row-cheapest { border: 2px solid var(--gold); background: linear-gradient(135deg,rgba(200,146,14,0.18),rgba(200,146,14,0.05)); box-shadow: 0 0 12px rgba(200,146,14,0.2); }
+        .price-row-left { display: flex; flex-direction: column; min-width: 0; flex: 1 1 100%; }
+        .price-row-shop { font-size: 0.62rem; letter-spacing: 0.05em; text-transform: uppercase; color: #b8a98a; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
         .price-row-cheapest .price-row-shop { color: #ffd54a; font-weight: 700; }
         .price-row-prices { display: flex; align-items: baseline; gap: 0.35rem; flex-wrap: wrap; }
-        .price-row-amount { font-family: 'Bebas Neue', sans-serif; font-size: 1.7rem; color: #ffe082; line-height: 1; text-shadow: 0 0 8px rgba(255,213,74,0.35); }
-        .price-row-old { font-size: 0.82rem; color: #cfc6b4; text-decoration: line-through; opacity: 0.9; margin-left: 4px; }
-        .price-row-save { font-size: 0.65rem; color: #3dba6f; font-weight: 700; display: block; margin-top: 2px; }
-        .price-row-total { font-size: 0.62rem; color: var(--text-dim); margin-top: 2px; }
-        .price-row-discount { background: linear-gradient(135deg,#3dba6f,#29a35a); color: #000; font-size: 0.7rem; font-weight: 800; padding: 0.25rem 0.5rem; border-radius: 5px; box-shadow: 0 2px 6px rgba(0,0,0,0.4); }
-        .price-row-right { display: flex; align-items: center; gap: 0.25rem; flex-shrink: 0; }
-        .price-row-link { font-size: 0.72rem; font-weight: 800; color: #000; background: linear-gradient(135deg,#ffd54a,#ffb300); padding: 0.4rem 0.75rem; border-radius: 7px; text-decoration: none; text-transform: uppercase; letter-spacing: 0.05em; box-shadow: 0 3px 10px rgba(255,193,7,0.3); transition: all 0.15s; white-space: nowrap; }
+        .price-row-amount { font-family: 'Bebas Neue', sans-serif; font-size: 1.5rem; color: #ffe082; line-height: 1; text-shadow: 0 0 8px rgba(255,213,74,0.35); white-space: nowrap; }
+        .price-row-old { font-size: 0.78rem; color: #cfc6b4; text-decoration: line-through; opacity: 0.9; white-space: nowrap; }
+        .price-row-save { font-size: 0.65rem; color: #3dba6f; font-weight: 700; display: block; margin-top: 2px; white-space: nowrap; }
+        .price-row-total { font-size: 0.6rem; color: var(--text-dim); margin-top: 2px; white-space: nowrap; }
+        .price-row-discount { background: linear-gradient(135deg,#3dba6f,#29a35a); color: #000; font-size: 0.68rem; font-weight: 800; padding: 0.2rem 0.4rem; border-radius: 5px; box-shadow: 0 2px 6px rgba(0,0,0,0.4); white-space: nowrap; }
+        .price-row-right { display: flex; align-items: center; gap: 0.25rem; flex-shrink: 0; flex: 1 1 100%; justify-content: flex-end; margin-top: 0.3rem; }
+        .price-row-link { font-size: 0.7rem; font-weight: 800; color: #000; background: linear-gradient(135deg,#ffd54a,#ffb300); padding: 0.35rem 0.65rem; border-radius: 7px; text-decoration: none; text-transform: uppercase; letter-spacing: 0.05em; box-shadow: 0 3px 10px rgba(255,193,7,0.3); transition: all 0.15s; white-space: nowrap; }
         .price-row-link:hover { transform: translateY(-1px); box-shadow: 0 5px 14px rgba(255,193,7,0.45); }
         .more-shops-toggle { font-size: 0.72rem; color: var(--gold); cursor: pointer; padding: 0.3rem 0.65rem; background: rgba(200,146,14,0.06); border: 1px solid rgba(200,146,14,0.2); border-radius: 6px; text-align: center; transition: all 0.2s; margin-top: 0.3rem; }
         .more-shops-toggle:hover { background: rgba(200,146,14,0.12); }
