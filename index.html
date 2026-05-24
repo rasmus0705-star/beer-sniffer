@@ -259,6 +259,12 @@
         .sidebar-clear-link:hover { color: var(--gold-light); }
         .sidebar-reset { width: 100%; background: linear-gradient(135deg,var(--amber),var(--gold)); color: #000; font-weight: 700; padding: 0.7rem; border: none; border-radius: 8px; cursor: pointer; font-family: 'DM Sans', sans-serif; font-size: 0.9rem; transition: all 0.15s; }
         .sidebar-reset:hover { transform: translateY(-1px); box-shadow: 0 6px 18px rgba(212,98,10,0.35); }
+        .sidebar-chips { display: flex; flex-wrap: wrap; gap: 0.35rem; }
+        .sidebar-chip { background: rgba(200,146,14,0.15); border: 1px solid var(--gold-dim); color: var(--gold-light); padding: 0.25rem 0.55rem; border-radius: 999px; font-size: 0.72rem; display: inline-flex; align-items: center; gap: 0.35rem; cursor: pointer; transition: all 0.15s; }
+        .sidebar-chip:hover { background: rgba(200,146,14,0.25); border-color: var(--gold); }
+        .sidebar-chip .x { font-weight: 700; opacity: 0.6; font-size: 0.78rem; line-height: 1; }
+        .sidebar-chip:hover .x { opacity: 1; color: #e05050; }
+        .sidebar-active-filters { background: rgba(200,146,14,0.04); margin: -1.25rem -1rem 1.5rem; padding: 1rem; border-radius: 0 0 12px 12px; border-bottom: 1px solid var(--border) !important; }
         .main-content { flex: 1; min-width: 0; }
 
         /* Mobile sidebar */
@@ -273,18 +279,29 @@
         .filter-chip .x:hover { opacity: 1; color: #e05050; }
         .active-filters-label { font-size: 0.72rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--text-muted); margin-right: 0.5rem; }
 
-        /* Deal banner */
+        /* Roterende deal banner med billede */
         .deal-banner { padding: 0.75rem 1.5rem; }
-        .deal-banner-content { background: linear-gradient(135deg, rgba(61,186,111,0.15) 0%, rgba(200,146,14,0.1) 100%); border: 1px solid rgba(61,186,111,0.35); border-radius: 12px; padding: 0.85rem 1.2rem; display: flex; align-items: center; gap: 1rem; box-shadow: 0 4px 20px rgba(61,186,111,0.1); transition: all 0.2s; flex-wrap: wrap; }
+        .deal-banner-content { background: linear-gradient(135deg, rgba(61,186,111,0.12) 0%, rgba(200,146,14,0.08) 100%); border: 1px solid rgba(61,186,111,0.3); border-radius: 14px; padding: 0.7rem 1rem 0.7rem 0.7rem; display: flex; align-items: center; gap: 1rem; box-shadow: 0 4px 20px rgba(61,186,111,0.08); transition: all 0.3s; flex-wrap: wrap; overflow: hidden; position: relative; }
         .deal-banner-content:hover { border-color: #3dba6f; box-shadow: 0 6px 25px rgba(61,186,111,0.2); }
-        .deal-banner-icon { font-size: 1.6rem; flex-shrink: 0; animation: pulse 2s infinite; }
-        @keyframes pulse { 0%, 100% { transform: scale(1) } 50% { transform: scale(1.15) } }
-        .deal-banner-text { flex: 1; min-width: 200px; display: flex; flex-direction: column; gap: 0.15rem; }
-        .deal-banner-label { font-size: 0.65rem; letter-spacing: 0.2em; text-transform: uppercase; color: #3dba6f; font-weight: 700; }
-        .deal-banner-deal { font-size: 0.95rem; color: var(--text); font-weight: 600; }
-        .deal-banner-deal .deal-pct { color: #3dba6f; font-family: 'Bebas Neue', sans-serif; font-size: 1.4rem; letter-spacing: 0.03em; margin-right: 0.4rem; }
-        .deal-banner-cta { background: linear-gradient(135deg, #3dba6f, #29a35a); color: #000; border: none; padding: 0.55rem 1.1rem; border-radius: 8px; font-family: 'DM Sans', sans-serif; font-weight: 700; font-size: 0.85rem; cursor: pointer; transition: all 0.15s; white-space: nowrap; box-shadow: 0 3px 12px rgba(61,186,111,0.3); }
+        .deal-banner-img-wrap { width: 60px; height: 60px; border-radius: 10px; background: var(--surface2); display: flex; align-items: center; justify-content: center; overflow: hidden; flex-shrink: 0; position: relative; padding: 4px; }
+        .deal-banner-img { width: 100%; height: 100%; object-fit: contain; transition: opacity 0.4s; }
+        .deal-banner-img.fading { opacity: 0; }
+        .deal-banner-img-placeholder { font-size: 1.8rem; }
+        .deal-banner-pct { position: absolute; bottom: -2px; right: -2px; background: linear-gradient(135deg, #3dba6f, #29a35a); color: #000; font-family: 'Bebas Neue', sans-serif; font-size: 0.75rem; padding: 1px 5px; border-radius: 5px; box-shadow: 0 2px 5px rgba(0,0,0,0.5); letter-spacing: 0.03em; line-height: 1; }
+        .deal-banner-text { flex: 1; min-width: 200px; display: flex; flex-direction: column; gap: 0.2rem; }
+        .deal-banner-label { font-size: 0.62rem; letter-spacing: 0.22em; text-transform: uppercase; color: #3dba6f; font-weight: 700; display: flex; align-items: center; gap: 0.4rem; }
+        .deal-banner-label::before { content: '🔥'; font-size: 0.9rem; animation: pulse 2s infinite; }
+        @keyframes pulse { 0%, 100% { transform: scale(1) } 50% { transform: scale(1.2) } }
+        .deal-banner-deal { font-size: 0.9rem; color: var(--text); font-weight: 500; line-height: 1.3; transition: opacity 0.4s; }
+        .deal-banner-deal.fading { opacity: 0; }
+        .deal-banner-deal strong { font-weight: 700; color: var(--gold-light); }
+        .deal-banner-price { font-family: 'Bebas Neue', sans-serif; font-size: 1.15rem; color: #ffe082; margin-left: 0.4rem; }
+        .deal-banner-old { font-size: 0.75rem; color: #8a7c64; text-decoration: line-through; margin-left: 0.3rem; }
+        .deal-banner-cta { background: linear-gradient(135deg, #3dba6f, #29a35a); color: #000; border: none; padding: 0.55rem 1.1rem; border-radius: 8px; font-family: 'DM Sans', sans-serif; font-weight: 700; font-size: 0.82rem; cursor: pointer; transition: all 0.15s; white-space: nowrap; box-shadow: 0 3px 12px rgba(61,186,111,0.3); text-decoration: none; }
         .deal-banner-cta:hover { transform: translateY(-1px); box-shadow: 0 5px 16px rgba(61,186,111,0.45); }
+        .deal-banner-dots { position: absolute; bottom: 6px; left: 50%; transform: translateX(-50%); display: flex; gap: 4px; }
+        .deal-banner-dot { width: 5px; height: 5px; border-radius: 50%; background: rgba(255,255,255,0.2); transition: background 0.3s; }
+        .deal-banner-dot.active { background: #3dba6f; }
 
         /* ── MOBIL/TABLET ── */
         @media (max-width: 1100px) {
@@ -367,6 +384,14 @@
         <div class="sidebar-mobile-header">
             <span style="font-family:'Bebas Neue',sans-serif;font-size:1.2rem;letter-spacing:0.1em;color:var(--gold)">FILTRE</span>
             <button class="sidebar-mobile-close" id="mobile-filter-close">✕</button>
+        </div>
+
+        <div class="sidebar-section sidebar-active-filters" id="sidebar-active-filters" style="display:none">
+            <div class="sidebar-title">
+                <span>✨ Aktive filtre</span>
+                <button class="sidebar-clear-link" id="sidebar-clear-all">Ryd alle</button>
+            </div>
+            <div class="sidebar-chips" id="sidebar-chips"></div>
         </div>
 
         <div class="sidebar-section">
@@ -454,12 +479,16 @@
 
 <div class="deal-banner" id="deal-banner" style="display:none">
     <div class="deal-banner-content">
-        <span class="deal-banner-icon">🔥</span>
+        <div class="deal-banner-img-wrap">
+            <img class="deal-banner-img" id="deal-banner-img" src="" alt="" onerror="this.style.display='none'">
+            <span class="deal-banner-pct" id="deal-banner-pct">−0%</span>
+        </div>
         <div class="deal-banner-text">
-            <span class="deal-banner-label">Største tilbud lige nu</span>
+            <span class="deal-banner-label">Største rabat</span>
             <span class="deal-banner-deal" id="deal-banner-deal">–</span>
         </div>
-        <button class="deal-banner-cta" id="deal-banner-cta">Se alle tilbud →</button>
+        <a class="deal-banner-cta" id="deal-banner-cta" href="#" target="_blank">Køb nu →</a>
+        <div class="deal-banner-dots" id="deal-banner-dots"></div>
     </div>
 </div>
 
@@ -826,28 +855,90 @@
         document.getElementById('favs-section').classList.remove('visible');
     }
 
-    // ── Render Deal Banner (erstatter Top 10) ──
+    // ── Render Deal Banner (roterende karrusel) ──
+    let dealBannerInterval = null;
+    let dealBannerIndex = 0;
+    let dealBannerTopDeals = [];
+
     function renderDealBanner() {
-        const topDeal = allBeers.filter(b => b.max_discount_pct > 0 && b.category !== 'smagekasse')
-            .sort((a, b) => b.max_discount_pct - a.max_discount_pct)[0];
+        dealBannerTopDeals = allBeers.filter(b => b.max_discount_pct > 0 && b.category !== 'smagekasse')
+            .sort((a, b) => b.max_discount_pct - a.max_discount_pct).slice(0, 5);
         
         const banner = document.getElementById('deal-banner');
-        if (!topDeal) { banner.style.display = 'none'; return; }
-        
-        const best = [...(topDeal.prices || [])].sort((a, c) => (c.discount_pct || 0) - (a.discount_pct || 0))[0] || {};
-        const shortName = topDeal.name.length > 50 ? topDeal.name.substring(0, 47) + '...' : topDeal.name;
-        
-        document.getElementById('deal-banner-deal').innerHTML = 
-            `<span class="deal-pct">−${topDeal.max_discount_pct}%</span> på <strong>${shortName}</strong>`;
+        if (!dealBannerTopDeals.length) { banner.style.display = 'none'; return; }
         
         banner.style.display = 'block';
         
-        // Klik på CTA = aktivér Tilbud-filter
-        document.getElementById('deal-banner-cta').onclick = () => {
-            const tilbudBtn = document.querySelector('.sidebar-filter-btn[data-filter="deals"]');
-            if (tilbudBtn) tilbudBtn.click();
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        };
+        // Byg dots
+        const dotsEl = document.getElementById('deal-banner-dots');
+        dotsEl.innerHTML = dealBannerTopDeals.map((_, i) => 
+            `<span class="deal-banner-dot${i === 0 ? ' active' : ''}" data-idx="${i}"></span>`
+        ).join('');
+        dotsEl.querySelectorAll('.deal-banner-dot').forEach(dot => {
+            dot.addEventListener('click', e => {
+                e.stopPropagation();
+                dealBannerIndex = parseInt(dot.dataset.idx);
+                showDealBannerSlide();
+                resetDealBannerInterval();
+            });
+        });
+        
+        showDealBannerSlide();
+        resetDealBannerInterval();
+    }
+    
+    function showDealBannerSlide() {
+        const deal = dealBannerTopDeals[dealBannerIndex];
+        if (!deal) return;
+        
+        const best = [...(deal.prices || [])].sort((a, c) => (c.discount_pct || 0) - (a.discount_pct || 0))[0] || {};
+        const shortName = deal.name.length > 50 ? deal.name.substring(0, 47) + '...' : deal.name;
+        
+        const dealEl = document.getElementById('deal-banner-deal');
+        const imgEl = document.getElementById('deal-banner-img');
+        const pctEl = document.getElementById('deal-banner-pct');
+        const ctaEl = document.getElementById('deal-banner-cta');
+        
+        // Fade out
+        dealEl.classList.add('fading');
+        imgEl.classList.add('fading');
+        
+        setTimeout(() => {
+            dealEl.innerHTML = `<strong>${shortName}</strong> <span class="deal-banner-price">${(best.price || 0).toFixed(2)} kr</span>${best.old_price ? `<span class="deal-banner-old">${best.old_price.toFixed(2)} kr</span>` : ''}`;
+            
+            if (deal.image) {
+                imgEl.src = deal.image;
+                imgEl.style.display = 'block';
+            } else {
+                imgEl.style.display = 'none';
+            }
+            
+            pctEl.textContent = `−${deal.max_discount_pct}%`;
+            
+            if (best.url) {
+                ctaEl.href = best.url;
+                ctaEl.style.display = 'inline-block';
+            } else {
+                ctaEl.style.display = 'none';
+            }
+            
+            // Opdater dots
+            document.querySelectorAll('.deal-banner-dot').forEach((dot, i) => {
+                dot.classList.toggle('active', i === dealBannerIndex);
+            });
+            
+            // Fade in
+            dealEl.classList.remove('fading');
+            imgEl.classList.remove('fading');
+        }, 200);
+    }
+    
+    function resetDealBannerInterval() {
+        if (dealBannerInterval) clearInterval(dealBannerInterval);
+        dealBannerInterval = setInterval(() => {
+            dealBannerIndex = (dealBannerIndex + 1) % dealBannerTopDeals.length;
+            showDealBannerSlide();
+        }, 4000);
     }
 
     // ── Setup dropdowns (ikke længere brugt, behold for kompatibilitet) ──
@@ -899,7 +990,11 @@
     // ── Render aktive filter chips ──
     function renderActiveFilters() {
         const container = document.getElementById('active-filters');
+        const sidebarChips = document.getElementById('sidebar-chips');
+        const sidebarSection = document.getElementById('sidebar-active-filters');
+        
         const chips = [];
+        const sidebarChipsHTML = [];
         
         if (currentFilter !== 'all') {
             const labels = {
@@ -908,35 +1003,56 @@
                 'alcohol-free': '🚫 Alkoholfri',
                 'smagekasse': '📦 Smagekasser'
             };
-            chips.push(`<span class="filter-chip">${labels[currentFilter] || currentFilter}<span class="x" onclick="clearFilter('quick')">✕</span></span>`);
+            const label = labels[currentFilter] || currentFilter;
+            chips.push(`<span class="filter-chip">${label}<span class="x" onclick="clearFilter('quick')">✕</span></span>`);
+            sidebarChipsHTML.push(`<span class="sidebar-chip" onclick="clearFilter('quick')">${label}<span class="x">✕</span></span>`);
         }
         
         selectedShops.forEach(shop => {
-            chips.push(`<span class="filter-chip">🏪 ${shop}<span class="x" onclick="clearFilter('shop','${shop.replace(/'/g, "\\'")}')">✕</span></span>`);
+            const safeShop = shop.replace(/'/g, "\\'");
+            chips.push(`<span class="filter-chip">🏪 ${shop}<span class="x" onclick="clearFilter('shop','${safeShop}')">✕</span></span>`);
+            sidebarChipsHTML.push(`<span class="sidebar-chip" onclick="clearFilter('shop','${safeShop}')">🏪 ${shop}<span class="x">✕</span></span>`);
         });
         
         selectedTypes.forEach(type => {
-            chips.push(`<span class="filter-chip">🍺 ${type}<span class="x" onclick="clearFilter('type','${type.replace(/'/g, "\\'")}')">✕</span></span>`);
+            const safeType = type.replace(/'/g, "\\'");
+            chips.push(`<span class="filter-chip">🍺 ${type}<span class="x" onclick="clearFilter('type','${safeType}')">✕</span></span>`);
+            sidebarChipsHTML.push(`<span class="sidebar-chip" onclick="clearFilter('type','${safeType}')">🍺 ${type}<span class="x">✕</span></span>`);
         });
         
         const searchVal = document.getElementById('search').value.trim();
         if (searchVal) {
             chips.push(`<span class="filter-chip">🔍 "${searchVal}"<span class="x" onclick="clearFilter('search')">✕</span></span>`);
+            sidebarChipsHTML.push(`<span class="sidebar-chip" onclick="clearFilter('search')">🔍 "${searchVal}"<span class="x">✕</span></span>`);
         }
         
         const priceMaxEl = parseInt(document.getElementById('price-max').max || 500);
         if (priceMin > 0 || priceMax < priceMaxEl) {
-            chips.push(`<span class="filter-chip">💰 ${Math.round(priceMin)}–${Math.round(priceMax)} kr<span class="x" onclick="clearFilter('price')">✕</span></span>`);
+            const lbl = `💰 ${Math.round(priceMin)}–${Math.round(priceMax)} kr`;
+            chips.push(`<span class="filter-chip">${lbl}<span class="x" onclick="clearFilter('price')">✕</span></span>`);
+            sidebarChipsHTML.push(`<span class="sidebar-chip" onclick="clearFilter('price')">${lbl}<span class="x">✕</span></span>`);
         }
         
         if (abvMin > 0 || abvMax < 15) {
-            chips.push(`<span class="filter-chip">🍻 ${abvMin.toFixed(1)}–${abvMax.toFixed(1)}%<span class="x" onclick="clearFilter('abv')">✕</span></span>`);
+            const lbl = `🍻 ${abvMin.toFixed(1)}–${abvMax.toFixed(1)}%`;
+            chips.push(`<span class="filter-chip">${lbl}<span class="x" onclick="clearFilter('abv')">✕</span></span>`);
+            sidebarChipsHTML.push(`<span class="sidebar-chip" onclick="clearFilter('abv')">${lbl}<span class="x">✕</span></span>`);
         }
         
+        // Top chips (i hovedindhold)
         if (chips.length > 0) {
             container.innerHTML = '<span class="active-filters-label">Aktive filtre:</span>' + chips.join('');
         } else {
             container.innerHTML = '';
+        }
+        
+        // Sidebar chips
+        if (sidebarChipsHTML.length > 0) {
+            sidebarSection.style.display = 'block';
+            sidebarChips.innerHTML = sidebarChipsHTML.join('');
+        } else {
+            sidebarSection.style.display = 'none';
+            sidebarChips.innerHTML = '';
         }
         
         // Opdater mobil filter count
@@ -1169,7 +1285,10 @@
         });
 
         // Nulstil
-        document.getElementById('reset-btn').addEventListener('click', () => {
+        document.getElementById('reset-btn').addEventListener('click', resetAllFilters);
+        document.getElementById('sidebar-clear-all').addEventListener('click', resetAllFilters);
+        
+        function resetAllFilters() {
             currentFilter = 'all';
             selectedShops.clear();
             currentSort = 'price-asc';
@@ -1193,7 +1312,7 @@
             renderFavs();
             renderActiveFilters();
             gtag('event', 'nulstil_filter');
-        });
+        }
 
         // Søgning med debounce
         let searchTimer;
