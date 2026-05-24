@@ -1,8 +1,8 @@
 {
-  "updated_at": "2026-05-24T09:11:54.866776",
+  "updated_at": "2026-05-24T22:58:29.468988",
   "stats": {
-    "total": 2310,
-    "deals": 482,
+    "total": 2305,
+    "deals": 477,
     "shops": 7,
     "shop_names": [
       "A Good Case",
@@ -5745,30 +5745,6 @@
       "max_discount_pct": 23.1
     },
     {
-      "id": 12975,
-      "name": "N'ice Chouffe 10% 33cl",
-      "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/nice-chouffe-33cl_e26f854a-bb65-4cb6-8968-9e6b41c8eb90.png?v=1773475994",
-      "type": "Winter Ale",
-      "abv": 10.0,
-      "volume_cl": 33.0,
-      "brewery": "Brasserie d’Achouffe",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Brygshoppen",
-          "price": 30.0,
-          "url": "https://brygshoppen.dk/products/nice-chouffe-33cl",
-          "discount_pct": 21.1,
-          "old_price": 38.0
-        }
-      ],
-      "cheapest_price": 30.0,
-      "min_price": 30.0,
-      "shop": "Brygshoppen",
-      "discount_pct": 21.1,
-      "max_discount_pct": 21.1
-    },
-    {
       "id": 12980,
       "name": "Tongerlo Christmas 7% 33cl",
       "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/tongerlo-christmas-33cl.png?v=1773472888",
@@ -7851,7 +7827,7 @@
       "max_discount_pct": 0
     },
     {
-      "id": 15763,
+      "id": 15773,
       "name": "Maître Tripel 8,5% 33cl",
       "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/maitre-tripel-8-5-33cl.png?v=1733847666",
       "type": "Tripel",
@@ -10252,7 +10228,7 @@
       "max_discount_pct": 0
     },
     {
-      "id": 15764,
+      "id": 15774,
       "name": "Imperial Stout 9,3% 33cl",
       "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/imperial-stout-9-3-33cl_e5717b14-1296-4555-8e23-bc8da32992e9.png?v=1753446200",
       "type": "Imperial Stout",
@@ -10468,7 +10444,7 @@
       "max_discount_pct": 0
     },
     {
-      "id": 15766,
+      "id": 15776,
       "name": "It's A Blond 5,9% 33cl",
       "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/its-a-blond-33cl_27db0da2-5945-4111-8396-339312eae8d3.png?v=1773482918",
       "type": "Blond",
@@ -10612,7 +10588,7 @@
       "max_discount_pct": 5.4
     },
     {
-      "id": 15767,
+      "id": 15777,
       "name": "Belgian Brown 6,8% 33cl",
       "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/belgien-brown-33cl.png?v=1753443086",
       "type": "Dubbel",
@@ -19206,7 +19182,7 @@
       "max_discount_pct": 0
     },
     {
-      "id": 15760,
+      "id": 15770,
       "name": "Ry Classic 5.6% 50cl",
       "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/ry-classic-5-6-50cl.png?v=1764503652",
       "type": "Lager",
@@ -19614,7 +19590,7 @@
       "max_discount_pct": 0
     },
     {
-      "id": 15765,
+      "id": 15775,
       "name": "Ry Pilsner 5,6% 50cl",
       "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/ry-pilsner.png?v=1747399627",
       "type": "Pilsner",
@@ -20622,7 +20598,7 @@
       "max_discount_pct": 0
     },
     {
-      "id": 15768,
+      "id": 15780,
       "name": "To Øl, #DIPA - Øl",
       "image": "https://www.vildmedvin.dk/img/1000/1000/resize/7/7/7777_1..jpg",
       "type": "Double IPA",
@@ -22835,37 +22811,6 @@
       "shop": "Vild med Vin",
       "discount_pct": 0,
       "max_discount_pct": 0
-    },
-    {
-      "id": 13610,
-      "name": "Omnipollo x Tired Hands – Watermelon – Milkshake IPA – 0,44 l. – 7,0%",
-      "image": "https://www.bestofbeers.dk/wp-content/uploads/2026/04/OmnipolloWaterMelonMilkshake.jpg",
-      "type": "India Pale Ale (IPA)",
-      "abv": 7.0,
-      "volume_cl": 44.0,
-      "brewery": "Omnipollo x Tired Hands",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Øltanken",
-          "price": 49.0,
-          "url": "https://oltanken.dk/products/omnipollo-x-tired-hands-watermelon-milkshake-ipa",
-          "discount_pct": 38.0,
-          "old_price": 79.0
-        },
-        {
-          "shop_name": "Best of Beers",
-          "price": 81.0,
-          "url": "https://www.bestofbeers.dk/shop/omnipollo-x-tired-hands-watermelon-milkshake-ipa-044-l-70/",
-          "discount_pct": 0,
-          "old_price": null
-        }
-      ],
-      "cheapest_price": 49.0,
-      "min_price": 49.0,
-      "shop": "Øltanken",
-      "discount_pct": 38.0,
-      "max_discount_pct": 38.0
     },
     {
       "id": 14362,
@@ -28416,30 +28361,6 @@
       "max_discount_pct": 0
     },
     {
-      "id": 15072,
-      "name": "SOMA Beer - Freeze",
-      "image": "https://cdn.shopify.com/s/files/1/0776/5209/9400/files/62A27AE3-C2B7-43B3-A69E-77CF3421CAF4.jpg?v=1773615686",
-      "type": "Double IPA",
-      "abv": null,
-      "volume_cl": null,
-      "brewery": "SOMA Beer",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Øltanken",
-          "price": 55.0,
-          "url": "https://oltanken.dk/products/soma-beer-freeze",
-          "discount_pct": 21.4,
-          "old_price": 70.0
-        }
-      ],
-      "cheapest_price": 55.0,
-      "min_price": 55.0,
-      "shop": "Øltanken",
-      "discount_pct": 21.4,
-      "max_discount_pct": 21.4
-    },
-    {
       "id": 14497,
       "name": "Pinta - Portermass double Vanilla",
       "image": "https://cdn.shopify.com/s/files/1/0776/5209/9400/files/A1576EF8-2C64-4075-96A1-A9E3BBBDD9D3.jpg?v=1768383683",
@@ -30230,7 +30151,7 @@
       "max_discount_pct": 0
     },
     {
-      "id": 15761,
+      "id": 15771,
       "name": "Öö 10,5% 33cl",
       "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/oo-10-5-33cl.png?v=1750597033",
       "type": "Imperial Stout",
@@ -35035,30 +34956,6 @@
       "max_discount_pct": 0
     },
     {
-      "id": 14335,
-      "name": "Vault City x Funky Fluid - Xtremely Stoopid",
-      "image": "https://cdn.shopify.com/s/files/1/0776/5209/9400/files/A6D46F70-A740-4D8C-B70C-4EA4C23011B7.jpg?v=1778703730",
-      "type": "Sour",
-      "abv": null,
-      "volume_cl": null,
-      "brewery": "Vault City x Funky Fluid",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Øltanken",
-          "price": 65.0,
-          "url": "https://oltanken.dk/products/vault-city-x-funky-fluid-xtremely-stoopid",
-          "discount_pct": 0,
-          "old_price": null
-        }
-      ],
-      "cheapest_price": 65.0,
-      "min_price": 65.0,
-      "shop": "Øltanken",
-      "discount_pct": 0,
-      "max_discount_pct": 0
-    },
-    {
       "id": 14353,
       "name": "Brasserie Sir John x Toltek x Le Ketch - Mets-y de la Zoune!",
       "image": "https://cdn.shopify.com/s/files/1/0776/5209/9400/files/AFC74855-4F49-4F5E-AB17-941C6D298875.jpg?v=1778021983",
@@ -36962,30 +36859,6 @@
       "max_discount_pct": 0
     },
     {
-      "id": 14428,
-      "name": "Track Brewing Co. - Impasse",
-      "image": "https://cdn.shopify.com/s/files/1/0776/5209/9400/files/4A313C3B-38DA-4600-895E-5D0479B330E6.jpg?v=1774465945",
-      "type": "New England IPA",
-      "abv": null,
-      "volume_cl": null,
-      "brewery": "Track Brewing Co.",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Øltanken",
-          "price": 68.0,
-          "url": "https://oltanken.dk/products/track-brewing-co-1",
-          "discount_pct": 23.6,
-          "old_price": 89.0
-        }
-      ],
-      "cheapest_price": 68.0,
-      "min_price": 68.0,
-      "shop": "Øltanken",
-      "discount_pct": 23.6,
-      "max_discount_pct": 23.6
-    },
-    {
       "id": 14432,
       "name": "Emperor’s Brewery - Interceptor",
       "image": "https://cdn.shopify.com/s/files/1/0776/5209/9400/files/FB9B0A74-7F83-4AED-B09F-38B279319117.jpg?v=1766794329",
@@ -38671,30 +38544,6 @@
       "shop": "Øltanken",
       "discount_pct": 0,
       "max_discount_pct": 0
-    },
-    {
-      "id": 14463,
-      "name": "Mortalis Brewing x Evil Twin NY - Even More Hydra",
-      "image": "https://cdn.shopify.com/s/files/1/0776/5209/9400/files/B90CF695-DC9D-453D-B14C-462F68B5391B.jpg?v=1772472995",
-      "type": "New England IPA",
-      "abv": null,
-      "volume_cl": null,
-      "brewery": "Mortalis Brewing x Evil Twin NY",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Øltanken",
-          "price": 74.0,
-          "url": "https://oltanken.dk/products/mortalis-brewing-x-evil-twin-ny-even-more-hydra",
-          "discount_pct": 27.5,
-          "old_price": 102.0
-        }
-      ],
-      "cheapest_price": 74.0,
-      "min_price": 74.0,
-      "shop": "Øltanken",
-      "discount_pct": 27.5,
-      "max_discount_pct": 27.5
     },
     {
       "id": 15194,
@@ -41190,6 +41039,30 @@
       "max_discount_pct": 0
     },
     {
+      "id": 13610,
+      "name": "Omnipollo x Tired Hands – Watermelon – Milkshake IPA – 0,44 l. – 7,0%",
+      "image": "https://www.bestofbeers.dk/wp-content/uploads/2026/04/OmnipolloWaterMelonMilkshake.jpg",
+      "type": "India Pale Ale (IPA)",
+      "abv": 7.0,
+      "volume_cl": 44.0,
+      "brewery": "Omnipollo x Tired Hands",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Best of Beers",
+          "price": 81.0,
+          "url": "https://www.bestofbeers.dk/shop/omnipollo-x-tired-hands-watermelon-milkshake-ipa-044-l-70/",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 81.0,
+      "min_price": 81.0,
+      "shop": "Best of Beers",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
       "id": 13642,
       "name": "Bad Seed Brewing – Hot Pot Jacuzzi – TDH Hazy Triple IPA – 0,44 l. – 10,0%",
       "image": "https://www.bestofbeers.dk/wp-content/uploads/2026/03/BadSeedHotPotJacuzzi.jpg",
@@ -42178,7 +42051,7 @@
       "max_discount_pct": 0
     },
     {
-      "id": 15762,
+      "id": 15772,
       "name": "No Way Out B.A. 10,5% 33cl",
       "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/no-way-out-b-a-10-5-33cl.png?v=1750592682",
       "type": "Barley Wine",
@@ -42992,54 +42865,6 @@
       "shop": "Øltanken",
       "discount_pct": 0,
       "max_discount_pct": 0
-    },
-    {
-      "id": 14413,
-      "name": "Fidens - DDH Farmer",
-      "image": "https://cdn.shopify.com/s/files/1/0776/5209/9400/files/E86D7A1B-B5A9-46CE-84CE-FF8E9190976A.jpg?v=1774643771",
-      "type": "Double IPA",
-      "abv": null,
-      "volume_cl": null,
-      "brewery": "Fidens",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Øltanken",
-          "price": 89.0,
-          "url": "https://oltanken.dk/products/fidens-ddh-farmer",
-          "discount_pct": 29.4,
-          "old_price": 126.0
-        }
-      ],
-      "cheapest_price": 89.0,
-      "min_price": 89.0,
-      "shop": "Øltanken",
-      "discount_pct": 29.4,
-      "max_discount_pct": 29.4
-    },
-    {
-      "id": 14420,
-      "name": "Fidens x Hop Butcher - Butchered Dreams",
-      "image": "https://cdn.shopify.com/s/files/1/0776/5209/9400/files/EB0D41D7-5A07-4760-8AC7-703FB2E20518.jpg?v=1774643540",
-      "type": "Double IPA",
-      "abv": null,
-      "volume_cl": null,
-      "brewery": "Fidens x Hop Butcher",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Øltanken",
-          "price": 89.0,
-          "url": "https://oltanken.dk/products/fidens-x-hop-butcher-butchered-dreams",
-          "discount_pct": 36.0,
-          "old_price": 139.0
-        }
-      ],
-      "cheapest_price": 89.0,
-      "min_price": 89.0,
-      "shop": "Øltanken",
-      "discount_pct": 36.0,
-      "max_discount_pct": 36.0
     },
     {
       "id": 14421,
@@ -44966,7 +44791,7 @@
       "max_discount_pct": 0
     },
     {
-      "id": 15759,
+      "id": 15769,
       "name": "10 - Imperial Stout 10% 44cl",
       "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/10-imperial-stout-10-44cl_9645d1f7-914c-43d6-b687-b07453f1aaf2.png?v=1761637026",
       "type": "Imperial Stout",
@@ -51050,6 +50875,30 @@
       "max_discount_pct": 46.6
     },
     {
+      "id": 15779,
+      "name": "Alkoholfri ØL sæt - Helt Uden Alkohol - 0,0 % - Med 7 øl",
+      "image": "https://cdn.shopify.com/s/files/1/0600/9438/2263/files/Alkoholfri0.0_064e7935-26fa-4d93-972e-01c5b6b4eb44.jpg?v=1779612055",
+      "type": "Beer",
+      "abv": 0.0,
+      "volume_cl": null,
+      "brewery": "Beershoppen",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Beershoppen",
+          "price": 195.0,
+          "url": "https://beershoppen.dk/products/alkoholfri-ol-saet-helt-uden-alkohol-0-0-med-7-ol",
+          "discount_pct": 13.3,
+          "old_price": 225.0
+        }
+      ],
+      "cheapest_price": 195.0,
+      "min_price": 195.0,
+      "shop": "Beershoppen",
+      "discount_pct": 13.3,
+      "max_discount_pct": 13.3
+    },
+    {
       "id": 15098,
       "name": "Swiss Bliss - Equilibrium - 37,5 cl. - 11,0%",
       "image": "https://cdn.shopify.com/s/files/1/0600/9438/2263/files/iss.jpg?v=1779370631",
@@ -55533,6 +55382,30 @@
       "shop": "Vild med Vin",
       "discount_pct": 0,
       "max_discount_pct": 0
+    },
+    {
+      "id": 15778,
+      "name": "VM Fodbold sæt m/ 7 øl fra Funky Fluid  - 7 x 50 cl.",
+      "image": "https://cdn.shopify.com/s/files/1/0600/9438/2263/files/VMfodbold.jpg?v=1779613907",
+      "type": "Beer",
+      "abv": null,
+      "volume_cl": null,
+      "brewery": "Beershoppen",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Beershoppen",
+          "price": 428.0,
+          "url": "https://beershoppen.dk/products/vm-fodbold-saet-m-7-ol-fra-funky-fluid-7-x-50-cl",
+          "discount_pct": 8.9,
+          "old_price": 470.0
+        }
+      ],
+      "cheapest_price": 428.0,
+      "min_price": 428.0,
+      "shop": "Beershoppen",
+      "discount_pct": 8.9,
+      "max_discount_pct": 8.9
     },
     {
       "id": 15128,
