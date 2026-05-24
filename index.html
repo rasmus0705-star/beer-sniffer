@@ -273,6 +273,19 @@
         .filter-chip .x:hover { opacity: 1; color: #e05050; }
         .active-filters-label { font-size: 0.72rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--text-muted); margin-right: 0.5rem; }
 
+        /* Deal banner */
+        .deal-banner { padding: 0.75rem 1.5rem; }
+        .deal-banner-content { background: linear-gradient(135deg, rgba(61,186,111,0.15) 0%, rgba(200,146,14,0.1) 100%); border: 1px solid rgba(61,186,111,0.35); border-radius: 12px; padding: 0.85rem 1.2rem; display: flex; align-items: center; gap: 1rem; box-shadow: 0 4px 20px rgba(61,186,111,0.1); transition: all 0.2s; flex-wrap: wrap; }
+        .deal-banner-content:hover { border-color: #3dba6f; box-shadow: 0 6px 25px rgba(61,186,111,0.2); }
+        .deal-banner-icon { font-size: 1.6rem; flex-shrink: 0; animation: pulse 2s infinite; }
+        @keyframes pulse { 0%, 100% { transform: scale(1) } 50% { transform: scale(1.15) } }
+        .deal-banner-text { flex: 1; min-width: 200px; display: flex; flex-direction: column; gap: 0.15rem; }
+        .deal-banner-label { font-size: 0.65rem; letter-spacing: 0.2em; text-transform: uppercase; color: #3dba6f; font-weight: 700; }
+        .deal-banner-deal { font-size: 0.95rem; color: var(--text); font-weight: 600; }
+        .deal-banner-deal .deal-pct { color: #3dba6f; font-family: 'Bebas Neue', sans-serif; font-size: 1.4rem; letter-spacing: 0.03em; margin-right: 0.4rem; }
+        .deal-banner-cta { background: linear-gradient(135deg, #3dba6f, #29a35a); color: #000; border: none; padding: 0.55rem 1.1rem; border-radius: 8px; font-family: 'DM Sans', sans-serif; font-weight: 700; font-size: 0.85rem; cursor: pointer; transition: all 0.15s; white-space: nowrap; box-shadow: 0 3px 12px rgba(61,186,111,0.3); }
+        .deal-banner-cta:hover { transform: translateY(-1px); box-shadow: 0 5px 16px rgba(61,186,111,0.45); }
+
         /* ── MOBIL/TABLET ── */
         @media (max-width: 1100px) {
             .layout-wrap { display: block; }
@@ -326,7 +339,7 @@
             <p class="brand-tagline">Vi sammenligner priser fra danske butikker, så du altid får den bedste deal</p>
             <div class="hero-cta">
                 <button onclick="document.getElementById('search').focus()" class="cta-btn">🔍 Find billigste øl nu</button>
-                <button onclick="document.getElementById('top-deals-toggle').click()" class="cta-btn secondary">🔥 Spar penge nu</button>
+                <button onclick="document.querySelector('.sidebar-filter-btn[data-filter=&quot;deals&quot;]').click()" class="cta-btn secondary">🔥 Spar penge nu</button>
             </div>
             <p class="hero-proof">Opdateret dagligt • <span id="shop-count-inline">–</span> øl sammenlignet</p>
             <p class="hero-trust">Ingen login &nbsp;•&nbsp; 100% gratis &nbsp;•&nbsp; Opdateres dagligt</p>
@@ -428,7 +441,6 @@
 
         <div class="sidebar-section">
             <button class="sidebar-reset" id="reset-btn">🔄 Nulstil alle filtre</button>
-            <button class="sidebar-filter-btn" id="top-deals-toggle" style="margin-top:0.5rem;text-align:center;justify-content:center">🏆 Vis Top 10 tilbud</button>
         </div>
     </aside>
 
@@ -440,9 +452,15 @@
     <div class="favs-grid" id="favs-grid"></div>
 </div>
 
-<div class="section-wrap" id="top-deals-section">
-    <div class="section-header"><span class="section-title">🏆 Top 10 Tilbud</span><span class="section-badge badge-deal">Størst besparelse</span></div>
-    <div class="top-deals-grid" id="top-deals-grid"></div>
+<div class="deal-banner" id="deal-banner" style="display:none">
+    <div class="deal-banner-content">
+        <span class="deal-banner-icon">🔥</span>
+        <div class="deal-banner-text">
+            <span class="deal-banner-label">Største tilbud lige nu</span>
+            <span class="deal-banner-deal" id="deal-banner-deal">–</span>
+        </div>
+        <button class="deal-banner-cta" id="deal-banner-cta">Se alle tilbud →</button>
+    </div>
 </div>
 
 <div class="grid-wrap">
@@ -801,34 +819,35 @@
 
     // ── Render favoritter ──
     function renderFavs() {
+        // Favoritter vises ikke længere som separat sektion - kun via filter
         const favBeers = allBeers.filter(b => favorites.has(b.normalized_name || b.name));
         document.getElementById('favs-count').textContent = favBeers.length;
-        const section = document.getElementById('favs-section');
-        if (!favBeers.length) { section.classList.remove('visible'); return; }
-        section.classList.add('visible');
-        document.getElementById('favs-grid').innerHTML = favBeers.map((b, i) => makeBeerCard(b, i * 0.05)).join('');
+        // Skjul favs-section helt - favoritter vises kun i hovedgrid når currentFilter === 'favs'
+        document.getElementById('favs-section').classList.remove('visible');
     }
 
-    // ── Render Top 10 ──
-    function renderTopDeals() {
-        const top = allBeers.filter(b => b.max_discount_pct > 0 && b.category !== 'smagekasse')
-            .sort((a, b) => b.max_discount_pct - a.max_discount_pct).slice(0, 10);
-        if (!top.length) return;
-        document.getElementById('top-deals-grid').innerHTML = top.map((b, i) => {
-            const best = [...(b.prices || [])].sort((a, c) => (c.discount_pct || 0) - (a.discount_pct || 0))[0] || {};
-            return `<div class="top-card" style="animation-delay:${i * 0.05}s">
-                <div class="top-card-rank">${i + 1}</div>
-                <div class="top-card-pct">−${b.max_discount_pct}%</div>
-                ${b.image ? `<img class="top-card-img" src="${b.image}" alt="${b.name}" loading="lazy" decoding="async" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">` : ''}
-                <div class="top-card-img-placeholder" style="${b.image ? 'display:none' : ''}">🍺</div>
-                <div class="top-card-body">
-                    <div class="top-card-shop">${best.shop_name || ''}</div>
-                    <div class="top-card-name">${b.name}</div>
-                    <div><span class="top-card-price">${(best.price || 0).toFixed(2)} kr</span>${best.old_price ? `<span class="top-card-old">${best.old_price.toFixed(2)} kr</span>` : ''}</div>
-                    ${best.url ? `<a class="top-card-link" href="${best.url}" target="_blank" onclick="gtag('event','koeb_klik',{beer_name:'${esc(b.name)}',placering:'top10',rank:${i + 1},rabat:${b.max_discount_pct || 0}})">Køb nu →</a>` : ''}
-                </div>
-            </div>`;
-        }).join('');
+    // ── Render Deal Banner (erstatter Top 10) ──
+    function renderDealBanner() {
+        const topDeal = allBeers.filter(b => b.max_discount_pct > 0 && b.category !== 'smagekasse')
+            .sort((a, b) => b.max_discount_pct - a.max_discount_pct)[0];
+        
+        const banner = document.getElementById('deal-banner');
+        if (!topDeal) { banner.style.display = 'none'; return; }
+        
+        const best = [...(topDeal.prices || [])].sort((a, c) => (c.discount_pct || 0) - (a.discount_pct || 0))[0] || {};
+        const shortName = topDeal.name.length > 50 ? topDeal.name.substring(0, 47) + '...' : topDeal.name;
+        
+        document.getElementById('deal-banner-deal').innerHTML = 
+            `<span class="deal-pct">−${topDeal.max_discount_pct}%</span> på <strong>${shortName}</strong>`;
+        
+        banner.style.display = 'block';
+        
+        // Klik på CTA = aktivér Tilbud-filter
+        document.getElementById('deal-banner-cta').onclick = () => {
+            const tilbudBtn = document.querySelector('.sidebar-filter-btn[data-filter="deals"]');
+            if (tilbudBtn) tilbudBtn.click();
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        };
     }
 
     // ── Setup dropdowns (ikke længere brugt, behold for kompatibilitet) ──
@@ -1094,7 +1113,7 @@
             currentPage = 1;
             renderGrid();
             renderFavs();
-            renderTopDeals();
+            renderDealBanner();
             renderActiveFilters();
         } catch (err) {
             document.getElementById('loading').innerHTML = '<div class="empty-icon">😢</div><p>Kunne ikke hente øl-data — tjek at data.json findes</p>';
@@ -1120,21 +1139,17 @@
                 btn.classList.add('active');
                 currentFilter = btn.dataset.filter;
                 currentPage = 1;
+                // Auto-sortér efter rabat når Tilbud klikkes
+                if (currentFilter === 'deals') {
+                    currentSort = 'discount';
+                    document.getElementById('sort-select').value = 'discount';
+                }
                 savePrefs();
                 renderGrid();
                 renderFavs();
                 renderActiveFilters();
                 gtag('event', 'filter_klik', { filter: currentFilter });
             });
-        });
-
-        // Top 10 toggle
-        document.getElementById('top-deals-toggle').addEventListener('click', function () {
-            const s = document.getElementById('top-deals-section');
-            const visible = s.classList.contains('visible');
-            s.classList.toggle('visible', !visible);
-            this.classList.toggle('active', !visible);
-            gtag('event', 'top10_toggle', { action: visible ? 'luk' : 'aaben' });
         });
 
         // Mobile sidebar toggle
@@ -1227,18 +1242,6 @@
 
         // Fav badge
         document.getElementById('fav-count-badge').textContent = favorites.size > 0 ? `(${favorites.size})` : '';
-
-        // Auto-vis Top 10
-        setTimeout(() => {
-            if (window.innerWidth > 640 && allBeers.length > 0) {
-                const s = document.getElementById('top-deals-section');
-                if (!s.classList.contains('visible')) {
-                    s.classList.add('visible');
-                    document.getElementById('top-deals-toggle').classList.add('active');
-                    gtag('event', 'top10_auto_vis');
-                }
-            }
-        }, 5000);
 
         // Hent data
         await loadData();
