@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <title>BeerSniffer Stats — Login</title>
+    <link rel="icon" href="/favicon.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg:#0a0805; --surface:#141009; --surface2:#1e1810; --surface3:#252018;
+            --gold:#c8920e; --gold-light:#f0b832; --amber:#d4620a;
+            --text:#f0e6d0; --text-muted:#7a6e5a; --text-dim:#4a4238;
+            --border:#28200e; --border-light:#3a3020;
+            --discount:#3dba6f; --danger:#e05050;
+        }
+        * { margin:0; padding:0; box-sizing:border-box; }
+        body { background:var(--bg); color:var(--text); font-family:'DM Sans',sans-serif; min-height:100vh; }
+        body::after { content:''; position:fixed; inset:0; background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E"); pointer-events:none; z-index:9999; }
+
+        /* ── LOGIN SCREEN ── */
+        .login-wrap { min-height:100vh; display:flex; align-items:center; justify-content:center; padding:2rem; position:relative; }
+        .login-wrap::before { content:''; position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); width:600px; height:400px; background:radial-gradient(ellipse,rgba(200,146,14,0.08) 0%,transparent 70%); pointer-events:none; }
+        .login-box { background:linear-gradient(180deg,var(--surface) 0%,var(--surface2) 100%); border:1px solid var(--border-light); border-radius:16px; padding:2.5rem 2rem; max-width:420px; width:100%; box-shadow:0 20px 60px rgba(0,0,0,0.5); position:relative; z-index:1; }
+        .login-logo { font-family:'Bebas Neue',sans-serif; font-size:2.8rem; text-align:center; background:linear-gradient(135deg,var(--gold-light),var(--gold),var(--amber)); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; letter-spacing:0.04em; margin-bottom:0.3rem; line-height:1; }
+        .login-subtitle { text-align:center; font-size:0.7rem; letter-spacing:0.3em; text-transform:uppercase; color:var(--gold); margin-bottom:0.5rem; }
+        .login-tagline { text-align:center; font-size:0.82rem; color:var(--text-muted); margin-bottom:2rem; }
+        .form-group { margin-bottom:1rem; }
+        .form-label { display:block; font-size:0.7rem; letter-spacing:0.15em; text-transform:uppercase; color:var(--text-muted); margin-bottom:0.4rem; }
+        .form-input { width:100%; background:var(--surface2); border:1px solid var(--border-light); border-radius:8px; padding:0.75rem 1rem; color:var(--text); font-family:'DM Sans',sans-serif; font-size:0.9rem; outline:none; transition:border-color 0.2s; }
+        .form-input:focus { border-color:var(--gold); }
+        .form-input::placeholder { color:var(--text-dim); }
+        .login-btn { width:100%; background:linear-gradient(135deg,var(--gold),var(--gold-light)); border:none; color:#000; font-family:'DM Sans',sans-serif; font-weight:700; font-size:0.92rem; padding:0.85rem; border-radius:8px; cursor:pointer; transition:all 0.15s; margin-top:0.5rem; }
+        .login-btn:hover { transform:translateY(-1px); box-shadow:0 6px 20px rgba(200,146,14,0.4); }
+        .login-btn:active { transform:translateY(0); }
+        .login-error { background:rgba(220,80,80,0.1); border:1px solid rgba(220,80,80,0.3); color:var(--danger); padding:0.7rem 1rem; border-radius:8px; font-size:0.82rem; margin-bottom:1rem; display:none; }
+        .login-error.visible { display:block; }
+        .login-footer { text-align:center; margin-top:1.5rem; font-size:0.72rem; color:var(--text-dim); }
+        .login-footer a { color:var(--gold); text-decoration:none; }
+
+        /* ── DASHBOARD ── */
+        .dashboard-wrap { display:none; min-height:100vh; flex-direction:column; }
+        .dashboard-wrap.visible { display:flex; }
+        .dashboard-header { background:rgba(10,8,5,0.97); backdrop-filter:blur(16px); border-bottom:1px solid var(--border-light); padding:1rem 2rem; display:flex; align-items:center; justify-content:space-between; gap:1rem; flex-wrap:wrap; position:sticky; top:0; z-index:100; }
+        .dashboard-logo { font-family:'Bebas Neue',sans-serif; font-size:1.8rem; letter-spacing:0.05em; background:linear-gradient(135deg,var(--gold-light),var(--gold)); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; text-decoration:none; }
+        .dashboard-user { display:flex; align-items:center; gap:1rem; flex-wrap:wrap; }
+        .user-info { display:flex; flex-direction:column; align-items:flex-end; }
+        .user-name { font-size:0.82rem; color:var(--text); font-weight:600; }
+        .user-email { font-size:0.7rem; color:var(--text-muted); }
+        .logout-btn { background:transparent; border:1px solid var(--border-light); color:var(--text-muted); padding:0.5rem 1rem; border-radius:7px; cursor:pointer; font-family:'DM Sans',sans-serif; font-size:0.78rem; letter-spacing:0.05em; transition:all 0.15s; }
+        .logout-btn:hover { border-color:var(--danger); color:var(--danger); }
+        .back-link { color:var(--text-muted); text-decoration:none; font-size:0.78rem; letter-spacing:0.1em; text-transform:uppercase; border:1px solid var(--border-light); padding:0.5rem 1rem; border-radius:7px; transition:all 0.2s; }
+        .back-link:hover { color:var(--gold); border-color:var(--gold); }
+
+        .dashboard-title-bar { padding:1.5rem 2rem; border-bottom:1px solid var(--border); }
+        .dashboard-title { font-family:'Bebas Neue',sans-serif; font-size:2rem; letter-spacing:0.05em; color:var(--gold-light); margin-bottom:0.3rem; }
+        .dashboard-subtitle { font-size:0.85rem; color:var(--text-muted); }
+
+        .dashboard-content { padding:2rem; flex:1; }
+        .dashboard-frame-wrap { background:var(--surface); border:1px solid var(--border-light); border-radius:12px; padding:0.5rem; max-width:1400px; margin:0 auto; }
+        .dashboard-frame { width:100%; height:calc(100vh - 250px); min-height:600px; border:none; border-radius:8px; background:#fff; }
+
+        .info-box { max-width:1400px; margin:1.5rem auto 0; background:linear-gradient(135deg,rgba(200,146,14,0.06),rgba(212,98,10,0.04)); border:1px solid var(--border-light); border-radius:10px; padding:1rem 1.25rem; font-size:0.82rem; color:var(--text-muted); }
+        .info-box strong { color:var(--gold-light); }
+
+        @media (max-width:640px) {
+            .login-box { padding:2rem 1.5rem; }
+            .login-logo { font-size:2.2rem; }
+            .dashboard-header { padding:0.85rem 1rem; }
+            .dashboard-content { padding:1rem; }
+            .dashboard-title-bar { padding:1rem; }
+            .dashboard-frame { height:calc(100vh - 220px); }
+        }
+    </style>
+</head>
+<body>
+
+<!-- ── LOGIN ── -->
+<div class="login-wrap" id="login-wrap">
+    <div class="login-box">
+        <div class="login-logo">🍺 BeerSniffer</div>
+        <div class="login-subtitle">Stats Dashboard</div>
+        <p class="login-tagline">Log ind for at se din statistik</p>
+
+        <div class="login-error" id="login-error">Forkert email eller password</div>
+
+        <form id="login-form">
+            <div class="form-group">
+                <label class="form-label" for="email">Email</label>
+                <input type="email" class="form-input" id="email" placeholder="din@email.dk" required autocomplete="email">
+            </div>
+            <div class="form-group">
+                <label class="form-label" for="password">Password</label>
+                <input type="password" class="form-input" id="password" placeholder="••••••••" required autocomplete="current-password">
+            </div>
+            <button type="submit" class="login-btn">Log ind →</button>
+        </form>
+
+        <div class="login-footer">
+            <a href="index.html">← Tilbage til BeerSniffer</a>
+            <br><br>
+            Glemt password? Kontakt <a href="mailto:admin@beersniffer.dk">admin@beersniffer.dk</a>
+        </div>
+    </div>
+</div>
+
+<!-- ── DASHBOARD ── -->
+<div class="dashboard-wrap" id="dashboard-wrap">
+    <div class="dashboard-header">
+        <a href="index.html" class="dashboard-logo">🍺 BeerSniffer</a>
+        <div class="dashboard-user">
+            <div class="user-info">
+                <span class="user-name" id="user-name">–</span>
+                <span class="user-email" id="user-email">–</span>
+            </div>
+            <a href="index.html" class="back-link">← Forsiden</a>
+            <button class="logout-btn" id="logout-btn">Log ud</button>
+        </div>
+    </div>
+
+    <div class="dashboard-title-bar">
+        <h1 class="dashboard-title">📊 Statistik & Trafik</h1>
+        <p class="dashboard-subtitle">Live data fra Google Analytics — opdateres automatisk</p>
+    </div>
+
+    <div class="dashboard-content">
+        <div class="dashboard-frame-wrap">
+            <iframe
+                class="dashboard-frame"
+                id="dashboard-frame"
+                src=""
+                frameborder="0"
+                allowfullscreen
+                sandbox="allow-storage-access-by-user-activation allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox">
+            </iframe>
+        </div>
+
+        <div class="info-box">
+            <strong>💡 Bemærk:</strong> Data fra GA4 har typisk 15 min - 4 timer delay. Brug datointervallet i toppen til at vælge periode. For partner-relevante udtræk, kontakt admin.
+        </div>
+    </div>
+</div>
+
+<script>
+    // ═══════════════════════════════════════════════════════════════
+    // BRUGERSYSTEM — Tilføj/fjern brugere her
+    // ═══════════════════════════════════════════════════════════════
+    //
+    // For at tilføje en partner:
+    //   1. Tilføj en linje i USERS listen nedenfor
+    //   2. (Valgfrit) Lav et separat Looker dashboard for dem og brug deres egen embed URL
+    //
+    // ═══════════════════════════════════════════════════════════════
+
+    const USERS = [
+        {
+            email: 'admin@beersniffer.dk',
+            password: 'S290307far@1@',
+            name: 'Rasmus Løth',
+            role: 'Admin',
+            dashboardUrl: 'https://datastudio.google.com/embed/reporting/394a3eba-097a-4738-978d-79d8f2c31f68/page/p_nslr3r5y3d'
+        }
+        // Eksempel på partner — fjern // i starten af linjerne for at aktivere:
+        // ,{
+        //     email: 'kontakt@brygshoppen.dk',
+        //     password: 'BrygSh0p2026',
+        //     name: 'Brygshoppen',
+        //     role: 'Partner',
+        //     dashboardUrl: 'https://datastudio.google.com/embed/reporting/DIN-PARTNER-RAPPORT-ID/page/...'
+        // }
+    ];
+
+    // ═══════════════════════════════════════════════════════════════
+    // KOD HEREFTER — RØR IKKE
+    // ═══════════════════════════════════════════════════════════════
+
+    const SESSION_KEY = 'bs_stats_session';
+
+    // Tjek om bruger allerede er logget ind
+    function checkSession() {
+        const session = localStorage.getItem(SESSION_KEY);
+        if (!session) return null;
+        try {
+            const data = JSON.parse(session);
+            // Session udløber efter 24 timer
+            if (Date.now() - data.timestamp > 24 * 60 * 60 * 1000) {
+                localStorage.removeItem(SESSION_KEY);
+                return null;
+            }
+            return data.user;
+        } catch (e) {
+            return null;
+        }
+    }
+
+    function saveSession(user) {
+        localStorage.setItem(SESSION_KEY, JSON.stringify({
+            user: user,
+            timestamp: Date.now()
+        }));
+    }
+
+    function showDashboard(user) {
+        document.getElementById('login-wrap').style.display = 'none';
+        document.getElementById('dashboard-wrap').classList.add('visible');
+        document.getElementById('user-name').textContent = user.name + ' (' + user.role + ')';
+        document.getElementById('user-email').textContent = user.email;
+        document.getElementById('dashboard-frame').src = user.dashboardUrl;
+    }
+
+    function showLogin() {
+        document.getElementById('login-wrap').style.display = 'flex';
+        document.getElementById('dashboard-wrap').classList.remove('visible');
+        document.getElementById('dashboard-frame').src = '';
+    }
+
+    function logout() {
+        localStorage.removeItem(SESSION_KEY);
+        document.getElementById('email').value = '';
+        document.getElementById('password').value = '';
+        showLogin();
+    }
+
+    // Login form
+    document.getElementById('login-form').addEventListener('submit', function(e) {
+        e.preventDefault();
+        const email = document.getElementById('email').value.trim().toLowerCase();
+        const password = document.getElementById('password').value;
+        const errorEl = document.getElementById('login-error');
+
+        const user = USERS.find(u => u.email.toLowerCase() === email && u.password === password);
+
+        if (user) {
+            errorEl.classList.remove('visible');
+            // Gem session uden password
+            const safeUser = {
+                email: user.email,
+                name: user.name,
+                role: user.role,
+                dashboardUrl: user.dashboardUrl
+            };
+            saveSession(safeUser);
+            showDashboard(safeUser);
+        } else {
+            errorEl.classList.add('visible');
+            document.getElementById('password').value = '';
+            document.getElementById('password').focus();
+        }
+    });
+
+    // Logout button
+    document.getElementById('logout-btn').addEventListener('click', logout);
+
+    // Init: tjek om bruger er logget ind
+    const existingUser = checkSession();
+    if (existingUser) {
+        showDashboard(existingUser);
+    } else {
+        showLogin();
+    }
+</script>
+
+</body>
+</html>
