@@ -926,6 +926,16 @@
             if (best.url) {
                 ctaEl.href = best.url;
                 ctaEl.style.display = 'inline-block';
+                // Track klik fra banner
+                ctaEl.onclick = () => {
+                    gtag('event', 'koeb_klik', {
+                        beer_name: deal.name,
+                        shop: best.shop_name || '',
+                        price: best.price || 0,
+                        placering: 'deal_banner',
+                        rabat: deal.max_discount_pct || 0
+                    });
+                };
             } else {
                 ctaEl.style.display = 'none';
             }
