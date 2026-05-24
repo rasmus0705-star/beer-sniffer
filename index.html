@@ -758,6 +758,14 @@
         </div>`;
     }
 
+    // ── Smagekasse detection ──
+    function isSmagekasse(b) {
+        if (b.category === 'smagekasse') return true;
+        if (b.is_smagekasse) return true;
+        const name = (b.name || '').toLowerCase();
+        return /smagekasse|smage kasse|mixkasse|mix kasse|prøvekasse|gavekasse|gave kasse|julekalender|adventskalender|julepakke/i.test(name);
+    }
+
     // ── Filter + sort lokalt ──
     function filterAndSortBeers(beers) {
         let filtered = beers;
@@ -782,7 +790,7 @@
         filtered = filtered.filter(b => {
             if (currentFilter === 'deals' && (!b.max_discount_pct || b.max_discount_pct === 0)) return false;
             if (currentFilter === 'alcohol-free' && b.abv && b.abv > 0.5) return false;
-            if (currentFilter === 'smagekasse' && b.category !== 'smagekasse') return false;
+            if (currentFilter === 'smagekasse' && !isSmagekasse(b)) return false;
             return true;
         });
 
@@ -861,7 +869,7 @@
     let dealBannerTopDeals = [];
 
     function renderDealBanner() {
-        dealBannerTopDeals = allBeers.filter(b => b.max_discount_pct > 0 && b.category !== 'smagekasse')
+        dealBannerTopDeals = allBeers.filter(b => b.max_discount_pct > 0 && !isSmagekasse(b))
             .sort((a, b) => b.max_discount_pct - a.max_discount_pct).slice(0, 5);
         
         const banner = document.getElementById('deal-banner');
