@@ -1,8 +1,8 @@
 {
-  "updated_at": "2026-05-23T20:30:55.560792",
+  "updated_at": "2026-05-24T09:11:54.866776",
   "stats": {
-    "total": 2308,
-    "deals": 452,
+    "total": 2310,
+    "deals": 482,
     "shops": 7,
     "shop_names": [
       "A Good Case",
@@ -764,30 +764,6 @@
       "max_discount_pct": 0
     },
     {
-      "id": 15334,
-      "name": "Estrella Damm, Daura Glutenfri 33 cl. - Øl",
-      "image": "https://www.vildmedvin.dk/img/1000/1000/resize/d/a/daura_flaske.jpg",
-      "type": "Pilsner",
-      "abv": 5.4,
-      "volume_cl": 33.0,
-      "brewery": "Estrella Damm",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Vild med Vin",
-          "price": 19.0,
-          "url": "https://www.vildmedvin.dk/estrella-damm-daura-glutenfri-33-cl-can",
-          "discount_pct": 0,
-          "old_price": null
-        }
-      ],
-      "cheapest_price": 19.0,
-      "min_price": 19.0,
-      "shop": "Vild med Vin",
-      "discount_pct": 0,
-      "max_discount_pct": 0
-    },
-    {
       "id": 14547,
       "name": "Brasserie De La Senne - Petit Bulba light ale",
       "image": "https://cdn.shopify.com/s/files/1/0776/5209/9400/files/020B1068-6879-405E-88EB-B88C41A0FEE0.jpg?v=1754597200",
@@ -1076,6 +1052,30 @@
       "max_discount_pct": 33.3
     },
     {
+      "id": 14552,
+      "name": "Stormtrooper Beer - Hop Art Sour",
+      "image": "https://cdn.shopify.com/s/files/1/0776/5209/9400/files/6051557A-A7C1-4928-A599-F13B80DDEDF9.jpg?v=1753998093",
+      "type": "Sour",
+      "abv": 4.5,
+      "volume_cl": 44.0,
+      "brewery": "Stormtrooper Beer",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Øltanken",
+          "price": 20.0,
+          "url": "https://oltanken.dk/products/stormtrooper-beer-2",
+          "discount_pct": 54.5,
+          "old_price": 44.0
+        }
+      ],
+      "cheapest_price": 20.0,
+      "min_price": 20.0,
+      "shop": "Øltanken",
+      "discount_pct": 54.5,
+      "max_discount_pct": 54.5
+    },
+    {
       "id": 15590,
       "name": "Estrella Galicia 1906 Red - Øl",
       "image": "https://www.vildmedvin.dk/img/1000/1000/resize/e/s/estrella_galicia_1906_red_vintage.jpg",
@@ -1292,6 +1292,30 @@
       "max_discount_pct": 0
     },
     {
+      "id": 14525,
+      "name": "Stormtrooper Beer - Rising son citra session NeIPA",
+      "image": "https://cdn.shopify.com/s/files/1/0776/5209/9400/files/53EEDB88-69B1-4723-BF8D-65FEBE75AF5F.jpg?v=1753998093",
+      "type": "New England IPA",
+      "abv": 4.5,
+      "volume_cl": 44.0,
+      "brewery": "Stormtrooper Beer",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Øltanken",
+          "price": 22.0,
+          "url": "https://oltanken.dk/products/stormtrooper-beer",
+          "discount_pct": 24.1,
+          "old_price": 29.0
+        }
+      ],
+      "cheapest_price": 22.0,
+      "min_price": 22.0,
+      "shop": "Øltanken",
+      "discount_pct": 24.1,
+      "max_discount_pct": 24.1
+    },
+    {
       "id": 15641,
       "name": "Rothaus Tannenzäpfle Alkoholfri - Øl",
       "image": "https://www.vildmedvin.dk/img/1000/1000/resize/r/o/rothaus_tannenz_pfle_alkoholfri.jpg",
@@ -1338,6 +1362,30 @@
       "shop": "Øltanken",
       "discount_pct": 20.7,
       "max_discount_pct": 20.7
+    },
+    {
+      "id": 15334,
+      "name": "Estrella Damm, Daura Glutenfri 33 cl. - Øl",
+      "image": "https://www.vildmedvin.dk/img/1000/1000/resize/d/a/daura_flaske.jpg",
+      "type": "Pilsner",
+      "abv": 5.4,
+      "volume_cl": 33.0,
+      "brewery": "Estrella Damm",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Vild med Vin",
+          "price": 23.0,
+          "url": "https://www.vildmedvin.dk/estrella-damm-daura-glutenfri-33-cl",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 23.0,
+      "min_price": 23.0,
+      "shop": "Vild med Vin",
+      "discount_pct": 0,
+      "max_discount_pct": 0
     },
     {
       "id": 15359,
@@ -2414,6 +2462,78 @@
       "max_discount_pct": 50.0
     },
     {
+      "id": 14347,
+      "name": "Omnipollo - Flora Session IPA 2026",
+      "image": "https://cdn.shopify.com/s/files/1/0776/5209/9400/files/70AB99F0-2A52-422E-A21B-038BDD971409.jpg?v=1778021983",
+      "type": "Session IPA",
+      "abv": null,
+      "volume_cl": null,
+      "brewery": "Omnipollo",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Øltanken",
+          "price": 25.0,
+          "url": "https://oltanken.dk/products/omnipollo-omnipollos-flora",
+          "discount_pct": 28.6,
+          "old_price": 35.0
+        }
+      ],
+      "cheapest_price": 25.0,
+      "min_price": 25.0,
+      "shop": "Øltanken",
+      "discount_pct": 28.6,
+      "max_discount_pct": 28.6
+    },
+    {
+      "id": 14405,
+      "name": "Friends x Transient Artisan Ales x Brewski - Ski-Brew",
+      "image": "https://cdn.shopify.com/s/files/1/0776/5209/9400/files/D2C17347-3DF5-4EAB-B97A-0DE18CF03234.jpg?v=1776104626",
+      "type": "Sour",
+      "abv": null,
+      "volume_cl": null,
+      "brewery": "Friends x Transient Artisan Ales x Brewski",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Øltanken",
+          "price": 25.0,
+          "url": "https://oltanken.dk/products/friends-x-transient-artisan-ales-x-brewski-ski-brew",
+          "discount_pct": 49.0,
+          "old_price": 49.0
+        }
+      ],
+      "cheapest_price": 25.0,
+      "min_price": 25.0,
+      "shop": "Øltanken",
+      "discount_pct": 49.0,
+      "max_discount_pct": 49.0
+    },
+    {
+      "id": 14554,
+      "name": "Stormtrooper Beer - 1000 Yard Stare IPA",
+      "image": "https://cdn.shopify.com/s/files/1/0776/5209/9400/files/1AF71D01-09AC-4175-B3F5-1673628D5746.jpg?v=1753998093",
+      "type": "India Pale Ale (IPA)",
+      "abv": 6.6,
+      "volume_cl": 44.0,
+      "brewery": "Stormtrooper Beer",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Øltanken",
+          "price": 25.0,
+          "url": "https://oltanken.dk/products/stormtrooper-beer-4",
+          "discount_pct": 43.2,
+          "old_price": 44.0
+        }
+      ],
+      "cheapest_price": 25.0,
+      "min_price": 25.0,
+      "shop": "Øltanken",
+      "discount_pct": 43.2,
+      "max_discount_pct": 43.2
+    },
+    {
       "id": 15184,
       "name": "Föroya Bjór, Black Sheep - Øl",
       "image": "https://www.vildmedvin.dk/img/1000/1000/resize/b/l/black_sheep.jpg",
@@ -3350,30 +3470,6 @@
           "shop_name": "Vild med Vin",
           "price": 27.0,
           "url": "https://www.vildmedvin.dk/st-feuillien-blonde",
-          "discount_pct": 0,
-          "old_price": null
-        }
-      ],
-      "cheapest_price": 27.0,
-      "min_price": 27.0,
-      "shop": "Vild med Vin",
-      "discount_pct": 0,
-      "max_discount_pct": 0
-    },
-    {
-      "id": 15492,
-      "name": "Åben, Y Non ABV Pale Ale Alkoholfri - Øl",
-      "image": "https://www.vildmedvin.dk/img/1000/1000/resize/_/b/_ben_y_alkoholfri.jpg",
-      "type": "Pale Ale",
-      "abv": 0.5,
-      "volume_cl": 33.0,
-      "brewery": null,
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Vild med Vin",
-          "price": 27.0,
-          "url": "https://www.vildmedvin.dk/aben-y-non-abv-pale-ale",
           "discount_pct": 0,
           "old_price": null
         }
@@ -4390,54 +4486,6 @@
       "max_discount_pct": 0
     },
     {
-      "id": 14525,
-      "name": "Stormtrooper Beer - Rising son citra session NeIPA",
-      "image": "https://cdn.shopify.com/s/files/1/0776/5209/9400/files/53EEDB88-69B1-4723-BF8D-65FEBE75AF5F.jpg?v=1753998093",
-      "type": "New England IPA",
-      "abv": 4.5,
-      "volume_cl": 44.0,
-      "brewery": "Stormtrooper Beer",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Øltanken",
-          "price": 29.0,
-          "url": "https://oltanken.dk/products/stormtrooper-beer",
-          "discount_pct": 0,
-          "old_price": null
-        }
-      ],
-      "cheapest_price": 29.0,
-      "min_price": 29.0,
-      "shop": "Øltanken",
-      "discount_pct": 0,
-      "max_discount_pct": 0
-    },
-    {
-      "id": 14552,
-      "name": "Stormtrooper Beer - Hop Art Sour",
-      "image": "https://cdn.shopify.com/s/files/1/0776/5209/9400/files/6051557A-A7C1-4928-A599-F13B80DDEDF9.jpg?v=1753998093",
-      "type": "Sour",
-      "abv": 4.5,
-      "volume_cl": 44.0,
-      "brewery": "Stormtrooper Beer",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Øltanken",
-          "price": 29.0,
-          "url": "https://oltanken.dk/products/stormtrooper-beer-2",
-          "discount_pct": 0,
-          "old_price": null
-        }
-      ],
-      "cheapest_price": 29.0,
-      "min_price": 29.0,
-      "shop": "Øltanken",
-      "discount_pct": 0,
-      "max_discount_pct": 0
-    },
-    {
       "id": 15174,
       "name": "Poppels, American Pale Ale - Øl",
       "image": "https://www.vildmedvin.dk/img/1000/1000/resize/a/m/american_pale_ale_1.jpg",
@@ -4835,30 +4883,6 @@
           "shop_name": "Vild med Vin",
           "price": 29.0,
           "url": "https://www.vildmedvin.dk/coopers-sparkeling-ale",
-          "discount_pct": 0,
-          "old_price": null
-        }
-      ],
-      "cheapest_price": 29.0,
-      "min_price": 29.0,
-      "shop": "Vild med Vin",
-      "discount_pct": 0,
-      "max_discount_pct": 0
-    },
-    {
-      "id": 15637,
-      "name": "Siren, Pils Glutenfri - Øl",
-      "image": "https://www.vildmedvin.dk/img/1000/1000/resize/s/i/siren_pils_glutenfri.jpg",
-      "type": "Pilsner",
-      "abv": 4.8,
-      "volume_cl": 33.0,
-      "brewery": null,
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Vild med Vin",
-          "price": 29.0,
-          "url": "https://www.vildmedvin.dk/siren-pils-glutenfri",
           "discount_pct": 0,
           "old_price": null
         }
@@ -7453,30 +7477,6 @@
       "max_discount_pct": 0
     },
     {
-      "id": 15234,
-      "name": "Sierra Nevada, Torpedo - Øl",
-      "image": "https://www.vildmedvin.dk/img/1000/1000/resize/4/4/444_2_2.jpg",
-      "type": "IPA",
-      "abv": 7.2,
-      "volume_cl": 35.5,
-      "brewery": null,
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Vild med Vin",
-          "price": 32.0,
-          "url": "https://www.vildmedvin.dk/sierra-nevada-torpedo",
-          "discount_pct": 0,
-          "old_price": null
-        }
-      ],
-      "cheapest_price": 32.0,
-      "min_price": 32.0,
-      "shop": "Vild med Vin",
-      "discount_pct": 0,
-      "max_discount_pct": 0
-    },
-    {
       "id": 15253,
       "name": "Sierra Nevada, Pale Ale - Øl",
       "image": "https://www.vildmedvin.dk/img/1000/1000/resize/p/a/pale_ale.jpg",
@@ -7851,7 +7851,7 @@
       "max_discount_pct": 0
     },
     {
-      "id": 15729,
+      "id": 15763,
       "name": "Maître Tripel 8,5% 33cl",
       "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/maitre-tripel-8-5-33cl.png?v=1733847666",
       "type": "Tripel",
@@ -10252,7 +10252,7 @@
       "max_discount_pct": 0
     },
     {
-      "id": 15730,
+      "id": 15764,
       "name": "Imperial Stout 9,3% 33cl",
       "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/imperial-stout-9-3-33cl_e5717b14-1296-4555-8e23-bc8da32992e9.png?v=1753446200",
       "type": "Imperial Stout",
@@ -10468,7 +10468,7 @@
       "max_discount_pct": 0
     },
     {
-      "id": 15732,
+      "id": 15766,
       "name": "It's A Blond 5,9% 33cl",
       "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/its-a-blond-33cl_27db0da2-5945-4111-8396-339312eae8d3.png?v=1773482918",
       "type": "Blond",
@@ -10612,7 +10612,7 @@
       "max_discount_pct": 5.4
     },
     {
-      "id": 15733,
+      "id": 15767,
       "name": "Belgian Brown 6,8% 33cl",
       "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/belgien-brown-33cl.png?v=1753443086",
       "type": "Dubbel",
@@ -10876,11 +10876,35 @@
       "max_discount_pct": 0
     },
     {
-      "id": 14347,
-      "name": "Omnipollo - Flora Session IPA 2026",
-      "image": "https://cdn.shopify.com/s/files/1/0776/5209/9400/files/70AB99F0-2A52-422E-A21B-038BDD971409.jpg?v=1778021983",
-      "type": "Session IPA",
+      "id": 15073,
+      "name": "Revolution Brewing - West Coast Hero",
+      "image": "https://cdn.shopify.com/s/files/1/0776/5209/9400/files/9F3D5054-8EB7-45A6-ADBA-DC3BA980E0DA.jpg?v=1772566378",
+      "type": "Double IPA",
       "abv": null,
+      "volume_cl": null,
+      "brewery": "Revolution Brewing",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Øltanken",
+          "price": 35.0,
+          "url": "https://oltanken.dk/products/revolution-brewing-west-coast-hero",
+          "discount_pct": 40.7,
+          "old_price": 59.0
+        }
+      ],
+      "cheapest_price": 35.0,
+      "min_price": 35.0,
+      "shop": "Øltanken",
+      "discount_pct": 40.7,
+      "max_discount_pct": 40.7
+    },
+    {
+      "id": 14349,
+      "name": "Omnipollo - Primal Self",
+      "image": "https://cdn.shopify.com/s/files/1/0776/5209/9400/files/3E365123-EBA3-453A-B5D4-5000C7FDAF72.jpg?v=1778021983",
+      "type": "West Coast IPA",
+      "abv": 5.2,
       "volume_cl": null,
       "brewery": "Omnipollo",
       "category": null,
@@ -10888,16 +10912,40 @@
         {
           "shop_name": "Øltanken",
           "price": 35.0,
-          "url": "https://oltanken.dk/products/omnipollo-omnipollos-flora",
-          "discount_pct": 0,
-          "old_price": null
+          "url": "https://oltanken.dk/products/omnipollo-primal-self",
+          "discount_pct": 30.0,
+          "old_price": 50.0
         }
       ],
       "cheapest_price": 35.0,
       "min_price": 35.0,
       "shop": "Øltanken",
-      "discount_pct": 0,
-      "max_discount_pct": 0
+      "discount_pct": 30.0,
+      "max_discount_pct": 30.0
+    },
+    {
+      "id": 14462,
+      "name": "Revolution Brewing - \nX-Hero Juicy Rush",
+      "image": "https://cdn.shopify.com/s/files/1/0776/5209/9400/files/599092B6-268F-4C49-84E2-F0DFFF1110FF.jpg?v=1772569276",
+      "type": "India Pale Ale (IPA)",
+      "abv": null,
+      "volume_cl": null,
+      "brewery": "Revolution Brewing",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Øltanken",
+          "price": 35.0,
+          "url": "https://oltanken.dk/products/revolution-brewing-x-hero-juicy-rush",
+          "discount_pct": 40.7,
+          "old_price": 59.0
+        }
+      ],
+      "cheapest_price": 35.0,
+      "min_price": 35.0,
+      "shop": "Øltanken",
+      "discount_pct": 40.7,
+      "max_discount_pct": 40.7
     },
     {
       "id": 15166,
@@ -13915,10 +13963,34 @@
       "max_discount_pct": 0
     },
     {
-      "id": 14462,
-      "name": "Revolution Brewing - \nX-Hero Juicy Rush",
-      "image": "https://cdn.shopify.com/s/files/1/0776/5209/9400/files/599092B6-268F-4C49-84E2-F0DFFF1110FF.jpg?v=1772569276",
-      "type": "India Pale Ale (IPA)",
+      "id": 15068,
+      "name": "Fierce Beer - Rye BA Raspberry &  Coconut Very Big Moose",
+      "image": "https://cdn.shopify.com/s/files/1/0776/5209/9400/files/BD250E72-B3E0-4F3D-96E6-44DDC1E01946.jpg?v=1762324138",
+      "type": "Imperial Stout",
+      "abv": 12.5,
+      "volume_cl": 33.0,
+      "brewery": "Fierce Beer",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Øltanken",
+          "price": 39.0,
+          "url": "https://oltanken.dk/products/1-rye-ba-raspberry-coconut-very-big-moose",
+          "discount_pct": 29.1,
+          "old_price": 55.0
+        }
+      ],
+      "cheapest_price": 39.0,
+      "min_price": 39.0,
+      "shop": "Øltanken",
+      "discount_pct": 29.1,
+      "max_discount_pct": 29.1
+    },
+    {
+      "id": 15070,
+      "name": "Revolution Brewing - \nAnti Hero",
+      "image": "https://cdn.shopify.com/s/files/1/0776/5209/9400/files/65062BC2-879B-4A11-8E0B-ED2E42A8BDB5.jpg?v=1772566378",
+      "type": "West Coast IPA",
       "abv": null,
       "volume_cl": null,
       "brewery": "Revolution Brewing",
@@ -13927,7 +13999,7 @@
         {
           "shop_name": "Øltanken",
           "price": 39.0,
-          "url": "https://oltanken.dk/products/revolution-brewing-x-hero-juicy-rush",
+          "url": "https://oltanken.dk/products/revolution-brewing-anti-hero",
           "discount_pct": 33.9,
           "old_price": 59.0
         }
@@ -13937,6 +14009,78 @@
       "shop": "Øltanken",
       "discount_pct": 33.9,
       "max_discount_pct": 33.9
+    },
+    {
+      "id": 14343,
+      "name": "Hop Hooligans - Cosmic Jelly",
+      "image": "https://cdn.shopify.com/s/files/1/0776/5209/9400/files/IMG_0207.jpg?v=1778189258",
+      "type": "New England IPA",
+      "abv": null,
+      "volume_cl": null,
+      "brewery": "Hop Hooligans",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Øltanken",
+          "price": 39.0,
+          "url": "https://oltanken.dk/products/hop-hooligans-cosmic-jelly",
+          "discount_pct": 39.1,
+          "old_price": 64.0
+        }
+      ],
+      "cheapest_price": 39.0,
+      "min_price": 39.0,
+      "shop": "Øltanken",
+      "discount_pct": 39.1,
+      "max_discount_pct": 39.1
+    },
+    {
+      "id": 14416,
+      "name": "Omnipollo - Strawberry Daiquiry",
+      "image": "https://cdn.shopify.com/s/files/1/0776/5209/9400/files/05F37163-0F40-4839-8913-B5464C913069.jpg?v=1774643229",
+      "type": "Sour",
+      "abv": null,
+      "volume_cl": null,
+      "brewery": "Omnipollo",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Øltanken",
+          "price": 39.0,
+          "url": "https://oltanken.dk/products/omnipollo-strawberry-daiquiry",
+          "discount_pct": 50.6,
+          "old_price": 79.0
+        }
+      ],
+      "cheapest_price": 39.0,
+      "min_price": 39.0,
+      "shop": "Øltanken",
+      "discount_pct": 50.6,
+      "max_discount_pct": 50.6
+    },
+    {
+      "id": 14446,
+      "name": "Hopalaa Brewery - Black Toffee Nut",
+      "image": "https://cdn.shopify.com/s/files/1/0776/5209/9400/files/D33DF767-BB44-45B8-AD37-D5B99F910CE9.jpg?v=1773339191",
+      "type": "Imperial Stout",
+      "abv": null,
+      "volume_cl": null,
+      "brewery": "Hopalaa Brewery",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Øltanken",
+          "price": 39.0,
+          "url": "https://oltanken.dk/products/opalaa-black-toffee-nut",
+          "discount_pct": 26.4,
+          "old_price": 53.0
+        }
+      ],
+      "cheapest_price": 39.0,
+      "min_price": 39.0,
+      "shop": "Øltanken",
+      "discount_pct": 26.4,
+      "max_discount_pct": 26.4
     },
     {
       "id": 15181,
@@ -18119,30 +18263,6 @@
       "max_discount_pct": 0
     },
     {
-      "id": 14554,
-      "name": "Stormtrooper Beer - 1000 Yard Stare IPA",
-      "image": "https://cdn.shopify.com/s/files/1/0776/5209/9400/files/1AF71D01-09AC-4175-B3F5-1673628D5746.jpg?v=1753998093",
-      "type": "India Pale Ale (IPA)",
-      "abv": 6.6,
-      "volume_cl": 44.0,
-      "brewery": "Stormtrooper Beer",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Øltanken",
-          "price": 44.0,
-          "url": "https://oltanken.dk/products/stormtrooper-beer-4",
-          "discount_pct": 0,
-          "old_price": null
-        }
-      ],
-      "cheapest_price": 44.0,
-      "min_price": 44.0,
-      "shop": "Øltanken",
-      "discount_pct": 0,
-      "max_discount_pct": 0
-    },
-    {
       "id": 14050,
       "name": "Mimosa - Fruited Sour fra Genys",
       "image": "https://cdn-main.ideal.shop/images/by_hash/e8619c7d718a2a1b461a9f67d0f3549d68c1a484a5c29ae06edeb178180a64fc/500-0/mimosa.jpg",
@@ -19086,7 +19206,7 @@
       "max_discount_pct": 0
     },
     {
-      "id": 15726,
+      "id": 15760,
       "name": "Ry Classic 5.6% 50cl",
       "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/ry-classic-5-6-50cl.png?v=1764503652",
       "type": "Lager",
@@ -19494,7 +19614,7 @@
       "max_discount_pct": 0
     },
     {
-      "id": 15731,
+      "id": 15765,
       "name": "Ry Pilsner 5,6% 50cl",
       "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/ry-pilsner.png?v=1747399627",
       "type": "Pilsner",
@@ -19854,30 +19974,6 @@
       "max_discount_pct": 0
     },
     {
-      "id": 15068,
-      "name": "Fierce Beer - Rye BA Raspberry &  Coconut Very Big Moose",
-      "image": "https://cdn.shopify.com/s/files/1/0776/5209/9400/files/BD250E72-B3E0-4F3D-96E6-44DDC1E01946.jpg?v=1762324138",
-      "type": "Imperial Stout",
-      "abv": 12.5,
-      "volume_cl": 33.0,
-      "brewery": "Fierce Beer",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Øltanken",
-          "price": 45.0,
-          "url": "https://oltanken.dk/products/1-rye-ba-raspberry-coconut-very-big-moose",
-          "discount_pct": 18.2,
-          "old_price": 55.0
-        }
-      ],
-      "cheapest_price": 45.0,
-      "min_price": 45.0,
-      "shop": "Øltanken",
-      "discount_pct": 18.2,
-      "max_discount_pct": 18.2
-    },
-    {
       "id": 14328,
       "name": "Vault City - Triple Fruited Mango",
       "image": "https://cdn.shopify.com/s/files/1/0776/5209/9400/files/95485F77-9595-4E21-8FC5-2842A6B61E99.jpg?v=1769892537",
@@ -19972,6 +20068,30 @@
       "shop": "Øltanken",
       "discount_pct": 0,
       "max_discount_pct": 0
+    },
+    {
+      "id": 14440,
+      "name": "Mad Scientist x Casino Mocca - Roasters Paradise Pampojila and Guatemala",
+      "image": "https://cdn.shopify.com/s/files/1/0776/5209/9400/files/40B83257-E408-43A3-8C18-D06EF0B78574.jpg?v=1773432503",
+      "type": "Imperial Stout",
+      "abv": null,
+      "volume_cl": null,
+      "brewery": "Mad Scientist x Casino Mocca",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Øltanken",
+          "price": 45.0,
+          "url": "https://oltanken.dk/products/mad-scientist-roasters-paradise-pampojila-and-guatemala-33-cl-ds",
+          "discount_pct": 34.8,
+          "old_price": 69.0
+        }
+      ],
+      "cheapest_price": 45.0,
+      "min_price": 45.0,
+      "shop": "Øltanken",
+      "discount_pct": 34.8,
+      "max_discount_pct": 34.8
     },
     {
       "id": 14512,
@@ -20502,7 +20622,7 @@
       "max_discount_pct": 0
     },
     {
-      "id": 15734,
+      "id": 15768,
       "name": "To Øl, #DIPA - Øl",
       "image": "https://www.vildmedvin.dk/img/1000/1000/resize/7/7/7777_1..jpg",
       "type": "Double IPA",
@@ -21846,6 +21966,54 @@
       "max_discount_pct": 0
     },
     {
+      "id": 14471,
+      "name": "Vault City - Buckie Bomb",
+      "image": "https://cdn.shopify.com/s/files/1/0776/5209/9400/files/01ADA12B-07C7-4425-B84F-EB410C7BC8F9.jpg?v=1770997315",
+      "type": "Sour",
+      "abv": null,
+      "volume_cl": null,
+      "brewery": "Vault City",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Øltanken",
+          "price": 46.0,
+          "url": "https://oltanken.dk/products/vault-city-buckie-bomb",
+          "discount_pct": 30.3,
+          "old_price": 66.0
+        }
+      ],
+      "cheapest_price": 46.0,
+      "min_price": 46.0,
+      "shop": "Øltanken",
+      "discount_pct": 30.3,
+      "max_discount_pct": 30.3
+    },
+    {
+      "id": 13383,
+      "name": "Stigbergets - Talk The Talk - 6,3% New England IPA",
+      "image": "https://cdn.shopify.com/s/files/1/0402/1239/8243/files/Stigbergets_TalkTheTalk.png?v=1765824232",
+      "type": "New England IPA",
+      "abv": 6.3,
+      "volume_cl": null,
+      "brewery": "Best before: 22/10-2026",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "A Good Case",
+          "price": 46.5,
+          "url": "https://agoodcase.dk/products/stigbergets-walk-the-walk-6-3-west-coast-ipa",
+          "discount_pct": 22.5,
+          "old_price": 60.0
+        }
+      ],
+      "cheapest_price": 46.5,
+      "min_price": 46.5,
+      "shop": "A Good Case",
+      "discount_pct": 22.5,
+      "max_discount_pct": 22.5
+    },
+    {
       "id": 15547,
       "name": "Dry & Bitter, Grapa - Øl",
       "image": "https://www.vildmedvin.dk/img/1000/1000/resize/d/r/dry_bitter_grappa.jpg",
@@ -22700,6 +22868,54 @@
       "max_discount_pct": 38.0
     },
     {
+      "id": 14362,
+      "name": "Garage Beer Co. - Soup DIPA",
+      "image": "https://cdn.shopify.com/s/files/1/0776/5209/9400/files/E256879C-C72C-4E2E-8A10-B9ED9888AEAE.jpg?v=1777791369",
+      "type": "Double IPA",
+      "abv": null,
+      "volume_cl": null,
+      "brewery": "Garage Beer Co.",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Øltanken",
+          "price": 49.0,
+          "url": "https://oltanken.dk/products/garage-beer-co-soup-ipa",
+          "discount_pct": 16.9,
+          "old_price": 59.0
+        }
+      ],
+      "cheapest_price": 49.0,
+      "min_price": 49.0,
+      "shop": "Øltanken",
+      "discount_pct": 16.9,
+      "max_discount_pct": 16.9
+    },
+    {
+      "id": 14495,
+      "name": "Lough Gill Brewery - Tara",
+      "image": "https://cdn.shopify.com/s/files/1/0776/5209/9400/files/42B1E131-DBF5-46FE-B997-639E6FBE65B6.jpg?v=1768594665",
+      "type": "Imperial Stout",
+      "abv": null,
+      "volume_cl": null,
+      "brewery": "Lough Gill Brewery",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Øltanken",
+          "price": 49.0,
+          "url": "https://oltanken.dk/products/lough-gill-tara",
+          "discount_pct": 30.0,
+          "old_price": 70.0
+        }
+      ],
+      "cheapest_price": 49.0,
+      "min_price": 49.0,
+      "shop": "Øltanken",
+      "discount_pct": 30.0,
+      "max_discount_pct": 30.0
+    },
+    {
       "id": 15454,
       "name": "Vemb Bryghus, Husets Classic - Øl",
       "image": "https://www.vildmedvin.dk/img/1000/1000/resize/v/e/vemb_bryghus_husets_classic.jpg",
@@ -22844,30 +23060,6 @@
       "max_discount_pct": 0
     },
     {
-      "id": 15070,
-      "name": "Revolution Brewing - \nAnti Hero",
-      "image": "https://cdn.shopify.com/s/files/1/0776/5209/9400/files/65062BC2-879B-4A11-8E0B-ED2E42A8BDB5.jpg?v=1772566378",
-      "type": "West Coast IPA",
-      "abv": null,
-      "volume_cl": null,
-      "brewery": "Revolution Brewing",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Øltanken",
-          "price": 49.0,
-          "url": "https://oltanken.dk/products/revolution-brewing-anti-hero",
-          "discount_pct": 0,
-          "old_price": null
-        }
-      ],
-      "cheapest_price": 49.0,
-      "min_price": 49.0,
-      "shop": "Øltanken",
-      "discount_pct": 0,
-      "max_discount_pct": 0
-    },
-    {
       "id": 14376,
       "name": "Funky Fluid - Mango & Kiwi Sour Ale",
       "image": "https://cdn.shopify.com/s/files/1/0776/5209/9400/files/6CD3E06C-932E-4237-ADB5-62F777EB851C.jpg?v=1777704127",
@@ -22916,52 +23108,28 @@
       "max_discount_pct": 0
     },
     {
-      "id": 14405,
-      "name": "Friends x Transient Artisan Ales x Brewski - Ski-Brew",
-      "image": "https://cdn.shopify.com/s/files/1/0776/5209/9400/files/D2C17347-3DF5-4EAB-B97A-0DE18CF03234.jpg?v=1776104626",
-      "type": "Sour",
+      "id": 14470,
+      "name": "Seven Island Brewery - XEz",
+      "image": "https://cdn.shopify.com/s/files/1/0776/5209/9400/files/0593760A-25D0-4E43-ADB4-48820AD6AEE7.jpg?v=1771965774",
+      "type": null,
       "abv": null,
       "volume_cl": null,
-      "brewery": "Friends x Transient Artisan Ales x Brewski",
+      "brewery": "Seven Island Brewery",
       "category": null,
       "prices": [
         {
           "shop_name": "Øltanken",
           "price": 49.0,
-          "url": "https://oltanken.dk/products/friends-x-transient-artisan-ales-x-brewski-ski-brew",
-          "discount_pct": 0,
-          "old_price": null
+          "url": "https://oltanken.dk/products/seven-island-brewery-xez",
+          "discount_pct": 37.2,
+          "old_price": 78.0
         }
       ],
       "cheapest_price": 49.0,
       "min_price": 49.0,
       "shop": "Øltanken",
-      "discount_pct": 0,
-      "max_discount_pct": 0
-    },
-    {
-      "id": 14416,
-      "name": "Omnipollo - Strawberry Daiquiry",
-      "image": "https://cdn.shopify.com/s/files/1/0776/5209/9400/files/05F37163-0F40-4839-8913-B5464C913069.jpg?v=1774643229",
-      "type": "Sour",
-      "abv": null,
-      "volume_cl": null,
-      "brewery": "Omnipollo",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Øltanken",
-          "price": 49.0,
-          "url": "https://oltanken.dk/products/omnipollo-strawberry-daiquiry",
-          "discount_pct": 38.0,
-          "old_price": 79.0
-        }
-      ],
-      "cheapest_price": 49.0,
-      "min_price": 49.0,
-      "shop": "Øltanken",
-      "discount_pct": 38.0,
-      "max_discount_pct": 38.0
+      "discount_pct": 37.2,
+      "max_discount_pct": 37.2
     },
     {
       "id": 14511,
@@ -23466,30 +23634,6 @@
       "shop": "A Good Case",
       "discount_pct": 24.6,
       "max_discount_pct": 24.6
-    },
-    {
-      "id": 13383,
-      "name": "Stigbergets - Talk The Talk - 6,3% New England IPA",
-      "image": "https://cdn.shopify.com/s/files/1/0402/1239/8243/files/Stigbergets_TalkTheTalk.png?v=1765824232",
-      "type": "New England IPA",
-      "abv": 6.3,
-      "volume_cl": null,
-      "brewery": "Best before: 22/10-2026",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "A Good Case",
-          "price": 49.75,
-          "url": "https://agoodcase.dk/products/stigbergets-talk-the-talk-6-3-new-england-ipa",
-          "discount_pct": 17.1,
-          "old_price": 60.0
-        }
-      ],
-      "cheapest_price": 49.75,
-      "min_price": 49.75,
-      "shop": "A Good Case",
-      "discount_pct": 17.1,
-      "max_discount_pct": 17.1
     },
     {
       "id": 15020,
@@ -25460,30 +25604,6 @@
       "max_discount_pct": 0
     },
     {
-      "id": 14349,
-      "name": "Omnipollo - Primal Self",
-      "image": "https://cdn.shopify.com/s/files/1/0776/5209/9400/files/3E365123-EBA3-453A-B5D4-5000C7FDAF72.jpg?v=1778021983",
-      "type": "West Coast IPA",
-      "abv": 5.2,
-      "volume_cl": null,
-      "brewery": "Omnipollo",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Øltanken",
-          "price": 50.0,
-          "url": "https://oltanken.dk/products/omnipollo-primal-self",
-          "discount_pct": 0,
-          "old_price": null
-        }
-      ],
-      "cheapest_price": 50.0,
-      "min_price": 50.0,
-      "shop": "Øltanken",
-      "discount_pct": 0,
-      "max_discount_pct": 0
-    },
-    {
       "id": 13995,
       "name": "Aeg - Wheat Stout fra Pühaste",
       "image": "https://cdn-main.ideal.shop/images/by_hash/6f445e20e74c446bba06ee55b0e197dc9fc16c828279ae0a4bad746aaba5a334/500-0/aeg.jpg",
@@ -26756,6 +26876,30 @@
       "max_discount_pct": 0
     },
     {
+      "id": 15071,
+      "name": "Track Brewing - Flightless",
+      "image": "https://cdn.shopify.com/s/files/1/0776/5209/9400/files/EAC2855B-7493-4F8E-A9FF-DA2560D84EC2.jpg?v=1774465944",
+      "type": "New England IPA",
+      "abv": null,
+      "volume_cl": null,
+      "brewery": "Track Brewing",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Øltanken",
+          "price": 53.0,
+          "url": "https://oltanken.dk/products/track-brewing-flightless",
+          "discount_pct": 25.4,
+          "old_price": 71.0
+        }
+      ],
+      "cheapest_price": 53.0,
+      "min_price": 53.0,
+      "shop": "Øltanken",
+      "discount_pct": 25.4,
+      "max_discount_pct": 25.4
+    },
+    {
       "id": 14435,
       "name": "Vault City x Væskeballancen - Sjampanjebrus",
       "image": "https://cdn.shopify.com/s/files/1/0776/5209/9400/files/D265C4BD-501F-4C88-A086-23C21D96AABD.jpg?v=1773873654",
@@ -26769,30 +26913,6 @@
           "shop_name": "Øltanken",
           "price": 53.0,
           "url": "https://oltanken.dk/products/vault-city-sjampanjebrus",
-          "discount_pct": 0,
-          "old_price": null
-        }
-      ],
-      "cheapest_price": 53.0,
-      "min_price": 53.0,
-      "shop": "Øltanken",
-      "discount_pct": 0,
-      "max_discount_pct": 0
-    },
-    {
-      "id": 14446,
-      "name": "Hopalaa Brewery - Black Toffee Nut",
-      "image": "https://cdn.shopify.com/s/files/1/0776/5209/9400/files/D33DF767-BB44-45B8-AD37-D5B99F910CE9.jpg?v=1773339191",
-      "type": "Imperial Stout",
-      "abv": null,
-      "volume_cl": null,
-      "brewery": "Hopalaa Brewery",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Øltanken",
-          "price": 53.0,
-          "url": "https://oltanken.dk/products/opalaa-black-toffee-nut",
           "discount_pct": 0,
           "old_price": null
         }
@@ -28294,6 +28414,30 @@
       "shop": "Best of Beers",
       "discount_pct": 0,
       "max_discount_pct": 0
+    },
+    {
+      "id": 15072,
+      "name": "SOMA Beer - Freeze",
+      "image": "https://cdn.shopify.com/s/files/1/0776/5209/9400/files/62A27AE3-C2B7-43B3-A69E-77CF3421CAF4.jpg?v=1773615686",
+      "type": "Double IPA",
+      "abv": null,
+      "volume_cl": null,
+      "brewery": "SOMA Beer",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Øltanken",
+          "price": 55.0,
+          "url": "https://oltanken.dk/products/soma-beer-freeze",
+          "discount_pct": 21.4,
+          "old_price": 70.0
+        }
+      ],
+      "cheapest_price": 55.0,
+      "min_price": 55.0,
+      "shop": "Øltanken",
+      "discount_pct": 21.4,
+      "max_discount_pct": 21.4
     },
     {
       "id": 14497,
@@ -30086,7 +30230,7 @@
       "max_discount_pct": 0
     },
     {
-      "id": 15727,
+      "id": 15761,
       "name": "Öö 10,5% 33cl",
       "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/oo-10-5-33cl.png?v=1750597033",
       "type": "Imperial Stout",
@@ -30357,30 +30501,6 @@
       "max_discount_pct": 0
     },
     {
-      "id": 14362,
-      "name": "Garage Beer Co. - Soup DIPA",
-      "image": "https://cdn.shopify.com/s/files/1/0776/5209/9400/files/E256879C-C72C-4E2E-8A10-B9ED9888AEAE.jpg?v=1777791369",
-      "type": "Double IPA",
-      "abv": null,
-      "volume_cl": null,
-      "brewery": "Garage Beer Co.",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Øltanken",
-          "price": 59.0,
-          "url": "https://oltanken.dk/products/garage-beer-co-soup-ipa",
-          "discount_pct": 0,
-          "old_price": null
-        }
-      ],
-      "cheapest_price": 59.0,
-      "min_price": 59.0,
-      "shop": "Øltanken",
-      "discount_pct": 0,
-      "max_discount_pct": 0
-    },
-    {
       "id": 13502,
       "name": "Whiplash - Only the Good Notes - 6,8% New England IPA",
       "image": "https://cdn.shopify.com/s/files/1/0402/1239/8243/files/Whiplash_OnlyTheGood.png?v=1765824629",
@@ -30453,28 +30573,28 @@
       "max_discount_pct": 15.7
     },
     {
-      "id": 15073,
-      "name": "Revolution Brewing - West Coast Hero",
-      "image": "https://cdn.shopify.com/s/files/1/0776/5209/9400/files/9F3D5054-8EB7-45A6-ADBA-DC3BA980E0DA.jpg?v=1772566378",
-      "type": "Double IPA",
+      "id": 14333,
+      "name": "SOMA Beer - Fusion",
+      "image": "https://cdn.shopify.com/s/files/1/0776/5209/9400/files/7754DDDE-57B5-444E-9C14-B09385BE1950.jpg?v=1778703730",
+      "type": "New England IPA",
       "abv": null,
       "volume_cl": null,
-      "brewery": "Revolution Brewing",
+      "brewery": "SOMA Beer",
       "category": null,
       "prices": [
         {
           "shop_name": "Øltanken",
           "price": 59.0,
-          "url": "https://oltanken.dk/products/revolution-brewing-west-coast-hero",
-          "discount_pct": 0,
-          "old_price": null
+          "url": "https://oltanken.dk/products/soma-beer-fusion",
+          "discount_pct": 13.2,
+          "old_price": 68.0
         }
       ],
       "cheapest_price": 59.0,
       "min_price": 59.0,
       "shop": "Øltanken",
-      "discount_pct": 0,
-      "max_discount_pct": 0
+      "discount_pct": 13.2,
+      "max_discount_pct": 13.2
     },
     {
       "id": 14375,
@@ -34085,30 +34205,6 @@
       "max_discount_pct": 0
     },
     {
-      "id": 14471,
-      "name": "Vault City - Buckie Bomb",
-      "image": "https://cdn.shopify.com/s/files/1/0776/5209/9400/files/01ADA12B-07C7-4425-B84F-EB410C7BC8F9.jpg?v=1770997315",
-      "type": "Sour",
-      "abv": null,
-      "volume_cl": null,
-      "brewery": "Vault City",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Øltanken",
-          "price": 62.0,
-          "url": "https://oltanken.dk/products/vault-city-buckie-bomb",
-          "discount_pct": 0,
-          "old_price": null
-        }
-      ],
-      "cheapest_price": 62.0,
-      "min_price": 62.0,
-      "shop": "Øltanken",
-      "discount_pct": 0,
-      "max_discount_pct": 0
-    },
-    {
       "id": 14023,
       "name": "Vision - Port BA Dark Sour fra Blackout Brewing",
       "image": "https://cdn-main.ideal.shop/images/by_hash/a39adfd16bbc8f2e61470af9cabe8eb455edddfdb29c096e382bad12547da18e/500-0/vision.jpg",
@@ -34282,30 +34378,6 @@
           "url": "https://oltanken.dk/products/garage-beer-co-soup-dolcita",
           "discount_pct": 0,
           "old_price": null
-        }
-      ],
-      "cheapest_price": 64.0,
-      "min_price": 64.0,
-      "shop": "Øltanken",
-      "discount_pct": 0,
-      "max_discount_pct": 0
-    },
-    {
-      "id": 14343,
-      "name": "Hop Hooligans - Cosmic Jelly",
-      "image": "https://cdn.shopify.com/s/files/1/0776/5209/9400/files/IMG_0207.jpg?v=1778189258",
-      "type": "New England IPA",
-      "abv": null,
-      "volume_cl": null,
-      "brewery": "Hop Hooligans",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Øltanken",
-          "price": 64.0,
-          "url": "https://oltanken.dk/products/hop-hooligans-cosmic-jelly",
-          "discount_pct": 0,
-          "old_price": 64.0
         }
       ],
       "cheapest_price": 64.0,
@@ -34985,6 +35057,30 @@
       "shop": "Øltanken",
       "discount_pct": 0,
       "max_discount_pct": 0
+    },
+    {
+      "id": 14353,
+      "name": "Brasserie Sir John x Toltek x Le Ketch - Mets-y de la Zoune!",
+      "image": "https://cdn.shopify.com/s/files/1/0776/5209/9400/files/AFC74855-4F49-4F5E-AB17-941C6D298875.jpg?v=1778021983",
+      "type": "New England IPA",
+      "abv": null,
+      "volume_cl": null,
+      "brewery": "Brasserie Sir John x Toltek x Le Ketch",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Øltanken",
+          "price": 65.0,
+          "url": "https://oltanken.dk/products/brasserie-sir-john-x-toltek-x-le-ketch-mets-y-de-la-zoune",
+          "discount_pct": 27.8,
+          "old_price": 90.0
+        }
+      ],
+      "cheapest_price": 65.0,
+      "min_price": 65.0,
+      "shop": "Øltanken",
+      "discount_pct": 27.8,
+      "max_discount_pct": 27.8
     },
     {
       "id": 13968,
@@ -36626,6 +36722,30 @@
       "max_discount_pct": 0
     },
     {
+      "id": 15753,
+      "name": "SOMA Beer - Proxy",
+      "image": "https://cdn.shopify.com/s/files/1/0776/5209/9400/files/6634E529-439D-4F00-AF0E-601F6EDF0448.jpg?v=1779568653",
+      "type": "New England IPA",
+      "abv": null,
+      "volume_cl": null,
+      "brewery": "SOMA Beer",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Øltanken",
+          "price": 67.0,
+          "url": "https://oltanken.dk/products/soma-beer-proxy",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 67.0,
+      "min_price": 67.0,
+      "shop": "Øltanken",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
       "id": 15655,
       "name": "Vault City, Buckie Bomb - Øl",
       "image": "https://www.vildmedvin.dk/img/1000/1000/resize/v/a/vault_city_buckie_bomb.jpg",
@@ -36818,30 +36938,6 @@
       "max_discount_pct": 0
     },
     {
-      "id": 14333,
-      "name": "SOMA Beer - Fusion",
-      "image": "https://cdn.shopify.com/s/files/1/0776/5209/9400/files/7754DDDE-57B5-444E-9C14-B09385BE1950.jpg?v=1778703730",
-      "type": "New England IPA",
-      "abv": null,
-      "volume_cl": null,
-      "brewery": "SOMA Beer",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Øltanken",
-          "price": 68.0,
-          "url": "https://oltanken.dk/products/soma-beer-fusion",
-          "discount_pct": 0,
-          "old_price": null
-        }
-      ],
-      "cheapest_price": 68.0,
-      "min_price": 68.0,
-      "shop": "Øltanken",
-      "discount_pct": 0,
-      "max_discount_pct": 0
-    },
-    {
       "id": 14368,
       "name": "Van Ewing - Nary a Cloud",
       "image": "https://cdn.shopify.com/s/files/1/0776/5209/9400/files/70FA106A-BE2C-432A-841D-A822B3295FF8.jpg?v=1777791646",
@@ -36864,6 +36960,30 @@
       "shop": "Øltanken",
       "discount_pct": 0,
       "max_discount_pct": 0
+    },
+    {
+      "id": 14428,
+      "name": "Track Brewing Co. - Impasse",
+      "image": "https://cdn.shopify.com/s/files/1/0776/5209/9400/files/4A313C3B-38DA-4600-895E-5D0479B330E6.jpg?v=1774465945",
+      "type": "New England IPA",
+      "abv": null,
+      "volume_cl": null,
+      "brewery": "Track Brewing Co.",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Øltanken",
+          "price": 68.0,
+          "url": "https://oltanken.dk/products/track-brewing-co-1",
+          "discount_pct": 23.6,
+          "old_price": 89.0
+        }
+      ],
+      "cheapest_price": 68.0,
+      "min_price": 68.0,
+      "shop": "Øltanken",
+      "discount_pct": 23.6,
+      "max_discount_pct": 23.6
     },
     {
       "id": 14432,
@@ -36986,52 +37106,52 @@
       "max_discount_pct": 19.8
     },
     {
-      "id": 14440,
-      "name": "Mad Scientist x Casino Mocca - Roasters Paradise Pampojila and Guatemala",
-      "image": "https://cdn.shopify.com/s/files/1/0776/5209/9400/files/40B83257-E408-43A3-8C18-D06EF0B78574.jpg?v=1773432503",
+      "id": 14351,
+      "name": "Brasserie Sir John x Boreale - Dancing Bears",
+      "image": "https://cdn.shopify.com/s/files/1/0776/5209/9400/files/256609D4-A288-4CF7-B60C-382978ACA6B8.jpg?v=1778021983",
+      "type": "New England IPA",
+      "abv": null,
+      "volume_cl": null,
+      "brewery": "Brasserie Sir John x Boreale",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Øltanken",
+          "price": 69.0,
+          "url": "https://oltanken.dk/products/brasserie-sir-john-x-boreale-dancing-bears",
+          "discount_pct": 22.5,
+          "old_price": 89.0
+        }
+      ],
+      "cheapest_price": 69.0,
+      "min_price": 69.0,
+      "shop": "Øltanken",
+      "discount_pct": 22.5,
+      "max_discount_pct": 22.5
+    },
+    {
+      "id": 14369,
+      "name": "Timber Ales - Blended Fields BA",
+      "image": "https://cdn.shopify.com/s/files/1/0776/5209/9400/files/5A862DD1-6D7A-477D-AF2D-F482221A75C0.jpg?v=1777754353",
       "type": "Imperial Stout",
       "abv": null,
       "volume_cl": null,
-      "brewery": "Mad Scientist x Casino Mocca",
+      "brewery": "Timber Ales",
       "category": null,
       "prices": [
         {
           "shop_name": "Øltanken",
           "price": 69.0,
-          "url": "https://oltanken.dk/products/mad-scientist-roasters-paradise-pampojila-and-guatemala-33-cl-ds",
-          "discount_pct": 0,
-          "old_price": null
+          "url": "https://oltanken.dk/products/timber-ales-blended-fields-ba",
+          "discount_pct": 12.7,
+          "old_price": 79.0
         }
       ],
       "cheapest_price": 69.0,
       "min_price": 69.0,
       "shop": "Øltanken",
-      "discount_pct": 0,
-      "max_discount_pct": 0
-    },
-    {
-      "id": 14470,
-      "name": "Seven Island Brewery - XEz",
-      "image": "https://cdn.shopify.com/s/files/1/0776/5209/9400/files/0593760A-25D0-4E43-ADB4-48820AD6AEE7.jpg?v=1771965774",
-      "type": null,
-      "abv": null,
-      "volume_cl": null,
-      "brewery": "Seven Island Brewery",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Øltanken",
-          "price": 69.0,
-          "url": "https://oltanken.dk/products/seven-island-brewery-xez",
-          "discount_pct": 0,
-          "old_price": null
-        }
-      ],
-      "cheapest_price": 69.0,
-      "min_price": 69.0,
-      "shop": "Øltanken",
-      "discount_pct": 0,
-      "max_discount_pct": 0
+      "discount_pct": 12.7,
+      "max_discount_pct": 12.7
     },
     {
       "id": 14490,
@@ -37353,30 +37473,6 @@
       "max_discount_pct": 0
     },
     {
-      "id": 14495,
-      "name": "Lough Gill Brewery - Tara",
-      "image": "https://cdn.shopify.com/s/files/1/0776/5209/9400/files/42B1E131-DBF5-46FE-B997-639E6FBE65B6.jpg?v=1768594665",
-      "type": "Imperial Stout",
-      "abv": null,
-      "volume_cl": null,
-      "brewery": "Lough Gill Brewery",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Øltanken",
-          "price": 70.0,
-          "url": "https://oltanken.dk/products/lough-gill-tara",
-          "discount_pct": 0,
-          "old_price": null
-        }
-      ],
-      "cheapest_price": 70.0,
-      "min_price": 70.0,
-      "shop": "Øltanken",
-      "discount_pct": 0,
-      "max_discount_pct": 0
-    },
-    {
       "id": 12962,
       "name": "Fagnes Christmas 8,5% 75cl",
       "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/fagnes-christmas-8-5-75cl.png?v=1761764389",
@@ -37678,30 +37774,6 @@
           "shop_name": "Øltanken",
           "price": 70.0,
           "url": "https://oltanken.dk/products/finback-brewery",
-          "discount_pct": 0,
-          "old_price": null
-        }
-      ],
-      "cheapest_price": 70.0,
-      "min_price": 70.0,
-      "shop": "Øltanken",
-      "discount_pct": 0,
-      "max_discount_pct": 0
-    },
-    {
-      "id": 15072,
-      "name": "SOMA Beer - Freeze",
-      "image": "https://cdn.shopify.com/s/files/1/0776/5209/9400/files/62A27AE3-C2B7-43B3-A69E-77CF3421CAF4.jpg?v=1773615686",
-      "type": "Double IPA",
-      "abv": null,
-      "volume_cl": null,
-      "brewery": "SOMA Beer",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Øltanken",
-          "price": 70.0,
-          "url": "https://oltanken.dk/products/soma-beer-freeze",
           "discount_pct": 0,
           "old_price": null
         }
@@ -38337,30 +38409,6 @@
       "max_discount_pct": 0
     },
     {
-      "id": 15071,
-      "name": "Track Brewing - Flightless",
-      "image": "https://cdn.shopify.com/s/files/1/0776/5209/9400/files/EAC2855B-7493-4F8E-A9FF-DA2560D84EC2.jpg?v=1774465944",
-      "type": "New England IPA",
-      "abv": null,
-      "volume_cl": null,
-      "brewery": "Track Brewing",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Øltanken",
-          "price": 71.0,
-          "url": "https://oltanken.dk/products/track-brewing-flightless",
-          "discount_pct": 0,
-          "old_price": null
-        }
-      ],
-      "cheapest_price": 71.0,
-      "min_price": 71.0,
-      "shop": "Øltanken",
-      "discount_pct": 0,
-      "max_discount_pct": 0
-    },
-    {
       "id": 14397,
       "name": "Brouwerij Boon - Mariage Parfait Anniversary Gueze",
       "image": "https://cdn.shopify.com/s/files/1/0776/5209/9400/files/0A642052-6FE3-406D-A2DF-C0337EABDBC8.jpg?v=1761158147",
@@ -38553,6 +38601,30 @@
       "max_discount_pct": 0
     },
     {
+      "id": 15757,
+      "name": "Bicycle Brewing - Topaz cider",
+      "image": "https://cdn.shopify.com/s/files/1/0776/5209/9400/files/A38DAB67-048F-465A-A6F1-EC6A7A6DC888.jpg?v=1779568653",
+      "type": "Cider",
+      "abv": null,
+      "volume_cl": null,
+      "brewery": "Bicycle Brewing",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Øltanken",
+          "price": 74.0,
+          "url": "https://oltanken.dk/products/bicycle-brewing-topaz-cider",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 74.0,
+      "min_price": 74.0,
+      "shop": "Øltanken",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
       "id": 15495,
       "name": "3 Fonteinen Oude Geuze - Øl",
       "image": "https://www.vildmedvin.dk/img/1000/1000/resize/3/_/3_fonteinen_oude_geuze.jpg",
@@ -38599,6 +38671,30 @@
       "shop": "Øltanken",
       "discount_pct": 0,
       "max_discount_pct": 0
+    },
+    {
+      "id": 14463,
+      "name": "Mortalis Brewing x Evil Twin NY - Even More Hydra",
+      "image": "https://cdn.shopify.com/s/files/1/0776/5209/9400/files/B90CF695-DC9D-453D-B14C-462F68B5391B.jpg?v=1772472995",
+      "type": "New England IPA",
+      "abv": null,
+      "volume_cl": null,
+      "brewery": "Mortalis Brewing x Evil Twin NY",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Øltanken",
+          "price": 74.0,
+          "url": "https://oltanken.dk/products/mortalis-brewing-x-evil-twin-ny-even-more-hydra",
+          "discount_pct": 27.5,
+          "old_price": 102.0
+        }
+      ],
+      "cheapest_price": 74.0,
+      "min_price": 74.0,
+      "shop": "Øltanken",
+      "discount_pct": 27.5,
+      "max_discount_pct": 27.5
     },
     {
       "id": 15194,
@@ -39069,6 +39165,54 @@
       "shop": "Beershoppen",
       "discount_pct": 0,
       "max_discount_pct": 0
+    },
+    {
+      "id": 14354,
+      "name": "Brasserie du Bas-Canada x Off Script Brewing - Crepuscule",
+      "image": "https://cdn.shopify.com/s/files/1/0776/5209/9400/files/429FA5EF-6B82-4337-8F94-37C0D02CA281.jpg?v=1778068314",
+      "type": "Double IPA",
+      "abv": null,
+      "volume_cl": null,
+      "brewery": "Brasserie du Bas-Canada x Off Script Brewing",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Øltanken",
+          "price": 75.0,
+          "url": "https://oltanken.dk/products/brasserie-du-bas-canada-x-off-script-brewing-crepuscule",
+          "discount_pct": 24.2,
+          "old_price": 99.0
+        }
+      ],
+      "cheapest_price": 75.0,
+      "min_price": 75.0,
+      "shop": "Øltanken",
+      "discount_pct": 24.2,
+      "max_discount_pct": 24.2
+    },
+    {
+      "id": 14357,
+      "name": "Imprint Beer Co. x Vitamin Sea - Squid Prints",
+      "image": "https://cdn.shopify.com/s/files/1/0776/5209/9400/files/F5503737-9B15-40DA-8835-2C5138CCAEDE.jpg?v=1777958736",
+      "type": "Double IPA",
+      "abv": null,
+      "volume_cl": null,
+      "brewery": "Imprint Beer Co. x Vitamin Sea",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Øltanken",
+          "price": 75.0,
+          "url": "https://oltanken.dk/products/imprint-beer-co-x-vitamin-sea-squid-prints",
+          "discount_pct": 24.2,
+          "old_price": 99.0
+        }
+      ],
+      "cheapest_price": 75.0,
+      "min_price": 75.0,
+      "shop": "Øltanken",
+      "discount_pct": 24.2,
+      "max_discount_pct": 24.2
     },
     {
       "id": 14518,
@@ -40123,30 +40267,6 @@
           "shop_name": "Øltanken",
           "price": 79.0,
           "url": "https://oltanken.dk/products/the-veil-new-mirage",
-          "discount_pct": 0,
-          "old_price": null
-        }
-      ],
-      "cheapest_price": 79.0,
-      "min_price": 79.0,
-      "shop": "Øltanken",
-      "discount_pct": 0,
-      "max_discount_pct": 0
-    },
-    {
-      "id": 14369,
-      "name": "Timber Ales - Blended Fields BA",
-      "image": "https://cdn.shopify.com/s/files/1/0776/5209/9400/files/5A862DD1-6D7A-477D-AF2D-F482221A75C0.jpg?v=1777754353",
-      "type": "Imperial Stout",
-      "abv": null,
-      "volume_cl": null,
-      "brewery": "Timber Ales",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Øltanken",
-          "price": 79.0,
-          "url": "https://oltanken.dk/products/timber-ales-blended-fields-ba",
           "discount_pct": 0,
           "old_price": null
         }
@@ -41955,6 +42075,37 @@
       "max_discount_pct": 0
     },
     {
+      "id": 12852,
+      "name": "Boerenerf Oude Gueuze 6% 37,5",
+      "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/boerenerf-oude-gueuze-6-37-5.png?v=1775055294",
+      "type": "Lambic",
+      "abv": 6.0,
+      "volume_cl": null,
+      "brewery": "Het Boerenerf",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Brygshoppen",
+          "price": 85.0,
+          "url": "https://brygshoppen.dk/products/boerenerf-oude-gueuze-6-37-5",
+          "discount_pct": 0,
+          "old_price": 0.0
+        },
+        {
+          "shop_name": "Øltanken",
+          "price": 179.0,
+          "url": "https://oltanken.dk/products/het-boerenerf-oude-gueuze-1871",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 85.0,
+      "min_price": 85.0,
+      "shop": "Brygshoppen",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
       "id": 13263,
       "name": "Gulden Draak Classic 10,5% 75cl",
       "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/gulden-draak-classic-75cl.png?v=1773488387",
@@ -42003,30 +42154,6 @@
       "max_discount_pct": 0
     },
     {
-      "id": 12852,
-      "name": "Boerenerf Oude Gueuze 6% 37,5",
-      "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/boerenerf-oude-gueuze-6-37-5.png?v=1775055294",
-      "type": "Lambic",
-      "abv": 6.0,
-      "volume_cl": null,
-      "brewery": "Het Boerenerf",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Brygshoppen",
-          "price": 85.0,
-          "url": "https://brygshoppen.dk/products/boerenerf-oude-gueuze-6-37-5",
-          "discount_pct": 0,
-          "old_price": 0.0
-        }
-      ],
-      "cheapest_price": 85.0,
-      "min_price": 85.0,
-      "shop": "Brygshoppen",
-      "discount_pct": 0,
-      "max_discount_pct": 0
-    },
-    {
       "id": 12858,
       "name": "Whispers In the Dark 12% 44cl",
       "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/whispers-in-the-dark-12-44cl.png?v=1775036582",
@@ -42051,7 +42178,7 @@
       "max_discount_pct": 0
     },
     {
-      "id": 15728,
+      "id": 15762,
       "name": "No Way Out B.A. 10,5% 33cl",
       "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/no-way-out-b-a-10-5-33cl.png?v=1750592682",
       "type": "Barley Wine",
@@ -42867,52 +42994,100 @@
       "max_discount_pct": 0
     },
     {
-      "id": 14351,
-      "name": "Brasserie Sir John x Boreale - Dancing Bears",
-      "image": "https://cdn.shopify.com/s/files/1/0776/5209/9400/files/256609D4-A288-4CF7-B60C-382978ACA6B8.jpg?v=1778021983",
-      "type": "New England IPA",
+      "id": 14413,
+      "name": "Fidens - DDH Farmer",
+      "image": "https://cdn.shopify.com/s/files/1/0776/5209/9400/files/E86D7A1B-B5A9-46CE-84CE-FF8E9190976A.jpg?v=1774643771",
+      "type": "Double IPA",
       "abv": null,
       "volume_cl": null,
-      "brewery": "Brasserie Sir John x Boreale",
+      "brewery": "Fidens",
       "category": null,
       "prices": [
         {
           "shop_name": "Øltanken",
           "price": 89.0,
-          "url": "https://oltanken.dk/products/brasserie-sir-john-x-boreale-dancing-bears",
-          "discount_pct": 0,
-          "old_price": null
+          "url": "https://oltanken.dk/products/fidens-ddh-farmer",
+          "discount_pct": 29.4,
+          "old_price": 126.0
         }
       ],
       "cheapest_price": 89.0,
       "min_price": 89.0,
       "shop": "Øltanken",
-      "discount_pct": 0,
-      "max_discount_pct": 0
+      "discount_pct": 29.4,
+      "max_discount_pct": 29.4
     },
     {
-      "id": 14428,
-      "name": "Track Brewing Co. - Impasse",
-      "image": "https://cdn.shopify.com/s/files/1/0776/5209/9400/files/4A313C3B-38DA-4600-895E-5D0479B330E6.jpg?v=1774465945",
-      "type": "New England IPA",
+      "id": 14420,
+      "name": "Fidens x Hop Butcher - Butchered Dreams",
+      "image": "https://cdn.shopify.com/s/files/1/0776/5209/9400/files/EB0D41D7-5A07-4760-8AC7-703FB2E20518.jpg?v=1774643540",
+      "type": "Double IPA",
       "abv": null,
       "volume_cl": null,
-      "brewery": "Track Brewing Co.",
+      "brewery": "Fidens x Hop Butcher",
       "category": null,
       "prices": [
         {
           "shop_name": "Øltanken",
           "price": 89.0,
-          "url": "https://oltanken.dk/products/track-brewing-co-1",
-          "discount_pct": 0,
-          "old_price": null
+          "url": "https://oltanken.dk/products/fidens-x-hop-butcher-butchered-dreams",
+          "discount_pct": 36.0,
+          "old_price": 139.0
         }
       ],
       "cheapest_price": 89.0,
       "min_price": 89.0,
       "shop": "Øltanken",
-      "discount_pct": 0,
-      "max_discount_pct": 0
+      "discount_pct": 36.0,
+      "max_discount_pct": 36.0
+    },
+    {
+      "id": 14421,
+      "name": "Fidens - Kaleidoscope",
+      "image": "https://cdn.shopify.com/s/files/1/0776/5209/9400/files/D86BB237-AC09-4C7C-AE05-48094AE7BADB.jpg?v=1774643589",
+      "type": "Double IPA",
+      "abv": null,
+      "volume_cl": null,
+      "brewery": "Fidens",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Øltanken",
+          "price": 89.0,
+          "url": "https://oltanken.dk/products/fidens-kaleidoscope",
+          "discount_pct": 31.0,
+          "old_price": 129.0
+        }
+      ],
+      "cheapest_price": 89.0,
+      "min_price": 89.0,
+      "shop": "Øltanken",
+      "discount_pct": 31.0,
+      "max_discount_pct": 31.0
+    },
+    {
+      "id": 14422,
+      "name": "Fidens - Fear Is The Thief",
+      "image": "https://cdn.shopify.com/s/files/1/0776/5209/9400/files/B75C93CC-703C-4DA5-9FCA-E4D657A9AC9A.jpg?v=1774643835",
+      "type": "Double IPA",
+      "abv": null,
+      "volume_cl": null,
+      "brewery": "Fidens",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Øltanken",
+          "price": 89.0,
+          "url": "https://oltanken.dk/products/fidens-fear-is-the-thief",
+          "discount_pct": 31.0,
+          "old_price": 129.0
+        }
+      ],
+      "cheapest_price": 89.0,
+      "min_price": 89.0,
+      "shop": "Øltanken",
+      "discount_pct": 31.0,
+      "max_discount_pct": 31.0
     },
     {
       "id": 14450,
@@ -43350,30 +43525,6 @@
       "cheapest_price": 90.0,
       "min_price": 90.0,
       "shop": "Beershoppen",
-      "discount_pct": 0,
-      "max_discount_pct": 0
-    },
-    {
-      "id": 14353,
-      "name": "Brasserie Sir John x Toltek x Le Ketch - Mets-y de la Zoune!",
-      "image": "https://cdn.shopify.com/s/files/1/0776/5209/9400/files/AFC74855-4F49-4F5E-AB17-941C6D298875.jpg?v=1778021983",
-      "type": "New England IPA",
-      "abv": null,
-      "volume_cl": null,
-      "brewery": "Brasserie Sir John x Toltek x Le Ketch",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Øltanken",
-          "price": 90.0,
-          "url": "https://oltanken.dk/products/brasserie-sir-john-x-toltek-x-le-ketch-mets-y-de-la-zoune",
-          "discount_pct": 0,
-          "old_price": null
-        }
-      ],
-      "cheapest_price": 90.0,
-      "min_price": 90.0,
-      "shop": "Øltanken",
       "discount_pct": 0,
       "max_discount_pct": 0
     },
@@ -44815,7 +44966,7 @@
       "max_discount_pct": 0
     },
     {
-      "id": 15725,
+      "id": 15759,
       "name": "10 - Imperial Stout 10% 44cl",
       "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/10-imperial-stout-10-44cl_9645d1f7-914c-43d6-b687-b07453f1aaf2.png?v=1761637026",
       "type": "Imperial Stout",
@@ -44887,54 +45038,6 @@
       "max_discount_pct": 0
     },
     {
-      "id": 14354,
-      "name": "Brasserie du Bas-Canada x Off Script Brewing - Crepuscule",
-      "image": "https://cdn.shopify.com/s/files/1/0776/5209/9400/files/429FA5EF-6B82-4337-8F94-37C0D02CA281.jpg?v=1778068314",
-      "type": "Double IPA",
-      "abv": null,
-      "volume_cl": null,
-      "brewery": "Brasserie du Bas-Canada x Off Script Brewing",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Øltanken",
-          "price": 99.0,
-          "url": "https://oltanken.dk/products/brasserie-du-bas-canada-x-off-script-brewing-crepuscule",
-          "discount_pct": 0,
-          "old_price": null
-        }
-      ],
-      "cheapest_price": 99.0,
-      "min_price": 99.0,
-      "shop": "Øltanken",
-      "discount_pct": 0,
-      "max_discount_pct": 0
-    },
-    {
-      "id": 14357,
-      "name": "Imprint Beer Co. x Vitamin Sea - Squid Prints",
-      "image": "https://cdn.shopify.com/s/files/1/0776/5209/9400/files/F5503737-9B15-40DA-8835-2C5138CCAEDE.jpg?v=1777958736",
-      "type": "Double IPA",
-      "abv": null,
-      "volume_cl": null,
-      "brewery": "Imprint Beer Co. x Vitamin Sea",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Øltanken",
-          "price": 99.0,
-          "url": "https://oltanken.dk/products/imprint-beer-co-x-vitamin-sea-squid-prints",
-          "discount_pct": 0,
-          "old_price": null
-        }
-      ],
-      "cheapest_price": 99.0,
-      "min_price": 99.0,
-      "shop": "Øltanken",
-      "discount_pct": 0,
-      "max_discount_pct": 0
-    },
-    {
       "id": 14373,
       "name": "Fonta Flora - Mary's Gold - Biere de Coupage on estate-grown marigold flowers",
       "image": "https://cdn.shopify.com/s/files/1/0776/5209/9400/files/95F0689D-DDD2-48BF-989F-C37007F3E0A7.jpg?v=1777764651",
@@ -44957,6 +45060,30 @@
       "shop": "Øltanken",
       "discount_pct": 0,
       "max_discount_pct": 0
+    },
+    {
+      "id": 14406,
+      "name": "Fidens - Triple Farmer",
+      "image": "https://cdn.shopify.com/s/files/1/0776/5209/9400/files/D83A8E45-5E1A-4581-B6F9-B36F6BD5CD51.jpg?v=1776115912",
+      "type": "Tripel",
+      "abv": null,
+      "volume_cl": null,
+      "brewery": "Fidens",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Øltanken",
+          "price": 99.0,
+          "url": "https://oltanken.dk/products/fidens-triple-farmer",
+          "discount_pct": 28.3,
+          "old_price": 138.0
+        }
+      ],
+      "cheapest_price": 99.0,
+      "min_price": 99.0,
+      "shop": "Øltanken",
+      "discount_pct": 28.3,
+      "max_discount_pct": 28.3
     },
     {
       "id": 14425,
@@ -45895,30 +46022,6 @@
       "max_discount_pct": 0
     },
     {
-      "id": 14463,
-      "name": "Mortalis Brewing x Evil Twin NY - Even More Hydra",
-      "image": "https://cdn.shopify.com/s/files/1/0776/5209/9400/files/B90CF695-DC9D-453D-B14C-462F68B5391B.jpg?v=1772472995",
-      "type": "New England IPA",
-      "abv": null,
-      "volume_cl": null,
-      "brewery": "Mortalis Brewing x Evil Twin NY",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Øltanken",
-          "price": 102.0,
-          "url": "https://oltanken.dk/products/mortalis-brewing-x-evil-twin-ny-even-more-hydra",
-          "discount_pct": 0,
-          "old_price": null
-        }
-      ],
-      "cheapest_price": 102.0,
-      "min_price": 102.0,
-      "shop": "Øltanken",
-      "discount_pct": 0,
-      "max_discount_pct": 0
-    },
-    {
       "id": 12859,
       "name": "Portuguese Brandy Barrel Aged Imperial Stout 12% 44cl",
       "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/portuguese-brandy-barrel-aged-imperial-stout-12-44cl.png?v=1775034202",
@@ -46817,30 +46920,6 @@
           "shop_name": "Øltanken",
           "price": 119.0,
           "url": "https://oltanken.dk/products/wax-wings-brewing-condor-valley-stuffed-french-toast",
-          "discount_pct": 0,
-          "old_price": null
-        }
-      ],
-      "cheapest_price": 119.0,
-      "min_price": 119.0,
-      "shop": "Øltanken",
-      "discount_pct": 0,
-      "max_discount_pct": 0
-    },
-    {
-      "id": 14420,
-      "name": "Fidens x Hop Butcher - Butchered Dreams",
-      "image": "https://cdn.shopify.com/s/files/1/0776/5209/9400/files/EB0D41D7-5A07-4760-8AC7-703FB2E20518.jpg?v=1774643540",
-      "type": "Double IPA",
-      "abv": null,
-      "volume_cl": null,
-      "brewery": "Fidens x Hop Butcher",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Øltanken",
-          "price": 119.0,
-          "url": "https://oltanken.dk/products/fidens-x-hop-butcher-butchered-dreams",
           "discount_pct": 0,
           "old_price": null
         }
@@ -47795,30 +47874,6 @@
       "max_discount_pct": 0
     },
     {
-      "id": 14413,
-      "name": "Fidens - DDH Farmer",
-      "image": "https://cdn.shopify.com/s/files/1/0776/5209/9400/files/E86D7A1B-B5A9-46CE-84CE-FF8E9190976A.jpg?v=1774643771",
-      "type": "Double IPA",
-      "abv": null,
-      "volume_cl": null,
-      "brewery": "Fidens",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Øltanken",
-          "price": 126.0,
-          "url": "https://oltanken.dk/products/fidens-ddh-farmer",
-          "discount_pct": 0,
-          "old_price": null
-        }
-      ],
-      "cheapest_price": 126.0,
-      "min_price": 126.0,
-      "shop": "Øltanken",
-      "discount_pct": 0,
-      "max_discount_pct": 0
-    },
-    {
       "id": 14527,
       "name": "Funky Fluid - Coconut Shake",
       "image": "https://cdn.shopify.com/s/files/1/0776/5209/9400/files/3EA8A8CA-FFEE-4A50-953F-27EA3EDDEC07.jpg?v=1760032557",
@@ -47959,54 +48014,6 @@
           "shop_name": "Øltanken",
           "price": 129.0,
           "url": "https://oltanken.dk/products/moersleutel-barcode-silver-aquamarine",
-          "discount_pct": 0,
-          "old_price": null
-        }
-      ],
-      "cheapest_price": 129.0,
-      "min_price": 129.0,
-      "shop": "Øltanken",
-      "discount_pct": 0,
-      "max_discount_pct": 0
-    },
-    {
-      "id": 14421,
-      "name": "Fidens - Kaleidoscope",
-      "image": "https://cdn.shopify.com/s/files/1/0776/5209/9400/files/D86BB237-AC09-4C7C-AE05-48094AE7BADB.jpg?v=1774643589",
-      "type": "Double IPA",
-      "abv": null,
-      "volume_cl": null,
-      "brewery": "Fidens",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Øltanken",
-          "price": 129.0,
-          "url": "https://oltanken.dk/products/fidens-kaleidoscope",
-          "discount_pct": 0,
-          "old_price": null
-        }
-      ],
-      "cheapest_price": 129.0,
-      "min_price": 129.0,
-      "shop": "Øltanken",
-      "discount_pct": 0,
-      "max_discount_pct": 0
-    },
-    {
-      "id": 14422,
-      "name": "Fidens - Fear Is The Thief",
-      "image": "https://cdn.shopify.com/s/files/1/0776/5209/9400/files/B75C93CC-703C-4DA5-9FCA-E4D657A9AC9A.jpg?v=1774643835",
-      "type": "Double IPA",
-      "abv": null,
-      "volume_cl": null,
-      "brewery": "Fidens",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Øltanken",
-          "price": 129.0,
-          "url": "https://oltanken.dk/products/fidens-fear-is-the-thief",
           "discount_pct": 0,
           "old_price": null
         }
@@ -48820,30 +48827,6 @@
           "shop_name": "Øltanken",
           "price": 139.0,
           "url": "https://oltanken.dk/products/omnipollo-multi-collab-three-times-three-vol-8-44cl-11-abv",
-          "discount_pct": 0,
-          "old_price": null
-        }
-      ],
-      "cheapest_price": 139.0,
-      "min_price": 139.0,
-      "shop": "Øltanken",
-      "discount_pct": 0,
-      "max_discount_pct": 0
-    },
-    {
-      "id": 14406,
-      "name": "Fidens - Triple Farmer",
-      "image": "https://cdn.shopify.com/s/files/1/0776/5209/9400/files/D83A8E45-5E1A-4581-B6F9-B36F6BD5CD51.jpg?v=1776115912",
-      "type": "Tripel",
-      "abv": null,
-      "volume_cl": null,
-      "brewery": "Fidens",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Øltanken",
-          "price": 139.0,
-          "url": "https://oltanken.dk/products/fidens-triple-farmer",
           "discount_pct": 0,
           "old_price": null
         }
@@ -50213,6 +50196,30 @@
       "max_discount_pct": 0
     },
     {
+      "id": 15755,
+      "name": "Tilguin - Oude Rhubarbe a l'Ancienne",
+      "image": "https://cdn.shopify.com/s/files/1/0776/5209/9400/files/827A7FE6-42F9-458A-A569-53E5565DE263.jpg?v=1779568653",
+      "type": "Lambic",
+      "abv": null,
+      "volume_cl": null,
+      "brewery": "Tilguin",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Øltanken",
+          "price": 161.0,
+          "url": "https://oltanken.dk/products/tilguin-oude-rhubarbe-a-lancienne",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 161.0,
+      "min_price": 161.0,
+      "shop": "Øltanken",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
       "id": 15117,
       "name": "Equilibrium x Short Throw Brewing Co. - Swiss Bliss",
       "image": "https://cdn.shopify.com/s/files/1/0776/5209/9400/files/CED1AA75-C75D-4A2C-AB0D-945848C08569.jpg?v=1779357091",
@@ -50875,6 +50882,54 @@
       "max_discount_pct": 0
     },
     {
+      "id": 14410,
+      "name": "Vault City x Low Key stout bundle",
+      "image": "https://cdn.shopify.com/s/files/1/0776/5209/9400/files/6AA4DECA-82C5-4AC0-AB3E-F6C461BCC3BE.jpg?v=1774383533",
+      "type": "Stout",
+      "abv": null,
+      "volume_cl": null,
+      "brewery": "Øltanken",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Øltanken",
+          "price": 188.0,
+          "url": "https://oltanken.dk/products/vault-city-x-low-key-stout-bundle",
+          "discount_pct": 17.5,
+          "old_price": 228.0
+        }
+      ],
+      "cheapest_price": 188.0,
+      "min_price": 188.0,
+      "shop": "Øltanken",
+      "discount_pct": 17.5,
+      "max_discount_pct": 17.5
+    },
+    {
+      "id": 15754,
+      "name": "Het Boerenerf - Mirabelle (2024)",
+      "image": "https://cdn.shopify.com/s/files/1/0776/5209/9400/files/89581D00-1300-4EBE-B9A7-CC986F78B3CF.jpg?v=1779568653",
+      "type": "Lambic",
+      "abv": null,
+      "volume_cl": null,
+      "brewery": "Het Boerenerf",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Øltanken",
+          "price": 189.0,
+          "url": "https://oltanken.dk/products/het-boerenerf-mirabelle-2024",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 189.0,
+      "min_price": 189.0,
+      "shop": "Øltanken",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
       "id": 14551,
       "name": "Goose Island - Goose Island Fine Old Rum Stout",
       "image": "https://cdn.shopify.com/s/files/1/0776/5209/9400/files/95CA2FDA-E6F6-4E8C-A6E5-E5740C7DB112.jpg?v=1753998093",
@@ -51041,30 +51096,6 @@
       "shop": "Øltanken",
       "discount_pct": 11.3,
       "max_discount_pct": 11.3
-    },
-    {
-      "id": 14410,
-      "name": "Vault City x Low Key stout bundle",
-      "image": "https://cdn.shopify.com/s/files/1/0776/5209/9400/files/6AA4DECA-82C5-4AC0-AB3E-F6C461BCC3BE.jpg?v=1774383533",
-      "type": "Stout",
-      "abv": null,
-      "volume_cl": null,
-      "brewery": "Øltanken",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Øltanken",
-          "price": 198.0,
-          "url": "https://oltanken.dk/products/vault-city-x-low-key-stout-bundle",
-          "discount_pct": 13.2,
-          "old_price": 228.0
-        }
-      ],
-      "cheapest_price": 198.0,
-      "min_price": 198.0,
-      "shop": "Øltanken",
-      "discount_pct": 13.2,
-      "max_discount_pct": 13.2
     },
     {
       "id": 14505,
@@ -51468,6 +51499,30 @@
       "cheapest_price": 201.0,
       "min_price": 201.0,
       "shop": "Best of Beers",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
+      "id": 15756,
+      "name": "Gueuzerie Tilquin - Oude Pêche Jaune Tilquin à l'Ancienne (2022-2023)",
+      "image": "https://cdn.shopify.com/s/files/1/0776/5209/9400/files/B7DCEA06-6713-4343-8195-FDECF46D9BC2.jpg?v=1779568653",
+      "type": "Lambic",
+      "abv": null,
+      "volume_cl": null,
+      "brewery": "Gueuzerie Tilquin",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Øltanken",
+          "price": 201.0,
+          "url": "https://oltanken.dk/products/gueuzerie-tilquin-oude-peche-jaune-tilquin-a-lancienne-2022-2023",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 201.0,
+      "min_price": 201.0,
+      "shop": "Øltanken",
       "discount_pct": 0,
       "max_discount_pct": 0
     },
