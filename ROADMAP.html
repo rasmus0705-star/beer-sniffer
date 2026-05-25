@@ -149,18 +149,6 @@ th { background: var(--bg-card); color: var(--gold); font-weight: 600; }
   line-height: 1.6;
   border: 1px solid var(--border);
 }
-.endpoint {
-  display: inline-block;
-  background: var(--code-bg);
-  padding: 0.2rem 0.6rem;
-  border-radius: 3px;
-  font-family: monospace;
-  font-size: 0.85rem;
-  color: var(--gold-bright);
-  border: 1px solid var(--border);
-}
-.tag-get { color: var(--green); font-weight: 700; margin-right: 0.4rem; }
-.tag-post { color: var(--orange); font-weight: 700; margin-right: 0.4rem; }
 .kv-list { list-style: none; padding: 0; }
 .kv-list li { padding: 0.3rem 0; border-bottom: 1px dashed var(--border); }
 .kv-list strong { color: var(--gold-bright); min-width: 180px; display: inline-block; }
@@ -176,6 +164,15 @@ th { background: var(--bg-card); color: var(--gold); font-weight: 600; }
   border-radius: 4px;
 }
 .troubleshoot h4 { margin-top: 0; color: var(--red); }
+.removed {
+  background: rgba(194,84,80,0.08);
+  border-left: 3px solid var(--red);
+  padding: 0.8rem 1rem;
+  margin: 0.5rem 0;
+  border-radius: 4px;
+  color: var(--text-muted);
+}
+.removed strong { color: var(--red); }
 </style>
 </head>
 <body>
@@ -183,7 +180,7 @@ th { background: var(--bg-card); color: var(--gold); font-weight: 600; }
 <header>
 <h1>🍺 BeerSniffer</h1>
 <div class="subtitle">Komplet Roadmap, Arkitektur & Drift-dokumentation</div>
-<div class="subtitle" style="font-size:0.9rem;margin-top:1rem;">Genereret november 2026</div>
+<div class="subtitle" style="font-size:0.9rem;margin-top:1rem;">Sidst opdateret maj 2026 (efter migrering væk fra Railway)</div>
 </header>
 
 <div class="container">
@@ -195,11 +192,11 @@ th { background: var(--bg-card); color: var(--gold); font-weight: 600; }
 <li><a href="#arkitektur">Arkitektur & Hvor alt ligger</a></li>
 <li><a href="#filer">Filstruktur i projektet</a></li>
 <li><a href="#login">Login & adgang til tjenester</a></li>
-<li><a href="#endpoints">API-endpoints</a></li>
 <li><a href="#scrapers">Scrapers — hvilke shops og hvordan</a></li>
 <li><a href="#matching">Matching-algoritmen (grupperingslogik)</a></li>
 <li><a href="#deploy">Deploy & opdateringsworkflow</a></li>
 <li><a href="#features">Features på siden</a></li>
+<li><a href="#analytics">Analytics & Partner-dashboard</a></li>
 <li><a href="#tidslinje">Tidslinje — hvad er sket gennem tiden</a></li>
 <li><a href="#drift">Daglig drift & vedligehold</a></li>
 <li><a href="#troubleshooting">Troubleshooting — hvis noget går galt</a></li>
@@ -210,81 +207,112 @@ th { background: var(--bg-card); color: var(--gold); font-weight: 600; }
 <!-- ════════════════════════════════════════ -->
 <h2 id="oversigt">1. Projektoversigt</h2>
 
-<p><strong>BeerSniffer</strong> er en prisaggregator for specialøl. Siden samler priser fra flere danske ølbutikker og viser samme øl side om side så brugerne kan se hvor det er billigst.</p>
+<p><strong>BeerSniffer</strong> er en prisaggregator for specialøl. Siden samler priser fra 7 danske ølbutikker og viser samme øl side om side så brugerne kan se hvor det er billigst.</p>
 
 <div class="box info">
 <strong>Domæne:</strong> <code>beersniffer.dk</code><br>
-<strong>API:</strong> <code>https://beer-sniffer-production-2a11.up.railway.app</code><br>
+<strong>Frontend:</strong> Statisk HTML/JS hosted på GitHub Pages<br>
+<strong>Data:</strong> <code>data.json</code> (statisk fil i Git, opdateres dagligt)<br>
 <strong>Repo:</strong> <code>github.com/rasmus0705-star/beer-sniffer</code> (branch: <code>master</code>)<br>
 <strong>Lokalt:</strong> <code>C:\Kodning\beer-sniffer</code>
+</div>
+
+<div class="box tip">
+<strong>🎯 Nuværende status (maj 2026):</strong>
+<ul style="margin-bottom:0">
+<li><strong>2.300+</strong> unikke øl i databasen</li>
+<li><strong>7</strong> butikker indekseret</li>
+<li><strong>450+</strong> aktive tilbud</li>
+<li><strong>Live</strong> på beersniffer.dk med GA4 + custom dimensions</li>
+<li><strong>Looker Studio</strong> partner-dashboard klar</li>
+<li><strong>stats.html</strong> privat dashboard med login</li>
+</ul>
 </div>
 
 <h3>Forretningsmodel</h3>
 <ul>
 <li><strong>Affiliate-links</strong> via Partner-ads (når brugere klikker "Køb →" registrerer Partner-ads klikket og du får provision)</li>
-<li>Beer Me er bekræftet på Partner-ads — andre shops scrapes direkte uden affiliate</li>
+<li>Direkte affiliate-samarbejder mulige med fokus på Brygshoppen, A Good Case, Beershoppen osv.</li>
+<li>Looker Studio dashboard kan deles med partnere som dokumentation af klik-trafik</li>
 </ul>
 
 <!-- ════════════════════════════════════════ -->
 <h2 id="arkitektur">2. Arkitektur — hvor alt ligger</h2>
+
+<div class="box warning">
+<strong>⚠️ Store ændringer fra tidligere setup:</strong>
+<ul style="margin-bottom:0">
+<li><strong>Railway er afviklet</strong> — vi kører ikke længere et live API</li>
+<li><strong>Supabase bruges kun under scrape</strong> — frontend læser ikke direkte fra databasen</li>
+<li><strong>Alt data serveres som statisk JSON</strong> — meget hurtigere og næsten gratis</li>
+</ul>
+</div>
 
 <div class="arch-diagram">
 ┌─────────────────────────────────────────────────────────────────┐
 │                          BRUGER                                 │
 │                  (browser / mobil)                              │
 └────────────────────┬────────────────────────────────────────────┘
-                     │
                      │ HTTPS
                      ▼
         ┌────────────────────────────┐
-        │   beersniffer.dk           │
-        │   (Cloudflare CDN)         │
-        │   → GitHub Pages           │ ← Frontend (index.html, om.html, logo.png)
-        └────────────┬───────────────┘
-                     │ fetch()
-                     ▼
-        ┌────────────────────────────┐
-        │   Railway (FastAPI)        │ ← Backend API
-        │   beer-sniffer-production  │   • /beers
-        │   -2a11.up.railway.app     │   • /stats
-        │                            │   • /scrape-all (beskyttet)
-        │   APScheduler kl. 06:00    │   • /reset-beers (beskyttet)
-        └────────────┬───────────────┘
-                     │ SQLAlchemy
-                     ▼
-        ┌────────────────────────────┐
-        │   Supabase (PostgreSQL)    │ ← Database
-        │   db.skktwjsoqjgmilrojqac  │   Tabeller:
-        │   .supabase.co             │   • beer
-        │                            │   • price
-        │                            │   • price_history
-        │                            │   • price_alert
+        │   beersniffer.dk           │ ← Cloudflare (DNS + CDN + SSL)
+        │   → GitHub Pages           │
+        │                            │   Statiske filer:
+        │   • index.html             │     • Frontend
+        │   • data.json              │     • Alle øl + priser
+        │   • om.html                │     • Om-side
+        │   • stats.html             │     • Privat dashboard (login)
         └────────────────────────────┘
 
-        ┌────────────────────────────┐
-        │   Eksterne shops           │ ← Data-kilder
-        │   (Shopify products.json)  │
-        │                            │
-        │   • Brygshoppen            │
-        │   • A Good Case            │
-        │   • Beershoppen            │
-        │   • Best of Beers          │
-        │   • Øltanken (oltanken.dk) │
-        └────────────────────────────┘
+           ▲
+           │ git push (daglig)
+           │
+        ┌─────────────────────────────────────────────────────┐
+        │   LOKALT på Rasmus' PC (C:\Kodning\beer-sniffer)    │
+        │                                                     │
+        │   ┌─────────────────────────────────────────────┐   │
+        │   │  opdater.bat (dobbeltklik for at opdatere)  │   │
+        │   │     │                                       │   │
+        │   │     ▼                                       │   │
+        │   │  python build_data.py                       │   │
+        │   │     │                                       │   │
+        │   │     ├── Scraper 1: Brygshoppen              │   │
+        │   │     ├── Scraper 2: A Good Case              │   │
+        │   │     ├── Scraper 3: Beershoppen              │   │
+        │   │     ├── Scraper 4: Best of Beers            │   │
+        │   │     ├── Scraper 5: Øltanken                 │   │
+        │   │     ├── Scraper 6: Beer Me                  │   │
+        │   │     ├── Scraper 7: Vild med Vin             │   │
+        │   │     │                                       │   │
+        │   │     ▼                                       │   │
+        │   │  Ingest til Supabase (matching)             │───┼──► Supabase PostgreSQL
+        │   │     │                                       │   │    (bruges som arbejds-DB)
+        │   │     ▼                                       │   │
+        │   │  Eksporter til data.json                    │   │
+        │   │     │                                       │   │
+        │   │     ▼                                       │   │
+        │   │  git add data.json && git commit && push    │   │
+        │   └─────────────────────────────────────────────┘   │
+        └─────────────────────────────────────────────────────┘
 </div>
 
-<h3>Hvad hver tjeneste gør</h3>
+<h3>Hvad hver tjeneste gør i dag</h3>
 <table>
 <tr><th>Tjeneste</th><th>Rolle</th><th>Pris</th></tr>
-<tr><td><strong>GitHub</strong></td><td>Opbevarer koden + hoster frontend via Pages</td><td>Gratis</td></tr>
-<tr><td><strong>Railway</strong></td><td>Kører FastAPI backend + scheduler</td><td>~$5/md (Hobby plan)</td></tr>
-<tr><td><strong>Supabase</strong></td><td>PostgreSQL database</td><td>Gratis (free tier)</td></tr>
-<tr><td><strong>Cloudflare</strong></td><td>DNS, CDN, gratis SSL, sikkerhed foran beersniffer.dk</td><td>Gratis</td></tr>
-<tr><td><strong>Simply</strong></td><td>Domæneregistrering (kun domænet, ikke webhotel)</td><td>~50 kr/år</td></tr>
-<tr><td><strong>Google Analytics</strong></td><td>Trafikmåling</td><td>Gratis</td></tr>
+<tr><td><strong>GitHub</strong></td><td>Opbevarer koden + hoster frontend OG data.json via Pages</td><td>Gratis</td></tr>
+<tr><td><strong>Supabase</strong></td><td>PostgreSQL database (bruges af build_data.py under scrape)</td><td>Gratis (free tier)</td></tr>
+<tr><td><strong>Cloudflare</strong></td><td>DNS, CDN, gratis SSL foran beersniffer.dk</td><td>Gratis</td></tr>
+<tr><td><strong>Simply</strong></td><td>Domæneregistrering (kun domænet)</td><td>~50 kr/år</td></tr>
+<tr><td><strong>Google Analytics 4</strong></td><td>Trafikmåling + 5 custom dimensions (Butik, ØlNavn, Stilart, Søgeord, Filter)</td><td>Gratis</td></tr>
+<tr><td><strong>Looker Studio</strong></td><td>Partner-dashboard der embeddes i stats.html</td><td>Gratis</td></tr>
 <tr><td><strong>Cookiebot</strong></td><td>Cookie-banner og GDPR-compliance</td><td>Gratis (Free plan)</td></tr>
-<tr><td><strong>Partner-ads</strong></td><td>Affiliate-netværk (Beer Me)</td><td>Gratis</td></tr>
+<tr><td><strong>Partner-ads</strong></td><td>Affiliate-netværk</td><td>Gratis</td></tr>
 </table>
+
+<div class="removed">
+<strong>❌ Afviklet:</strong> Railway (FastAPI backend) — siden kører ikke længere et live API. Daglig sparet udgift: ~$5/md.
+</div>
 
 <!-- ════════════════════════════════════════ -->
 <h2 id="filer">3. Filstruktur i projektet</h2>
@@ -292,45 +320,54 @@ th { background: var(--bg-card); color: var(--gold); font-weight: 600; }
 <div class="file-tree">
 C:\Kodning\beer-sniffer\
 │
-├── app/
-│   ├── main.py                    ← FastAPI startup, CORS, GZip
-│   ├── database.py                ← SQLAlchemy engine (henter DB_URL)
-│   ├── models.py                  ← Beer, Price, PriceHistory, PriceAlert
-│   │
-│   ├── routers/
-│   │   ├── beers.py               ← /beers /stats /beers-with-prices /ui
-│   │   └── scrape.py              ← /scrape-all + individuelle /scrape-XXX
-│   │                                + /reset-beers (NULSTILLING)
-│   │
-│   ├── services/
-│   │   ├── ingest.py              ← Gem nye priser i databasen
-│   │   ├── matching.py            ← FÆLLES matching-logik
-│   │   └── scheduler.py           ← Daglig scrape kl. 06:00 (APScheduler)
-│   │
-│   ├── scrapers/
-│   │   ├── brygshoppen.py         ← brygshoppen.dk
-│   │   ├── agoodcase.py           ← agoodcase.dk
-│   │   ├── beershoppen.py         ← beershoppen.dk
-│   │   ├── bestofbeers.py         ← bestofbeers.dk
-│   │   ├── oeltanken.py           ← oltanken.dk (NYT — november 2026)
-│   │   └── belgiskbryg.py         ← Selenium, kører IKKE på Railway
-│   │
-│   └── utils/
-│       ├── normalize.py           ← Legacy normalize_name (bruges af ingest)
-│       └── detect_type.py         ← Genkender øltype fra produktnavn
+├── build_data.py                  ← HOVED-SCRIPT: kører alle scrapers + bygger data.json
+├── opdater.bat                    ← Dobbeltklik-genvej: build_data.py + git push
+├── update.bat                     ← Gammel version (kan slettes)
 │
-├── index.html                     ← Frontend — hele siden
-├── om.html                        ← Privatliv & handelsbetingelser
+├── data.json                      ← Statisk øl-data (genereres af build_data.py)
+├── index.html                     ← Frontend (sidebar layout, deal banner, filtre)
+├── om.html                        ← Om-side med partner-fokus
+├── stats.html                     ← Privat dashboard med login (embedded Looker)
 ├── logo.png
 ├── favicon.ico
 ├── sitemap.xml
 ├── CNAME                          ← GitHub Pages custom domain
 │
-├── requirements.txt               ← fastapi, uvicorn, sqlalchemy, rapidfuzz,
-│                                    psycopg2-binary, apscheduler, python-dotenv
-├── Procfile                       ← uvicorn app.main:app --host 0.0.0.0 --port $PORT
-├── init_db.py                     ← Opretter tabeller i databasen
-└── .env                           ← LOKAL kun — DB_URL osv. (ikke i git!)
+├── app/                           ← Python-pakke (bruges af build_data.py)
+│   ├── database.py                ← SQLAlchemy engine til Supabase
+│   ├── models.py                  ← Beer, Price, PriceHistory, PriceAlert
+│   │
+│   ├── services/
+│   │   ├── ingest.py              ← Gem nye priser i Supabase
+│   │   └── matching.py            ← FÆLLES matching-logik
+│   │
+│   ├── scrapers/
+│   │   ├── brygshoppen.py
+│   │   ├── agoodcase.py
+│   │   ├── beershoppen.py
+│   │   ├── bestofbeers.py
+│   │   ├── oeltanken.py
+│   │   ├── beerme.py              ← NYT
+│   │   └── vildmedvin.py          ← NYT
+│   │
+│   └── utils/
+│       ├── normalize.py
+│       └── detect_type.py
+│
+├── requirements.txt               ← Python dependencies
+├── init_db.py                     ← Opretter tabeller i Supabase (engangs-script)
+└── .env                           ← LOKAL kun — DB_URL (ikke i git!)
+</div>
+
+<div class="box warning">
+<strong>Filer der IKKE skal være i git:</strong>
+<ul style="margin-bottom:0">
+<li><code>.env</code> — indeholder DB_URL</li>
+<li><code>*.log</code> — scrape-logs</li>
+<li><code>__pycache__/</code> — Python cache</li>
+<li><code>.venv/</code> — virtual environment</li>
+</ul>
+Tjek <code>.gitignore</code> sikrer det.
 </div>
 
 <!-- ════════════════════════════════════════ -->
@@ -338,69 +375,45 @@ C:\Kodning\beer-sniffer\
 
 <ul class="kv-list">
 <li><strong>GitHub:</strong> github.com/rasmus0705-star — beer-sniffer repo</li>
-<li><strong>Railway:</strong> railway.app — beer-sniffer projekt</li>
 <li><strong>Supabase:</strong> supabase.com — beer-sniffer projekt (West EU/Ireland)</li>
 <li><strong>Simply:</strong> simply.com — domænet beersniffer.dk</li>
 <li><strong>Cloudflare:</strong> cloudflare.com — beersniffer.dk site</li>
-<li><strong>Google Analytics:</strong> analytics.google.com — beersniffer.dk property</li>
+<li><strong>Google Analytics:</strong> analytics.google.com — Beersniffer.dk property (G-WLVKNJ5DS2)</li>
+<li><strong>Looker Studio:</strong> lookerstudio.google.com — BeerSniffer Partner Dashboard</li>
 <li><strong>Google Search Console:</strong> search.google.com/search-console</li>
 <li><strong>Cookiebot:</strong> cookiebot.com — CBID: <code>171f0833-9aaf-4387-8606-ddbdac5e62a3</code></li>
 <li><strong>Partner-ads:</strong> partner-ads.com — partnerid 56605</li>
+<li><strong>stats.html login:</strong> admin@beersniffer.dk / (password gemt i koden — SKIFT FØR PUSH)</li>
 </ul>
 
 <div class="box warning">
 <strong>Vigtige hemmeligheder (ikke i Git):</strong>
-<ul>
-<li><code>DB_URL</code> — Supabase connection string. Sat i Railway → Variables</li>
-<li><code>SCRAPE_API_KEY</code> — Beskytter scrape og reset endpoints. Sat i Railway → Variables</li>
+<ul style="margin-bottom:0">
+<li><code>DB_URL</code> — Supabase connection string i lokal <code>.env</code> fil</li>
 </ul>
 </div>
 
-<!-- ════════════════════════════════════════ -->
-<h2 id="endpoints">5. API-endpoints</h2>
-
-<h3>Offentlige endpoints (ingen autentificering)</h3>
-<table>
-<tr><th>Metode</th><th>Path</th><th>Beskrivelse</th></tr>
-<tr><td><span class="tag-get">GET</span></td><td><code>/beers</code></td><td>Pagineret liste med filtre (q, shop, sort, deals_only, alcohol_free, smagekasse, beer_types, min/max_price, abv_min/max, page, limit)</td></tr>
-<tr><td><span class="tag-get">GET</span></td><td><code>/stats</code></td><td>Statistik: antal øl, deals, shops, billigste pris, alle stilarter</td></tr>
-<tr><td><span class="tag-get">GET</span></td><td><code>/beers-with-prices</code></td><td>Legacy — returnerer alle øl uden paginering</td></tr>
-<tr><td><span class="tag-get">GET</span></td><td><code>/ui</code></td><td>Simpel HTML-side med link til <code>/docs</code></td></tr>
-</table>
-
-<h3>Beskyttede endpoints (kræver <code>x-api-key</code> header)</h3>
-<table>
-<tr><th>Metode</th><th>Path</th><th>Beskrivelse</th></tr>
-<tr><td><span class="tag-get">GET</span></td><td><code>/scrape-all</code></td><td>Kører alle scrapers og ingester</td></tr>
-<tr><td><span class="tag-get">GET</span></td><td><code>/scrape-brygshoppen</code></td><td>Kun Brygshoppen</td></tr>
-<tr><td><span class="tag-get">GET</span></td><td><code>/scrape-agoodcase</code></td><td>Kun A Good Case</td></tr>
-<tr><td><span class="tag-get">GET</span></td><td><code>/scrape-beershoppen</code></td><td>Kun Beershoppen</td></tr>
-<tr><td><span class="tag-get">GET</span></td><td><code>/scrape-bestofbeers</code></td><td>Kun Best of Beers</td></tr>
-<tr><td><span class="tag-get">GET</span></td><td><code>/scrape-oeltanken</code></td><td>Kun Øltanken</td></tr>
-<tr><td><span class="tag-post">POST</span></td><td><code>/reset-beers?confirm=YES</code></td><td>Sletter alle Beer/Price/PriceHistory (kræver både API-nøgle og <code>?confirm=YES</code>)</td></tr>
-</table>
-
-<h3>Eksempel: kald fra PowerShell</h3>
-<pre><code>Invoke-WebRequest -Uri "https://beer-sniffer-production-2a11.up.railway.app/scrape-all" `
-  -Headers @{"x-api-key"='S290307far12345678'} `
-  -TimeoutSec 900</code></pre>
+<div class="removed">
+<strong>❌ Ikke længere relevant:</strong> Railway-login, SCRAPE_API_KEY (Railway-projekt er slettet).
+</div>
 
 <!-- ════════════════════════════════════════ -->
-<h2 id="scrapers">6. Scrapers</h2>
+<h2 id="scrapers">5. Scrapers</h2>
 
 <table>
-<tr><th>Shop</th><th>URL</th><th>Type</th><th>Status</th></tr>
-<tr><td>Brygshoppen</td><td>brygshoppen.dk</td><td>Shopify JSON</td><td>✅ Kører</td></tr>
-<tr><td>A Good Case</td><td>agoodcase.dk</td><td>Shopify JSON</td><td>✅ Kører</td></tr>
-<tr><td>Beershoppen</td><td>beershoppen.dk</td><td>Shopify JSON</td><td>✅ Kører</td></tr>
-<tr><td>Best of Beers</td><td>bestofbeers.dk</td><td>Shopify JSON</td><td>✅ Kører</td></tr>
-<tr><td>Øltanken</td><td>oltanken.dk</td><td>Shopify JSON</td><td>✅ Kører (november 2026)</td></tr>
-<tr><td>Belgiskbryg</td><td>belgiskbryg.dk</td><td>Selenium</td><td>❌ Virker ikke på Railway</td></tr>
-<tr><td>Beer Me</td><td>beer-me.dk</td><td>CAPTCHA / Partner-ads XML</td><td>⏸️ Ikke implementeret</td></tr>
+<tr><th>Shop</th><th>URL</th><th>Type</th><th>Antal øl ca.</th><th>Status</th></tr>
+<tr><td>Brygshoppen</td><td>brygshoppen.dk</td><td>Shopify JSON</td><td>539</td><td>✅ Kører</td></tr>
+<tr><td>A Good Case</td><td>agoodcase.dk</td><td>Shopify JSON</td><td>307</td><td>✅ Kører</td></tr>
+<tr><td>Beershoppen</td><td>beershoppen.dk</td><td>Shopify JSON</td><td>191</td><td>✅ Kører</td></tr>
+<tr><td>Best of Beers</td><td>bestofbeers.dk</td><td>Shopify JSON</td><td>445</td><td>✅ Kører</td></tr>
+<tr><td>Øltanken</td><td>oltanken.dk</td><td>Shopify JSON</td><td>311</td><td>✅ Kører</td></tr>
+<tr><td>Beer Me</td><td>beer-me.dk</td><td>—</td><td>212</td><td>✅ Kører</td></tr>
+<tr><td>Vild med Vin</td><td>vildmedvin.dk</td><td>—</td><td>741</td><td>✅ Kører</td></tr>
+<tr><td>Belgiskbryg</td><td>belgiskbryg.dk</td><td>Selenium</td><td>—</td><td>❌ Slettet (krævede Selenium)</td></tr>
 </table>
 
 <h3>Generel scraper-opbygning</h3>
-<p>Hver scraper kalder shoppens <code>/products.json</code> endpoint sideopdelt, parser produkterne og returnerer en liste af dicts:</p>
+<p>Hver scraper henter produkter fra shoppen (typisk via <code>/products.json</code> endpoint), parser produkterne og returnerer en liste af dicts:</p>
 <pre><code>{
   "name": "Westmalle Trappist Tripel 9,5% 33cl",
   "price": 45.0,
@@ -413,20 +426,20 @@ C:\Kodning\beer-sniffer\
   "image": "https://...",
   "type": "Tripel",
   "brewery": "Westmalle",
-  "category": "øl",         # eller "smagekasse"
-  "untappd_url": "https://...",   # kun Øltanken
-  "untappd_id": "1651211",        # kun Øltanken
+  "category": "øl"
 }</code></pre>
 
 <div class="box info">
-<strong>Test en scraper lokalt:</strong> hver scraper har et <code>if __name__ == "__main__":</code> blok i bunden så du kan køre den direkte:
-<pre><code>python -m app.scrapers.oeltanken</code></pre>
+<strong>Test en scraper lokalt:</strong>
+<pre><code>cd C:\Kodning\beer-sniffer
+.venv\Scripts\activate
+python -m app.scrapers.oeltanken</code></pre>
 </div>
 
 <!-- ════════════════════════════════════════ -->
-<h2 id="matching">7. Matching-algoritmen (grupperingslogik)</h2>
+<h2 id="matching">6. Matching-algoritmen (grupperingslogik)</h2>
 
-<p>Det her er HJERTET af BeerSniffer — det er der vi grupperer samme øl fra forskellige shops. Logikken ligger i <code>app/services/matching.py</code> og bruges af BÅDE <code>ingest.py</code> (når øl gemmes) OG <code>beers.py</code> (når øl grupperes til frontend).</p>
+<p>Det her er HJERTET af BeerSniffer — det er der vi grupperer samme øl fra forskellige shops. Logikken ligger i <code>app/services/matching.py</code> og bruges af <code>app/services/ingest.py</code> når data gemmes i Supabase.</p>
 
 <h3>Algoritmen (8 trin)</h3>
 <ol>
@@ -437,7 +450,7 @@ C:\Kodning\beer-sniffer\
 <li><strong>Hård gate: volume</strong> — skal matche (tolerance for None)</li>
 <li><strong>Hård gate: ABV</strong> — max 0.4 procentpoint forskel</li>
 <li><strong>Hård gate: bryggeri</strong> — forskellige bryggerier blokerer match</li>
-<li><strong>Fuzzy score</strong> — min(token_set_ratio, token_sort_ratio) + bonuses for ABV/bryggeri/stil match. Threshold: 85</li>
+<li><strong>Fuzzy score</strong> — min(token_set_ratio, token_sort_ratio) + bonuses. Threshold: 85</li>
 </ol>
 
 <h3>Eksempler</h3>
@@ -450,71 +463,125 @@ C:\Kodning\beer-sniffer\
 </table>
 
 <!-- ════════════════════════════════════════ -->
-<h2 id="deploy">8. Deploy & opdateringsworkflow</h2>
+<h2 id="deploy">7. Deploy & opdateringsworkflow</h2>
 
-<h3>Standard kode-ændring</h3>
+<h3>Dagligt: opdater priser</h3>
+<p>Dette er den vigtigste rutine. Den kan køres når som helst — typisk 1 gang dagligt:</p>
+
+<div class="box tip">
+<strong>Den hurtige måde (dobbeltklik):</strong><br>
+Dobbeltklik på <code>opdater.bat</code> i Stifinder. Den:
+<ol style="margin-bottom:0">
+<li>Aktiverer virtual environment</li>
+<li>Kører <code>python build_data.py</code> (scrapes alle 7 shops, ingester til Supabase, eksporterer til <code>data.json</code>)</li>
+<li>Pusher <code>data.json</code> til GitHub</li>
+<li>GitHub Pages opdaterer beersniffer.dk automatisk på 1-2 min</li>
+</ol>
+</div>
+
+<h3>Manuel udgave i PowerShell</h3>
+<pre><code>cd C:\Kodning\beer-sniffer
+.venv\Scripts\activate
+python build_data.py
+git add data.json
+git commit -m "Daglig opdatering"
+git push</code></pre>
+
+<h3>Standard kode-ændring (frontend, om-side osv.)</h3>
 <pre><code># 1. Lav ændringer i VS Code
-# 2. Test lokalt hvis muligt
-
-# 3. Commit og push
+# 2. Commit og push
 git add .
-git status                           # Tjek hvad der commits
+git status
 git commit -m "Beskrivende besked"
 git push
 
-# 4. Railway deployer automatisk på 1-2 minutter
-# 5. Tjek Railway → Deployments at den viser "Success"</code></pre>
+# 3. GitHub Pages deployer automatisk på 1-2 minutter</code></pre>
 
-<h3>Manuel scrape</h3>
-<pre><code>Invoke-WebRequest -Uri "https://beer-sniffer-production-2a11.up.railway.app/scrape-all" `
-  -Headers @{"x-api-key"='din-nøgle'} `
-  -TimeoutSec 900</code></pre>
-
-<h3>Automatisk scrape</h3>
-<p>APScheduler i <code>app/services/scheduler.py</code> kører <code>run_scraper()</code> hver dag kl. 06:00. Den behøver ikke API-nøgle fordi den kører internt på Railway.</p>
-
-<h3>Nulstil databasen (sjældent)</h3>
-<pre><code>Invoke-WebRequest -Method POST `
-  -Uri "https://beer-sniffer-production-2a11.up.railway.app/reset-beers?confirm=YES" `
-  -Headers @{"x-api-key"='din-nøgle'}</code></pre>
-<div class="box danger">
-Bagefter SKAL du køre <code>/scrape-all</code> for at fylde databasen igen.
+<div class="removed">
+<strong>❌ Ikke længere relevant:</strong> Railway endpoints (<code>/scrape-all</code>, <code>/reset-beers</code>), API-nøgler i HTTP headers, APScheduler. Alt scraping kører nu lokalt.
 </div>
 
 <!-- ════════════════════════════════════════ -->
-<h2 id="features">9. Features på siden</h2>
+<h2 id="features">8. Features på siden</h2>
 
-<h3>Brugerfeatures</h3>
+<h3>Brugerfeatures (NY sidebar layout)</h3>
 <ul class="checklist">
-<li>Søgefelt (sender til API)</li>
-<li>Filtre: Alle / Tilbud / Alkoholfri / Smagekasser / Favoritter</li>
-<li>Butik-pills (Brygshoppen, A Good Case, Beershoppen, Best of Beers, Øltanken)</li>
-<li>Stilart-dropdown</li>
-<li>Sortering: Pris stigende/faldende, Rabat, Navn, Antal butikker</li>
-<li>Pris dual-range slider</li>
-<li>ABV dual-range slider</li>
-<li>Aktive filtre vises som chips man kan klikke væk</li>
-<li>Top 10 tilbud sektion</li>
-<li>Favoritter med hjerteknap (gemmes i localStorage)</li>
-<li>"Vis flere øl" — paginering 50 ad gangen</li>
-<li>Fragt-tooltip på ølkort</li>
-<li>Untappd-link på Øltanken-øl</li>
-<li>"Flere butikker" toggle på ølkort (vis alle priser)</li>
-<li>Skift sprog (DA/EN) — hvis aktiveret</li>
+<li>📋 Permanent sidebar til venstre på desktop (kollapser til overlay på mobil)</li>
+<li>🔍 Søgefelt (filtrer lokalt på data.json)</li>
+<li>⚡ Hurtige filtre: Alle / Tilbud / Alkoholfri / Smagekasser / Favoritter</li>
+<li>🏪 Multi-select butikker (vælg flere på samme tid)</li>
+<li>🍺 Multi-select stilarter</li>
+<li>🔢 Sortering: Pris stigende/faldende, Rabat, Navn, Antal butikker</li>
+<li>💰 Pris dual-range slider</li>
+<li>🍻 ABV dual-range slider</li>
+<li>✨ Aktive filtre vises som chips i sidebar — klik for at fjerne</li>
+<li>🔄 "Nulstil alle filtre" knap</li>
+<li>🎠 Roterende deal-banner med top 5 tilbud (billede + pris + køb-knap)</li>
+<li>❤️ Favoritter med hjerteknap (gemmes i localStorage)</li>
+<li>"Vis flere øl" — paginering 50 ad gangen (uden scroll-jump)</li>
+<li>🚚 Fragt-tooltip på ølkort</li>
+<li>🍺 Untappd-link på hvert ølkort</li>
+<li>📊 Stat-bar med: Øl i alt / Aktive tilbud / Største rabat / Billigste pris</li>
+</ul>
+
+<h3>Tilbuds-fremhævning</h3>
+<ul class="checklist">
+<li>Grøn kant + glow rundt om tilbuds-kort</li>
+<li>Discount badge (-58%) i øverste højre hjørne</li>
+<li>"Spar X kr" vises tydeligt</li>
+<li>Tilbuds-kort i deal-banner skifter automatisk hvert 4. sekund</li>
 </ul>
 
 <h3>Tracking & analytics</h3>
 <ul class="checklist">
-<li>Google Analytics (G-XXXX) — sidevisninger, klik på køb-knapper, scrolling, tid på side</li>
+<li>Google Analytics 4 (G-WLVKNJ5DS2)</li>
+<li>5 custom dimensions: Butik, ØlNavn, Stilart, Søgeord, Filter</li>
+<li>Custom events: koeb_klik, billede_klik, soegning, filter_klik, favorit, untappd_klik, scroll_dybde, tid_paa_siden, nulstil_filter, vis_flere, top10_toggle</li>
 <li>Cookiebot consent management</li>
 </ul>
 
 <h3>SEO</h3>
 <ul class="checklist">
-<li>Canonical pointer mod <code>https://www.beersniffer.dk/</code></li>
+<li>Canonical pointer mod <code>https://beersniffer.dk/</code></li>
 <li>sitemap.xml</li>
 <li>Google Search Console verificeret via DNS TXT</li>
+<li>Structured data (Schema.org) for WebSite + SearchAction</li>
+<li>Affiliate disclosure + handelsbetingelser + privatlivspolitik på om.html</li>
 </ul>
+
+<!-- ════════════════════════════════════════ -->
+<h2 id="analytics">9. Analytics & Partner-dashboard</h2>
+
+<h3>Google Analytics 4 setup</h3>
+<p>Custom dimensions er sat op i GA4 Admin → Custom definitions:</p>
+<table>
+<tr><th>Dimensionsnavn</th><th>Event parameter</th><th>Beskrivelse</th></tr>
+<tr><td>Butik</td><td>shop</td><td>Hvilken butik klikket gik til</td></tr>
+<tr><td>ØlNavn</td><td>beer_name</td><td>Navn på ølet</td></tr>
+<tr><td>Stilart</td><td>stilart</td><td>Hvilken stilart blev filtreret på</td></tr>
+<tr><td>Søgeord</td><td>search_term</td><td>Hvad brugeren søgte på</td></tr>
+<tr><td>Filter</td><td>filter</td><td>Hvilket filter blev aktiveret</td></tr>
+</table>
+
+<h3>Looker Studio dashboard</h3>
+<p>Rapport: <code>BeerSniffer Partner Dashboard</code><br>
+Embed URL: <code>https://datastudio.google.com/embed/reporting/394a3eba-097a-4738-978d-79d8f2c31f68/page/p_nslr3r5y3d</code></p>
+
+<p>Widgets på dashboard:</p>
+<ul>
+<li>Aktive brugere (scorekort)</li>
+<li>Hændelsesantal (scorekort)</li>
+<li>Datointerval-kontrol</li>
+<li>Tabel: Top øl der bliver klikket på (ØlNavn x Hændelsesantal, filtreret på koeb_klik)</li>
+<li>Tabel: Klik per butik (Butik x Hændelsesantal, filtreret på koeb_klik)</li>
+</ul>
+
+<h3>Privat stats-side (stats.html)</h3>
+<p>Login-beskyttet side på <code>beersniffer.dk/stats.html</code> der embedded Looker dashboardet i en BeerSniffer-styled wrapper. Multi-user system gør det muligt at give individuelle adgange til partnere senere.</p>
+
+<div class="box info">
+<strong>Tilføj partner-bruger:</strong> Rediger <code>USERS</code> arrayet i <code>stats.html</code>. Hver bruger kan have egen <code>dashboardUrl</code> hvis partneren skal se et filtreret Looker-dashboard.
+</div>
 
 <!-- ════════════════════════════════════════ -->
 <h2 id="tidslinje">10. Tidslinje — hvad er sket gennem tiden</h2>
@@ -530,55 +597,54 @@ Bagefter SKAL du køre <code>/scrape-all</code> for at fylde databasen igen.
 <div class="timeline-item">
 <div class="timeline-date">April 2026</div>
 <strong>Fuzzy matching tilføjet</strong>
-<p>Første version af cross-shop matching med <code>rapidfuzz.fuzz.ratio</code> threshold 88. Senere udvidet med ABV-boost og <code>token_sort_ratio</code>.</p>
+<p>Første version af cross-shop matching med rapidfuzz.</p>
 </div>
 
 <div class="timeline-item">
 <div class="timeline-date">April 2026</div>
-<strong>Flere scrapers: Best of Beers, Beer Me, Belgiskbryg</strong>
-<p>Beer Me via Partner-ads XML feed. Belgiskbryg krævede Selenium. Mange normaliseringsforbedringer (danske bogstaver, fjern "trappist", stilart-detektering).</p>
+<strong>Flere scrapers + UI-features</strong>
+<p>Best of Beers, Beer Me, Belgiskbryg. Favoritter via localStorage, Top 10 tilbud sektion, fragt-tooltip, Google Analytics tracking.</p>
 </div>
 
 <div class="timeline-item">
-<div class="timeline-date">April–Maj 2026</div>
-<strong>UI-features:</strong>
-<p>Favoritter via localStorage, filterpræferencer huskes, Top 10 tilbud sektion, fragt-tooltip, Google Analytics tracking.</p>
-</div>
-
-<div class="timeline-item">
-<div class="timeline-date">Maj 2026 — STOR migration</div>
+<div class="timeline-date">Maj 2026 — STOR migration #1</div>
 <strong>Fra Simply til Railway + Supabase + GitHub Pages</strong>
-<p>FastAPI deployet på Railway. PostgreSQL database på Supabase (gratis tier). Frontend flyttet til GitHub Pages. Cloudflare som CDN/DNS foran. Simply webhotel opsagt — kun domænet beholdt.</p>
+<p>FastAPI deployet på Railway. PostgreSQL database på Supabase. Frontend flyttet til GitHub Pages. Cloudflare som CDN/DNS foran. Simply webhotel opsagt — kun domænet beholdt.</p>
 </div>
 
 <div class="timeline-item">
 <div class="timeline-date">Maj 2026</div>
-<strong>API-paginering implementeret</strong>
-<p><code>/beers</code> med page/limit i stedet for at sende alle på én gang. Alle filtre (deals_only, alcohol_free, smagekasse, beer_types, min/max_price, abv_min/max) flyttet til API i stedet for at filtrere lokalt på de 50 hentede.</p>
+<strong>API-paginering, sikkerhed, scheduler</strong>
+<p>/beers med page/limit. SCRAPE_API_KEY for beskyttede endpoints. APScheduler kører daglig scrape kl. 06:00. Robust matching v2.</p>
+</div>
+
+<div class="timeline-item">
+<div class="timeline-date">Maj 2026 — STOR migration #2</div>
+<strong>Fra Railway tilbage til lokal + GitHub Pages</strong>
+<p>Railway afviklet for at spare penge. Nyt setup:
+<br>• <code>build_data.py</code> kører alle scrapers lokalt
+<br>• Supabase bruges som arbejds-DB under ingest (matching)
+<br>• <code>data.json</code> eksporteres og pushes til GitHub
+<br>• Frontend læser direkte fra <code>data.json</code> (ingen API-kald)
+<br>• <code>opdater.bat</code> som dobbeltklik-genvej til daglig opdatering</p>
 </div>
 
 <div class="timeline-item">
 <div class="timeline-date">Maj 2026</div>
-<strong>Sikkerhed: API-nøgle på scrape-endpoints</strong>
-<p><code>SCRAPE_API_KEY</code> environment variable. Cookiebot på Free plan.</p>
+<strong>Sidebar layout + UI-overhaul</strong>
+<p>Permanent sidebar til venstre med alle filtre (mobile overlay-version). Aktive filter-chips. Roterende deal-banner med top 5 tilbud og billeder. Ensartet kort-design med fremhævede tilbuds-kort (grøn glow).</p>
 </div>
 
 <div class="timeline-item">
 <div class="timeline-date">Maj 2026</div>
-<strong>APScheduler — daglig automatisk scrape kl. 06:00</strong>
-<p>Belgiskbryg fjernet fra scheduler fordi Selenium ikke kører på Railway.</p>
+<strong>Flere scrapers: Beer Me + Vild med Vin</strong>
+<p>Nu 7 butikker indekseret. Vild med Vin er den største med 741 produkter.</p>
 </div>
 
 <div class="timeline-item">
-<div class="timeline-date">November 2026</div>
-<strong>Robust matching v2 + Øltanken</strong>
-<p>Ny <code>matching.py</code> som fælles utility for ingest og beers. Style fingerprint som hård gate (Dubbel kan ALDRIG merges med Tripel). Bryggeri som hård gate (Pure Oude Gueuze ≠ Tilquin Gueuze). Threshold hævet fra 82 → 85. Øltanken-scraper tilføjet (oltanken.dk).</p>
-</div>
-
-<div class="timeline-item">
-<div class="timeline-date">November 2026</div>
-<strong>Reset-endpoint</strong>
-<p><code>/reset-beers</code> tilføjet for at kunne genopbygge databasen fra scratch med den nye matching.</p>
+<div class="timeline-date">Maj 2026</div>
+<strong>Analytics + partner-dashboard</strong>
+<p>5 custom dimensions sat op i GA4. Looker Studio dashboard bygget. <code>stats.html</code> med login-system embedded i siden. Om-siden opdateret med partner-fokus (BeerSniffer i tal, For samarbejdspartnere sektion).</p>
 </div>
 
 </div>
@@ -586,23 +652,27 @@ Bagefter SKAL du køre <code>/scrape-all</code> for at fylde databasen igen.
 <!-- ════════════════════════════════════════ -->
 <h2 id="drift">11. Daglig drift & vedligehold</h2>
 
+<h3>Dagligt (eller hver 2.-3. dag)</h3>
+<ul>
+<li>🔁 Dobbeltklik på <code>opdater.bat</code> for at hente friske priser</li>
+<li>👀 Tjek at <code>opdater.bat</code> kører igennem uden fejl</li>
+<li>🌐 Tjek <code>beersniffer.dk</code> efter 1-2 min — vises der opdaterede priser?</li>
+</ul>
+
 <h3>Ugentligt</h3>
 <ul>
-<li>Tjek <strong>Railway → Usage</strong> — er forbruget under $5?</li>
-<li>Tjek <strong>Railway → Logs</strong> en gang — kører den daglige scraper?</li>
-<li>Tjek <strong>beersniffer.dk</strong> — vises der friske priser?</li>
-<li>Tjek <strong>Google Analytics</strong> — er der trafik?</li>
+<li>📊 Tjek <strong>Google Analytics</strong> — er der trafik?</li>
+<li>📈 Tjek <strong>Looker Studio</strong> dashboard — hvilke butikker får flest klik?</li>
+<li>🔍 Test siden fra mobil (overlay-sidebar, deal-banner, filter-chips)</li>
 </ul>
 
 <h3>Månedligt</h3>
 <ul>
-<li>Tjek <strong>Search Console</strong> for fejl</li>
-<li>Tjek at scrapers stadig virker (kan ændre sig hvis shops opdaterer deres sider)</li>
-<li>Overvej om der er nye shops at tilføje</li>
+<li>🔎 Tjek <strong>Search Console</strong> for fejl</li>
+<li>🛠️ Tjek at alle scrapers stadig virker — har shops ændret deres struktur?</li>
+<li>🆕 Overvej om der er nye shops at tilføje</li>
+<li>💸 Send Looker-link til 1-2 potentielle affiliate-partnere</li>
 </ul>
-
-<h3>Hvis Railway giver advarsel om forbrug</h3>
-<p>Cache-TTL i <code>beers.py</code> kan øges fra 3600 (1 time) til 7200 (2 timer). Eller daglig scrape kan flyttes til hver 2. dag.</p>
 
 <!-- ════════════════════════════════════════ -->
 <h2 id="troubleshooting">12. Troubleshooting — hvis noget går galt</h2>
@@ -610,42 +680,60 @@ Bagefter SKAL du køre <code>/scrape-all</code> for at fylde databasen igen.
 <div class="troubleshoot">
 <h4>🔴 Siden viser ingen øl</h4>
 <ol>
-<li>Tjek om Railway viser "Online" → railway.app</li>
-<li>Test API direkte: <code>https://beer-sniffer-production-2a11.up.railway.app/stats</code></li>
-<li>Hvis "Internal Server Error": tjek Railway Logs for fejl</li>
-<li>Hvis API svarer men frontend ikke viser noget: tjek browser console (F12)</li>
+<li>Åbn browser console (F12) — er der fejl der?</li>
+<li>Test om <code>data.json</code> kan hentes direkte: <code>beersniffer.dk/data.json</code></li>
+<li>Hvis 404: <code>data.json</code> mangler i Git. Push den.</li>
+<li>Hvis fejl i JSON: kør <code>build_data.py</code> igen lokalt og push.</li>
+<li>Hård refresh i browser: <code>Ctrl + F5</code></li>
 </ol>
 </div>
 
 <div class="troubleshoot">
-<h4>🔴 Railway giver "secret postgresql not found"</h4>
-<p>DB_URL er ikke sat korrekt. Gå til Railway → Variables og verificer at <code>DB_URL</code> findes med fuld Supabase connection string. Husk <code>%40</code> i stedet for <code>@</code> i passwordet.</p>
+<h4>🔴 opdater.bat starter ikke når man dobbeltklikker</h4>
+<ol>
+<li>Højreklik på filen → Egenskaber → "Fjern blokeringen" (hvis vist)</li>
+<li>Eller kør manuelt i PowerShell: <code>cd C:\Kodning\beer-sniffer ; .\opdater.bat</code></li>
+<li>Hvis stadig intet sker: brug manuel kommando i PowerShell (se Deploy-sektionen)</li>
+</ol>
 </div>
 
 <div class="troubleshoot">
-<h4>🔴 "Network is unreachable" i Railway logs</h4>
-<p>Supabase fri-tier blokerer IPv6. Brug pooler URL i stedet:<br>
-<code>postgresql://postgres.PROJECT-REF:PASSWORD@aws-0-eu-west-1.pooler.supabase.com:6543/postgres</code></p>
+<h4>🔴 build_data.py fejler under scrape</h4>
+<ol>
+<li>Tjek <code>.env</code> findes og indeholder korrekt <code>DB_URL</code></li>
+<li>Test Supabase forbindelse: <code>python -c "from app.database import engine; print(engine.url)"</code></li>
+<li>Test en enkelt scraper lokalt: <code>python -m app.scrapers.brygshoppen</code></li>
+<li>Hvis "Network is unreachable" mod Supabase: brug pooler URL (port 6543 i stedet for 5432)</li>
+</ol>
 </div>
 
 <div class="troubleshoot">
 <h4>🔴 En scraper henter 0 items</h4>
 <ol>
 <li>Test lokalt: <code>python -m app.scrapers.[navn]</code></li>
-<li>Tjek om <code>products.json</code> stadig virker for shoppen</li>
-<li>Hvis CAPTCHA: scraperen kan ikke længere bruges</li>
+<li>Tjek om <code>products.json</code> stadig virker for shoppen i browseren</li>
+<li>Shoppen har måske ændret pagineringsformatet</li>
 </ol>
 </div>
 
 <div class="troubleshoot">
 <h4>🔴 Forkerte øl merges sammen</h4>
-<p>Tjek <code>app/services/matching.py</code>. Hvis det er en ny case kan thresholds eller gates skal justeres. Kør <code>/reset-beers</code> + <code>/scrape-all</code> for at genopbygge med opdateret logik.</p>
+<p>Tjek <code>app/services/matching.py</code>. Hvis det er en ny case kan thresholds eller gates skal justeres. Bemærk at <code>build_data.py</code> ikke nulstiller databasen — tidligere matches bliver i Supabase. For helt fresh start: TRUNCATE tabellerne i Supabase Studio og kør <code>build_data.py</code> igen.</p>
 </div>
 
 <div class="troubleshoot">
 <h4>🔴 git push fejler med "nothing to commit"</h4>
 <p>Filerne er allerede committet. Tving deploy:
 <code>git commit --allow-empty -m "trigger deploy" && git push</code></p>
+</div>
+
+<div class="troubleshoot">
+<h4>🔴 stats.html viser ikke Looker-dashboard</h4>
+<ol>
+<li>Tjek at embed-URL i <code>USERS</code> arrayet er korrekt</li>
+<li>Tjek at Looker-rapporten er sat til "Anyone with the link" eller embed-tilladt</li>
+<li>Test embed-URL direkte i en ny browser-tab</li>
+</ol>
 </div>
 
 <div class="troubleshoot">
@@ -658,23 +746,34 @@ Bagefter SKAL du køre <code>/scrape-all</code> for at fylde databasen igen.
 
 <h3>Quick wins</h3>
 <ul>
-<li>Genskab Beer Me-scraper via Partner-ads XML feed (fungerede tidligere)</li>
+<li>Automatiser <code>opdater.bat</code> med Windows Task Scheduler (kører hver morgen kl. 07)</li>
 <li>Tilføj flere danske ølshops (rookiebeers.com har en liste)</li>
-<li>IBU-data hvis der findes en kilde</li>
+<li>Send Looker-dashboard til Brygshoppen, A Good Case, Beershoppen med tilbud om affiliate-samarbejde</li>
+<li>Lave separat Looker-rapport per partner med deres butik filtreret</li>
+</ul>
+
+<h3>Marketing</h3>
+<ul>
+<li>Reddit /r/Denmark eller /r/Beer posts</li>
+<li>Facebook øl-grupper (Specialøl Danmark, Craft beer Denmark)</li>
+<li>TikTok/Instagram: "Sådan finder du billigste øl i Danmark"</li>
+<li>Untappd kommentarer der nævner siden</li>
 </ul>
 
 <h3>Større features</h3>
 <ul>
+<li><strong>Prisalarm via email</strong> — modellen <code>PriceAlert</code> findes allerede, men kræver backend igen</li>
+<li><strong>Pris-historik graf</strong> — <code>PriceHistory</code> indsamles allerede; mangler frontend-graf</li>
 <li><strong>Brugerlogin</strong> — Supabase Auth (gratis op til 50.000 brugere)</li>
-<li><strong>Prisalarm via email</strong> — modellen <code>PriceAlert</code> findes allerede</li>
-<li><strong>Pris-historik graf</strong> — <code>PriceHistory</code> indsamles allerede; mangler kun frontend-graf</li>
-<li><strong>Mobil-app</strong> — React Native eller PWA-installation</li>
+<li><strong>Mobil-app</strong> — PWA-installation som start</li>
+<li><strong>Whisky/spiritus sektion</strong> — udvid eller lav whiskysniffer.dk søsterside</li>
 </ul>
 
 <h3>Skalerings-overvejelser</h3>
 <ul>
-<li>Hvis database vokser kraftigt: opgrader Supabase eller migrer til Railway PostgreSQL</li>
-<li>Hvis trafik vokser: Cloudflare cache aggressivt på <code>/beers</code>-endpoint</li>
+<li>Hvis trafik vokser: Cloudflare cache aggressivt på <code>data.json</code></li>
+<li>Hvis database vokser kraftigt: opgrader Supabase</li>
+<li>Hvis scrape-tid bliver for lang: parallelisér scrapers i <code>build_data.py</code></li>
 </ul>
 
 <div class="box tip" style="margin-top:3rem;">
@@ -682,7 +781,7 @@ Bagefter SKAL du køre <code>/scrape-all</code> for at fylde databasen igen.
 </div>
 
 <footer style="text-align:center;margin-top:4rem;padding-top:2rem;border-top:1px solid var(--border);color:var(--text-muted);font-size:0.9rem;">
-🍺 BeerSniffer roadmap — sidst opdateret november 2026<br>
+🍺 BeerSniffer roadmap — sidst opdateret maj 2026 efter migrering væk fra Railway<br>
 Gem denne fil et sikkert sted (Dropbox, Google Drive, eller i selve git-repoet som <code>ROADMAP.html</code>)
 </footer>
 
