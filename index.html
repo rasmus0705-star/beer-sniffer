@@ -1704,9 +1704,9 @@
 
     function isAlcoholFree(b) {
         const n = (b.name || '').toLowerCase();
-        // Match på navn først
-        if (/alkoholfri|alcohol[\s-]?free|non[\s-]?alcoholic|sans alcool|0[.,]0\s?%|0[.,]0%|free\b|af\b.*øl/i.test(n)) return true;
-        // Dernæst match på ABV
+        // Match på navn — kun præcise alkoholfri-termer
+        if (/alkoholfri|alcohol[\s-]?free|non[\s-]?alcoholic|sans alcool|(?<!\d)0[.,]0\s?%/i.test(n)) return true;
+        // Match på ABV data
         if (b.abv !== null && b.abv !== undefined && b.abv <= 0.5) return true;
         return false;
     }
