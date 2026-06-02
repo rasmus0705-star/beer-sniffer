@@ -1355,22 +1355,59 @@
 
     // Category shortcuts
     function quickCat(cat) {
-        document.querySelectorAll('.cat-btn').forEach(b => b.classList.remove('active'));
         const btn = document.querySelector(`.cat-btn[data-cat="${cat}"]`);
-        if (btn) btn.classList.add('active');
+
         if (cat === 'deals') {
-            currentFilter = 'deals'; currentSort = 'discount';
-            document.getElementById('sort-select').value = 'discount'; selectedTypes.clear();
-            document.querySelectorAll('.sidebar-filter-btn[data-filter]').forEach(b => b.classList.toggle('active', b.dataset.filter === 'deals'));
+            // Deals er en hurtig-filter, ikke en stilart — ryd stilarter og sæt filter
+            selectedTypes.clear();
+            document.querySelectorAll('.cat-btn').forEach(b => b.classList.remove('active'));
+            if (btn) btn.classList.add('active');
+            currentFilter = 'deals';
+            currentSort = 'discount';
+            document.getElementById('sort-select').value = 'discount';
+            document.querySelectorAll('.sidebar-filter-btn[data-filter]').forEach(b =>
+                b.classList.toggle('active', b.dataset.filter === 'deals')
+            );
+            updateTypeBtn();
+
         } else if (cat === 'smagekasse') {
-            currentFilter = 'smagekasse'; selectedTypes.clear();
-            document.querySelectorAll('.sidebar-filter-btn[data-filter]').forEach(b => b.classList.toggle('active', b.dataset.filter === 'smagekasse'));
+            // Smagekasse er også hurtig-filter
+            selectedTypes.clear();
+            document.querySelectorAll('.cat-btn').forEach(b => b.classList.remove('active'));
+            if (btn) btn.classList.add('active');
+            currentFilter = 'smagekasse';
+            document.querySelectorAll('.sidebar-filter-btn[data-filter]').forEach(b =>
+                b.classList.toggle('active', b.dataset.filter === 'smagekasse')
+            );
+            updateTypeBtn();
+
         } else {
-            currentFilter = 'all'; selectedTypes.clear(); selectedTypes.add(cat);
-            document.querySelectorAll('.sidebar-filter-btn[data-filter]').forEach(b => b.classList.toggle('active', b.dataset.filter === 'all'));
+            // Stilart — toggle den valgte, behold andre aktive stilarter
+            currentFilter = 'all';
+            document.querySelectorAll('.sidebar-filter-btn[data-filter]').forEach(b =>
+                b.classList.toggle('active', b.dataset.filter === 'all')
+            );
+
+            if (selectedTypes.has(cat)) {
+                // Fjern stilart (toggle off)
+                selectedTypes.delete(cat);
+                if (btn) btn.classList.remove('active');
+            } else {
+                // Tilføj stilart (toggle on)
+                selectedTypes.add(cat);
+                if (btn) btn.classList.add('active');
+                // Ryd deals/smagekasse cat-knapper hvis de var aktive
+                document.querySelectorAll('.cat-btn[data-cat="deals"], .cat-btn[data-cat="smagekasse"]').forEach(b =>
+                    b.classList.remove('active')
+                );
+            }
             updateTypeBtn();
         }
-        currentPage = 1; savePrefs(); renderGrid(); renderActiveFilters();
+
+        currentPage = 1;
+        savePrefs();
+        renderGrid();
+        renderActiveFilters();
         gtag('event', 'kategori_genvej', { kategori: cat });
         window.scrollTo({ top: document.querySelector('.grid-wrap').offsetTop - 60, behavior: 'smooth' });
     }
