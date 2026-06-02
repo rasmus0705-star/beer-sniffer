@@ -14,7 +14,10 @@
     <meta property="og:type" content="website">
     <link rel="canonical" href="https://www.beersniffer.dk/">
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- SEO: WebSite schema -->
     <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"BeerSniffer","url":"https://www.beersniffer.dk","potentialAction":{"@type":"SearchAction","target":"https://www.beersniffer.dk/?q={search_term_string}","query-input":"required name=search_term_string"}}</script>
+    <!-- SEO: Product/ItemList schema — injected dynamically after data load -->
+    <script id="product-schema-placeholder" type="application/ld+json">{}</script>
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-WLVKNJ5DS2"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
@@ -23,7 +26,6 @@
         gtag('config', 'G-WLVKNJ5DS2');
     </script>
     <style>
-        /* ── VARIABLES ── */
         :root {
             --bg: #0a0805;
             --surface: #141009;
@@ -41,8 +43,6 @@
             --discount: #3dba6f;
             --discount-dark: #1a5a35;
         }
-
-        /* ── RESET ── */
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
             background: var(--bg);
@@ -51,10 +51,7 @@
             min-height: 100vh;
             overflow-x: hidden;
         }
-        body.sidebar-open {
-            overflow: hidden;
-            touch-action: none;
-        }
+        body.sidebar-open { overflow: hidden; touch-action: none; }
         body::after {
             content: '';
             position: fixed;
@@ -63,13 +60,7 @@
             pointer-events: none;
             z-index: 9999;
         }
-
-        /* ── COMPACT HEADER ── */
-        header {
-            position: relative;
-            overflow: hidden;
-            border-bottom: 1px solid var(--border-light);
-        }
+        header { position: relative; overflow: hidden; border-bottom: 1px solid var(--border-light); }
         header::before {
             content: '';
             position: absolute;
@@ -89,11 +80,7 @@
             max-width: 1200px;
             margin: 0 auto;
         }
-        .mascot-wrap {
-            position: relative;
-            flex-shrink: 0;
-            margin-right: -0.3rem;
-        }
+        .mascot-wrap { position: relative; flex-shrink: 0; margin-right: -0.3rem; }
         .mascot-wrap::before {
             content: '';
             position: absolute;
@@ -115,11 +102,7 @@
             0%, 100% { transform: translateY(0) rotate(-1deg); }
             50% { transform: translateY(-6px) rotate(1deg); }
         }
-        .brand {
-            display: flex;
-            flex-direction: column;
-            gap: 0.05rem;
-        }
+        .brand { display: flex; flex-direction: column; gap: 0.05rem; }
         .brand-name {
             font-family: 'Bebas Neue', sans-serif;
             font-size: 3.2rem;
@@ -137,33 +120,12 @@
             color: var(--text-muted);
             font-weight: 300;
         }
-        .header-right {
-            margin-left: auto;
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-        }
-        .header-updated {
-            font-size: 0.68rem;
-            color: var(--text-dim);
-            text-align: right;
-            line-height: 1.4;
-        }
-        .header-updated strong {
-            color: var(--text-muted);
-        }
+        .header-right { margin-left: auto; display: flex; align-items: center; gap: 1rem; }
+        .header-updated { font-size: 0.68rem; color: var(--text-dim); text-align: right; line-height: 1.4; }
+        .header-updated strong { color: var(--text-muted); }
 
-        /* ── HERO SEARCH ── */
-        .hero-search {
-            background: var(--surface);
-            border-bottom: 1px solid var(--border);
-            padding: 1.8rem 2rem 1.2rem;
-        }
-        .hero-search-inner {
-            max-width: 900px;
-            margin: 0 auto;
-            text-align: center;
-        }
+        .hero-search { background: var(--surface); border-bottom: 1px solid var(--border); padding: 1.8rem 2rem 1.2rem; }
+        .hero-search-inner { max-width: 900px; margin: 0 auto; text-align: center; }
         .hero-search-title {
             font-family: 'Bebas Neue', sans-serif;
             font-size: 1.8rem;
@@ -171,16 +133,8 @@
             letter-spacing: 0.06em;
             margin-bottom: 0.1rem;
         }
-        .hero-search-sub {
-            font-size: 0.78rem;
-            color: var(--text-muted);
-            margin-bottom: 1rem;
-        }
-        .hero-search-wrap {
-            position: relative;
-            max-width: 560px;
-            margin: 0 auto;
-        }
+        .hero-search-sub { font-size: 0.78rem; color: var(--text-muted); margin-bottom: 1rem; }
+        .hero-search-wrap { position: relative; max-width: 560px; margin: 0 auto; }
         .hero-search-wrap svg {
             position: absolute;
             left: 1.2rem;
@@ -202,15 +156,9 @@
             outline: none;
             transition: border-color 0.2s, box-shadow 0.2s;
         }
-        .hero-search-input:focus {
-            border-color: var(--gold);
-            box-shadow: 0 0 30px rgba(200,146,14,0.15);
-        }
-        .hero-search-input::placeholder {
-            color: var(--text-muted);
-        }
+        .hero-search-input:focus { border-color: var(--gold); box-shadow: 0 0 30px rgba(200,146,14,0.15); }
+        .hero-search-input::placeholder { color: var(--text-muted); }
 
-        /* ── CATEGORY SHORTCUTS (scrollbar) ── */
         .category-bar {
             display: flex;
             gap: 0.45rem;
@@ -238,8 +186,7 @@
             min-height: 38px;
             flex-shrink: 0;
         }
-        .cat-btn:hover,
-        .cat-btn.active {
+        .cat-btn:hover, .cat-btn.active {
             background: linear-gradient(135deg, var(--gold), var(--gold-light));
             color: #000;
             border-color: var(--gold);
@@ -248,7 +195,6 @@
             transform: translateY(-1px);
         }
 
-        /* ── STATS BAR ── */
         .stats-bar {
             display: flex;
             justify-content: center;
@@ -266,32 +212,15 @@
             max-width: 180px;
         }
         .stat:last-child { border-right: none; }
-        .stat-number {
-            font-family: 'Bebas Neue', sans-serif;
-            font-size: 2rem;
-            color: var(--gold-light);
-            line-height: 1;
-        }
-        .stat-label {
-            font-size: 0.6rem;
-            letter-spacing: 0.25em;
-            text-transform: uppercase;
-            color: var(--text-muted);
-            margin-top: 0.15rem;
-        }
+        .stat-number { font-family: 'Bebas Neue', sans-serif; font-size: 2rem; color: var(--gold-light); line-height: 1; }
+        .stat-label { font-size: 0.6rem; letter-spacing: 0.25em; text-transform: uppercase; color: var(--text-muted); margin-top: 0.15rem; }
 
-        /* ── TOP DEALS CAROUSEL ── */
         .top-deals-section {
             padding: 1.2rem 1.5rem;
             border-bottom: 1px solid var(--border);
             background: linear-gradient(180deg, var(--surface) 0%, var(--bg) 100%);
         }
-        .top-deals-header {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            margin-bottom: 0.8rem;
-        }
+        .top-deals-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.8rem; }
         .top-deals-title {
             font-family: 'Bebas Neue', sans-serif;
             font-size: 1.3rem;
@@ -302,13 +231,7 @@
             gap: 0.5rem;
         }
         .top-deals-title::before { content: '🔥'; font-size: 1.1rem; }
-        .top-deals-see-all {
-            font-size: 0.75rem;
-            color: var(--gold);
-            cursor: pointer;
-            text-decoration: none;
-            transition: color 0.2s;
-        }
+        .top-deals-see-all { font-size: 0.75rem; color: var(--gold); cursor: pointer; text-decoration: none; transition: color 0.2s; }
         .top-deals-see-all:hover { color: var(--gold-light); }
         .top-deals-scroll {
             display: flex;
@@ -331,10 +254,7 @@
             scroll-snap-align: start;
             min-width: 160px;
         }
-        .top-card:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 24px rgba(61,186,111,0.15);
-        }
+        .top-card:hover { transform: translateY(-3px); box-shadow: 0 8px 24px rgba(61,186,111,0.15); }
         .top-card-pct {
             position: absolute;
             top: 6px;
@@ -347,13 +267,7 @@
             border-radius: 4px 0 0 4px;
             z-index: 10;
         }
-        .top-card-img {
-            width: 100%;
-            height: 100px;
-            object-fit: contain;
-            background: var(--surface2);
-            padding: 0.6rem;
-        }
+        .top-card-img { width: 100%; height: 100px; object-fit: contain; background: var(--surface2); padding: 0.6rem; }
         .top-card-img-placeholder {
             width: 100%;
             height: 100px;
@@ -364,13 +278,7 @@
             font-size: 1.8rem;
         }
         .top-card-body { padding: 0.55rem; }
-        .top-card-shop {
-            font-size: 0.55rem;
-            letter-spacing: 0.15em;
-            text-transform: uppercase;
-            color: var(--discount);
-            margin-bottom: 0.15rem;
-        }
+        .top-card-shop { font-size: 0.55rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--discount); margin-bottom: 0.15rem; }
         .top-card-name {
             font-size: 0.72rem;
             font-weight: 500;
@@ -382,20 +290,16 @@
             -webkit-box-orient: vertical;
             overflow: hidden;
         }
-        .top-card-prices {
-            display: flex;
-            align-items: baseline;
-            gap: 0.3rem;
-        }
-        .top-card-price {
-            font-family: 'Bebas Neue', sans-serif;
-            font-size: 1.2rem;
-            color: var(--gold-light);
-        }
+        .top-card-prices { display: flex; align-items: baseline; gap: 0.4rem; flex-wrap: wrap; }
+        .top-card-price { font-family: 'Bebas Neue', sans-serif; font-size: 1.2rem; color: var(--gold-light); }
+        /* FORBEDRET: synlig førpris */
         .top-card-old {
-            font-size: 0.6rem;
-            color: var(--text-dim);
+            font-size: 0.72rem;
+            color: #c0a878;
             text-decoration: line-through;
+            text-decoration-color: #e05050;
+            text-decoration-thickness: 1.5px;
+            font-weight: 500;
         }
         .top-card-link {
             display: block;
@@ -412,21 +316,11 @@
             text-transform: uppercase;
             letter-spacing: 0.08em;
         }
-        .top-card-link:hover {
-            background: var(--discount);
-            color: #000;
-        }
+        .top-card-link:hover { background: var(--discount); color: #000; }
 
-        /* ── MOBILE FILTER TOGGLE ── */
         .mobile-filter-toggle { display: none; }
 
-        /* ── LAYOUT: SIDEBAR + MAIN ── */
-        .layout-wrap {
-            display: flex;
-            max-width: 100%;
-            margin: 0 auto;
-            min-height: 80vh;
-        }
+        .layout-wrap { display: flex; max-width: 100%; margin: 0 auto; min-height: 80vh; }
         .sidebar {
             width: clamp(230px, 18vw, 300px);
             flex-shrink: 0;
@@ -443,11 +337,7 @@
         }
         .sidebar::-webkit-scrollbar { width: 6px; }
         .sidebar::-webkit-scrollbar-thumb { background: var(--border-light); border-radius: 3px; }
-        .sidebar-section {
-            margin-bottom: 1.3rem;
-            padding-bottom: 1.3rem;
-            border-bottom: 1px solid var(--border);
-        }
+        .sidebar-section { margin-bottom: 1.3rem; padding-bottom: 1.3rem; border-bottom: 1px solid var(--border); }
         .sidebar-section:last-child { border-bottom: none; }
         .sidebar-title {
             font-family: 'Bebas Neue', sans-serif;
@@ -468,11 +358,7 @@
             font-family: 'DM Sans', sans-serif;
         }
         .sidebar-mobile-header { display: none; }
-        .sidebar-filter-btns {
-            display: flex;
-            flex-direction: column;
-            gap: 0.35rem;
-        }
+        .sidebar-filter-btns { display: flex; flex-direction: column; gap: 0.35rem; }
         .sidebar-filter-btn {
             background: var(--surface2);
             border: 1px solid var(--border-light);
@@ -522,10 +408,7 @@
             min-height: 44px;
         }
         .sidebar-checkbox:hover { background: var(--surface2); }
-        .sidebar-checkbox.selected {
-            background: rgba(200,146,14,0.12);
-            color: var(--gold-light);
-        }
+        .sidebar-checkbox.selected { background: rgba(200,146,14,0.12); color: var(--gold-light); }
         .sidebar-checkbox .cb {
             width: 18px;
             height: 18px;
@@ -538,12 +421,7 @@
             font-size: 0.72rem;
             transition: all 0.15s;
         }
-        .sidebar-checkbox.selected .cb {
-            background: var(--gold);
-            border-color: var(--gold);
-            color: #000;
-            font-weight: 700;
-        }
+        .sidebar-checkbox.selected .cb { background: var(--gold); border-color: var(--gold); color: #000; font-weight: 700; }
         .sidebar-sort {
             width: 100%;
             background: var(--surface2);
@@ -581,15 +459,8 @@
             transition: all 0.15s;
             min-height: 44px;
         }
-        .sidebar-reset:hover {
-            transform: translateY(-1px);
-            box-shadow: 0 6px 18px rgba(212,98,10,0.35);
-        }
-        .sidebar-chips {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.35rem;
-        }
+        .sidebar-reset:hover { transform: translateY(-1px); box-shadow: 0 6px 18px rgba(212,98,10,0.35); }
+        .sidebar-chips { display: flex; flex-wrap: wrap; gap: 0.35rem; }
         .sidebar-chip {
             background: rgba(200,146,14,0.15);
             border: 1px solid var(--gold-dim);
@@ -604,10 +475,7 @@
             transition: all 0.15s;
             min-height: 32px;
         }
-        .sidebar-chip:hover {
-            background: rgba(200,146,14,0.25);
-            border-color: var(--gold);
-        }
+        .sidebar-chip:hover { background: rgba(200,146,14,0.25); border-color: var(--gold); }
         .sidebar-chip .x { font-weight: 700; opacity: 0.6; font-size: 0.78rem; line-height: 1; }
         .sidebar-chip:hover .x { opacity: 1; color: #e05050; }
         .sidebar-active-filters {
@@ -619,17 +487,8 @@
         }
         .main-content { flex: 1; min-width: 0; }
 
-        /* ── DUAL RANGE SLIDERS ── */
-        .range-wrap {
-            display: flex;
-            flex-direction: column;
-            gap: 0.4rem;
-        }
-        .dual-range-wrap {
-            position: relative;
-            width: 100%;
-            height: 30px;
-        }
+        .range-wrap { display: flex; flex-direction: column; gap: 0.4rem; }
+        .dual-range-wrap { position: relative; width: 100%; height: 30px; }
         .dual-range-wrap input[type="range"] {
             position: absolute;
             width: 100%;
@@ -671,19 +530,9 @@
             border-radius: 2px;
             z-index: 0;
         }
-        .dual-range-fill {
-            position: absolute;
-            height: 100%;
-            background: var(--gold);
-            border-radius: 2px;
-        }
-        .range-val {
-            font-size: 0.82rem;
-            color: var(--text);
-            text-align: center;
-        }
+        .dual-range-fill { position: absolute; height: 100%; background: var(--gold); border-radius: 2px; }
+        .range-val { font-size: 0.82rem; color: var(--text); text-align: center; }
 
-        /* ── ACTIVE FILTER CHIPS ── */
         .active-filters {
             display: flex;
             flex-wrap: wrap;
@@ -703,42 +552,14 @@
             align-items: center;
             gap: 0.4rem;
         }
-        .filter-chip .x {
-            cursor: pointer;
-            opacity: 0.7;
-            font-weight: 700;
-        }
+        .filter-chip .x { cursor: pointer; opacity: 0.7; font-weight: 700; }
         .filter-chip .x:hover { opacity: 1; color: #e05050; }
-        .active-filters-label {
-            font-size: 0.72rem;
-            letter-spacing: 0.15em;
-            text-transform: uppercase;
-            color: var(--text-muted);
-            margin-right: 0.5rem;
-        }
+        .active-filters-label { font-size: 0.72rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--text-muted); margin-right: 0.5rem; }
 
-        /* ── GRID ── */
-        .grid-wrap {
-            padding: clamp(0.75rem, 1.5vw, 1.5rem);
-            max-width: 100%;
-            margin: 0;
-            position: relative;
-            z-index: 1;
-        }
-        .result-count {
-            font-size: 0.72rem;
-            color: var(--text-dim);
-            margin-bottom: 1rem;
-            letter-spacing: 0.12em;
-            text-transform: uppercase;
-        }
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(min(100%, 210px), 1fr));
-            gap: clamp(0.6rem, 1vw, 1rem);
-        }
+        .grid-wrap { padding: clamp(0.75rem, 1.5vw, 1.5rem); max-width: 100%; margin: 0; position: relative; z-index: 1; }
+        .result-count { font-size: 0.72rem; color: var(--text-dim); margin-bottom: 1rem; letter-spacing: 0.12em; text-transform: uppercase; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 210px), 1fr)); gap: clamp(0.6rem, 1vw, 1rem); }
 
-        /* ── CARD ── */
         .card {
             background: linear-gradient(180deg, var(--surface) 0%, var(--surface2) 100%);
             border: 1px solid var(--border);
@@ -750,23 +571,10 @@
             display: flex;
             flex-direction: column;
         }
-        @keyframes fadeUp {
-            from { opacity: 0; transform: translateY(16px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        .card:hover {
-            transform: translateY(-4px);
-            border-color: var(--gold);
-            box-shadow: 0 16px 40px rgba(0,0,0,0.5), 0 0 24px rgba(200,146,14,0.12);
-        }
-        .card.has-deal {
-            border-color: rgba(61,186,111,0.4);
-            background: linear-gradient(180deg, var(--surface) 0%, rgba(61,186,111,0.06) 100%);
-        }
-        .card.has-deal:hover {
-            box-shadow: 0 16px 40px rgba(0,0,0,0.5), 0 0 30px rgba(61,186,111,0.2);
-            border-color: #3dba6f;
-        }
+        @keyframes fadeUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+        .card:hover { transform: translateY(-4px); border-color: var(--gold); box-shadow: 0 16px 40px rgba(0,0,0,0.5), 0 0 24px rgba(200,146,14,0.12); }
+        .card.has-deal { border-color: rgba(61,186,111,0.4); background: linear-gradient(180deg, var(--surface) 0%, rgba(61,186,111,0.06) 100%); }
+        .card.has-deal:hover { box-shadow: 0 16px 40px rgba(0,0,0,0.5), 0 0 30px rgba(61,186,111,0.2); border-color: #3dba6f; }
         .ribbon {
             position: absolute;
             top: 0;
@@ -782,12 +590,7 @@
             letter-spacing: 0.04em;
             font-weight: 700;
         }
-        .card-img-wrap {
-            position: relative;
-            cursor: pointer;
-            display: block;
-            overflow: hidden;
-        }
+        .card-img-wrap { position: relative; cursor: pointer; display: block; overflow: hidden; }
         .card-img {
             width: 100%;
             height: 155px;
@@ -807,8 +610,6 @@
             justify-content: center;
             font-size: 2.8rem;
         }
-
-        /* Price overlay — altid synlig (virker på mobil) */
         .card-price-overlay {
             position: absolute;
             bottom: 0;
@@ -827,10 +628,14 @@
             line-height: 1;
             text-shadow: 0 0 10px rgba(255,213,74,0.3);
         }
+        /* FORBEDRET: synlig førpris i overlay */
         .card-price-overlay .price-old {
-            font-size: 0.72rem;
-            color: var(--text-dim);
+            font-size: 0.78rem;
+            color: #c0a878;
             text-decoration: line-through;
+            text-decoration-color: #e05050;
+            text-decoration-thickness: 1.5px;
+            font-weight: 500;
         }
         .fav-btn {
             position: absolute;
@@ -852,12 +657,7 @@
         }
         .fav-btn:hover { transform: scale(1.1); border-color: #e05050; }
         .fav-btn.active { background: rgba(220,50,50,0.25); border-color: #e05050; }
-        .card-body {
-            padding: 0.8rem;
-            display: flex;
-            flex-direction: column;
-            flex: 1;
-        }
+        .card-body { padding: 0.8rem; display: flex; flex-direction: column; flex: 1; }
         .card-name {
             font-size: 0.88rem;
             font-weight: 600;
@@ -870,13 +670,7 @@
             overflow: hidden;
             min-height: 2.3em;
         }
-        .card-meta {
-            display: flex;
-            gap: 0.3rem;
-            flex-wrap: wrap;
-            margin-bottom: 0.6rem;
-            min-height: 22px;
-        }
+        .card-meta { display: flex; gap: 0.3rem; flex-wrap: wrap; margin-bottom: 0.6rem; min-height: 22px; }
         .tag {
             font-size: 0.58rem;
             padding: 0.2rem 0.5rem;
@@ -888,15 +682,9 @@
         }
         .tag-type { background: rgba(200,146,14,0.1); color: var(--gold); border-color: rgba(200,146,14,0.25); }
         .tag-shops { background: rgba(74,158,255,0.1); color: #4a9eff; border-color: rgba(74,158,255,0.25); }
+        .tag-ppl { background: rgba(61,186,111,0.08); color: #3dba6f; border-color: rgba(61,186,111,0.2); }
 
-        /* ── PRICE ROWS ── */
-        .price-rows {
-            display: flex;
-            flex-direction: column;
-            gap: 0.35rem;
-            margin-top: auto;
-            margin-bottom: 0.5rem;
-        }
+        .price-rows { display: flex; flex-direction: column; gap: 0.35rem; margin-top: auto; margin-bottom: 0.5rem; }
         .price-row {
             display: flex;
             flex-direction: column;
@@ -908,21 +696,9 @@
             transition: all 0.15s;
         }
         .price-row:hover { border-color: var(--gold-dim); }
-        .price-row-cheapest {
-            border: 2px solid var(--gold);
-            background: linear-gradient(135deg, rgba(200,146,14,0.12), rgba(212,98,10,0.05));
-        }
-        .price-row-cheapest.has-discount {
-            border-color: #3dba6f;
-            background: linear-gradient(135deg, rgba(61,186,111,0.15), rgba(200,146,14,0.05));
-        }
-        .price-row-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            gap: 0.4rem;
-            min-width: 0;
-        }
+        .price-row-cheapest { border: 2px solid var(--gold); background: linear-gradient(135deg, rgba(200,146,14,0.12), rgba(212,98,10,0.05)); }
+        .price-row-cheapest.has-discount { border-color: #3dba6f; background: linear-gradient(135deg, rgba(61,186,111,0.15), rgba(200,146,14,0.05)); }
+        .price-row-header { display: flex; justify-content: space-between; align-items: center; gap: 0.4rem; min-width: 0; }
         .price-row-shop {
             font-size: 0.6rem;
             letter-spacing: 0.08em;
@@ -948,20 +724,8 @@
             white-space: nowrap;
             flex-shrink: 0;
         }
-        .price-row-main {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-end;
-            gap: 0.5rem;
-            min-width: 0;
-        }
-        .price-row-left {
-            display: flex;
-            flex-direction: column;
-            min-width: 0;
-            gap: 1px;
-            flex: 1;
-        }
+        .price-row-main { display: flex; justify-content: space-between; align-items: flex-end; gap: 0.5rem; min-width: 0; }
+        .price-row-left { display: flex; flex-direction: column; min-width: 0; gap: 1px; flex: 1; }
         .price-row-prices { display: flex; align-items: baseline; gap: 0.35rem; flex-wrap: wrap; }
         .price-row-amount {
             font-family: 'Bebas Neue', sans-serif;
@@ -971,7 +735,16 @@
             text-shadow: 0 0 8px rgba(255,213,74,0.2);
             white-space: nowrap;
         }
-        .price-row-old { font-size: 0.72rem; color: #8a7c64; text-decoration: line-through; white-space: nowrap; }
+        /* FORBEDRET: synlig førpris i price-rows */
+        .price-row-old {
+            font-size: 0.78rem;
+            color: #c0a878;
+            text-decoration: line-through;
+            text-decoration-color: #e05050;
+            text-decoration-thickness: 1.5px;
+            font-weight: 500;
+            white-space: nowrap;
+        }
         .price-row-save { font-size: 0.62rem; color: #3dba6f; font-weight: 800; white-space: nowrap; }
         .price-row-total { font-size: 0.58rem; color: var(--text-dim); white-space: nowrap; }
         .price-row-actions { display: flex; align-items: center; gap: 0.3rem; flex-shrink: 0; }
@@ -992,10 +765,7 @@
             display: flex;
             align-items: center;
         }
-        .price-row-link:hover {
-            transform: translateY(-1px);
-            box-shadow: 0 4px 12px rgba(255,193,7,0.4);
-        }
+        .price-row-link:hover { transform: translateY(-1px); box-shadow: 0 4px 12px rgba(255,193,7,0.4); }
         .more-shops-toggle {
             font-size: 0.7rem;
             color: var(--gold);
@@ -1034,7 +804,6 @@
         }
         .untappd-btn:hover { background: #ffc400; color: #000; }
 
-        /* ── SHIPPING TOOLTIP ── */
         .shipping-btn {
             width: 30px;
             height: 30px;
@@ -1082,7 +851,6 @@
         .tt-note { font-size: 0.7rem; color: #7a6a50; margin-top: 0.3rem; }
         .tt-no-info { font-size: 0.78rem; color: #7a6a50; font-style: italic; }
 
-        /* ── LOADING / EMPTY ── */
         #loading { text-align: center; padding: 5rem 2rem; color: var(--text-muted); }
         .spinner {
             width: 36px;
@@ -1097,7 +865,6 @@
         .empty { text-align: center; padding: 3rem; color: var(--text-muted); grid-column: 1/-1; }
         .empty-icon { font-size: 2.5rem; margin-bottom: 0.8rem; }
 
-        /* ── SCROLL TO TOP ── */
         .scroll-top {
             position: fixed;
             bottom: 24px;
@@ -1120,66 +887,19 @@
         .scroll-top.visible { display: flex; }
         .scroll-top:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(200,146,14,0.5); }
 
-        /* ── SEO + FOOTER ── */
-        .seo-section {
-            max-width: 900px;
-            margin: 2.5rem auto;
-            padding: 0 2rem;
-            color: var(--text-dim);
-            font-size: 0.82rem;
-            line-height: 1.7;
-        }
-        .seo-section h2 {
-            font-family: 'Bebas Neue', sans-serif;
-            font-size: 1.15rem;
-            letter-spacing: 0.1em;
-            color: var(--text-muted);
-            margin-bottom: 0.4rem;
-        }
+        .seo-section { max-width: 900px; margin: 2.5rem auto; padding: 0 2rem; color: var(--text-dim); font-size: 0.82rem; line-height: 1.7; }
+        .seo-section h2 { font-family: 'Bebas Neue', sans-serif; font-size: 1.15rem; letter-spacing: 0.1em; color: var(--text-muted); margin-bottom: 0.4rem; }
         footer { border-top: 1px solid var(--border); color: var(--text-dim); font-size: 0.72rem; }
-        .footer-disclaimer {
-            background: rgba(200,146,14,0.04);
-            border-bottom: 1px solid var(--border);
-            padding: 1rem 2rem;
-            text-align: center;
-        }
-        .footer-disclaimer p {
-            color: var(--text-muted);
-            font-size: 0.78rem;
-            line-height: 1.6;
-            max-width: 800px;
-            margin: 0 auto;
-        }
+        .footer-disclaimer { background: rgba(200,146,14,0.04); border-bottom: 1px solid var(--border); padding: 1rem 2rem; text-align: center; }
+        .footer-disclaimer p { color: var(--text-muted); font-size: 0.78rem; line-height: 1.6; max-width: 800px; margin: 0 auto; }
         .footer-disclaimer strong { color: var(--gold); }
-        .footer-main {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 2rem;
-            padding: 1.5rem 2rem;
-            max-width: 1000px;
-            margin: 0 auto;
-        }
+        .footer-main { display: flex; flex-wrap: wrap; justify-content: center; gap: 2rem; padding: 1.5rem 2rem; max-width: 1000px; margin: 0 auto; }
         .footer-col { display: flex; flex-direction: column; gap: 0.35rem; align-items: center; }
-        .footer-col-title {
-            font-size: 0.62rem;
-            letter-spacing: 0.2em;
-            text-transform: uppercase;
-            color: var(--text-muted);
-            margin-bottom: 0.15rem;
-        }
+        .footer-col-title { font-size: 0.62rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 0.15rem; }
         .footer-col a { color: var(--text-dim); text-decoration: none; font-size: 0.72rem; transition: color 0.2s; }
         .footer-col a:hover { color: var(--gold); }
-        .footer-bottom {
-            text-align: center;
-            padding: 1rem 2rem;
-            border-top: 1px solid var(--border);
-            font-size: 0.65rem;
-            letter-spacing: 0.1em;
-            text-transform: uppercase;
-        }
+        .footer-bottom { text-align: center; padding: 1rem 2rem; border-top: 1px solid var(--border); font-size: 0.65rem; letter-spacing: 0.1em; text-transform: uppercase; }
 
-        /* ── RESPONSIVE ── */
         @media (max-width: 1100px) {
             .layout-wrap { display: block; }
             .sidebar {
@@ -1196,14 +916,7 @@
                 padding-bottom: 100px;
             }
             .sidebar.mobile-open { left: 0; }
-            .sidebar-mobile-header {
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                margin-bottom: 1rem;
-                padding-bottom: 1rem;
-                border-bottom: 1px solid var(--border);
-            }
+            .sidebar-mobile-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem; padding-bottom: 1rem; border-bottom: 1px solid var(--border); }
             .sidebar-mobile-close {
                 background: var(--surface2);
                 border: 1px solid var(--border-light);
@@ -1244,25 +957,13 @@
                 gap: 0.5rem;
                 min-height: 44px;
             }
-            .mobile-filter-count {
-                background: rgba(0,0,0,0.3);
-                padding: 1px 8px;
-                border-radius: 10px;
-                font-size: 0.72rem;
-            }
-            .mobile-backdrop {
-                display: none;
-                position: fixed;
-                inset: 0;
-                background: rgba(0,0,0,0.6);
-                z-index: 9997;
-            }
+            .mobile-filter-count { background: rgba(0,0,0,0.3); padding: 1px 8px; border-radius: 10px; font-size: 0.72rem; }
+            .mobile-backdrop { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.6); z-index: 9997; }
             .mobile-backdrop.visible { display: block; }
             .hero-search { padding: 1.2rem 1rem 0.8rem; }
             .hero-search-title { font-size: 1.4rem; }
             .cat-btn { font-size: 0.76rem; padding: 0.45rem 0.8rem; }
         }
-
         @media (max-width: 640px) {
             .header-inner { padding: 0.7rem 1rem; }
             .logo-img { width: 60px; height: 60px; }
@@ -1289,14 +990,17 @@
 </head>
 <body>
 
-<!-- ── HEADER ── -->
+<!-- SEO: H1 med primær søgeintention — skjult visuelt, synlig for Google -->
+<h1 style="position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0;">Find de bedste øltilbud i Danmark — BeerSniffer</h1>
+
+<!-- HEADER -->
 <header>
     <div class="header-inner">
         <div class="mascot-wrap">
-            <img src="logo.png" alt="BeerSniffer mascot" class="logo-img">
+            <img src="logo.png" alt="BeerSniffer mascot" class="logo-img" decoding="async">
         </div>
         <div class="brand">
-            <h1 class="brand-name">BeerSniffer</h1>
+            <span class="brand-name" aria-hidden="true">BeerSniffer</span>
             <p class="brand-tagline">Sammenlign ølpriser fra danske butikker</p>
         </div>
         <div class="header-right">
@@ -1305,18 +1009,20 @@
     </div>
 </header>
 
-<!-- ── HERO SEARCH + CATEGORY BAR ── -->
+<!-- HERO SEARCH -->
 <div class="hero-search">
     <div class="hero-search-inner">
         <h2 class="hero-search-title">Find den billigste øl — på få sekunder</h2>
         <p class="hero-search-sub">Søg blandt <strong id="hero-beer-count">2.300+</strong> øl fra <strong>7 butikker</strong> — opdateret dagligt</p>
         <div class="hero-search-wrap">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-4.35-4.35M17 11A6 6 0 1 1 5 11a6 6 0 0 1 12 0z"/>
             </svg>
-            <input type="text" id="search" class="hero-search-input" placeholder="Søg efter øl, bryggeri eller stil...">
+            <input type="text" id="search" class="hero-search-input"
+                placeholder="Søg efter øl, bryggeri eller stil..."
+                aria-label="Søg efter øl, bryggeri eller stilart">
         </div>
-        <div class="category-bar" id="category-bar">
+        <div class="category-bar" id="category-bar" role="navigation" aria-label="Hurtigt filter efter kategori">
             <button class="cat-btn" data-cat="deals"      onclick="quickCat('deals')">🔥 Tilbud</button>
             <button class="cat-btn" data-cat="IPA"         onclick="quickCat('IPA')">🍺 IPA</button>
             <button class="cat-btn" data-cat="Stout"       onclick="quickCat('Stout')">🖤 Stout</button>
@@ -1333,16 +1039,16 @@
     </div>
 </div>
 
-<!-- ── STATS BAR ── -->
-<div class="stats-bar">
+<!-- STATS BAR -->
+<div class="stats-bar" role="region" aria-label="Statistik">
     <div class="stat"><div class="stat-number" id="stat-total">–</div><div class="stat-label">Øl i alt</div></div>
     <div class="stat"><div class="stat-number" id="stat-deals">–</div><div class="stat-label">Aktive tilbud</div></div>
     <div class="stat"><div class="stat-number" id="stat-max-discount">–</div><div class="stat-label">Største rabat</div></div>
     <div class="stat"><div class="stat-number" id="stat-cheapest">–</div><div class="stat-label">Billigste (kr)</div></div>
 </div>
 
-<!-- ── TOP DEALS CAROUSEL ── -->
-<div class="top-deals-section" id="top-deals-section" style="display:none">
+<!-- TOP DEALS CAROUSEL -->
+<div class="top-deals-section" id="top-deals-section" style="display:none" role="region" aria-label="Bedste tilbud lige nu">
     <div class="top-deals-header">
         <span class="top-deals-title">Bedste tilbud lige nu</span>
         <a class="top-deals-see-all" onclick="quickCat('deals')">Se alle tilbud →</a>
@@ -1350,24 +1056,24 @@
     <div class="top-deals-scroll" id="top-deals-scroll"></div>
 </div>
 
-<!-- ── MOBILE FILTER TOGGLE ── -->
+<!-- MOBILE FILTER TOGGLE -->
 <div class="mobile-filter-toggle">
-    <button class="mobile-filter-btn" id="mobile-filter-open">
+    <button class="mobile-filter-btn" id="mobile-filter-open"
+        aria-label="Åbn filtre" aria-expanded="false" aria-controls="sidebar">
         🎛️ Filtrér <span class="mobile-filter-count" id="mobile-filter-count" style="display:none">0</span>
     </button>
 </div>
 
 <div class="mobile-backdrop" id="mobile-backdrop"></div>
 
-<!-- ── LAYOUT ── -->
+<!-- LAYOUT -->
 <div class="layout-wrap">
-    <aside class="sidebar" id="sidebar">
+    <aside class="sidebar" id="sidebar" aria-label="Filtre">
         <div class="sidebar-mobile-header">
             <span style="font-family:'Bebas Neue',sans-serif;font-size:1.2rem;letter-spacing:0.1em;color:var(--gold)">FILTRE</span>
-            <button class="sidebar-mobile-close" id="mobile-filter-close">✕</button>
+            <button class="sidebar-mobile-close" id="mobile-filter-close" aria-label="Luk filtre">✕</button>
         </div>
 
-        <!-- Aktive filtre -->
         <div class="sidebar-section sidebar-active-filters" id="sidebar-active-filters" style="display:none">
             <div class="sidebar-title">
                 <span>✨ Aktive filtre</span>
@@ -1376,7 +1082,6 @@
             <div class="sidebar-chips" id="sidebar-chips"></div>
         </div>
 
-        <!-- Hurtige filtre -->
         <div class="sidebar-section">
             <div class="sidebar-title">⚡ Hurtige filtre</div>
             <div class="sidebar-filter-btns">
@@ -1388,74 +1093,70 @@
             </div>
         </div>
 
-        <!-- Sortér -->
         <div class="sidebar-section">
             <div class="sidebar-title">🔢 Sortér efter</div>
-            <select class="sidebar-sort" id="sort-select">
+            <select class="sidebar-sort" id="sort-select" aria-label="Vælg sortering">
                 <option value="price-asc">Pris: Lav → Høj</option>
                 <option value="price-desc">Pris: Høj → Lav</option>
                 <option value="discount">Størst rabat</option>
+                <option value="price-per-liter">Pris pr. liter</option>
+                <option value="price-per-cl">Pris pr. cl</option>
                 <option value="name">Navn A–Z</option>
                 <option value="shops">Flest butikker</option>
             </select>
         </div>
 
-        <!-- Butikker -->
         <div class="sidebar-section">
             <div class="sidebar-title">
                 <span>🏪 Butikker <span class="count" id="shop-count-badge" style="display:none">0</span></span>
                 <button class="sidebar-clear-link" id="clear-shops" style="display:none">Ryd</button>
             </div>
-            <div class="sidebar-checkbox-list" id="shop-list"></div>
+            <div class="sidebar-checkbox-list" id="shop-list" role="group" aria-label="Filtrer efter butik"></div>
         </div>
 
-        <!-- Stilarter -->
         <div class="sidebar-section">
             <div class="sidebar-title">
                 <span>🍺 Stilarter <span class="count" id="type-count-badge" style="display:none">0</span></span>
                 <button class="sidebar-clear-link" id="clear-types" style="display:none">Ryd</button>
             </div>
-            <div class="sidebar-checkbox-list" id="type-list"></div>
+            <div class="sidebar-checkbox-list" id="type-list" role="group" aria-label="Filtrer efter stilart"></div>
         </div>
 
-        <!-- Pris range -->
         <div class="sidebar-section">
             <div class="sidebar-title">💰 Pris</div>
             <div class="range-wrap">
                 <div class="dual-range-wrap">
-                    <input type="range" id="price-min" min="0" max="500" value="0" step="10">
-                    <input type="range" id="price-max" min="0" max="500" value="500" step="10">
+                    <input type="range" id="price-min" min="0" max="500" value="0" step="10" aria-label="Minimum pris">
+                    <input type="range" id="price-max" min="0" max="500" value="500" step="10" aria-label="Maksimum pris">
                     <div class="dual-range-track"><div class="dual-range-fill" id="price-fill"></div></div>
                 </div>
-                <div class="range-val" id="price-val">0–500 kr</div>
+                <div class="range-val" id="price-val" aria-live="polite">0–500 kr</div>
             </div>
         </div>
 
-        <!-- ABV range -->
         <div class="sidebar-section">
             <div class="sidebar-title">🍻 Alkoholprocent</div>
             <div class="range-wrap">
                 <div class="dual-range-wrap">
-                    <input type="range" id="abv-min" min="0" max="15" value="0" step="0.5">
-                    <input type="range" id="abv-max" min="0" max="15" value="15" step="0.5">
+                    <input type="range" id="abv-min" min="0" max="15" value="0" step="0.5" aria-label="Minimum alkoholprocent">
+                    <input type="range" id="abv-max" min="0" max="15" value="15" step="0.5" aria-label="Maksimum alkoholprocent">
                     <div class="dual-range-track"><div class="dual-range-fill" id="abv-fill"></div></div>
                 </div>
-                <div class="range-val" id="abv-val">0–15%</div>
+                <div class="range-val" id="abv-val" aria-live="polite">0–15%</div>
             </div>
         </div>
 
-        <!-- Nulstil -->
         <div class="sidebar-section">
             <button class="sidebar-reset" id="reset-btn">🔄 Nulstil alle filtre</button>
         </div>
     </aside>
 
     <div class="main-content">
-        <div class="active-filters" id="active-filters"></div>
+        <div class="active-filters" id="active-filters" aria-live="polite"></div>
         <div class="grid-wrap">
             <div id="loading"><div class="spinner"></div><p>Henter øl...</p></div>
-            <p class="result-count" id="result-count" style="display:none"></p>
-            <div class="grid" id="grid"></div>
+            <p class="result-count" id="result-count" style="display:none" aria-live="polite"></p>
+            <div class="grid" id="grid" role="list"></div>
             <div style="text-align:center;margin:1.5rem 0;">
                 <button id="load-more" class="cat-btn" style="display:none;margin:0 auto;">Vis flere øl ↓</button>
             </div>
@@ -1463,16 +1164,13 @@
     </div>
 </div>
 
-<!-- ── SCROLL TO TOP ── -->
 <button class="scroll-top" id="scroll-top" aria-label="Scroll til toppen">↑</button>
 
-<!-- ── SEO ── -->
 <section class="seo-section">
     <h2>Find de bedste øltilbud online</h2>
     <p>BeerSniffer hjælper dig med at finde de billigste priser på specialøl fra danske webshops. Vi sammenligner IPA, stout, pilsner, sour og meget mere på tværs af butikker som Brygshoppen, A Good Case, Beershoppen, Best of Beers, Øltanken, Beer Me og Vild med Vin – så du altid får den bedste pris uden at bruge timer på at søge selv.</p>
 </section>
 
-<!-- ── FOOTER ── -->
 <footer>
     <div class="footer-disclaimer">
         <p><strong>📢 Affiliate disclosure:</strong> BeerSniffer kan modtage provision når du køber via vores links. Det koster dig ingenting ekstra og påvirker ikke vores prissammenligning — vi viser altid den billigste pris først.</p>
@@ -1489,13 +1187,13 @@
         </div>
         <div class="footer-col">
             <span class="footer-col-title">Butikker</span>
-            <a href="https://brygshoppen.dk" target="_blank">Brygshoppen</a>
-            <a href="https://agoodcase.dk" target="_blank">A Good Case</a>
-            <a href="https://beershoppen.dk" target="_blank">Beershoppen</a>
-            <a href="https://bestofbeers.dk" target="_blank">Best of Beers</a>
-            <a href="https://oeltanken.dk" target="_blank">Øltanken</a>
-            <a href="https://beerme.dk" target="_blank">Beer Me</a>
-            <a href="https://vildmedvin.dk" target="_blank">Vild med Vin</a>
+            <a href="https://brygshoppen.dk" target="_blank" rel="noopener">Brygshoppen</a>
+            <a href="https://agoodcase.dk" target="_blank" rel="noopener">A Good Case</a>
+            <a href="https://beershoppen.dk" target="_blank" rel="noopener">Beershoppen</a>
+            <a href="https://bestofbeers.dk" target="_blank" rel="noopener">Best of Beers</a>
+            <a href="https://oeltanken.dk" target="_blank" rel="noopener">Øltanken</a>
+            <a href="https://beerme.dk" target="_blank" rel="noopener">Beer Me</a>
+            <a href="https://vildmedvin.dk" target="_blank" rel="noopener">Vild med Vin</a>
         </div>
         <div class="footer-col">
             <span class="footer-col-title">Kontakt</span>
@@ -1507,12 +1205,8 @@
 </footer>
 
 <script>
-    // ══════════════════════════════════════════
-    // CONSTANTS
-    // ══════════════════════════════════════════
     const PAGE_SIZE = 50;
 
-    // Shipping info — alle 7 butikker
     const SHIPPING = {
         'A Good Case':   { price: 59,  freeOver: 499, note: 'Levering med Burd eller PostNord' },
         'Brygshoppen':   { price: 70,  freeOver: 499, note: 'Levering med Burd eller DAO' },
@@ -1523,57 +1217,33 @@
         'Vild med Vin':  { price: 49,  freeOver: 499, note: 'Levering via GLS' },
     };
 
-    // ══════════════════════════════════════════
-    // STATE
-    // ══════════════════════════════════════════
     let allBeers = [];
-    let currentPage = 1;
-    let totalPages = 1;
-    let totalCount = 0;
-    let currentFilter = 'all';
-    let currentSort = 'price-asc';
-    let selectedShops = new Set();
-    let selectedTypes = new Set();
-    let priceMin = 0, priceMax = 500;
-    let abvMin = 0, abvMax = 15;
+    let currentPage = 1, totalPages = 1, totalCount = 0;
+    let currentFilter = 'all', currentSort = 'price-asc';
+    let selectedShops = new Set(), selectedTypes = new Set();
+    let priceMin = 0, priceMax = 500, abvMin = 0, abvMax = 15;
     let favorites = new Set(JSON.parse(localStorage.getItem('bs_favorites') || '[]'));
 
     const isMobile = () => window.innerWidth <= 1100;
 
-    // ══════════════════════════════════════════
-    // ANALYTICS
-    // ══════════════════════════════════════════
+    // Analytics
     (function () {
         const fired = new Set();
         window.addEventListener('scroll', function () {
             const pct = Math.round((window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100);
             [25, 50, 75, 100].forEach(p => {
-                if (pct >= p && !fired.has(p)) {
-                    fired.add(p);
-                    gtag('event', 'scroll_dybde', { procent: p });
-                }
+                if (pct >= p && !fired.has(p)) { fired.add(p); gtag('event', 'scroll_dybde', { procent: p }); }
             });
         }, { passive: true });
     })();
     (function () {
-        [30, 60, 120].forEach(s =>
-            setTimeout(() => gtag('event', 'tid_paa_siden', { sekunder: s }), s * 1000)
-        );
+        [30, 60, 120].forEach(s => setTimeout(() => gtag('event', 'tid_paa_siden', { sekunder: s }), s * 1000));
     })();
 
-    // ══════════════════════════════════════════
-    // PREFERENCES
-    // ══════════════════════════════════════════
+    // Preferences
     function savePrefs() {
-        localStorage.setItem('bs_prefs', JSON.stringify({
-            sort: currentSort,
-            types: [...selectedTypes],
-            shops: [...selectedShops],
-            filter: currentFilter,
-            abvMin, abvMax,
-        }));
+        localStorage.setItem('bs_prefs', JSON.stringify({ sort: currentSort, types: [...selectedTypes], shops: [...selectedShops], filter: currentFilter, abvMin, abvMax }));
     }
-
     function loadPrefs() {
         const p = JSON.parse(localStorage.getItem('bs_prefs') || '{}');
         if (p.sort) currentSort = p.sort;
@@ -1584,89 +1254,77 @@
         if (p.filter) {
             currentFilter = p.filter;
             document.querySelectorAll('.sidebar-filter-btn[data-filter]').forEach(b =>
-                b.classList.toggle('active', b.dataset.filter === p.filter)
-            );
+                b.classList.toggle('active', b.dataset.filter === p.filter));
         }
     }
 
-    // ══════════════════════════════════════════
-    // FAVORITES
-    // ══════════════════════════════════════════
+    // Favorites
     function saveFavorites() {
         localStorage.setItem('bs_favorites', JSON.stringify([...favorites]));
-        document.getElementById('fav-count-badge').textContent =
-            favorites.size > 0 ? `(${favorites.size})` : '';
+        document.getElementById('fav-count-badge').textContent = favorites.size > 0 ? `(${favorites.size})` : '';
     }
-
     function toggleFav(key, beerName, shopName) {
-        if (favorites.has(key)) favorites.delete(key);
-        else favorites.add(key);
+        if (favorites.has(key)) favorites.delete(key); else favorites.add(key);
         gtag('event', 'favorit', { beer_name: beerName, shop: shopName });
-        saveFavorites();
-        renderGrid();
+        saveFavorites(); renderGrid();
     }
 
-    // ══════════════════════════════════════════
-    // SHIPPING TOOLTIPS
-    // ══════════════════════════════════════════
+    // Shipping
     function positionTooltip(btn) {
         const tt = btn.querySelector('.shipping-tooltip');
         if (!tt) return;
         const r = btn.getBoundingClientRect();
-        tt.style.top = (r.top - 8) + 'px';
-        tt.style.transform = 'translateY(-100%)';
-        tt.style.left = 'auto';
-        tt.style.right = (window.innerWidth - r.right) + 'px';
+        tt.style.top = (r.top - 8) + 'px'; tt.style.transform = 'translateY(-100%)';
+        tt.style.left = 'auto'; tt.style.right = (window.innerWidth - r.right) + 'px';
         setTimeout(() => {
             const tr = tt.getBoundingClientRect();
             if (tr.left < 10) { tt.style.right = 'auto'; tt.style.left = '10px'; }
             if (tr.top < 10) { tt.style.top = (r.bottom + 8) + 'px'; tt.style.transform = 'translateY(0)'; }
         }, 0);
     }
-
     function shippingTooltipHTML(shopName, itemPrice) {
         const s = SHIPPING[shopName];
-        if (!s) {
-            return `<div class="tt-title">🚚 Fragt — ${shopName}</div>
-                    <div class="tt-divider"></div>
-                    <div class="tt-no-info">Fragtoplysninger ikke tilgængelige.<br>Tjek prisen hos butikken.</div>`;
-        }
+        if (!s) return `<div class="tt-title">🚚 Fragt — ${shopName}</div><div class="tt-divider"></div><div class="tt-no-info">Fragtoplysninger ikke tilgængelige.<br>Tjek prisen hos butikken.</div>`;
         const isFree = itemPrice >= s.freeOver;
         const total = isFree ? itemPrice : itemPrice + s.price;
         return `<div class="tt-title">🚚 Fragt — ${shopName}</div>
-                <div class="tt-row"><span class="tt-label">Fragtpris</span>
-                    <span class="tt-value">${isFree ? '<span class="tt-free">GRATIS 🎉</span>' : '<strong>' + s.price + ' kr</strong>'}</span>
-                </div>
+                <div class="tt-row"><span class="tt-label">Fragtpris</span><span class="tt-value">${isFree ? '<span class="tt-free">GRATIS 🎉</span>' : '<strong>' + s.price + ' kr</strong>'}</span></div>
                 ${!isFree ? `<div class="tt-row"><span class="tt-label">Fri fragt over</span><span class="tt-value">${s.freeOver} kr</span></div>` : ''}
                 <div class="tt-divider"></div>
                 <div class="tt-row"><span class="tt-label">Total inkl. fragt</span><span class="tt-total">${total.toFixed(2)} kr</span></div>
                 <div class="tt-note">${s.note}</div>`;
     }
-
     function shippingBtnHTML(shopName, itemPrice) {
         const s = SHIPPING[shopName];
         const isFree = s && itemPrice >= s.freeOver;
         const cls = !s ? ' no-info' : isFree ? ' free-shipping' : '';
-        return `<span class="shipping-btn${cls}"
+        const label = !s ? 'Fragtinfo ikke tilgængelig' : isFree ? 'Gratis fragt' : `Fragt: ${s.price} kr`;
+        return `<span class="shipping-btn${cls}" aria-label="${label}"
                     onclick="positionTooltip(this);this.classList.toggle('tooltip-open');event.stopPropagation();event.preventDefault()">
-                    🚚<div class="shipping-tooltip">${shippingTooltipHTML(shopName, itemPrice)}</div>
-                </span>`;
+                    🚚<div class="shipping-tooltip">${shippingTooltipHTML(shopName, itemPrice)}</div></span>`;
     }
-
-    // Luk tooltips ved klik udenfor
     document.addEventListener('click', () => {
         document.querySelectorAll('.shipping-btn.tooltip-open').forEach(b => b.classList.remove('tooltip-open'));
     });
-
     function totalWithShipping(shopName, price) {
         const s = SHIPPING[shopName];
         if (!s) return null;
         return price >= s.freeOver ? price : price + s.price;
     }
 
-    // ══════════════════════════════════════════
-    // NORMALIZE BEER
-    // ══════════════════════════════════════════
+    // Pris pr. liter / cl
+    function pricePerLiter(beer) {
+        const vol = beer.volume_cl;
+        if (!vol || vol <= 0) return Infinity;
+        return (beer.min_price / vol) * 100;
+    }
+    function pricePerCl(beer) {
+        const vol = beer.volume_cl;
+        if (!vol || vol <= 0) return Infinity;
+        return beer.min_price / vol;
+    }
+
+    // Normalize
     function normalizeBeer(b) {
         const seen = new Set();
         const prices = (b.prices || []).map(p => ({
@@ -1677,90 +1335,49 @@
             old_price: p.old_price || null,
         })).filter(p => {
             const k = p.shop_name + '|' + p.price;
-            if (seen.has(k)) return false;
-            seen.add(k);
-            return true;
+            if (seen.has(k)) return false; seen.add(k); return true;
         }).sort((a, c) => a.price - c.price);
-
-        return {
-            ...b,
-            min_price: b.cheapest_price || b.min_price || (prices[0] ? prices[0].price : 0),
-            max_discount_pct: b.max_discount_pct || b.discount_pct || 0,
-            normalized_name: b.normalized_name || b.name,
-            prices,
-        };
+        return { ...b, min_price: b.cheapest_price || b.min_price || (prices[0] ? prices[0].price : 0), max_discount_pct: b.max_discount_pct || b.discount_pct || 0, normalized_name: b.normalized_name || b.name, prices };
     }
 
-    // ══════════════════════════════════════════
-    // DETECTION FUNCTIONS (udvidede)
-    // ══════════════════════════════════════════
+    // Detection
     function isSmagekasse(b) {
         if (b.category === 'smagekasse' || b.is_smagekasse) return true;
         const n = (b.name || '').toLowerCase();
         return /smagekasse|smage kasse|mixkasse|mix kasse|prøvekasse|gavekasse|gave kasse|julekalender|adventskalender|julepakke|mixed pack|selection box|tasting set|beer box|øl kasse|ølkasse|sampler|variety pack|discovery|pakke med \d/i.test(n);
     }
-
     function isAlcoholFree(b) {
         const n = (b.name || '').toLowerCase();
-        // Match på navn — kun præcise alkoholfri-termer
         if (/alkoholfri|alcohol[\s-]?free|non[\s-]?alcoholic|sans alcool|(?<!\d)0[.,]0\s?%/i.test(n)) return true;
-        // Match på ABV data
         if (b.abv !== null && b.abv !== undefined && b.abv <= 0.5) return true;
         return false;
     }
 
-    // ══════════════════════════════════════════
-    // CATEGORY SHORTCUTS
-    // ══════════════════════════════════════════
+    // Category shortcuts
     function quickCat(cat) {
-        // Fjern active fra alle cat-knapper
         document.querySelectorAll('.cat-btn').forEach(b => b.classList.remove('active'));
         const btn = document.querySelector(`.cat-btn[data-cat="${cat}"]`);
         if (btn) btn.classList.add('active');
-
         if (cat === 'deals') {
-            currentFilter = 'deals';
-            currentSort = 'discount';
-            document.getElementById('sort-select').value = 'discount';
-            selectedTypes.clear();
-            document.querySelectorAll('.sidebar-filter-btn[data-filter]').forEach(b =>
-                b.classList.toggle('active', b.dataset.filter === 'deals')
-            );
+            currentFilter = 'deals'; currentSort = 'discount';
+            document.getElementById('sort-select').value = 'discount'; selectedTypes.clear();
+            document.querySelectorAll('.sidebar-filter-btn[data-filter]').forEach(b => b.classList.toggle('active', b.dataset.filter === 'deals'));
         } else if (cat === 'smagekasse') {
-            currentFilter = 'smagekasse';
-            selectedTypes.clear();
-            document.querySelectorAll('.sidebar-filter-btn[data-filter]').forEach(b =>
-                b.classList.toggle('active', b.dataset.filter === 'smagekasse')
-            );
+            currentFilter = 'smagekasse'; selectedTypes.clear();
+            document.querySelectorAll('.sidebar-filter-btn[data-filter]').forEach(b => b.classList.toggle('active', b.dataset.filter === 'smagekasse'));
         } else {
-            // Stilart valgt
-            currentFilter = 'all';
-            selectedTypes.clear();
-            selectedTypes.add(cat);
-            document.querySelectorAll('.sidebar-filter-btn[data-filter]').forEach(b =>
-                b.classList.toggle('active', b.dataset.filter === 'all')
-            );
+            currentFilter = 'all'; selectedTypes.clear(); selectedTypes.add(cat);
+            document.querySelectorAll('.sidebar-filter-btn[data-filter]').forEach(b => b.classList.toggle('active', b.dataset.filter === 'all'));
             updateTypeBtn();
         }
-
-        currentPage = 1;
-        savePrefs();
-        renderGrid();
-        renderActiveFilters();
+        currentPage = 1; savePrefs(); renderGrid(); renderActiveFilters();
         gtag('event', 'kategori_genvej', { kategori: cat });
-
-        // Scroll til grid
-        window.scrollTo({
-            top: document.querySelector('.grid-wrap').offsetTop - 60,
-            behavior: 'smooth'
-        });
+        window.scrollTo({ top: document.querySelector('.grid-wrap').offsetTop - 60, behavior: 'smooth' });
     }
 
-    // ══════════════════════════════════════════
-    // BEER CARD
-    // ══════════════════════════════════════════
     function esc(s) { return (s || '').replace(/'/g, ' ').replace(/"/g, ' '); }
 
+    // Beer card
     function makeBeerCard(b, delay) {
         const key = b.normalized_name || b.name;
         const isFav = favorites.has(key);
@@ -1771,56 +1388,39 @@
         const bName = esc(b.name);
         const bShop = esc(best.shop_name || '');
         const totalInclShipping = totalWithShipping(best.shop_name, minPrice);
-        const totalLabel = totalInclShipping !== null
-            ? `<span class="price-row-total">Inkl. fragt: ${totalInclShipping.toFixed(0)} kr</span>`
-            : '';
+        const totalLabel = totalInclShipping !== null ? `<span class="price-row-total">Inkl. fragt: ${totalInclShipping.toFixed(0)} kr</span>` : '';
+        const pplTag = b.volume_cl && b.volume_cl > 0 ? `<span class="tag tag-ppl" title="Pris pr. liter">${((minPrice / b.volume_cl) * 100).toFixed(0)} kr/L</span>` : '';
+        const untappdQuery = encodeURIComponent((() => { const n = b.name.replace(/\d+[.,]?\d*\s?%/g,'').replace(/\d+\s?(cl|ml)/gi,'').trim(); return n.split(/\s+/).slice(0,4).join(' ').trim(); })());
 
-        // Untappd søgelink (rens % og cl fra navn)
-        const untappdQuery = encodeURIComponent((() => {
-            const n = b.name.replace(/\d+[.,]?\d*\s?%/g, '').replace(/\d+\s?(cl|ml)/gi, '').trim();
-            return n.split(/\s+/).slice(0, 4).join(' ').trim();
-        })());
+        let html = `<div class="card${maxDiscount > 0 ? ' has-deal' : ''}" style="animation-delay:${delay}s" role="listitem">`;
+        if (maxDiscount > 0) html += `<div class="ribbon">−${maxDiscount}%</div>`;
 
-        let html = `<div class="card${maxDiscount > 0 ? ' has-deal' : ''}" style="animation-delay:${delay}s">`;
-
-        // Ribbon
-        if (maxDiscount > 0) {
-            html += `<div class="ribbon">−${maxDiscount}%</div>`;
-        }
-
-        // Image wrap
-        html += `<a class="card-img-wrap" ${best.url ? `href="${best.url}" target="_blank" onclick="gtag('event','billede_klik',{beer_name:'${bName}',shop:'${bShop}',price:${minPrice}})"` : ''}>`;
+        html += `<a class="card-img-wrap" ${best.url ? `href="${best.url}" target="_blank" onclick="gtag('event','billede_klik',{beer_name:'${bName}',shop:'${bShop}',price:${minPrice}})"` : ''} aria-label="${b.name} — køb hos ${best.shop_name || 'butik'}">`;
         if (b.image) {
             html += `<img class="card-img" src="${b.image}" alt="${b.name}" loading="lazy" decoding="async" onerror="this.style.display='none'">`;
         } else {
-            html += `<div class="card-img-placeholder">🍺</div>`;
+            html += `<div class="card-img-placeholder" aria-hidden="true">🍺</div>`;
         }
-        html += `<div class="card-price-overlay">
+        html += `<div class="card-price-overlay" aria-hidden="true">
                     <span class="price-big">${minPrice.toFixed(2)} kr</span>
                     ${best.old_price ? `<span class="price-old">${best.old_price.toFixed(2)} kr</span>` : ''}
                  </div>`;
         html += `<button class="fav-btn ${isFav ? 'active' : ''}"
-                    onclick="toggleFav('${key.replace(/'/g, "\\'")}','${bName}','${bShop}');event.preventDefault();event.stopPropagation()">
-                    ${isFav ? '❤️' : '🤍'}
-                 </button>`;
+                    aria-label="${isFav ? 'Fjern fra favoritter' : 'Tilføj til favoritter'}: ${b.name}"
+                    onclick="toggleFav('${key.replace(/'/g,"\\'")}','${bName}','${bShop}');event.preventDefault();event.stopPropagation()">
+                    ${isFav ? '❤️' : '🤍'}</button>`;
         html += `</a>`;
 
-        // Body
-        html += `<div class="card-body">`;
-        html += `<div class="card-name">${b.name}</div>`;
-
-        // Meta tags
+        html += `<div class="card-body"><div class="card-name">${b.name}</div>`;
         html += `<div class="card-meta">`;
         if (b.volume_cl) html += `<span class="tag">${b.volume_cl} cl</span>`;
         if (b.abv) html += `<span class="tag">${b.abv}%</span>`;
         if (b.type) html += `<span class="tag tag-type">${b.type}</span>`;
         if (prices.length > 1) html += `<span class="tag tag-shops">🏪 ${prices.length} butikker</span>`;
+        html += pplTag;
         html += `</div>`;
 
-        // Price rows
         html += `<div class="price-rows">`;
-
-        // Cheapest price
         html += `<div class="price-row price-row-cheapest${best.discount_pct ? ' has-discount' : ''}">
                     <div class="price-row-header">
                         <span class="price-row-shop">🔥 ${best.shop_name || ''}</span>
@@ -1838,17 +1438,16 @@
                         <div class="price-row-actions">
                             ${shippingBtnHTML(best.shop_name, minPrice)}
                             ${best.url ? `<a class="price-row-link" href="${best.url}" target="_blank"
-                                onclick="gtag('event','koeb_klik',{beer_name:'${bName}',shop:'${bShop}',price:${minPrice},placering:'billigste',rabat:${best.discount_pct || 0}})">Køb →</a>` : ''}
+                                aria-label="Køb ${b.name} hos ${best.shop_name} for ${minPrice.toFixed(2)} kr"
+                                onclick="gtag('event','koeb_klik',{beer_name:'${bName}',shop:'${bShop}',price:${minPrice},placering:'billigste',rabat:${best.discount_pct||0}})">Køb →</a>` : ''}
                         </div>
                     </div>
                  </div>`;
 
-        // More shops
         if (prices.length > 1) {
-            html += `<div class="more-shops-toggle" onclick="const ms=this.nextElementSibling;const open=ms.style.display==='flex';ms.style.display=open?'none':'flex';this.textContent=open?'▲ Skjul andre butikker':'+ ${prices.length - 1} butik${prices.length > 2 ? 'ker' : ''} mere'">
-                        + ${prices.length - 1} butik${prices.length > 2 ? 'ker' : ''} mere
-                     </div>
-                     <div class="more-shops" style="display:none">`;
+            html += `<div class="more-shops-toggle" onclick="const ms=this.nextElementSibling;const open=ms.style.display==='flex';ms.style.display=open?'none':'flex';this.textContent=open?'▲ Skjul andre butikker':'+ ${prices.length-1} butik${prices.length>2?'ker':''} mere'">
+                        + ${prices.length-1} butik${prices.length>2?'ker':''} mere
+                     </div><div class="more-shops" style="display:none">`;
             prices.slice(1).forEach(p => {
                 html += `<div class="price-row">
                             <div class="price-row-header">
@@ -1865,57 +1464,29 @@
                                 <div class="price-row-actions">
                                     ${shippingBtnHTML(p.shop_name, p.price)}
                                     ${p.url ? `<a class="price-row-link" href="${p.url}" target="_blank"
-                                        onclick="gtag('event','koeb_klik',{beer_name:'${bName}',shop:'${esc(p.shop_name)}',price:${p.price},placering:'anden_butik',rabat:${p.discount_pct || 0}})">Køb →</a>` : ''}
+                                        aria-label="Køb ${b.name} hos ${p.shop_name} for ${p.price.toFixed(2)} kr"
+                                        onclick="gtag('event','koeb_klik',{beer_name:'${bName}',shop:'${esc(p.shop_name)}',price:${p.price},placering:'anden_butik',rabat:${p.discount_pct||0}})">Køb →</a>` : ''}
                                 </div>
                             </div>
                          </div>`;
             });
             html += `</div>`;
         }
-
-        html += `</div>`; // /price-rows
-
-        // Untappd link
-        html += `<div class="card-actions">
-                    <a class="untappd-btn" href="https://untappd.com/search?q=${untappdQuery}" target="_blank"
-                        onclick="gtag('event','untappd_klik',{beer_name:'${bName}'})">
-                        🍺 Se på Untappd
-                    </a>
-                 </div>`;
-        html += `</div></div>`; // /card-body, /card
-
+        html += `</div>`;
+        html += `<div class="card-actions"><a class="untappd-btn" href="https://untappd.com/search?q=${untappdQuery}" target="_blank" rel="noopener"
+                    aria-label="Se ${b.name} på Untappd"
+                    onclick="gtag('event','untappd_klik',{beer_name:'${bName}'})">🍺 Se på Untappd</a></div>`;
+        html += `</div></div>`;
         return html;
     }
 
-    // ══════════════════════════════════════════
-    // FILTER + SORT
-    // ══════════════════════════════════════════
+    // Filter + sort
     function filterAndSortBeers(beers) {
         let filtered = beers;
-
-        // Søg
         const q = document.getElementById('search').value.toLowerCase().trim();
-        if (q) {
-            filtered = filtered.filter(b =>
-                b.name.toLowerCase().includes(q) ||
-                (b.brewery && b.brewery.toLowerCase().includes(q)) ||
-                (b.type && b.type.toLowerCase().includes(q))
-            );
-        }
-
-        // Butikker
-        if (selectedShops.size > 0) {
-            filtered = filtered.filter(b =>
-                b.prices && b.prices.some(p => selectedShops.has(p.shop_name))
-            );
-        }
-
-        // Stilarter
-        if (selectedTypes.size > 0) {
-            filtered = filtered.filter(b => b.type && selectedTypes.has(b.type));
-        }
-
-        // Hurtige filtre (inkl. favoritter)
+        if (q) filtered = filtered.filter(b => b.name.toLowerCase().includes(q) || (b.brewery && b.brewery.toLowerCase().includes(q)) || (b.type && b.type.toLowerCase().includes(q)));
+        if (selectedShops.size > 0) filtered = filtered.filter(b => b.prices && b.prices.some(p => selectedShops.has(p.shop_name)));
+        if (selectedTypes.size > 0) filtered = filtered.filter(b => b.type && selectedTypes.has(b.type));
         filtered = filtered.filter(b => {
             if (currentFilter === 'deals' && (!b.max_discount_pct || b.max_discount_pct === 0)) return false;
             if (currentFilter === 'alcohol-free' && !isAlcoholFree(b)) return false;
@@ -1923,538 +1494,294 @@
             if (currentFilter === 'favs' && !favorites.has(b.normalized_name || b.name)) return false;
             return true;
         });
-
-        // Pris range
-        filtered = filtered.filter(b => {
-            const p = b.min_price || 0;
-            return p >= priceMin && p <= priceMax;
-        });
-
-        // ABV range
-        filtered = filtered.filter(b => {
-            const a = b.abv || 0;
-            return a >= abvMin && a <= abvMax;
-        });
-
-        // Sort
+        filtered = filtered.filter(b => { const p = b.min_price || 0; return p >= priceMin && p <= priceMax; });
+        filtered = filtered.filter(b => { const a = b.abv || 0; return a >= abvMin && a <= abvMax; });
         const sorted = [...filtered];
         switch (currentSort) {
-            case 'price-asc':  sorted.sort((a, b) => (a.min_price || 0) - (b.min_price || 0)); break;
-            case 'price-desc': sorted.sort((a, b) => (b.min_price || 0) - (a.min_price || 0)); break;
-            case 'discount':   sorted.sort((a, b) => (b.max_discount_pct || 0) - (a.max_discount_pct || 0)); break;
-            case 'name':       sorted.sort((a, b) => a.name.localeCompare(b.name, 'da')); break;
-            case 'shops':      sorted.sort((a, b) => (b.prices?.length || 0) - (a.prices?.length || 0)); break;
+            case 'price-asc':       sorted.sort((a,b) => (a.min_price||0)-(b.min_price||0)); break;
+            case 'price-desc':      sorted.sort((a,b) => (b.min_price||0)-(a.min_price||0)); break;
+            case 'discount':        sorted.sort((a,b) => (b.max_discount_pct||0)-(a.max_discount_pct||0)); break;
+            case 'price-per-liter': sorted.sort((a,b) => pricePerLiter(a)-pricePerLiter(b)); break;
+            case 'price-per-cl':    sorted.sort((a,b) => pricePerCl(a)-pricePerCl(b)); break;
+            case 'name':            sorted.sort((a,b) => a.name.localeCompare(b.name,'da')); break;
+            case 'shops':           sorted.sort((a,b) => (b.prices?.length||0)-(a.prices?.length||0)); break;
         }
-
         return sorted;
     }
 
-    // ══════════════════════════════════════════
-    // RENDER GRID
-    // ══════════════════════════════════════════
+    // Render grid
     function renderGrid(append) {
         const grid = document.getElementById('grid');
         const beers = filterAndSortBeers(allBeers);
-
         const rc = document.getElementById('result-count');
         rc.style.display = 'block';
         rc.textContent = `Viser ${Math.min(currentPage * PAGE_SIZE, beers.length)} af ${beers.length} øl`;
-
         if (!beers.length) {
-            grid.innerHTML = `<div class="empty">
-                <div class="empty-icon">${currentFilter === 'favs' ? '❤️' : '🔍'}</div>
-                <p>${currentFilter === 'favs' ? 'Ingen favoritter endnu — klik 🤍 på et ølkort' : 'Ingen øl matcher din søgning'}</p>
-            </div>`;
-            document.getElementById('load-more').style.display = 'none';
-            return;
+            grid.innerHTML = `<div class="empty"><div class="empty-icon">${currentFilter==='favs'?'❤️':'🔍'}</div><p>${currentFilter==='favs'?'Ingen favoritter endnu — klik 🤍 på et ølkort':'Ingen øl matcher din søgning'}</p></div>`;
+            document.getElementById('load-more').style.display = 'none'; return;
         }
-
-        totalPages = Math.ceil(beers.length / PAGE_SIZE);
-        totalCount = beers.length;
-
+        totalPages = Math.ceil(beers.length / PAGE_SIZE); totalCount = beers.length;
         if (append) {
-            const startIdx = (currentPage - 1) * PAGE_SIZE;
-            const endIdx = startIdx + PAGE_SIZE;
-            const pageBeers = beers.slice(startIdx, endIdx);
-            grid.insertAdjacentHTML('beforeend',
-                pageBeers.map((b, i) => makeBeerCard(b, Math.min(i * 0.02, 0.3))).join('')
-            );
+            const startIdx = (currentPage-1)*PAGE_SIZE, endIdx = startIdx+PAGE_SIZE;
+            grid.insertAdjacentHTML('beforeend', beers.slice(startIdx,endIdx).map((b,i) => makeBeerCard(b,Math.min(i*0.02,0.3))).join(''));
         } else {
-            const endIdx = currentPage * PAGE_SIZE;
-            const pageBeers = beers.slice(0, endIdx);
-            grid.innerHTML = pageBeers.map((b, i) => makeBeerCard(b, Math.min(i * 0.02, 0.5))).join('');
+            grid.innerHTML = beers.slice(0,currentPage*PAGE_SIZE).map((b,i) => makeBeerCard(b,Math.min(i*0.02,0.5))).join('');
         }
-
         document.getElementById('load-more').style.display = currentPage < totalPages ? 'block' : 'none';
     }
 
-    // ══════════════════════════════════════════
-    // RENDER TOP DEALS
-    // ══════════════════════════════════════════
+    // Render top deals
     function renderTopDeals() {
-        const topDeals = allBeers
-            .filter(b => b.max_discount_pct > 0 && !isSmagekasse(b))
-            .sort((a, b) => b.max_discount_pct - a.max_discount_pct)
-            .slice(0, 10);
-
+        const topDeals = allBeers.filter(b => b.max_discount_pct > 0 && !isSmagekasse(b)).sort((a,b) => b.max_discount_pct-a.max_discount_pct).slice(0,10);
         const section = document.getElementById('top-deals-section');
         if (!topDeals.length) { section.style.display = 'none'; return; }
         section.style.display = 'block';
-
         document.getElementById('top-deals-scroll').innerHTML = topDeals.map(deal => {
-            const best = [...(deal.prices || [])].sort((a, c) => (c.discount_pct || 0) - (a.discount_pct || 0))[0] || {};
+            const best = [...(deal.prices||[])].sort((a,c) => (c.discount_pct||0)-(a.discount_pct||0))[0] || {};
             return `<div class="top-card">
                 <div class="top-card-pct">−${deal.max_discount_pct}%</div>
-                ${deal.image
-                    ? `<img class="top-card-img" src="${deal.image}" alt="${deal.name}" loading="lazy" onerror="this.style.display='none'">`
-                    : '<div class="top-card-img-placeholder">🍺</div>'}
+                ${deal.image ? `<img class="top-card-img" src="${deal.image}" alt="${deal.name}" loading="lazy" decoding="async" onerror="this.style.display='none'">` : '<div class="top-card-img-placeholder" aria-hidden="true">🍺</div>'}
                 <div class="top-card-body">
-                    <div class="top-card-shop">${best.shop_name || ''}</div>
+                    <div class="top-card-shop">${best.shop_name||''}</div>
                     <div class="top-card-name">${deal.name}</div>
                     <div class="top-card-prices">
-                        <span class="top-card-price">${(best.price || 0).toFixed(2)} kr</span>
+                        <span class="top-card-price">${(best.price||0).toFixed(2)} kr</span>
                         ${best.old_price ? `<span class="top-card-old">${best.old_price.toFixed(2)} kr</span>` : ''}
                     </div>
-                    ${best.url ? `<a class="top-card-link" href="${best.url}" target="_blank"
-                        onclick="gtag('event','koeb_klik',{beer_name:'${esc(deal.name)}',shop:'${esc(best.shop_name)}',price:${best.price || 0},placering:'top_deals',rabat:${deal.max_discount_pct || 0}})">
-                        Køb nu →</a>` : ''}
-                </div>
-            </div>`;
+                    ${best.url ? `<a class="top-card-link" href="${best.url}" target="_blank" rel="noopener"
+                        aria-label="Køb ${deal.name} nu"
+                        onclick="gtag('event','koeb_klik',{beer_name:'${esc(deal.name)}',shop:'${esc(best.shop_name)}',price:${best.price||0},placering:'top_deals',rabat:${deal.max_discount_pct||0}})">Køb nu →</a>` : ''}
+                </div></div>`;
         }).join('');
     }
 
-    // ══════════════════════════════════════════
-    // ACTIVE FILTER CHIPS
-    // ══════════════════════════════════════════
+    // Product schema (dynamisk)
+    function injectProductSchema() {
+        const topDeals = allBeers.filter(b => b.max_discount_pct > 0 && b.prices && b.prices[0] && b.prices[0].url).sort((a,b) => b.max_discount_pct-a.max_discount_pct).slice(0,10);
+        const schema = {
+            "@context": "https://schema.org",
+            "@type": "ItemList",
+            "name": "Bedste øltilbud lige nu — BeerSniffer",
+            "url": "https://www.beersniffer.dk/",
+            "itemListElement": topDeals.map((b,i) => {
+                const best = b.prices[0];
+                return { "@type":"ListItem", "position":i+1, "item": {
+                    "@type":"Product", "name":b.name, "image":b.image||undefined,
+                    "offers": { "@type":"Offer", "price":best.price.toFixed(2), "priceCurrency":"DKK", "url":best.url, "availability":"https://schema.org/InStock", "seller":{"@type":"Organization","name":best.shop_name} }
+                }};
+            })
+        };
+        document.getElementById('product-schema-placeholder').textContent = JSON.stringify(schema);
+    }
+
+    // Active filter chips
     function renderActiveFilters() {
         const container = document.getElementById('active-filters');
         const sidebarChips = document.getElementById('sidebar-chips');
         const sidebarSection = document.getElementById('sidebar-active-filters');
-        const chips = [];
-        const sc = [];
-
+        const chips = [], sc = [];
         if (currentFilter !== 'all') {
-            const labels = {
-                'deals': '🔥 Tilbud',
-                'favs': '❤️ Favoritter',
-                'alcohol-free': '🚫 Alkoholfri',
-                'smagekasse': '📦 Smagekasser'
-            };
-            const l = labels[currentFilter] || currentFilter;
+            const labels = { 'deals':'🔥 Tilbud','favs':'❤️ Favoritter','alcohol-free':'🚫 Alkoholfri','smagekasse':'📦 Smagekasser' };
+            const l = labels[currentFilter]||currentFilter;
             chips.push(`<span class="filter-chip">${l}<span class="x" onclick="clearFilter('quick')">✕</span></span>`);
             sc.push(`<span class="sidebar-chip" onclick="clearFilter('quick')">${l}<span class="x">✕</span></span>`);
         }
-
         selectedShops.forEach(shop => {
-            const s = shop.replace(/'/g, "\\'");
+            const s = shop.replace(/'/g,"\\'");
             chips.push(`<span class="filter-chip">🏪 ${shop}<span class="x" onclick="clearFilter('shop','${s}')">✕</span></span>`);
             sc.push(`<span class="sidebar-chip" onclick="clearFilter('shop','${s}')">🏪 ${shop}<span class="x">✕</span></span>`);
         });
-
         selectedTypes.forEach(type => {
-            const s = type.replace(/'/g, "\\'");
+            const s = type.replace(/'/g,"\\'");
             chips.push(`<span class="filter-chip">🍺 ${type}<span class="x" onclick="clearFilter('type','${s}')">✕</span></span>`);
             sc.push(`<span class="sidebar-chip" onclick="clearFilter('type','${s}')">🍺 ${type}<span class="x">✕</span></span>`);
         });
-
         const sv = document.getElementById('search').value.trim();
         if (sv) {
             chips.push(`<span class="filter-chip">🔍 "${sv}"<span class="x" onclick="clearFilter('search')">✕</span></span>`);
             sc.push(`<span class="sidebar-chip" onclick="clearFilter('search')">🔍 "${sv}"<span class="x">✕</span></span>`);
         }
-
-        const pm = parseInt(document.getElementById('price-max').max || 500);
-        if (priceMin > 0 || priceMax < pm) {
+        const pm = parseInt(document.getElementById('price-max').max||500);
+        if (priceMin>0||priceMax<pm) {
             const l = `💰 ${Math.round(priceMin)}–${Math.round(priceMax)} kr`;
             chips.push(`<span class="filter-chip">${l}<span class="x" onclick="clearFilter('price')">✕</span></span>`);
             sc.push(`<span class="sidebar-chip" onclick="clearFilter('price')">${l}<span class="x">✕</span></span>`);
         }
-
-        if (abvMin > 0 || abvMax < 15) {
+        if (abvMin>0||abvMax<15) {
             const l = `🍻 ${abvMin.toFixed(1)}–${abvMax.toFixed(1)}%`;
             chips.push(`<span class="filter-chip">${l}<span class="x" onclick="clearFilter('abv')">✕</span></span>`);
             sc.push(`<span class="sidebar-chip" onclick="clearFilter('abv')">${l}<span class="x">✕</span></span>`);
         }
-
-        container.innerHTML = chips.length
-            ? '<span class="active-filters-label">Aktive filtre:</span>' + chips.join('')
-            : '';
-
-        if (sc.length) {
-            sidebarSection.style.display = 'block';
-            sidebarChips.innerHTML = sc.join('');
-        } else {
-            sidebarSection.style.display = 'none';
-            sidebarChips.innerHTML = '';
-        }
-
-        // Mobil filter count
+        container.innerHTML = chips.length ? '<span class="active-filters-label">Aktive filtre:</span>'+chips.join('') : '';
+        if (sc.length) { sidebarSection.style.display='block'; sidebarChips.innerHTML=sc.join(''); }
+        else { sidebarSection.style.display='none'; sidebarChips.innerHTML=''; }
         const mc = document.getElementById('mobile-filter-count');
-        if (mc) {
-            if (chips.length) { mc.style.display = 'inline-block'; mc.textContent = chips.length; }
-            else mc.style.display = 'none';
-        }
+        if (mc) { if (chips.length) { mc.style.display='inline-block'; mc.textContent=chips.length; } else mc.style.display='none'; }
     }
 
-    // Global clearFilter
-    window.clearFilter = function (type, value) {
-        if (type === 'quick') {
-            currentFilter = 'all';
-            document.querySelectorAll('.sidebar-filter-btn[data-filter]').forEach(b =>
-                b.classList.toggle('active', b.dataset.filter === 'all')
-            );
-            document.querySelectorAll('.cat-btn').forEach(b => b.classList.remove('active'));
-        } else if (type === 'shop') {
-            selectedShops.delete(value);
-            updateShopBtn();
-        } else if (type === 'type') {
-            selectedTypes.delete(value);
-            updateTypeBtn();
-            document.querySelectorAll('.cat-btn').forEach(b => b.classList.remove('active'));
-        } else if (type === 'search') {
-            document.getElementById('search').value = '';
-        } else if (type === 'price') {
-            priceMin = 0;
-            priceMax = parseInt(document.getElementById('price-max').max || 500);
-            document.getElementById('price-min').value = 0;
-            document.getElementById('price-max').value = priceMax;
-            updateDualRange('price');
-        } else if (type === 'abv') {
-            abvMin = 0; abvMax = 15;
-            document.getElementById('abv-min').value = 0;
-            document.getElementById('abv-max').value = 15;
-            updateDualRange('abv');
-        }
-        currentPage = 1;
-        savePrefs();
-        renderGrid();
-        renderActiveFilters();
+    window.clearFilter = function(type, value) {
+        if (type==='quick') { currentFilter='all'; document.querySelectorAll('.sidebar-filter-btn[data-filter]').forEach(b=>b.classList.toggle('active',b.dataset.filter==='all')); document.querySelectorAll('.cat-btn').forEach(b=>b.classList.remove('active')); }
+        else if (type==='shop') { selectedShops.delete(value); updateShopBtn(); }
+        else if (type==='type') { selectedTypes.delete(value); updateTypeBtn(); document.querySelectorAll('.cat-btn').forEach(b=>b.classList.remove('active')); }
+        else if (type==='search') { document.getElementById('search').value=''; }
+        else if (type==='price') { priceMin=0; priceMax=parseInt(document.getElementById('price-max').max||500); document.getElementById('price-min').value=0; document.getElementById('price-max').value=priceMax; updateDualRange('price'); }
+        else if (type==='abv') { abvMin=0; abvMax=15; document.getElementById('abv-min').value=0; document.getElementById('abv-max').value=15; updateDualRange('abv'); }
+        currentPage=1; savePrefs(); renderGrid(); renderActiveFilters();
     };
 
-    // ══════════════════════════════════════════
-    // DUAL RANGE SLIDERS
-    // ══════════════════════════════════════════
+    // Dual range
     function updateDualRange(type) {
-        const minEl = document.getElementById(type + '-min');
-        const maxEl = document.getElementById(type + '-max');
-        let minV = parseFloat(minEl.value);
-        let maxV = parseFloat(maxEl.value);
-
-        // Swap if crossed
-        if (minV > maxV) {
-            [minV, maxV] = [maxV, minV];
-            minEl.value = minV;
-            maxEl.value = maxV;
-        }
-
-        const minR = parseFloat(minEl.min);
-        const maxR = parseFloat(minEl.max);
-        const range = maxR - minR;
-        const p1 = ((minV - minR) / range) * 100;
-        const p2 = ((maxV - minR) / range) * 100;
-
-        document.getElementById(type + '-fill').style.left = p1 + '%';
-        document.getElementById(type + '-fill').style.width = (p2 - p1) + '%';
-
-        if (type === 'price') {
-            document.getElementById('price-val').textContent = Math.round(minV) + '–' + Math.round(maxV) + ' kr';
-            priceMin = minV;
-            priceMax = maxV;
-        } else {
-            document.getElementById('abv-val').textContent = minV.toFixed(1) + '–' + maxV.toFixed(1) + '%';
-            abvMin = minV;
-            abvMax = maxV;
-        }
+        const minEl = document.getElementById(type+'-min'), maxEl = document.getElementById(type+'-max');
+        let minV = parseFloat(minEl.value), maxV = parseFloat(maxEl.value);
+        if (minV>maxV) { [minV,maxV]=[maxV,minV]; minEl.value=minV; maxEl.value=maxV; }
+        const minR=parseFloat(minEl.min), maxR=parseFloat(minEl.max), range=maxR-minR;
+        const p1=((minV-minR)/range)*100, p2=((maxV-minR)/range)*100;
+        document.getElementById(type+'-fill').style.left=p1+'%';
+        document.getElementById(type+'-fill').style.width=(p2-p1)+'%';
+        if (type==='price') { document.getElementById('price-val').textContent=Math.round(minV)+'–'+Math.round(maxV)+' kr'; priceMin=minV; priceMax=maxV; }
+        else { document.getElementById('abv-val').textContent=minV.toFixed(1)+'–'+maxV.toFixed(1)+'%'; abvMin=minV; abvMax=maxV; }
     }
 
-    // ══════════════════════════════════════════
-    // SIDEBAR BUTTON UPDATES
-    // ══════════════════════════════════════════
-    function updateSortBtn() {
-        document.getElementById('sort-select').value = currentSort;
-    }
-
+    // Sidebar updates
+    function updateSortBtn() { document.getElementById('sort-select').value=currentSort; }
     function updateShopBtn() {
-        const badge = document.getElementById('shop-count-badge');
-        const cl = document.getElementById('clear-shops');
-        if (!selectedShops.size) {
-            badge.style.display = 'none';
-            cl.style.display = 'none';
-        } else {
-            badge.style.display = 'inline-block';
-            badge.textContent = selectedShops.size;
-            cl.style.display = 'inline-block';
-        }
-        document.querySelectorAll('#shop-list .sidebar-checkbox').forEach(item => {
-            const sel = selectedShops.has(item.dataset.shop);
-            item.classList.toggle('selected', sel);
-            item.querySelector('.cb').textContent = sel ? '✓' : '';
-        });
+        const badge=document.getElementById('shop-count-badge'), cl=document.getElementById('clear-shops');
+        if (!selectedShops.size) { badge.style.display='none'; cl.style.display='none'; }
+        else { badge.style.display='inline-block'; badge.textContent=selectedShops.size; cl.style.display='inline-block'; }
+        document.querySelectorAll('#shop-list .sidebar-checkbox').forEach(item => { const sel=selectedShops.has(item.dataset.shop); item.classList.toggle('selected',sel); item.querySelector('.cb').textContent=sel?'✓':''; item.setAttribute('aria-checked',sel?'true':'false'); });
     }
-
     function updateTypeBtn() {
-        const badge = document.getElementById('type-count-badge');
-        const cl = document.getElementById('clear-types');
-        if (!selectedTypes.size) {
-            badge.style.display = 'none';
-            cl.style.display = 'none';
-        } else {
-            badge.style.display = 'inline-block';
-            badge.textContent = selectedTypes.size;
-            cl.style.display = 'inline-block';
-        }
-        document.querySelectorAll('#type-list .sidebar-checkbox').forEach(item => {
-            const sel = selectedTypes.has(item.dataset.type);
-            item.classList.toggle('selected', sel);
-            item.querySelector('.cb').textContent = sel ? '✓' : '';
-        });
+        const badge=document.getElementById('type-count-badge'), cl=document.getElementById('clear-types');
+        if (!selectedTypes.size) { badge.style.display='none'; cl.style.display='none'; }
+        else { badge.style.display='inline-block'; badge.textContent=selectedTypes.size; cl.style.display='inline-block'; }
+        document.querySelectorAll('#type-list .sidebar-checkbox').forEach(item => { const sel=selectedTypes.has(item.dataset.type); item.classList.toggle('selected',sel); item.querySelector('.cb').textContent=sel?'✓':''; item.setAttribute('aria-checked',sel?'true':'false'); });
     }
 
-    // ══════════════════════════════════════════
-    // MOBILE SIDEBAR
-    // ══════════════════════════════════════════
-    function closeSidebar() {
-        document.getElementById('sidebar').classList.remove('mobile-open');
-        document.getElementById('mobile-backdrop').classList.remove('visible');
-        document.body.classList.remove('sidebar-open');
-    }
+    // Mobile sidebar
+    function closeSidebar() { document.getElementById('sidebar').classList.remove('mobile-open'); document.getElementById('mobile-backdrop').classList.remove('visible'); document.body.classList.remove('sidebar-open'); document.getElementById('mobile-filter-open').setAttribute('aria-expanded','false'); }
+    function openSidebar() { document.getElementById('sidebar').classList.add('mobile-open'); document.getElementById('mobile-backdrop').classList.add('visible'); document.body.classList.add('sidebar-open'); document.getElementById('mobile-filter-open').setAttribute('aria-expanded','true'); }
 
-    function openSidebar() {
-        document.getElementById('sidebar').classList.add('mobile-open');
-        document.getElementById('mobile-backdrop').classList.add('visible');
-        document.body.classList.add('sidebar-open');
-    }
-
-    // ══════════════════════════════════════════
-    // LOAD DATA
-    // ══════════════════════════════════════════
+    // Load data
     async function loadData() {
         try {
-            const res = await fetch('data.json?v=' + Date.now());
+            const res = await fetch('data.json?v='+Date.now());
             if (!res.ok) throw new Error('Kunne ikke hente data.json');
             const raw = await res.json();
+            allBeers = (raw.beers||[]).map(normalizeBeer);
+            const stats = raw.stats||{};
 
-            allBeers = (raw.beers || []).map(normalizeBeer);
-            const stats = raw.stats || {};
+            document.getElementById('stat-total').textContent = stats.total||allBeers.length;
+            document.getElementById('stat-deals').textContent = stats.deals||allBeers.filter(b=>b.max_discount_pct>0).length;
+            const maxDiscount = Math.max(...allBeers.map(b=>b.max_discount_pct||0),0);
+            document.getElementById('stat-max-discount').textContent = maxDiscount>0?maxDiscount+'%':'–';
+            document.getElementById('stat-cheapest').textContent = (stats.cheapest||Math.min(...allBeers.filter(b=>b.min_price).map(b=>b.min_price))).toFixed(0);
+            document.getElementById('hero-beer-count').textContent = (stats.total||allBeers.length).toLocaleString('da-DK');
 
-            // Stats
-            document.getElementById('stat-total').textContent = stats.total || allBeers.length;
-            document.getElementById('stat-deals').textContent = stats.deals || allBeers.filter(b => b.max_discount_pct > 0).length;
-            const maxDiscount = Math.max(...allBeers.map(b => b.max_discount_pct || 0), 0);
-            document.getElementById('stat-max-discount').textContent = maxDiscount > 0 ? maxDiscount + '%' : '–';
-            document.getElementById('stat-cheapest').textContent = (stats.cheapest || Math.min(...allBeers.filter(b => b.min_price).map(b => b.min_price))).toFixed(0);
-            document.getElementById('hero-beer-count').textContent = (stats.total || allBeers.length).toLocaleString('da-DK');
-
-            // Opdateret timestamp
             if (raw.updated_at) {
-                const d = new Date(raw.updated_at);
-                const opts = { day: 'numeric', month: 'short', hour: '2-digit', minute: '2-digit' };
-                document.getElementById('header-updated').innerHTML =
-                    `<strong>Sidst opdateret</strong><br>${d.toLocaleDateString('da-DK', opts)}`;
+                const d=new Date(raw.updated_at), opts={day:'numeric',month:'short',hour:'2-digit',minute:'2-digit'};
+                document.getElementById('header-updated').innerHTML=`<strong>Sidst opdateret</strong><br>${d.toLocaleDateString('da-DK',opts)}`;
             }
 
-            // Butik checkboxes
             const shopList = document.getElementById('shop-list');
-            shopList.innerHTML = (stats.shop_names || []).map(sh =>
-                `<div class="sidebar-checkbox" data-shop="${sh}"><span class="cb"></span> ${sh}</div>`
-            ).join('');
+            shopList.innerHTML = (stats.shop_names||[]).map(sh => `<div class="sidebar-checkbox" data-shop="${sh}" role="checkbox" aria-checked="false" tabindex="0"><span class="cb"></span> ${sh}</div>`).join('');
             shopList.querySelectorAll('.sidebar-checkbox').forEach(item => {
-                item.addEventListener('click', e => {
-                    e.stopPropagation();
-                    if (selectedShops.has(item.dataset.shop)) selectedShops.delete(item.dataset.shop);
-                    else { selectedShops.add(item.dataset.shop); gtag('event', 'butik_filter', { butik: item.dataset.shop }); }
-                    currentPage = 1;
-                    updateShopBtn();
-                    savePrefs();
-                    renderGrid();
-                    renderActiveFilters();
+                const toggle = () => {
+                    if (selectedShops.has(item.dataset.shop)) { selectedShops.delete(item.dataset.shop); item.setAttribute('aria-checked','false'); }
+                    else { selectedShops.add(item.dataset.shop); item.setAttribute('aria-checked','true'); gtag('event','butik_filter',{butik:item.dataset.shop}); }
+                    currentPage=1; updateShopBtn(); savePrefs(); renderGrid(); renderActiveFilters();
                     if (isMobile()) closeSidebar();
-                });
+                };
+                item.addEventListener('click', e => { e.stopPropagation(); toggle(); });
+                item.addEventListener('keydown', e => { if (e.key===' '||e.key==='Enter') { e.preventDefault(); toggle(); } });
             });
 
-            // Stilart checkboxes
             const typeList = document.getElementById('type-list');
-            typeList.innerHTML = (stats.types || []).map(t =>
-                `<div class="sidebar-checkbox" data-type="${t}"><span class="cb"></span> ${t}</div>`
-            ).join('');
+            typeList.innerHTML = (stats.types||[]).map(t => `<div class="sidebar-checkbox" data-type="${t}" role="checkbox" aria-checked="false" tabindex="0"><span class="cb"></span> ${t}</div>`).join('');
             typeList.querySelectorAll('.sidebar-checkbox').forEach(item => {
-                item.addEventListener('click', e => {
-                    e.stopPropagation();
-                    if (selectedTypes.has(item.dataset.type)) selectedTypes.delete(item.dataset.type);
-                    else { selectedTypes.add(item.dataset.type); gtag('event', 'stilart_filter', { stilart: item.dataset.type }); }
-                    currentPage = 1;
-                    updateTypeBtn();
-                    savePrefs();
-                    renderGrid();
-                    renderActiveFilters();
+                const toggle = () => {
+                    if (selectedTypes.has(item.dataset.type)) { selectedTypes.delete(item.dataset.type); item.setAttribute('aria-checked','false'); }
+                    else { selectedTypes.add(item.dataset.type); item.setAttribute('aria-checked','true'); gtag('event','stilart_filter',{stilart:item.dataset.type}); }
+                    currentPage=1; updateTypeBtn(); savePrefs(); renderGrid(); renderActiveFilters();
                     if (isMobile()) closeSidebar();
-                });
+                };
+                item.addEventListener('click', e => { e.stopPropagation(); toggle(); });
+                item.addEventListener('keydown', e => { if (e.key===' '||e.key==='Enter') { e.preventDefault(); toggle(); } });
             });
 
-            // Clear knapper
-            document.getElementById('clear-shops').addEventListener('click', e => {
-                e.stopPropagation();
-                selectedShops.clear();
-                currentPage = 1;
-                updateShopBtn(); savePrefs(); renderGrid(); renderActiveFilters();
-            });
-            document.getElementById('clear-types').addEventListener('click', e => {
-                e.stopPropagation();
-                selectedTypes.clear();
-                currentPage = 1;
-                updateTypeBtn(); savePrefs(); renderGrid(); renderActiveFilters();
-            });
+            document.getElementById('clear-shops').addEventListener('click', e => { e.stopPropagation(); selectedShops.clear(); currentPage=1; updateShopBtn(); savePrefs(); renderGrid(); renderActiveFilters(); });
+            document.getElementById('clear-types').addEventListener('click', e => { e.stopPropagation(); selectedTypes.clear(); currentPage=1; updateTypeBtn(); savePrefs(); renderGrid(); renderActiveFilters(); });
 
-            // Load prefs & render
-            loadPrefs();
-            updateShopBtn();
-            updateTypeBtn();
-            updateSortBtn();
+            loadPrefs(); updateShopBtn(); updateTypeBtn(); updateSortBtn();
 
-            // Sæt pris max fra data
-            const maxP = Math.ceil(Math.max(...allBeers.filter(b => b.min_price).map(b => b.min_price), 500));
-            document.getElementById('price-min').max = maxP;
-            document.getElementById('price-max').max = maxP;
-            document.getElementById('price-max').value = maxP;
-            priceMax = maxP;
+            const maxP = Math.ceil(Math.max(...allBeers.filter(b=>b.min_price).map(b=>b.min_price),500));
+            document.getElementById('price-min').max=maxP; document.getElementById('price-max').max=maxP;
+            document.getElementById('price-max').value=maxP; priceMax=maxP;
 
-            // Render
-            document.getElementById('loading').style.display = 'none';
-            currentPage = 1;
-            renderGrid();
-            renderTopDeals();
-            renderActiveFilters();
-
+            document.getElementById('loading').style.display='none';
+            currentPage=1; renderGrid(); renderTopDeals(); renderActiveFilters(); injectProductSchema();
         } catch (err) {
-            document.getElementById('loading').innerHTML =
-                '<div class="empty-icon">😢</div><p>Kunne ikke hente øl-data — tjek at data.json findes</p>';
+            document.getElementById('loading').innerHTML='<div class="empty-icon">😢</div><p>Kunne ikke hente øl-data — tjek at data.json findes</p>';
             console.error(err);
         }
     }
 
-    // ══════════════════════════════════════════
-    // INIT
-    // ══════════════════════════════════════════
+    // Init
     async function init() {
-        // Sort
-        document.getElementById('sort-select').addEventListener('change', function () {
-            currentSort = this.value;
-            currentPage = 1;
-            savePrefs();
-            renderGrid();
-            gtag('event', 'sortering', { sort: currentSort });
-        });
+        document.getElementById('sort-select').addEventListener('change', function() { currentSort=this.value; currentPage=1; savePrefs(); renderGrid(); gtag('event','sortering',{sort:currentSort}); });
 
-        // Filter pills
         document.querySelectorAll('.sidebar-filter-btn[data-filter]').forEach(btn => {
             btn.addEventListener('click', () => {
-                document.querySelectorAll('.sidebar-filter-btn[data-filter]').forEach(b => b.classList.remove('active'));
-                btn.classList.add('active');
-                currentFilter = btn.dataset.filter;
-                currentPage = 1;
-                if (currentFilter === 'deals') {
-                    currentSort = 'discount';
-                    document.getElementById('sort-select').value = 'discount';
-                }
-                document.querySelectorAll('.cat-btn').forEach(b => b.classList.remove('active'));
-                savePrefs();
-                renderGrid();
-                renderActiveFilters();
-                gtag('event', 'filter_klik', { filter: currentFilter });
+                document.querySelectorAll('.sidebar-filter-btn[data-filter]').forEach(b=>b.classList.remove('active'));
+                btn.classList.add('active'); currentFilter=btn.dataset.filter; currentPage=1;
+                if (currentFilter==='deals') { currentSort='discount'; document.getElementById('sort-select').value='discount'; }
+                document.querySelectorAll('.cat-btn').forEach(b=>b.classList.remove('active'));
+                savePrefs(); renderGrid(); renderActiveFilters(); gtag('event','filter_klik',{filter:currentFilter});
                 if (isMobile()) closeSidebar();
             });
         });
 
-        // Mobile sidebar
         document.getElementById('mobile-filter-open').addEventListener('click', openSidebar);
         document.getElementById('mobile-filter-close').addEventListener('click', closeSidebar);
         document.getElementById('mobile-backdrop').addEventListener('click', closeSidebar);
 
-        // Reset
         function resetAllFilters() {
-            currentFilter = 'all';
-            selectedShops.clear();
-            currentSort = 'price-asc';
-            currentPage = 1;
-            selectedTypes.clear();
-            priceMin = 0; abvMin = 0; abvMax = 15;
-            document.getElementById('search').value = '';
-            document.getElementById('price-min').value = 0;
-            document.getElementById('price-max').value = parseInt(document.getElementById('price-max').max);
-            document.getElementById('abv-min').value = 0;
-            document.getElementById('abv-max').value = 15;
-            updateDualRange('price');
-            updateDualRange('abv');
-            updateSortBtn();
-            updateShopBtn();
-            updateTypeBtn();
-            document.querySelectorAll('.sidebar-filter-btn[data-filter]').forEach(b => b.classList.remove('active'));
+            currentFilter='all'; selectedShops.clear(); currentSort='price-asc'; currentPage=1;
+            selectedTypes.clear(); priceMin=0; abvMin=0; abvMax=15;
+            document.getElementById('search').value='';
+            document.getElementById('price-min').value=0;
+            document.getElementById('price-max').value=parseInt(document.getElementById('price-max').max);
+            document.getElementById('abv-min').value=0; document.getElementById('abv-max').value=15;
+            updateDualRange('price'); updateDualRange('abv'); updateSortBtn(); updateShopBtn(); updateTypeBtn();
+            document.querySelectorAll('.sidebar-filter-btn[data-filter]').forEach(b=>b.classList.remove('active'));
             document.querySelector('.sidebar-filter-btn[data-filter=all]').classList.add('active');
-            document.querySelectorAll('.cat-btn').forEach(b => b.classList.remove('active'));
-            savePrefs();
-            renderGrid();
-            renderActiveFilters();
-            gtag('event', 'nulstil_filter');
+            document.querySelectorAll('.cat-btn').forEach(b=>b.classList.remove('active'));
+            savePrefs(); renderGrid(); renderActiveFilters(); gtag('event','nulstil_filter');
         }
         document.getElementById('reset-btn').addEventListener('click', resetAllFilters);
         document.getElementById('sidebar-clear-all').addEventListener('click', resetAllFilters);
 
-        // Search
         let searchTimer;
-        document.getElementById('search').addEventListener('input', function () {
+        document.getElementById('search').addEventListener('input', function() {
             clearTimeout(searchTimer);
-            searchTimer = setTimeout(() => {
-                if (this.value.length > 1) gtag('event', 'soegning', { search_term: this.value });
-                currentPage = 1;
-                renderGrid();
-                renderActiveFilters();
-            }, 350);
+            searchTimer = setTimeout(() => { if (this.value.length>1) gtag('event','soegning',{search_term:this.value}); currentPage=1; renderGrid(); renderActiveFilters(); }, 350);
         });
 
-        // Price range
         let priceTimer;
-        document.getElementById('price-min').addEventListener('input', () => {
-            updateDualRange('price');
-            clearTimeout(priceTimer);
-            priceTimer = setTimeout(() => { currentPage = 1; savePrefs(); renderGrid(); renderActiveFilters(); }, 500);
-        });
-        document.getElementById('price-max').addEventListener('input', () => {
-            updateDualRange('price');
-            clearTimeout(priceTimer);
-            priceTimer = setTimeout(() => { currentPage = 1; savePrefs(); renderGrid(); renderActiveFilters(); }, 500);
-        });
+        document.getElementById('price-min').addEventListener('input', () => { updateDualRange('price'); clearTimeout(priceTimer); priceTimer=setTimeout(()=>{currentPage=1;savePrefs();renderGrid();renderActiveFilters();},500); });
+        document.getElementById('price-max').addEventListener('input', () => { updateDualRange('price'); clearTimeout(priceTimer); priceTimer=setTimeout(()=>{currentPage=1;savePrefs();renderGrid();renderActiveFilters();},500); });
 
-        // ABV range
         let abvTimer;
-        document.getElementById('abv-min').addEventListener('input', () => {
-            updateDualRange('abv');
-            clearTimeout(abvTimer);
-            abvTimer = setTimeout(() => { currentPage = 1; savePrefs(); renderGrid(); renderActiveFilters(); }, 500);
-        });
-        document.getElementById('abv-max').addEventListener('input', () => {
-            updateDualRange('abv');
-            clearTimeout(abvTimer);
-            abvTimer = setTimeout(() => { currentPage = 1; savePrefs(); renderGrid(); renderActiveFilters(); }, 500);
-        });
+        document.getElementById('abv-min').addEventListener('input', () => { updateDualRange('abv'); clearTimeout(abvTimer); abvTimer=setTimeout(()=>{currentPage=1;savePrefs();renderGrid();renderActiveFilters();},500); });
+        document.getElementById('abv-max').addEventListener('input', () => { updateDualRange('abv'); clearTimeout(abvTimer); abvTimer=setTimeout(()=>{currentPage=1;savePrefs();renderGrid();renderActiveFilters();},500); });
 
-        // Load more
-        document.getElementById('load-more').addEventListener('click', () => {
-            currentPage++;
-            renderGrid(true);
-            gtag('event', 'vis_flere', { side: currentPage });
-        });
+        document.getElementById('load-more').addEventListener('click', () => { currentPage++; renderGrid(true); gtag('event','vis_flere',{side:currentPage}); });
 
-        // Scroll to top
         const stBtn = document.getElementById('scroll-top');
-        window.addEventListener('scroll', () => {
-            stBtn.classList.toggle('visible', window.scrollY > 600);
-        }, { passive: true });
-        stBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+        window.addEventListener('scroll', () => { stBtn.classList.toggle('visible', window.scrollY>600); }, {passive:true});
+        stBtn.addEventListener('click', () => window.scrollTo({top:0,behavior:'smooth'}));
 
-        // Fav badge
-        document.getElementById('fav-count-badge').textContent = favorites.size > 0 ? `(${favorites.size})` : '';
+        document.getElementById('fav-count-badge').textContent = favorites.size>0?`(${favorites.size})`:'';
 
-        // GO!
         await loadData();
     }
 
