@@ -1372,7 +1372,6 @@
         const btn = document.querySelector(`.cat-btn[data-cat="${cat}"]`);
 
         if (cat === 'deals') {
-            // Deals er en hurtig-filter, ikke en stilart — ryd stilarter og sæt filter
             selectedTypes.clear();
             document.querySelectorAll('.cat-btn').forEach(b => b.classList.remove('active'));
             if (btn) btn.classList.add('active');
@@ -1385,7 +1384,6 @@
             updateTypeBtn();
 
         } else if (cat === 'smagekasse') {
-            // Smagekasse er også hurtig-filter
             selectedTypes.clear();
             document.querySelectorAll('.cat-btn').forEach(b => b.classList.remove('active'));
             if (btn) btn.classList.add('active');
@@ -1396,21 +1394,17 @@
             updateTypeBtn();
 
         } else {
-            // Stilart — toggle den valgte, behold andre aktive stilarter
             currentFilter = 'all';
             document.querySelectorAll('.sidebar-filter-btn[data-filter]').forEach(b =>
                 b.classList.toggle('active', b.dataset.filter === 'all')
             );
 
             if (selectedTypes.has(cat)) {
-                // Fjern stilart (toggle off)
                 selectedTypes.delete(cat);
                 if (btn) btn.classList.remove('active');
             } else {
-                // Tilføj stilart (toggle on)
                 selectedTypes.add(cat);
                 if (btn) btn.classList.add('active');
-                // Ryd deals/smagekasse cat-knapper hvis de var aktive
                 document.querySelectorAll('.cat-btn[data-cat="deals"], .cat-btn[data-cat="smagekasse"]').forEach(b =>
                     b.classList.remove('active')
                 );
@@ -1606,20 +1600,75 @@
         }).join('');
     }
 
-    // Product schema (dynamisk)
+    // ══════════════════════════════════════════
+    // PRODUCT SCHEMA (dynamisk, top 10 tilbud)
+    // Udvidet med description, brand, shippingDetails og hasMerchantReturnPolicy
+    // ══════════════════════════════════════════
     function injectProductSchema() {
-        const topDeals = allBeers.filter(b => b.max_discount_pct > 0 && b.prices && b.prices[0] && b.prices[0].url).sort((a,b) => b.max_discount_pct-a.max_discount_pct).slice(0,10);
+        const topDeals = allBeers
+            .filter(b => b.max_discount_pct > 0 && b.prices && b.prices[0] && b.prices[0].url)
+            .sort((a, b) => b.max_discount_pct - a.max_discount_pct)
+            .slice(0, 10);
+
         const schema = {
             "@context": "https://schema.org",
             "@type": "ItemList",
             "name": "Bedste øltilbud lige nu — BeerSniffer",
             "url": "https://www.beersniffer.dk/",
-            "itemListElement": topDeals.map((b,i) => {
+            "itemListElement": topDeals.map((b, i) => {
                 const best = b.prices[0];
-                return { "@type":"ListItem", "position":i+1, "item": {
-                    "@type":"Product", "name":b.name, "image":b.image||undefined,
-                    "offers": { "@type":"Offer", "price":best.price.toFixed(2), "priceCurrency":"DKK", "url":best.url, "availability":"https://schema.org/InStock", "seller":{"@type":"Organization","name":best.shop_name} }
-                }};
+                const s = SHIPPING[best.shop_name] || null;
+                return {
+                    "@type": "ListItem",
+                    "position": i + 1,
+                    "item": {
+                        "@type": "Product",
+                        "name": b.name,
+                        "image": b.image || undefined,
+                        "description": [
+                            b.type ? b.type : null,
+                            b.volume_cl ? b.volume_cl + ' cl' : null,
+                            b.abv ? b.abv + '% ABV' : null,
+                            'Køb billigt hos ' + best.shop_name
+                        ].filter(Boolean).join(' — '),
+                        "brand": { "@type": "Brand", "name": best.shop_name },
+                        "offers": {
+                            "@type": "Offer",
+                            "price": best.price.toFixed(2),
+                            "priceCurrency": "DKK",
+                            "url": best.url,
+                            "availability": "https://schema.org/InStock",
+                            "seller": { "@type": "Organization", "name": best.shop_name },
+                            "shippingDetails": s ? {
+                                "@type": "OfferShippingDetails",
+                                "shippingRate": {
+                                    "@type": "MonetaryAmount",
+                                    "value": best.price >= s.freeOver ? "0" : s.price.toString(),
+                                    "currency": "DKK"
+                                },
+                                "shippingDestination": {
+                                    "@type": "DefinedRegion",
+                                    "addressCountry": "DK"
+                                },
+                                "deliveryTime": {
+                                    "@type": "ShippingDeliveryTime",
+                                    "businessDays": {
+                                        "@type": "OpeningHoursSpecification",
+                                        "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"]
+                                    }
+                                }
+                            } : undefined,
+                            "hasMerchantReturnPolicy": {
+                                "@type": "MerchantReturnPolicy",
+                                "applicableCountry": "DK",
+                                "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+                                "merchantReturnDays": 14,
+                                "returnMethod": "https://schema.org/ReturnByMail",
+                                "returnFees": "https://schema.org/FreeReturn"
+                            }
+                        }
+                    }
+                };
             })
         };
         document.getElementById('product-schema-placeholder').textContent = JSON.stringify(schema);
