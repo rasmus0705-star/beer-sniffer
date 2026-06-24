@@ -690,9 +690,9 @@
             padding: 0.2rem 0.5rem;
             border-radius: 4px;
             background: var(--surface3);
-            color: var(--text-muted);
-            border: 1px solid var(--border);
-            font-weight: 500;
+            color: #c8b896;
+            border: 1px solid var(--border-light);
+            font-weight: 600;
         }
         .tag-type { background: rgba(200,146,14,0.1); color: var(--gold); border-color: rgba(200,146,14,0.25); }
         .tag-shops { background: rgba(74,158,255,0.1); color: #4a9eff; border-color: rgba(74,158,255,0.25); }
@@ -714,10 +714,10 @@
         .price-row-cheapest.has-discount { border-color: #3dba6f; background: linear-gradient(135deg, rgba(61,186,111,0.15), rgba(200,146,14,0.05)); }
         .price-row-header { display: flex; justify-content: space-between; align-items: center; gap: 0.4rem; min-width: 0; }
         .price-row-shop {
-            font-size: 0.6rem;
+            font-size: 0.62rem;
             letter-spacing: 0.08em;
             text-transform: uppercase;
-            color: #b8a98a;
+            color: #d4c4a0;
             white-space: nowrap;
             overflow: hidden;
             text-overflow: ellipsis;
@@ -726,6 +726,7 @@
             display: flex;
             align-items: center;
             gap: 0.3rem;
+            font-weight: 600;
         }
         .price-row-cheapest .price-row-shop { color: #ffd54a; font-weight: 700; }
         .price-row-discount {
@@ -752,15 +753,15 @@
         /* FORBEDRET: synlig førpris i price-rows */
         .price-row-old {
             font-size: 0.78rem;
-            color: #c0a878;
+            color: #c8b080;
             text-decoration: line-through;
-            text-decoration-color: #e05050;
-            text-decoration-thickness: 1.5px;
-            font-weight: 500;
+            text-decoration-color: #e85050;
+            text-decoration-thickness: 2px;
+            font-weight: 600;
             white-space: nowrap;
         }
-        .price-row-save { font-size: 0.62rem; color: #3dba6f; font-weight: 800; white-space: nowrap; }
-        .price-row-total { font-size: 0.58rem; color: var(--text-dim); white-space: nowrap; }
+        .price-row-save { font-size: 0.66rem; color: #5dd68a; font-weight: 800; white-space: nowrap; }
+        .price-row-total { font-size: 0.6rem; color: #8a7e6a; white-space: nowrap; }
         .price-row-actions { display: flex; align-items: center; gap: 0.3rem; flex-shrink: 0; }
         .price-row-link {
             font-size: 0.7rem;
@@ -781,12 +782,13 @@
         }
         .price-row-link:hover { transform: translateY(-1px); box-shadow: 0 4px 12px rgba(255,193,7,0.4); }
         .more-shops-toggle {
-            font-size: 0.7rem;
-            color: var(--gold);
+            font-size: 0.72rem;
+            font-weight: 600;
+            color: #e0aa30;
             cursor: pointer;
             padding: 0.35rem 0.65rem;
-            background: rgba(200,146,14,0.06);
-            border: 1px solid rgba(200,146,14,0.2);
+            background: rgba(200,146,14,0.1);
+            border: 1px solid rgba(200,146,14,0.3);
             border-radius: 6px;
             text-align: center;
             transition: all 0.2s;
@@ -805,14 +807,15 @@
             justify-content: center;
             text-align: center;
             padding: 0.4rem;
-            background: rgba(255,196,0,0.06);
-            border: 1px solid rgba(255,196,0,0.18);
+            background: rgba(255,196,0,0.08);
+            border: 1px solid rgba(255,196,0,0.3);
             border-radius: 7px;
-            color: #ffc400;
-            font-size: 0.66rem;
+            color: #ffd54a;
+            font-size: 0.68rem;
+            font-weight: 600;
             text-decoration: none;
             transition: all 0.2s;
-            letter-spacing: 0.1em;
+            letter-spacing: 0.08em;
             text-transform: uppercase;
             min-height: 36px;
         }
@@ -991,7 +994,7 @@
             .grid-wrap { padding: 0.6rem; }
             .card-img, .card-img-placeholder { height: 120px; }
             .card-body { padding: 0.6rem; }
-            .card-name { font-size: 0.84rem; min-height: 2em; margin-bottom: 0.35rem; }
+            .card-name { font-size: 0.86rem; font-weight: 700; min-height: 2em; margin-bottom: 0.35rem; color: #f5edd8; }
             .tag { font-size: 0.52rem; padding: 0.15rem 0.35rem; }
             .top-card { flex: 0 0 140px; min-width: 140px; }
             .top-card-img, .top-card-img-placeholder { height: 85px; }
