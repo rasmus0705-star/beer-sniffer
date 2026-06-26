@@ -1,6 +1,9 @@
 import requests
 import xml.etree.ElementTree as ET
 import re
+import html
+import time
+from urllib.parse import unquote, urlparse, parse_qs
 from app.utils.detect_type import detect_type
 
 FEED_URL = "https://www.partner-ads.com/dk/feed_udlaes.php?partnerid=56605&bannerid=74625&feedid=1666"
@@ -9,17 +12,90 @@ HEADERS = {
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
 }
 
+SIDE_PAUSE = 0.5
+SIDE_TIMEOUT = 12
 
-# Mojibake-mønstre fra Beer Me's blandede UTF-8/ISO-8859-1 encoding
+# Produktsider hentes som HTML (Beer Me's feed-HEADERS er ikke til HTML-sider).
+SIDE_HEADERS = {
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+    "Accept": "text/html,application/xhtml+xml",
+    "Accept-Language": "da-DK,da;q=0.9,en;q=0.8",
+}
+
+
+def _is_glas(name):
+    n = (name or "").lower()
+    return any(w in n for w in ["glas", "kolbe", "krus", "merchandise"])
+
+
+def _real_url(vareurl):
+    """Træk den rigtige beer-me.dk URL ud af partner-ads klik-linket."""
+    if not vareurl:
+        return None
+    if "beer-me.dk" in vareurl and "klikbanner" not in vareurl:
+        return vareurl
+    q = parse_qs(urlparse(vareurl).query)
+    if "htmlurl" in q:
+        return unquote(q["htmlurl"][0])
+    return None
+
+
+def _page_volume(text):
+    t = re.sub(r'<[^>]+>', ' ', text)
+    t = re.sub(r'\s+', ' ', html.unescape(t))
+    m = re.search(r'(?:flaske|d[\u00e5a]se|str[\u00f8o]rrelse)[:\s]*(\d+(?:[.,]\d+)?)\s*(cl|ml|l)\b', t, re.IGNORECASE)
+    if not m:
+        m = re.search(r'(\d+(?:[.,]\d+)?)\s*(cl|ml)\b', t)
+    if m:
+        val = float(m.group(1).replace(',', '.'))
+        u = m.group(2).lower()
+        if u == 'l':
+            val *= 100
+        elif u == 'ml':
+            val /= 10
+        if 0 < val <= 75:
+            return val
+    return None
+
+
+def _page_abv(text):
+    t = re.sub(r'<[^>]+>', ' ', text)
+    t = re.sub(r'\s+', ' ', html.unescape(t))
+    for pat in [
+        r'abv\s*(?:p[\u00e5a]\s*|[:\s])\s*(\d+(?:[.,]\d+)?)\s*%',
+        r'p[\u00e5a]\s*(\d+(?:[.,]\d+)?)\s*%\s*abv',
+        r'-\s*(\d+(?:[.,]\d+)?)\s*%',
+    ]:
+        m = re.search(pat, t, re.IGNORECASE)
+        if m:
+            val = float(m.group(1).replace(',', '.'))
+            if 0 < val <= 25:
+                return val
+    return None
+
+
+def _fetch_from_page(vareurl):
+    """Hent (volume_cl, abv) fra Beer Me produktside. Hver kan være None."""
+    url = _real_url(vareurl)
+    if not url:
+        return None, None
+    try:
+        r = requests.get(url, headers=SIDE_HEADERS, timeout=SIDE_TIMEOUT)
+        if r.status_code != 200:
+            return None, None
+    except Exception:
+        return None, None
+    return _page_volume(r.text), _page_abv(r.text)
+
 MOJIBAKE_FIXES = [
-    ('Â·', '·'),       # middle dot
-    ('Â\xa0', ' '),    # non-breaking space
-    ('â€"', '–'),      # en-dash
-    ('â€"', '—'),      # em-dash
-    ('â€™', '\''),     # right single quotation
-    ('â€˜', '\''),     # left single quotation
-    ('â€œ', '"'),      # left double quotation
-    ('â€\x9d', '"'),   # right double quotation
+    ('Â·', '·'),
+    ('Â\xa0', ' '),
+    ('â€"', '–'),
+    ('â€"', '—'),
+    ('â€™', '\''),
+    ('â€˜', '\''),
+    ('â€œ', '"'),
+    ('â€\x9d', '"'),
     ('Ã¦', 'æ'),
     ('Ã¸', 'ø'),
     ('Ã¥', 'å'),
@@ -36,7 +112,6 @@ MOJIBAKE_FIXES = [
 
 
 def clean_mojibake(text):
-    """Rens forvanskede tegn fra Beer Me's blandede encoding."""
     if not text:
         return text
     for bad, good in MOJIBAKE_FIXES:
@@ -46,37 +121,61 @@ def clean_mojibake(text):
 
 def extract_brewery_from_name(name):
     """
-    Beer Me-navne har konsistent format:
-      "[Produktnavn] - [Stil] fra [Bryggeri]"
-      "[Produktnavn] · [Stil] fra [Bryggeri]"
-      "[Produktnavn] [Stil] fra [Bryggeri]"
+    Beer Me-navne: '[Produkt] - [Stil] fra [Bryggeri]'
+    Prioritér 'fra X' pattern. Fald tilbage på første segment før ' - '.
     """
     if not name:
         return None
 
-    # Primær: " fra X"
-    fra_match = re.search(r"\bfra\s+(.+?)$", name, re.IGNORECASE)
+    # Primær: "fra [Bryggeri]" sidst i strengen
+    fra_match = re.search(r'\bfra\s+(.+?)$', name, re.IGNORECASE)
     if fra_match:
         candidate = fra_match.group(1).strip()
-        candidate = re.sub(r"\s*\(.*?\)\s*$", "", candidate).strip()
-        if candidate and len(candidate.split()) <= 5 and not re.match(r"^\d+\s*(cl|ml|%)", candidate.lower()):
+        candidate = re.sub(r'\s*\(.*?\)\s*$', '', candidate).strip()
+        if candidate and len(candidate.split()) <= 5 and not re.match(r'^\d+\s*(cl|ml|%)', candidate.lower()):
             return candidate
 
-    # Fallback 1: " · " separator
-    if " · " in name:
-        parts = name.split(" · ")
-        candidate = parts[-1].strip()
-        if candidate and len(candidate.split()) <= 5 and not re.search(r"\d+\s*(cl|ml|%)", candidate.lower()):
+    # Fallback 1: ' · ' separator — sidstes segment
+    if ' · ' in name:
+        candidate = name.split(' · ')[-1].strip()
+        if candidate and len(candidate.split()) <= 5 and not re.search(r'\d+\s*(cl|ml|%)', candidate.lower()):
             return candidate
 
-    # Fallback 2: " - " separator
-    if " - " in name:
-        parts = name.split(" - ")
-        if len(parts) == 2:
-            candidate = parts[-1].strip()
-            if candidate and len(candidate.split()) <= 4 and not re.search(r"\d+\s*(cl|ml|%)", candidate.lower()):
+    # Fallback 2: ' - ' med 2 segmenter — første segment (Bryggeri - Produkt)
+    if ' - ' in name:
+        parts = name.split(' - ')
+        if len(parts) >= 2:
+            candidate = parts[0].strip()
+            # Kun hvis første segment ikke ligner produktnavn/tal
+            if candidate and len(candidate.split()) <= 5 and not re.search(r'\d+\s*(cl|ml|%)', candidate.lower()):
                 return candidate
 
+    return None
+
+
+def _parse_volume(text):
+    if not text:
+        return None
+    name_lower = text.lower()
+    vol_match = re.search(r'(\d+(?:[.,]\d+)?)\s*(cl|ml|l)\b', name_lower)
+    if vol_match:
+        val = float(vol_match.group(1).replace(',', '.'))
+        unit = vol_match.group(2)
+        if unit == 'l':
+            val *= 100
+        elif unit == 'ml':
+            val /= 10
+        if val <= 75:
+            return val
+    for pat, vol in [
+        ('33cl', 33), ('33 cl', 33),
+        ('44cl', 44), ('44 cl', 44),
+        ('50cl', 50), ('50 cl', 50),
+    ]:
+        if pat in name_lower:
+            return vol
+    if 'dåse' in name_lower:
+        return 33
     return None
 
 
@@ -86,7 +185,10 @@ def scrape_beerme():
     skip_keywords = [
         "abonnement", "subscription", "club", "beer club",
         "månedskasse", "gavekort", "gaveæske", "gave sæt",
-        "glas", "tilbehør", "bundle"
+        "glas", "tilbehør", "bundle",
+        # Abonnementer / blandede kasser (ikke enkeltøl)
+        "hver måned", "måneder", "blandede", "blandet",
+        "valgt af", "mix", "smagekasse",
     ]
 
     skip_categories = [
@@ -104,16 +206,13 @@ def scrape_beerme():
         return items
 
     for produkt in root.findall('produkt'):
-        # Rens mojibake fra alle felter
         name = clean_mojibake(produkt.findtext('produktnavn') or '')
         category = clean_mojibake((produkt.findtext('kategorinavn') or '').upper())
 
         if not name:
             continue
-
         if any(cat in category for cat in skip_categories):
             continue
-
         if any(kw in name.lower() for kw in skip_keywords):
             continue
 
@@ -131,7 +230,6 @@ def scrape_beerme():
             continue
 
         old_price = old_price_raw if old_price_raw != price else None
-
         discount = None
         if old_price and old_price > price:
             discount = round((old_price - price) / old_price * 100, 1)
@@ -139,28 +237,8 @@ def scrape_beerme():
         url = produkt.findtext('vareurl') or ''
         image = produkt.findtext('billedurl') or ''
 
-        # Volume — tjek navnet for cl/ml/l
-        volume = None
-        name_lower = name.lower()
-        vol_match = re.search(r"(\d+(?:[.,]\d+)?)\s*(cl|ml|l)\b", name_lower)
-        if vol_match:
-            val = float(vol_match.group(1).replace(",", "."))
-            unit = vol_match.group(2)
-            if unit == "l":
-                val = val * 100
-            elif unit == "ml":
-                val = val / 10
-            if val <= 75:
-                volume = val
-        else:
-            if '33cl' in name_lower or '33 cl' in name_lower:
-                volume = 33
-            elif '44cl' in name_lower or '44 cl' in name_lower:
-                volume = 44
-            elif '50cl' in name_lower or '50 cl' in name_lower:
-                volume = 50
-            elif 'dåse' in name_lower:
-                volume = 33
+        # Volumen
+        volume = _parse_volume(name)
 
         # ABV
         abv = None
@@ -168,12 +246,22 @@ def scrape_beerme():
         if match:
             abv = float(match.group(1).replace(',', '.'))
 
-        # Bryggeri via " fra X" pattern
+        # Bryggeri
         brewery = extract_brewery_from_name(name)
 
         is_smagekasse = any(kw in name.lower() for kw in [
             "smagekasse", "smagesæt", "smagskasse", "mix", "bundle", "pakke"
         ]) or bool(re.search(r'\d+\s*stk', name.lower())) or category == 'ØLPAKKER'
+
+        # SIDEHENTNING — kun for enkeltøl der mangler volumen/abv.
+        # Henter faktiske værdier fra produktsiden (format: 'ABV: 11,3% · Flaske: 50 cl').
+        if not is_smagekasse and not _is_glas(name) and (volume is None or abv is None):
+            p_vol, p_abv = _fetch_from_page(url)
+            if volume is None and p_vol is not None:
+                volume = p_vol
+            if abv is None and p_abv is not None:
+                abv = p_abv
+            time.sleep(SIDE_PAUSE)
 
         item = {
             "name": name,
@@ -200,8 +288,9 @@ if __name__ == "__main__":
     items = scrape_beerme()
     print(f"\n✅ Total: {len(items)} items")
     with_brewery = sum(1 for it in items if it.get("brewery"))
-    print(f"Med bryggeri: {with_brewery}/{len(items)} ({100*with_brewery//len(items)}%)")
+    with_volume = sum(1 for it in items if it.get("volume_cl"))
+    print(f"Med bryggeri: {with_brewery}/{len(items)} ({100*with_brewery//max(len(items),1)}%)")
+    print(f"Med volumen:  {with_volume}/{len(items)} ({100*with_volume//max(len(items),1)}%)")
     print(f"\nFørste 5 items:")
     for it in items[:5]:
-        print(f"  - {it['name']}")
-        print(f"    → Brewery: {it.get('brewery')}")
+        print(f"  [{it.get('brewery')} | {it.get('volume_cl')}cl | {it.get('abv')}%] {it['name'][:55]}")

@@ -30,7 +30,10 @@ def scrape_brygshoppen():
         "juice", "spiritus", "whisky", "gin", "rom", "vin", "wine",
         "snack", "chips", "nødder", "tilbehør", "renser", "brush",
         "børste", "tap", "pumpe", "slange", "pant", "ølglas",
-        "chokolade", "chocolate", "fustage", "fadøl", "keg", "anker"
+        "chokolade", "chocolate", "fustage", "fadøl", "keg", "anker",
+        # Bundles / smagekasser (ikke enkeltøl)
+        "discovery box", "discoverybox", "smagekasse", "smagskasse",
+        "tasting box", "gift box", "bundle",
     ]
 
     while True:

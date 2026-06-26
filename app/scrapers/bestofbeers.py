@@ -1,5 +1,6 @@
 import requests
 import re
+import html
 from app.utils.detect_type import detect_type
 
 
@@ -8,6 +9,27 @@ HEADERS = {
     "Accept": "application/json",
     "Accept-Language": "da-DK,da;q=0.9,en;q=0.8",
 }
+
+_DASH_RE = re.compile(r'\s*[\u2013\u2014]\s*')
+
+
+def _clean_name(raw):
+    """Decode HTML entities og normaliser tankestreger til ' – '."""
+    return _DASH_RE.sub(' \u2013 ', html.unescape(raw or '')).strip()
+
+
+def _extract_brewery(name):
+    """
+    Best of Beers-titler: 'Bryggeri – Produkt – Stil – volumen – ABV'
+    Første segment er bryggeriet.
+    """
+    parts = [p.strip() for p in name.split(' \u2013 ') if p.strip()]
+    if not parts:
+        return None
+    candidate = parts[0]
+    if re.search(r'\d+[.,]?\d*\s*(l|cl|ml|%)\.?$', candidate.lower()):
+        return None
+    return candidate
 
 
 def scrape_bestofbeers():
@@ -21,7 +43,12 @@ def scrape_bestofbeers():
         "juice", "spiritus", "whisky", "gin", "rom", "vin", "wine",
         "snack", "chips", "nødder", "tilbehør", "renser",
         "chokolade", "chocolate", "fustage", "fadøl", "keg", "anker",
-        "abonnement", "pant", "gavekort", "kort til modtageren", "kort til", "gift card", "geschenkkarte"
+        "abonnement", "pant", "kort til modtageren", "kort til",
+        "gift card", "geschenkkarte",
+        # Merchandise / tilbehør (ikke drikkevarer)
+        "drikkehorn", "horn med holder", "bottle opener", "oplukker",
+        "køletaske", "termo", "kølebox",
+        "riedel", "forsendelse", "fragt",
     ]
 
     while True:
@@ -45,9 +72,12 @@ def scrape_bestofbeers():
             break
 
         for product in products:
-            name = product.get("name") or ''
-            if not name:
+            raw_name = product.get("name") or ''
+            if not raw_name:
                 continue
+
+            # Rens HTML-entities og normaliser separatorer
+            name = _clean_name(raw_name)
 
             if any(kw in name.lower() for kw in skip_keywords):
                 continue
@@ -56,7 +86,6 @@ def scrape_bestofbeers():
                 prices_data = product.get("prices", {})
                 price = int(prices_data.get("price", 0)) / 100
                 regular_price = int(prices_data.get("regular_price", 0)) / 100
-                sale_price = int(prices_data.get("sale_price", 0)) / 100
             except:
                 continue
 
@@ -70,10 +99,10 @@ def scrape_bestofbeers():
                 discount = round((regular_price - price) / regular_price * 100, 1)
 
             product_url = product.get("permalink") or ''
-
             images = product.get("images", [])
             image = images[0].get("src") if images else None
 
+            # Volumen
             volume = None
             name_lower = name.lower()
             vol_match = re.search(r'(\d+[.,]?\d*)\s*(cl|ml|l)\.?', name_lower)
@@ -88,14 +117,18 @@ def scrape_bestofbeers():
                     continue
                 volume = val
 
+            # ABV
             abv = None
             abv_match = re.search(r'(\d+(?:[.,]\d+)?)\s*%', name)
             if abv_match:
                 abv = float(abv_match.group(1).replace(',', '.'))
 
-            is_smagekasse = any(kw in name.lower() for kw in [
+            # Bryggeri fra titelstruktur
+            brewery = _extract_brewery(name)
+
+            is_smagekasse = any(kw in name_lower for kw in [
                 "smagekasse", "smagesæt", "smagskasse", "mix", "bundle", "pakke"
-            ]) or bool(re.search(r'\d+\s*stk', name.lower()))
+            ]) or bool(re.search(r'\d+\s*stk', name_lower))
 
             item = {
                 "name": name,
@@ -108,7 +141,7 @@ def scrape_bestofbeers():
                 "abv": abv,
                 "image": image,
                 "type": detect_type(name),
-                "brewery": None,
+                "brewery": brewery,
                 "category": "smagekasse" if is_smagekasse else "øl",
             }
 
@@ -126,3 +159,7 @@ def scrape_bestofbeers():
 if __name__ == "__main__":
     items = scrape_bestofbeers()
     print(f"\n✅ Total: {len(items)} items")
+    with_brewery = sum(1 for it in items if it.get("brewery"))
+    with_volume = sum(1 for it in items if it.get("volume_cl"))
+    print(f"Med bryggeri: {with_brewery}/{len(items)}")
+    print(f"Med volumen:  {with_volume}/{len(items)}")

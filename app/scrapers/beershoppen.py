@@ -24,7 +24,7 @@ def scrape_beershoppen():
         "børste", "tap", "pumpe", "slange", "pant", "ølglas",
         "chokolade", "chocolate", "fustage", "fadøl", "keg", "anker",
         "abonnement", "subscription", "giftbox", "gift box",
-        "diverse", "mystery"
+        "diverse", "mystery",
     ]
 
     while True:
@@ -84,9 +84,14 @@ def scrape_beershoppen():
                 image = product["images"][0].get("src")
 
             volume = None
-            is_smagekasse = any(kw in name.lower() for kw in [
-                "smagekasse", "smagekasser", "smagesæt", "smagskasse", "smagssæt", "sæt", "mix", "bundle", "pakke"
-            ]) or bool(re.search(r"\d+\s*stk", name.lower()))
+            # Bundle/smagekasse-detektor. 'smage kasse' (med mellemrum) og
+            # 'jylland rundt' (flere-flaske-sæt) tilføjet.
+            name_lower = name.lower()
+            is_smagekasse = any(kw in name_lower for kw in [
+                "smagekasse", "smagekasser", "smagesæt", "smagskasse",
+                "smagssæt", "smage kasse", "sæt", "mix", "bundle",
+                "pakke", "jylland rundt", "fynsk", "flasker",
+            ]) or bool(re.search(r"\d+\s*stk", name_lower)) or bool(re.search(r"m/\s*\d+", name_lower))
             if not is_smagekasse:
                 volume_match = re.search(r"(\d+(?:[.,]\d+)?)\s*(cl|ml|l)\b", name.lower())
                 if volume_match:

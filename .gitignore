@@ -1,5 +1,19 @@
 venv/
+.venv/
 .env
 __pycache__/
 *.pyc
 *.db
+
+# Logs og midlertidige outputs
+*.log
+*_output.txt
+
+# Debug- og testscripts (lokale engangsting)
+debug_*.py
+diag.py
+test_*.py
+verify_*.py
+tjek_*.py
+PATCH_INSTRUKTIONER.txt
+patch_mobile_*.py

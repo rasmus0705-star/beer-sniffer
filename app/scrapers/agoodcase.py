@@ -1,5 +1,6 @@
 import requests
 import re
+import html
 from app.utils.detect_type import detect_type
 
 
@@ -8,6 +9,28 @@ HEADERS = {
     "Accept": "application/json",
     "Accept-Language": "da-DK,da;q=0.9,en;q=0.8",
 }
+
+_BEST_BEFORE_RE = re.compile(r'best\s*before', re.IGNORECASE)
+
+
+def _extract_brewery(name, vendor):
+    """
+    vendor er i A Good Case sat til 'Best Before: ...' for mange produkter
+    — det er en Shopify-fejl i deres data. Brug vendor kun hvis det IKKE
+    ligner en dato. Ellers udtræk bryggeri fra titlen (første segment
+    før ' - ').
+    """
+    if vendor and not _BEST_BEFORE_RE.search(vendor):
+        return vendor.strip() or None
+
+    # Udtræk fra titel: 'Bryggeri - Produkt - ABV Stil'
+    if name and ' - ' in name:
+        candidate = name.split(' - ')[0].strip()
+        # Afvis hvis det ligner ABV, volumen eller tal alene
+        if candidate and not re.search(r'^\d+|%|cl|ml\b', candidate.lower()):
+            return candidate
+
+    return None
 
 
 def scrape_agoodcase():
@@ -48,6 +71,32 @@ def scrape_agoodcase():
                         return qty
                 except:
                     pass
+        return None
+
+    def parse_volume(text):
+        """
+        Forsøg at finde volumen i en tekststreng.
+        Renser HTML først (A Good Case har volumen i en <table> i body_html
+        som 'Størrelse: 44 cl'). Returnerer cl som float eller None.
+        """
+        if not text:
+            return None
+        clean = re.sub(r'<[^>]+>', ' ', text)
+        clean = html.unescape(clean).lower()
+        m = re.search(r'(\d+(?:[.,]\d+)?)\s*(cl|ml|l)\b', clean)
+        if m:
+            val = float(m.group(1).replace(',', '.'))
+            unit = m.group(2)
+            if unit == 'l':
+                val *= 100
+            elif unit == 'ml':
+                val /= 10
+            if val <= 75:
+                return val
+        # Sammenskrevne varianter
+        for pattern, vol in [('33cl', 33), ('44cl', 44), ('50cl', 50)]:
+            if pattern in clean:
+                return vol
         return None
 
     while True:
@@ -147,45 +196,55 @@ def scrape_agoodcase():
             elif product.get("images") and len(product["images"]) > 0:
                 image = product["images"][0].get("src")
 
-            volume = None
             is_smagekasse = any(kw in name.lower() for kw in [
-                "smagekasse", "smagekasser", "smagesæt", "smagskasse", "smagssæt", "sæt", "mix", "bundle", "pakke"
+                "smagekasse", "smagekasser", "smagesæt", "smagskasse",
+                "smagssæt", "sæt", "mix", "bundle", "pakke"
             ])
+
+            # Volumen: søg i titel, variant-titler og tags (i den rækkefølge)
+            volume = None
             if not is_smagekasse:
-                volume_match = re.search(r"(\d+(?:[.,]\d+)?)\s*(cl|ml|l)\b", name.lower())
-                if volume_match:
-                    val = float(volume_match.group(1).replace(",", "."))
-                    unit = volume_match.group(2)
-                    if unit == "l":
-                        val = val * 100
-                    elif unit == "ml":
-                        val = val / 10
-                    if val > 75:
-                        continue
-                    volume = val
-                else:
-                    if "33cl" in name.lower():
-                        volume = 33
-                    elif "44cl" in name.lower():
-                        volume = 44
-                    elif "50cl" in name.lower():
-                        volume = 50
+                volume = parse_volume(name)
 
+                # Prøv variant-titler hvis titlen ikke gav noget
+                if volume is None:
+                    for v in variants:
+                        v_vol = parse_volume(v.get("title", ""))
+                        if v_vol:
+                            volume = v_vol
+                            break
+
+                # Prøv tags
+                if volume is None:
+                    for tag in product.get("tags", []):
+                        v_vol = parse_volume(tag)
+                        if v_vol:
+                            volume = v_vol
+                            break
+
+                # Prøv body_html (A Good Case har 'Størrelse: 44 cl' i en tabel)
+                if volume is None:
+                    volume = parse_volume(product.get("body_html", ""))
+
+            # ABV
             abv = None
-            if name:
-                match = re.search(r'(\d+(?:[.,]\d+)?)\s*%', name)
-                if match:
-                    abv = float(match.group(1).replace(",", "."))
+            abv_match = re.search(r'(\d+(?:[.,]\d+)?)\s*%', name)
+            if abv_match:
+                abv = float(abv_match.group(1).replace(",", "."))
 
-            clean_bulk = []
-            for b in bulk_variants:
-                clean_bulk.append({
+            # Bryggeri: brug vendor kun hvis det ikke er en best-before-dato
+            vendor = product.get("vendor") or None
+            brewery = _extract_brewery(name, vendor)
+
+            clean_bulk = sorted([
+                {
                     "qty": b["qty"],
                     "price_per_unit": b["price_per_unit"],
                     "total_price": b["total_price"],
                     "variant_title": b["variant_title"],
-                })
-            clean_bulk.sort(key=lambda x: x["qty"])
+                }
+                for b in bulk_variants
+            ], key=lambda x: x["qty"])
 
             item = {
                 "name": display_name,
@@ -198,7 +257,7 @@ def scrape_agoodcase():
                 "abv": abv,
                 "image": image,
                 "type": detect_type(name) or (product_type if product_type else None),
-                "brewery": product.get("vendor") or None,
+                "brewery": brewery,
                 "category": "smagekasse" if is_smagekasse else "øl",
                 "bulk_discounts": clean_bulk if clean_bulk else None,
             }
@@ -214,3 +273,7 @@ def scrape_agoodcase():
 if __name__ == "__main__":
     items = scrape_agoodcase()
     print(f"\n✅ Total: {len(items)} items")
+    with_brewery = sum(1 for it in items if it.get("brewery"))
+    with_volume = sum(1 for it in items if it.get("volume_cl"))
+    print(f"Med bryggeri: {with_brewery}/{len(items)}")
+    print(f"Med volumen:  {with_volume}/{len(items)}")
