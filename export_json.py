@@ -41,6 +41,38 @@ def _packs(v):
     return v if v else 1
 
 
+import re as _re
+
+# Præfikser/ord der ikke siger noget om bryggeriets identitet
+_BREWERY_NOISE = [
+    "brouwerij", "bryggeri", "bryggeriet", "brewing", "brewery",
+    "brewing co", "brewing co.", "co.", "co", "the", "brasserie",
+    "birrificio", "browar", "cervecera", "cerveceria",
+]
+
+
+def _norm_brewery(b):
+    """Reducér et bryggeri-navn til kerneord (lowercase, uden støj/komma)."""
+    s = (b or "").lower()
+    s = _re.sub(r'[,\.\-–—()0-9%]', ' ', s)      # fjern tegn, tal, årgange
+    s = _re.sub(r'\b(cl|ml|l)\b', ' ', s)        # volumen-rester
+    words = [w for w in s.split() if w and w not in _BREWERY_NOISE]
+    return set(words)
+
+
+def _brewery_match(a, b):
+    """
+    True hvis to bryggeri-navne sandsynligvis er samme bryggeri.
+    Matcher når det ene navns kerneord er en delmængde af det andets
+    (fx {'lindemans'} ⊆ {'lindemans','cuvée','rené','oude','kriek'}).
+    """
+    sa, sb = _norm_brewery(a), _norm_brewery(b)
+    if not sa or not sb:
+        return False
+    # Eksakt match eller den ene er delmængde af den anden
+    return sa == sb or sa <= sb or sb <= sa
+
+
 def find_match(normalized, volume, abv, brewery, pack_count, grouped):
     best_score = 0
     best_key = None
@@ -55,9 +87,12 @@ def find_match(normalized, volume, abv, brewery, pack_count, grouped):
         if _packs(pack_count) != _packs(beer.get("pack_count")):
             continue
 
-        # HÅRD GATE 3 — bryggeri skal matche, hvis begge er kendt
+        # HÅRD GATE 3 — bryggeri skal matche, hvis begge er kendt.
+        # Tilgivende: matcher hvis det ene navn indeholder det andet (efter
+        # normalisering). Fanger rod som "Lindemans, Cuvée René, 2023" vs
+        # "Brouwerij Lindemans" uden at flette forskellige bryggerier.
         if brewery and beer.get("brewery"):
-            if brewery.strip().lower() != beer["brewery"].strip().lower():
+            if not _brewery_match(brewery, beer["brewery"]):
                 continue
 
         # BLØD GATE — ABV må ikke afvige for meget
