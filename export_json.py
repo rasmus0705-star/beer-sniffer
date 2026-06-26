@@ -13,6 +13,21 @@ from rapidfuzz import fuzz
 # Ensartet tærskel. De hårde gates fanger fejlene — ikke en lav tærskel.
 THRESHOLD = 80
 ABV_MAX_DIFF = 0.5   # blød gate: afvis match hvis ABV afviger mere end dette
+# Når to butikker er uenige om bryggeriet (typisk fordi feltet er rod),
+# kræves der HØJERE navne-lighed for at slå dem sammen — så vi kun matcher
+# når det tydeligvis er samme øl.
+BREWERY_DISAGREE_THRESHOLD = 88
+
+# Variant-markører: ord der signalerer en SÆRLIG version af en ellers ens øl
+# (fx fadlagret/årgang). Hvis det ene navn har et af disse og det andet ikke
+# har præcis de samme, er det forskellige produkter -> match afvises.
+# Bevidst konservativ: kun ord der reelt betyder "anden version", ikke
+# almindelige stil-ord (sour, gose osv. som ofte er en øls grundform).
+VARIANT_WORDS = {
+    "barrel", "ba", "bourbon", "whisky", "whiskey", "cognac", "rum",
+    "wine", "reserva", "reserve", "vintage", "anniversary", "jubilæum",
+    "calvados", "tequila", "armagnac", "sherry", "port",
+}
 
 FEJLLISTE = "fejlliste.xlsx"
 
@@ -73,6 +88,12 @@ def _brewery_match(a, b):
     return sa == sb or sa <= sb or sb <= sa
 
 
+def _variant_words(name):
+    """Returnér sæt af variant-markører i et navn (barrel, bourbon, vintage...)."""
+    words = set(_re.sub(r'[^a-zæøå0-9 ]', ' ', (name or '').lower()).split())
+    return words & VARIANT_WORDS
+
+
 def find_match(normalized, volume, abv, brewery, pack_count, grouped):
     best_score = 0
     best_key = None
@@ -87,22 +108,41 @@ def find_match(normalized, volume, abv, brewery, pack_count, grouped):
         if _packs(pack_count) != _packs(beer.get("pack_count")):
             continue
 
-        # HÅRD GATE 3 — bryggeri skal matche, hvis begge er kendt.
-        # Tilgivende: matcher hvis det ene navn indeholder det andet (efter
-        # normalisering). Fanger rod som "Lindemans, Cuvée René, 2023" vs
-        # "Brouwerij Lindemans" uden at flette forskellige bryggerier.
-        if brewery and beer.get("brewery"):
-            if not _brewery_match(brewery, beer["brewery"]):
-                continue
+        # HÅRD GATE 2b — variant-markører skal stemme. Hvis det ene navn har
+        # fx 'barrel aged', 'bourbon BA' eller en årgang som det andet mangler,
+        # er det forskellige produkter (fx Abt 12 vs Abt 12 Barrel Aged).
+        if _variant_words(normalized) != _variant_words(beer["normalized_name"]):
+            continue
 
-        # BLØD GATE — ABV må ikke afvige for meget
+        # HÅRD GATE 3 — ABV må ikke afvige for meget (skiller fx Dubbel 7%
+        # fra Tripel 9,5% fra samme bryggeri).
         if abv is not None and beer.get("abv") is not None:
             if abs(abv - beer["abv"]) > ABV_MAX_DIFF:
                 continue
 
-        score = fuzz.token_sort_ratio(normalized, beer["normalized_name"])
+        # Navne-lighed. Vi tager det bedste af to metoder:
+        #   token_sort_ratio  — god til normale navne i forskellig rækkefølge
+        #   token_set_ratio   — bedre når ord gentages eller står i rod
+        #                       (fx "Trappist Tripel ... Trappist Tripel")
+        score = max(
+            fuzz.token_sort_ratio(normalized, beer["normalized_name"]),
+            fuzz.token_set_ratio(normalized, beer["normalized_name"]),
+        )
 
-        # Lille bonus for næsten-identisk ABV (tie-breaker)
+        # BRYGGERI er et BLØDT signal — ikke en hård gate. Butikkerne skriver
+        # bryggeri-feltet vidt forskelligt (produktnavn, dato, butiksnavn), så
+        # det er upålideligt at blokere på. I stedet:
+        #   - enige bryggerier (eller delmængde) => bonus
+        #   - uenige bryggerier => kræv HØJERE navne-lighed for at matche
+        if brewery and beer.get("brewery"):
+            if _brewery_match(brewery, beer["brewery"]):
+                score += 5                      # bonus når bryggeri stemmer
+            else:
+                # Bryggeri uenigt: kun match hvis navnet er meget tæt på.
+                if score < BREWERY_DISAGREE_THRESHOLD:
+                    continue
+
+        # Lille ekstra bonus for næsten-identisk ABV (tie-breaker)
         if abv is not None and beer.get("abv") is not None and abs(abv - beer["abv"]) < 0.2:
             score += 5
 
