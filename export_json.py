@@ -152,6 +152,12 @@ for item in items:
 beers = []
 for key, beer in grouped.items():
     prices = beer["prices"]
+    # Sikkerhedsnet: drop priser på 0 (eller derunder) og grupper uden
+    # nogen gyldig pris — de hører ikke til i en prissammenligning.
+    prices = [p for p in prices if p.get("price") and p["price"] > 0]
+    if not prices:
+        continue
+    beer["prices"] = prices
     beer["min_price"] = min(p["price"] for p in prices)
     beer["max_discount_pct"] = max((p.get("discount_pct") or 0) for p in prices)
     beer["shop_count"] = len(prices)

@@ -99,6 +99,9 @@ def scrape_oeltanken():
         # Ikke-øl: abonnement, info-sider, firmaaftaler
         "abonnoment", "abonnement", "firmaaftale", "firma-aftale",
         "info om muligheder", "fredagsbar",
+        # "Bland selv"-kasser uden fast pris (giver 0 kr, hører ikke til i
+        # prissammenligning). Skippes helt frem for blot smagekasse-markering.
+        "bland selv", "spar op til", "vælg 8", "vælg og spar",
     ]
 
     # Ebeltoft Gaardbryggeri laver både øl OG sodavand. Disse er sodavand:
@@ -145,6 +148,11 @@ def scrape_oeltanken():
             try:
                 price = float(variant.get("price"))
             except:
+                continue
+
+            # Spring produkter uden rigtig pris over (fx 'bland selv'-kasser
+            # der står til 0 kr — de hører ikke til i en prissammenligning).
+            if price <= 0:
                 continue
 
             old_price = variant.get("compare_at_price")
