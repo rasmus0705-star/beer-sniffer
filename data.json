@@ -1,8 +1,8 @@
 {
-  "updated_at": "2026-06-29T18:51:27.678157",
+  "updated_at": "2026-06-29T19:44:07.888886",
   "stats": {
-    "total": 2175,
-    "deals": 575,
+    "total": 2154,
+    "deals": 574,
     "shops": 7,
     "shop_names": [
       "A Good Case",
@@ -1775,7 +1775,7 @@
       "max_discount_pct": 0
     },
     {
-      "id": 16785,
+      "id": 16796,
       "name": "Leo Beer - Øl",
       "image": "https://www.vildmedvin.dk/img/1000/1000/resize/l/e/leo-beer-33-cl_large.jpg",
       "type": "Lager Øl",
@@ -2715,7 +2715,7 @@
       "max_discount_pct": 24.2
     },
     {
-      "id": 16777,
+      "id": 16794,
       "name": "Belgian Brown 6,8% 33cl",
       "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/belgien-brown-33cl.png?v=1753443086",
       "type": "Dubbel",
@@ -3847,7 +3847,7 @@
       "type": "IPA",
       "abv": 5.9,
       "volume_cl": 33.0,
-      "brewery": null,
+      "brewery": "Thornbridge",
       "category": null,
       "prices": [
         {
@@ -3871,7 +3871,7 @@
       "type": "Pilsner",
       "abv": 4.6,
       "volume_cl": 44.0,
-      "brewery": null,
+      "brewery": "Svaneke bryghus",
       "category": null,
       "prices": [
         {
@@ -3895,7 +3895,7 @@
       "type": "India Pale Ale (IPA)",
       "abv": 5.6,
       "volume_cl": 44.0,
-      "brewery": null,
+      "brewery": "Svaneke bryghus",
       "category": null,
       "prices": [
         {
@@ -3919,7 +3919,7 @@
       "type": "Session IPA",
       "abv": 4.8,
       "volume_cl": 44.0,
-      "brewery": null,
+      "brewery": "Svaneke bryghus",
       "category": null,
       "prices": [
         {
@@ -4952,37 +4952,13 @@
       "type": "Stout",
       "abv": 4.3,
       "volume_cl": 33.0,
-      "brewery": null,
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Vild med Vin",
-          "price": 29.0,
-          "url": "https://www.vildmedvin.dk/ohara-s-irish-stout",
-          "discount_pct": 0,
-          "old_price": null
-        }
-      ],
-      "cheapest_price": 29.0,
-      "min_price": 29.0,
-      "shop": "Vild med Vin",
-      "discount_pct": 0,
-      "max_discount_pct": 0
-    },
-    {
-      "id": 15322,
-      "name": "Ohara's, Irish Red Ale - Øl",
-      "image": "https://www.vildmedvin.dk/img/1000/1000/resize/o/h/oharas_red_ale_vmv.jpg",
-      "type": "Ale",
-      "abv": 4.3,
-      "volume_cl": 33.0,
       "brewery": "Ohara's",
       "category": null,
       "prices": [
         {
           "shop_name": "Vild med Vin",
           "price": 29.0,
-          "url": "https://www.vildmedvin.dk/ohara-s-irish-red-ale",
+          "url": "https://www.vildmedvin.dk/ohara-s-irish-stout",
           "discount_pct": 0,
           "old_price": null
         }
@@ -6911,7 +6887,7 @@
       "type": "Stout",
       "abv": 4.3,
       "volume_cl": 44.0,
-      "brewery": null,
+      "brewery": "Ohara's",
       "category": null,
       "prices": [
         {
@@ -7127,7 +7103,7 @@
       "type": "IPA",
       "abv": 4.3,
       "volume_cl": 33.0,
-      "brewery": null,
+      "brewery": "Thornbridge",
       "category": null,
       "prices": [
         {
@@ -7217,7 +7193,7 @@
       "max_discount_pct": 0
     },
     {
-      "id": 16776,
+      "id": 16793,
       "name": "It's A Blond 5,9% 33cl",
       "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/its-a-blond-33cl_27db0da2-5945-4111-8396-339312eae8d3.png?v=1773482918",
       "type": "Blond",
@@ -7879,7 +7855,7 @@
       "max_discount_pct": 0
     },
     {
-      "id": 16773,
+      "id": 16790,
       "name": "Maître Tripel 8,5% 33cl",
       "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/maitre-tripel-8-5-33cl.png?v=1733847666",
       "type": "Tripel",
@@ -8578,7 +8554,7 @@
       "type": "Tripel",
       "abv": 9.2,
       "volume_cl": 33.0,
-      "brewery": null,
+      "brewery": "Ebeltoft Gårdbryggeri",
       "category": null,
       "prices": [
         {
@@ -10092,7 +10068,7 @@
       "max_discount_pct": 10.3
     },
     {
-      "id": 16774,
+      "id": 16791,
       "name": "Imperial Stout 9,3% 33cl",
       "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/imperial-stout-9-3-33cl_e5717b14-1296-4555-8e23-bc8da32992e9.png?v=1753446200",
       "type": "Imperial Stout",
@@ -10555,6 +10531,37 @@
       "max_discount_pct": 0
     },
     {
+      "id": 16219,
+      "name": "West Side Glory -Thornbridge  - 44 cl. -  7,0%",
+      "image": "https://www.vildmedvin.dk/img/1000/1000/resize/t/h/thornbridge_west_side_glory.jpg",
+      "type": "Beer",
+      "abv": 7.0,
+      "volume_cl": 44.0,
+      "brewery": "Beershoppen",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Vild med Vin",
+          "price": 35.0,
+          "url": "https://www.vildmedvin.dk/thornbridge-west-side-glory",
+          "discount_pct": 0,
+          "old_price": null
+        },
+        {
+          "shop_name": "Beershoppen",
+          "price": 40.0,
+          "url": "https://beershoppen.dk/products/west-side-glory-thornbridge-44-cl-7-0",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 35.0,
+      "min_price": 35.0,
+      "shop": "Vild med Vin",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
       "id": 16057,
       "name": "Low Five - Nøgne Ø, Norge -  33 cl. - 0,3%",
       "image": "https://cdn.shopify.com/s/files/1/0600/9438/2263/files/IMG_5620_11202a5d-b87a-460b-9d61-c88bb889fb64.heic?v=1781776944",
@@ -10873,7 +10880,7 @@
       "type": "Porter",
       "abv": 6.8,
       "volume_cl": 44.0,
-      "brewery": null,
+      "brewery": "Thornbridge",
       "category": null,
       "prices": [
         {
@@ -10891,37 +10898,13 @@
       "max_discount_pct": 0
     },
     {
-      "id": 16269,
-      "name": "Thornbridge, West Side Glory - Øl",
-      "image": "https://www.vildmedvin.dk/img/1000/1000/resize/t/h/thornbridge_west_side_glory.jpg",
-      "type": "IPA",
-      "abv": 7.0,
-      "volume_cl": 44.0,
-      "brewery": null,
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Vild med Vin",
-          "price": 35.0,
-          "url": "https://www.vildmedvin.dk/thornbridge-west-side-glory",
-          "discount_pct": 0,
-          "old_price": null
-        }
-      ],
-      "cheapest_price": 35.0,
-      "min_price": 35.0,
-      "shop": "Vild med Vin",
-      "discount_pct": 0,
-      "max_discount_pct": 0
-    },
-    {
       "id": 16428,
       "name": "Møn Bryghus, Rytzebæk Blanc - Øl",
       "image": "https://www.vildmedvin.dk/img/1000/1000/resize/m/_/m_n_bryghus_rytzeb_k_blanc.jpg",
       "type": "Hvedeøl",
       "abv": 4.6,
       "volume_cl": 33.0,
-      "brewery": null,
+      "brewery": "Møn Bryghus",
       "category": null,
       "prices": [
         {
@@ -10945,7 +10928,7 @@
       "type": "Session IPA",
       "abv": 3.3,
       "volume_cl": 33.0,
-      "brewery": null,
+      "brewery": "Møn Bryghus",
       "category": null,
       "prices": [
         {
@@ -12733,30 +12716,6 @@
       "max_discount_pct": 0
     },
     {
-      "id": 16688,
-      "name": "Ohara's, NITRO Red Ale - Øl",
-      "image": "https://www.vildmedvin.dk/img/1000/1000/resize/o/h/oharas_irish_red_nitro.jpg",
-      "type": null,
-      "abv": 4.3,
-      "volume_cl": 44.0,
-      "brewery": "Ohara's",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Vild med Vin",
-          "price": 37.0,
-          "url": "https://www.vildmedvin.dk/ohara-s-nitro-red-ale",
-          "discount_pct": 0,
-          "old_price": null
-        }
-      ],
-      "cheapest_price": 37.0,
-      "min_price": 37.0,
-      "shop": "Vild med Vin",
-      "discount_pct": 0,
-      "max_discount_pct": 0
-    },
-    {
       "id": 15669,
       "name": "Vault City, Lemon Ice Tea Table Sour - Øl",
       "image": "https://www.vildmedvin.dk/img/1000/1000/resize/v/a/vault_city_lemon_ice_tea_table_sour.jpg",
@@ -13953,7 +13912,7 @@
       "type": null,
       "abv": 0.3,
       "volume_cl": 33.0,
-      "brewery": null,
+      "brewery": "Fanø",
       "category": null,
       "prices": [
         {
@@ -14001,7 +13960,7 @@
       "type": "Pilsner",
       "abv": 4.8,
       "volume_cl": 44.0,
-      "brewery": null,
+      "brewery": "Bryg 365",
       "category": null,
       "prices": [
         {
@@ -14025,7 +13984,7 @@
       "type": "Bock",
       "abv": 6.5,
       "volume_cl": 44.0,
-      "brewery": null,
+      "brewery": "Bryg 365",
       "category": null,
       "prices": [
         {
@@ -14272,30 +14231,6 @@
           "shop_name": "Vild med Vin",
           "price": 39.0,
           "url": "https://www.vildmedvin.dk/vault-city-lemon-ginger-radler",
-          "discount_pct": 0,
-          "old_price": null
-        }
-      ],
-      "cheapest_price": 39.0,
-      "min_price": 39.0,
-      "shop": "Vild med Vin",
-      "discount_pct": 0,
-      "max_discount_pct": 0
-    },
-    {
-      "id": 16472,
-      "name": "Amager Bryghus, Hopla - Øl",
-      "image": "https://www.vildmedvin.dk/img/1000/1000/resize/a/m/amager_bryghus_hopla.jpg",
-      "type": "Pilsner",
-      "abv": 5.0,
-      "volume_cl": 44.0,
-      "brewery": null,
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Vild med Vin",
-          "price": 39.0,
-          "url": "https://www.vildmedvin.dk/amager-bryghus-hopla",
           "discount_pct": 0,
           "old_price": null
         }
@@ -15545,30 +15480,6 @@
       "max_discount_pct": 0
     },
     {
-      "id": 16219,
-      "name": "West Side Glory -Thornbridge  - 44 cl. -  7,0%",
-      "image": null,
-      "type": "Beer",
-      "abv": 7.0,
-      "volume_cl": 44.0,
-      "brewery": "Beershoppen",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Beershoppen",
-          "price": 40.0,
-          "url": "https://beershoppen.dk/products/west-side-glory-thornbridge-44-cl-7-0",
-          "discount_pct": 0,
-          "old_price": null
-        }
-      ],
-      "cheapest_price": 40.0,
-      "min_price": 40.0,
-      "shop": "Beershoppen",
-      "discount_pct": 0,
-      "max_discount_pct": 0
-    },
-    {
       "id": 16102,
       "name": "Lambicus Strawberry Thyme - 33cl, 4%, Lambic - Timmermans",
       "image": "https://cdn.shopify.com/s/files/1/0600/9438/2263/files/IMG_1503.jpg?v=1736417987",
@@ -16031,7 +15942,7 @@
       "type": "Ale",
       "abv": 6.0,
       "volume_cl": 50.0,
-      "brewery": null,
+      "brewery": "Hvide Sande Bryghus",
       "category": null,
       "prices": [
         {
@@ -16055,7 +15966,7 @@
       "type": "Porter",
       "abv": 6.5,
       "volume_cl": 50.0,
-      "brewery": null,
+      "brewery": "Hvide Sande Bryghus",
       "category": null,
       "prices": [
         {
@@ -16103,7 +16014,7 @@
       "type": "India Pale Ale (IPA)",
       "abv": 6.0,
       "volume_cl": 50.0,
-      "brewery": null,
+      "brewery": "Hvide Sande Bryghus",
       "category": null,
       "prices": [
         {
@@ -16220,6 +16131,37 @@
           "shop_name": "Best of Beers",
           "price": 46.0,
           "url": "https://www.bestofbeers.dk/shop/founders-x-centennial-ipa-0355-l-72/",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 41.0,
+      "min_price": 41.0,
+      "shop": "Vild med Vin",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
+      "id": 15040,
+      "name": "Tama - The Garden brewery - 44 cl. - 8,1%",
+      "image": "https://www.vildmedvin.dk/img/1000/1000/resize/t/h/the_garden_brewery_tama.jpg",
+      "type": "Beer",
+      "abv": 8.1,
+      "volume_cl": 44.0,
+      "brewery": "Beershoppen",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Vild med Vin",
+          "price": 41.0,
+          "url": "https://www.vildmedvin.dk/the-garden-brewery-tama",
+          "discount_pct": 0,
+          "old_price": null
+        },
+        {
+          "shop_name": "Beershoppen",
+          "price": 48.0,
+          "url": "https://beershoppen.dk/products/tama-the-garden-brewery-44-cl-8-1",
           "discount_pct": 0,
           "old_price": null
         }
@@ -16611,30 +16553,6 @@
           "shop_name": "Vild med Vin",
           "price": 41.0,
           "url": "https://www.vildmedvin.dk/wicklow-wolf-solstice-sour",
-          "discount_pct": 0,
-          "old_price": null
-        }
-      ],
-      "cheapest_price": 41.0,
-      "min_price": 41.0,
-      "shop": "Vild med Vin",
-      "discount_pct": 0,
-      "max_discount_pct": 0
-    },
-    {
-      "id": 15686,
-      "name": "The Garden Brewery, Tama - Øl",
-      "image": "https://www.vildmedvin.dk/img/1000/1000/resize/t/h/the_garden_brewery_tama.jpg",
-      "type": "Stout",
-      "abv": 8.1,
-      "volume_cl": 44.0,
-      "brewery": null,
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Vild med Vin",
-          "price": 41.0,
-          "url": "https://www.vildmedvin.dk/the-garden-brewery-tama",
           "discount_pct": 0,
           "old_price": null
         }
@@ -17300,7 +17218,7 @@
       "type": "IPA",
       "abv": 0.5,
       "volume_cl": 50.0,
-      "brewery": null,
+      "brewery": "Funky Fluid",
       "category": null,
       "prices": [
         {
@@ -17729,37 +17647,13 @@
       "type": "Påskeøl",
       "abv": 7.7,
       "volume_cl": 50.0,
-      "brewery": null,
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Vild med Vin",
-          "price": 44.0,
-          "url": "https://www.vildmedvin.dk/fur-bryghus-paskebryg",
-          "discount_pct": 0,
-          "old_price": null
-        }
-      ],
-      "cheapest_price": 44.0,
-      "min_price": 44.0,
-      "shop": "Vild med Vin",
-      "discount_pct": 0,
-      "max_discount_pct": 0
-    },
-    {
-      "id": 15188,
-      "name": "Fur Bryghus, Steam Beer - Øl",
-      "image": "https://www.vildmedvin.dk/img/1000/1000/resize/2/4/24179_0.jpg",
-      "type": "Ale",
-      "abv": 7.8,
-      "volume_cl": 50.0,
       "brewery": "Fur Bryghus",
       "category": null,
       "prices": [
         {
           "shop_name": "Vild med Vin",
           "price": 44.0,
-          "url": "https://www.vildmedvin.dk/fur-bryghus-bock",
+          "url": "https://www.vildmedvin.dk/fur-bryghus-paskebryg",
           "discount_pct": 0,
           "old_price": null
         }
@@ -18161,7 +18055,7 @@
       "type": "Pale Ale",
       "abv": 4.9,
       "volume_cl": 50.0,
-      "brewery": null,
+      "brewery": "Reset Old School",
       "category": null,
       "prices": [
         {
@@ -18185,7 +18079,7 @@
       "type": "IPA",
       "abv": 5.6,
       "volume_cl": 50.0,
-      "brewery": null,
+      "brewery": "Reset Froggy",
       "category": null,
       "prices": [
         {
@@ -18233,7 +18127,7 @@
       "type": "Stout",
       "abv": 5.6,
       "volume_cl": 50.0,
-      "brewery": null,
+      "brewery": "Reset Extra",
       "category": null,
       "prices": [
         {
@@ -18257,7 +18151,7 @@
       "type": "IPA",
       "abv": 5.9,
       "volume_cl": 44.0,
-      "brewery": null,
+      "brewery": "Thornbridge",
       "category": null,
       "prices": [
         {
@@ -18975,7 +18869,7 @@
       "max_discount_pct": 0
     },
     {
-      "id": 16775,
+      "id": 16792,
       "name": "Ry Pilsner 5,6% 50cl",
       "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/ry-pilsner.png?v=1747399627",
       "type": "Pilsner",
@@ -19163,6 +19057,37 @@
       "cheapest_price": 45.0,
       "min_price": 45.0,
       "shop": "Beershoppen",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
+      "id": 16581,
+      "name": "Lazurite - Warpigs Kødbyen -  44 cl. -  7,4%",
+      "image": "https://cdn.shopify.com/s/files/1/0600/9438/2263/files/warlazu.jpg?v=1782379826",
+      "type": "Beer",
+      "abv": 7.4,
+      "volume_cl": 44.0,
+      "brewery": "Beershoppen",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Vild med Vin",
+          "price": 45.0,
+          "url": "https://www.vildmedvin.dk/warpigs-lazurite",
+          "discount_pct": 0,
+          "old_price": null
+        },
+        {
+          "shop_name": "Beershoppen",
+          "price": 50.0,
+          "url": "https://beershoppen.dk/products/lazurite-warpigs-kodbyen-44-cl-7-4",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 45.0,
+      "min_price": 45.0,
+      "shop": "Vild med Vin",
       "discount_pct": 0,
       "max_discount_pct": 0
     },
@@ -19911,7 +19836,7 @@
       "max_discount_pct": 0
     },
     {
-      "id": 16783,
+      "id": 16795,
       "name": "To Øl, #DIPA - Øl",
       "image": "https://www.vildmedvin.dk/img/1000/1000/resize/7/7/7777_1..jpg",
       "type": "Double IPA",
@@ -19924,6 +19849,30 @@
           "shop_name": "Vild med Vin",
           "price": 45.0,
           "url": "https://www.vildmedvin.dk/to-ol-dipa",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 45.0,
+      "min_price": 45.0,
+      "shop": "Vild med Vin",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
+      "id": 16415,
+      "name": "Bryg 365, The Virus - Øl",
+      "image": "https://www.vildmedvin.dk/img/1000/1000/resize/b/r/bryg365_-_the_virus.jpg",
+      "type": "Sour Beer",
+      "abv": 7.5,
+      "volume_cl": 44.0,
+      "brewery": "Bryg 365",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Vild med Vin",
+          "price": 45.0,
+          "url": "https://www.vildmedvin.dk/bryg-365-summerer-vibes",
           "discount_pct": 0,
           "old_price": null
         }
@@ -20007,30 +19956,6 @@
       "max_discount_pct": 0
     },
     {
-      "id": 15692,
-      "name": "Warpigs, Lazurite - Øl",
-      "image": "https://www.vildmedvin.dk/img/1000/1000/resize/w/a/warpigs_lazurite.jpg",
-      "type": "IPA",
-      "abv": 7.4,
-      "volume_cl": 44.0,
-      "brewery": null,
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Vild med Vin",
-          "price": 45.0,
-          "url": "https://www.vildmedvin.dk/warpigs-lazurite",
-          "discount_pct": 0,
-          "old_price": null
-        }
-      ],
-      "cheapest_price": 45.0,
-      "min_price": 45.0,
-      "shop": "Vild med Vin",
-      "discount_pct": 0,
-      "max_discount_pct": 0
-    },
-    {
       "id": 15693,
       "name": "Warpigs, Elite Human - Øl",
       "image": "https://www.vildmedvin.dk/img/1000/1000/resize/w/a/warpigs_elite_human.jpg",
@@ -20061,37 +19986,13 @@
       "type": "Session IPA",
       "abv": 6.0,
       "volume_cl": 50.0,
-      "brewery": null,
+      "brewery": "Krenkerup",
       "category": null,
       "prices": [
         {
           "shop_name": "Vild med Vin",
           "price": 45.0,
           "url": "https://www.vildmedvin.dk/krenkerup-session-ipa-50-cl",
-          "discount_pct": 0,
-          "old_price": null
-        }
-      ],
-      "cheapest_price": 45.0,
-      "min_price": 45.0,
-      "shop": "Vild med Vin",
-      "discount_pct": 0,
-      "max_discount_pct": 0
-    },
-    {
-      "id": 16548,
-      "name": "Bryg 365, Summerer Vibes - Øl",
-      "image": "https://www.vildmedvin.dk/img/1000/1000/resize/b/r/bryg365_summer_vibes.jpg",
-      "type": "IPA",
-      "abv": 7.5,
-      "volume_cl": 44.0,
-      "brewery": null,
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Vild med Vin",
-          "price": 45.0,
-          "url": "https://www.vildmedvin.dk/bryg-365-summerer-vibes",
           "discount_pct": 0,
           "old_price": null
         }
@@ -21142,54 +21043,6 @@
       "max_discount_pct": 15.5
     },
     {
-      "id": 15651,
-      "name": "Funky Fluid, Free Gelato Passionfruit Mango & Peach Alkoholfri - Øl",
-      "image": "https://www.vildmedvin.dk/img/1000/1000/resize/u/n/unky_fluid_free_gelato_passionfruit_mango_peach_alkoholfri.jpg",
-      "type": null,
-      "abv": 0.5,
-      "volume_cl": 50.0,
-      "brewery": null,
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Vild med Vin",
-          "price": 47.0,
-          "url": "https://www.vildmedvin.dk/funky-fluid-free-gelato-green-alkoholfri",
-          "discount_pct": 0,
-          "old_price": null
-        }
-      ],
-      "cheapest_price": 47.0,
-      "min_price": 47.0,
-      "shop": "Vild med Vin",
-      "discount_pct": 0,
-      "max_discount_pct": 0
-    },
-    {
-      "id": 15652,
-      "name": "Funky Fluid, Free Gelato Raspberry & banana Shake Alkoholfri - Øl",
-      "image": "https://www.vildmedvin.dk/img/1000/1000/resize/f/u/funky_fluid_free_gelato_raspberry_banana_shake_alkoholfri.jpg",
-      "type": null,
-      "abv": 0.5,
-      "volume_cl": 50.0,
-      "brewery": null,
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Vild med Vin",
-          "price": 47.0,
-          "url": "https://www.vildmedvin.dk/funky-fluid-free-gelato-berries-cream-alkoholfri",
-          "discount_pct": 0,
-          "old_price": null
-        }
-      ],
-      "cheapest_price": 47.0,
-      "min_price": 47.0,
-      "shop": "Vild med Vin",
-      "discount_pct": 0,
-      "max_discount_pct": 0
-    },
-    {
       "id": 12847,
       "name": "Master Hazy Double IPA #01 8,5% 33cl",
       "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/master-hazy-double-ipa-01-8-5-33cl.png?v=1774962363",
@@ -21570,30 +21423,6 @@
       "cheapest_price": 48.0,
       "min_price": 48.0,
       "shop": "Brygshoppen",
-      "discount_pct": 0,
-      "max_discount_pct": 0
-    },
-    {
-      "id": 15040,
-      "name": "Tama - The Garden brewery - 44 cl. - 8,1%",
-      "image": null,
-      "type": "Beer",
-      "abv": 8.1,
-      "volume_cl": 44.0,
-      "brewery": "Beershoppen",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Beershoppen",
-          "price": 48.0,
-          "url": "https://beershoppen.dk/products/tama-the-garden-brewery-44-cl-8-1",
-          "discount_pct": 0,
-          "old_price": null
-        }
-      ],
-      "cheapest_price": 48.0,
-      "min_price": 48.0,
-      "shop": "Beershoppen",
       "discount_pct": 0,
       "max_discount_pct": 0
     },
@@ -22322,30 +22151,6 @@
       "max_discount_pct": 38.0
     },
     {
-      "id": 14445,
-      "name": "Hopalaa Brewery - Black Whiskey BA",
-      "image": "https://cdn.shopify.com/s/files/1/0776/5209/9400/files/69B1D32E-A9F1-48E7-9815-77A8091919A8.jpg?v=1773339662",
-      "type": "Imperial Stout",
-      "abv": 10.0,
-      "volume_cl": 33.0,
-      "brewery": "Hopalaa Brewery",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Øltanken",
-          "price": 49.0,
-          "url": "https://oltanken.dk/products/hopalaa-black-whiskey-ba",
-          "discount_pct": 31.9,
-          "old_price": 72.0
-        }
-      ],
-      "cheapest_price": 49.0,
-      "min_price": 49.0,
-      "shop": "Øltanken",
-      "discount_pct": 31.9,
-      "max_discount_pct": 31.9
-    },
-    {
       "id": 16109,
       "name": "Fermenterarna - Razzonade",
       "image": "https://cdn.shopify.com/s/files/1/0776/5209/9400/files/D8E420FE-A6D5-47E6-A824-470579BFB920.jpg?v=1780482558",
@@ -22455,6 +22260,30 @@
           "shop_name": "Vild med Vin",
           "price": 49.0,
           "url": "https://www.vildmedvin.dk/catalog/product/view/id/439415/s/sierra-nevada-big-little-thing/",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 49.0,
+      "min_price": 49.0,
+      "shop": "Vild med Vin",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
+      "id": 15356,
+      "name": "Amager Bryghus, Wookie - Øl",
+      "image": "https://www.vildmedvin.dk/img/1000/1000/resize/w/o/wookie-ipa-2021.jpg",
+      "type": "IPA",
+      "abv": 7.2,
+      "volume_cl": 44.0,
+      "brewery": "Amager Bryghus",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Vild med Vin",
+          "price": 49.0,
+          "url": "https://www.vildmedvin.dk/amager-bryghus-chokokoko",
           "discount_pct": 0,
           "old_price": null
         }
@@ -22850,37 +22679,13 @@
       "max_discount_pct": 0
     },
     {
-      "id": 16471,
-      "name": "Amager Bryghus, Chokokoko - Øl",
-      "image": "https://www.vildmedvin.dk/img/1000/1000/resize/a/m/amager_bryghus_chokokoko.jpg",
-      "type": "Porter",
-      "abv": 7.0,
-      "volume_cl": 44.0,
-      "brewery": null,
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Vild med Vin",
-          "price": 49.0,
-          "url": "https://www.vildmedvin.dk/amager-bryghus-chokokoko",
-          "discount_pct": 0,
-          "old_price": null
-        }
-      ],
-      "cheapest_price": 49.0,
-      "min_price": 49.0,
-      "shop": "Vild med Vin",
-      "discount_pct": 0,
-      "max_discount_pct": 0
-    },
-    {
       "id": 16545,
       "name": "Bryg 365, Baltic Battle - Øl",
       "image": "https://www.vildmedvin.dk/img/1000/1000/resize/b/a/baltic_battle_bryg365.jpg",
       "type": "Porter",
       "abv": 10.0,
       "volume_cl": 44.0,
-      "brewery": null,
+      "brewery": "Bryg 365",
       "category": null,
       "prices": [
         {
@@ -22904,7 +22709,7 @@
       "type": "Bock",
       "abv": 7.0,
       "volume_cl": 44.0,
-      "brewery": null,
+      "brewery": "Bryg 365",
       "category": null,
       "prices": [
         {
@@ -24297,30 +24102,6 @@
       "max_discount_pct": 0
     },
     {
-      "id": 16581,
-      "name": "Lazurite - Warpigs Kødbyen -  44 cl. -  7,4%",
-      "image": "https://cdn.shopify.com/s/files/1/0600/9438/2263/files/warlazu.jpg?v=1782379826",
-      "type": "Beer",
-      "abv": 7.4,
-      "volume_cl": 44.0,
-      "brewery": "Beershoppen",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Beershoppen",
-          "price": 50.0,
-          "url": "https://beershoppen.dk/products/lazurite-warpigs-kodbyen-44-cl-7-4",
-          "discount_pct": 0,
-          "old_price": null
-        }
-      ],
-      "cheapest_price": 50.0,
-      "min_price": 50.0,
-      "shop": "Beershoppen",
-      "discount_pct": 0,
-      "max_discount_pct": 0
-    },
-    {
       "id": 16582,
       "name": "Renegade Party Bus - Tiny Rebel - 44 cl. - 8,0%",
       "image": null,
@@ -24897,6 +24678,68 @@
       "max_discount_pct": 0
     },
     {
+      "id": 16606,
+      "name": "Rødgrød Med Fløde 5% 44cl",
+      "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/rodgrod-med-flode-5-44cl.png?v=1782473339",
+      "type": "Pastry Sour",
+      "abv": 5.0,
+      "volume_cl": 44.0,
+      "brewery": "Bryg365",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Vild med Vin",
+          "price": 51.0,
+          "url": "https://www.vildmedvin.dk/bryg-365-rodgrod-med-flode",
+          "discount_pct": 0,
+          "old_price": null
+        },
+        {
+          "shop_name": "Brygshoppen",
+          "price": 52.0,
+          "url": "https://brygshoppen.dk/products/rodgrod-med-flode-5-44cl",
+          "discount_pct": 0,
+          "old_price": 0.0
+        }
+      ],
+      "cheapest_price": 51.0,
+      "min_price": 51.0,
+      "shop": "Vild med Vin",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
+      "id": 14274,
+      "name": "Doppel Bock - Krenkerup - 50 cl. - 8,3%",
+      "image": "https://cdn.shopify.com/s/files/1/0600/9438/2263/files/doppelbock.jpg?v=1757584060",
+      "type": "Bock",
+      "abv": 8.3,
+      "volume_cl": 50.0,
+      "brewery": "Beershoppen",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Vild med Vin",
+          "price": 51.0,
+          "url": "https://www.vildmedvin.dk/krenkerup-doppel-bock-50-cl",
+          "discount_pct": 0,
+          "old_price": null
+        },
+        {
+          "shop_name": "Beershoppen",
+          "price": 55.0,
+          "url": "https://beershoppen.dk/products/doppel-bock-krenkerup-50-cl-8-3",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 51.0,
+      "min_price": 51.0,
+      "shop": "Vild med Vin",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
       "id": 13628,
       "name": "Stepping Stone Brewing Co. – Tor Dhubh – Dry Stout – 0,44 l. – 4,2%",
       "image": "https://www.bestofbeers.dk/wp-content/uploads/2026/04/SteppingStoneTorDhubhDryStout.jpg",
@@ -25209,30 +25052,6 @@
       "max_discount_pct": 0
     },
     {
-      "id": 16255,
-      "name": "Krenkerup, Doppel Bock 50 cl. - Øl",
-      "image": "https://www.vildmedvin.dk/img/1000/1000/resize/d/o/dobbel_50.jpg",
-      "type": "Bock",
-      "abv": 8.3,
-      "volume_cl": 50.0,
-      "brewery": null,
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Vild med Vin",
-          "price": 51.0,
-          "url": "https://www.vildmedvin.dk/krenkerup-doppel-bock-50-cl",
-          "discount_pct": 0,
-          "old_price": null
-        }
-      ],
-      "cheapest_price": 51.0,
-      "min_price": 51.0,
-      "shop": "Vild med Vin",
-      "discount_pct": 0,
-      "max_discount_pct": 0
-    },
-    {
       "id": 15324,
       "name": "Midtfyns, Go Jul - Øl",
       "image": "https://www.vildmedvin.dk/img/1000/1000/resize/m/i/midtfyns_go_jul-removebg_vmv.jpg",
@@ -25257,37 +25076,13 @@
       "max_discount_pct": 0
     },
     {
-      "id": 15356,
-      "name": "Amager Bryghus, Wookie - Øl",
-      "image": "https://www.vildmedvin.dk/img/1000/1000/resize/w/o/wookie-ipa-2021.jpg",
-      "type": "IPA",
-      "abv": 7.2,
-      "volume_cl": 44.0,
-      "brewery": "Amager Bryghus",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Vild med Vin",
-          "price": 51.0,
-          "url": "https://www.vildmedvin.dk/amager-bryghus-wookie",
-          "discount_pct": 0,
-          "old_price": null
-        }
-      ],
-      "cheapest_price": 51.0,
-      "min_price": 51.0,
-      "shop": "Vild med Vin",
-      "discount_pct": 0,
-      "max_discount_pct": 0
-    },
-    {
       "id": 16421,
       "name": "Bryg 365, Den stive Munk - Øl",
       "image": "https://www.vildmedvin.dk/img/1000/1000/resize/b/r/bryg365_-_den_stive_munk.jpg",
       "type": null,
       "abv": 9.0,
       "volume_cl": 44.0,
-      "brewery": null,
+      "brewery": "Bryg 365",
       "category": null,
       "prices": [
         {
@@ -25318,30 +25113,6 @@
           "shop_name": "Vild med Vin",
           "price": 51.0,
           "url": "https://www.vildmedvin.dk/bryg-365-rod-alarm",
-          "discount_pct": 0,
-          "old_price": null
-        }
-      ],
-      "cheapest_price": 51.0,
-      "min_price": 51.0,
-      "shop": "Vild med Vin",
-      "discount_pct": 0,
-      "max_discount_pct": 0
-    },
-    {
-      "id": 16423,
-      "name": "Bryg 365, Rødgrød med fløde - Øl",
-      "image": "https://www.vildmedvin.dk/img/1000/1000/resize/b/r/bryg365_-_r_dgr_d_med_fl_de_d_se.jpg",
-      "type": "Stout",
-      "abv": 5.0,
-      "volume_cl": 44.0,
-      "brewery": null,
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Vild med Vin",
-          "price": 51.0,
-          "url": "https://www.vildmedvin.dk/bryg-365-rodgrod-med-flode",
           "discount_pct": 0,
           "old_price": null
         }
@@ -25500,30 +25271,6 @@
       "cheapest_price": 52.0,
       "min_price": 52.0,
       "shop": "Vild med Vin",
-      "discount_pct": 0,
-      "max_discount_pct": 0
-    },
-    {
-      "id": 16606,
-      "name": "Rødgrød Med Fløde 5% 44cl",
-      "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/rodgrod-med-flode-5-44cl.png?v=1782473339",
-      "type": "Pastry Sour",
-      "abv": 5.0,
-      "volume_cl": 44.0,
-      "brewery": "Bryg365",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Brygshoppen",
-          "price": 52.0,
-          "url": "https://brygshoppen.dk/products/rodgrod-med-flode-5-44cl",
-          "discount_pct": 0,
-          "old_price": 0.0
-        }
-      ],
-      "cheapest_price": 52.0,
-      "min_price": 52.0,
-      "shop": "Brygshoppen",
       "discount_pct": 0,
       "max_discount_pct": 0
     },
@@ -26307,30 +26054,6 @@
       "max_discount_pct": 0
     },
     {
-      "id": 16415,
-      "name": "Bryg 365, The Virus - Øl",
-      "image": "https://www.vildmedvin.dk/img/1000/1000/resize/b/r/bryg365_-_the_virus.jpg",
-      "type": "Sour Beer",
-      "abv": 7.5,
-      "volume_cl": 44.0,
-      "brewery": null,
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Vild med Vin",
-          "price": 54.0,
-          "url": "https://www.vildmedvin.dk/bryg-365-the-virus",
-          "discount_pct": 0,
-          "old_price": null
-        }
-      ],
-      "cheapest_price": 54.0,
-      "min_price": 54.0,
-      "shop": "Vild med Vin",
-      "discount_pct": 0,
-      "max_discount_pct": 0
-    },
-    {
       "id": 15467,
       "name": "Hr. Skov, Vesterhavs IPA - Øl",
       "image": "https://www.vildmedvin.dk/img/1000/1000/resize/v/e/vesterhavs-ipa.jpg",
@@ -26529,7 +26252,7 @@
       "type": "IPA",
       "abv": 8.5,
       "volume_cl": 44.0,
-      "brewery": null,
+      "brewery": "Galway Bay Foam and Fury",
       "category": null,
       "prices": [
         {
@@ -27459,30 +27182,6 @@
           "shop_name": "Beershoppen",
           "price": 55.0,
           "url": "https://beershoppen.dk/products/espresso-cream-stout-50cl-11-stout-small-batch-bornholm",
-          "discount_pct": 0,
-          "old_price": null
-        }
-      ],
-      "cheapest_price": 55.0,
-      "min_price": 55.0,
-      "shop": "Beershoppen",
-      "discount_pct": 0,
-      "max_discount_pct": 0
-    },
-    {
-      "id": 14274,
-      "name": "Doppel Bock - Krenkerup - 50 cl. - 8,3%",
-      "image": "https://cdn.shopify.com/s/files/1/0600/9438/2263/files/doppelbock.jpg?v=1757584060",
-      "type": "Bock",
-      "abv": 8.3,
-      "volume_cl": 50.0,
-      "brewery": "Beershoppen",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Beershoppen",
-          "price": 55.0,
-          "url": "https://beershoppen.dk/products/doppel-bock-krenkerup-50-cl-8-3",
           "discount_pct": 0,
           "old_price": null
         }
@@ -28999,7 +28698,7 @@
       "type": "IPA",
       "abv": 8.0,
       "volume_cl": 50.0,
-      "brewery": null,
+      "brewery": "Funky Fluid",
       "category": null,
       "prices": [
         {
@@ -29089,7 +28788,7 @@
       "max_discount_pct": 0
     },
     {
-      "id": 16771,
+      "id": 16788,
       "name": "Öö 10,5% 33cl",
       "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/oo-10-5-33cl.png?v=1750597033",
       "type": "Imperial Stout",
@@ -29614,6 +29313,37 @@
       "max_discount_pct": 15.7
     },
     {
+      "id": 15934,
+      "name": "Mumbo Jumbo #7 - pineapple, coconut Lime Gose- Åben - 44 cl - 6,0%",
+      "image": "https://cdn.shopify.com/s/files/1/0600/9438/2263/files/mumbo_7.jpg?v=1779981952",
+      "type": "Gose",
+      "abv": 6.0,
+      "volume_cl": 44.0,
+      "brewery": "Beershoppen",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Vild med Vin",
+          "price": 59.0,
+          "url": "https://www.vildmedvin.dk/aben-mumbo-jumbo-7-pineapple-coconut-and-lime",
+          "discount_pct": 0,
+          "old_price": null
+        },
+        {
+          "shop_name": "Beershoppen",
+          "price": 65.0,
+          "url": "https://beershoppen.dk/products/mumbo-jumbo-7-pineapple-coconut-lime-gose-aben-44-cl-6-0",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 59.0,
+      "min_price": 59.0,
+      "shop": "Vild med Vin",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
       "id": 14179,
       "name": "Tarte Tatin - Vault City - 44 cl - 6,0%",
       "image": "https://cdn.shopify.com/s/files/1/0600/9438/2263/files/tarte.jpg?v=1774523058",
@@ -29795,7 +29525,7 @@
       "type": "Sour Beer",
       "abv": 4.5,
       "volume_cl": 44.0,
-      "brewery": null,
+      "brewery": "Åben",
       "category": null,
       "prices": [
         {
@@ -29819,7 +29549,7 @@
       "type": "Barley Wine",
       "abv": 16.0,
       "volume_cl": 33.0,
-      "brewery": null,
+      "brewery": "Bryg 365",
       "category": null,
       "prices": [
         {
@@ -29963,61 +29693,13 @@
       "type": "IPA",
       "abv": 8.0,
       "volume_cl": 44.0,
-      "brewery": null,
+      "brewery": "Dry & Bitter",
       "category": null,
       "prices": [
         {
           "shop_name": "Vild med Vin",
           "price": 59.0,
           "url": "https://www.vildmedvin.dk/dry-bitter-flowers-go-to-die",
-          "discount_pct": 0,
-          "old_price": null
-        }
-      ],
-      "cheapest_price": 59.0,
-      "min_price": 59.0,
-      "shop": "Vild med Vin",
-      "discount_pct": 0,
-      "max_discount_pct": 0
-    },
-    {
-      "id": 15969,
-      "name": "Funky Fluid, Gelato Joga Bonito Brasil - Øl",
-      "image": "https://www.vildmedvin.dk/img/1000/1000/resize/f/u/funky_fluid_gelato_joga_bonito_brasil.jpg",
-      "type": "Sour Beer",
-      "abv": 5.5,
-      "volume_cl": 50.0,
-      "brewery": null,
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Vild med Vin",
-          "price": 59.0,
-          "url": "https://www.vildmedvin.dk/funky-fluid-gelato-joga-bonito-brasil",
-          "discount_pct": 0,
-          "old_price": null
-        }
-      ],
-      "cheapest_price": 59.0,
-      "min_price": 59.0,
-      "shop": "Vild med Vin",
-      "discount_pct": 0,
-      "max_discount_pct": 0
-    },
-    {
-      "id": 15970,
-      "name": "Funky Fluid, Gelato Tiki Taka Spain - Øl",
-      "image": "https://www.vildmedvin.dk/img/1000/1000/resize/f/u/funky_fluid_gelato_tiki_taka_spain.jpg",
-      "type": "Sour Beer",
-      "abv": 5.5,
-      "volume_cl": 50.0,
-      "brewery": null,
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Vild med Vin",
-          "price": 59.0,
-          "url": "https://www.vildmedvin.dk/funky-fluid-gelato-tiki-taka-spain",
           "discount_pct": 0,
           "old_price": null
         }
@@ -30053,61 +29735,13 @@
       "max_discount_pct": 0
     },
     {
-      "id": 16473,
-      "name": "Åben, Mumbo Jumbo #1 - Passion, Guava and Raspberry - Øl",
-      "image": "https://www.vildmedvin.dk/img/1000/1000/resize/m/u/mumbojumbo_1_aaben.jpg",
-      "type": "Sour Beer",
-      "abv": 6.0,
-      "volume_cl": 33.0,
-      "brewery": null,
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Vild med Vin",
-          "price": 59.0,
-          "url": "https://www.vildmedvin.dk/aben-mumbo-jumbo-1-passion-guava-and-raspberry",
-          "discount_pct": 0,
-          "old_price": null
-        }
-      ],
-      "cheapest_price": 59.0,
-      "min_price": 59.0,
-      "shop": "Vild med Vin",
-      "discount_pct": 0,
-      "max_discount_pct": 0
-    },
-    {
-      "id": 16474,
-      "name": "Åben, Mumbo Jumbo #7 - Pineapple, Coconut and Lime - Øl",
-      "image": "https://www.vildmedvin.dk/img/1000/1000/resize/_/b/_ben_mumbo_jumbo_7_pineapple.jpg",
-      "type": "Sour Beer",
-      "abv": 6.0,
-      "volume_cl": 44.0,
-      "brewery": null,
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Vild med Vin",
-          "price": 59.0,
-          "url": "https://www.vildmedvin.dk/aben-mumbo-jumbo-7-pineapple-coconut-and-lime",
-          "discount_pct": 0,
-          "old_price": null
-        }
-      ],
-      "cheapest_price": 59.0,
-      "min_price": 59.0,
-      "shop": "Vild med Vin",
-      "discount_pct": 0,
-      "max_discount_pct": 0
-    },
-    {
       "id": 16544,
       "name": "Bryg 365, Jordmorkaffe - Øl",
       "image": "https://www.vildmedvin.dk/img/1000/1000/resize/b/r/bryg365_jordmoder_kaffe.jpg",
       "type": "Stout",
       "abv": 9.0,
       "volume_cl": 44.0,
-      "brewery": null,
+      "brewery": "Bryg 365",
       "category": null,
       "prices": [
         {
@@ -32962,10 +32596,10 @@
       "max_discount_pct": 10.0
     },
     {
-      "id": 14517,
-      "name": "Vault City - Gold Standard Pastry Stout",
-      "image": "https://cdn.shopify.com/s/files/1/0776/5209/9400/files/D8EFD862-E774-41AA-8209-31512F2AC1DC.jpg?v=1762293434",
-      "type": "Pastry Stout",
+      "id": 13998,
+      "name": "Gold Standard Â· Imperial Stout fra Vault City",
+      "image": "https://cdn-main.ideal.shop/images/by_hash/4a395e986763aa0c07b43ee89ce98cae412e88db75d44cc77e40a90947a98e2e/500-0/goldstandard.jpg",
+      "type": "Imperial Stout",
       "abv": 15.0,
       "volume_cl": 33.0,
       "brewery": "Vault City",
@@ -32977,13 +32611,6 @@
           "url": "https://www.partner-ads.com/dk/klikbanner.php?bannerid=74625&partnerid=56605&htmlurl=https://www.beer-me.dk/vare/gold-standard-imperial-stout-fra-vault-city",
           "discount_pct": 15.0,
           "old_price": 75.0
-        },
-        {
-          "shop_name": "Øltanken",
-          "price": 76.0,
-          "url": "https://oltanken.dk/products/gold-standard",
-          "discount_pct": 0,
-          "old_price": null
         }
       ],
       "cheapest_price": 63.75,
@@ -33027,6 +32654,37 @@
       "cheapest_price": 64.0,
       "min_price": 64.0,
       "shop": "Øltanken",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
+      "id": 13142,
+      "name": "World's Best 11% 44cl",
+      "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/worlds-best-11-44cl_dffee0e2-b53d-4753-8743-e143a9ac6e09.png?v=1773473310",
+      "type": "Pastry Stout",
+      "abv": 11.0,
+      "volume_cl": 44.0,
+      "brewery": "Amager Bryghus",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Vild med Vin",
+          "price": 64.0,
+          "url": "https://www.vildmedvin.dk/amager-bryghus-world-s-best",
+          "discount_pct": 0,
+          "old_price": null
+        },
+        {
+          "shop_name": "Brygshoppen",
+          "price": 75.0,
+          "url": "https://brygshoppen.dk/products/worlds-best-11-44cl",
+          "discount_pct": 0,
+          "old_price": 0.0
+        }
+      ],
+      "cheapest_price": 64.0,
+      "min_price": 64.0,
+      "shop": "Vild med Vin",
       "discount_pct": 0,
       "max_discount_pct": 0
     },
@@ -33127,37 +32785,13 @@
       "max_discount_pct": 0
     },
     {
-      "id": 16464,
-      "name": "Amager Bryghus, World's Best - Øl",
-      "image": "https://www.vildmedvin.dk/img/1000/1000/resize/w/o/worlds_best.jpg",
-      "type": "Stout",
-      "abv": 11.0,
-      "volume_cl": 44.0,
-      "brewery": null,
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Vild med Vin",
-          "price": 64.0,
-          "url": "https://www.vildmedvin.dk/amager-bryghus-world-s-best",
-          "discount_pct": 0,
-          "old_price": null
-        }
-      ],
-      "cheapest_price": 64.0,
-      "min_price": 64.0,
-      "shop": "Vild med Vin",
-      "discount_pct": 0,
-      "max_discount_pct": 0
-    },
-    {
       "id": 16465,
       "name": "Amager Bryghus, Macabre - Øl",
       "image": "https://www.vildmedvin.dk/img/1000/1000/resize/a/m/amager_bryghus_macabre.jpg",
       "type": "Stout",
       "abv": 14.2,
       "volume_cl": 44.0,
-      "brewery": null,
+      "brewery": "Amager Bryghus",
       "category": null,
       "prices": [
         {
@@ -33785,30 +33419,6 @@
           "shop_name": "Beershoppen",
           "price": 65.0,
           "url": "https://beershoppen.dk/products/solgt-til-stanglakrids-flying-couch-44-cl-10-0",
-          "discount_pct": 0,
-          "old_price": null
-        }
-      ],
-      "cheapest_price": 65.0,
-      "min_price": 65.0,
-      "shop": "Beershoppen",
-      "discount_pct": 0,
-      "max_discount_pct": 0
-    },
-    {
-      "id": 15934,
-      "name": "Mumbo Jumbo #7 - pineapple, coconut Lime Gose- Åben - 44 cl - 6,0%",
-      "image": "https://cdn.shopify.com/s/files/1/0600/9438/2263/files/mumbo_7.jpg?v=1779981952",
-      "type": "Gose",
-      "abv": 6.0,
-      "volume_cl": 44.0,
-      "brewery": "Beershoppen",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Beershoppen",
-          "price": 65.0,
-          "url": "https://beershoppen.dk/products/mumbo-jumbo-7-pineapple-coconut-lime-gose-aben-44-cl-6-0",
           "discount_pct": 0,
           "old_price": null
         }
@@ -35432,6 +35042,37 @@
       "max_discount_pct": 0
     },
     {
+      "id": 16607,
+      "name": "Den Sidste Olie 8% 44cl",
+      "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/den-sidste-olie-8-44cl.png?v=1782470392",
+      "type": "Imperial Stout",
+      "abv": 8.0,
+      "volume_cl": 44.0,
+      "brewery": "Bryg365",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Vild med Vin",
+          "price": 69.0,
+          "url": "https://www.vildmedvin.dk/bryg-365-den-sidste-olie",
+          "discount_pct": 0,
+          "old_price": null
+        },
+        {
+          "shop_name": "Brygshoppen",
+          "price": 70.0,
+          "url": "https://brygshoppen.dk/products/den-sidste-olie-8-44cl",
+          "discount_pct": 0,
+          "old_price": 0.0
+        }
+      ],
+      "cheapest_price": 69.0,
+      "min_price": 69.0,
+      "shop": "Vild med Vin",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
       "id": 13108,
       "name": "Val-Dieu Grand Cru 10,5% 75cl",
       "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/val-dieu-grand-cru-10-5-75cl.png?v=1719330332",
@@ -35781,54 +35422,6 @@
           "shop_name": "Vild med Vin",
           "price": 69.0,
           "url": "https://www.vildmedvin.dk/vault-city-strawberry-skies",
-          "discount_pct": 0,
-          "old_price": null
-        }
-      ],
-      "cheapest_price": 69.0,
-      "min_price": 69.0,
-      "shop": "Vild med Vin",
-      "discount_pct": 0,
-      "max_discount_pct": 0
-    },
-    {
-      "id": 16543,
-      "name": "Bryg 365, Den Sidste Olie - Øl",
-      "image": "https://www.vildmedvin.dk/img/1000/1000/resize/b/r/bryg365_densidsteolie.jpg",
-      "type": "Stout",
-      "abv": 8.0,
-      "volume_cl": 44.0,
-      "brewery": null,
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Vild med Vin",
-          "price": 69.0,
-          "url": "https://www.vildmedvin.dk/bryg-365-den-sidste-olie",
-          "discount_pct": 0,
-          "old_price": null
-        }
-      ],
-      "cheapest_price": 69.0,
-      "min_price": 69.0,
-      "shop": "Vild med Vin",
-      "discount_pct": 0,
-      "max_discount_pct": 0
-    },
-    {
-      "id": 16546,
-      "name": "Bryg 365, FarligWin - Øl",
-      "image": "https://www.vildmedvin.dk/img/1000/1000/resize/b/r/bryg365_farligwine.jpg",
-      "type": "Barley Wine",
-      "abv": 16.0,
-      "volume_cl": 33.0,
-      "brewery": null,
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Vild med Vin",
-          "price": 69.0,
-          "url": "https://www.vildmedvin.dk/bryg-365-farligwin",
           "discount_pct": 0,
           "old_price": null
         }
@@ -36344,30 +35937,6 @@
       "cheapest_price": 70.0,
       "min_price": 70.0,
       "shop": "Beershoppen",
-      "discount_pct": 0,
-      "max_discount_pct": 0
-    },
-    {
-      "id": 16607,
-      "name": "Den Sidste Olie 8% 44cl",
-      "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/den-sidste-olie-8-44cl.png?v=1782470392",
-      "type": "Imperial Stout",
-      "abv": 8.0,
-      "volume_cl": 44.0,
-      "brewery": "Bryg365",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Brygshoppen",
-          "price": 70.0,
-          "url": "https://brygshoppen.dk/products/den-sidste-olie-8-44cl",
-          "discount_pct": 0,
-          "old_price": 0.0
-        }
-      ],
-      "cheapest_price": 70.0,
-      "min_price": 70.0,
-      "shop": "Brygshoppen",
       "discount_pct": 0,
       "max_discount_pct": 0
     },
@@ -37576,7 +37145,7 @@
       "max_discount_pct": 0
     },
     {
-      "id": 16767,
+      "id": 16786,
       "name": "Raw Beer 8% 44cl",
       "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/raw-beer-8.png?v=1782404785",
       "type": "India Pale Ale (IPA)",
@@ -37757,30 +37326,6 @@
           "shop_name": "Brygshoppen",
           "price": 75.0,
           "url": "https://brygshoppen.dk/products/mont-des-cats-7-6-75cl",
-          "discount_pct": 0,
-          "old_price": 0.0
-        }
-      ],
-      "cheapest_price": 75.0,
-      "min_price": 75.0,
-      "shop": "Brygshoppen",
-      "discount_pct": 0,
-      "max_discount_pct": 0
-    },
-    {
-      "id": 13142,
-      "name": "World's Best 11% 44cl",
-      "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/worlds-best-11-44cl_dffee0e2-b53d-4753-8743-e143a9ac6e09.png?v=1773473310",
-      "type": "Pastry Stout",
-      "abv": 11.0,
-      "volume_cl": 44.0,
-      "brewery": "Amager Bryghus",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Brygshoppen",
-          "price": 75.0,
-          "url": "https://brygshoppen.dk/products/worlds-best-11-44cl",
           "discount_pct": 0,
           "old_price": 0.0
         }
@@ -40824,7 +40369,7 @@
       "max_discount_pct": 0
     },
     {
-      "id": 16772,
+      "id": 16789,
       "name": "No Way Out B.A. 10,5% 33cl",
       "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/no-way-out-b-a-10-5-33cl.png?v=1750592682",
       "type": "Barley Wine",
@@ -43335,7 +42880,7 @@
       "max_discount_pct": 22.7
     },
     {
-      "id": 16768,
+      "id": 16787,
       "name": "10 - Imperial Stout 10% 44cl",
       "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/10-imperial-stout-10-44cl_9645d1f7-914c-43d6-b687-b07453f1aaf2.png?v=1761637026",
       "type": "Imperial Stout",
