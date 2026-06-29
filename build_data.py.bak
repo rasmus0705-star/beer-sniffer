@@ -38,6 +38,7 @@ from app.services.matching import (
     volumes_compatible,
     abv_compatible,
     breweries_compatible,
+    variants_compatible,
     similarity_score,
     has_meaningful_overlap,
     required_threshold,
@@ -107,6 +108,8 @@ def build_beer_list_from_db(db):
             if not abv_compatible(abv, g.get("abv")):
                 continue
             if not breweries_compatible(brewery, g.get("brewery"), beer.name, g.get("name")):
+                continue
+            if not variants_compatible(beer.name, g.get("name")):
                 continue
             if not has_meaningful_overlap(beer.name, g.get("name")):
                 continue

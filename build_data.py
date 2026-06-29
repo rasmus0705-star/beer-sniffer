@@ -31,6 +31,7 @@ from app.scrapers.beerme import scrape_beerme
 from app.scrapers.vildmedvin import scrape_vildmedvin
 
 from app.services.ingest import ingest_batch
+from app.utils.overrides import load_fejlliste, apply_overrides, write_fejlliste
 from app.services.matching import (
     normalize_for_matching,
     style_fingerprint,
@@ -234,6 +235,13 @@ def main():
         print("\n❌ Ingen items hentet — afbryder")
         return
 
+    # 1b. Facitliste: anvend manuelle overrides FOER matchning (facit vinder)
+    print(f"\n\U0001F4D8 Anvender facitliste (fejlliste.xlsx)...")
+    _facit = load_fejlliste("fejlliste.xlsx")
+    for _it in items:
+        apply_overrides(_it, _facit)
+    print(f"   {len(_facit)} kendte rettelser i facit")
+
     # 2. Gem i Supabase (bevarer historik)
     print(f"\n💾 Gemmer i Supabase...")
     db = SessionLocal()
@@ -275,6 +283,10 @@ def main():
     # 6. Skriv til data.json
     with open("data.json", "w", encoding="utf-8") as f:
         json.dump(output, f, ensure_ascii=False, indent=2)
+
+    # 7. Opdater facitliste (bevarer dine rettelser, flagger nye huller)
+    _stats = write_fejlliste(items, _facit, "fejlliste.xlsx")
+    print(f"\U0001F4DD fejlliste.xlsx opdateret: {_stats['rows']} raekker, {_stats['mangler']} mangler")
 
     file_size = round(time.time() - start_time, 1)
     print(f"\n✅ FÆRDIG på {file_size}s")

@@ -3,6 +3,42 @@ import xml.etree.ElementTree as ET
 import re
 from app.utils.detect_type import detect_type
 
+
+# --- Brewery-fallback: udled bryggeri fra titel naar g:brand er tom ---
+_BREWERY_SKIP_WORDS = {
+    "oel", "øl", "oelpakke", "ølpakke", "pakke", "smagekasse",
+    "smagessæt", "blandet", "mix", "gavekurv", "gave", "kasse",
+}
+
+def _brewery_from_title(title):
+    """Returner sandsynligt bryggeri fra titel, ellers None.
+    Tager teksten foer foerste ',' eller ' - '. Konservativt."""
+    if not title:
+        return None
+    t = title.strip()
+    low = t.lower()
+    # spring pakker/blandinger over - de har ikke ET bryggeri
+    if any(w in low for w in ["pakke", "smagekasse", "smagess", "blandet", "bland selv", "gavekurv"]):
+        return None
+    # find foerste separator: komma vinder over ' - ' hvis den kommer foerst
+    cut = len(t)
+    ci = t.find(",")
+    if ci != -1:
+        cut = min(cut, ci)
+    di = t.find(" - ")
+    if di != -1:
+        cut = min(cut, di)
+    if cut == len(t):
+        return None  # ingen separator -> for usikkert
+    cand = t[:cut].strip()
+    # afvis for korte / generiske kandidater
+    if len(cand) < 3:
+        return None
+    if cand.lower() in _BREWERY_SKIP_WORDS:
+        return None
+    # afvis hvis kandidaten ligner en stilart frem for et bryggeri (valgfrit, let)
+    return cand
+
 FEED_URL = "https://files.channable.com/KOFt2pJuP6mHNcln83Tm7Q==.xml"
 
 HEADERS = {
@@ -151,6 +187,8 @@ def scrape_vildmedvin():
 
         # Bryggeri — direkte fra g:brand
         brewery = item.findtext("g:brand", default="", namespaces=NS).strip() or None
+        if brewery is None:
+            brewery = _brewery_from_title(title)
 
         # Description til ABV og fallback volume
         description = item.findtext("description", default="")

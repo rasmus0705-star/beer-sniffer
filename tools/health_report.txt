@@ -1,0 +1,35 @@
+==============================================================================
+DATAKVALITETS-HELBREDSTJEK — alle 7 scrapere (fuld koersel)
+==============================================================================
+BUTIK              n    name   price  volume     abv  brewer    type   image     url
+------------------------------------------------------------------------------
+Brygshoppen      534    100%    100%     98%     99%    100%    100%    100%    100%  
+A Good Case      277    100%    100%     90%     90%     87%     89%    100%    100%  
+Beershoppen      231    100%    100%     95%     96%    100%    100%     93%    100%  
+Best of Beers    427    100%    100%     99%     99%    100%     82%    100%    100%  
+Oeltanken        284    100%    100%     86%     89%    100%     95%    100%    100%  
+Beer Me          210    100%    100%     99%     99%    100%     94%    100%    100%  
+Vild med Vin     715    100%    100%     97%     96%     97%     81%    100%    100%  
+------------------------------------------------------------------------------
+Foklaring: groen=ok  gul=under 90%  roed=under 70% (vigtig) / kritisk  graa=info
+
+KONKRETE HULLER (enkeltoel, ikke smagekasser) — kig om det er aegte fejl:
+
+  A Good Case:
+    mangler 'abv' (2 stk), fx:
+       - Skands - My Hazy IPA - New England IPA
+       - St. Francis Abbey - Kilkenny - Irish Red Ale (6 stk.)
+    mangler 'brewery' (8 stk), fx:
+       - Tyskie Gronie – 5,2% Lager (24 stk.) (24 stk.)
+       - Lech Premium – 5% Lager (24 stk.) (24 stk.)
+       - Lech Premium – 5% Lager (24 stk.)
+
+  Oeltanken:
+    mangler 'volume_cl' (19 stk), fx:
+       - Rothaus - Rothaus Pils / Tannen Zäpfle 5 L
+       - Ebeltoft Gaardbryggeri - Petroleum I.P.A. Cryo Fresh #2 Simc
+       - Vault City - Grape Soda
+    mangler 'abv' (14 stk), fx:
+       - Brand Garage - MAMA Passion ØKO
+       - Brand Garage - MAMA Lemon ØKO
+       - Salikatt - Clouds of Citrus
