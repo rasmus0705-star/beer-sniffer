@@ -6,32 +6,13 @@ import time
 from urllib.parse import unquote, urlparse, parse_qs
 from app.utils.detect_type import detect_type
 
-# --- PERF: persistent volumen/ABV-cache (vol/abv aendrer sig aldrig pr. produkt) ---
-import json as _json, os as _os
-_CACHE_PATH = _os.path.join(_os.path.dirname(__file__), "_pagecache_beerme.json")
-_page_cache = {}
-_cache_hits = 0
-_cache_fetches = 0
-try:
-    with open(_CACHE_PATH, "r", encoding="utf-8") as _cf:
-        _page_cache = _json.load(_cf)
-except Exception:
-    _page_cache = {}
-
-def _cache_save():
-    try:
-        with open(_CACHE_PATH, "w", encoding="utf-8") as _cf:
-            _json.dump(_page_cache, _cf)
-    except Exception as _e:
-        print(f"  cache-gem fejlede: {_e}")
-
 FEED_URL = "https://www.partner-ads.com/dk/feed_udlaes.php?partnerid=56605&bannerid=74625&feedid=1666"
 
 HEADERS = {
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
 }
 
-SIDE_PAUSE = 0.2
+SIDE_PAUSE = 0.5
 SIDE_TIMEOUT = 12
 
 # Produktsider hentes som HTML (Beer Me's feed-HEADERS er ikke til HTML-sider).
@@ -274,37 +255,13 @@ def scrape_beerme():
 
         # SIDEHENTNING — kun for enkeltøl der mangler volumen/abv.
         # Henter faktiske værdier fra produktsiden (format: 'ABV: 11,3% · Flaske: 50 cl').
-        # SIDEHENTNING med cache: spring over hvis vi allerede har begge vaerdier
-        _key = url
-        _cached = _page_cache.get(_key)
-        _need_fetch = (not is_smagekasse and not _is_glas(name)) and (volume is None or abv is None)
-        if _need_fetch and _cached:
-            if volume is None and _cached.get("vol") is not None:
-                volume = _cached["vol"]
-            if abv is None and _cached.get("abv") is not None:
-                abv = _cached["abv"]
-            _need_fetch = (volume is None or abv is None)
-        if _need_fetch and _cached:
-            global _cache_hits
-            _cache_hits += 1
-        if _need_fetch:
+        if not is_smagekasse and not _is_glas(name) and (volume is None or abv is None):
             p_vol, p_abv = _fetch_from_page(url)
-            global _cache_fetches
-            _cache_fetches += 1
             if volume is None and p_vol is not None:
                 volume = p_vol
             if abv is None and p_abv is not None:
                 abv = p_abv
-            _merged = dict(_cached or {})
-            if volume is not None:
-                _merged["vol"] = volume
-            if abv is not None:
-                _merged["abv"] = abv
-            if _merged:
-                _page_cache[_key] = _merged
             time.sleep(SIDE_PAUSE)
-        elif _cached:
-            _cache_hits += 1
 
         item = {
             "name": name,
@@ -324,8 +281,6 @@ def scrape_beerme():
         items.append(item)
 
     print(f"📦 Beer Me: {len(items)} produkter hentet")
-    _cache_save()
-    print(f"  [beerme] sidehentning: {_cache_fetches} hentet, {_cache_hits} fra cache")
     return items
 
 

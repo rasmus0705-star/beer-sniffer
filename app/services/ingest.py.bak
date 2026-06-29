@@ -110,19 +110,6 @@ def ingest_batch(db: Session, items: list[dict]):
     new_prices = []
     new_histories = []
 
-    # PERF: hent seneste historik-pris pr. (beer_id, shop_name) i EN forespørgsel
-    # i stedet for en pr. øl inde i løkken (fjerner ~2600 netvaerks-rundture)
-    _hist_rows = (
-        db.query(PriceHistory.beer_id, PriceHistory.shop_name, PriceHistory.price_dkk)
-        .order_by(PriceHistory.beer_id, PriceHistory.shop_name, PriceHistory.created_at.desc())
-        .all()
-    )
-    latest_hist = {}
-    for _bid, _shop, _price in _hist_rows:
-        key = (_bid, _shop)
-        if key not in latest_hist:          # foerste = nyeste pga. desc-sortering
-            latest_hist[key] = _price
-
     for i, item in enumerate(items):
         item_name = item["name"]
         item_norm = normalize_for_matching(item_name)
@@ -181,15 +168,22 @@ def ingest_batch(db: Session, items: list[dict]):
             available=True,
         ))
 
-        last_price = latest_hist.get((beer.id, item["shop_name"]))
+        last = (
+            db.query(PriceHistory)
+            .filter(
+                PriceHistory.beer_id == beer.id,
+                PriceHistory.shop_name == item["shop_name"]
+            )
+            .order_by(PriceHistory.created_at.desc())
+            .first()
+        )
 
-        if last_price is None or last_price != item["price"]:
+        if not last or last.price_dkk != item["price"]:
             new_histories.append(PriceHistory(
                 beer_id=beer.id,
                 price_dkk=item["price"],
                 shop_name=item["shop_name"],
             ))
-            latest_hist[(beer.id, item["shop_name"])] = item["price"]
 
         if (i + 1) % 100 == 0:
             print(f"✅ Behandlet {i + 1} / {len(items)} øl")

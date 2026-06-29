@@ -306,8 +306,6 @@ def scrape_oeltanken():
         print(f"📦 Øltanken side {page}: {len(products)} produkter hentet")
         page += 1
 
-    _cache_save()
-    print(f"  [oeltanken] sidehentning: {_cache_fetches} hentet, {_cache_hits} fra cache")
     return items
 
 

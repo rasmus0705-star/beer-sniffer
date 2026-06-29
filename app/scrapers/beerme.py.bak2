@@ -324,8 +324,6 @@ def scrape_beerme():
         items.append(item)
 
     print(f"📦 Beer Me: {len(items)} produkter hentet")
-    _cache_save()
-    print(f"  [beerme] sidehentning: {_cache_fetches} hentet, {_cache_hits} fra cache")
     return items
 
 

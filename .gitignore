@@ -17,3 +17,5 @@ verify_*.py
 tjek_*.py
 PATCH_INSTRUKTIONER.txt
 patch_mobile_*.py
+# Lokale scraper-caches (vol/abv aendrer sig ikke)
+_pagecache_*.json
