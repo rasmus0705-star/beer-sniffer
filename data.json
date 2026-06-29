@@ -1,8 +1,8 @@
 {
-  "updated_at": "2026-06-28T08:50:15.708234",
+  "updated_at": "2026-06-28T18:32:45.193968",
   "stats": {
-    "total": 2135,
-    "deals": 564,
+    "total": 2162,
+    "deals": 576,
     "shops": 7,
     "shop_names": [
       "A Good Case",
@@ -156,37 +156,6 @@
       "max_discount_pct": 52.4
     },
     {
-      "id": 16220,
-      "name": "150 års jubilæum - Hancock  - 33 cl. - 5,0%",
-      "image": "https://cdn.shopify.com/s/files/1/0600/9438/2263/files/b6e8c1af-3e6a-47e9-9e43-6ed552dbf237.jpg?v=1781348561",
-      "type": "Beer",
-      "abv": 5.0,
-      "volume_cl": 33.0,
-      "brewery": "Beershoppen",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Vild med Vin",
-          "price": 11.0,
-          "url": "https://www.vildmedvin.dk/hancock-150-ars-jubilaeums-ol",
-          "discount_pct": 0,
-          "old_price": null
-        },
-        {
-          "shop_name": "Beershoppen",
-          "price": 12.0,
-          "url": "https://beershoppen.dk/products/150-ars-jubilaeum-hancock-33-cl-5-0",
-          "discount_pct": 0,
-          "old_price": null
-        }
-      ],
-      "cheapest_price": 11.0,
-      "min_price": 11.0,
-      "shop": "Vild med Vin",
-      "discount_pct": 0,
-      "max_discount_pct": 0
-    },
-    {
       "id": 16690,
       "name": "Rothaus Weizenzäpfle Alkoholfri - BEDST FØR: 22.07.2026 - Øl",
       "image": "https://www.vildmedvin.dk/img/1000/1000/resize/r/o/rothaus_weizenz_pfle_alkoholfri.jpg",
@@ -209,6 +178,54 @@
       "shop": "Vild med Vin",
       "discount_pct": 52.2,
       "max_discount_pct": 52.2
+    },
+    {
+      "id": 15704,
+      "name": "Hancock 150-års jubilæums Øl - Øl",
+      "image": "https://www.vildmedvin.dk/img/1000/1000/resize/h/a/hancock_150.jpg",
+      "type": null,
+      "abv": 4.9,
+      "volume_cl": 33.0,
+      "brewery": "Hancock",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Vild med Vin",
+          "price": 11.0,
+          "url": "https://www.vildmedvin.dk/hancock-150-ars-jubilaeums-ol",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 11.0,
+      "min_price": 11.0,
+      "shop": "Vild med Vin",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
+      "id": 16220,
+      "name": "150 års jubilæum - Hancock  - 33 cl. - 5,0%",
+      "image": "https://cdn.shopify.com/s/files/1/0600/9438/2263/files/b6e8c1af-3e6a-47e9-9e43-6ed552dbf237.jpg?v=1781348561",
+      "type": "Beer",
+      "abv": 5.0,
+      "volume_cl": 33.0,
+      "brewery": "Beershoppen",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Beershoppen",
+          "price": 12.0,
+          "url": "https://beershoppen.dk/products/150-ars-jubilaeum-hancock-33-cl-5-0",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 12.0,
+      "min_price": 12.0,
+      "shop": "Beershoppen",
+      "discount_pct": 0,
+      "max_discount_pct": 0
     },
     {
       "id": 13989,
@@ -1782,7 +1799,7 @@
       "max_discount_pct": 0
     },
     {
-      "id": 16689,
+      "id": 16708,
       "name": "Leo Beer - Øl",
       "image": "https://www.vildmedvin.dk/img/1000/1000/resize/l/e/leo-beer-33-cl_large.jpg",
       "type": "Lager Øl",
@@ -2722,7 +2739,7 @@
       "max_discount_pct": 24.2
     },
     {
-      "id": 16618,
+      "id": 16705,
       "name": "Belgian Brown 6,8% 33cl",
       "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/belgien-brown-33cl.png?v=1753443086",
       "type": "Dubbel",
@@ -3168,11 +3185,11 @@
       "max_discount_pct": 0
     },
     {
-      "id": 15226,
-      "name": "Fanø, Rav - Øl",
-      "image": "https://www.vildmedvin.dk/img/1000/1000/resize/5/4/543_3.jpg",
-      "type": "Pilsner",
-      "abv": 4.6,
+      "id": 16707,
+      "name": "Fanø, Realen - BEDST FØR: 29.06.2026 - Øl",
+      "image": "https://www.vildmedvin.dk/img/1000/1000/resize/f/a/fan_realen.jpg",
+      "type": "Lager Øl",
+      "abv": 4.8,
       "volume_cl": 50.0,
       "brewery": "Fanø",
       "category": null,
@@ -7231,7 +7248,7 @@
       "max_discount_pct": 0
     },
     {
-      "id": 16617,
+      "id": 16704,
       "name": "It's A Blond 5,9% 33cl",
       "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/its-a-blond-33cl_27db0da2-5945-4111-8396-339312eae8d3.png?v=1773482918",
       "type": "Blond",
@@ -7869,7 +7886,7 @@
       "max_discount_pct": 0
     },
     {
-      "id": 16614,
+      "id": 16700,
       "name": "Maître Tripel 8,5% 33cl",
       "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/maitre-tripel-8-5-33cl.png?v=1733847666",
       "type": "Tripel",
@@ -8209,8 +8226,8 @@
       "name": "Magic - Helles Lager fra Attik Brewing",
       "image": "https://cdn-main.ideal.shop/images/by_hash/4efef25faf1d02d16432a203394a585c7ef70e50e8bbca3077cf0f97dd26de92/500-0/magic.jpg",
       "type": "Lager",
-      "abv": null,
-      "volume_cl": null,
+      "abv": 4.8,
+      "volume_cl": 44.0,
       "brewery": "Attik Brewing",
       "category": null,
       "prices": [
@@ -10051,7 +10068,7 @@
       "max_discount_pct": 10.3
     },
     {
-      "id": 16615,
+      "id": 16701,
       "name": "Imperial Stout 9,3% 33cl",
       "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/imperial-stout-9-3-33cl_e5717b14-1296-4555-8e23-bc8da32992e9.png?v=1753446200",
       "type": "Imperial Stout",
@@ -11272,37 +11289,6 @@
       "max_discount_pct": 0
     },
     {
-      "id": 12889,
-      "name": "Gouden Carolus Christmas 10,5% 33cl",
-      "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/products/gouden-carolus-christmas-33cl.png?v=1637684670",
-      "type": "Winter Ale",
-      "abv": 10.5,
-      "volume_cl": 33.0,
-      "brewery": "Brouwerij Het Anker",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Brygshoppen",
-          "price": 36.0,
-          "url": "https://brygshoppen.dk/products/gouden-carolus-christmas-33cl",
-          "discount_pct": 0,
-          "old_price": 0.0
-        },
-        {
-          "shop_name": "Vild med Vin",
-          "price": 37.0,
-          "url": "https://www.vildmedvin.dk/gouden-carolus-christmas-33-cl",
-          "discount_pct": 0,
-          "old_price": null
-        }
-      ],
-      "cheapest_price": 36.0,
-      "min_price": 36.0,
-      "shop": "Brygshoppen",
-      "discount_pct": 0,
-      "max_discount_pct": 0
-    },
-    {
       "id": 12985,
       "name": "Cuvée de Noël 9% 33cl",
       "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/st-feulilien-cuvee-de-noel-33cl-2025.png?v=1760354807",
@@ -11409,6 +11395,30 @@
       "cheapest_price": 36.0,
       "min_price": 36.0,
       "shop": "Vild med Vin",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
+      "id": 16693,
+      "name": "Meester Blond IPA 7,5% 33cl",
+      "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/meester-blond-ipa-7-5-33cl.png?v=1782645121",
+      "type": "India Pale Ale (IPA)",
+      "abv": 7.5,
+      "volume_cl": 33.0,
+      "brewery": "Brewery De Meester",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Brygshoppen",
+          "price": 36.0,
+          "url": "https://brygshoppen.dk/products/meester-blond-ipa-7-5-33cl",
+          "discount_pct": 0,
+          "old_price": 0.0
+        }
+      ],
+      "cheapest_price": 36.0,
+      "min_price": 36.0,
+      "shop": "Brygshoppen",
       "discount_pct": 0,
       "max_discount_pct": 0
     },
@@ -12490,6 +12500,30 @@
       "max_discount_pct": 0
     },
     {
+      "id": 12889,
+      "name": "Gouden Carolus Christmas 10,5% 33cl",
+      "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/products/gouden-carolus-christmas-33cl.png?v=1637684670",
+      "type": "Winter Ale",
+      "abv": 10.5,
+      "volume_cl": 33.0,
+      "brewery": "Brouwerij Het Anker",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Vild med Vin",
+          "price": 37.0,
+          "url": "https://www.vildmedvin.dk/gouden-carolus-christmas-33-cl",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 37.0,
+      "min_price": 37.0,
+      "shop": "Vild med Vin",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
       "id": 15321,
       "name": "Fullers, London Porter - Øl",
       "image": "https://www.vildmedvin.dk/img/1000/1000/resize/1/0/103_0.jpeg.mst.jpg",
@@ -13016,6 +13050,30 @@
       "shop": "Brygshoppen",
       "discount_pct": 5.0,
       "max_discount_pct": 5.0
+    },
+    {
+      "id": 16702,
+      "name": "Gordon Finest Gold 10% 33cl",
+      "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/gordon-finest-gold-10-33cl.png?v=1711981146",
+      "type": "Lager",
+      "abv": 10.0,
+      "volume_cl": 33.0,
+      "brewery": "Brewery John Martin",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Brygshoppen",
+          "price": 38.0,
+          "url": "https://brygshoppen.dk/products/gordon-finest-gold-10-33cl",
+          "discount_pct": 0,
+          "old_price": 0.0
+        }
+      ],
+      "cheapest_price": 38.0,
+      "min_price": 38.0,
+      "shop": "Brygshoppen",
+      "discount_pct": 0,
+      "max_discount_pct": 0
     },
     {
       "id": 13150,
@@ -13704,9 +13762,9 @@
       "max_discount_pct": 0
     },
     {
-      "id": 14445,
-      "name": "Hopalaa Brewery - Black Whiskey BA",
-      "image": "https://cdn.shopify.com/s/files/1/0776/5209/9400/files/69B1D32E-A9F1-48E7-9815-77A8091919A8.jpg?v=1773339662",
+      "id": 14448,
+      "name": "Hopalaa Brewery - Black Walnut",
+      "image": "https://cdn.shopify.com/s/files/1/0776/5209/9400/files/7A08CDEB-625C-44CC-BB31-0B8BE61450AB.jpg?v=1773338693",
       "type": "Imperial Stout",
       "abv": 10.0,
       "volume_cl": 33.0,
@@ -18972,7 +19030,7 @@
       "max_discount_pct": 0
     },
     {
-      "id": 16616,
+      "id": 16703,
       "name": "Ry Pilsner 5,6% 50cl",
       "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/ry-pilsner.png?v=1747399627",
       "type": "Pilsner",
@@ -19376,30 +19434,6 @@
       "cheapest_price": 45.0,
       "min_price": 45.0,
       "shop": "Beershoppen",
-      "discount_pct": 0,
-      "max_discount_pct": 0
-    },
-    {
-      "id": 16548,
-      "name": "Bryg 365, Summerer Vibes - Øl",
-      "image": "https://www.vildmedvin.dk/img/1000/1000/resize/b/r/bryg365_summer_vibes.jpg",
-      "type": "IPA",
-      "abv": 7.5,
-      "volume_cl": 44.0,
-      "brewery": null,
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Vild med Vin",
-          "price": 45.0,
-          "url": "https://www.vildmedvin.dk/bryg-365-summerer-vibes",
-          "discount_pct": 0,
-          "old_price": null
-        }
-      ],
-      "cheapest_price": 45.0,
-      "min_price": 45.0,
-      "shop": "Vild med Vin",
       "discount_pct": 0,
       "max_discount_pct": 0
     },
@@ -19884,7 +19918,7 @@
       "max_discount_pct": 0
     },
     {
-      "id": 16681,
+      "id": 16706,
       "name": "To Øl, #DIPA - Øl",
       "image": "https://www.vildmedvin.dk/img/1000/1000/resize/7/7/7777_1..jpg",
       "type": "Double IPA",
@@ -20041,6 +20075,30 @@
           "shop_name": "Vild med Vin",
           "price": 45.0,
           "url": "https://www.vildmedvin.dk/krenkerup-session-ipa-50-cl",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 45.0,
+      "min_price": 45.0,
+      "shop": "Vild med Vin",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
+      "id": 16548,
+      "name": "Bryg 365, Summerer Vibes - Øl",
+      "image": "https://www.vildmedvin.dk/img/1000/1000/resize/b/r/bryg365_summer_vibes.jpg",
+      "type": "IPA",
+      "abv": 7.5,
+      "volume_cl": 44.0,
+      "brewery": null,
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Vild med Vin",
+          "price": 45.0,
+          "url": "https://www.vildmedvin.dk/bryg-365-summerer-vibes",
           "discount_pct": 0,
           "old_price": null
         }
@@ -21427,6 +21485,30 @@
       "max_discount_pct": 20.0
     },
     {
+      "id": 16695,
+      "name": "Brownie Basher 8% 33cl",
+      "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/brownie-basher-8-33cl.png?v=1782642824",
+      "type": "Porter - Stout",
+      "abv": 8.0,
+      "volume_cl": 33.0,
+      "brewery": "Bryg365",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Brygshoppen",
+          "price": 48.0,
+          "url": "https://brygshoppen.dk/products/brownie-basher-8-33cl",
+          "discount_pct": 0,
+          "old_price": 0.0
+        }
+      ],
+      "cheapest_price": 48.0,
+      "min_price": 48.0,
+      "shop": "Brygshoppen",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
       "id": 16609,
       "name": "Baltic Battle 9% 44cl",
       "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/baltic-battle-9-44cl.png?v=1782467159",
@@ -21986,6 +22068,37 @@
       "max_discount_pct": 0
     },
     {
+      "id": 16416,
+      "name": "Bryg 365, Sorte Satan - Øl",
+      "image": "https://www.vildmedvin.dk/img/1000/1000/resize/b/r/bryg365_-_sorte_satan.jpg",
+      "type": "Porter",
+      "abv": 7.5,
+      "volume_cl": 33.0,
+      "brewery": "Bryg 365",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Vild med Vin",
+          "price": 49.0,
+          "url": "https://www.vildmedvin.dk/bryg-365-sorte-satan",
+          "discount_pct": 0,
+          "old_price": null
+        },
+        {
+          "shop_name": "Brygshoppen",
+          "price": 50.0,
+          "url": "https://brygshoppen.dk/products/sorte-satan-7-5-33cl",
+          "discount_pct": 0,
+          "old_price": 0.0
+        }
+      ],
+      "cheapest_price": 49.0,
+      "min_price": 49.0,
+      "shop": "Vild med Vin",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
       "id": 15454,
       "name": "Vemb Bryghus, Husets Classic - Øl",
       "image": "https://www.vildmedvin.dk/img/1000/1000/resize/v/e/vemb_bryghus_husets_classic.jpg",
@@ -22006,6 +22119,30 @@
       "cheapest_price": 49.0,
       "min_price": 49.0,
       "shop": "Vild med Vin",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
+      "id": 16691,
+      "name": "Crema Catalana 10,37% 33cl",
+      "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/crema-catalana-10-37-33cl.png?v=1782647830",
+      "type": "Barley Wine",
+      "abv": 10.37,
+      "volume_cl": 33.0,
+      "brewery": "Menno Olivier Brewing",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Brygshoppen",
+          "price": 49.0,
+          "url": "https://brygshoppen.dk/products/crema-catalana-10-37-33cl",
+          "discount_pct": 0,
+          "old_price": 0.0
+        }
+      ],
+      "cheapest_price": 49.0,
+      "min_price": 49.0,
+      "shop": "Brygshoppen",
       "discount_pct": 0,
       "max_discount_pct": 0
     },
@@ -22078,30 +22215,6 @@
       "cheapest_price": 49.0,
       "min_price": 49.0,
       "shop": "Brygshoppen",
-      "discount_pct": 0,
-      "max_discount_pct": 0
-    },
-    {
-      "id": 16545,
-      "name": "Bryg 365, Baltic Battle - Øl",
-      "image": "https://www.vildmedvin.dk/img/1000/1000/resize/b/a/baltic_battle_bryg365.jpg",
-      "type": "Porter",
-      "abv": 10.0,
-      "volume_cl": 44.0,
-      "brewery": null,
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Vild med Vin",
-          "price": 49.0,
-          "url": "https://www.vildmedvin.dk/bryg-365-baltic-battle",
-          "discount_pct": 0,
-          "old_price": null
-        }
-      ],
-      "cheapest_price": 49.0,
-      "min_price": 49.0,
-      "shop": "Vild med Vin",
       "discount_pct": 0,
       "max_discount_pct": 0
     },
@@ -22185,30 +22298,6 @@
       "max_discount_pct": 0
     },
     {
-      "id": 16547,
-      "name": "Bryg 365, Mad Bock - Øl",
-      "image": "https://www.vildmedvin.dk/img/1000/1000/resize/b/r/bryg365_mad_bock.jpg",
-      "type": "Bock",
-      "abv": 7.0,
-      "volume_cl": 44.0,
-      "brewery": null,
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Vild med Vin",
-          "price": 49.0,
-          "url": "https://www.vildmedvin.dk/bryg-365-mad-bock",
-          "discount_pct": 0,
-          "old_price": null
-        }
-      ],
-      "cheapest_price": 49.0,
-      "min_price": 49.0,
-      "shop": "Vild med Vin",
-      "discount_pct": 0,
-      "max_discount_pct": 0
-    },
-    {
       "id": 14511,
       "name": "Blackout Brewing - Coffee Series - Indonesia",
       "image": "https://cdn.shopify.com/s/files/1/0776/5209/9400/files/60EF8E33-A2C0-4DC1-97CB-6E03146406D3.jpg?v=1765496729",
@@ -22238,6 +22327,30 @@
       "shop": "Øltanken",
       "discount_pct": 38.0,
       "max_discount_pct": 38.0
+    },
+    {
+      "id": 14445,
+      "name": "Hopalaa Brewery - Black Whiskey BA",
+      "image": "https://cdn.shopify.com/s/files/1/0776/5209/9400/files/69B1D32E-A9F1-48E7-9815-77A8091919A8.jpg?v=1773339662",
+      "type": "Imperial Stout",
+      "abv": 10.0,
+      "volume_cl": 33.0,
+      "brewery": "Hopalaa Brewery",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Øltanken",
+          "price": 49.0,
+          "url": "https://oltanken.dk/products/hopalaa-black-whiskey-ba",
+          "discount_pct": 31.9,
+          "old_price": 72.0
+        }
+      ],
+      "cheapest_price": 49.0,
+      "min_price": 49.0,
+      "shop": "Øltanken",
+      "discount_pct": 31.9,
+      "max_discount_pct": 31.9
     },
     {
       "id": 16109,
@@ -22469,30 +22582,6 @@
           "shop_name": "Vild med Vin",
           "price": 49.0,
           "url": "https://www.vildmedvin.dk/vemb-bryghus-husets-blanc",
-          "discount_pct": 0,
-          "old_price": null
-        }
-      ],
-      "cheapest_price": 49.0,
-      "min_price": 49.0,
-      "shop": "Vild med Vin",
-      "discount_pct": 0,
-      "max_discount_pct": 0
-    },
-    {
-      "id": 16416,
-      "name": "Bryg 365, Sorte Satan - Øl",
-      "image": "https://www.vildmedvin.dk/img/1000/1000/resize/b/r/bryg365_-_sorte_satan.jpg",
-      "type": "Porter",
-      "abv": 7.5,
-      "volume_cl": 33.0,
-      "brewery": "Bryg 365",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Vild med Vin",
-          "price": 49.0,
-          "url": "https://www.vildmedvin.dk/bryg-365-sorte-satan",
           "discount_pct": 0,
           "old_price": null
         }
@@ -22757,6 +22846,54 @@
           "shop_name": "Vild med Vin",
           "price": 49.0,
           "url": "https://www.vildmedvin.dk/amager-bryghus-chokokoko",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 49.0,
+      "min_price": 49.0,
+      "shop": "Vild med Vin",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
+      "id": 16545,
+      "name": "Bryg 365, Baltic Battle - Øl",
+      "image": "https://www.vildmedvin.dk/img/1000/1000/resize/b/a/baltic_battle_bryg365.jpg",
+      "type": "Porter",
+      "abv": 10.0,
+      "volume_cl": 44.0,
+      "brewery": null,
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Vild med Vin",
+          "price": 49.0,
+          "url": "https://www.vildmedvin.dk/bryg-365-baltic-battle",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 49.0,
+      "min_price": 49.0,
+      "shop": "Vild med Vin",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
+      "id": 16547,
+      "name": "Bryg 365, Mad Bock - Øl",
+      "image": "https://www.vildmedvin.dk/img/1000/1000/resize/b/r/bryg365_mad_bock.jpg",
+      "type": "Bock",
+      "abv": 7.0,
+      "volume_cl": 44.0,
+      "brewery": null,
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Vild med Vin",
+          "price": 49.0,
+          "url": "https://www.vildmedvin.dk/bryg-365-mad-bock",
           "discount_pct": 0,
           "old_price": null
         }
@@ -24695,6 +24832,30 @@
       "max_discount_pct": 0
     },
     {
+      "id": 16694,
+      "name": "XXX Rye Triple Reserva Bourbon BA",
+      "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/xxx-rye-reserva-triple-10-33cl.png?v=1782644360",
+      "type": "Tripel",
+      "abv": null,
+      "volume_cl": null,
+      "brewery": "De Struise Brouwers",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Brygshoppen",
+          "price": 51.0,
+          "url": "https://brygshoppen.dk/products/xxx-rye-reserva-triple-10-33cl",
+          "discount_pct": 0,
+          "old_price": 0.0
+        }
+      ],
+      "cheapest_price": 51.0,
+      "min_price": 51.0,
+      "shop": "Brygshoppen",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
       "id": 13628,
       "name": "Stepping Stone Brewing Co. – Tor Dhubh – Dry Stout – 0,44 l. – 4,2%",
       "image": "https://www.bestofbeers.dk/wp-content/uploads/2026/04/SteppingStoneTorDhubhDryStout.jpg",
@@ -25755,6 +25916,30 @@
       "max_discount_pct": 18.2
     },
     {
+      "id": 16554,
+      "name": "Smooth Criminals: Cosmic Blast 6,5% 33cl",
+      "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/smooth-criminals-cosmic-blast-6-5-33cl.png?v=1782396867",
+      "type": "Sour",
+      "abv": 6.5,
+      "volume_cl": 33.0,
+      "brewery": "Brouwerij Frontaal",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Brygshoppen",
+          "price": 54.0,
+          "url": "https://brygshoppen.dk/products/smooth-criminals-exotic-cream-6-5-33cl",
+          "discount_pct": 0,
+          "old_price": 0.0
+        }
+      ],
+      "cheapest_price": 54.0,
+      "min_price": 54.0,
+      "shop": "Brygshoppen",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
       "id": 12940,
       "name": "Cardamom For Christmas 8,5% 44cl",
       "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/cardamom-for-christmas-8-5-44cl.png?v=1764320606",
@@ -25871,30 +26056,6 @@
           "shop_name": "Brygshoppen",
           "price": 54.0,
           "url": "https://brygshoppen.dk/products/smooth-criminals-orange-vanilla-6-5-33cl",
-          "discount_pct": 0,
-          "old_price": 0.0
-        }
-      ],
-      "cheapest_price": 54.0,
-      "min_price": 54.0,
-      "shop": "Brygshoppen",
-      "discount_pct": 0,
-      "max_discount_pct": 0
-    },
-    {
-      "id": 16554,
-      "name": "Smooth Criminals: Cosmic Blast 6,5% 33cl",
-      "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/smooth-criminals-cosmic-blast-6-5-33cl.png?v=1782396867",
-      "type": "Sour",
-      "abv": 6.5,
-      "volume_cl": 33.0,
-      "brewery": "Brouwerij Frontaal",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Brygshoppen",
-          "price": 54.0,
-          "url": "https://brygshoppen.dk/products/smooth-criminals-cosmic-blast-6-5-33cl",
           "discount_pct": 0,
           "old_price": 0.0
         }
@@ -26262,6 +26423,30 @@
           "shop_name": "Vild med Vin",
           "price": 54.0,
           "url": "https://www.vildmedvin.dk/hr-skov-vinterbryg",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 54.0,
+      "min_price": 54.0,
+      "shop": "Vild med Vin",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
+      "id": 15596,
+      "name": "Fanø, Folk Pilsner - Øl",
+      "image": "https://www.vildmedvin.dk/img/1000/1000/resize/f/a/fan_folk_pilsner.jpg",
+      "type": "Pilsner",
+      "abv": 4.6,
+      "volume_cl": 50.0,
+      "brewery": "Fanø",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Vild med Vin",
+          "price": 54.0,
+          "url": "https://www.vildmedvin.dk/fano-folk-pilsner",
           "discount_pct": 0,
           "old_price": null
         }
@@ -28425,13 +28610,6 @@
           "url": "https://oltanken.dk/products/salikatt-green-belt",
           "discount_pct": 0,
           "old_price": null
-        },
-        {
-          "shop_name": "Vild med Vin",
-          "price": 59.0,
-          "url": "https://www.vildmedvin.dk/salikatt-greenhouse",
-          "discount_pct": 0,
-          "old_price": null
         }
       ],
       "cheapest_price": 56.0,
@@ -28846,7 +29024,7 @@
       "max_discount_pct": 0
     },
     {
-      "id": 16612,
+      "id": 16698,
       "name": "Öö 10,5% 33cl",
       "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/oo-10-5-33cl.png?v=1750597033",
       "type": "Imperial Stout",
@@ -29347,30 +29525,6 @@
       "max_discount_pct": 0
     },
     {
-      "id": 16544,
-      "name": "Bryg 365, Jordmorkaffe - Øl",
-      "image": "https://www.vildmedvin.dk/img/1000/1000/resize/b/r/bryg365_jordmoder_kaffe.jpg",
-      "type": "Stout",
-      "abv": 9.0,
-      "volume_cl": 44.0,
-      "brewery": null,
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Vild med Vin",
-          "price": 59.0,
-          "url": "https://www.vildmedvin.dk/bryg-365-jordmorkaffe",
-          "discount_pct": 0,
-          "old_price": null
-        }
-      ],
-      "cheapest_price": 59.0,
-      "min_price": 59.0,
-      "shop": "Vild med Vin",
-      "discount_pct": 0,
-      "max_discount_pct": 0
-    },
-    {
       "id": 13524,
       "name": "Elmeleven - Solar Science - 8% Double IPA",
       "image": "https://cdn.shopify.com/s/files/1/0402/1239/8243/files/Elmeleven_SolarScience.png?v=1763298316",
@@ -29496,30 +29650,6 @@
       "shop": "Øltanken",
       "discount_pct": 20.3,
       "max_discount_pct": 20.3
-    },
-    {
-      "id": 16474,
-      "name": "Åben, Mumbo Jumbo #7 - Pineapple, Coconut and Lime - Øl",
-      "image": "https://www.vildmedvin.dk/img/1000/1000/resize/_/b/_ben_mumbo_jumbo_7_pineapple.jpg",
-      "type": "Sour Beer",
-      "abv": 6.0,
-      "volume_cl": 44.0,
-      "brewery": null,
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Vild med Vin",
-          "price": 59.0,
-          "url": "https://www.vildmedvin.dk/aben-mumbo-jumbo-7-pineapple-coconut-and-lime",
-          "discount_pct": 0,
-          "old_price": null
-        }
-      ],
-      "cheapest_price": 59.0,
-      "min_price": 59.0,
-      "shop": "Vild med Vin",
-      "discount_pct": 0,
-      "max_discount_pct": 0
     },
     {
       "id": 15360,
@@ -29871,6 +30001,54 @@
           "shop_name": "Vild med Vin",
           "price": 59.0,
           "url": "https://www.vildmedvin.dk/aben-mumbo-jumbo-1-passion-guava-and-raspberry",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 59.0,
+      "min_price": 59.0,
+      "shop": "Vild med Vin",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
+      "id": 16474,
+      "name": "Åben, Mumbo Jumbo #7 - Pineapple, Coconut and Lime - Øl",
+      "image": "https://www.vildmedvin.dk/img/1000/1000/resize/_/b/_ben_mumbo_jumbo_7_pineapple.jpg",
+      "type": "Sour Beer",
+      "abv": 6.0,
+      "volume_cl": 44.0,
+      "brewery": null,
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Vild med Vin",
+          "price": 59.0,
+          "url": "https://www.vildmedvin.dk/aben-mumbo-jumbo-7-pineapple-coconut-and-lime",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 59.0,
+      "min_price": 59.0,
+      "shop": "Vild med Vin",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
+      "id": 16544,
+      "name": "Bryg 365, Jordmorkaffe - Øl",
+      "image": "https://www.vildmedvin.dk/img/1000/1000/resize/b/r/bryg365_jordmoder_kaffe.jpg",
+      "type": "Stout",
+      "abv": 9.0,
+      "volume_cl": 44.0,
+      "brewery": null,
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Vild med Vin",
+          "price": 59.0,
+          "url": "https://www.vildmedvin.dk/bryg-365-jordmorkaffe",
           "discount_pct": 0,
           "old_price": null
         }
@@ -32657,6 +32835,78 @@
       "max_discount_pct": 0
     },
     {
+      "id": 14090,
+      "name": "Black Sherry BA - BA Imperial Stout fra Hopalaa",
+      "image": "https://cdn-main.ideal.shop/images/by_hash/d402b95224f271a02afa757f8bf676b0bcc31ca7d0eeb609e001b74bd2dbc5d9/500-0/black-sherry-BA.jpg",
+      "type": "Imperial Stout",
+      "abv": 10.0,
+      "volume_cl": 33.0,
+      "brewery": "Hopalaa",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Beer Me",
+          "price": 63.0,
+          "url": "https://www.partner-ads.com/dk/klikbanner.php?bannerid=74625&partnerid=56605&htmlurl=https://www.beer-me.dk/vare/black-sherry-ba-ba-imperial-stout-fra-hopalaa",
+          "discount_pct": 10.0,
+          "old_price": 70.0
+        }
+      ],
+      "cheapest_price": 63.0,
+      "min_price": 63.0,
+      "shop": "Beer Me",
+      "discount_pct": 10.0,
+      "max_discount_pct": 10.0
+    },
+    {
+      "id": 14091,
+      "name": "Black Whiskey BA - BA Imperial Stout fra Hopalaa",
+      "image": "https://cdn-main.ideal.shop/images/by_hash/1e3c54da2cdeb8fb893c894eb0aea1e1fc47d7b7d8b1c2269ea2f0303c40d0eb/500-0/black-whiskey-BA.jpg",
+      "type": "Imperial Stout",
+      "abv": 10.0,
+      "volume_cl": 33.0,
+      "brewery": "Hopalaa",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Beer Me",
+          "price": 63.0,
+          "url": "https://www.partner-ads.com/dk/klikbanner.php?bannerid=74625&partnerid=56605&htmlurl=https://www.beer-me.dk/vare/black-whiskey-ba-ba-imperial-stout-fra-hopalaa",
+          "discount_pct": 10.0,
+          "old_price": 70.0
+        }
+      ],
+      "cheapest_price": 63.0,
+      "min_price": 63.0,
+      "shop": "Beer Me",
+      "discount_pct": 10.0,
+      "max_discount_pct": 10.0
+    },
+    {
+      "id": 14092,
+      "name": "Black Bourbon BA - BA Imperial Stout fra Hopalaa",
+      "image": "https://cdn-main.ideal.shop/images/by_hash/0051c46c31c31c9ce74dd8199f406ebd9aefb4207d9b86d1a38371412d09c046/500-0/black-bourbon-BA.jpg",
+      "type": "Imperial Stout",
+      "abv": 10.0,
+      "volume_cl": 33.0,
+      "brewery": "Hopalaa",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Beer Me",
+          "price": 63.0,
+          "url": "https://www.partner-ads.com/dk/klikbanner.php?bannerid=74625&partnerid=56605&htmlurl=https://www.beer-me.dk/vare/black-bourbon-ba-ba-imperial-stout-fra-hopalaa",
+          "discount_pct": 10.0,
+          "old_price": 70.0
+        }
+      ],
+      "cheapest_price": 63.0,
+      "min_price": 63.0,
+      "shop": "Beer Me",
+      "discount_pct": 10.0,
+      "max_discount_pct": 10.0
+    },
+    {
       "id": 14517,
       "name": "Vault City - Gold Standard Pastry Stout",
       "image": "https://cdn.shopify.com/s/files/1/0776/5209/9400/files/D8EFD862-E774-41AA-8209-31512F2AC1DC.jpg?v=1762293434",
@@ -32722,37 +32972,6 @@
       "cheapest_price": 64.0,
       "min_price": 64.0,
       "shop": "Øltanken",
-      "discount_pct": 0,
-      "max_discount_pct": 0
-    },
-    {
-      "id": 15914,
-      "name": "Sierra Nevada &#8211; Narwhal &#8211; Imperial Stout – 0,473 l. – 11,9%",
-      "image": "https://www.bestofbeers.dk/wp-content/uploads/2026/05/SierraNevadaNarwhal.jpg",
-      "type": "Imperial Stout",
-      "abv": 11.9,
-      "volume_cl": 47.3,
-      "brewery": "Sierra Nevada",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Vild med Vin",
-          "price": 64.0,
-          "url": "https://www.vildmedvin.dk/sierra-nevada-barrel-aged-narwhal",
-          "discount_pct": 0,
-          "old_price": null
-        },
-        {
-          "shop_name": "Best of Beers",
-          "price": 91.0,
-          "url": "https://www.bestofbeers.dk/shop/sierra-nevada-narwhal-imperial-stout-0473-l-119/",
-          "discount_pct": 0,
-          "old_price": null
-        }
-      ],
-      "cheapest_price": 64.0,
-      "min_price": 64.0,
-      "shop": "Vild med Vin",
       "discount_pct": 0,
       "max_discount_pct": 0
     },
@@ -32825,6 +33044,30 @@
       "cheapest_price": 64.0,
       "min_price": 64.0,
       "shop": "Øltanken",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
+      "id": 15316,
+      "name": "Sierra Nevada, Barrel Aged Narwhal - Øl",
+      "image": "https://www.vildmedvin.dk/img/1000/1000/resize/n/a/narwhal_big.jpg",
+      "type": "Stout",
+      "abv": 11.9,
+      "volume_cl": 47.3,
+      "brewery": "Sierra Nevada",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Vild med Vin",
+          "price": 64.0,
+          "url": "https://www.vildmedvin.dk/sierra-nevada-barrel-aged-narwhal",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 64.0,
+      "min_price": 64.0,
+      "shop": "Vild med Vin",
       "discount_pct": 0,
       "max_discount_pct": 0
     },
@@ -34815,6 +35058,54 @@
       "max_discount_pct": 10.0
     },
     {
+      "id": 14139,
+      "name": "Banana & Rum Barrel Aged Imperial Stout Â· Two Chefs",
+      "image": "https://cdn-main.ideal.shop/images/by_hash/91071d7e17723839969eeb7f6191d665be65f882e2f046e6138167487b8b64cc/500-0/Banana-_-Rum-Barrel-Aged-Imperial-Stout.jpg",
+      "type": "Imperial Stout",
+      "abv": 11.3,
+      "volume_cl": 33.0,
+      "brewery": "Two Chefs",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Beer Me",
+          "price": 67.5,
+          "url": "https://www.partner-ads.com/dk/klikbanner.php?bannerid=74625&partnerid=56605&htmlurl=https://www.beer-me.dk/vare/banana-rum-barrel-aged-imperial-stout-two-chefs",
+          "discount_pct": 10.0,
+          "old_price": 75.0
+        }
+      ],
+      "cheapest_price": 67.5,
+      "min_price": 67.5,
+      "shop": "Beer Me",
+      "discount_pct": 10.0,
+      "max_discount_pct": 10.0
+    },
+    {
+      "id": 14140,
+      "name": "Coffee-Infused Bourbon Barrel Aged Imperial Stout Â· Two Chefs",
+      "image": "https://cdn-main.ideal.shop/images/by_hash/511f2a9643985acc44ff369abe071e5fddc0ce3be45aafa9ba525fd6b5c407e1/500-0/Coffee-Infused-Bourbon-Barrel-Aged.jpg",
+      "type": "Imperial Stout",
+      "abv": 11.5,
+      "volume_cl": 33.0,
+      "brewery": "Two Chefs",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Beer Me",
+          "price": 67.5,
+          "url": "https://www.partner-ads.com/dk/klikbanner.php?bannerid=74625&partnerid=56605&htmlurl=https://www.beer-me.dk/vare/coffee-infused-bourbon-barrel-aged-imperial-stout-two-chefs",
+          "discount_pct": 10.0,
+          "old_price": 75.0
+        }
+      ],
+      "cheapest_price": 67.5,
+      "min_price": 67.5,
+      "shop": "Beer Me",
+      "discount_pct": 10.0,
+      "max_discount_pct": 10.0
+    },
+    {
       "id": 14141,
       "name": "Cognac Barrel Aged Imperial Stout Â· Two Chefs",
       "image": "https://cdn-main.ideal.shop/images/by_hash/60c68a87a4a7142e79dc53d1036adb57ca0846171eda57ecd341ea47fed6c8c8/500-0/Cognac-Barrel-Aged-Imperial-Stout.jpg",
@@ -35062,30 +35353,6 @@
       "max_discount_pct": 0
     },
     {
-      "id": 14025,
-      "name": "Vilify - BA Imperial Stout fra Blackout Brewing",
-      "image": "https://cdn-main.ideal.shop/images/by_hash/ca7d531daecb7a662622539a87fd0533fab65c3507d5a350b5b51f7823070d14/500-0/vilify.jpg",
-      "type": "Imperial Stout",
-      "abv": 12.0,
-      "volume_cl": 33.0,
-      "brewery": "Blackout Brewing",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Beer Me",
-          "price": 69.0,
-          "url": "https://www.partner-ads.com/dk/klikbanner.php?bannerid=74625&partnerid=56605&htmlurl=https://www.beer-me.dk/vare/death-by-astonishment-barrel-aged-imperal-stout-fra-blackout-brewing",
-          "discount_pct": 30.3,
-          "old_price": 99.0
-        }
-      ],
-      "cheapest_price": 69.0,
-      "min_price": 69.0,
-      "shop": "Beer Me",
-      "discount_pct": 30.3,
-      "max_discount_pct": 30.3
-    },
-    {
       "id": 13108,
       "name": "Val-Dieu Grand Cru 10,5% 75cl",
       "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/val-dieu-grand-cru-10-5-75cl.png?v=1719330332",
@@ -35130,30 +35397,6 @@
       "cheapest_price": 69.0,
       "min_price": 69.0,
       "shop": "Brygshoppen",
-      "discount_pct": 0,
-      "max_discount_pct": 0
-    },
-    {
-      "id": 16546,
-      "name": "Bryg 365, FarligWin - Øl",
-      "image": "https://www.vildmedvin.dk/img/1000/1000/resize/b/r/bryg365_farligwine.jpg",
-      "type": "Barley Wine",
-      "abv": 16.0,
-      "volume_cl": 33.0,
-      "brewery": null,
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Vild med Vin",
-          "price": 69.0,
-          "url": "https://www.vildmedvin.dk/bryg-365-farligwin",
-          "discount_pct": 0,
-          "old_price": null
-        }
-      ],
-      "cheapest_price": 69.0,
-      "min_price": 69.0,
-      "shop": "Vild med Vin",
       "discount_pct": 0,
       "max_discount_pct": 0
     },
@@ -35302,28 +35545,28 @@
       "max_discount_pct": 0
     },
     {
-      "id": 16543,
-      "name": "Bryg 365, Den Sidste Olie - Øl",
-      "image": "https://www.vildmedvin.dk/img/1000/1000/resize/b/r/bryg365_densidsteolie.jpg",
+      "id": 13962,
+      "name": "Death By Astonishment - Barrel Aged Imperal Stout fra Blackout Brewing",
+      "image": "https://cdn-main.ideal.shop/images/by_hash/cec44639d4bcca6eb4e5b83c086d31f775c4425192b4d249e99f30dd96c1c290/500-0/Death-By-Astonishment.jpg",
       "type": "Stout",
-      "abv": 8.0,
-      "volume_cl": 44.0,
-      "brewery": null,
+      "abv": 12.0,
+      "volume_cl": 33.0,
+      "brewery": "Blackout Brewing",
       "category": null,
       "prices": [
         {
-          "shop_name": "Vild med Vin",
+          "shop_name": "Beer Me",
           "price": 69.0,
-          "url": "https://www.vildmedvin.dk/bryg-365-den-sidste-olie",
-          "discount_pct": 0,
-          "old_price": null
+          "url": "https://www.partner-ads.com/dk/klikbanner.php?bannerid=74625&partnerid=56605&htmlurl=https://www.beer-me.dk/vare/death-by-astonishment-barrel-aged-imperal-stout-fra-blackout-brewing",
+          "discount_pct": 30.3,
+          "old_price": 99.0
         }
       ],
       "cheapest_price": 69.0,
       "min_price": 69.0,
-      "shop": "Vild med Vin",
-      "discount_pct": 0,
-      "max_discount_pct": 0
+      "shop": "Beer Me",
+      "discount_pct": 30.3,
+      "max_discount_pct": 30.3
     },
     {
       "id": 15273,
@@ -35446,6 +35689,54 @@
       "max_discount_pct": 0
     },
     {
+      "id": 16543,
+      "name": "Bryg 365, Den Sidste Olie - Øl",
+      "image": "https://www.vildmedvin.dk/img/1000/1000/resize/b/r/bryg365_densidsteolie.jpg",
+      "type": "Stout",
+      "abv": 8.0,
+      "volume_cl": 44.0,
+      "brewery": null,
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Vild med Vin",
+          "price": 69.0,
+          "url": "https://www.vildmedvin.dk/bryg-365-den-sidste-olie",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 69.0,
+      "min_price": 69.0,
+      "shop": "Vild med Vin",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
+      "id": 16546,
+      "name": "Bryg 365, FarligWin - Øl",
+      "image": "https://www.vildmedvin.dk/img/1000/1000/resize/b/r/bryg365_farligwine.jpg",
+      "type": "Barley Wine",
+      "abv": 16.0,
+      "volume_cl": 33.0,
+      "brewery": null,
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Vild med Vin",
+          "price": 69.0,
+          "url": "https://www.vildmedvin.dk/bryg-365-farligwin",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 69.0,
+      "min_price": 69.0,
+      "shop": "Vild med Vin",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
       "id": 13966,
       "name": "Divination - Cognac BA Barley Wine fra Blackout Brewing",
       "image": "https://cdn-main.ideal.shop/images/by_hash/e6a984a512ade42cfeaae2b12f9d63e8f95ff4bc7fc01082f4ff067818ba5ac2/500-0/divination.jpg",
@@ -35492,6 +35783,30 @@
       "shop": "Beer Me",
       "discount_pct": 30.0,
       "max_discount_pct": 30.0
+    },
+    {
+      "id": 14025,
+      "name": "Vilify - BA Imperial Stout fra Blackout Brewing",
+      "image": "https://cdn-main.ideal.shop/images/by_hash/ca7d531daecb7a662622539a87fd0533fab65c3507d5a350b5b51f7823070d14/500-0/vilify.jpg",
+      "type": "Imperial Stout",
+      "abv": 12.0,
+      "volume_cl": 33.0,
+      "brewery": "Blackout Brewing",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Beer Me",
+          "price": 69.5,
+          "url": "https://www.partner-ads.com/dk/klikbanner.php?bannerid=74625&partnerid=56605&htmlurl=https://www.beer-me.dk/vare/vilify-ba-imperial-stout-fra-blackout-brewing",
+          "discount_pct": 29.8,
+          "old_price": 99.0
+        }
+      ],
+      "cheapest_price": 69.5,
+      "min_price": 69.5,
+      "shop": "Beer Me",
+      "discount_pct": 29.8,
+      "max_discount_pct": 29.8
     },
     {
       "id": 13960,
@@ -35542,6 +35857,78 @@
       "max_discount_pct": 29.8
     },
     {
+      "id": 14024,
+      "name": "Visceral - BA Barleywine fra Blackout Brewing",
+      "image": "https://cdn-main.ideal.shop/images/by_hash/08d05910e270a0e2df643a6dc3313e0f9888d083d1314af7c6ebc74b6b003489/500-0/Visceral.jpg",
+      "type": "Barley Wine",
+      "abv": 12.0,
+      "volume_cl": 33.0,
+      "brewery": "Blackout Brewing",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Beer Me",
+          "price": 69.5,
+          "url": "https://www.partner-ads.com/dk/klikbanner.php?bannerid=74625&partnerid=56605&htmlurl=https://www.beer-me.dk/vare/visceral-ba-barleywine-fra-blackout-brewing",
+          "discount_pct": 29.8,
+          "old_price": 99.0
+        }
+      ],
+      "cheapest_price": 69.5,
+      "min_price": 69.5,
+      "shop": "Beer Me",
+      "discount_pct": 29.8,
+      "max_discount_pct": 29.8
+    },
+    {
+      "id": 14026,
+      "name": "The Thin Crust of Civilization - BA Strong Ale fra Blackout Brewing",
+      "image": "https://cdn-main.ideal.shop/images/by_hash/e693f49bd29335f8f56f4371ccd5c065474ccac3d0825138997663201992c3a1/500-0/The-Thin-Crust-of-Civilization.jpg",
+      "type": "Strong Ale",
+      "abv": 12.0,
+      "volume_cl": 33.0,
+      "brewery": "Blackout Brewing",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Beer Me",
+          "price": 69.5,
+          "url": "https://www.partner-ads.com/dk/klikbanner.php?bannerid=74625&partnerid=56605&htmlurl=https://www.beer-me.dk/vare/the-thin-crust-of-civilization-ba-strong-ale-fra-blackout-brewing",
+          "discount_pct": 29.8,
+          "old_price": 99.0
+        }
+      ],
+      "cheapest_price": 69.5,
+      "min_price": 69.5,
+      "shop": "Beer Me",
+      "discount_pct": 29.8,
+      "max_discount_pct": 29.8
+    },
+    {
+      "id": 14040,
+      "name": "Extra Entropy  - Bourbon BA Imperial Stout fra Blackout Brewing",
+      "image": "https://cdn-main.ideal.shop/images/by_hash/6bb412ad24e7d50d4669d332b5eb68c0ba5f282e21b73536127df0e1287f204a/500-0/extraentropy.jpg",
+      "type": "Imperial Stout",
+      "abv": 11.0,
+      "volume_cl": 33.0,
+      "brewery": "Blackout Brewing",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Beer Me",
+          "price": 69.5,
+          "url": "https://www.partner-ads.com/dk/klikbanner.php?bannerid=74625&partnerid=56605&htmlurl=https://www.beer-me.dk/vare/extra-entropy-bourbon-ba-imperial-stout-fra-blackout-brewing",
+          "discount_pct": 29.8,
+          "old_price": 99.0
+        }
+      ],
+      "cheapest_price": 69.5,
+      "min_price": 69.5,
+      "shop": "Beer Me",
+      "discount_pct": 29.8,
+      "max_discount_pct": 29.8
+    },
+    {
       "id": 14041,
       "name": "Megavoid  - Bourbon BA Imperial Stout fra Blackout Brewing",
       "image": "https://cdn-main.ideal.shop/images/by_hash/106464267b5b5c354a8d090bc800eacf43345741c108deb4982a6b07f54bce8b/500-0/megavoid.jpg",
@@ -35555,6 +35942,54 @@
           "shop_name": "Beer Me",
           "price": 69.5,
           "url": "https://www.partner-ads.com/dk/klikbanner.php?bannerid=74625&partnerid=56605&htmlurl=https://www.beer-me.dk/vare/magavoid-bourbon-ba-imperial-stout-fra-blackout-brewing",
+          "discount_pct": 29.8,
+          "old_price": 99.0
+        }
+      ],
+      "cheapest_price": 69.5,
+      "min_price": 69.5,
+      "shop": "Beer Me",
+      "discount_pct": 29.8,
+      "max_discount_pct": 29.8
+    },
+    {
+      "id": 14044,
+      "name": "Twisted Cake - Bourbon BA Imperial Stout fra Blackout Brewing",
+      "image": "https://cdn-main.ideal.shop/images/by_hash/b32a52b80a67895617596b51183a07940aad090e6a9d172b197a27b825c33705/500-0/twistedcake.jpg",
+      "type": "Imperial Stout",
+      "abv": 12.0,
+      "volume_cl": 33.0,
+      "brewery": "Blackout Brewing",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Beer Me",
+          "price": 69.5,
+          "url": "https://www.partner-ads.com/dk/klikbanner.php?bannerid=74625&partnerid=56605&htmlurl=https://www.beer-me.dk/vare/twisted-cake-bourbon-ba-imperial-stout-fra-blackout-brewing",
+          "discount_pct": 29.8,
+          "old_price": 99.0
+        }
+      ],
+      "cheapest_price": 69.5,
+      "min_price": 69.5,
+      "shop": "Beer Me",
+      "discount_pct": 29.8,
+      "max_discount_pct": 29.8
+    },
+    {
+      "id": 14045,
+      "name": "Sunset Damage - Bourbon & Port BA Imperial Stout fra Blackout Brewing",
+      "image": "https://cdn-main.ideal.shop/images/by_hash/188fdf27e4368b1fd10fddee9ab9f8a044f8698eec57b7d1c29d23ceaa8bc4be/500-0/sunsetdamage.jpg",
+      "type": "Imperial Stout",
+      "abv": 11.0,
+      "volume_cl": 33.0,
+      "brewery": "Blackout Brewing",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Beer Me",
+          "price": 69.5,
+          "url": "https://www.partner-ads.com/dk/klikbanner.php?bannerid=74625&partnerid=56605&htmlurl=https://www.beer-me.dk/vare/sunset-damage-bourbon-port-ba-imperial-stout-fra-blackout-brewing",
           "discount_pct": 29.8,
           "old_price": 99.0
         }
@@ -36983,30 +37418,6 @@
       "max_discount_pct": 0
     },
     {
-      "id": 13963,
-      "name": "Deluxe Blend Anti-Cake - Barrel Aged Imperal Stout fra Blackout Brewing",
-      "image": "https://cdn-main.ideal.shop/images/by_hash/3414553867de63fce31fdea4642407bae3e7018cd76b0cd739814135d9fb4fa2/500-0/Anti-Cake-Deluxe-Blend.jpg",
-      "type": "Stout",
-      "abv": 12.0,
-      "volume_cl": 33.0,
-      "brewery": "Blackout Brewing",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Beer Me",
-          "price": 74.25,
-          "url": "https://www.partner-ads.com/dk/klikbanner.php?bannerid=74625&partnerid=56605&htmlurl=https://www.beer-me.dk/vare/deluxe-blend-anti-cake-barrel-aged-imperal-stout-fra-blackout-brewing",
-          "discount_pct": 25.0,
-          "old_price": 99.0
-        }
-      ],
-      "cheapest_price": 74.25,
-      "min_price": 74.25,
-      "shop": "Beer Me",
-      "discount_pct": 25.0,
-      "max_discount_pct": 25.0
-    },
-    {
       "id": 14054,
       "name": "Profan - BA Imperial Stout fra Blackout Brewing",
       "image": "https://cdn-main.ideal.shop/images/by_hash/bf4cdfd7b312f0aace4ba34bab94b7934071627ce34abb7d86540e439b19aee9/500-0/profan.jpg",
@@ -37062,7 +37473,7 @@
       "max_discount_pct": 0
     },
     {
-      "id": 16610,
+      "id": 16696,
       "name": "Raw Beer 8% 44cl",
       "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/raw-beer-8.png?v=1782404785",
       "type": "India Pale Ale (IPA)",
@@ -38355,37 +38766,13 @@
       "max_discount_pct": 12.4
     },
     {
-      "id": 16521,
-      "name": "BEAK - Squeeze - 8% Double IPA",
-      "image": "https://cdn.shopify.com/s/files/1/0402/1239/8243/files/Beak_Squeeze.png?v=1781470643",
-      "type": "Double IPA",
-      "abv": 8.0,
-      "volume_cl": 44.0,
-      "brewery": "Best before: 05/10-2026",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "A Good Case",
-          "price": 79.75,
-          "url": "https://agoodcase.dk/products/beak-squeeze-8-double-ipa",
-          "discount_pct": 11.4,
-          "old_price": 90.0
-        }
-      ],
-      "cheapest_price": 79.75,
-      "min_price": 79.75,
-      "shop": "A Good Case",
-      "discount_pct": 11.4,
-      "max_discount_pct": 11.4
-    },
-    {
-      "id": 13343,
-      "name": "Põhjala - Barrique Noire - 12% BA Imperial Porter",
-      "image": "https://cdn.shopify.com/s/files/1/0402/1239/8243/files/Pohjala_BarriqueNoire.png?v=1776217734",
-      "type": "Porter",
+      "id": 13757,
+      "name": "Põhjala – Cellar Series Barrique Noire – BA Imperial Baltic Porter – 0,33 l. – 12,0%",
+      "image": "https://www.bestofbeers.dk/wp-content/uploads/2025/11/PohjalaBarriqueNoire.jpg",
+      "type": "Baltic Porter",
       "abv": 12.0,
       "volume_cl": 33.0,
-      "brewery": "Best Before: 01/09-2029",
+      "brewery": "Põhjala",
       "category": null,
       "prices": [
         {
@@ -38401,6 +38788,61 @@
           "url": "https://www.bestofbeers.dk/shop/pohjala-cellar-series-barrique-noire-ba-imperial-baltic-porter-033-l-120/",
           "discount_pct": 0,
           "old_price": null
+        }
+      ],
+      "cheapest_price": 79.75,
+      "min_price": 79.75,
+      "shop": "A Good Case",
+      "discount_pct": 11.4,
+      "max_discount_pct": 11.4
+    },
+    {
+      "id": 13759,
+      "name": "Põhjala – Cellar Series Pime Öö PX – BA Imperial Stout – 0,33 l. – 13,0%",
+      "image": "https://www.bestofbeers.dk/wp-content/uploads/2025/11/PohjalaPime.jpg",
+      "type": "Imperial Stout",
+      "abv": 13.0,
+      "volume_cl": 33.0,
+      "brewery": "Põhjala",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "A Good Case",
+          "price": 79.75,
+          "url": "https://agoodcase.dk/products/pohjala-pime-oo-px-13-ba-imperial-stout",
+          "discount_pct": 11.4,
+          "old_price": 90.0
+        },
+        {
+          "shop_name": "Best of Beers",
+          "price": 86.0,
+          "url": "https://www.bestofbeers.dk/shop/pohjala-cellar-series-pime-oo-px-ba-imperial-stout-033-l-130/",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 79.75,
+      "min_price": 79.75,
+      "shop": "A Good Case",
+      "discount_pct": 11.4,
+      "max_discount_pct": 11.4
+    },
+    {
+      "id": 16521,
+      "name": "BEAK - Squeeze - 8% Double IPA",
+      "image": "https://cdn.shopify.com/s/files/1/0402/1239/8243/files/Beak_Squeeze.png?v=1781470643",
+      "type": "Double IPA",
+      "abv": 8.0,
+      "volume_cl": 44.0,
+      "brewery": "Best before: 05/10-2026",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "A Good Case",
+          "price": 79.75,
+          "url": "https://agoodcase.dk/products/beak-squeeze-8-double-ipa",
+          "discount_pct": 11.4,
+          "old_price": 90.0
         }
       ],
       "cheapest_price": 79.75,
@@ -38449,37 +38891,6 @@
           "url": "https://agoodcase.dk/products/pohjala-coffee-culture-15-5-ba-imperial-stout",
           "discount_pct": 11.4,
           "old_price": 90.0
-        }
-      ],
-      "cheapest_price": 79.75,
-      "min_price": 79.75,
-      "shop": "A Good Case",
-      "discount_pct": 11.4,
-      "max_discount_pct": 11.4
-    },
-    {
-      "id": 13436,
-      "name": "Põhjala - Pime Öö PX - 13% BA Imperial Stout",
-      "image": "https://cdn.shopify.com/s/files/1/0402/1239/8243/files/Pohjala_PimeooPX.png?v=1773007925",
-      "type": "Imperial Stout",
-      "abv": 13.0,
-      "volume_cl": 33.0,
-      "brewery": "Best Before: 24/10-2029",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "A Good Case",
-          "price": 79.75,
-          "url": "https://agoodcase.dk/products/pohjala-pime-oo-px-13-ba-imperial-stout",
-          "discount_pct": 11.4,
-          "old_price": 90.0
-        },
-        {
-          "shop_name": "Best of Beers",
-          "price": 86.0,
-          "url": "https://www.bestofbeers.dk/shop/pohjala-cellar-series-pime-oo-px-ba-imperial-stout-033-l-130/",
-          "discount_pct": 0,
-          "old_price": null
         }
       ],
       "cheapest_price": 79.75,
@@ -38655,6 +39066,30 @@
       "shop": "Beer Me",
       "discount_pct": 32.8,
       "max_discount_pct": 32.8
+    },
+    {
+      "id": 16692,
+      "name": "Red Raven 12,1% 44cl",
+      "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/red-raven-12-1-44cl.png?v=1782647099",
+      "type": "Barley Wine",
+      "abv": 12.1,
+      "volume_cl": 44.0,
+      "brewery": "Menno Olivier Brewing",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Brygshoppen",
+          "price": 80.0,
+          "url": "https://brygshoppen.dk/products/red-raven-12-1-44cl",
+          "discount_pct": 0,
+          "old_price": 0.0
+        }
+      ],
+      "cheapest_price": 80.0,
+      "min_price": 80.0,
+      "shop": "Brygshoppen",
+      "discount_pct": 0,
+      "max_discount_pct": 0
     },
     {
       "id": 15056,
@@ -40286,7 +40721,7 @@
       "max_discount_pct": 0
     },
     {
-      "id": 16613,
+      "id": 16699,
       "name": "No Way Out B.A. 10,5% 33cl",
       "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/no-way-out-b-a-10-5-33cl.png?v=1750592682",
       "type": "Barley Wine",
@@ -41428,6 +41863,30 @@
       "max_discount_pct": 0
     },
     {
+      "id": 15914,
+      "name": "Sierra Nevada &#8211; Narwhal &#8211; Imperial Stout – 0,473 l. – 11,9%",
+      "image": "https://www.bestofbeers.dk/wp-content/uploads/2026/05/SierraNevadaNarwhal.jpg",
+      "type": "Imperial Stout",
+      "abv": 11.9,
+      "volume_cl": 47.3,
+      "brewery": "Sierra Nevada",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Best of Beers",
+          "price": 91.0,
+          "url": "https://www.bestofbeers.dk/shop/sierra-nevada-narwhal-imperial-stout-0473-l-119/",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 91.0,
+      "min_price": 91.0,
+      "shop": "Best of Beers",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
       "id": 15915,
       "name": "Amager Bryghus – American Outlaws Kid Curry Golden Edition – Bourbon Barrel Aged Double Mash Quadrupel – 0,44 l. – 11,2%",
       "image": "https://www.bestofbeers.dk/wp-content/uploads/2026/05/AmagerBryghusKidCurry.jpg",
@@ -42355,6 +42814,13 @@
           "url": "https://beershoppen.dk/products/oerbier-special-reserva-2024-de-dolle-brouwers-33-cl-10-0",
           "discount_pct": 0,
           "old_price": null
+        },
+        {
+          "shop_name": "Best of Beers",
+          "price": 101.0,
+          "url": "https://www.bestofbeers.dk/shop/de-dolle-brouwers-special-reserva-oerbier-2023-amarone-barrels-ale-033-l-100/",
+          "discount_pct": 0,
+          "old_price": null
         }
       ],
       "cheapest_price": 95.0,
@@ -42711,7 +43177,7 @@
       "max_discount_pct": 0
     },
     {
-      "id": 16611,
+      "id": 16697,
       "name": "10 - Imperial Stout 10% 44cl",
       "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/10-imperial-stout-10-44cl_9645d1f7-914c-43d6-b687-b07453f1aaf2.png?v=1761637026",
       "type": "Imperial Stout",
@@ -43204,30 +43670,6 @@
           "shop_name": "Best of Beers",
           "price": 101.0,
           "url": "https://www.bestofbeers.dk/shop/christian-drouin-drouin-cider-paere-70-cl-45/",
-          "discount_pct": 0,
-          "old_price": null
-        }
-      ],
-      "cheapest_price": 101.0,
-      "min_price": 101.0,
-      "shop": "Best of Beers",
-      "discount_pct": 0,
-      "max_discount_pct": 0
-    },
-    {
-      "id": 13806,
-      "name": "De Dolle Brouwers &#8211; Dulle Teve 10 Priorat Barrels 2022 &#8211; Ale – 0,33 l. – 10,0%",
-      "image": "https://www.bestofbeers.dk/wp-content/uploads/2025/06/DeDolleDulleTeve10.jpg",
-      "type": null,
-      "abv": 10.0,
-      "volume_cl": 33.0,
-      "brewery": "De Dolle Brouwers",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Best of Beers",
-          "price": 101.0,
-          "url": "https://www.bestofbeers.dk/shop/de-dolle-brouwers-special-reserva-oerbier-2023-amarone-barrels-ale-033-l-100/",
           "discount_pct": 0,
           "old_price": null
         }
@@ -44021,6 +44463,30 @@
       "max_discount_pct": 0
     },
     {
+      "id": 13806,
+      "name": "De Dolle Brouwers &#8211; Dulle Teve 10 Priorat Barrels 2022 &#8211; Ale – 0,33 l. – 10,0%",
+      "image": "https://www.bestofbeers.dk/wp-content/uploads/2025/06/DeDolleDulleTeve10.jpg",
+      "type": null,
+      "abv": 10.0,
+      "volume_cl": 33.0,
+      "brewery": "De Dolle Brouwers",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Best of Beers",
+          "price": 111.0,
+          "url": "https://www.bestofbeers.dk/shop/de-dolle-brouwers-dulle-teve-10-priorat-barrels-2022-ale-033-l-100/",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 111.0,
+      "min_price": 111.0,
+      "shop": "Best of Beers",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
       "id": 13818,
       "name": "BlackStack Brewing x LUA Brewing – Out of Pocket – Quadruple IPA – 0,473 l. – 12,0%",
       "image": "https://www.bestofbeers.dk/wp-content/uploads/2025/05/BlackStackOutofPocket.jpg",
@@ -44337,37 +44803,6 @@
       "max_discount_pct": 0
     },
     {
-      "id": 13778,
-      "name": "Omnipollo x Angry Chair – Safari – Barrel Aged Vegan Ice Cream Quadruple Stack Stout – 0,33 l. – 13,0%",
-      "image": "https://www.bestofbeers.dk/wp-content/uploads/2025/09/OmnipolloSafari.jpg",
-      "type": "Stout",
-      "abv": 13.0,
-      "volume_cl": 33.0,
-      "brewery": "Omnipollo x Angry Chair",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Øltanken",
-          "price": 119.0,
-          "url": "https://oltanken.dk/products/omnipollo-safari",
-          "discount_pct": 20.1,
-          "old_price": 149.0
-        },
-        {
-          "shop_name": "Best of Beers",
-          "price": 146.0,
-          "url": "https://www.bestofbeers.dk/shop/omnipollo-x-angry-chair-safari-barrel-aged-vegan-ice-cream-quadruple-stack-stout-033-l-130/",
-          "discount_pct": 0,
-          "old_price": null
-        }
-      ],
-      "cheapest_price": 119.0,
-      "min_price": 119.0,
-      "shop": "Øltanken",
-      "discount_pct": 20.1,
-      "max_discount_pct": 20.1
-    },
-    {
       "id": 15959,
       "name": "RYGR Brygghús - ARV Havbris Farmhouse Ale",
       "image": "https://cdn.shopify.com/s/files/1/0776/5209/9400/files/15DEA65E-D092-4023-AC16-4EE6B92679B9.jpg?v=1780000261",
@@ -44414,6 +44849,30 @@
       "shop": "Øltanken",
       "discount_pct": 0,
       "max_discount_pct": 0
+    },
+    {
+      "id": 14543,
+      "name": "Omnipollo x Angry Chair - Safari BA Stout",
+      "image": "https://cdn.shopify.com/s/files/1/0776/5209/9400/files/2CFF1578-E498-420A-853F-17DA72D7214C.jpg?v=1756580851",
+      "type": "Stout",
+      "abv": 13.0,
+      "volume_cl": 33.0,
+      "brewery": "Omnipollo x Angry Chair",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Øltanken",
+          "price": 119.0,
+          "url": "https://oltanken.dk/products/omnipollo-safari",
+          "discount_pct": 20.1,
+          "old_price": 149.0
+        }
+      ],
+      "cheapest_price": 119.0,
+      "min_price": 119.0,
+      "shop": "Øltanken",
+      "discount_pct": 20.1,
+      "max_discount_pct": 20.1
     },
     {
       "id": 14277,
@@ -45071,10 +45530,10 @@
       "max_discount_pct": 0
     },
     {
-      "id": 15911,
-      "name": "Moersleutel – Barcode Silver &#038; Aquamarine – Barrel Aged Stout – 0,44 l. – 14,0%",
-      "image": "https://www.bestofbeers.dk/wp-content/uploads/2026/05/MoersleutelBarcodeSilver.jpg",
-      "type": "Stout",
+      "id": 14396,
+      "name": "Moersleutel - Barcode Silver Aquamarine",
+      "image": "https://cdn.shopify.com/s/files/1/0776/5209/9400/files/39481F5C-65FB-4706-A973-795B574E64D7.jpg?v=1776792315",
+      "type": "Imperial Stout",
       "abv": 14.0,
       "volume_cl": 44.0,
       "brewery": "Moersleutel",
@@ -45084,13 +45543,6 @@
           "shop_name": "Øltanken",
           "price": 129.0,
           "url": "https://oltanken.dk/products/moersleutel-barcode-silver-aquamarine",
-          "discount_pct": 0,
-          "old_price": null
-        },
-        {
-          "shop_name": "Best of Beers",
-          "price": 131.0,
-          "url": "https://www.bestofbeers.dk/shop/moersleutel-barcode-silver-aquamarine-barrel-aged-stout-044-l-140/",
           "discount_pct": 0,
           "old_price": null
         }
@@ -45291,13 +45743,13 @@
       "max_discount_pct": 10.0
     },
     {
-      "id": 16673,
-      "name": "Omnipollo x Monkish - BA Coconut Space Brownie",
-      "image": "https://cdn.shopify.com/s/files/1/0776/5209/9400/files/6577482D-F497-4EA6-868E-035C95F6C4A1.jpg?v=1774643190",
+      "id": 14131,
+      "name": "Barrel Aged Coconut Space Brownie - BA Imperial Stout - Omnipollo",
+      "image": "https://cdn-main.ideal.shop/images/by_hash/4ebd57969fb0de97c58507a3ff533f1b116f42400a1524d679ac974dd45133f9/500-0/coconutspace.jpg",
       "type": "Imperial Stout",
       "abv": 12.3,
       "volume_cl": 33.0,
-      "brewery": "Omnipollo x Monkish",
+      "brewery": "Omnipollo",
       "category": null,
       "prices": [
         {
@@ -45306,13 +45758,6 @@
           "url": "https://www.partner-ads.com/dk/klikbanner.php?bannerid=74625&partnerid=56605&htmlurl=https://www.beer-me.dk/vare/barrel-aged-coconut-space-brownie-ba-imperial-stout-omnipollo",
           "discount_pct": 10.0,
           "old_price": 145.0
-        },
-        {
-          "shop_name": "Øltanken",
-          "price": 147.0,
-          "url": "https://oltanken.dk/products/omnipollo-x-monkish-ba-coconut-space-brownie",
-          "discount_pct": 0,
-          "old_price": null
         }
       ],
       "cheapest_price": 130.5,
@@ -45359,6 +45804,30 @@
           "shop_name": "Best of Beers",
           "price": 131.0,
           "url": "https://www.bestofbeers.dk/shop/moersleutel-10-years-celebration-arrival-mega-adjunct-ba-stout-044-l-140/",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 131.0,
+      "min_price": 131.0,
+      "shop": "Best of Beers",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
+      "id": 15911,
+      "name": "Moersleutel – Barcode Silver &#038; Aquamarine – Barrel Aged Stout – 0,44 l. – 14,0%",
+      "image": "https://www.bestofbeers.dk/wp-content/uploads/2026/05/MoersleutelBarcodeSilver.jpg",
+      "type": "Stout",
+      "abv": 14.0,
+      "volume_cl": 44.0,
+      "brewery": "Moersleutel",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Best of Beers",
+          "price": 131.0,
+          "url": "https://www.bestofbeers.dk/shop/moersleutel-barcode-silver-aquamarine-barrel-aged-stout-044-l-140/",
           "discount_pct": 0,
           "old_price": null
         }
@@ -45953,19 +46422,19 @@
       "max_discount_pct": 0
     },
     {
-      "id": 14236,
-      "name": "Barrel Aged Day 2025: Cuvee - Funky fluid - 33 cl. - 14%",
-      "image": "https://cdn.shopify.com/s/files/1/0600/9438/2263/files/cuvee.jpg?v=1770286155",
-      "type": "Beer",
+      "id": 14479,
+      "name": "Funky Fluid - Barrel Aged Day 2025: Coconut",
+      "image": "https://cdn.shopify.com/s/files/1/0776/5209/9400/files/67DB9F0F-354D-451E-A315-C08031CE1EA7.jpg?v=1770234519",
+      "type": "Imperial Stout",
       "abv": 14.0,
       "volume_cl": 33.0,
-      "brewery": "Beershoppen",
+      "brewery": "Funky Fluid",
       "category": null,
       "prices": [
         {
           "shop_name": "Øltanken",
           "price": 145.0,
-          "url": "https://oltanken.dk/products/ba-day-2025-hazelnu",
+          "url": "https://oltanken.dk/products/ba-day-2025-coconut",
           "discount_pct": 0,
           "old_price": null
         },
@@ -46056,6 +46525,30 @@
       "max_discount_pct": 0
     },
     {
+      "id": 13778,
+      "name": "Omnipollo x Angry Chair – Safari – Barrel Aged Vegan Ice Cream Quadruple Stack Stout – 0,33 l. – 13,0%",
+      "image": "https://www.bestofbeers.dk/wp-content/uploads/2025/09/OmnipolloSafari.jpg",
+      "type": "Stout",
+      "abv": 13.0,
+      "volume_cl": 33.0,
+      "brewery": "Omnipollo x Angry Chair",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Best of Beers",
+          "price": 146.0,
+          "url": "https://www.bestofbeers.dk/shop/omnipollo-x-angry-chair-safari-barrel-aged-vegan-ice-cream-quadruple-stack-stout-033-l-130/",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 146.0,
+      "min_price": 146.0,
+      "shop": "Best of Beers",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
       "id": 13848,
       "name": "Omnipollo x J. Wakefield Brewing – Eton Mess Brush &#8211; Barrel Aged Imperial Stout – 0,33 l. – 14,5%",
       "image": "https://www.bestofbeers.dk/wp-content/uploads/2025/02/OmnipolloJWakefieldMessBrush.jpg",
@@ -46100,6 +46593,30 @@
       "cheapest_price": 146.0,
       "min_price": 146.0,
       "shop": "Best of Beers",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
+      "id": 16673,
+      "name": "Omnipollo x Monkish - BA Coconut Space Brownie",
+      "image": "https://cdn.shopify.com/s/files/1/0776/5209/9400/files/6577482D-F497-4EA6-868E-035C95F6C4A1.jpg?v=1774643190",
+      "type": "Imperial Stout",
+      "abv": 12.3,
+      "volume_cl": 33.0,
+      "brewery": "Omnipollo x Monkish",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Øltanken",
+          "price": 147.0,
+          "url": "https://oltanken.dk/products/omnipollo-x-monkish-ba-coconut-space-brownie",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 147.0,
+      "min_price": 147.0,
+      "shop": "Øltanken",
       "discount_pct": 0,
       "max_discount_pct": 0
     },
@@ -46687,37 +47204,6 @@
       "max_discount_pct": 0
     },
     {
-      "id": 13860,
-      "name": "Salikatt – EMBLA 2024 – Barrel-Aged Bock – 0,375 l. – 9,5%",
-      "image": "https://www.bestofbeers.dk/wp-content/uploads/2024/11/SalikattEMBLA2024.jpg",
-      "type": "Bock",
-      "abv": 9.5,
-      "volume_cl": 37.5,
-      "brewery": "Salikatt",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Vild med Vin",
-          "price": 159.0,
-          "url": "https://www.vildmedvin.dk/salikatt-embla",
-          "discount_pct": 0,
-          "old_price": null
-        },
-        {
-          "shop_name": "Best of Beers",
-          "price": 166.0,
-          "url": "https://www.bestofbeers.dk/shop/salikatt-embla-2024-barrel-aged-bock-0375-l-95/",
-          "discount_pct": 0,
-          "old_price": null
-        }
-      ],
-      "cheapest_price": 159.0,
-      "min_price": 159.0,
-      "shop": "Vild med Vin",
-      "discount_pct": 0,
-      "max_discount_pct": 0
-    },
-    {
       "id": 13877,
       "name": "Garderen, Aquavit, &#8211; 0,2 l. &#8211; 40%",
       "image": "https://www.bestofbeers.dk/wp-content/uploads/2024/01/snaps.jpg",
@@ -46814,6 +47300,30 @@
       "max_discount_pct": 0
     },
     {
+      "id": 15556,
+      "name": "Salikatt EMBLA 2024 - Øl",
+      "image": "https://www.vildmedvin.dk/img/1000/1000/resize/s/a/salikatt_embla_2024.jpg",
+      "type": null,
+      "abv": 9.5,
+      "volume_cl": 37.5,
+      "brewery": "Salikatt",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Vild med Vin",
+          "price": 159.0,
+          "url": "https://www.vildmedvin.dk/salikatt-embla",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 159.0,
+      "min_price": 159.0,
+      "shop": "Vild med Vin",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
       "id": 14484,
       "name": "Goose Island Beer Co. - Bourbon County Brand Stout (BCBS) 2017",
       "image": "https://cdn.shopify.com/s/files/1/0776/5209/9400/files/5D6F4D93-9F3B-4090-8239-4F19535A5D93.jpg?v=1769803169",
@@ -46827,13 +47337,6 @@
           "shop_name": "Øltanken",
           "price": 160.0,
           "url": "https://oltanken.dk/products/goose-island-beer-co-bourbon-county-brand-stout-2020",
-          "discount_pct": 0,
-          "old_price": null
-        },
-        {
-          "shop_name": "Best of Beers",
-          "price": 161.0,
-          "url": "https://www.bestofbeers.dk/shop/goose-island-beer-co-2024-macaroon-stout-050-l-146/",
           "discount_pct": 0,
           "old_price": null
         },
@@ -46944,6 +47447,30 @@
       "cheapest_price": 160.0,
       "min_price": 160.0,
       "shop": "Øltanken",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
+      "id": 13801,
+      "name": "Goose Island Beer Co. – 2024 Macaroon Stout – 0,50 l. – 14,6%",
+      "image": "https://www.bestofbeers.dk/wp-content/uploads/2025/07/GooseIsland2024MacaroonStout.jpg",
+      "type": "Stout",
+      "abv": 14.6,
+      "volume_cl": 50.0,
+      "brewery": "Goose Island Beer Co.",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Best of Beers",
+          "price": 161.0,
+          "url": "https://www.bestofbeers.dk/shop/goose-island-beer-co-2024-macaroon-stout-050-l-146/",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 161.0,
+      "min_price": 161.0,
+      "shop": "Best of Beers",
       "discount_pct": 0,
       "max_discount_pct": 0
     },
@@ -47153,6 +47680,30 @@
           "shop_name": "Best of Beers",
           "price": 166.0,
           "url": "https://www.bestofbeers.dk/shop/the-lost-abbey-brewing-judgment-day-abbey-quad-with-raisins-075-l-102/",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 166.0,
+      "min_price": 166.0,
+      "shop": "Best of Beers",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
+      "id": 13860,
+      "name": "Salikatt – EMBLA 2024 – Barrel-Aged Bock – 0,375 l. – 9,5%",
+      "image": "https://www.bestofbeers.dk/wp-content/uploads/2024/11/SalikattEMBLA2024.jpg",
+      "type": "Bock",
+      "abv": 9.5,
+      "volume_cl": 37.5,
+      "brewery": "Salikatt",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Best of Beers",
+          "price": 166.0,
+          "url": "https://www.bestofbeers.dk/shop/salikatt-embla-2024-barrel-aged-bock-0375-l-95/",
           "discount_pct": 0,
           "old_price": null
         }
@@ -48437,13 +48988,13 @@
       "max_discount_pct": 0
     },
     {
-      "id": 14352,
-      "name": "Brasserie Sir John - Anatomie du Temps",
-      "image": "https://cdn.shopify.com/s/files/1/0776/5209/9400/files/981C64A7-3339-49DA-9FE2-9FB10AC9E734.jpg?v=1778048616",
+      "id": 14129,
+      "name": "Anatomie Du Temps - BA Imperial Stout - Brasserie Sir John Brewing Co.",
+      "image": "https://cdn-main.ideal.shop/images/by_hash/0ff25f0cf8a71ad58817ecbd6b95f3c0ca0196a97805636abdd6f01f69ac27a9/500-0/anatomie.jpg",
       "type": "Imperial Stout",
       "abv": 11.3,
       "volume_cl": 50.0,
-      "brewery": "Brasserie Sir John",
+      "brewery": "Anatomie Du Temps",
       "category": null,
       "prices": [
         {
@@ -48452,13 +49003,6 @@
           "url": "https://www.partner-ads.com/dk/klikbanner.php?bannerid=74625&partnerid=56605&htmlurl=https://www.beer-me.dk/vare/anatomie-du-temps-ba-imperial-stout-brasserie-sir-john-brewing-co",
           "discount_pct": 10.0,
           "old_price": 239.0
-        },
-        {
-          "shop_name": "Øltanken",
-          "price": 249.0,
-          "url": "https://oltanken.dk/products/brasserie-sir-john-anatomie-du-temps",
-          "discount_pct": 0,
-          "old_price": null
         }
       ],
       "cheapest_price": 215.1,
@@ -49568,6 +50112,30 @@
           "shop_name": "Øltanken",
           "price": 249.0,
           "url": "https://oltanken.dk/products/rothaus-rothaus-pils-tannen-zapfle-5-l",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 249.0,
+      "min_price": 249.0,
+      "shop": "Øltanken",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
+      "id": 14352,
+      "name": "Brasserie Sir John - Anatomie du Temps",
+      "image": "https://cdn.shopify.com/s/files/1/0776/5209/9400/files/981C64A7-3339-49DA-9FE2-9FB10AC9E734.jpg?v=1778048616",
+      "type": "Imperial Stout",
+      "abv": 11.3,
+      "volume_cl": 50.0,
+      "brewery": "Brasserie Sir John",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Øltanken",
+          "price": 249.0,
+          "url": "https://oltanken.dk/products/brasserie-sir-john-anatomie-du-temps",
           "discount_pct": 0,
           "old_price": null
         }
@@ -51305,6 +51873,30 @@
       "shop": "Øltanken",
       "discount_pct": 0,
       "max_discount_pct": 0
+    },
+    {
+      "id": 13053,
+      "name": "St. Bernardus Abt 12 Barrel Aged Sour 10% 75cl",
+      "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/st-bernardus-abt-12-barrel-aged-sour-10-75cl.png?v=1742314720",
+      "type": "Sour",
+      "abv": 10.0,
+      "volume_cl": 75.0,
+      "brewery": "Brouwerij St.Bernardus",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Brygshoppen",
+          "price": 325.0,
+          "url": "https://brygshoppen.dk/products/st-bernardus-abt-12-barrel-aged-sour-10-75cl",
+          "discount_pct": 15.6,
+          "old_price": 385.0
+        }
+      ],
+      "cheapest_price": 325.0,
+      "min_price": 325.0,
+      "shop": "Brygshoppen",
+      "discount_pct": 15.6,
+      "max_discount_pct": 15.6
     },
     {
       "id": 14415,

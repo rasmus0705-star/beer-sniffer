@@ -193,32 +193,25 @@
         }
         .hero-search-input::placeholder { color: var(--text-muted); }
 
-        /* DESKTOP (standard): pills wrapper pænt, intet gemmes — mus kan
-           ikke scrolle en vandret liste, så alt skal være synligt. */
         .category-bar {
             display: flex;
             gap: 0.5rem;
-            justify-content: center;
-            flex-wrap: wrap;
+            justify-content: flex-start;
+            flex-wrap: nowrap;
             margin-top: 1rem;
-            padding-bottom: 0.4rem;
+            padding-bottom: 0.5rem;
+            overflow-x: auto;
+            scrollbar-width: none;
+            -webkit-overflow-scrolling: touch;
+            scroll-snap-type: x proximity;
+            -webkit-mask-image: linear-gradient(90deg, transparent 0, #000 24px, #000 calc(100% - 24px), transparent 100%);
+            mask-image: linear-gradient(90deg, transparent 0, #000 24px, #000 calc(100% - 24px), transparent 100%);
         }
         .category-bar::-webkit-scrollbar { display: none; }
-
-        /* TOUCH-MOBIL: her VIRKER swipe, så vi bruger én ren scrollbar
-           linje med fade i kanterne. Kun på pegeskærme. */
-        @media (hover: none) and (pointer: coarse) {
-            .category-bar {
-                flex-wrap: nowrap;
-                justify-content: flex-start;
-                overflow-x: auto;
-                scrollbar-width: none;
-                -webkit-overflow-scrolling: touch;
-                scroll-snap-type: x proximity;
-                -webkit-mask-image: linear-gradient(90deg, transparent 0, #000 24px, #000 calc(100% - 24px), transparent 100%);
-                mask-image: linear-gradient(90deg, transparent 0, #000 24px, #000 calc(100% - 24px), transparent 100%);
-            }
-            .cat-btn { scroll-snap-align: start; }
+        .cat-btn { scroll-snap-align: start; }
+        /* Centrér pills når der ER plads (få nok til at passe på linjen) */
+        @media (min-width: 1101px) {
+            .category-bar { justify-content: center; }
         }
         .cat-btn {
             background: var(--surface2);

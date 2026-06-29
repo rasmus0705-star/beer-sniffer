@@ -152,74 +152,52 @@
             letter-spacing: 0.02em;
         }
 
-        /* ── RENT HERO — søgefeltet er midtpunktet ── */
-        .hero-search { background: var(--surface); border-bottom: 1px solid var(--border); padding: 1.5rem 2rem 1.3rem; }
+        .hero-search { background: var(--surface); border-bottom: 1px solid var(--border); padding: 1.8rem 2rem 1.2rem; }
         .hero-search-inner { max-width: 900px; margin: 0 auto; text-align: center; }
-        .hero-search-sub {
-            font-size: 0.8rem;
-            color: var(--text-muted);
-            margin-bottom: 0.9rem;
-            letter-spacing: 0.02em;
+        .hero-search-title {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 1.8rem;
+            color: var(--gold-light);
+            letter-spacing: 0.06em;
+            margin-bottom: 0.1rem;
         }
-        .hero-search-sub strong { color: var(--gold-light); font-weight: 700; }
-        .hero-search-wrap { position: relative; max-width: 600px; margin: 0 auto; }
+        .hero-search-sub { font-size: 0.78rem; color: var(--text-muted); margin-bottom: 1rem; }
+        .hero-search-wrap { position: relative; max-width: 560px; margin: 0 auto; }
         .hero-search-wrap svg {
             position: absolute;
-            left: 1.3rem;
+            left: 1.2rem;
             top: 50%;
             transform: translateY(-50%);
-            color: var(--gold-dim);
-            width: 22px;
-            height: 22px;
-            transition: color 0.2s;
+            color: var(--text-muted);
+            width: 20px;
+            height: 20px;
         }
-        .hero-search-wrap:focus-within svg { color: var(--gold); }
         .hero-search-input {
             width: 100%;
             background: var(--surface2);
             border: 2px solid var(--border-light);
-            border-radius: 16px;
-            padding: 1.15rem 1.3rem 1.15rem 3.5rem;
+            border-radius: 14px;
+            padding: 1rem 1.2rem 1rem 3.2rem;
             color: var(--text);
             font-family: 'DM Sans', sans-serif;
-            font-size: 1.05rem;
+            font-size: 1rem;
             outline: none;
             transition: border-color 0.2s, box-shadow 0.2s;
         }
         .hero-search-input:focus,
-        .hero-search-input:focus-visible {
-            border-color: var(--gold);
-            box-shadow: 0 0 0 4px rgba(200,146,14,0.12), 0 8px 30px rgba(200,146,14,0.18);
-        }
+        .hero-search-input:focus-visible { border-color: var(--gold); box-shadow: 0 0 30px rgba(200,146,14,0.15); }
         .hero-search-input::placeholder { color: var(--text-muted); }
 
-        /* DESKTOP (standard): pills wrapper pænt, intet gemmes — mus kan
-           ikke scrolle en vandret liste, så alt skal være synligt. */
         .category-bar {
             display: flex;
-            gap: 0.5rem;
+            gap: 0.45rem;
             justify-content: center;
             flex-wrap: wrap;
             margin-top: 1rem;
             padding-bottom: 0.4rem;
+            overflow-x: auto;
         }
         .category-bar::-webkit-scrollbar { display: none; }
-
-        /* TOUCH-MOBIL: her VIRKER swipe, så vi bruger én ren scrollbar
-           linje med fade i kanterne. Kun på pegeskærme. */
-        @media (hover: none) and (pointer: coarse) {
-            .category-bar {
-                flex-wrap: nowrap;
-                justify-content: flex-start;
-                overflow-x: auto;
-                scrollbar-width: none;
-                -webkit-overflow-scrolling: touch;
-                scroll-snap-type: x proximity;
-                -webkit-mask-image: linear-gradient(90deg, transparent 0, #000 24px, #000 calc(100% - 24px), transparent 100%);
-                mask-image: linear-gradient(90deg, transparent 0, #000 24px, #000 calc(100% - 24px), transparent 100%);
-            }
-            .cat-btn { scroll-snap-align: start; }
-        }
         .cat-btn {
             background: var(--surface2);
             border: 1px solid var(--border-light);
@@ -261,24 +239,8 @@
             border-right: 1px solid var(--border);
             flex: 1;
             max-width: 180px;
-            transition: background 0.15s;
         }
         .stat:last-child { border-right: none; }
-        .stat.clickable { cursor: pointer; }
-        .stat.clickable:hover { background: rgba(200,146,14,0.08); }
-        .stat.clickable:hover .stat-number { color: var(--gold-light); }
-        .stat.clickable::after {
-            content: 'Klik for at filtrere';
-            display: block;
-            font-size: 0.5rem;
-            letter-spacing: 0.1em;
-            text-transform: uppercase;
-            color: var(--gold-dim);
-            margin-top: 0.2rem;
-            opacity: 0;
-            transition: opacity 0.15s;
-        }
-        .stat.clickable:hover::after { opacity: 1; }
         .stat-number { font-family: 'Bebas Neue', sans-serif; font-size: 2rem; color: var(--gold-light); line-height: 1; }
         .stat-label { font-size: 0.6rem; letter-spacing: 0.25em; text-transform: uppercase; color: var(--text-muted); margin-top: 0.15rem; }
 
@@ -1037,8 +999,8 @@
             .mobile-filter-count { background: rgba(0,0,0,0.3); padding: 1px 8px; border-radius: 10px; font-size: 0.72rem; }
             .mobile-backdrop { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.6); z-index: 9997; }
             .mobile-backdrop.visible { display: block; }
-            .hero-search { padding: 1.1rem 1rem 0.9rem; }
-            .hero-search-input { font-size: 1rem; padding: 1rem 1.1rem 1rem 3.2rem; }
+            .hero-search { padding: 1.2rem 1rem 0.8rem; }
+            .hero-search-title { font-size: 1.4rem; }
             .cat-btn { font-size: 0.76rem; padding: 0.45rem 0.8rem; }
         }
         @media (max-width: 640px) {
@@ -1116,7 +1078,8 @@
 <!-- HERO SEARCH -->
 <div class="hero-search">
     <div class="hero-search-inner">
-        <p class="hero-search-sub">Søg blandt <strong id="hero-beer-count">2.300+</strong> øl — opdateret dagligt</p>
+        <h2 class="hero-search-title">Find den billigste øl — på få sekunder</h2>
+        <p class="hero-search-sub">Søg blandt <strong id="hero-beer-count">2.300+</strong> øl fra <strong>7 butikker</strong> — opdateret dagligt</p>
         <div class="hero-search-wrap">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-4.35-4.35M17 11A6 6 0 1 1 5 11a6 6 0 0 1 12 0z"/>
@@ -1145,7 +1108,7 @@
 <!-- STATS BAR -->
 <div class="stats-bar" role="region" aria-label="Statistik">
     <div class="stat"><div class="stat-number" id="stat-total">–</div><div class="stat-label">Øl i alt</div></div>
-    <div class="stat clickable" onclick="quickCat('deals')" role="button" tabindex="0" aria-label="Filtrer til aktive tilbud"><div class="stat-number" id="stat-deals">–</div><div class="stat-label">Aktive tilbud</div></div>
+    <div class="stat"><div class="stat-number" id="stat-deals">–</div><div class="stat-label">Aktive tilbud</div></div>
     <div class="stat"><div class="stat-number" id="stat-max-discount">–</div><div class="stat-label">Største rabat</div></div>
     <div class="stat"><div class="stat-number" id="stat-cheapest">–</div><div class="stat-label">Billigste (kr)</div></div>
 </div>
@@ -1322,7 +1285,7 @@
 
     let allBeers = [];
     let currentPage = 1, totalPages = 1, totalCount = 0;
-    let activeFlags = new Set(); let currentSort = 'price-asc';
+    let currentFilter = 'all', currentSort = 'price-asc';
     let selectedShops = new Set(), selectedTypes = new Set();
     let priceMin = 0, priceMax = 500, abvMin = 0, abvMax = 15;
     let favorites = new Set(JSON.parse(localStorage.getItem('bs_favorites') || '[]'));
@@ -1345,7 +1308,7 @@
 
     // Preferences
     function savePrefs() {
-        localStorage.setItem('bs_prefs', JSON.stringify({ sort: currentSort, types: [...selectedTypes], shops: [...selectedShops], flags: [...activeFlags], abvMin, abvMax }));
+        localStorage.setItem('bs_prefs', JSON.stringify({ sort: currentSort, types: [...selectedTypes], shops: [...selectedShops], filter: currentFilter, abvMin, abvMax }));
     }
     function loadPrefs() {
         const p = JSON.parse(localStorage.getItem('bs_prefs') || '{}');
@@ -1354,13 +1317,11 @@
         if (p.shops) selectedShops = new Set(p.shops);
         if (p.abvMin !== undefined) abvMin = p.abvMin;
         if (p.abvMax !== undefined) abvMax = p.abvMax;
-        if (p.flags) activeFlags = new Set(p.flags);
-        syncFlagButtons();
-        // Genskab aktive stilart-pills visuelt
-        selectedTypes.forEach(t => {
-            const b = document.querySelector(`.cat-btn[data-cat="${t}"]`);
-            if (b) b.classList.add('active');
-        });
+        if (p.filter) {
+            currentFilter = p.filter;
+            document.querySelectorAll('.sidebar-filter-btn[data-filter]').forEach(b =>
+                b.classList.toggle('active', b.dataset.filter === p.filter));
+        }
     }
 
     // Favorites
@@ -1459,31 +1420,46 @@
     }
 
     // Category shortcuts
-    // ADDITIV: hver pill toggler uafhængigt. Flag (deals/smagekasse) og
-    // stilarter kan kombineres frit — intet rydder noget andet.
-    const FLAG_CATS = { 'deals': 'deals', 'smagekasse': 'smagekasse' };
-
     function quickCat(cat) {
         const btn = document.querySelector(`.cat-btn[data-cat="${cat}"]`);
 
-        if (FLAG_CATS[cat]) {
-            const flag = FLAG_CATS[cat];
-            if (activeFlags.has(flag)) {
-                activeFlags.delete(flag);
-                if (btn) btn.classList.remove('active');
-            } else {
-                activeFlags.add(flag);
-                if (btn) btn.classList.add('active');
-                if (flag === 'deals') { currentSort = 'discount'; document.getElementById('sort-select').value = 'discount'; }
-            }
-            syncFlagButtons();
+        if (cat === 'deals') {
+            selectedTypes.clear();
+            document.querySelectorAll('.cat-btn').forEach(b => b.classList.remove('active'));
+            if (btn) btn.classList.add('active');
+            currentFilter = 'deals';
+            currentSort = 'discount';
+            document.getElementById('sort-select').value = 'discount';
+            document.querySelectorAll('.sidebar-filter-btn[data-filter]').forEach(b =>
+                b.classList.toggle('active', b.dataset.filter === 'deals')
+            );
+            updateTypeBtn();
+
+        } else if (cat === 'smagekasse') {
+            selectedTypes.clear();
+            document.querySelectorAll('.cat-btn').forEach(b => b.classList.remove('active'));
+            if (btn) btn.classList.add('active');
+            currentFilter = 'smagekasse';
+            document.querySelectorAll('.sidebar-filter-btn[data-filter]').forEach(b =>
+                b.classList.toggle('active', b.dataset.filter === 'smagekasse')
+            );
+            updateTypeBtn();
+
         } else {
+            currentFilter = 'all';
+            document.querySelectorAll('.sidebar-filter-btn[data-filter]').forEach(b =>
+                b.classList.toggle('active', b.dataset.filter === 'all')
+            );
+
             if (selectedTypes.has(cat)) {
                 selectedTypes.delete(cat);
                 if (btn) btn.classList.remove('active');
             } else {
                 selectedTypes.add(cat);
                 if (btn) btn.classList.add('active');
+                document.querySelectorAll('.cat-btn[data-cat="deals"], .cat-btn[data-cat="smagekasse"]').forEach(b =>
+                    b.classList.remove('active')
+                );
             }
             updateTypeBtn();
         }
@@ -1494,19 +1470,6 @@
         renderActiveFilters();
         gtag('event', 'kategori_genvej', { kategori: cat });
         window.scrollTo({ top: document.querySelector('.grid-wrap').offsetTop - 60, behavior: 'smooth' });
-    }
-
-    // Holder pills og sidebar-knapper synkroniserede med activeFlags
-    function syncFlagButtons() {
-        document.querySelectorAll('.cat-btn[data-cat]').forEach(b => {
-            const c = b.dataset.cat;
-            if (FLAG_CATS[c]) b.classList.toggle('active', activeFlags.has(FLAG_CATS[c]));
-        });
-        document.querySelectorAll('.sidebar-filter-btn[data-filter]').forEach(b => {
-            const f = b.dataset.filter;
-            if (f === 'all') b.classList.toggle('active', activeFlags.size === 0);
-            else b.classList.toggle('active', activeFlags.has(f));
-        });
     }
 
     function esc(s) { return (s || '').replace(/'/g, ' ').replace(/"/g, ' '); }
@@ -1622,11 +1585,10 @@
         if (selectedShops.size > 0) filtered = filtered.filter(b => b.prices && b.prices.some(p => selectedShops.has(p.shop_name)));
         if (selectedTypes.size > 0) filtered = filtered.filter(b => b.type && selectedTypes.has(b.type));
         filtered = filtered.filter(b => {
-            // ADDITIVE flag — alle aktive flag skal være opfyldt samtidig
-            if (activeFlags.has('deals') && (!b.max_discount_pct || b.max_discount_pct === 0)) return false;
-            if (activeFlags.has('alcohol-free') && !isAlcoholFree(b)) return false;
-            if (activeFlags.has('smagekasse') && !isSmagekasse(b)) return false;
-            if (activeFlags.has('favs') && !favorites.has(b.normalized_name || b.name)) return false;
+            if (currentFilter === 'deals' && (!b.max_discount_pct || b.max_discount_pct === 0)) return false;
+            if (currentFilter === 'alcohol-free' && !isAlcoholFree(b)) return false;
+            if (currentFilter === 'smagekasse' && !isSmagekasse(b)) return false;
+            if (currentFilter === 'favs' && !favorites.has(b.normalized_name || b.name)) return false;
             return true;
         });
         filtered = filtered.filter(b => { const p = b.min_price || 0; return p >= priceMin && p <= priceMax; });
@@ -1770,12 +1732,12 @@
         const sidebarChips = document.getElementById('sidebar-chips');
         const sidebarSection = document.getElementById('sidebar-active-filters');
         const chips = [], sc = [];
-        const flagLabels = { 'deals':'🔥 Tilbud','favs':'❤️ Favoritter','alcohol-free':'🚫 Alkoholfri','smagekasse':'📦 Smagekasser' };
-        activeFlags.forEach(f => {
-            const l = flagLabels[f] || f;
-            chips.push(`<span class="filter-chip">${l}<span class="x" onclick="clearFilter('flag','${f}')">✕</span></span>`);
-            sc.push(`<span class="sidebar-chip" onclick="clearFilter('flag','${f}')">${l}<span class="x">✕</span></span>`);
-        });
+        if (currentFilter !== 'all') {
+            const labels = { 'deals':'🔥 Tilbud','favs':'❤️ Favoritter','alcohol-free':'🚫 Alkoholfri','smagekasse':'📦 Smagekasser' };
+            const l = labels[currentFilter]||currentFilter;
+            chips.push(`<span class="filter-chip">${l}<span class="x" onclick="clearFilter('quick')">✕</span></span>`);
+            sc.push(`<span class="sidebar-chip" onclick="clearFilter('quick')">${l}<span class="x">✕</span></span>`);
+        }
         selectedShops.forEach(shop => {
             const s = shop.replace(/'/g,"\\'");
             chips.push(`<span class="filter-chip">🏪 ${shop}<span class="x" onclick="clearFilter('shop','${s}')">✕</span></span>`);
@@ -1810,7 +1772,7 @@
     }
 
     window.clearFilter = function(type, value) {
-        if (type==='flag') { activeFlags.delete(value); syncFlagButtons(); }
+        if (type==='quick') { currentFilter='all'; document.querySelectorAll('.sidebar-filter-btn[data-filter]').forEach(b=>b.classList.toggle('active',b.dataset.filter==='all')); document.querySelectorAll('.cat-btn').forEach(b=>b.classList.remove('active')); }
         else if (type==='shop') { selectedShops.delete(value); updateShopBtn(); }
         else if (type==='type') { selectedTypes.delete(value); updateTypeBtn(); document.querySelectorAll('.cat-btn').forEach(b=>b.classList.remove('active')); }
         else if (type==='search') { document.getElementById('search').value=''; }
@@ -1921,18 +1883,11 @@
 
         document.querySelectorAll('.sidebar-filter-btn[data-filter]').forEach(btn => {
             btn.addEventListener('click', () => {
-                const f = btn.dataset.filter;
-                if (f === 'all') {
-                    // "Alle øl" rydder kun flag (ikke stilart/butik/pris)
-                    activeFlags.clear();
-                } else if (activeFlags.has(f)) {
-                    activeFlags.delete(f);
-                } else {
-                    activeFlags.add(f);
-                    if (f === 'deals') { currentSort='discount'; document.getElementById('sort-select').value='discount'; }
-                }
-                currentPage=1; syncFlagButtons();
-                savePrefs(); renderGrid(); renderActiveFilters(); gtag('event','filter_klik',{filter:f});
+                document.querySelectorAll('.sidebar-filter-btn[data-filter]').forEach(b=>b.classList.remove('active'));
+                btn.classList.add('active'); currentFilter=btn.dataset.filter; currentPage=1;
+                if (currentFilter==='deals') { currentSort='discount'; document.getElementById('sort-select').value='discount'; }
+                document.querySelectorAll('.cat-btn').forEach(b=>b.classList.remove('active'));
+                savePrefs(); renderGrid(); renderActiveFilters(); gtag('event','filter_klik',{filter:currentFilter});
                 if (isMobile()) closeSidebar();
             });
         });
@@ -1942,15 +1897,16 @@
         document.getElementById('mobile-backdrop').addEventListener('click', closeSidebar);
 
         function resetAllFilters() {
-            activeFlags.clear(); selectedShops.clear(); currentSort='price-asc'; currentPage=1;
+            currentFilter='all'; selectedShops.clear(); currentSort='price-asc'; currentPage=1;
             selectedTypes.clear(); priceMin=0; abvMin=0; abvMax=15;
             document.getElementById('search').value='';
             document.getElementById('price-min').value=0;
             document.getElementById('price-max').value=parseInt(document.getElementById('price-max').max);
             document.getElementById('abv-min').value=0; document.getElementById('abv-max').value=15;
             updateDualRange('price'); updateDualRange('abv'); updateSortBtn(); updateShopBtn(); updateTypeBtn();
+            document.querySelectorAll('.sidebar-filter-btn[data-filter]').forEach(b=>b.classList.remove('active'));
+            document.querySelector('.sidebar-filter-btn[data-filter=all]').classList.add('active');
             document.querySelectorAll('.cat-btn').forEach(b=>b.classList.remove('active'));
-            syncFlagButtons();
             savePrefs(); renderGrid(); renderActiveFilters(); gtag('event','nulstil_filter');
         }
         document.getElementById('reset-btn').addEventListener('click', resetAllFilters);

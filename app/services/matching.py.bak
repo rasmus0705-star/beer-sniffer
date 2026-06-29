@@ -79,13 +79,6 @@ _STOP_WORDS = {
 }
 
 
-_VARIANT_WORDS = {
-    "barrel", "ba", "bourbon", "whisky", "whiskey", "cognac", "rum",
-    "wine", "reserva", "reserve", "vintage", "anniversary", "jubilaeum",
-    "jubilæum", "calvados", "tequila", "armagnac", "sherry", "port",
-}
-
-
 def strip_accents(s: str) -> str:
     return (s.replace("æ", "ae").replace("ø", "oe").replace("å", "aa")
              .replace("Æ", "ae").replace("Ø", "oe").replace("Å", "aa")
@@ -153,27 +146,6 @@ _BREWERY_PREFIXES = [
     "brouwerij", "brewery", "bryggeri", "bryggeriet", "brauerei",
     "the ", "het ", "brasserie", "brygghus", "bryghus",
 ]
-
-
-def _variant_markers(name):
-    """
-    Returnerer sættet af variant-markører i et navn. Disse signalerer en
-    SÆRLIG version (fadlagret, årgang, special) — ikke bare en stilart.
-    Bevidst konservativ: kun ord der reelt betyder "anden version".
-    """
-    if not name:
-        return set()
-    words = set(strip_accents(name.lower()).replace("-", " ").split())
-    return words & _VARIANT_WORDS
-
-
-def variants_compatible(name_a, name_b) -> bool:
-    """
-    Hård gate: hvis det ene navn har en variant-markør (barrel, bourbon,
-    vintage ...) som det andet IKKE har, er det forskellige produkter.
-    Begge skal have præcis samme sæt variant-markører for at matche.
-    """
-    return _variant_markers(name_a) == _variant_markers(name_b)
 
 
 def _norm_brewery(b):
