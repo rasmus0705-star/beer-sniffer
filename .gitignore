@@ -19,3 +19,7 @@ PATCH_INSTRUKTIONER.txt
 patch_mobile_*.py
 # Lokale scraper-caches (vol/abv aendrer sig ikke)
 _pagecache_*.json
+
+# Arbejds-backups - git er backup nok
+*.bak
+*.bak2
