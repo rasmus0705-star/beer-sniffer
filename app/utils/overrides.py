@@ -41,6 +41,7 @@ COLUMNS = [
     ("Bryggeri",   "brewery",     True,  22),
     ("ABV",        "abv",         True,  8),
     ("Noter",      "noter",       True,  28),
+    ("Ignorer",    "_ignorer",    True,  9),
     ("Sidst_set",  "_sidst_set",  False, 12),
     ("URL (nøgle — rør ikke)", "_key", False, 50),
 ]
@@ -115,6 +116,13 @@ def _to_int(v):
     return int(f) if f is not None else None
 
 
+def _parse_ignorer(v):
+    """x / ja / 1 / true -> True. Alt andet -> False."""
+    if v is None:
+        return False
+    return str(v).strip().lower() in ("x", "ja", "1", "true", "y", "yes")
+
+
 def load_fejlliste(path):
     """Læs eksisterende ark -> {key: row_dict}. Tom dict hvis filen ikke findes."""
     existing = {}
@@ -139,6 +147,7 @@ def load_fejlliste(path):
             "noter": _clean(row[idx["noter"]]) if "noter" in idx else None,
             "shop_name": _clean(row[idx["shop_name"]]) if "shop_name" in idx else None,
             "name": _clean(row[idx["name"]]) if "name" in idx else None,
+            "_ignorer": _parse_ignorer(row[idx["_ignorer"]]) if "_ignorer" in idx else False,
         }
         existing[str(key)] = rec
     return existing
@@ -233,8 +242,9 @@ def write_fejlliste(items, existing, path):
             "brewery": _clean(item.get("brewery")),
             "abv": _clean(item.get("abv")),
             "noter": rec.get("noter"),
-            "_mangler": ", ".join(miss),
-            "_status": "MANGLER" if miss else "OK",
+            "_ignorer": rec.get("_ignorer", False),
+            "_mangler": "" if rec.get("_ignorer") else ", ".join(miss),
+            "_status": "IGNORERET" if rec.get("_ignorer") else ("MANGLER" if miss else "OK"),
             "_sidst_set": today,
             "_stale": False,
         }
@@ -252,14 +262,15 @@ def write_fejlliste(items, existing, path):
             "brewery": rec.get("brewery"),
             "abv": rec.get("abv"),
             "noter": rec.get("noter"),
+            "_ignorer": rec.get("_ignorer", False),
             "_mangler": "",
-            "_status": "IKKE SET",
+            "_status": "IGNORERET" if rec.get("_ignorer") else "IKKE SET",
             "_sidst_set": "",
             "_stale": True,
         }
 
     # Sortér: MANGLER øverst, så OK, så IKKE SET; derefter butik+navn
-    order = {"MANGLER": 0, "OK": 1, "IKKE SET": 2}
+    order = {"MANGLER": 0, "OK": 1, "IKKE SET": 2, "IGNORERET": 3}
     ordered = sorted(
         rows.values(),
         key=lambda r: (order.get(r["_status"], 9), r.get("shop_name") or "", r.get("name") or ""),
