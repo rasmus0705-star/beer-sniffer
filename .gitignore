@@ -23,3 +23,8 @@ _pagecache_*.json
 # Arbejds-backups - git er backup nok
 *.bak
 *.bak2
+
+# Midlertidige filer og facit-backups
+_udklip.txt
+fejlliste_backup_*.xlsx
+fejlliste_foer_rens.xlsx
