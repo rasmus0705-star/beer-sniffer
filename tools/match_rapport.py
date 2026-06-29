@@ -28,7 +28,8 @@ try:
 except ImportError:
     HAR_FUZZ = False
 
-DATA = "data.json"
+import os as _os
+DATA = _os.path.join(_os.path.dirname(_os.path.dirname(_os.path.abspath(__file__))), "data.json")
 OUTPUT = "match_rapport.xlsx"
 
 # ---- Farver (samme palet som fejlliste) ----
