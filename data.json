@@ -1,8 +1,8 @@
 {
-  "updated_at": "2026-06-29T17:51:40.177845",
+  "updated_at": "2026-06-29T18:51:27.678157",
   "stats": {
-    "total": 2168,
-    "deals": 574,
+    "total": 2175,
+    "deals": 575,
     "shops": 7,
     "shop_names": [
       "A Good Case",
@@ -1775,7 +1775,7 @@
       "max_discount_pct": 0
     },
     {
-      "id": 16765,
+      "id": 16785,
       "name": "Leo Beer - Øl",
       "image": "https://www.vildmedvin.dk/img/1000/1000/resize/l/e/leo-beer-33-cl_large.jpg",
       "type": "Lager Øl",
@@ -1998,30 +1998,6 @@
       "max_discount_pct": 0
     },
     {
-      "id": 15317,
-      "name": "Sierra Nevada, Big Little Thing - BEDST FØR: 13.07.2026 - Øl",
-      "image": "https://www.vildmedvin.dk/img/1000/1000/resize/b/i/big_little_thing.jpg",
-      "type": "IPA",
-      "abv": 9.0,
-      "volume_cl": 35.5,
-      "brewery": "Sierra Nevada",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Vild med Vin",
-          "price": 24.0,
-          "url": "https://www.vildmedvin.dk/catalog/product/view/id/439415/s/sierra-nevada-big-little-thing/",
-          "discount_pct": 51.0,
-          "old_price": 49.0
-        }
-      ],
-      "cheapest_price": 24.0,
-      "min_price": 24.0,
-      "shop": "Vild med Vin",
-      "discount_pct": 51.0,
-      "max_discount_pct": 51.0
-    },
-    {
       "id": 15340,
       "name": "Thisted Bryghus, Classic 50 cl. Alkoholfri - Øl",
       "image": "https://www.vildmedvin.dk/img/1000/1000/resize/d/d/ddd_2_3.jpg",
@@ -2131,6 +2107,30 @@
           "shop_name": "Vild med Vin",
           "price": 24.0,
           "url": "https://www.vildmedvin.dk/wrexham-lager",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 24.0,
+      "min_price": 24.0,
+      "shop": "Vild med Vin",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
+      "id": 16784,
+      "name": "Efes Pilsner - Øl",
+      "image": "https://www.vildmedvin.dk/img/1000/1000/resize/e/f/efes_pilsner_1.jpg",
+      "type": "Pilsner",
+      "abv": 5.0,
+      "volume_cl": 33.0,
+      "brewery": "Efes",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Vild med Vin",
+          "price": 24.0,
+          "url": "https://www.vildmedvin.dk/efes-pilsner",
           "discount_pct": 0,
           "old_price": null
         }
@@ -2715,7 +2715,7 @@
       "max_discount_pct": 24.2
     },
     {
-      "id": 16763,
+      "id": 16777,
       "name": "Belgian Brown 6,8% 33cl",
       "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/belgien-brown-33cl.png?v=1753443086",
       "type": "Dubbel",
@@ -2911,7 +2911,7 @@
       "name": "Skands - My Hazy IPA - New England IPA",
       "image": "https://cdn.shopify.com/s/files/1/0402/1239/8243/files/Skands_MyHazy.png?v=1708991495",
       "type": "New England IPA",
-      "abv": null,
+      "abv": 5.0,
       "volume_cl": 50.0,
       "brewery": "Best before: 31/07-2026",
       "category": null,
@@ -4783,7 +4783,7 @@
       "image": "https://cdn.shopify.com/s/files/1/0776/5209/9400/files/B6E565AD-7BF6-44B1-AEB8-8977D50AE04C.jpg?v=1778021983",
       "type": "Pale Ale",
       "abv": 0.3,
-      "volume_cl": null,
+      "volume_cl": 33.0,
       "brewery": "Omnipollo",
       "category": null,
       "prices": [
@@ -7217,7 +7217,7 @@
       "max_discount_pct": 0
     },
     {
-      "id": 16762,
+      "id": 16776,
       "name": "It's A Blond 5,9% 33cl",
       "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/its-a-blond-33cl_27db0da2-5945-4111-8396-339312eae8d3.png?v=1773482918",
       "type": "Blond",
@@ -7879,7 +7879,7 @@
       "max_discount_pct": 0
     },
     {
-      "id": 16759,
+      "id": 16773,
       "name": "Maître Tripel 8,5% 33cl",
       "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/maitre-tripel-8-5-33cl.png?v=1733847666",
       "type": "Tripel",
@@ -9785,7 +9785,7 @@
       "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/martha-sexy-blond-8.png?v=1760360351",
       "type": "Blond",
       "abv": 8.0,
-      "volume_cl": null,
+      "volume_cl": 33.0,
       "brewery": "The Brew Society",
       "category": null,
       "prices": [
@@ -9809,7 +9809,7 @@
       "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/martha-guilty-rouge-8.png?v=1760359882",
       "type": "Frugtøl",
       "abv": 8.0,
-      "volume_cl": null,
+      "volume_cl": 33.0,
       "brewery": "The Brew Society",
       "category": null,
       "prices": [
@@ -10092,7 +10092,7 @@
       "max_discount_pct": 10.3
     },
     {
-      "id": 16760,
+      "id": 16774,
       "name": "Imperial Stout 9,3% 33cl",
       "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/imperial-stout-9-3-33cl_e5717b14-1296-4555-8e23-bc8da32992e9.png?v=1753446200",
       "type": "Imperial Stout",
@@ -11251,6 +11251,30 @@
       "max_discount_pct": 28.5
     },
     {
+      "id": 12959,
+      "name": "Gulden Draak Fire 10,5% 33cl",
+      "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/gulden-draak-fire-10-5-33cl.png?v=1760276233",
+      "type": "Quadrupel",
+      "abv": 10.5,
+      "volume_cl": 33.0,
+      "brewery": "Brouwerij Van Steenberge",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Brygshoppen",
+          "price": 36.0,
+          "url": "https://brygshoppen.dk/products/gulden-draak-9000-quadrupel-33cl",
+          "discount_pct": 0,
+          "old_price": 0.0
+        }
+      ],
+      "cheapest_price": 36.0,
+      "min_price": 36.0,
+      "shop": "Brygshoppen",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
       "id": 13260,
       "name": "St. Bernardus Abt. 12 10% 33cl",
       "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/st-bernardus-abt-12-33cl_3cbdd9f7-434b-4699-a06c-bcdf84ccb952.png?v=1767449280",
@@ -11273,37 +11297,6 @@
           "url": "https://www.bestofbeers.dk/shop/st-bernardus-abt-12-033-l-10/",
           "discount_pct": 0,
           "old_price": null
-        },
-        {
-          "shop_name": "Beershoppen",
-          "price": 275.0,
-          "url": "https://beershoppen.dk/products/st-bernardus-abt-12-magnumflaske-1-5-liter-10",
-          "discount_pct": 0,
-          "old_price": null
-        }
-      ],
-      "cheapest_price": 36.0,
-      "min_price": 36.0,
-      "shop": "Brygshoppen",
-      "discount_pct": 0,
-      "max_discount_pct": 0
-    },
-    {
-      "id": 12959,
-      "name": "Gulden Draak Fire 10,5% 33cl",
-      "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/gulden-draak-fire-10-5-33cl.png?v=1760276233",
-      "type": "Quadrupel",
-      "abv": 10.5,
-      "volume_cl": 33.0,
-      "brewery": "Brouwerij Van Steenberge",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Brygshoppen",
-          "price": 36.0,
-          "url": "https://brygshoppen.dk/products/gulden-draak-9000-quadrupel-33cl",
-          "discount_pct": 0,
-          "old_price": 0.0
         }
       ],
       "cheapest_price": 36.0,
@@ -12051,7 +12044,7 @@
       "name": "Orval 6,2 33cl",
       "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/orval-6-2-33cl.png?v=1767465200",
       "type": "Tripel",
-      "abv": null,
+      "abv": 6.2,
       "volume_cl": 33.0,
       "brewery": "Brasserie d'Orval",
       "category": null,
@@ -18378,30 +18371,6 @@
       "max_discount_pct": 0
     },
     {
-      "id": 12924,
-      "name": "Duchesse de Bourgogne 6,2% 37,5",
-      "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/duchesse-de-bourgogne-6-2-37-5.png?v=1765012389",
-      "type": "Sour",
-      "abv": 6.2,
-      "volume_cl": 75.0,
-      "brewery": "Brouwerij Verhaeghe",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Brygshoppen",
-          "price": 45.0,
-          "url": "https://brygshoppen.dk/products/duchesse-de-bourgogne-6-2-37-5",
-          "discount_pct": 0,
-          "old_price": 0.0
-        }
-      ],
-      "cheapest_price": 45.0,
-      "min_price": 45.0,
-      "shop": "Brygshoppen",
-      "discount_pct": 0,
-      "max_discount_pct": 0
-    },
-    {
       "id": 13057,
       "name": "Kriek Boon 4% 37,5cl",
       "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/boon-kriek-37cl.png?v=1741797834",
@@ -18571,8 +18540,8 @@
       "name": "Dessert In A Can - Triple Berry Pavlova",
       "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/dessert-in-a-can-triple-berry-pavlova.png?v=1770379336",
       "type": "Tripel",
-      "abv": null,
-      "volume_cl": null,
+      "abv": 10.5,
+      "volume_cl": 33.0,
       "brewery": "Amundsen Brewery",
       "category": null,
       "prices": [
@@ -18615,19 +18584,19 @@
       "max_discount_pct": 0
     },
     {
-      "id": 12906,
-      "name": "Dessert In A Can - Mamma's Cherry Pie 10,5% 33cl",
-      "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/dessert-in-a-can-mammas-cherry-pie-10-5-33cl.png?v=1770380982",
-      "type": "Pastry Stout",
-      "abv": 10.5,
-      "volume_cl": 33.0,
-      "brewery": "Amundsen Brewery",
+      "id": 16769,
+      "name": "Duchesse de Bourgogne 6,2% 37,5",
+      "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/duchesse-de-bourgogne-6-2-37-5.png?v=1765012389",
+      "type": "Sour",
+      "abv": 6.2,
+      "volume_cl": 37.5,
+      "brewery": "Brouwerij Verhaeghe",
       "category": null,
       "prices": [
         {
           "shop_name": "Brygshoppen",
           "price": 45.0,
-          "url": "https://brygshoppen.dk/products/dessert-in-a-can-mammas-cherry-pie-10-5-33cl",
+          "url": "https://brygshoppen.dk/products/duchesse-de-bourgogne-6-2-37-5",
           "discount_pct": 0,
           "old_price": 0.0
         }
@@ -19006,7 +18975,7 @@
       "max_discount_pct": 0
     },
     {
-      "id": 16761,
+      "id": 16775,
       "name": "Ry Pilsner 5,6% 50cl",
       "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/ry-pilsner.png?v=1747399627",
       "type": "Pilsner",
@@ -19942,7 +19911,7 @@
       "max_discount_pct": 0
     },
     {
-      "id": 16764,
+      "id": 16783,
       "name": "To Øl, #DIPA - Øl",
       "image": "https://www.vildmedvin.dk/img/1000/1000/resize/7/7/7777_1..jpg",
       "type": "Double IPA",
@@ -22200,7 +22169,7 @@
       "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/paix-dieu-10_e295b57c-1a59-451d-9066-027900b1cee4.png?v=1773487244",
       "type": "Tripel",
       "abv": 10.0,
-      "volume_cl": null,
+      "volume_cl": 33.0,
       "brewery": "Brasserie Caulier",
       "category": null,
       "prices": [
@@ -22462,6 +22431,30 @@
           "shop_name": "Vild med Vin",
           "price": 49.0,
           "url": "https://www.vildmedvin.dk/midtfyns-moonshine",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 49.0,
+      "min_price": 49.0,
+      "shop": "Vild med Vin",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
+      "id": 15317,
+      "name": "Sierra Nevada, Big Little Thing - BEDST FØR: 13.07.2026 - Øl",
+      "image": "https://www.vildmedvin.dk/img/1000/1000/resize/b/i/big_little_thing.jpg",
+      "type": "IPA",
+      "abv": 9.0,
+      "volume_cl": 35.5,
+      "brewery": "Sierra Nevada",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Vild med Vin",
+          "price": 49.0,
+          "url": "https://www.vildmedvin.dk/catalog/product/view/id/439415/s/sierra-nevada-big-little-thing/",
           "discount_pct": 0,
           "old_price": null
         }
@@ -24141,7 +24134,7 @@
       "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/stift-engelszell-gregorius-10-5_9e52114a-0794-4a86-8031-816b43a14d99.png?v=1773484809",
       "type": "Quadrupel",
       "abv": 10.5,
-      "volume_cl": null,
+      "volume_cl": 33.0,
       "brewery": "Stift Engelszell",
       "category": null,
       "prices": [
@@ -25964,30 +25957,6 @@
       "max_discount_pct": 18.2
     },
     {
-      "id": 16554,
-      "name": "Smooth Criminals: Cosmic Blast 6,5% 33cl",
-      "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/smooth-criminals-cosmic-blast-6-5-33cl.png?v=1782396867",
-      "type": "Sour",
-      "abv": 6.5,
-      "volume_cl": 33.0,
-      "brewery": "Brouwerij Frontaal",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Brygshoppen",
-          "price": 54.0,
-          "url": "https://brygshoppen.dk/products/smooth-criminals-exotic-cream-6-5-33cl",
-          "discount_pct": 0,
-          "old_price": 0.0
-        }
-      ],
-      "cheapest_price": 54.0,
-      "min_price": 54.0,
-      "shop": "Brygshoppen",
-      "discount_pct": 0,
-      "max_discount_pct": 0
-    },
-    {
       "id": 16551,
       "name": "Smooth Criminals: Pornstar Martini 6,5% 33cl",
       "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/smooth-criminals-pornstar-martini-6-5-33cl.png?v=1778684442",
@@ -26091,6 +26060,30 @@
       "max_discount_pct": 0
     },
     {
+      "id": 16766,
+      "name": "Smooth Criminals: Exotic Cream 6,5% 33cl",
+      "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/smooth-criminals-exotic-cream-6-5-33cl.png?v=1782649767",
+      "type": "Sour",
+      "abv": 6.5,
+      "volume_cl": 33.0,
+      "brewery": "Frontaal Brewing Co.",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Brygshoppen",
+          "price": 54.0,
+          "url": "https://brygshoppen.dk/products/smooth-criminals-exotic-cream-6-5-33cl",
+          "discount_pct": 0,
+          "old_price": 0.0
+        }
+      ],
+      "cheapest_price": 54.0,
+      "min_price": 54.0,
+      "shop": "Brygshoppen",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
       "id": 16553,
       "name": "Smooth Criminals: Orange Vanilla 6,5% 33cl",
       "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/smooth-criminals-orange-vanilla-6-5-33cl.png?v=1782397183",
@@ -26104,6 +26097,30 @@
           "shop_name": "Brygshoppen",
           "price": 54.0,
           "url": "https://brygshoppen.dk/products/smooth-criminals-orange-vanilla-6-5-33cl",
+          "discount_pct": 0,
+          "old_price": 0.0
+        }
+      ],
+      "cheapest_price": 54.0,
+      "min_price": 54.0,
+      "shop": "Brygshoppen",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
+      "id": 16554,
+      "name": "Smooth Criminals: Cosmic Blast 6,5% 33cl",
+      "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/smooth-criminals-cosmic-blast-6-5-33cl.png?v=1782396867",
+      "type": "Sour",
+      "abv": 6.5,
+      "volume_cl": 33.0,
+      "brewery": "Brouwerij Frontaal",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Brygshoppen",
+          "price": 54.0,
+          "url": "https://brygshoppen.dk/products/smooth-criminals-cosmic-blast-6-5-33cl",
           "discount_pct": 0,
           "old_price": 0.0
         }
@@ -28624,7 +28641,7 @@
       "image": "https://cdn.shopify.com/s/files/1/0776/5209/9400/files/AA332ED5-D0E7-4DF9-AE0D-FECFDC538A40.jpg?v=1781717476",
       "type": "Sour",
       "abv": 5.5,
-      "volume_cl": null,
+      "volume_cl": 47.3,
       "brewery": "Vault City",
       "category": null,
       "prices": [
@@ -28672,7 +28689,7 @@
       "image": "https://cdn.shopify.com/s/files/1/0776/5209/9400/files/724F948B-DC3D-4C17-BD1C-954591F9F092.jpg?v=1780482845",
       "type": "India Pale Ale (IPA)",
       "abv": 0.5,
-      "volume_cl": null,
+      "volume_cl": 44.0,
       "brewery": "Cloudwater x The Veil",
       "category": null,
       "prices": [
@@ -29072,7 +29089,7 @@
       "max_discount_pct": 0
     },
     {
-      "id": 16757,
+      "id": 16771,
       "name": "Öö 10,5% 33cl",
       "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/oo-10-5-33cl.png?v=1750597033",
       "type": "Imperial Stout",
@@ -30818,30 +30835,6 @@
       "max_discount_pct": 0
     },
     {
-      "id": 12958,
-      "name": "La Moneuse Spéciale Noël 8% 37,5",
-      "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/la-moneuse-speciale-noel-8-37-5.png?v=1761848993",
-      "type": "Saison - Farmhouse Ale",
-      "abv": 8.0,
-      "volume_cl": 75.0,
-      "brewery": "Brasserie de Blaugies",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Brygshoppen",
-          "price": 60.0,
-          "url": "https://brygshoppen.dk/products/la-moneuse-speciale-noel-8-37-5",
-          "discount_pct": 0,
-          "old_price": 0.0
-        }
-      ],
-      "cheapest_price": 60.0,
-      "min_price": 60.0,
-      "shop": "Brygshoppen",
-      "discount_pct": 0,
-      "max_discount_pct": 0
-    },
-    {
       "id": 12971,
       "name": "Saison d'Epeautre 6% 37,5cl",
       "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/saison-depeautre-6-37-5cl.png?v=1761669355",
@@ -31237,6 +31230,30 @@
       "max_discount_pct": 0
     },
     {
+      "id": 16770,
+      "name": "La Moneuse Spéciale Noël 8% 37,5",
+      "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/la-moneuse-speciale-noel-8-37-5.png?v=1761848993",
+      "type": "Saison - Farmhouse Ale",
+      "abv": 8.0,
+      "volume_cl": 37.5,
+      "brewery": "Brasserie de Blaugies",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Brygshoppen",
+          "price": 60.0,
+          "url": "https://brygshoppen.dk/products/la-moneuse-speciale-noel-8-37-5",
+          "discount_pct": 0,
+          "old_price": 0.0
+        }
+      ],
+      "cheapest_price": 60.0,
+      "min_price": 60.0,
+      "shop": "Brygshoppen",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
       "id": 12977,
       "name": "Barrel Project Saison 2025 11,4% 33cl",
       "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/barrel-project-saison-2025-11-4-33cl.png?v=1760533011",
@@ -31505,7 +31522,7 @@
       "name": "CHAOS - Nepo -  50 cl.",
       "image": "https://cdn.shopify.com/s/files/1/0600/9438/2263/files/nepochaos.jpg?v=1781447899",
       "type": "Beer",
-      "abv": null,
+      "abv": 6.7,
       "volume_cl": 50.0,
       "brewery": "Beershoppen",
       "category": null,
@@ -32503,8 +32520,8 @@
       "name": "Salikatt - Clouds of Citrus",
       "image": "https://cdn.shopify.com/s/files/1/0776/5209/9400/files/F76E646C-8C1A-4CA3-9F24-A0436EDC31E9.jpg?v=1781717476",
       "type": null,
-      "abv": null,
-      "volume_cl": null,
+      "abv": 8.0,
+      "volume_cl": 44.0,
       "brewery": "Salikatt",
       "category": null,
       "prices": [
@@ -32811,19 +32828,33 @@
       "max_discount_pct": 3.1
     },
     {
-      "id": 16668,
-      "name": "Prizm Brewing Co. × Ophiussa Brewing Co. - Heavy Crown",
-      "image": "https://cdn.shopify.com/s/files/1/0776/5209/9400/files/08C722C5-CBA7-4897-A4B8-6944326DDBE7.jpg?v=1782391549",
-      "type": "Sour",
-      "abv": 4.5,
-      "volume_cl": 44.0,
-      "brewery": "Prizm Brewing Co. × Ophiussa Brewing Co.",
+      "id": 15065,
+      "name": "Salted caramel - Speedway Stout - AleSmith - 47,5cl - 12%",
+      "image": "https://cdn.shopify.com/s/files/1/0600/9438/2263/files/speedwaysaltedcaramel.jpg?v=1779283246",
+      "type": "Stout",
+      "abv": 12.0,
+      "volume_cl": 47.5,
+      "brewery": "Beershoppen",
       "category": null,
       "prices": [
         {
           "shop_name": "Øltanken",
           "price": 63.0,
-          "url": "https://oltanken.dk/products/prizm-brewing-co-ophiussa-brewing-co-heavy-crown",
+          "url": "https://oltanken.dk/products/alesmith-speedway-stout",
+          "discount_pct": 0,
+          "old_price": null
+        },
+        {
+          "shop_name": "Best of Beers",
+          "price": 86.0,
+          "url": "https://www.bestofbeers.dk/shop/alesmith-speedway-stout-imp-coffee-stout-0473-l-120/",
+          "discount_pct": 0,
+          "old_price": null
+        },
+        {
+          "shop_name": "Beershoppen",
+          "price": 90.0,
+          "url": "https://beershoppen.dk/products/salted-caramel-speedway-stout-alesmith-47-5cl-12",
           "discount_pct": 0,
           "old_price": null
         }
@@ -32835,19 +32866,19 @@
       "max_discount_pct": 0
     },
     {
-      "id": 14449,
-      "name": "AleSmith - Speedway Stout",
-      "image": "https://cdn.shopify.com/s/files/1/0776/5209/9400/files/24936D22-9612-44F4-A0D4-01673A938A34.jpg?v=1713950452",
-      "type": "Stout",
-      "abv": null,
-      "volume_cl": null,
-      "brewery": "AleSmith",
+      "id": 16593,
+      "name": "Prizm Brewing Co. × Ophiussa Brewing Co. - Heavy Crown",
+      "image": "https://cdn.shopify.com/s/files/1/0776/5209/9400/files/08C722C5-CBA7-4897-A4B8-6944326DDBE7.jpg?v=1782391549",
+      "type": "Sour",
+      "abv": 30.0,
+      "volume_cl": 44.0,
+      "brewery": "Prizm Brewing Co. × Ophiussa Brewing Co.",
       "category": null,
       "prices": [
         {
           "shop_name": "Øltanken",
           "price": 63.0,
-          "url": "https://oltanken.dk/products/alesmith-speedway-stout",
+          "url": "https://oltanken.dk/products/prizm-brewing-co-ophiussa-brewing-co-heavy-crown",
           "discount_pct": 0,
           "old_price": null
         }
@@ -33571,7 +33602,7 @@
       "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/hanssens-oudbeitje-6-37-5.png?v=1749984074",
       "type": "Lambic",
       "abv": 6.0,
-      "volume_cl": null,
+      "volume_cl": 37.5,
       "brewery": "Hanssens Artisanaal",
       "category": null,
       "prices": [
@@ -33919,6 +33950,30 @@
       "cheapest_price": 65.0,
       "min_price": 65.0,
       "shop": "Øltanken",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
+      "id": 14030,
+      "name": "Osmose - New England IPA fra Norm Brewing",
+      "image": "https://cdn-main.ideal.shop/images/by_hash/32dc723883873f873df941766299f00a7b8207dd849be17d97badd89e9e80b19/500-0/Osmose.jpg",
+      "type": "New England IPA",
+      "abv": 6.8,
+      "volume_cl": 44.0,
+      "brewery": "Norm Brewing",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Beer Me",
+          "price": 65.0,
+          "url": "https://www.partner-ads.com/dk/klikbanner.php?bannerid=74625&partnerid=56605&htmlurl=https://www.beer-me.dk/vare/krush-on-you-new-england-ipa-fra-norm-brewing",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 65.0,
+      "min_price": 65.0,
+      "shop": "Beer Me",
       "discount_pct": 0,
       "max_discount_pct": 0
     },
@@ -34986,11 +35041,11 @@
       "max_discount_pct": 30.0
     },
     {
-      "id": 16678,
+      "id": 16782,
       "name": "BA WAKING FANTASY - BA Imperial Stout fra Pühaste",
       "image": "https://cdn-main.ideal.shop/images/by_hash/cc6bed081411f8631bb35662b2e9de88cd40fabe89658861ff653fefa59e14c5/500-0/BA-WAKING-FANTASY.jpg",
       "type": "Imperial Stout",
-      "abv": 13.5,
+      "abv": 15.5,
       "volume_cl": 33.0,
       "brewery": "Pühaste",
       "category": null,
@@ -36996,11 +37051,11 @@
       "max_discount_pct": 0
     },
     {
-      "id": 16389,
-      "name": "Factory Brewing – Double Reveries Of Riwaka – Single Hop Double India Pale Ale – 0,44 l. – 8,0%",
-      "image": "https://www.bestofbeers.dk/wp-content/uploads/2026/06/FactoryBrewingDoubleReveries.jpg",
-      "type": "India Pale Ale (IPA)",
-      "abv": 8.0,
+      "id": 16289,
+      "name": "Factory Brewing - Double Reveries of Riwaka",
+      "image": "https://cdn.shopify.com/s/files/1/0776/5209/9400/files/F39B9B15-E769-41D8-B299-B8ED653CF5CA.jpg?v=1781172444",
+      "type": "Dubbel",
+      "abv": 100.0,
       "volume_cl": 44.0,
       "brewery": "Factory Brewing",
       "category": null,
@@ -37009,13 +37064,6 @@
           "shop_name": "Øltanken",
           "price": 72.0,
           "url": "https://oltanken.dk/products/factory-brewing-double-reveries-of-riwaka",
-          "discount_pct": 0,
-          "old_price": null
-        },
-        {
-          "shop_name": "Best of Beers",
-          "price": 76.0,
-          "url": "https://www.bestofbeers.dk/shop/factory-brewing-double-reveries-of-riwaka-single-hop-double-india-pale-ale-044-l-80/",
           "discount_pct": 0,
           "old_price": null
         }
@@ -37075,6 +37123,37 @@
       "max_discount_pct": 0
     },
     {
+      "id": 13625,
+      "name": "Vault City Brewing x 3 Sons Brewing Co. – Triple-Stacked Lumberjack Breakfast – Imperial Stout – 0,33 l. – 11,5%",
+      "image": "https://www.bestofbeers.dk/wp-content/uploads/2026/04/VaultCityLumberjackImperialStout.jpg",
+      "type": "Imperial Stout",
+      "abv": 11.5,
+      "volume_cl": 33.0,
+      "brewery": "Vault City Brewing x 3 Sons Brewing Co.",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Øltanken",
+          "price": 73.0,
+          "url": "https://oltanken.dk/products/vault-city-x-3-sons-lunberjack-breakfast",
+          "discount_pct": 0,
+          "old_price": null
+        },
+        {
+          "shop_name": "Best of Beers",
+          "price": 76.0,
+          "url": "https://www.bestofbeers.dk/shop/vault-city-brewing-x-3-sons-brewing-co-triple-stacked-lumberjack-breakfast-imperial-stout-033-l-115/",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 73.0,
+      "min_price": 73.0,
+      "shop": "Øltanken",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
       "id": 16534,
       "name": "SOMA Beer & Sudden Death - Crossbar",
       "image": "https://cdn.shopify.com/s/files/1/0776/5209/9400/files/B3856538-D7D5-472C-9BBD-E4428D613A1B.jpg?v=1782166162",
@@ -37112,30 +37191,6 @@
           "shop_name": "Øltanken",
           "price": 73.0,
           "url": "https://oltanken.dk/products/soma-beer-apex",
-          "discount_pct": 0,
-          "old_price": null
-        }
-      ],
-      "cheapest_price": 73.0,
-      "min_price": 73.0,
-      "shop": "Øltanken",
-      "discount_pct": 0,
-      "max_discount_pct": 0
-    },
-    {
-      "id": 14407,
-      "name": "Vault City x 3 Sons - Triple Stacked Lumberjack Breakfast",
-      "image": "https://cdn.shopify.com/s/files/1/0776/5209/9400/files/725010CA-B3D6-4A3D-ACC8-C0E2DC528834.jpg?v=1775859609",
-      "type": "Tripel",
-      "abv": null,
-      "volume_cl": 33.0,
-      "brewery": "Vault City x 3 Sons",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Øltanken",
-          "price": 73.0,
-          "url": "https://oltanken.dk/products/vault-city-x-3-sons-lunberjack-breakfast",
           "discount_pct": 0,
           "old_price": null
         }
@@ -37521,7 +37576,7 @@
       "max_discount_pct": 0
     },
     {
-      "id": 16755,
+      "id": 16767,
       "name": "Raw Beer 8% 44cl",
       "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/raw-beer-8.png?v=1782404785",
       "type": "India Pale Ale (IPA)",
@@ -37953,6 +38008,30 @@
       "max_discount_pct": 15.0
     },
     {
+      "id": 16390,
+      "name": "Factory Brewing x Juova – Ummagumma – Double India Pale Ale – 0,44 l. – 8,0%",
+      "image": "https://www.bestofbeers.dk/wp-content/uploads/2026/06/FactoryBrewingUmmaGumma.jpg",
+      "type": "India Pale Ale (IPA)",
+      "abv": 8.0,
+      "volume_cl": 44.0,
+      "brewery": "Factory Brewing x Juova",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Best of Beers",
+          "price": 76.0,
+          "url": "https://www.bestofbeers.dk/shop/factory-brewing-x-juova-ummagumma-double-india-pale-ale-044-l-80/",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 76.0,
+      "min_price": 76.0,
+      "shop": "Best of Beers",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
       "id": 15101,
       "name": "Back Country Trail - Finback NY -  47,3 cl. -  8,0%",
       "image": "https://cdn.shopify.com/s/files/1/0600/9438/2263/files/finback.jpg?v=1779367747",
@@ -38117,30 +38196,6 @@
           "shop_name": "Best of Beers",
           "price": 76.0,
           "url": "https://www.bestofbeers.dk/shop/hoppy-people-x-messorem-soul-destroyer-ddh-tipa-044-l-100/",
-          "discount_pct": 0,
-          "old_price": null
-        }
-      ],
-      "cheapest_price": 76.0,
-      "min_price": 76.0,
-      "shop": "Best of Beers",
-      "discount_pct": 0,
-      "max_discount_pct": 0
-    },
-    {
-      "id": 13625,
-      "name": "Vault City Brewing x 3 Sons Brewing Co. – Triple-Stacked Lumberjack Breakfast – Imperial Stout – 0,33 l. – 11,5%",
-      "image": "https://www.bestofbeers.dk/wp-content/uploads/2026/04/VaultCityLumberjackImperialStout.jpg",
-      "type": "Imperial Stout",
-      "abv": 11.5,
-      "volume_cl": 33.0,
-      "brewery": "Vault City Brewing x 3 Sons Brewing Co.",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Best of Beers",
-          "price": 76.0,
-          "url": "https://www.bestofbeers.dk/shop/vault-city-brewing-x-3-sons-brewing-co-triple-stacked-lumberjack-breakfast-imperial-stout-033-l-115/",
           "discount_pct": 0,
           "old_price": null
         }
@@ -38644,7 +38699,7 @@
       "image": "https://cdn-main.ideal.shop/images/by_hash/133e640562b226b96946e78f0ae3c5e2b712fcda96d87183a97c8bc22f734554/500-0/pokethehive.jpg",
       "type": "Barley Wine",
       "abv": 15.0,
-      "volume_cl": null,
+      "volume_cl": 33.0,
       "brewery": "Blackout Brewing",
       "category": null,
       "prices": [
@@ -39144,8 +39199,8 @@
       "name": "Pastry Factory: Golden Syrup Bacon Pancakes",
       "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/pastry-factory-golden-syrup-bacon-pancakes.png?v=1779289187",
       "type": "Pastry Stout",
-      "abv": null,
-      "volume_cl": null,
+      "abv": 10.0,
+      "volume_cl": 44.0,
       "brewery": "Moersleutel Craft Brewery",
       "category": null,
       "prices": [
@@ -39313,7 +39368,7 @@
       "image": "https://cdn.shopify.com/s/files/1/0600/9438/2263/files/experiment.jpg?v=1781703480",
       "type": "Beer",
       "abv": 6.5,
-      "volume_cl": null,
+      "volume_cl": 37.5,
       "brewery": "Beershoppen",
       "category": null,
       "prices": [
@@ -40726,7 +40781,7 @@
       "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/boerenerf-oude-gueuze-6-37-5.png?v=1775055294",
       "type": "Lambic",
       "abv": 6.0,
-      "volume_cl": null,
+      "volume_cl": 37.5,
       "brewery": "Het Boerenerf",
       "category": null,
       "prices": [
@@ -40769,7 +40824,7 @@
       "max_discount_pct": 0
     },
     {
-      "id": 16758,
+      "id": 16772,
       "name": "No Way Out B.A. 10,5% 33cl",
       "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/no-way-out-b-a-10-5-33cl.png?v=1750592682",
       "type": "Barley Wine",
@@ -40782,6 +40837,30 @@
           "shop_name": "Brygshoppen",
           "price": 85.0,
           "url": "https://brygshoppen.dk/products/no-way-out-b-a-10-5-33cl",
+          "discount_pct": 0,
+          "old_price": 0.0
+        }
+      ],
+      "cheapest_price": 85.0,
+      "min_price": 85.0,
+      "shop": "Brygshoppen",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
+      "id": 12924,
+      "name": "Duchesse de Bourgogne 6,2% 37,5",
+      "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/duchesse-de-bourgogne-6-2-37-5.png?v=1765012389",
+      "type": "Sour",
+      "abv": 6.2,
+      "volume_cl": 75.0,
+      "brewery": "Brouwerij Verhaeghe",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Brygshoppen",
+          "price": 85.0,
+          "url": "https://brygshoppen.dk/products/duchesse-de-bourgogne-75cl",
           "discount_pct": 0,
           "old_price": 0.0
         }
@@ -40990,7 +41069,7 @@
       "image": "https://cdn.shopify.com/s/files/1/0776/5209/9400/files/C8C8EDA4-6BA6-4065-9DE5-B1258C7CE044.jpg?v=1779401729",
       "type": "India Pale Ale (IPA)",
       "abv": 8.0,
-      "volume_cl": null,
+      "volume_cl": 47.3,
       "brewery": "Fine Balance Brewing",
       "category": null,
       "prices": [
@@ -41005,37 +41084,6 @@
       "cheapest_price": 85.0,
       "min_price": 85.0,
       "shop": "Øltanken",
-      "discount_pct": 0,
-      "max_discount_pct": 0
-    },
-    {
-      "id": 15065,
-      "name": "Salted caramel - Speedway Stout - AleSmith - 47,5cl - 12%",
-      "image": "https://cdn.shopify.com/s/files/1/0600/9438/2263/files/speedwaysaltedcaramel.jpg?v=1779283246",
-      "type": "Stout",
-      "abv": 12.0,
-      "volume_cl": 47.5,
-      "brewery": "Beershoppen",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Best of Beers",
-          "price": 86.0,
-          "url": "https://www.bestofbeers.dk/shop/alesmith-speedway-stout-imp-coffee-stout-0473-l-120/",
-          "discount_pct": 0,
-          "old_price": null
-        },
-        {
-          "shop_name": "Beershoppen",
-          "price": 90.0,
-          "url": "https://beershoppen.dk/products/salted-caramel-speedway-stout-alesmith-47-5cl-12",
-          "discount_pct": 0,
-          "old_price": null
-        }
-      ],
-      "cheapest_price": 86.0,
-      "min_price": 86.0,
-      "shop": "Best of Beers",
       "discount_pct": 0,
       "max_discount_pct": 0
     },
@@ -41760,11 +41808,11 @@
       "max_discount_pct": 0
     },
     {
-      "id": 13181,
-      "name": "Cantillon Gueuze 5,5% 37,5cl",
-      "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/cantillion-geuze-lambic-bio-37cl.png?v=1739115242",
+      "id": 13182,
+      "name": "Cantillon Kriek 100% Lambic Bio 6% 37,5cl",
+      "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/cantillion-kriek-100-lambic-bio-6-37-5cl_acb64237-8fd7-40ce-87b1-cc2de43ed61a.png?v=1739115973",
       "type": "Lambic",
-      "abv": 5.5,
+      "abv": 100.0,
       "volume_cl": 37.5,
       "brewery": "Brasserie Cantillon",
       "category": null,
@@ -41778,8 +41826,8 @@
         },
         {
           "shop_name": "Brygshoppen",
-          "price": 95.0,
-          "url": "https://brygshoppen.dk/products/cantillion-gueuze-lambic-bio-37cl",
+          "price": 110.0,
+          "url": "https://brygshoppen.dk/products/cantillion-kriek-100-lambic-bio-6-37-5cl",
           "discount_pct": 0,
           "old_price": 0.0
         }
@@ -41883,30 +41931,6 @@
       "cheapest_price": 91.0,
       "min_price": 91.0,
       "shop": "Best of Beers",
-      "discount_pct": 0,
-      "max_discount_pct": 0
-    },
-    {
-      "id": 14509,
-      "name": "Pinta Barrel Brewing - Grandeur 2025 BA Stout",
-      "image": "https://cdn.shopify.com/s/files/1/0776/5209/9400/files/BF4CD162-4CFE-46B9-8D96-681EF995809D.jpg?v=1741758761",
-      "type": "Stout",
-      "abv": 13.0,
-      "volume_cl": 33.0,
-      "brewery": "Pinta Barrel Brewing",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Øltanken",
-          "price": 91.0,
-          "url": "https://oltanken.dk/products/pinta-grandeur-ba-stout-2025",
-          "discount_pct": 0,
-          "old_price": null
-        }
-      ],
-      "cheapest_price": 91.0,
-      "min_price": 91.0,
-      "shop": "Øltanken",
       "discount_pct": 0,
       "max_discount_pct": 0
     },
@@ -42463,6 +42487,30 @@
       "max_discount_pct": 0
     },
     {
+      "id": 14509,
+      "name": "Pinta Barrel Brewing - Grandeur 2025 BA Stout",
+      "image": "https://cdn.shopify.com/s/files/1/0776/5209/9400/files/BF4CD162-4CFE-46B9-8D96-681EF995809D.jpg?v=1741758761",
+      "type": "Stout",
+      "abv": 13.0,
+      "volume_cl": 33.0,
+      "brewery": "Pinta Barrel Brewing",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Øltanken",
+          "price": 91.0,
+          "url": "https://oltanken.dk/products/pinta-grandeur-ba-stout-2025",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 91.0,
+      "min_price": 91.0,
+      "shop": "Øltanken",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
       "id": 14565,
       "name": "Pinta Barrel Brewing - Memory 2025 BA Stout",
       "image": "https://cdn.shopify.com/s/files/1/0776/5209/9400/files/0BFAE021-4C3F-49A3-9054-D259F05907F2.jpg?v=1741758706",
@@ -42524,6 +42572,30 @@
           "shop_name": "Øltanken",
           "price": 92.0,
           "url": "https://oltanken.dk/products/untitled-art-x-3-sons-barrel-aged-mexican-style-pot-de-creme-stout",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 92.0,
+      "min_price": 92.0,
+      "shop": "Øltanken",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
+      "id": 14408,
+      "name": "Pinta Barrel Brewing - Essence",
+      "image": "https://cdn.shopify.com/s/files/1/0776/5209/9400/files/43557525-3EC5-4D18-96E3-D058E402F564.jpg?v=1775927639",
+      "type": "Imperial Stout",
+      "abv": 75.0,
+      "volume_cl": 33.0,
+      "brewery": "Pinta Barrel Brewing",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Øltanken",
+          "price": 92.0,
+          "url": "https://oltanken.dk/products/uden-titel-11-apr-_19-13",
           "discount_pct": 0,
           "old_price": null
         }
@@ -42775,6 +42847,30 @@
       "max_discount_pct": 0
     },
     {
+      "id": 13181,
+      "name": "Cantillon Gueuze 5,5% 37,5cl",
+      "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/cantillion-geuze-lambic-bio-37cl.png?v=1739115242",
+      "type": "Lambic",
+      "abv": 5.5,
+      "volume_cl": 37.5,
+      "brewery": "Brasserie Cantillon",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Brygshoppen",
+          "price": 95.0,
+          "url": "https://brygshoppen.dk/products/cantillion-gueuze-lambic-bio-37cl",
+          "discount_pct": 0,
+          "old_price": 0.0
+        }
+      ],
+      "cheapest_price": 95.0,
+      "min_price": 95.0,
+      "shop": "Brygshoppen",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
       "id": 16367,
       "name": "Kaerakats - Barbados rum BA - Andersons - 33 cl. - 15.0%",
       "image": "https://cdn.shopify.com/s/files/1/0600/9438/2263/files/andersonbarbados.jpg?v=1781448488",
@@ -42926,12 +43022,12 @@
       "max_discount_pct": 0
     },
     {
-      "id": 14507,
+      "id": 14926,
       "name": "Jackie O’s Bourbon Barrel Brick Kiln",
       "image": "https://cdn.shopify.com/s/files/1/0776/5209/9400/files/C30D952B-EFE7-4792-9A1C-672DE00C29DA.jpg?v=1765743765",
       "type": "Barley Wine",
       "abv": 14.7,
-      "volume_cl": 35.5,
+      "volume_cl": 5.0,
       "brewery": "Øltanken",
       "category": null,
       "prices": [
@@ -43239,7 +43335,7 @@
       "max_discount_pct": 22.7
     },
     {
-      "id": 16756,
+      "id": 16768,
       "name": "10 - Imperial Stout 10% 44cl",
       "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/10-imperial-stout-10-44cl_9645d1f7-914c-43d6-b687-b07453f1aaf2.png?v=1761637026",
       "type": "Imperial Stout",
@@ -43267,7 +43363,7 @@
       "name": "St. Francis Abbey - Kilkenny - Irish Red Ale (6 stk.)",
       "image": "https://cdn.shopify.com/s/files/1/0402/1239/8243/files/Kilkenny_IrishRed6.png?v=1695896915",
       "type": null,
-      "abv": null,
+      "abv": 4.3,
       "volume_cl": 44.0,
       "brewery": "Best before: 04/11-2026",
       "category": null,
@@ -43335,11 +43431,11 @@
       "max_discount_pct": 20.2
     },
     {
-      "id": 16672,
+      "id": 14373,
       "name": "Fonta Flora - Mary's Gold - Biere de Coupage on estate-grown marigold flowers",
       "image": "https://cdn.shopify.com/s/files/1/0776/5209/9400/files/95F0689D-DDD2-48BF-989F-C37007F3E0A7.jpg?v=1777764651",
       "type": "Saison",
-      "abv": 5.2,
+      "abv": 75.0,
       "volume_cl": 37.5,
       "brewery": "Fonta Flora",
       "category": null,
@@ -43359,12 +43455,12 @@
       "max_discount_pct": 0
     },
     {
-      "id": 14508,
+      "id": 14927,
       "name": "Jackie O’s - Endolith 2025",
       "image": "https://cdn.shopify.com/s/files/1/0776/5209/9400/files/D202A3CD-603E-4781-A216-71BBB2CE72D5.jpg?v=1765743190",
       "type": "Barley Wine",
       "abv": 13.3,
-      "volume_cl": 35.5,
+      "volume_cl": 5.0,
       "brewery": "Jackie O’s",
       "category": null,
       "prices": [
@@ -43525,6 +43621,30 @@
       "shop": "Vild med Vin",
       "discount_pct": 0,
       "max_discount_pct": 0
+    },
+    {
+      "id": 12958,
+      "name": "La Moneuse Spéciale Noël 8% 37,5",
+      "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/la-moneuse-speciale-noel-8-37-5.png?v=1761848993",
+      "type": "Saison - Farmhouse Ale",
+      "abv": 8.0,
+      "volume_cl": 75.0,
+      "brewery": "Brasserie de Blaugies",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Brygshoppen",
+          "price": 100.0,
+          "url": "https://brygshoppen.dk/products/la-moneuse-speciale-noel-8-75cl",
+          "discount_pct": 20.0,
+          "old_price": 125.0
+        }
+      ],
+      "cheapest_price": 100.0,
+      "min_price": 100.0,
+      "shop": "Brygshoppen",
+      "discount_pct": 20.0,
+      "max_discount_pct": 20.0
     },
     {
       "id": 13749,
@@ -44302,37 +44422,6 @@
       "max_discount_pct": 0
     },
     {
-      "id": 13182,
-      "name": "Cantillon Kriek 100% Lambic Bio 6% 37,5cl",
-      "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/cantillion-kriek-100-lambic-bio-6-37-5cl_acb64237-8fd7-40ce-87b1-cc2de43ed61a.png?v=1739115973",
-      "type": "Lambic",
-      "abv": 100.0,
-      "volume_cl": 37.5,
-      "brewery": "Brasserie Cantillon",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Brygshoppen",
-          "price": 110.0,
-          "url": "https://brygshoppen.dk/products/cantillion-kriek-100-lambic-bio-6-37-5cl",
-          "discount_pct": 0,
-          "old_price": 0.0
-        },
-        {
-          "shop_name": "Øltanken",
-          "price": 125.0,
-          "url": "https://oltanken.dk/products/cantillon-kriek-2023-100-lambic-bio-0-375",
-          "discount_pct": 0,
-          "old_price": null
-        }
-      ],
-      "cheapest_price": 110.0,
-      "min_price": 110.0,
-      "shop": "Brygshoppen",
-      "discount_pct": 0,
-      "max_discount_pct": 0
-    },
-    {
       "id": 12821,
       "name": "Extravagant: Peacherine 11% 44cl",
       "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/extravagant-peacherine-11-44cl.png?v=1778853045",
@@ -44913,6 +45002,30 @@
       "max_discount_pct": 0
     },
     {
+      "id": 15801,
+      "name": "Bicycle Brewing Cider Intro pris",
+      "image": "https://cdn.shopify.com/s/files/1/0776/5209/9400/files/95B90EF5-00F5-46EC-9CAE-198EA6BA8F58.jpg?v=1779699796",
+      "type": "Cider",
+      "abv": 6.0,
+      "volume_cl": 75.0,
+      "brewery": "Øltanken",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Øltanken",
+          "price": 118.0,
+          "url": "https://oltanken.dk/products/bicycle-brewing-cider-intro-pris",
+          "discount_pct": 20.3,
+          "old_price": 148.0
+        }
+      ],
+      "cheapest_price": 118.0,
+      "min_price": 118.0,
+      "shop": "Øltanken",
+      "discount_pct": 20.3,
+      "max_discount_pct": 20.3
+    },
+    {
       "id": 15959,
       "name": "RYGR Brygghús - ARV Havbris Farmhouse Ale",
       "image": "https://cdn.shopify.com/s/files/1/0776/5209/9400/files/15DEA65E-D092-4023-AC16-4EE6B92679B9.jpg?v=1780000261",
@@ -45013,8 +45126,8 @@
       "name": "Jule Mjød fra Dansk Mjød",
       "image": "https://cdn.shopify.com/s/files/1/0600/9438/2263/files/IMG_1390.heic?v=1733225392",
       "type": "Mjød",
-      "abv": null,
-      "volume_cl": null,
+      "abv": 14.8,
+      "volume_cl": 75.0,
       "brewery": "Beershoppen",
       "category": null,
       "prices": [
@@ -45621,7 +45734,7 @@
       "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/heritage-2024-singel-batch-argangsol-14.png?v=1730486070",
       "type": "Barley Wine",
       "abv": 14.0,
-      "volume_cl": null,
+      "volume_cl": 33.0,
       "brewery": "Rockabilly Brew",
       "category": null,
       "prices": [
@@ -45949,11 +46062,11 @@
       "max_discount_pct": 0
     },
     {
-      "id": 14569,
-      "name": "Tilquin - Oude Gueuze a l'Ancienne\nCuvée Arthur",
-      "image": "https://cdn.shopify.com/s/files/1/0776/5209/9400/files/6ECC3A99-B100-46F0-9832-34DC3DAA08D1.jpg?v=1740000944",
+      "id": 16780,
+      "name": "Tilquin - Oude Gueuze a l'Ancienne 0,75 L",
+      "image": "https://cdn.shopify.com/s/files/1/0776/5209/9400/files/F3CCD518-0C27-42EB-AE7E-C8B8C6AE4A7C.jpg?v=1699475879",
       "type": "Lambic",
-      "abv": 20.0,
+      "abv": 6.4,
       "volume_cl": 75.0,
       "brewery": "Tilquin",
       "category": null,
@@ -46069,6 +46182,37 @@
       "max_discount_pct": 0
     },
     {
+      "id": 13012,
+      "name": "Cantillon Kriek 100% Lambic Bio 6% 75cl",
+      "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/products/cantillion-kriek-lambic-bio-75cl.png?v=1681125108",
+      "type": "Lambic",
+      "abv": 100.0,
+      "volume_cl": 75.0,
+      "brewery": "Brasserie Cantillon",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Øltanken",
+          "price": 135.0,
+          "url": "https://oltanken.dk/products/cantillon-gueze-100-lambic-bio-04-2024-kopi",
+          "discount_pct": 0,
+          "old_price": null
+        },
+        {
+          "shop_name": "Brygshoppen",
+          "price": 210.0,
+          "url": "https://brygshoppen.dk/products/cantillion-kriek-lambic-bio-75cl",
+          "discount_pct": 0,
+          "old_price": 0.0
+        }
+      ],
+      "cheapest_price": 135.0,
+      "min_price": 135.0,
+      "shop": "Øltanken",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
       "id": 12823,
       "name": "Double Black Mash Maple Syrup Barrel Aged Edition 12,5% 44cl",
       "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/double-black-mash-maple-syrup-barrel-aged-edition-12-5-44cl.png?v=1778842216",
@@ -46172,19 +46316,19 @@
       "max_discount_pct": 0
     },
     {
-      "id": 14539,
-      "name": "Cantillon - Ashanti 2025 Lambic",
-      "image": "https://cdn.shopify.com/s/files/1/0776/5209/9400/files/23E574FD-423F-419B-A5BA-118CB6D74CCD.jpg?v=1756924691",
+      "id": 14385,
+      "name": "3 fonteinen - Oude Geuze Platinum Blend 21/22",
+      "image": "https://cdn.shopify.com/s/files/1/0776/5209/9400/files/795DB9DA-7BB3-47F8-9C71-06BD9C19E533.jpg?v=1777754353",
       "type": "Lambic",
-      "abv": 5.5,
-      "volume_cl": 75.0,
-      "brewery": "Cantillon",
+      "abv": 40.0,
+      "volume_cl": 37.5,
+      "brewery": "3 fonteinen",
       "category": null,
       "prices": [
         {
           "shop_name": "Øltanken",
           "price": 135.0,
-          "url": "https://oltanken.dk/products/cantillon-gueze-100-lambic-bio-04-2024-kopi",
+          "url": "https://oltanken.dk/products/uden-titel-18-apr-_20-54",
           "discount_pct": 0,
           "old_price": null
         }
@@ -46911,7 +47055,7 @@
       "image": "https://cdn.shopify.com/s/files/1/0776/5209/9400/files/4B1A5DEE-F81A-498B-8B61-4220AA2B0A79.jpg?v=1779230508",
       "type": null,
       "abv": 8.5,
-      "volume_cl": null,
+      "volume_cl": 44.0,
       "brewery": "Fidens Brewing Co.",
       "category": null,
       "prices": [
@@ -46935,7 +47079,7 @@
       "image": "https://cdn.shopify.com/s/files/1/0776/5209/9400/files/E16AC986-CE25-41A5-BF2D-3776FF2FDE6E.jpg?v=1779229437",
       "type": "New England IPA",
       "abv": 10.0,
-      "volume_cl": null,
+      "volume_cl": 44.0,
       "brewery": "Fidens Brewing Co.",
       "category": null,
       "prices": [
@@ -46959,7 +47103,7 @@
       "image": "https://cdn.shopify.com/s/files/1/0776/5209/9400/files/0D73D8CE-5CD4-4FAC-8FE8-8E73842E3037.jpg?v=1779229437",
       "type": "Double IPA",
       "abv": 8.0,
-      "volume_cl": null,
+      "volume_cl": 44.0,
       "brewery": "Fidens Brewing Co.",
       "category": null,
       "prices": [
@@ -46978,36 +47122,12 @@
       "max_discount_pct": 16.3
     },
     {
-      "id": 15052,
-      "name": "Fidens Brewing Co. - Jasper with Peacharine",
-      "image": "https://cdn.shopify.com/s/files/1/0776/5209/9400/files/46297D3A-785A-4A7E-8C83-1CAF4016C744.jpg?v=1779229437",
-      "type": "Double IPA",
-      "abv": 7.8,
-      "volume_cl": null,
-      "brewery": "Fidens Brewing Co.",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Øltanken",
-          "price": 149.0,
-          "url": "https://oltanken.dk/products/fidens-brewing-co-jasper-with-peacharine",
-          "discount_pct": 16.3,
-          "old_price": 178.0
-        }
-      ],
-      "cheapest_price": 149.0,
-      "min_price": 149.0,
-      "shop": "Øltanken",
-      "discount_pct": 16.3,
-      "max_discount_pct": 16.3
-    },
-    {
       "id": 15054,
       "name": "Fidens Brewing Co. - Denial And Error",
       "image": "https://cdn.shopify.com/s/files/1/0776/5209/9400/files/5F4AD897-B953-4A6B-AF5D-7C8372A3D5CE.jpg?v=1779229437",
       "type": null,
       "abv": 8.5,
-      "volume_cl": null,
+      "volume_cl": 44.0,
       "brewery": "Fidens Brewing Co.",
       "category": null,
       "prices": [
@@ -47295,7 +47415,7 @@
       "image": "https://cdn.shopify.com/s/files/1/0776/5209/9400/files/2EDD0B2F-EA8A-48B1-9E89-1B9FD3BC973C.jpg?v=1715889530",
       "type": "Lambic",
       "abv": 40.0,
-      "volume_cl": null,
+      "volume_cl": 75.0,
       "brewery": "Tilquin",
       "category": null,
       "prices": [
@@ -47849,6 +47969,30 @@
       "max_discount_pct": 0
     },
     {
+      "id": 14569,
+      "name": "Tilquin - Oude Gueuze a l'Ancienne\nCuvée Arthur",
+      "image": "https://cdn.shopify.com/s/files/1/0776/5209/9400/files/6ECC3A99-B100-46F0-9832-34DC3DAA08D1.jpg?v=1740000944",
+      "type": "Lambic",
+      "abv": 20.0,
+      "volume_cl": 75.0,
+      "brewery": "Tilquin",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Øltanken",
+          "price": 169.0,
+          "url": "https://oltanken.dk/products/tilquin-oude-gueuze-a-lancienne-cuvee-arthur",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 169.0,
+      "min_price": 169.0,
+      "shop": "Øltanken",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
       "id": 13121,
       "name": "American Outlaws Sally Skull 12,5% 75cl",
       "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/american-outlaws-sally-skull-12-5-75cl.png?v=1712771716",
@@ -47989,37 +48133,6 @@
       "cheapest_price": 178.0,
       "min_price": 178.0,
       "shop": "Vild med Vin",
-      "discount_pct": 0,
-      "max_discount_pct": 0
-    },
-    {
-      "id": 13845,
-      "name": "Cantillon &#8211; Kriek Lambic 2023 &#8211; 0,75 l. &#8211; 6,0%",
-      "image": "https://www.bestofbeers.dk/wp-content/uploads/2023/02/PhotoRoom_006_20230227_114148.jpg",
-      "type": "Lambic",
-      "abv": 6.0,
-      "volume_cl": 75.0,
-      "brewery": "Cantillon",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Øltanken",
-          "price": 179.0,
-          "url": "https://oltanken.dk/products/cantillon-kriek-2023-100-lambic-bio-0-375-kopi",
-          "discount_pct": 0,
-          "old_price": null
-        },
-        {
-          "shop_name": "Best of Beers",
-          "price": 186.0,
-          "url": "https://www.bestofbeers.dk/shop/cantillon-kriek-lambic-2023-075-l-60/",
-          "discount_pct": 0,
-          "old_price": null
-        }
-      ],
-      "cheapest_price": 179.0,
-      "min_price": 179.0,
-      "shop": "Øltanken",
       "discount_pct": 0,
       "max_discount_pct": 0
     },
@@ -48216,6 +48329,30 @@
       "max_discount_pct": 0
     },
     {
+      "id": 13845,
+      "name": "Cantillon &#8211; Kriek Lambic 2023 &#8211; 0,75 l. &#8211; 6,0%",
+      "image": "https://www.bestofbeers.dk/wp-content/uploads/2023/02/PhotoRoom_006_20230227_114148.jpg",
+      "type": "Lambic",
+      "abv": 6.0,
+      "volume_cl": 75.0,
+      "brewery": "Cantillon",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Best of Beers",
+          "price": 186.0,
+          "url": "https://www.bestofbeers.dk/shop/cantillon-kriek-lambic-2023-075-l-60/",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 186.0,
+      "min_price": 186.0,
+      "shop": "Best of Beers",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
       "id": 12949,
       "name": "Malheur Bière Brut (Brut Reserve) 11% 75cl",
       "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/malheur-brut-12-75cl.png?v=1762711641",
@@ -48299,7 +48436,7 @@
       "name": "Vocation Brewery Bundle spar 90 kr.",
       "image": "https://cdn.shopify.com/s/files/1/0776/5209/9400/files/A0FBB464-C2FE-43AD-A0D1-9A412565D2D6.jpg?v=1766589566",
       "type": "Stout",
-      "abv": null,
+      "abv": 30.0,
       "volume_cl": null,
       "brewery": "Øltanken",
       "category": null,
@@ -48525,37 +48662,6 @@
       "max_discount_pct": 0
     },
     {
-      "id": 13675,
-      "name": "3 Fonteinen – Oude Kriek no 104 &#8211; 22/23 – Økologisk Lambic – 0,75 l. – 7,8%",
-      "image": "https://www.bestofbeers.dk/wp-content/uploads/2026/03/3FonteinenOudeKriek22_23.jpg",
-      "type": "Lambic",
-      "abv": 7.8,
-      "volume_cl": 75.0,
-      "brewery": "3 Fonteinen",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Øltanken",
-          "price": 199.0,
-          "url": "https://oltanken.dk/products/3-fonteinen-oude-kriek-23-24",
-          "discount_pct": 0,
-          "old_price": null
-        },
-        {
-          "shop_name": "Best of Beers",
-          "price": 226.0,
-          "url": "https://www.bestofbeers.dk/shop/3-fonteinen-oude-kriek-no-104-22-23-oekologisk-lambic-075-l-78/",
-          "discount_pct": 0,
-          "old_price": null
-        }
-      ],
-      "cheapest_price": 199.0,
-      "min_price": 199.0,
-      "shop": "Øltanken",
-      "discount_pct": 0,
-      "max_discount_pct": 0
-    },
-    {
       "id": 12869,
       "name": "Gueuze Dark Cuvée René Cognac BA 8% 75cl",
       "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/gueuze-dark-cuvee-rene-cognac-ba-8-75cl.png?v=1774958048",
@@ -48650,6 +48756,30 @@
       "shop": "Best of Beers",
       "discount_pct": 16.7,
       "max_discount_pct": 16.7
+    },
+    {
+      "id": 14386,
+      "name": "3 Fonteinen - Oude Kriek 23/24",
+      "image": "https://cdn.shopify.com/s/files/1/0776/5209/9400/files/02FEC72C-2FAC-415D-AA3C-A9A94C2C9E46.jpg?v=1777754353",
+      "type": "Lambic",
+      "abv": 70.0,
+      "volume_cl": 75.0,
+      "brewery": "3 Fonteinen",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Øltanken",
+          "price": 199.0,
+          "url": "https://oltanken.dk/products/3-fonteinen-oude-kriek-23-24",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 199.0,
+      "min_price": 199.0,
+      "shop": "Øltanken",
+      "discount_pct": 0,
+      "max_discount_pct": 0
     },
     {
       "id": 14465,
@@ -48961,30 +49091,6 @@
       "max_discount_pct": 0
     },
     {
-      "id": 13012,
-      "name": "Cantillon Kriek 100% Lambic Bio 6% 75cl",
-      "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/products/cantillion-kriek-lambic-bio-75cl.png?v=1681125108",
-      "type": "Lambic",
-      "abv": 100.0,
-      "volume_cl": 75.0,
-      "brewery": "Brasserie Cantillon",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Brygshoppen",
-          "price": 210.0,
-          "url": "https://brygshoppen.dk/products/cantillion-kriek-lambic-bio-75cl",
-          "discount_pct": 0,
-          "old_price": 0.0
-        }
-      ],
-      "cheapest_price": 210.0,
-      "min_price": 210.0,
-      "shop": "Brygshoppen",
-      "discount_pct": 0,
-      "max_discount_pct": 0
-    },
-    {
       "id": 14215,
       "name": "St. Patricks Day smage kasse m/6 irske ØL",
       "image": "https://cdn.shopify.com/s/files/1/0600/9438/2263/files/st_patrick.jpg?v=1773327609",
@@ -49110,7 +49216,7 @@
       "image": "https://cdn.shopify.com/s/files/1/0776/5209/9400/files/E15CBBF6-380B-4C4A-8381-EB311B8700A5.jpg?v=1715889646",
       "type": "Lambic",
       "abv": 10.0,
-      "volume_cl": null,
+      "volume_cl": 75.0,
       "brewery": "Tilquin",
       "category": null,
       "prices": [
@@ -49609,6 +49715,30 @@
       "max_discount_pct": 40.8
     },
     {
+      "id": 13675,
+      "name": "3 Fonteinen – Oude Kriek no 104 &#8211; 22/23 – Økologisk Lambic – 0,75 l. – 7,8%",
+      "image": "https://www.bestofbeers.dk/wp-content/uploads/2026/03/3FonteinenOudeKriek22_23.jpg",
+      "type": "Lambic",
+      "abv": 7.8,
+      "volume_cl": 75.0,
+      "brewery": "3 Fonteinen",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Best of Beers",
+          "price": 226.0,
+          "url": "https://www.bestofbeers.dk/shop/3-fonteinen-oude-kriek-no-104-22-23-oekologisk-lambic-075-l-78/",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 226.0,
+      "min_price": 226.0,
+      "shop": "Best of Beers",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
       "id": 15499,
       "name": "3 Fonteinen Braambes Oogst - Øl",
       "image": "https://www.vildmedvin.dk/img/1000/1000/resize/b/r/braambes_oogst_2021.jpg",
@@ -49686,7 +49816,7 @@
       "image": "https://cdn.shopify.com/s/files/1/0776/5209/9400/files/7BF7E7F0-F5B6-4B7B-A65C-CDFC2C838970.jpg?v=1777280959",
       "type": "Saison",
       "abv": 6.0,
-      "volume_cl": null,
+      "volume_cl": 75.0,
       "brewery": "Side Project",
       "category": null,
       "prices": [
@@ -49705,11 +49835,11 @@
       "max_discount_pct": 0
     },
     {
-      "id": 16674,
+      "id": 14499,
       "name": "Goose Island Beer Co. -  BCS-2022 30th Anniversary",
       "image": "https://cdn.shopify.com/s/files/1/0776/5209/9400/files/14BCB3C1-A2EB-476A-9EDD-95975D73D7ED.jpg?v=1767824221",
       "type": "Imperial Stout",
-      "abv": 14.4,
+      "abv": 36.0,
       "volume_cl": 50.0,
       "brewery": "Goose Island Beer Co.",
       "category": null,
@@ -50156,7 +50286,7 @@
       "image": "https://cdn.shopify.com/s/files/1/0402/1239/8243/files/Gross_Smagekasse.png?v=1781032817",
       "type": "Smagekasse",
       "abv": null,
-      "volume_cl": null,
+      "volume_cl": 44.0,
       "brewery": null,
       "category": null,
       "prices": [
@@ -50252,7 +50382,7 @@
       "image": "https://cdn.shopify.com/s/files/1/0776/5209/9400/files/1A24C652-A21E-4385-97AA-1BB56277FF98.jpg?v=1782391549",
       "type": "Pilsner",
       "abv": 5.1,
-      "volume_cl": null,
+      "volume_cl": 75.0,
       "brewery": "Rothaus",
       "category": null,
       "prices": [
@@ -50895,30 +51025,6 @@
       "max_discount_pct": 0
     },
     {
-      "id": 15216,
-      "name": "Ølpakke - Amerikansk - Øl",
-      "image": "https://www.vildmedvin.dk/img/1000/1000/resize/3/1/31000-bundle_1_20.jpg",
-      "type": "Ølpakker",
-      "abv": null,
-      "volume_cl": null,
-      "brewery": null,
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Vild med Vin",
-          "price": 269.0,
-          "url": "https://www.vildmedvin.dk/amerikansk-ol-pakken",
-          "discount_pct": 0,
-          "old_price": null
-        }
-      ],
-      "cheapest_price": 269.0,
-      "min_price": 269.0,
-      "shop": "Vild med Vin",
-      "discount_pct": 0,
-      "max_discount_pct": 0
-    },
-    {
       "id": 14283,
       "name": "Ultrapres - Belgien - Øl Liquor - 70 cl. - 20 %",
       "image": null,
@@ -51035,6 +51141,30 @@
       "cheapest_price": 275.0,
       "min_price": 275.0,
       "shop": "Brygshoppen",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
+      "id": 16778,
+      "name": "St. Bernardus  Abt. 12- Magnumflaske - 1,5 liter - 10%",
+      "image": "https://cdn.shopify.com/s/files/1/0600/9438/2263/files/Magnumfl..jpg?v=1764865858",
+      "type": "Beer",
+      "abv": 10.0,
+      "volume_cl": 150.0,
+      "brewery": "Beershoppen",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Beershoppen",
+          "price": 275.0,
+          "url": "https://beershoppen.dk/products/st-bernardus-abt-12-magnumflaske-1-5-liter-10",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 275.0,
+      "min_price": 275.0,
+      "shop": "Beershoppen",
       "discount_pct": 0,
       "max_discount_pct": 0
     },
@@ -51524,7 +51654,7 @@
       "image": "https://cdn.shopify.com/s/files/1/0402/1239/8243/files/FrauGruber_Smagekasse.png?v=1781003638",
       "type": "Smagekasse",
       "abv": null,
-      "volume_cl": null,
+      "volume_cl": 44.0,
       "brewery": null,
       "category": null,
       "prices": [
@@ -52071,12 +52201,12 @@
       "max_discount_pct": 0
     },
     {
-      "id": 16182,
-      "name": "Funky Fluid World Cup Final Eight bundle",
+      "id": 16779,
+      "name": "Funky Fluid World Cup Final Eight SPAR 160 kr.",
       "image": "https://cdn.shopify.com/s/files/1/0776/5209/9400/files/EAF8375D-AEFC-4CFD-8184-6F98E73CDAD8.jpg?v=1780786702",
       "type": "Double IPA",
       "abv": 8.0,
-      "volume_cl": 50.0,
+      "volume_cl": 75.0,
       "brewery": "Øltanken",
       "category": null,
       "prices": [
@@ -52220,7 +52350,7 @@
       "image": "https://cdn.shopify.com/s/files/1/0776/5209/9400/files/497286E9-F4C6-44FD-BF3B-358ED830EB74.jpg?v=1778711397",
       "type": "Stout",
       "abv": null,
-      "volume_cl": null,
+      "volume_cl": 75.0,
       "brewery": "Commonwealth",
       "category": null,
       "prices": [
@@ -52388,7 +52518,7 @@
       "image": "https://cdn.shopify.com/s/files/1/0402/1239/8243/files/Maanedens_Plus_Smagekasse_974d7d92-8f8a-4b09-9a13-9dfd67b7adf3.png?v=1782312122",
       "type": null,
       "abv": null,
-      "volume_cl": null,
+      "volume_cl": 44.0,
       "brewery": null,
       "category": null,
       "prices": [
@@ -53228,6 +53358,30 @@
       "shop": "Øltanken",
       "discount_pct": 0,
       "max_discount_pct": 0
+    },
+    {
+      "id": 16781,
+      "name": "Goose Island Beer Co. -  20, 21, 22,23 & 24 Bourbon County Brand Stout smagkasse",
+      "image": "https://cdn.shopify.com/s/files/1/0776/5209/9400/files/2ECF360B-ABEB-4886-AE15-A0104427B9E4.jpg?v=1750789575",
+      "type": "Stout",
+      "abv": null,
+      "volume_cl": 75.0,
+      "brewery": "Goose Island Beer Co.",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Øltanken",
+          "price": 699.0,
+          "url": "https://oltanken.dk/products/goose-island-beer-co-bourbon-county-brand-stout-22-23-24-smagkasse",
+          "discount_pct": 12.6,
+          "old_price": 800.0
+        }
+      ],
+      "cheapest_price": 699.0,
+      "min_price": 699.0,
+      "shop": "Øltanken",
+      "discount_pct": 12.6,
+      "max_discount_pct": 12.6
     },
     {
       "id": 14381,
