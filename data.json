@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-06-29T20:11:15.545747",
+  "updated_at": "2026-06-29T20:26:17.998548",
   "stats": {
-    "total": 2154,
+    "total": 2153,
     "deals": 574,
     "shops": 7,
     "shop_names": [
@@ -378,7 +378,7 @@
       "type": "Lager",
       "abv": 5.2,
       "volume_cl": 50.0,
-      "brewery": null,
+      "brewery": "Tyskie",
       "category": null,
       "prices": [
         {
@@ -402,7 +402,7 @@
       "type": "Lager",
       "abv": 5.0,
       "volume_cl": 50.0,
-      "brewery": null,
+      "brewery": "Lech",
       "category": null,
       "prices": [
         {
@@ -570,7 +570,7 @@
       "type": null,
       "abv": 0.5,
       "volume_cl": 33.0,
-      "brewery": null,
+      "brewery": "Clausthaler",
       "category": null,
       "prices": [
         {
@@ -579,6 +579,13 @@
           "url": "https://agoodcase.dk/products/clausthaler-radler-lemon-0-5-alkoholfri-radler",
           "discount_pct": 21.2,
           "old_price": 20.0
+        },
+        {
+          "shop_name": "Vild med Vin",
+          "price": 18.0,
+          "url": "https://www.vildmedvin.dk/clausthaler-original-0-4",
+          "discount_pct": 0,
+          "old_price": null
         }
       ],
       "cheapest_price": 15.75,
@@ -817,30 +824,6 @@
           "shop_name": "Vild med Vin",
           "price": 18.0,
           "url": "https://www.vildmedvin.dk/cerdos-voladores-brown-ale",
-          "discount_pct": 0,
-          "old_price": null
-        }
-      ],
-      "cheapest_price": 18.0,
-      "min_price": 18.0,
-      "shop": "Vild med Vin",
-      "discount_pct": 0,
-      "max_discount_pct": 0
-    },
-    {
-      "id": 15439,
-      "name": "Clausthaler Original Alkoholfri - Øl",
-      "image": "https://www.vildmedvin.dk/img/1000/1000/resize/c/l/clausthaler_original_0_4_.jpg",
-      "type": null,
-      "abv": 0.4,
-      "volume_cl": 33.0,
-      "brewery": "Clausthaler",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Vild med Vin",
-          "price": 18.0,
-          "url": "https://www.vildmedvin.dk/clausthaler-original-0-4",
           "discount_pct": 0,
           "old_price": null
         }
@@ -1775,7 +1758,7 @@
       "max_discount_pct": 0
     },
     {
-      "id": 16829,
+      "id": 16840,
       "name": "Leo Beer - Øl",
       "image": "https://www.vildmedvin.dk/img/1000/1000/resize/l/e/leo-beer-33-cl_large.jpg",
       "type": "Lager Øl",
@@ -2715,7 +2698,7 @@
       "max_discount_pct": 24.2
     },
     {
-      "id": 16827,
+      "id": 16838,
       "name": "Belgian Brown 6,8% 33cl",
       "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/belgien-brown-33cl.png?v=1753443086",
       "type": "Dubbel",
@@ -7193,7 +7176,7 @@
       "max_discount_pct": 0
     },
     {
-      "id": 16826,
+      "id": 16837,
       "name": "It's A Blond 5,9% 33cl",
       "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/its-a-blond-33cl_27db0da2-5945-4111-8396-339312eae8d3.png?v=1773482918",
       "type": "Blond",
@@ -7855,7 +7838,7 @@
       "max_discount_pct": 0
     },
     {
-      "id": 16823,
+      "id": 16834,
       "name": "Maître Tripel 8,5% 33cl",
       "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/maitre-tripel-8-5-33cl.png?v=1733847666",
       "type": "Tripel",
@@ -10068,7 +10051,7 @@
       "max_discount_pct": 10.3
     },
     {
-      "id": 16824,
+      "id": 16835,
       "name": "Imperial Stout 9,3% 33cl",
       "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/imperial-stout-9-3-33cl_e5717b14-1296-4555-8e23-bc8da32992e9.png?v=1753446200",
       "type": "Imperial Stout",
@@ -18869,7 +18852,7 @@
       "max_discount_pct": 0
     },
     {
-      "id": 16825,
+      "id": 16836,
       "name": "Ry Pilsner 5,6% 50cl",
       "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/ry-pilsner.png?v=1747399627",
       "type": "Pilsner",
@@ -19836,7 +19819,7 @@
       "max_discount_pct": 0
     },
     {
-      "id": 16828,
+      "id": 16839,
       "name": "To Øl, #DIPA - Øl",
       "image": "https://www.vildmedvin.dk/img/1000/1000/resize/7/7/7777_1..jpg",
       "type": "Double IPA",
@@ -22949,7 +22932,7 @@
       "type": "American Pale Ale",
       "abv": 5.0,
       "volume_cl": 44.0,
-      "brewery": null,
+      "brewery": "Cloudwater ",
       "category": null,
       "prices": [
         {
@@ -24658,8 +24641,8 @@
       "name": "XXX Rye Triple Reserva Bourbon BA",
       "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/xxx-rye-reserva-triple-10-33cl.png?v=1782644360",
       "type": "Tripel",
-      "abv": null,
-      "volume_cl": null,
+      "abv": 10.0,
+      "volume_cl": 33.0,
       "brewery": "De Struise Brouwers",
       "category": null,
       "prices": [
@@ -27775,7 +27758,7 @@
       "type": "New England IPA",
       "abv": 6.0,
       "volume_cl": 44.0,
-      "brewery": null,
+      "brewery": "Cloudwater ",
       "category": null,
       "prices": [
         {
@@ -28788,7 +28771,7 @@
       "max_discount_pct": 0
     },
     {
-      "id": 16821,
+      "id": 16832,
       "name": "Öö 10,5% 33cl",
       "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/oo-10-5-33cl.png?v=1750597033",
       "type": "Imperial Stout",
@@ -37145,7 +37128,7 @@
       "max_discount_pct": 0
     },
     {
-      "id": 16819,
+      "id": 16830,
       "name": "Raw Beer 8% 44cl",
       "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/raw-beer-8.png?v=1782404785",
       "type": "India Pale Ale (IPA)",
@@ -38383,37 +38366,6 @@
       "max_discount_pct": 0
     },
     {
-      "id": 13564,
-      "name": "Cloudwater Brewing Co. &#8211; CITRABOOST &#8211; DIPA – 0,44 l. – 8,0%",
-      "image": "https://www.bestofbeers.dk/wp-content/uploads/2026/05/CloudwaterCitraboost.jpg",
-      "type": "Double IPA",
-      "abv": 8.0,
-      "volume_cl": 44.0,
-      "brewery": "Cloudwater Brewing Co.",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "A Good Case",
-          "price": 79.75,
-          "url": "https://agoodcase.dk/products/cloudwater-citraboost-8-double-ipa",
-          "discount_pct": 12.4,
-          "old_price": 91.0
-        },
-        {
-          "shop_name": "Best of Beers",
-          "price": 91.0,
-          "url": "https://www.bestofbeers.dk/shop/cloudwater-brewing-co-citraboost-dipa-044-l-80/",
-          "discount_pct": 0,
-          "old_price": null
-        }
-      ],
-      "cheapest_price": 79.75,
-      "min_price": 79.75,
-      "shop": "A Good Case",
-      "discount_pct": 12.4,
-      "max_discount_pct": 12.4
-    },
-    {
       "id": 13757,
       "name": "Põhjala – Cellar Series Barrique Noire – BA Imperial Baltic Porter – 0,33 l. – 12,0%",
       "image": "https://www.bestofbeers.dk/wp-content/uploads/2025/11/PohjalaBarriqueNoire.jpg",
@@ -38498,6 +38450,37 @@
       "shop": "A Good Case",
       "discount_pct": 11.4,
       "max_discount_pct": 11.4
+    },
+    {
+      "id": 16010,
+      "name": "Cloudwater - Citraboost - 8% Double IPA",
+      "image": "https://cdn.shopify.com/s/files/1/0402/1239/8243/files/Cloudwater_Citraboost.png?v=1779783367",
+      "type": "Double IPA",
+      "abv": 8.0,
+      "volume_cl": 44.0,
+      "brewery": "Best Before: 10/10-2026",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "A Good Case",
+          "price": 79.75,
+          "url": "https://agoodcase.dk/products/cloudwater-citraboost-8-double-ipa",
+          "discount_pct": 12.4,
+          "old_price": 91.0
+        },
+        {
+          "shop_name": "Best of Beers",
+          "price": 91.0,
+          "url": "https://www.bestofbeers.dk/shop/cloudwater-brewing-co-citraboost-dipa-044-l-80/",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 79.75,
+      "min_price": 79.75,
+      "shop": "A Good Case",
+      "discount_pct": 12.4,
+      "max_discount_pct": 12.4
     },
     {
       "id": 13344,
@@ -40369,7 +40352,7 @@
       "max_discount_pct": 0
     },
     {
-      "id": 16822,
+      "id": 16833,
       "name": "No Way Out B.A. 10,5% 33cl",
       "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/no-way-out-b-a-10-5-33cl.png?v=1750592682",
       "type": "Barley Wine",
@@ -42880,7 +42863,7 @@
       "max_discount_pct": 22.7
     },
     {
-      "id": 16820,
+      "id": 16831,
       "name": "10 - Imperial Stout 10% 44cl",
       "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/10-imperial-stout-10-44cl_9645d1f7-914c-43d6-b687-b07453f1aaf2.png?v=1761637026",
       "type": "Imperial Stout",
