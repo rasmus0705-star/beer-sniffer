@@ -1,0 +1,228 @@
+import requests
+import re
+import html
+from app.utils.detect_type import detect_type
+
+# Beermatch.dk er en Shopify-shop. Vol + ABV ligger i body_html paa hvert
+# produkt ("Alcohol: 8 %", "Size: 440 ml."), saa vi behoever INGEN
+# sidehentning og INGEN pagecache (modsat oeltanken.py).
+
+HEADERS = {
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+    "Accept": "application/json",
+    "Accept-Language": "da-DK,da;q=0.9,en;q=0.8",
+}
+
+BASE = "https://www.beermatch.dk"
+
+
+def _clean(text):
+    """Fjern HTML-tags og unescape entiteter. Returner ' '-joinet tekst."""
+    if not text:
+        return ""
+    t = re.sub(r'<[^>]+>', ' ', text)
+    t = html.unescape(t)
+    return re.sub(r'\s+', ' ', t).strip()
+
+
+def _parse_abv(text):
+    """ABV fra Beermatch-body. Foretrukket: 'Alcohol: 8 %'. Fallback: '8 %'."""
+    if not text:
+        return None
+    t = _clean(text)
+    # Beermatch-format foerst, derefter generisk fallback.
+    m = re.search(r'alcohol\s*[:\-]?\s*(\d+(?:[.,]\d+)?)\s*%', t, re.IGNORECASE)
+    if not m:
+        m = re.search(r'(\d+(?:[.,]\d+)?)\s*%', t)
+    if m:
+        try:
+            val = float(m.group(1).replace(',', '.'))
+            if 0 < val <= 25:   # rimelig ABV-graense
+                return val
+        except ValueError:
+            pass
+    return None
+
+
+def _parse_volume(text):
+    """Volumen i cl. Foretrukket: 'Size: 440 ml.'. Fallback: generisk 'NN ml/cl/l'."""
+    if not text:
+        return None
+    t = _clean(text).lower()
+    m = re.search(r'size\s*[:\-]?\s*(\d+(?:[.,]\d+)?)\s*(ml|cl|l)\b', t)
+    if not m:
+        m = re.search(r'(\d+(?:[.,]\d+)?)\s*(ml|cl|l)\b', t)
+    if m:
+        try:
+            val = float(m.group(1).replace(',', '.'))
+        except ValueError:
+            return None
+        unit = m.group(2)
+        if unit == 'l':
+            val *= 100
+        elif unit == 'ml':
+            val /= 10
+        if 0 < val <= 75:   # enkeltflasker; over 75 cl = sandsynligvis stoej/pakke
+            return val
+    return None
+
+
+def _parse_type_line(body_html):
+    """Traek 'Type: <...>' ud af body_html (bruges som hint til detect_type)."""
+    t = _clean(body_html)
+    m = re.search(r'type\s*[:\-]?\s*([^.\n]+)', t, re.IGNORECASE)
+    return m.group(1).strip() if m else ""
+
+
+def scrape_beermatch():
+    items = []
+    page = 1
+
+    # Ikke-oel: events, ydelser, gavekort, merchandise. (Beermatch saelger
+    # oelvandringer, smagninger og tasting tours sammen med oel.)
+    skip_keywords = [
+        "beer hike", "craft beer crawl", "beer crawl", "beer tasting",
+        "tasting tour", "olsmagning", "\u00f8lsmagning", "event",
+        "gavekort", "gift card", "merchandise", "t-shirt", "tr\u00f8je",
+        "glas", "opener", "opluk", "hoodie", "cap ",
+        "abonnement", "subscription",
+    ]
+
+    # Pakker/smagekasser -> category="smagekasse" (ikke enkeltoel).
+    pack_keywords = [
+        "smagekasse", "smagskasse", "smagspakke", "pakke", "pakken",
+        "gift box", "mix pack", "blandet", "bundle", "m\u00e5nedspakke",
+        "super bowl", "v\u00e6lg",
+    ]
+
+    while True:
+        url = f"{BASE}/products.json?limit=250&page={page}"
+        try:
+            response = requests.get(url, headers=HEADERS, timeout=30)
+            data = response.json()
+        except Exception as e:
+            print(f"\u274c Beermatch fejl paa side {page}: {e}")
+            break
+
+        products = data.get("products", [])
+        if not products:
+            break
+
+        for product in products:
+            name = product.get("title")
+            if not name:
+                continue
+
+            name_lower = name.lower()
+
+            # Skip ikke-oel (events, merch, gavekort ...)
+            if any(kw in name_lower for kw in skip_keywords):
+                continue
+
+            variants = product.get("variants", [])
+            if not variants:
+                continue
+
+            variant = variants[0]
+            if not variant.get("available"):
+                continue
+
+            try:
+                price = float(variant.get("price"))
+            except (TypeError, ValueError):
+                continue
+            if price <= 0:
+                continue
+
+            old_price = variant.get("compare_at_price")
+            if old_price:
+                try:
+                    old_price = float(old_price)
+                except (TypeError, ValueError):
+                    old_price = None
+
+            discount = None
+            if old_price and old_price > price:
+                discount = round(((old_price - price) / old_price) * 100, 1)
+
+            handle = product.get("handle")
+            product_url = f"{BASE}/products/{handle}"
+
+            images = product.get("images", [])
+            image = images[0].get("src") if images else None
+
+            body_html = product.get("body_html", "")
+            tags = product.get("tags", [])
+
+            # Smagekasse?
+            is_smagekasse = (
+                any(kw in name_lower for kw in pack_keywords)
+                or bool(re.search(r'\d+\s*stk', name_lower))
+                or bool(re.search(r'\d+\s+(?:or|eller)\s+\d+\s+beers?', name_lower))
+            )
+
+            # Volumen/ABV: kun for enkeltoel (pakker har ingen meningsfuld vol/abv)
+            volume = None
+            abv = None
+            if not is_smagekasse:
+                volume = _parse_volume(body_html) or _parse_volume(name)
+                abv = _parse_abv(body_html) or _parse_abv(name)
+
+            # Bryggeri: del foer foerste ' - '. Vendor er altid "Beermatch" -> ubrugelig.
+            brewery = None
+            if ' - ' in name:
+                brewery = name.split(' - ')[0].strip()
+
+            # Type: navn -> tags -> "Type:"-linjen i body
+            beer_type = (
+                detect_type(name)
+                or detect_type(' '.join(tags))
+                or detect_type(_parse_type_line(body_html))
+            )
+
+            item = {
+                "external_id": product.get("id"),
+                "name": name,
+                "price": price,
+                "old_price": old_price,
+                "discount_pct": discount,
+                "url": product_url,
+                "shop_name": "Beermatch",
+                "volume_cl": volume,
+                "grams": variant.get("grams"),
+                "abv": abv,
+                "image": image,
+                "type": beer_type,
+                "brewery": brewery,
+                "category": "smagekasse" if is_smagekasse else "\u00f8l",
+                "sku": variant.get("sku"),
+                "available": variant.get("available"),
+                "untappd_url": None,   # Beermatch har ingen Untappd-URL i feed'et
+                "untappd_id": None,
+                "tags": tags,
+            }
+
+            items.append(item)
+
+        print(f"\U0001f4e6 Beermatch side {page}: {len(products)} produkter hentet")
+        page += 1
+
+    return items
+
+
+if __name__ == "__main__":
+    items = scrape_beermatch()
+    print(f"\n\u2705 Total: {len(items)} items")
+    with_brewery = sum(1 for it in items if it.get("brewery"))
+    with_volume = sum(1 for it in items if it.get("volume_cl"))
+    with_abv = sum(1 for it in items if it.get("abv"))
+    smagekasser = sum(1 for it in items if it.get("category") == "smagekasse")
+    print(f"Med bryggeri: {with_brewery}/{len(items)}")
+    print(f"Med volumen:  {with_volume}/{len(items)}")
+    print(f"Med ABV:      {with_abv}/{len(items)}")
+    print(f"Smagekasser:  {smagekasser}")
+    if items:
+        print(f"\nFoerste enkeltoel:")
+        first = next((it for it in items if it.get("category") == "\u00f8l"), items[0])
+        for k, v in first.items():
+            print(f"  {k}: {v}")
