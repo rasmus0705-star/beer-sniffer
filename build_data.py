@@ -24,6 +24,7 @@ from sqlalchemy.orm import joinedload
 
 from app.scrapers.brygshoppen import scrape_brygshoppen
 from app.scrapers.beermatch import scrape_beermatch
+from app.scrapers.drikbeer import scrape_drikbeer
 from app.scrapers.agoodcase import scrape_agoodcase
 from app.scrapers.beershoppen import scrape_beershoppen
 from app.scrapers.bestofbeers import scrape_bestofbeers
@@ -56,6 +57,7 @@ def run_all_scrapers():
     scrapers = [
         ("Brygshoppen", scrape_brygshoppen),
         ("Beermatch", scrape_beermatch),
+        ("Drikbeer", scrape_drikbeer),
         ("A Good Case", scrape_agoodcase),
         ("Beershoppen", scrape_beershoppen),
         ("Best of Beers", scrape_bestofbeers),
