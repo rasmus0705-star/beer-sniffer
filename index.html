@@ -1652,7 +1652,7 @@
         rc.style.display = 'block';
         rc.textContent = `Viser ${Math.min(currentPage * PAGE_SIZE, beers.length)} af ${beers.length} øl`;
         if (!beers.length) {
-            grid.innerHTML = `<div class="empty"><div class="empty-icon">${currentFilter==='favs'?'❤️':'🔍'}</div><p>${currentFilter==='favs'?'Ingen favoritter endnu — klik 🤍 på et ølkort':'Ingen øl matcher din søgning'}</p></div>`;
+            grid.innerHTML = `<div class="empty"><div class="empty-icon">${activeFlags.has('favs')?'❤️':'🔍'}</div><p>${activeFlags.has('favs')?'Ingen favoritter endnu — klik 🤍 på et ølkort':'Ingen øl matcher din søgning'}</p></div>`;
             document.getElementById('load-more').style.display = 'none'; return;
         }
         totalPages = Math.ceil(beers.length / PAGE_SIZE); totalCount = beers.length;
