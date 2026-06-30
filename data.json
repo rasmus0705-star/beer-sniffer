@@ -1,8 +1,8 @@
 {
-  "updated_at": "2026-06-29T20:26:17.998548",
+  "updated_at": "2026-06-30T09:29:11.129600",
   "stats": {
-    "total": 2153,
-    "deals": 574,
+    "total": 2139,
+    "deals": 568,
     "shops": 7,
     "shop_names": [
       "A Good Case",
@@ -154,30 +154,6 @@
       "shop": "Vild med Vin",
       "discount_pct": 52.4,
       "max_discount_pct": 52.4
-    },
-    {
-      "id": 16690,
-      "name": "Rothaus Weizenzäpfle Alkoholfri - BEDST FØR: 22.07.2026 - Øl",
-      "image": "https://www.vildmedvin.dk/img/1000/1000/resize/r/o/rothaus_weizenz_pfle_alkoholfri.jpg",
-      "type": "Hvedeøl",
-      "abv": 0.5,
-      "volume_cl": 33.0,
-      "brewery": "Rothaus",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Vild med Vin",
-          "price": 11.0,
-          "url": "https://www.vildmedvin.dk/rothaus-weizenzapfle-alkoholfri",
-          "discount_pct": 52.2,
-          "old_price": 23.0
-        }
-      ],
-      "cheapest_price": 11.0,
-      "min_price": 11.0,
-      "shop": "Vild med Vin",
-      "discount_pct": 52.2,
-      "max_discount_pct": 52.2
     },
     {
       "id": 15704,
@@ -1370,30 +1346,6 @@
       "max_discount_pct": 0
     },
     {
-      "id": 15388,
-      "name": "The White Hag, Little Fawn - Øl",
-      "image": "https://www.vildmedvin.dk/img/1000/1000/resize/w/h/white_hag_little_fawn.jpg",
-      "type": "IPA",
-      "abv": 4.2,
-      "volume_cl": 44.0,
-      "brewery": "The White Hag",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Vild med Vin",
-          "price": 20.25,
-          "url": "https://www.vildmedvin.dk/the-white-hag-little-fawn",
-          "discount_pct": 51.2,
-          "old_price": 41.5
-        }
-      ],
-      "cheapest_price": 20.25,
-      "min_price": 20.25,
-      "shop": "Vild med Vin",
-      "discount_pct": 51.2,
-      "max_discount_pct": 51.2
-    },
-    {
       "id": 13300,
       "name": "Mash Gang - Glug - 0,5% Alkoholfri Lager",
       "image": "https://cdn.shopify.com/s/files/1/0402/1239/8243/files/MashGang_Glug_5af78161-f800-44d0-8659-668be9df097b.png?v=1778573026",
@@ -1758,7 +1710,7 @@
       "max_discount_pct": 0
     },
     {
-      "id": 16840,
+      "id": 16852,
       "name": "Leo Beer - Øl",
       "image": "https://www.vildmedvin.dk/img/1000/1000/resize/l/e/leo-beer-33-cl_large.jpg",
       "type": "Lager Øl",
@@ -2698,7 +2650,7 @@
       "max_discount_pct": 24.2
     },
     {
-      "id": 16838,
+      "id": 16850,
       "name": "Belgian Brown 6,8% 33cl",
       "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/belgien-brown-33cl.png?v=1753443086",
       "type": "Dubbel",
@@ -3582,30 +3534,6 @@
       "shop": "Vild med Vin",
       "discount_pct": 0,
       "max_discount_pct": 0
-    },
-    {
-      "id": 16601,
-      "name": "Alefarm, Full Spectrum - BEDST FØR: 23.06.2026 - Øl",
-      "image": "https://www.vildmedvin.dk/img/1000/1000/resize/f/u/fullspectrum_meny_alefarm.jpg",
-      "type": "IPA",
-      "abv": 8.0,
-      "volume_cl": 44.0,
-      "brewery": "Alefarm",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Vild med Vin",
-          "price": 27.0,
-          "url": "https://www.vildmedvin.dk/alefarm-full-spectrum",
-          "discount_pct": 50.9,
-          "old_price": 55.0
-        }
-      ],
-      "cheapest_price": 27.0,
-      "min_price": 27.0,
-      "shop": "Vild med Vin",
-      "discount_pct": 50.9,
-      "max_discount_pct": 50.9
     },
     {
       "id": 15512,
@@ -5086,30 +5014,6 @@
           "shop_name": "Vild med Vin",
           "price": 29.0,
           "url": "https://www.vildmedvin.dk/blanche-de-namur-rosee",
-          "discount_pct": 0,
-          "old_price": null
-        }
-      ],
-      "cheapest_price": 29.0,
-      "min_price": 29.0,
-      "shop": "Vild med Vin",
-      "discount_pct": 0,
-      "max_discount_pct": 0
-    },
-    {
-      "id": 15446,
-      "name": "Poppels, London Lager Glutenfree - Øl",
-      "image": "https://www.vildmedvin.dk/img/1000/1000/resize/g/l/glutenfri-viena-lager-oel_1_.jpg",
-      "type": "Lager",
-      "abv": 5.0,
-      "volume_cl": 33.0,
-      "brewery": "Poppels",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Vild med Vin",
-          "price": 29.0,
-          "url": "https://www.vildmedvin.dk/poppels-london-lager-glutenfree",
           "discount_pct": 0,
           "old_price": null
         }
@@ -6888,30 +6792,6 @@
       "max_discount_pct": 0
     },
     {
-      "id": 15377,
-      "name": "Brewski, Mangofeber IPA - Øl",
-      "image": "https://www.vildmedvin.dk/img/1000/1000/resize/b/r/brewski_mangofeber_dipa.jpg",
-      "type": "India Pale Ale (IPA)",
-      "abv": 4.2,
-      "volume_cl": 33.0,
-      "brewery": "Brewski",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Vild med Vin",
-          "price": 31.0,
-          "url": "https://www.vildmedvin.dk/brewski-mangofeber-ipa",
-          "discount_pct": 0,
-          "old_price": null
-        }
-      ],
-      "cheapest_price": 31.0,
-      "min_price": 31.0,
-      "shop": "Vild med Vin",
-      "discount_pct": 0,
-      "max_discount_pct": 0
-    },
-    {
       "id": 15384,
       "name": "Ebeltoft Gårdbryggeri, Goodie Goodness Alkoholfri - Øl",
       "image": "https://www.vildmedvin.dk/img/1000/1000/resize/g/o/goodie_goodness_1.jpg",
@@ -7176,7 +7056,7 @@
       "max_discount_pct": 0
     },
     {
-      "id": 16837,
+      "id": 16849,
       "name": "It's A Blond 5,9% 33cl",
       "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/its-a-blond-33cl_27db0da2-5945-4111-8396-339312eae8d3.png?v=1773482918",
       "type": "Blond",
@@ -7512,6 +7392,30 @@
       "max_discount_pct": 0
     },
     {
+      "id": 15092,
+      "name": "Põhjala - Kirsiraks - 4% Fruited Sour",
+      "image": "https://cdn.shopify.com/s/files/1/0402/1239/8243/files/Pohjala_kirsiraks.png?v=1762929544",
+      "type": "Fruited Sour",
+      "abv": 4.0,
+      "volume_cl": 33.0,
+      "brewery": "Best Before: 04/06-2028",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "A Good Case",
+          "price": 32.5,
+          "url": "https://agoodcase.dk/products/pohjala-kirsiraks-4-fruited-sour",
+          "discount_pct": 27.8,
+          "old_price": 45.0
+        }
+      ],
+      "cheapest_price": 32.5,
+      "min_price": 32.5,
+      "shop": "A Good Case",
+      "discount_pct": 27.8,
+      "max_discount_pct": 27.8
+    },
+    {
       "id": 13970,
       "name": "Funky Falcon - Pale Ale fra Two Chefs",
       "image": "https://cdn-main.ideal.shop/images/by_hash/e36516194b30c433d242f6da22d74de660fbdf38c05f4a5c80d817e2a859046c/500-0/FynkyFalcon.jpg",
@@ -7838,7 +7742,7 @@
       "max_discount_pct": 0
     },
     {
-      "id": 16834,
+      "id": 16846,
       "name": "Maître Tripel 8,5% 33cl",
       "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/maitre-tripel-8-5-33cl.png?v=1733847666",
       "type": "Tripel",
@@ -9059,30 +8963,6 @@
       "max_discount_pct": 0
     },
     {
-      "id": 15464,
-      "name": "Møn Bryghus, Damsholte IPA, Økologisk alkoholfri - Øl",
-      "image": "https://www.vildmedvin.dk/img/1000/1000/resize/d/a/damsholteipa-33cl.jpg",
-      "type": "India Pale Ale (IPA)",
-      "abv": 0.5,
-      "volume_cl": 33.0,
-      "brewery": "Møn Bryghus",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Vild med Vin",
-          "price": 34.0,
-          "url": "https://www.vildmedvin.dk/mon-bryghus-damsholte-ipa-okologisk-alkoholfri",
-          "discount_pct": 0,
-          "old_price": null
-        }
-      ],
-      "cheapest_price": 34.0,
-      "min_price": 34.0,
-      "shop": "Vild med Vin",
-      "discount_pct": 0,
-      "max_discount_pct": 0
-    },
-    {
       "id": 15489,
       "name": "Møn Bryghus, Keldby Brown Ale, økologisk Alkoholfri - Øl",
       "image": "https://www.vildmedvin.dk/img/1000/1000/resize/k/e/keldbybrownale-m_n.jpg",
@@ -9392,37 +9272,6 @@
       "cheapest_price": 35.0,
       "min_price": 35.0,
       "shop": "Brygshoppen",
-      "discount_pct": 0,
-      "max_discount_pct": 0
-    },
-    {
-      "id": 15688,
-      "name": "Tiny Rebel, Clwb Tropica - Øl",
-      "image": "https://www.vildmedvin.dk/img/1000/1000/resize/t/i/tiny_rebel_clwb_tropica.jpg",
-      "type": "IPA",
-      "abv": 5.0,
-      "volume_cl": 44.0,
-      "brewery": "Tiny Rebel",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Vild med Vin",
-          "price": 35.0,
-          "url": "https://www.vildmedvin.dk/tiny-rebel-clwb-tropica",
-          "discount_pct": 0,
-          "old_price": null
-        },
-        {
-          "shop_name": "Beershoppen",
-          "price": 40.0,
-          "url": "https://beershoppen.dk/products/clwb-tropica-tiny-rebel-44-cl-5-0",
-          "discount_pct": 0,
-          "old_price": null
-        }
-      ],
-      "cheapest_price": 35.0,
-      "min_price": 35.0,
-      "shop": "Vild med Vin",
       "discount_pct": 0,
       "max_discount_pct": 0
     },
@@ -10051,7 +9900,7 @@
       "max_discount_pct": 10.3
     },
     {
-      "id": 16835,
+      "id": 16847,
       "name": "Imperial Stout 9,3% 33cl",
       "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/imperial-stout-9-3-33cl_e5717b14-1296-4555-8e23-bc8da32992e9.png?v=1753446200",
       "type": "Imperial Stout",
@@ -11086,30 +10935,6 @@
           "shop_name": "A Good Case",
           "price": 35.75,
           "url": "https://agoodcase.dk/products/aben-birch-4-8-glutenfri-pilsner",
-          "discount_pct": 20.6,
-          "old_price": 45.0
-        }
-      ],
-      "cheapest_price": 35.75,
-      "min_price": 35.75,
-      "shop": "A Good Case",
-      "discount_pct": 20.6,
-      "max_discount_pct": 20.6
-    },
-    {
-      "id": 15092,
-      "name": "Põhjala - Kirsiraks - 4% Fruited Sour",
-      "image": "https://cdn.shopify.com/s/files/1/0402/1239/8243/files/Pohjala_kirsiraks.png?v=1762929544",
-      "type": "Fruited Sour",
-      "abv": 4.0,
-      "volume_cl": 33.0,
-      "brewery": "Best Before: 04/06-2028",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "A Good Case",
-          "price": 35.75,
-          "url": "https://agoodcase.dk/products/pohjala-kirsiraks-4-fruited-sour",
           "discount_pct": 20.6,
           "old_price": 45.0
         }
@@ -12363,30 +12188,6 @@
       "max_discount_pct": 0
     },
     {
-      "id": 15379,
-      "name": "Brewski, Pango - Øl",
-      "image": "https://www.vildmedvin.dk/img/1000/1000/resize/b/r/brewski_pango_1.jpg",
-      "type": "IPA",
-      "abv": 5.9,
-      "volume_cl": 33.0,
-      "brewery": "Brewski",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Vild med Vin",
-          "price": 37.0,
-          "url": "https://www.vildmedvin.dk/brewski-pango",
-          "discount_pct": 0,
-          "old_price": null
-        }
-      ],
-      "cheapest_price": 37.0,
-      "min_price": 37.0,
-      "shop": "Vild med Vin",
-      "discount_pct": 0,
-      "max_discount_pct": 0
-    },
-    {
       "id": 13337,
       "name": "Hornbeer - Happy Hoppy Viking - 9,3% Triple IPA",
       "image": "https://cdn.shopify.com/s/files/1/0402/1239/8243/files/Hornbeer_HappyHoppy.png?v=1776666318",
@@ -13371,30 +13172,6 @@
       "max_discount_pct": 0
     },
     {
-      "id": 15428,
-      "name": "St. Austell, Proper Job - Øl",
-      "image": "https://www.vildmedvin.dk/img/1000/1000/resize/s/t/st_austell_proper_job.jpg",
-      "type": "IPA",
-      "abv": 5.5,
-      "volume_cl": 50.0,
-      "brewery": "St. Austell",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Vild med Vin",
-          "price": 38.0,
-          "url": "https://www.vildmedvin.dk/st-austell-proper-job",
-          "discount_pct": 0,
-          "old_price": null
-        }
-      ],
-      "cheapest_price": 38.0,
-      "min_price": 38.0,
-      "shop": "Vild med Vin",
-      "discount_pct": 0,
-      "max_discount_pct": 0
-    },
-    {
       "id": 15490,
       "name": "Amager Bryghus, Lil' Demon Alkoholfri - Øl",
       "image": "https://www.vildmedvin.dk/img/1000/1000/resize/a/m/amager_bryghus_lil_demon.jpg",
@@ -13408,6 +13185,30 @@
           "shop_name": "Vild med Vin",
           "price": 38.0,
           "url": "https://www.vildmedvin.dk/amager-bryghus-lil-demon-0-5",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 38.0,
+      "min_price": 38.0,
+      "shop": "Vild med Vin",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
+      "id": 15379,
+      "name": "Brewski, Pango - Øl",
+      "image": "https://www.vildmedvin.dk/img/1000/1000/resize/b/r/brewski_pango_1.jpg",
+      "type": "IPA",
+      "abv": 5.9,
+      "volume_cl": 33.0,
+      "brewery": "Brewski",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Vild med Vin",
+          "price": 38.0,
+          "url": "https://www.vildmedvin.dk/brewski-ponyo",
           "discount_pct": 0,
           "old_price": null
         }
@@ -13985,30 +13786,6 @@
       "max_discount_pct": 0
     },
     {
-      "id": 15494,
-      "name": "Brewski, Strawberry Blush - Øl",
-      "image": "https://www.vildmedvin.dk/img/1000/1000/resize/b/r/brewski-strawberry-blush.jpg",
-      "type": "Sour Beer",
-      "abv": 5.5,
-      "volume_cl": 33.0,
-      "brewery": "Brewski",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Vild med Vin",
-          "price": 39.0,
-          "url": "https://www.vildmedvin.dk/brewski-strawberry-blush",
-          "discount_pct": 0,
-          "old_price": null
-        }
-      ],
-      "cheapest_price": 39.0,
-      "min_price": 39.0,
-      "shop": "Vild med Vin",
-      "discount_pct": 0,
-      "max_discount_pct": 0
-    },
-    {
       "id": 15509,
       "name": "Amager Bryghus, Planet of The Pink Ponies - Øl",
       "image": "https://www.vildmedvin.dk/img/1000/1000/resize/a/m/amager_bryghus_planets_of_the_pink_ponies.jpg",
@@ -14280,30 +14057,6 @@
       "max_discount_pct": 20.5
     },
     {
-      "id": 15094,
-      "name": "FrauGruber - Pils - 4,8% German Pilsner",
-      "image": "https://cdn.shopify.com/s/files/1/0402/1239/8243/files/FrauGruber_Pils.png?v=1773652994",
-      "type": "Pilsner",
-      "abv": 4.8,
-      "volume_cl": 44.0,
-      "brewery": "Best before: 31/12-2026",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "A Good Case",
-          "price": 39.75,
-          "url": "https://agoodcase.dk/products/frau-gruber-pils-4-8-german-pilsner",
-          "discount_pct": 20.5,
-          "old_price": 50.0
-        }
-      ],
-      "cheapest_price": 39.75,
-      "min_price": 39.75,
-      "shop": "A Good Case",
-      "discount_pct": 20.5,
-      "max_discount_pct": 20.5
-    },
-    {
       "id": 13353,
       "name": "Põhjala - Laager - 4,7% German Pilsner",
       "image": "https://cdn.shopify.com/s/files/1/0402/1239/8243/files/pohjala_laager.png?v=1763055036",
@@ -14341,30 +14094,6 @@
           "shop_name": "A Good Case",
           "price": 39.75,
           "url": "https://agoodcase.dk/products/undercover-brewing-guess-whos-back-5-okologisk-pilsner-1",
-          "discount_pct": 20.5,
-          "old_price": 50.0
-        }
-      ],
-      "cheapest_price": 39.75,
-      "min_price": 39.75,
-      "shop": "A Good Case",
-      "discount_pct": 20.5,
-      "max_discount_pct": 20.5
-    },
-    {
-      "id": 15091,
-      "name": "Fuerst Wiacek - Pilsner - 5% German Pilsner",
-      "image": "https://cdn.shopify.com/s/files/1/0402/1239/8243/files/FuerstWiacek_Pilsner.png?v=1761483387",
-      "type": "Pilsner",
-      "abv": 5.0,
-      "volume_cl": 44.0,
-      "brewery": "Best before: 06/07-2026",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "A Good Case",
-          "price": 39.75,
-          "url": "https://agoodcase.dk/products/fuerst-wiacek-pilsner-5-german-pilsner",
           "discount_pct": 20.5,
           "old_price": 50.0
         }
@@ -15463,6 +15192,30 @@
       "max_discount_pct": 0
     },
     {
+      "id": 15688,
+      "name": "Tiny Rebel, Clwb Tropica - Øl",
+      "image": "https://www.vildmedvin.dk/img/1000/1000/resize/t/i/tiny_rebel_clwb_tropica.jpg",
+      "type": "IPA",
+      "abv": 5.0,
+      "volume_cl": 44.0,
+      "brewery": "Tiny Rebel",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Beershoppen",
+          "price": 40.0,
+          "url": "https://beershoppen.dk/products/clwb-tropica-tiny-rebel-44-cl-5-0",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 40.0,
+      "min_price": 40.0,
+      "shop": "Beershoppen",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
       "id": 16102,
       "name": "Lambicus Strawberry Thyme - 33cl, 4%, Lambic - Timmermans",
       "image": "https://cdn.shopify.com/s/files/1/0600/9438/2263/files/IMG_1503.jpg?v=1736417987",
@@ -16427,30 +16180,6 @@
       "max_discount_pct": 25.5
     },
     {
-      "id": 15378,
-      "name": "Brewski, Matador - Øl",
-      "image": "https://www.vildmedvin.dk/img/1000/1000/resize/b/r/brewski_matador.jpg",
-      "type": "Sour Beer",
-      "abv": 4.7,
-      "volume_cl": 33.0,
-      "brewery": "Brewski",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Vild med Vin",
-          "price": 41.0,
-          "url": "https://www.vildmedvin.dk/brewski-matador",
-          "discount_pct": 0,
-          "old_price": null
-        }
-      ],
-      "cheapest_price": 41.0,
-      "min_price": 41.0,
-      "shop": "Vild med Vin",
-      "discount_pct": 0,
-      "max_discount_pct": 0
-    },
-    {
       "id": 15416,
       "name": "Brewdog, Wingman Tropical Storm - Øl",
       "image": "https://www.vildmedvin.dk/img/1000/1000/resize/b/r/brewdog__tropical_storm.jpg",
@@ -17280,6 +17009,30 @@
           "shop_name": "A Good Case",
           "price": 43.17,
           "url": "https://agoodcase.dk/products/sudden-death-holiday-on-haunted-hill-5-5-new-england-pale-ale",
+          "discount_pct": 21.5,
+          "old_price": 55.0
+        }
+      ],
+      "cheapest_price": 43.17,
+      "min_price": 43.17,
+      "shop": "A Good Case",
+      "discount_pct": 21.5,
+      "max_discount_pct": 21.5
+    },
+    {
+      "id": 13439,
+      "name": "Põhjala - Pime Öö - 13,6% Imperial Stout",
+      "image": "https://cdn.shopify.com/s/files/1/0402/1239/8243/files/Pohjala_pimeoo.png?v=1773006747",
+      "type": "Imperial Stout",
+      "abv": 13.6,
+      "volume_cl": 33.0,
+      "brewery": "Best Before: 08/04-2028",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "A Good Case",
+          "price": 43.17,
+          "url": "https://agoodcase.dk/products/pohjala-pime-oo-13-6-imperial-stout",
           "discount_pct": 21.5,
           "old_price": 55.0
         }
@@ -18852,7 +18605,7 @@
       "max_discount_pct": 0
     },
     {
-      "id": 16836,
+      "id": 16848,
       "name": "Ry Pilsner 5,6% 50cl",
       "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/ry-pilsner.png?v=1747399627",
       "type": "Pilsner",
@@ -19819,7 +19572,7 @@
       "max_discount_pct": 0
     },
     {
-      "id": 16839,
+      "id": 16851,
       "name": "To Øl, #DIPA - Øl",
       "image": "https://www.vildmedvin.dk/img/1000/1000/resize/7/7/7777_1..jpg",
       "type": "Double IPA",
@@ -20415,30 +20168,6 @@
           "shop_name": "A Good Case",
           "price": 45.75,
           "url": "https://agoodcase.dk/products/pohjala-emberwood-8-smoked-porter",
-          "discount_pct": 16.8,
-          "old_price": 55.0
-        }
-      ],
-      "cheapest_price": 45.75,
-      "min_price": 45.75,
-      "shop": "A Good Case",
-      "discount_pct": 16.8,
-      "max_discount_pct": 16.8
-    },
-    {
-      "id": 13439,
-      "name": "Põhjala - Pime Öö - 13,6% Imperial Stout",
-      "image": "https://cdn.shopify.com/s/files/1/0402/1239/8243/files/Pohjala_pimeoo.png?v=1773006747",
-      "type": "Imperial Stout",
-      "abv": 13.6,
-      "volume_cl": 33.0,
-      "brewery": "Best Before: 08/04-2028",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "A Good Case",
-          "price": 45.75,
-          "url": "https://agoodcase.dk/products/pohjala-pime-oo-13-6-imperial-stout",
           "discount_pct": 16.8,
           "old_price": 55.0
         }
@@ -24939,30 +24668,6 @@
       "max_discount_pct": 15.0
     },
     {
-      "id": 15157,
-      "name": "Fur Bryghus, Barley Wine - Øl",
-      "image": "https://www.vildmedvin.dk/img/1000/1000/resize/2/4/24529_0_2.jpg",
-      "type": "Barley Wine",
-      "abv": 9.5,
-      "volume_cl": 50.0,
-      "brewery": "Fur Bryghus",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Vild med Vin",
-          "price": 51.0,
-          "url": "https://www.vildmedvin.dk/fur-bryghus-barley-wine",
-          "discount_pct": 0,
-          "old_price": null
-        }
-      ],
-      "cheapest_price": 51.0,
-      "min_price": 51.0,
-      "shop": "Vild med Vin",
-      "discount_pct": 0,
-      "max_discount_pct": 0
-    },
-    {
       "id": 15262,
       "name": "Midtfyns, Julestout - Øl",
       "image": "https://www.vildmedvin.dk/img/1000/1000/resize/j/u/jule_stout.jpg",
@@ -28771,7 +28476,7 @@
       "max_discount_pct": 0
     },
     {
-      "id": 16832,
+      "id": 16844,
       "name": "Öö 10,5% 33cl",
       "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/oo-10-5-33cl.png?v=1750597033",
       "type": "Imperial Stout",
@@ -37128,7 +36833,7 @@
       "max_discount_pct": 0
     },
     {
-      "id": 16830,
+      "id": 16841,
       "name": "Raw Beer 8% 44cl",
       "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/raw-beer-8.png?v=1782404785",
       "type": "India Pale Ale (IPA)",
@@ -37176,8 +36881,8 @@
       "max_discount_pct": 0
     },
     {
-      "id": 12922,
-      "name": "Lidmašīnas 10% 44cl",
+      "id": 16842,
+      "name": "Lidmāšīnas 10% 44cl",
       "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/lidmasinas-10-44cl.png?v=1761638302",
       "type": "Imperial Stout",
       "abv": 10.0,
@@ -40352,7 +40057,7 @@
       "max_discount_pct": 0
     },
     {
-      "id": 16833,
+      "id": 16845,
       "name": "No Way Out B.A. 10,5% 33cl",
       "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/no-way-out-b-a-10-5-33cl.png?v=1750592682",
       "type": "Barley Wine",
@@ -42863,7 +42568,7 @@
       "max_discount_pct": 22.7
     },
     {
-      "id": 16831,
+      "id": 16843,
       "name": "10 - Imperial Stout 10% 44cl",
       "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/10-imperial-stout-10-44cl_9645d1f7-914c-43d6-b687-b07453f1aaf2.png?v=1761637026",
       "type": "Imperial Stout",
@@ -43188,30 +42893,6 @@
           "shop_name": "Best of Beers",
           "price": 101.0,
           "url": "https://www.bestofbeers.dk/shop/messorem-bracitorium-inc-statim-finis-dipa-0473-l-87/",
-          "discount_pct": 0,
-          "old_price": null
-        }
-      ],
-      "cheapest_price": 101.0,
-      "min_price": 101.0,
-      "shop": "Best of Beers",
-      "discount_pct": 0,
-      "max_discount_pct": 0
-    },
-    {
-      "id": 13613,
-      "name": "Messorem Bracitorium Inc. – Temporalis #0053 – TIPA – 0,473 l. – 10,0%",
-      "image": "https://www.bestofbeers.dk/wp-content/uploads/2026/04/Messorem0053.jpg",
-      "type": null,
-      "abv": 10.0,
-      "volume_cl": 47.3,
-      "brewery": "Messorem Bracitorium Inc.",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Best of Beers",
-          "price": 101.0,
-          "url": "https://www.bestofbeers.dk/shop/messorem-bracitorium-inc-temporalis-0052-tipa-0473-l-100/",
           "discount_pct": 0,
           "old_price": null
         }
@@ -50959,30 +50640,6 @@
       "shop": "Beershoppen",
       "discount_pct": 8.1,
       "max_discount_pct": 8.1
-    },
-    {
-      "id": 16670,
-      "name": "Track Brewing Co. IPA Bundle SPAR 90",
-      "image": "https://cdn.shopify.com/s/files/1/0776/5209/9400/files/9D27095D-2457-42E1-99BC-9DFAD6F41630.jpg?v=1781299964",
-      "type": "India Pale Ale (IPA)",
-      "abv": null,
-      "volume_cl": null,
-      "brewery": "Øltanken",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Øltanken",
-          "price": 285.0,
-          "url": "https://oltanken.dk/products/track-brewing-co-ipa-bundle-2",
-          "discount_pct": 26.0,
-          "old_price": 385.0
-        }
-      ],
-      "cheapest_price": 285.0,
-      "min_price": 285.0,
-      "shop": "Øltanken",
-      "discount_pct": 26.0,
-      "max_discount_pct": 26.0
     },
     {
       "id": 13606,
