@@ -1,12 +1,13 @@
 {
-  "updated_at": "2026-06-30T09:29:11.129600",
+  "updated_at": "2026-06-30T20:20:10.143403",
   "stats": {
-    "total": 2139,
-    "deals": 568,
-    "shops": 7,
+    "total": 2225,
+    "deals": 572,
+    "shops": 8,
     "shop_names": [
       "A Good Case",
       "Beer Me",
+      "Beermatch",
       "Beershoppen",
       "Best of Beers",
       "Brygshoppen",
@@ -130,6 +131,30 @@
       "shop": "Vild med Vin",
       "discount_pct": 0,
       "max_discount_pct": 0
+    },
+    {
+      "id": 16928,
+      "name": "Wild Horse Brewing Co. - Tonnau (Siren Collab) (Best By: June 2026)",
+      "image": "https://cdn.shopify.com/s/files/1/0551/6600/9423/files/ED05E9CE-CE2D-4ECF-A645-24F50191BFCE.jpg?v=1769683322",
+      "type": "West Coast IPA",
+      "abv": 6.0,
+      "volume_cl": 44.0,
+      "brewery": "Wild Horse Brewing Co.",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Beermatch",
+          "price": 10.0,
+          "url": "https://www.beermatch.dk/products/wild-horse-brewing-co-tonnau",
+          "discount_pct": 84.8,
+          "old_price": 66.0
+        }
+      ],
+      "cheapest_price": 10.0,
+      "min_price": 10.0,
+      "shop": "Beermatch",
+      "discount_pct": 84.8,
+      "max_discount_pct": 84.8
     },
     {
       "id": 16682,
@@ -1010,30 +1035,6 @@
       "max_discount_pct": 24.0
     },
     {
-      "id": 15907,
-      "name": "Stepping Stone -  Copenhagen Vibes - 5% Pilsner (33 cl.)",
-      "image": "https://cdn.shopify.com/s/files/1/0402/1239/8243/files/Stepping_Stone_Copenhagen_Vibes_Pilsner_1stk..png?v=1779884268",
-      "type": "Pilsner",
-      "abv": 5.0,
-      "volume_cl": 33.0,
-      "brewery": "Best Before: 30/06-2026",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "A Good Case",
-          "price": 19.75,
-          "url": "https://agoodcase.dk/products/stepping-stone-copenhagen-vibes-5-pilsner",
-          "discount_pct": 34.2,
-          "old_price": 30.0
-        }
-      ],
-      "cheapest_price": 19.75,
-      "min_price": 19.75,
-      "shop": "A Good Case",
-      "discount_pct": 34.2,
-      "max_discount_pct": 34.2
-    },
-    {
       "id": 16248,
       "name": "Svaneke - Don't Worry Alkoholfri Classic - 0,5% Alkoholfri Vienna Lager",
       "image": "https://cdn.shopify.com/s/files/1/0402/1239/8243/files/Svaneke_DontWorryClassic.png?v=1748239008",
@@ -1106,30 +1107,6 @@
       "max_discount_pct": 34.2
     },
     {
-      "id": 13410,
-      "name": "Charro - Charro Ámbar - 4,5% Amber Lager",
-      "image": "https://cdn.shopify.com/s/files/1/0402/1239/8243/files/Charro_Ambar.png?v=1774284488",
-      "type": "Lager",
-      "abv": 4.5,
-      "volume_cl": 35.5,
-      "brewery": "Best Before: 30/06-2026",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "A Good Case",
-          "price": 19.75,
-          "url": "https://agoodcase.dk/products/charro-charro-ambar-4-5-red-lager",
-          "discount_pct": 26.9,
-          "old_price": 27.0
-        }
-      ],
-      "cheapest_price": 19.75,
-      "min_price": 19.75,
-      "shop": "A Good Case",
-      "discount_pct": 26.9,
-      "max_discount_pct": 26.9
-    },
-    {
       "id": 15039,
       "name": "Frejdahl - Fulla - 5,7% American IPA",
       "image": "https://cdn.shopify.com/s/files/1/0402/1239/8243/files/Frejdahl_Fulla.png?v=1736554264",
@@ -1154,30 +1131,6 @@
       "max_discount_pct": 29.5
     },
     {
-      "id": 13478,
-      "name": "Charro - Charro Pilsner - 4,5% Mexican Pilsner",
-      "image": "https://cdn.shopify.com/s/files/1/0402/1239/8243/files/Charro_Pilsner.png?v=1760033424",
-      "type": "Pilsner",
-      "abv": 4.5,
-      "volume_cl": 35.5,
-      "brewery": "Best Before: 30/06-2026",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "A Good Case",
-          "price": 19.75,
-          "url": "https://agoodcase.dk/products/charro-charro-pilsner-4-5-mexican-pilsner",
-          "discount_pct": 26.9,
-          "old_price": 27.0
-        }
-      ],
-      "cheapest_price": 19.75,
-      "min_price": 19.75,
-      "shop": "A Good Case",
-      "discount_pct": 26.9,
-      "max_discount_pct": 26.9
-    },
-    {
       "id": 16221,
       "name": "Premium Lager - Primator Tjekiet - 50 cl. 5,0%",
       "image": "https://cdn.shopify.com/s/files/1/0600/9438/2263/files/premium.jpg?v=1781011176",
@@ -1200,54 +1153,6 @@
       "shop": "Beershoppen",
       "discount_pct": 42.9,
       "max_discount_pct": 42.9
-    },
-    {
-      "id": 14209,
-      "name": "Moray IPA - 33cl, 0,4%, Alkoholfri IPA - Stadshaven Brouwerij",
-      "image": "https://cdn.shopify.com/s/files/1/0600/9438/2263/files/IMG_1679_b2c5dfc0-e1de-4d33-bfce-5a79f0461488.jpg?v=1737632211",
-      "type": "India Pale Ale (IPA)",
-      "abv": 0.4,
-      "volume_cl": 33.0,
-      "brewery": "Beershoppen",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Beershoppen",
-          "price": 20.0,
-          "url": "https://beershoppen.dk/products/moray-ipa-33cl-0-4-alkoholfri-ipa-stadshaven-brouwerij",
-          "discount_pct": 33.3,
-          "old_price": 30.0
-        }
-      ],
-      "cheapest_price": 20.0,
-      "min_price": 20.0,
-      "shop": "Beershoppen",
-      "discount_pct": 33.3,
-      "max_discount_pct": 33.3
-    },
-    {
-      "id": 14211,
-      "name": "LEMON - Clausthaler - alkoholfri - 50 cl- 0,5%",
-      "image": "https://cdn.shopify.com/s/files/1/0600/9438/2263/files/lemon.jpg?v=1752042980",
-      "type": "Beer",
-      "abv": 0.5,
-      "volume_cl": 50.0,
-      "brewery": "Beershoppen",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Beershoppen",
-          "price": 20.0,
-          "url": "https://beershoppen.dk/products/lemon-clausthaler-alkoholfri-50-cl-0-5",
-          "discount_pct": 0,
-          "old_price": null
-        }
-      ],
-      "cheapest_price": 20.0,
-      "min_price": 20.0,
-      "shop": "Beershoppen",
-      "discount_pct": 0,
-      "max_discount_pct": 0
     },
     {
       "id": 16059,
@@ -1401,6 +1306,13 @@
           "old_price": null
         },
         {
+          "shop_name": "Beermatch",
+          "price": 32.0,
+          "url": "https://www.beermatch.dk/products/westmalle-trappist-dubbel",
+          "discount_pct": 0,
+          "old_price": null
+        },
+        {
           "shop_name": "Best of Beers",
           "price": 36.0,
           "url": "https://www.bestofbeers.dk/shop/westmalle-trappist-dubbel-033-l-70/",
@@ -1535,37 +1447,6 @@
       "max_discount_pct": 0
     },
     {
-      "id": 15466,
-      "name": "Lindemans Cassis 35,5 cl. - Øl",
-      "image": "https://www.vildmedvin.dk/img/1000/1000/resize/l/i/lindemans_cassis.jpg",
-      "type": "Frugtøl",
-      "abv": 3.5,
-      "volume_cl": 35.5,
-      "brewery": "Lindemans",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Vild med Vin",
-          "price": 21.5,
-          "url": "https://www.vildmedvin.dk/lindemans-cassis-35-5-cl",
-          "discount_pct": 51.1,
-          "old_price": 44.0
-        },
-        {
-          "shop_name": "Brygshoppen",
-          "price": 40.0,
-          "url": "https://brygshoppen.dk/products/lindemans-cassis-35-5cl",
-          "discount_pct": 14.9,
-          "old_price": 47.0
-        }
-      ],
-      "cheapest_price": 21.5,
-      "min_price": 21.5,
-      "shop": "Vild med Vin",
-      "discount_pct": 51.1,
-      "max_discount_pct": 51.1
-    },
-    {
       "id": 15319,
       "name": "Brewdog, Double Hazy - BEDST FØR: 22.07.2026 - Øl",
       "image": "https://www.vildmedvin.dk/img/1000/1000/resize/d/o/double_hazy_44_cl.jpg",
@@ -1590,6 +1471,54 @@
       "max_discount_pct": 51.1
     },
     {
+      "id": 15466,
+      "name": "Lindemans Cassis 35,5 cl. - Øl",
+      "image": "https://www.vildmedvin.dk/img/1000/1000/resize/l/i/lindemans_cassis.jpg",
+      "type": "Frugtøl",
+      "abv": 3.5,
+      "volume_cl": 35.5,
+      "brewery": "Lindemans",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Vild med Vin",
+          "price": 21.5,
+          "url": "https://www.vildmedvin.dk/lindemans-cassis-35-5-cl",
+          "discount_pct": 51.1,
+          "old_price": 44.0
+        }
+      ],
+      "cheapest_price": 21.5,
+      "min_price": 21.5,
+      "shop": "Vild med Vin",
+      "discount_pct": 51.1,
+      "max_discount_pct": 51.1
+    },
+    {
+      "id": 16913,
+      "name": "RYGR Brygghus - Tyr",
+      "image": "https://cdn.shopify.com/s/files/1/0551/6600/9423/files/6603EF27-0A55-4656-ABA3-1B930A8FDADA.jpg?v=1774440110",
+      "type": "West Coast IPA",
+      "abv": 7.0,
+      "volume_cl": 33.0,
+      "brewery": "RYGR Brygghus",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Beermatch",
+          "price": 22.0,
+          "url": "https://www.beermatch.dk/products/rygr-brygghus-skog-2",
+          "discount_pct": 43.6,
+          "old_price": 39.0
+        }
+      ],
+      "cheapest_price": 22.0,
+      "min_price": 22.0,
+      "shop": "Beermatch",
+      "discount_pct": 43.6,
+      "max_discount_pct": 43.6
+    },
+    {
       "id": 15278,
       "name": "Lindemans, Faro - Øl",
       "image": "https://www.vildmedvin.dk/img/1000/1000/resize/l/i/lindemans_faro_1.jpg",
@@ -1610,6 +1539,30 @@
       "cheapest_price": 22.0,
       "min_price": 22.0,
       "shop": "Vild med Vin",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
+      "id": 16920,
+      "name": "Omnipollo - Yolo Cola (THIS IS NOT A BEER!)",
+      "image": "https://cdn.shopify.com/s/files/1/0551/6600/9423/files/D8668353-3C27-4826-90F4-741918DD5C1C.jpg?v=1772714272",
+      "type": null,
+      "abv": null,
+      "volume_cl": 33.0,
+      "brewery": "Omnipollo",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Beermatch",
+          "price": 22.0,
+          "url": "https://www.beermatch.dk/products/omnipollo-yolo-cola-this-is-not-a-beer",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 22.0,
+      "min_price": 22.0,
+      "shop": "Beermatch",
       "discount_pct": 0,
       "max_discount_pct": 0
     },
@@ -1710,7 +1663,7 @@
       "max_discount_pct": 0
     },
     {
-      "id": 16852,
+      "id": 16964,
       "name": "Leo Beer - Øl",
       "image": "https://www.vildmedvin.dk/img/1000/1000/resize/l/e/leo-beer-33-cl_large.jpg",
       "type": "Lager Øl",
@@ -2147,30 +2100,6 @@
       "shop": "A Good Case",
       "discount_pct": 0,
       "max_discount_pct": 0
-    },
-    {
-      "id": 13509,
-      "name": "Gross - Bixi - 4,5% Pale Ale",
-      "image": "https://cdn.shopify.com/s/files/1/0402/1239/8243/files/Gross_Bixi.png?v=1758375784",
-      "type": "Pale Ale",
-      "abv": 4.5,
-      "volume_cl": 44.0,
-      "brewery": "Best Before: 30/06-2026",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "A Good Case",
-          "price": 24.96,
-          "url": "https://agoodcase.dk/products/gross-bixi-4-5-pale-ale-24-stk",
-          "discount_pct": 54.6,
-          "old_price": 55.0
-        }
-      ],
-      "cheapest_price": 24.96,
-      "min_price": 24.96,
-      "shop": "A Good Case",
-      "discount_pct": 54.6,
-      "max_discount_pct": 54.6
     },
     {
       "id": 12974,
@@ -2650,7 +2579,7 @@
       "max_discount_pct": 24.2
     },
     {
-      "id": 16850,
+      "id": 16867,
       "name": "Belgian Brown 6,8% 33cl",
       "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/belgien-brown-33cl.png?v=1753443086",
       "type": "Dubbel",
@@ -3096,30 +3025,6 @@
       "max_discount_pct": 0
     },
     {
-      "id": 16707,
-      "name": "Fanø, Realen - BEDST FØR: 29.06.2026 - Øl",
-      "image": "https://www.vildmedvin.dk/img/1000/1000/resize/f/a/fan_realen.jpg",
-      "type": "Lager Øl",
-      "abv": 4.8,
-      "volume_cl": 50.0,
-      "brewery": "Fanø",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Vild med Vin",
-          "price": 26.5,
-          "url": "https://www.vildmedvin.dk/fano-realen",
-          "discount_pct": 50.9,
-          "old_price": 54.0
-        }
-      ],
-      "cheapest_price": 26.5,
-      "min_price": 26.5,
-      "shop": "Vild med Vin",
-      "discount_pct": 50.9,
-      "max_discount_pct": 50.9
-    },
-    {
       "id": 15538,
       "name": "Salikatt Aurelius - Øl",
       "image": "https://www.vildmedvin.dk/img/1000/1000/resize/s/a/salikatt_aurelius.jpg",
@@ -3133,6 +3038,37 @@
           "shop_name": "Vild med Vin",
           "price": 26.5,
           "url": "https://www.vildmedvin.dk/salikatt-aurelius",
+          "discount_pct": 50.9,
+          "old_price": 54.0
+        },
+        {
+          "shop_name": "Beermatch",
+          "price": 56.0,
+          "url": "https://www.beermatch.dk/products/salikatt-aurelius",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 26.5,
+      "min_price": 26.5,
+      "shop": "Vild med Vin",
+      "discount_pct": 50.9,
+      "max_discount_pct": 50.9
+    },
+    {
+      "id": 16707,
+      "name": "Fanø, Realen - BEDST FØR: 29.06.2026 - Øl",
+      "image": "https://www.vildmedvin.dk/img/1000/1000/resize/f/a/fan_realen.jpg",
+      "type": "Lager Øl",
+      "abv": 4.8,
+      "volume_cl": 50.0,
+      "brewery": "Fanø",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Vild med Vin",
+          "price": 26.5,
+          "url": "https://www.vildmedvin.dk/fano-realen",
           "discount_pct": 50.9,
           "old_price": 54.0
         }
@@ -4617,6 +4553,30 @@
       "max_discount_pct": 0
     },
     {
+      "id": 16899,
+      "name": "O/O Brewing - Pivot Pils",
+      "image": "https://cdn.shopify.com/s/files/1/0551/6600/9423/files/80F6D245-3EF4-461F-A33B-31D4B4499220.jpg?v=1777995390",
+      "type": "Pilsner",
+      "abv": 4.6,
+      "volume_cl": 33.0,
+      "brewery": "O/O Brewing",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Beermatch",
+          "price": 29.0,
+          "url": "https://www.beermatch.dk/products/o-o-brewing-pivot-pils",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 29.0,
+      "min_price": 29.0,
+      "shop": "Beermatch",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
       "id": 16669,
       "name": "Dugges Bryggeri - Mango Mango Mango 0.5 %",
       "image": "https://cdn.shopify.com/s/files/1/0776/5209/9400/files/F9973A5E-3248-4E14-8D26-1B7EA94902A6.jpg?v=1763719059",
@@ -5169,30 +5129,6 @@
       "max_discount_pct": 35.3
     },
     {
-      "id": 16635,
-      "name": "Gross - Risky - 6% New England IPA (24 stk.) (24 stk.)",
-      "image": "https://cdn.shopify.com/s/files/1/0402/1239/8243/files/Risky_24stk..png?v=1781353016",
-      "type": "New England IPA",
-      "abv": 6.0,
-      "volume_cl": 44.0,
-      "brewery": "Gross",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "A Good Case",
-          "price": 29.12,
-          "url": "https://agoodcase.dk/products/gross-risky-6-new-england-ipa-24-stk",
-          "discount_pct": 51.5,
-          "old_price": 60.0
-        }
-      ],
-      "cheapest_price": 29.12,
-      "min_price": 29.12,
-      "shop": "A Good Case",
-      "discount_pct": 51.5,
-      "max_discount_pct": 51.5
-    },
-    {
       "id": 13857,
       "name": "ÅBEN &#8211; Y – Alkoholfri IPA – 0,33 l. – 0,5%",
       "image": "https://www.bestofbeers.dk/wp-content/uploads/2024/12/AabenYAlkoholfri.jpg",
@@ -5431,6 +5367,13 @@
           "url": "https://brygshoppen.dk/products/saison-dupont-cuvee-dry-hopping-6-5-33cl",
           "discount_pct": 16.7,
           "old_price": 36.0
+        },
+        {
+          "shop_name": "Beermatch",
+          "price": 34.0,
+          "url": "https://www.beermatch.dk/products/brasserie-dupont-saison-dupont-1",
+          "discount_pct": 0,
+          "old_price": null
         },
         {
           "shop_name": "Best of Beers",
@@ -5685,6 +5628,30 @@
       "shop": "Brygshoppen",
       "discount_pct": 25.0,
       "max_discount_pct": 25.0
+    },
+    {
+      "id": 16859,
+      "name": "Kwaremont 0.0% 33cl",
+      "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/kwaremont-0-3-33cl-2026.png?v=1774944073",
+      "type": "Belgian Blonde",
+      "abv": 0.0,
+      "volume_cl": 33.0,
+      "brewery": "Brouwerij De Brabandere",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Brygshoppen",
+          "price": 30.0,
+          "url": "https://brygshoppen.dk/products/kwaremont-0-3-33cl",
+          "discount_pct": 0,
+          "old_price": 0.0
+        }
+      ],
+      "cheapest_price": 30.0,
+      "min_price": 30.0,
+      "shop": "Brygshoppen",
+      "discount_pct": 0,
+      "max_discount_pct": 0
     },
     {
       "id": 13056,
@@ -7056,7 +7023,7 @@
       "max_discount_pct": 0
     },
     {
-      "id": 16849,
+      "id": 16866,
       "name": "It's A Blond 5,9% 33cl",
       "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/its-a-blond-33cl_27db0da2-5945-4111-8396-339312eae8d3.png?v=1773482918",
       "type": "Blond",
@@ -7718,6 +7685,30 @@
       "max_discount_pct": 0
     },
     {
+      "id": 16860,
+      "name": "Kwaremont 6,6% 33cl",
+      "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/kwaremont-6-6-33cl-2025.png?v=1775200095",
+      "type": "Belgian Blonde",
+      "abv": 6.6,
+      "volume_cl": 33.0,
+      "brewery": "Brouwerij De Brabandere",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Brygshoppen",
+          "price": 33.0,
+          "url": "https://brygshoppen.dk/products/kwaremont-6-6-33cl",
+          "discount_pct": 0,
+          "old_price": 0.0
+        }
+      ],
+      "cheapest_price": 33.0,
+      "min_price": 33.0,
+      "shop": "Brygshoppen",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
       "id": 13033,
       "name": "Meestereske Kinky Tripel 9,5% 33cl",
       "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/meestereske-kinky-tripel-9-5-33cl.png?v=1744898686",
@@ -7742,7 +7733,7 @@
       "max_discount_pct": 0
     },
     {
-      "id": 16846,
+      "id": 16863,
       "name": "Maître Tripel 8,5% 33cl",
       "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/maitre-tripel-8-5-33cl.png?v=1733847666",
       "type": "Tripel",
@@ -8284,6 +8275,37 @@
       "max_discount_pct": 0
     },
     {
+      "id": 12988,
+      "name": "Corsendonk Christmas Ale 8,1% 33cl",
+      "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/corsendonk-christmas-33cl.png?v=1686771051",
+      "type": "Winter Ale",
+      "abv": 8.1,
+      "volume_cl": 33.0,
+      "brewery": "Brouwerij Corsendonk",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Beermatch",
+          "price": 34.0,
+          "url": "https://www.beermatch.dk/products/corsendonk-corsendonk-christmas-ale-2025",
+          "discount_pct": 0,
+          "old_price": null
+        },
+        {
+          "shop_name": "Brygshoppen",
+          "price": 35.0,
+          "url": "https://brygshoppen.dk/products/corsendonk-christmas-33cl",
+          "discount_pct": 0,
+          "old_price": 0.0
+        }
+      ],
+      "cheapest_price": 34.0,
+      "min_price": 34.0,
+      "shop": "Beermatch",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
       "id": 15201,
       "name": "Hornbeer, Økologisk Jul - Øl",
       "image": "https://www.vildmedvin.dk/img/1000/1000/resize/4/4/444_2..jpg",
@@ -8352,6 +8374,30 @@
       "cheapest_price": 34.0,
       "min_price": 34.0,
       "shop": "Brygshoppen",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
+      "id": 16898,
+      "name": "O/O Brewing - Porter Porter",
+      "image": "https://cdn.shopify.com/s/files/1/0551/6600/9423/files/D211515C-83CB-41F3-A11F-FBD490663E04.jpg?v=1777995390",
+      "type": "Porter",
+      "abv": 5.4,
+      "volume_cl": 33.0,
+      "brewery": "O/O Brewing",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Beermatch",
+          "price": 34.0,
+          "url": "https://www.beermatch.dk/products/o-o-brewing-porter-porter",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 34.0,
+      "min_price": 34.0,
+      "shop": "Beermatch",
       "discount_pct": 0,
       "max_discount_pct": 0
     },
@@ -9276,6 +9322,30 @@
       "max_discount_pct": 0
     },
     {
+      "id": 16853,
+      "name": "Tripel Karmeliet Alcoholvrij 0,4%",
+      "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/tripel-karmeliet-alcoholvrij-0-4.png?v=1782833327",
+      "type": "Tripel",
+      "abv": 0.4,
+      "volume_cl": null,
+      "brewery": "Brouwerij Bosteels",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Brygshoppen",
+          "price": 35.0,
+          "url": "https://brygshoppen.dk/products/tripel-karmeliet-alcoholvrij-0-4",
+          "discount_pct": 0,
+          "old_price": 0.0
+        }
+      ],
+      "cheapest_price": 35.0,
+      "min_price": 35.0,
+      "shop": "Brygshoppen",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
       "id": 12829,
       "name": "Mesa Like it Sweet 11% 33cl",
       "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/messa-like-it-sweet-11-33cl.png?v=1753443591",
@@ -9361,30 +9431,6 @@
           "shop_name": "Brygshoppen",
           "price": 35.0,
           "url": "https://brygshoppen.dk/products/grapefruit-non-alcoholic-ipa-0-5-33cl",
-          "discount_pct": 0,
-          "old_price": 0.0
-        }
-      ],
-      "cheapest_price": 35.0,
-      "min_price": 35.0,
-      "shop": "Brygshoppen",
-      "discount_pct": 0,
-      "max_discount_pct": 0
-    },
-    {
-      "id": 12884,
-      "name": "Springbock 6,8% 33cl",
-      "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/springbock-6-8-33cl.png?v=1772792705",
-      "type": "Bock",
-      "abv": 6.8,
-      "volume_cl": 33.0,
-      "brewery": "Ebeltoft Gårdbryggeri",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Brygshoppen",
-          "price": 35.0,
-          "url": "https://brygshoppen.dk/products/springbock-6-8-33cl",
           "discount_pct": 0,
           "old_price": 0.0
         }
@@ -9660,30 +9706,6 @@
       "max_discount_pct": 0
     },
     {
-      "id": 12988,
-      "name": "Corsendonk Christmas Ale 8,1% 33cl",
-      "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/corsendonk-christmas-33cl.png?v=1686771051",
-      "type": "Winter Ale",
-      "abv": 8.1,
-      "volume_cl": 33.0,
-      "brewery": "Brouwerij Corsendonk",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Brygshoppen",
-          "price": 35.0,
-          "url": "https://brygshoppen.dk/products/corsendonk-christmas-33cl",
-          "discount_pct": 0,
-          "old_price": 0.0
-        }
-      ],
-      "cheapest_price": 35.0,
-      "min_price": 35.0,
-      "shop": "Brygshoppen",
-      "discount_pct": 0,
-      "max_discount_pct": 0
-    },
-    {
       "id": 12989,
       "name": "In the Studio: Cruisin' The Cold 9,9% 33cl",
       "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/in-the-studio-cruisin-the-cold-9-9-33cl.png?v=1731081116",
@@ -9900,7 +9922,7 @@
       "max_discount_pct": 10.3
     },
     {
-      "id": 16847,
+      "id": 16864,
       "name": "Imperial Stout 9,3% 33cl",
       "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/imperial-stout-9-3-33cl_e5717b14-1296-4555-8e23-bc8da32992e9.png?v=1753446200",
       "type": "Imperial Stout",
@@ -11042,30 +11064,6 @@
       "max_discount_pct": 28.5
     },
     {
-      "id": 12959,
-      "name": "Gulden Draak Fire 10,5% 33cl",
-      "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/gulden-draak-fire-10-5-33cl.png?v=1760276233",
-      "type": "Quadrupel",
-      "abv": 10.5,
-      "volume_cl": 33.0,
-      "brewery": "Brouwerij Van Steenberge",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Brygshoppen",
-          "price": 36.0,
-          "url": "https://brygshoppen.dk/products/gulden-draak-9000-quadrupel-33cl",
-          "discount_pct": 0,
-          "old_price": 0.0
-        }
-      ],
-      "cheapest_price": 36.0,
-      "min_price": 36.0,
-      "shop": "Brygshoppen",
-      "discount_pct": 0,
-      "max_discount_pct": 0
-    },
-    {
       "id": 13260,
       "name": "St. Bernardus Abt. 12 10% 33cl",
       "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/st-bernardus-abt-12-33cl_3cbdd9f7-434b-4699-a06c-bcdf84ccb952.png?v=1767449280",
@@ -11124,6 +11122,30 @@
       "cheapest_price": 36.0,
       "min_price": 36.0,
       "shop": "Beershoppen",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
+      "id": 12959,
+      "name": "Gulden Draak Fire 10,5% 33cl",
+      "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/gulden-draak-fire-10-5-33cl.png?v=1760276233",
+      "type": "Quadrupel",
+      "abv": 10.5,
+      "volume_cl": 33.0,
+      "brewery": "Brouwerij Van Steenberge",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Brygshoppen",
+          "price": 36.0,
+          "url": "https://brygshoppen.dk/products/gulden-draak-9000-quadrupel-33cl",
+          "discount_pct": 0,
+          "old_price": 0.0
+        }
+      ],
+      "cheapest_price": 36.0,
+      "min_price": 36.0,
+      "shop": "Brygshoppen",
       "discount_pct": 0,
       "max_discount_pct": 0
     },
@@ -12150,6 +12172,68 @@
       "max_discount_pct": 0
     },
     {
+      "id": 16483,
+      "name": "RYGR Brygghús - Sure Paloma",
+      "image": "https://cdn.shopify.com/s/files/1/0776/5209/9400/files/266B4217-94BB-4E96-89E0-35A85C3FCB0C.jpg?v=1781812947",
+      "type": "Hvedeøl",
+      "abv": 6.5,
+      "volume_cl": 33.0,
+      "brewery": "RYGR Brygghús",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Beermatch",
+          "price": 37.0,
+          "url": "https://www.beermatch.dk/products/rygr-brygghus-sure-magda",
+          "discount_pct": 0,
+          "old_price": null
+        },
+        {
+          "shop_name": "Øltanken",
+          "price": 52.0,
+          "url": "https://oltanken.dk/products/rygr-sure-paloma",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 37.0,
+      "min_price": 37.0,
+      "shop": "Beermatch",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
+      "id": 12889,
+      "name": "Gouden Carolus Christmas 10,5% 33cl",
+      "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/products/gouden-carolus-christmas-33cl.png?v=1637684670",
+      "type": "Winter Ale",
+      "abv": 10.5,
+      "volume_cl": 33.0,
+      "brewery": "Brouwerij Het Anker",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Vild med Vin",
+          "price": 37.0,
+          "url": "https://www.vildmedvin.dk/gouden-carolus-christmas-33-cl",
+          "discount_pct": 0,
+          "old_price": null
+        },
+        {
+          "shop_name": "Beermatch",
+          "price": 39.0,
+          "url": "https://www.beermatch.dk/products/het-anker-gouden-carolus-christmas",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 37.0,
+      "min_price": 37.0,
+      "shop": "Vild med Vin",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
       "id": 15831,
       "name": "Schneider Weisse, Mein Aventinus &#8211; Tap 6 &#8211; 0,5 l. &#8211; 8,2%",
       "image": "https://www.bestofbeers.dk/wp-content/uploads/2017/09/Untitled-1-1.jpg",
@@ -12273,30 +12357,6 @@
           "shop_name": "Vild med Vin",
           "price": 37.0,
           "url": "https://www.vildmedvin.dk/fullers-esb",
-          "discount_pct": 0,
-          "old_price": null
-        }
-      ],
-      "cheapest_price": 37.0,
-      "min_price": 37.0,
-      "shop": "Vild med Vin",
-      "discount_pct": 0,
-      "max_discount_pct": 0
-    },
-    {
-      "id": 12889,
-      "name": "Gouden Carolus Christmas 10,5% 33cl",
-      "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/products/gouden-carolus-christmas-33cl.png?v=1637684670",
-      "type": "Winter Ale",
-      "abv": 10.5,
-      "volume_cl": 33.0,
-      "brewery": "Brouwerij Het Anker",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Vild med Vin",
-          "price": 37.0,
-          "url": "https://www.vildmedvin.dk/gouden-carolus-christmas-33-cl",
           "discount_pct": 0,
           "old_price": null
         }
@@ -12640,6 +12700,37 @@
       "cheapest_price": 38.0,
       "min_price": 38.0,
       "shop": "Brygshoppen",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
+      "id": 15952,
+      "name": "Amager Bryghus – Lil´Demon – Non Alcoholic IPA – 0,44 l. – 0,5%",
+      "image": "https://www.bestofbeers.dk/wp-content/uploads/2026/05/AmagerLilDemonAlkoholfri.jpg",
+      "type": "India Pale Ale (IPA)",
+      "abv": 0.5,
+      "volume_cl": 44.0,
+      "brewery": "Amager Bryghus",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Beermatch",
+          "price": 38.0,
+          "url": "https://www.beermatch.dk/products/amager-bryghus-lil-demon-non-alcoholic",
+          "discount_pct": 0,
+          "old_price": null
+        },
+        {
+          "shop_name": "Best of Beers",
+          "price": 41.0,
+          "url": "https://www.bestofbeers.dk/shop/amager-bryghus-lildemon-non-alcoholic-ipa-044-l-05/",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 38.0,
+      "min_price": 38.0,
+      "shop": "Beermatch",
       "discount_pct": 0,
       "max_discount_pct": 0
     },
@@ -13402,6 +13493,37 @@
       "max_discount_pct": 0
     },
     {
+      "id": 14280,
+      "name": "Oerbier - De Dolle Brouwers - 33 cl. - 9%",
+      "image": "https://cdn.shopify.com/s/files/1/0600/9438/2263/files/oerbier.jpg?v=1751457583",
+      "type": "Beer",
+      "abv": 9.0,
+      "volume_cl": 33.0,
+      "brewery": "Beershoppen",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Beermatch",
+          "price": 39.0,
+          "url": "https://www.beermatch.dk/products/de-dolle-oerbier",
+          "discount_pct": 0,
+          "old_price": null
+        },
+        {
+          "shop_name": "Beershoppen",
+          "price": 40.0,
+          "url": "https://beershoppen.dk/products/oerbier-de-dolle-brouwers-33-cl-9",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 39.0,
+      "min_price": 39.0,
+      "shop": "Beermatch",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
       "id": 15485,
       "name": "Bryg 365, Fars Gamle Glæde - Øl",
       "image": "https://www.vildmedvin.dk/img/1000/1000/resize/f/a/fars_gamle_gl_der.jpg",
@@ -13472,6 +13594,30 @@
       "shop": "Brygshoppen",
       "discount_pct": 0,
       "max_discount_pct": 0
+    },
+    {
+      "id": 16927,
+      "name": "Cigar City - Jai Alai",
+      "image": "https://cdn.shopify.com/s/files/1/0551/6600/9423/files/7DB66563-EA67-4701-8916-27296CB234DE.jpg?v=1770049549",
+      "type": "West Coast IPA",
+      "abv": 7.5,
+      "volume_cl": 35.5,
+      "brewery": "Cigar City",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Beermatch",
+          "price": 39.0,
+          "url": "https://www.beermatch.dk/products/cigar-city-jai-alai",
+          "discount_pct": 37.1,
+          "old_price": 62.0
+        }
+      ],
+      "cheapest_price": 39.0,
+      "min_price": 39.0,
+      "shop": "Beermatch",
+      "discount_pct": 37.1,
+      "max_discount_pct": 37.1
     },
     {
       "id": 16596,
@@ -14441,30 +14587,6 @@
       "max_discount_pct": 20.5
     },
     {
-      "id": 13483,
-      "name": "Åben - Cloud Gazing - 6,2% West Coast IPA",
-      "image": "https://cdn.shopify.com/s/files/1/0402/1239/8243/files/Aben_CloudGazing.png?v=1769457515",
-      "type": "West Coast IPA",
-      "abv": 6.2,
-      "volume_cl": 44.0,
-      "brewery": "Best Before: 31/07-2026",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "A Good Case",
-          "price": 39.75,
-          "url": "https://agoodcase.dk/products/aben-cloud-gazing-6-2-west-coast-ipa",
-          "discount_pct": 27.7,
-          "old_price": 55.0
-        }
-      ],
-      "cheapest_price": 39.75,
-      "min_price": 39.75,
-      "shop": "A Good Case",
-      "discount_pct": 27.7,
-      "max_discount_pct": 27.7
-    },
-    {
       "id": 16637,
       "name": "Dry & Bitter - Free Ride - 0,5% Alkoholfri IPA",
       "image": "https://cdn.shopify.com/s/files/1/0402/1239/8243/files/DryBitter_FreeRide.png?v=1780219840",
@@ -15288,30 +15410,6 @@
       "max_discount_pct": 0
     },
     {
-      "id": 14280,
-      "name": "Oerbier - De Dolle Brouwers - 33 cl. - 9%",
-      "image": "https://cdn.shopify.com/s/files/1/0600/9438/2263/files/oerbier.jpg?v=1751457583",
-      "type": "Beer",
-      "abv": 9.0,
-      "volume_cl": 33.0,
-      "brewery": "Beershoppen",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Beershoppen",
-          "price": 40.0,
-          "url": "https://beershoppen.dk/products/oerbier-de-dolle-brouwers-33-cl-9",
-          "discount_pct": 0,
-          "old_price": null
-        }
-      ],
-      "cheapest_price": 40.0,
-      "min_price": 40.0,
-      "shop": "Beershoppen",
-      "discount_pct": 0,
-      "max_discount_pct": 0
-    },
-    {
       "id": 14295,
       "name": "Straffe Hendrik Brugs Tripel Bier 9 - 33cl, 9%, Belgian Tripel - Brouwerij De Halve Maan",
       "image": "https://cdn.shopify.com/s/files/1/0600/9438/2263/files/IMG_2086.heic?v=1742385499",
@@ -15940,30 +16038,6 @@
       "max_discount_pct": 0
     },
     {
-      "id": 15952,
-      "name": "Amager Bryghus – Lil´Demon – Non Alcoholic IPA – 0,44 l. – 0,5%",
-      "image": "https://www.bestofbeers.dk/wp-content/uploads/2026/05/AmagerLilDemonAlkoholfri.jpg",
-      "type": "India Pale Ale (IPA)",
-      "abv": 0.5,
-      "volume_cl": 44.0,
-      "brewery": "Amager Bryghus",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Best of Beers",
-          "price": 41.0,
-          "url": "https://www.bestofbeers.dk/shop/amager-bryghus-lildemon-non-alcoholic-ipa-044-l-05/",
-          "discount_pct": 0,
-          "old_price": null
-        }
-      ],
-      "cheapest_price": 41.0,
-      "min_price": 41.0,
-      "shop": "Best of Beers",
-      "discount_pct": 0,
-      "max_discount_pct": 0
-    },
-    {
       "id": 13891,
       "name": "Orval, Trappiste Ale &#8211; 0,33 l. &#8211; 6,2%",
       "image": "https://www.bestofbeers.dk/wp-content/uploads/2017/09/Orval1.jpg",
@@ -16488,6 +16562,30 @@
       "cheapest_price": 41.5,
       "min_price": 41.5,
       "shop": "Vild med Vin",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
+      "id": 16855,
+      "name": "Lemon Heaven 7% 33cl",
+      "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/lemon-heaven-7-33cl.png?v=1782829530",
+      "type": "India Pale Ale (IPA)",
+      "abv": 7.0,
+      "volume_cl": 33.0,
+      "brewery": "Brygshoppen.dk",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Brygshoppen",
+          "price": 42.0,
+          "url": "https://brygshoppen.dk/products/lemon-heaven-7-33cl",
+          "discount_pct": 0,
+          "old_price": 0.0
+        }
+      ],
+      "cheapest_price": 42.0,
+      "min_price": 42.0,
+      "shop": "Brygshoppen",
       "discount_pct": 0,
       "max_discount_pct": 0
     },
@@ -17198,6 +17296,30 @@
       "cheapest_price": 44.0,
       "min_price": 44.0,
       "shop": "Brygshoppen",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
+      "id": 16878,
+      "name": "Thyras Bryg - Noch Ein Pils, Bitte!",
+      "image": "https://cdn.shopify.com/s/files/1/0551/6600/9423/files/57B4EDCF-5F01-476E-9EBE-E7EFCDB2F90F.jpg?v=1780402226",
+      "type": "Pilsner",
+      "abv": 4.8,
+      "volume_cl": 44.0,
+      "brewery": "Thyras Bryg",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Beermatch",
+          "price": 44.0,
+          "url": "https://www.beermatch.dk/products/thyras-bryg-noch-ein-pils-bitte",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 44.0,
+      "min_price": 44.0,
+      "shop": "Beermatch",
       "discount_pct": 0,
       "max_discount_pct": 0
     },
@@ -18605,7 +18727,7 @@
       "max_discount_pct": 0
     },
     {
-      "id": 16848,
+      "id": 16865,
       "name": "Ry Pilsner 5,6% 50cl",
       "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/ry-pilsner.png?v=1747399627",
       "type": "Pilsner",
@@ -19572,7 +19694,7 @@
       "max_discount_pct": 0
     },
     {
-      "id": 16851,
+      "id": 16963,
       "name": "To Øl, #DIPA - Øl",
       "image": "https://www.vildmedvin.dk/img/1000/1000/resize/7/7/7777_1..jpg",
       "type": "Double IPA",
@@ -19987,30 +20109,6 @@
       "max_discount_pct": 16.8
     },
     {
-      "id": 13304,
-      "name": "Vibrant Forest - Coppice - 3,4% Glutenfri Session IPA",
-      "image": "https://cdn.shopify.com/s/files/1/0402/1239/8243/files/VibrantForest_Coppice.png?v=1777886492",
-      "type": "Session IPA",
-      "abv": 3.4,
-      "volume_cl": 44.0,
-      "brewery": "Best Before: 23/09-2026",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "A Good Case",
-          "price": 45.75,
-          "url": "https://agoodcase.dk/products/vibrant-forest-coppice-3-4-session-ipa",
-          "discount_pct": 16.8,
-          "old_price": 55.0
-        }
-      ],
-      "cheapest_price": 45.75,
-      "min_price": 45.75,
-      "shop": "A Good Case",
-      "discount_pct": 16.8,
-      "max_discount_pct": 16.8
-    },
-    {
       "id": 13306,
       "name": "Vibrant Forest - Pupa - 4,5% New England Pale Ale",
       "image": "https://cdn.shopify.com/s/files/1/0402/1239/8243/files/VibrantForest_Pupa.png?v=1777886979",
@@ -20249,30 +20347,6 @@
       "shop": "A Good Case",
       "discount_pct": 16.8,
       "max_discount_pct": 16.8
-    },
-    {
-      "id": 13498,
-      "name": "Undercover - Licence To Chill - 5,8% West Coast IPA",
-      "image": "https://cdn.shopify.com/s/files/1/0402/1239/8243/files/UndercoverBrewing_LicenseToChill.png?v=1756068430",
-      "type": "West Coast IPA",
-      "abv": 5.8,
-      "volume_cl": 44.0,
-      "brewery": "Best Before: 31/08-2026",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "A Good Case",
-          "price": 45.75,
-          "url": "https://agoodcase.dk/products/undercover-licence-to-chill-5-8-west-coast-ipa",
-          "discount_pct": 23.8,
-          "old_price": 60.0
-        }
-      ],
-      "cheapest_price": 45.75,
-      "min_price": 45.75,
-      "shop": "A Good Case",
-      "discount_pct": 23.8,
-      "max_discount_pct": 23.8
     },
     {
       "id": 13508,
@@ -21139,6 +21213,78 @@
       "max_discount_pct": 0
     },
     {
+      "id": 16895,
+      "name": "Track Brewing Co. - Arosa (Non-Alcoholic)",
+      "image": "https://cdn.shopify.com/s/files/1/0551/6600/9423/files/C55CEEE5-4AFB-4CF2-91A7-F4620162BC44.jpg?v=1778664712",
+      "type": "Lager",
+      "abv": 0.5,
+      "volume_cl": 44.0,
+      "brewery": "Track Brewing Co.",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Beermatch",
+          "price": 48.0,
+          "url": "https://www.beermatch.dk/products/track-brewing-co-arosa-non-alcoholic",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 48.0,
+      "min_price": 48.0,
+      "shop": "Beermatch",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
+      "id": 16961,
+      "name": "Neon Drift - Tiny Rebel Wales - 44 cl. - 4,8%",
+      "image": "https://cdn.shopify.com/s/files/1/0600/9438/2263/files/hazyipa.jpg?v=1782829757",
+      "type": "Beer",
+      "abv": 4.8,
+      "volume_cl": 44.0,
+      "brewery": "Beershoppen",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Beershoppen",
+          "price": 48.0,
+          "url": "https://beershoppen.dk/products/neon-drift-tiny-rebel-wales-44-cl-4-8",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 48.0,
+      "min_price": 48.0,
+      "shop": "Beershoppen",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
+      "id": 15687,
+      "name": "Tiny Rebel, IPA - Øl",
+      "image": "https://www.vildmedvin.dk/img/1000/1000/resize/t/i/tiny_rebel_rebel_ipa.jpg",
+      "type": "India Pale Ale (IPA)",
+      "abv": 4.3,
+      "volume_cl": 44.0,
+      "brewery": "Tiny Rebel Brewing Co",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Beershoppen",
+          "price": 48.0,
+          "url": "https://beershoppen.dk/products/rebel-ipa-tiny-rebel-wales-44-cl-4-3",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 48.0,
+      "min_price": 48.0,
+      "shop": "Beershoppen",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
       "id": 14190,
       "name": "Saison d'Erpe-Mere - De Glazen Toren - 33 cl. - 6,5%",
       "image": "https://cdn.shopify.com/s/files/1/0600/9438/2263/files/deglazentoren.jpg?v=1776176481",
@@ -21801,6 +21947,54 @@
       "max_discount_pct": 0
     },
     {
+      "id": 16908,
+      "name": "Outer Range - Pillow Stacks",
+      "image": "https://cdn.shopify.com/s/files/1/0551/6600/9423/files/1647F79D-25C7-42BC-8C1F-35DE2DDA7BB3.jpg?v=1776022545",
+      "type": "Double IPA",
+      "abv": 7.6,
+      "volume_cl": 44.0,
+      "brewery": "Outer Range",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Beermatch",
+          "price": 49.0,
+          "url": "https://www.beermatch.dk/products/outer-range-pillow-stacks",
+          "discount_pct": 29.0,
+          "old_price": 69.0
+        }
+      ],
+      "cheapest_price": 49.0,
+      "min_price": 49.0,
+      "shop": "Beermatch",
+      "discount_pct": 29.0,
+      "max_discount_pct": 29.0
+    },
+    {
+      "id": 16930,
+      "name": "Pohjala - Baltic Porter Day 2026",
+      "image": "https://cdn.shopify.com/s/files/1/0551/6600/9423/files/IMG-5003.jpg?v=1767882394",
+      "type": "Baltic Porter",
+      "abv": 10.0,
+      "volume_cl": 33.0,
+      "brewery": "Pohjala",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Beermatch",
+          "price": 49.0,
+          "url": "https://www.beermatch.dk/products/pohjala-baltic-porter-day-2026",
+          "discount_pct": 0,
+          "old_price": 0.0
+        }
+      ],
+      "cheapest_price": 49.0,
+      "min_price": 49.0,
+      "shop": "Beermatch",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
       "id": 14187,
       "name": "Hr. Frederiksen- 44 cl, 10,5%, Imperial Stout - Amager Bryghus",
       "image": "https://cdn.shopify.com/s/files/1/0600/9438/2263/products/Hr.Frederiksen.jpg?v=1680599385",
@@ -21830,61 +22024,6 @@
       "shop": "Vild med Vin",
       "discount_pct": 0,
       "max_discount_pct": 0
-    },
-    {
-      "id": 14511,
-      "name": "Blackout Brewing - Coffee Series - Indonesia",
-      "image": "https://cdn.shopify.com/s/files/1/0776/5209/9400/files/60EF8E33-A2C0-4DC1-97CB-6E03146406D3.jpg?v=1765496729",
-      "type": "Imperial Stout",
-      "abv": 11.0,
-      "volume_cl": 33.0,
-      "brewery": "Blackout Brewing",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Øltanken",
-          "price": 49.0,
-          "url": "https://oltanken.dk/products/naeh",
-          "discount_pct": 38.0,
-          "old_price": 79.0
-        },
-        {
-          "shop_name": "Beer Me",
-          "price": 55.0,
-          "url": "https://www.partner-ads.com/dk/klikbanner.php?bannerid=74625&partnerid=56605&htmlurl=https://www.beer-me.dk/vare/coffee-series-indonesia-imperial-stout-fra-blackout-brewing",
-          "discount_pct": 30.4,
-          "old_price": 79.0
-        }
-      ],
-      "cheapest_price": 49.0,
-      "min_price": 49.0,
-      "shop": "Øltanken",
-      "discount_pct": 38.0,
-      "max_discount_pct": 38.0
-    },
-    {
-      "id": 16109,
-      "name": "Fermenterarna - Razzonade",
-      "image": "https://cdn.shopify.com/s/files/1/0776/5209/9400/files/D8E420FE-A6D5-47E6-A824-470579BFB920.jpg?v=1780482558",
-      "type": "Hvedeøl",
-      "abv": 5.6,
-      "volume_cl": 44.0,
-      "brewery": "Fermenterarna",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Øltanken",
-          "price": 49.0,
-          "url": "https://oltanken.dk/products/fermenterarna-razzonade",
-          "discount_pct": 16.9,
-          "old_price": 59.0
-        }
-      ],
-      "cheapest_price": 49.0,
-      "min_price": 49.0,
-      "shop": "Øltanken",
-      "discount_pct": 16.9,
-      "max_discount_pct": 16.9
     },
     {
       "id": 14362,
@@ -22559,6 +22698,37 @@
       "max_discount_pct": 17.1
     },
     {
+      "id": 13392,
+      "name": "Gamma - Big Doink - 8% Double IPA",
+      "image": "https://cdn.shopify.com/s/files/1/0402/1239/8243/files/Gamma_BigDoink_7df7895b-5295-4541-ac45-18e8bac05247.png?v=1686228102",
+      "type": "Double IPA",
+      "abv": 8.0,
+      "volume_cl": 44.0,
+      "brewery": "Best before: 17/12-2026",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "A Good Case",
+          "price": 49.75,
+          "url": "https://agoodcase.dk/products/gamma-big-doink-8-double-new-england-ipa-1",
+          "discount_pct": 17.1,
+          "old_price": 60.0
+        },
+        {
+          "shop_name": "Beermatch",
+          "price": 59.0,
+          "url": "https://www.beermatch.dk/products/gamma-big-doink-1",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 49.75,
+      "min_price": 49.75,
+      "shop": "A Good Case",
+      "discount_pct": 17.1,
+      "max_discount_pct": 17.1
+    },
+    {
       "id": 16653,
       "name": "Gross - Harria - 6% New England IPA",
       "image": "https://cdn.shopify.com/s/files/1/0402/1239/8243/files/Gross_Harria.png?v=1779260711",
@@ -22895,30 +23065,6 @@
       "max_discount_pct": 23.5
     },
     {
-      "id": 13392,
-      "name": "Gamma - Big Doink - 8% Double IPA",
-      "image": "https://cdn.shopify.com/s/files/1/0402/1239/8243/files/Gamma_BigDoink_7df7895b-5295-4541-ac45-18e8bac05247.png?v=1686228102",
-      "type": "Double IPA",
-      "abv": 8.0,
-      "volume_cl": 44.0,
-      "brewery": "Best before: 17/12-2026",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "A Good Case",
-          "price": 49.75,
-          "url": "https://agoodcase.dk/products/gamma-big-doink-8-double-new-england-ipa-1",
-          "discount_pct": 17.1,
-          "old_price": 60.0
-        }
-      ],
-      "cheapest_price": 49.75,
-      "min_price": 49.75,
-      "shop": "A Good Case",
-      "discount_pct": 17.1,
-      "max_discount_pct": 17.1
-    },
-    {
       "id": 13394,
       "name": "Pomona Island - Respectfully I Say To Thee - 5% West Coast Pale Ale",
       "image": "https://cdn.shopify.com/s/files/1/0402/1239/8243/files/Pomonaisland_Respectfully.png?v=1771583300",
@@ -23231,6 +23377,51 @@
       "max_discount_pct": 25.4
     },
     {
+      "id": 13882,
+      "name": "De Dolle, Stille Nacht, 2025, Ale, – 0,33 l. – 12,0%",
+      "image": "https://www.bestofbeers.dk/wp-content/uploads/2023/11/PhotoRoom_001_20231101_111739.jpg",
+      "type": "Strong Ale",
+      "abv": 12.0,
+      "volume_cl": 33.0,
+      "brewery": "De Dolle, Stille Nacht, 2025, Ale,",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Beermatch",
+          "price": 50.0,
+          "url": "https://www.beermatch.dk/products/de-dolle-stille-nacht-2025",
+          "discount_pct": 24.2,
+          "old_price": 66.0
+        },
+        {
+          "shop_name": "Øltanken",
+          "price": 64.0,
+          "url": "https://oltanken.dk/products/stille-nacht-2025",
+          "discount_pct": 0,
+          "old_price": null
+        },
+        {
+          "shop_name": "Beershoppen",
+          "price": 65.0,
+          "url": "https://beershoppen.dk/products/de-dolle-browers-stille-nacht-2024-33-cl-12",
+          "discount_pct": 0,
+          "old_price": null
+        },
+        {
+          "shop_name": "Best of Beers",
+          "price": 66.0,
+          "url": "https://www.bestofbeers.dk/shop/de-dolle-stille-nacht-2025-ale-033-l-120/",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 50.0,
+      "min_price": 50.0,
+      "shop": "Beermatch",
+      "discount_pct": 24.2,
+      "max_discount_pct": 24.2
+    },
+    {
       "id": 14231,
       "name": "Jutlanddipa - Kolding Gårdbryggeri- 50 cl. - 8%",
       "image": "https://cdn.shopify.com/s/files/1/0600/9438/2263/files/koldingdoubleipa.jpg?v=1771516956",
@@ -23251,6 +23442,30 @@
       "cheapest_price": 50.0,
       "min_price": 50.0,
       "shop": "Beershoppen",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
+      "id": 16854,
+      "name": "Jungle Drift 5% 44cl",
+      "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/jungle-drift-5-44cl.png?v=1782830118",
+      "type": "India Pale Ale (IPA)",
+      "abv": 5.0,
+      "volume_cl": 44.0,
+      "brewery": "Brouwerij Kees",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Brygshoppen",
+          "price": 50.0,
+          "url": "https://brygshoppen.dk/products/jungle-drift-5-44cl",
+          "discount_pct": 0,
+          "old_price": 0.0
+        }
+      ],
+      "cheapest_price": 50.0,
+      "min_price": 50.0,
+      "shop": "Brygshoppen",
       "discount_pct": 0,
       "max_discount_pct": 0
     },
@@ -24067,30 +24282,6 @@
           "shop_name": "Beershoppen",
           "price": 50.0,
           "url": "https://beershoppen.dk/products/big-drunk-baby-warpigs-kodbyen-44-cl-9-0",
-          "discount_pct": 0,
-          "old_price": null
-        }
-      ],
-      "cheapest_price": 50.0,
-      "min_price": 50.0,
-      "shop": "Beershoppen",
-      "discount_pct": 0,
-      "max_discount_pct": 0
-    },
-    {
-      "id": 14247,
-      "name": "Double Double Back - Buxton Brewery Engl. - 44 cl - 8,0%",
-      "image": "https://cdn.shopify.com/s/files/1/0600/9438/2263/files/Buxton2.jpg?v=1768476409",
-      "type": "Dubbel",
-      "abv": 8.0,
-      "volume_cl": 44.0,
-      "brewery": "Beershoppen",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Beershoppen",
-          "price": 50.0,
-          "url": "https://beershoppen.dk/products/double-double-back-buxton-brewery-engl-44-cl-8-0",
           "discount_pct": 0,
           "old_price": null
         }
@@ -24932,6 +25123,44 @@
       "max_discount_pct": 25.4
     },
     {
+      "id": 15970,
+      "name": "Funky Fluid, Gelato Tiki Taka Spain - Øl",
+      "image": "https://www.vildmedvin.dk/img/1000/1000/resize/f/u/funky_fluid_gelato_tiki_taka_spain.jpg",
+      "type": "Sour Beer",
+      "abv": 5.5,
+      "volume_cl": 50.0,
+      "brewery": "Funky Fluid",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Øltanken",
+          "price": 52.0,
+          "url": "https://oltanken.dk/products/funky-fluid-gelato-green",
+          "discount_pct": 0,
+          "old_price": null
+        },
+        {
+          "shop_name": "Beermatch",
+          "price": 59.0,
+          "url": "https://www.beermatch.dk/products/funky-fluid-gelato-tiki-taka-final-eigth-spain",
+          "discount_pct": 0,
+          "old_price": null
+        },
+        {
+          "shop_name": "Vild med Vin",
+          "price": 59.0,
+          "url": "https://www.vildmedvin.dk/funky-fluid-gelato-tiki-taka-spain",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 52.0,
+      "min_price": 52.0,
+      "shop": "Øltanken",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
       "id": 15946,
       "name": "Funky Fluid Brewery – Final Eight Portugal Selecao – West Coast IPA – 0,5 l. – 6,0%",
       "image": "https://www.bestofbeers.dk/wp-content/uploads/2026/05/FunkyFluidPortugal.jpg",
@@ -24963,57 +25192,26 @@
       "max_discount_pct": 0
     },
     {
-      "id": 16483,
-      "name": "RYGR Brygghús - Sure Paloma",
-      "image": "https://cdn.shopify.com/s/files/1/0776/5209/9400/files/266B4217-94BB-4E96-89E0-35A85C3FCB0C.jpg?v=1781812947",
-      "type": "Hvedeøl",
+      "id": 16877,
+      "name": "Thyras Bryg - Det Var Bockers!",
+      "image": "https://cdn.shopify.com/s/files/1/0551/6600/9423/files/F25EA468-A789-4588-9344-E694C315950A.jpg?v=1780402225",
+      "type": "Bock",
       "abv": 6.5,
-      "volume_cl": 33.0,
-      "brewery": "RYGR Brygghús",
+      "volume_cl": 44.0,
+      "brewery": "Thyras Bryg",
       "category": null,
       "prices": [
         {
-          "shop_name": "Øltanken",
+          "shop_name": "Beermatch",
           "price": 52.0,
-          "url": "https://oltanken.dk/products/rygr-sure-paloma",
+          "url": "https://www.beermatch.dk/products/thyras-bryg-det-var-bockers",
           "discount_pct": 0,
           "old_price": null
         }
       ],
       "cheapest_price": 52.0,
       "min_price": 52.0,
-      "shop": "Øltanken",
-      "discount_pct": 0,
-      "max_discount_pct": 0
-    },
-    {
-      "id": 14378,
-      "name": "Funky Fluid - Gelato Green",
-      "image": "https://cdn.shopify.com/s/files/1/0776/5209/9400/files/4FE5B1EF-03F9-49CB-BFA5-9F29F8CE7C2E.jpg?v=1773873654",
-      "type": "Sour",
-      "abv": 5.5,
-      "volume_cl": 50.0,
-      "brewery": "Funky Fluid",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Øltanken",
-          "price": 52.0,
-          "url": "https://oltanken.dk/products/funky-fluid-gelato-green",
-          "discount_pct": 0,
-          "old_price": null
-        },
-        {
-          "shop_name": "Vild med Vin",
-          "price": 55.0,
-          "url": "https://www.vildmedvin.dk/funky-fluid-mulled-gelato",
-          "discount_pct": 0,
-          "old_price": null
-        }
-      ],
-      "cheapest_price": 52.0,
-      "min_price": 52.0,
-      "shop": "Øltanken",
+      "shop": "Beermatch",
       "discount_pct": 0,
       "max_discount_pct": 0
     },
@@ -25622,6 +25820,30 @@
       "max_discount_pct": 0
     },
     {
+      "id": 16902,
+      "name": "Gamma - Step Doink (Stepping Stone Collab)",
+      "image": "https://cdn.shopify.com/s/files/1/0551/6600/9423/files/7178361A-5D46-476E-AE95-744D072A881E.jpg?v=1777616102",
+      "type": "Lager",
+      "abv": 4.8,
+      "volume_cl": 44.0,
+      "brewery": "Gamma",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Beermatch",
+          "price": 54.0,
+          "url": "https://www.beermatch.dk/products/gamma-step-doink-stepping-stone-collab",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 54.0,
+      "min_price": 54.0,
+      "shop": "Beermatch",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
       "id": 16598,
       "name": "Omnipollo - NOA Export",
       "image": "https://cdn.shopify.com/s/files/1/0776/5209/9400/files/B10F30FE-5EFA-4F62-AF78-57F6C15405C1.jpg?v=1782391549",
@@ -25958,30 +26180,6 @@
       "max_discount_pct": 0
     },
     {
-      "id": 15027,
-      "name": "Sudden Death - Cherry Berry Crush - 5,5% Smoothie Sour",
-      "image": "https://cdn.shopify.com/s/files/1/0402/1239/8243/files/SuddenDeath_CherryBerry.png?v=1778476261",
-      "type": "Sour",
-      "abv": 5.5,
-      "volume_cl": 44.0,
-      "brewery": "Best Before: 24/11-2026",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "A Good Case",
-          "price": 54.83,
-          "url": "https://agoodcase.dk/products/sudden-death-cherry-berry-crush-5-5-smoothie-sour",
-          "discount_pct": 26.9,
-          "old_price": 75.0
-        }
-      ],
-      "cheapest_price": 54.83,
-      "min_price": 54.83,
-      "shop": "A Good Case",
-      "discount_pct": 26.9,
-      "max_discount_pct": 26.9
-    },
-    {
       "id": 12825,
       "name": "Piece of Cake: Tarte Tatin 10% 33cl",
       "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/piece-of-cake-tarte-tatin-10-33cl.png?v=1778507163",
@@ -26028,6 +26226,44 @@
       "shop": "Brygshoppen",
       "discount_pct": 5.2,
       "max_discount_pct": 5.2
+    },
+    {
+      "id": 16146,
+      "name": "Vault City, Større Sjampanjebrus - Øl",
+      "image": "https://www.vildmedvin.dk/img/1000/1000/resize/v/a/vault_city_st_rre_sjampanjebrus.jpg",
+      "type": "Sour Beer",
+      "abv": 6.0,
+      "volume_cl": 44.0,
+      "brewery": "Vault City Brewing",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Vild med Vin",
+          "price": 55.0,
+          "url": "https://www.vildmedvin.dk/vault-city-storre-sjampanjebrus",
+          "discount_pct": 0,
+          "old_price": null
+        },
+        {
+          "shop_name": "Beermatch",
+          "price": 59.0,
+          "url": "https://www.beermatch.dk/products/vault-city-storre-sjampanje-brus",
+          "discount_pct": 0,
+          "old_price": 0.0
+        },
+        {
+          "shop_name": "Brygshoppen",
+          "price": 60.0,
+          "url": "https://brygshoppen.dk/products/storre-sjampanjebrus-6-44cl",
+          "discount_pct": 0,
+          "old_price": 0.0
+        }
+      ],
+      "cheapest_price": 55.0,
+      "min_price": 55.0,
+      "shop": "Vild med Vin",
+      "discount_pct": 0,
+      "max_discount_pct": 0
     },
     {
       "id": 13200,
@@ -26088,6 +26324,37 @@
       "cheapest_price": 55.0,
       "min_price": 55.0,
       "shop": "Brygshoppen",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
+      "id": 15969,
+      "name": "Funky Fluid, Gelato Joga Bonito Brasil - Øl",
+      "image": "https://www.vildmedvin.dk/img/1000/1000/resize/f/u/funky_fluid_gelato_joga_bonito_brasil.jpg",
+      "type": "Sour Beer",
+      "abv": 5.5,
+      "volume_cl": 50.0,
+      "brewery": "Funky Fluid",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Vild med Vin",
+          "price": 55.0,
+          "url": "https://www.vildmedvin.dk/funky-fluid-mulled-gelato",
+          "discount_pct": 0,
+          "old_price": null
+        },
+        {
+          "shop_name": "Beermatch",
+          "price": 59.0,
+          "url": "https://www.beermatch.dk/products/funky-fluid-gelato-jogo-bonito-final-eight-brasil",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 55.0,
+      "min_price": 55.0,
+      "shop": "Vild med Vin",
       "discount_pct": 0,
       "max_discount_pct": 0
     },
@@ -26270,37 +26537,6 @@
       "cheapest_price": 55.0,
       "min_price": 55.0,
       "shop": "Brygshoppen",
-      "discount_pct": 0,
-      "max_discount_pct": 0
-    },
-    {
-      "id": 15078,
-      "name": "Større Sjampanjebrus 6% 44cl",
-      "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/storre-sjampanjebrus-6-44cl.png?v=1779379413",
-      "type": "Pastry Sour",
-      "abv": 6.0,
-      "volume_cl": 44.0,
-      "brewery": "Vault City Brewing",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Vild med Vin",
-          "price": 55.0,
-          "url": "https://www.vildmedvin.dk/vault-city-storre-sjampanjebrus",
-          "discount_pct": 0,
-          "old_price": null
-        },
-        {
-          "shop_name": "Brygshoppen",
-          "price": 60.0,
-          "url": "https://brygshoppen.dk/products/storre-sjampanjebrus-6-44cl",
-          "discount_pct": 0,
-          "old_price": 0.0
-        }
-      ],
-      "cheapest_price": 55.0,
-      "min_price": 55.0,
-      "shop": "Vild med Vin",
       "discount_pct": 0,
       "max_discount_pct": 0
     },
@@ -26639,6 +26875,102 @@
       "shop": "Brygshoppen",
       "discount_pct": 21.4,
       "max_discount_pct": 21.4
+    },
+    {
+      "id": 16896,
+      "name": "Basqueland - Aiako Harria / Peñas De Aia (Verdant Collab)",
+      "image": "https://cdn.shopify.com/s/files/1/0551/6600/9423/files/1F806224-27E0-4D13-B927-E5088FAE5382.jpg?v=1777995392",
+      "type": "Double IPA",
+      "abv": 8.2,
+      "volume_cl": 44.0,
+      "brewery": "Basqueland",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Beermatch",
+          "price": 55.0,
+          "url": "https://www.beermatch.dk/products/basqueland-aiako-harria-penas-de-aia-verdant-collab",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 55.0,
+      "min_price": 55.0,
+      "shop": "Beermatch",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
+      "id": 16904,
+      "name": "Gamma - To Doink (To Øl Collab)",
+      "image": "https://cdn.shopify.com/s/files/1/0551/6600/9423/files/386C7378-9DDF-4D04-81A4-F6F67FC4106D.jpg?v=1777616102",
+      "type": "India Pale Ale (IPA)",
+      "abv": 6.5,
+      "volume_cl": 44.0,
+      "brewery": "Gamma",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Beermatch",
+          "price": 55.0,
+          "url": "https://www.beermatch.dk/products/gamma-to-doink-to-ol-collab",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 55.0,
+      "min_price": 55.0,
+      "shop": "Beermatch",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
+      "id": 16907,
+      "name": "Pipeworks - Forest Fauna",
+      "image": "https://cdn.shopify.com/s/files/1/0551/6600/9423/files/C1C4065E-0B92-4166-B472-8414F6CD818D.jpg?v=1775664066",
+      "type": "West Coast IPA",
+      "abv": 6.7,
+      "volume_cl": 44.0,
+      "brewery": "Pipeworks",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Beermatch",
+          "price": 55.0,
+          "url": "https://www.beermatch.dk/products/pipeworks-forest-fauna",
+          "discount_pct": 30.4,
+          "old_price": 79.0
+        }
+      ],
+      "cheapest_price": 55.0,
+      "min_price": 55.0,
+      "shop": "Beermatch",
+      "discount_pct": 30.4,
+      "max_discount_pct": 30.4
+    },
+    {
+      "id": 16926,
+      "name": "Cigar City - Jai Alai Double IPA (568 ml. Can)",
+      "image": "https://cdn.shopify.com/s/files/1/0551/6600/9423/files/C4AECC89-F5AD-435C-B25E-198AF56207E5.jpg?v=1770049549",
+      "type": "Double IPA",
+      "abv": 10.0,
+      "volume_cl": 56.8,
+      "brewery": "Cigar City",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Beermatch",
+          "price": 55.0,
+          "url": "https://www.beermatch.dk/products/cigar-city-jai-alai-double-ipa",
+          "discount_pct": 38.2,
+          "old_price": 89.0
+        }
+      ],
+      "cheapest_price": 55.0,
+      "min_price": 55.0,
+      "shop": "Beermatch",
+      "discount_pct": 38.2,
+      "max_discount_pct": 38.2
     },
     {
       "id": 16665,
@@ -27023,6 +27355,30 @@
       "shop": "Beer Me",
       "discount_pct": 0,
       "max_discount_pct": 0
+    },
+    {
+      "id": 14042,
+      "name": "Coffee Series - Indonesia - Imperial Stout fra Blackout Brewing",
+      "image": "https://cdn-main.ideal.shop/images/by_hash/d2f94fdc394add058d223bea47efa1da850e2db83a6edc892cd5114e8dde1b4f/500-0/Coffee-Series---Indonesia.jpg",
+      "type": "Imperial Stout",
+      "abv": 11.0,
+      "volume_cl": 33.0,
+      "brewery": "Blackout Brewing",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Beer Me",
+          "price": 55.0,
+          "url": "https://www.partner-ads.com/dk/klikbanner.php?bannerid=74625&partnerid=56605&htmlurl=https://www.beer-me.dk/vare/coffee-series-indonesia-imperial-stout-fra-blackout-brewing",
+          "discount_pct": 30.4,
+          "old_price": 79.0
+        }
+      ],
+      "cheapest_price": 55.0,
+      "min_price": 55.0,
+      "shop": "Beer Me",
+      "discount_pct": 30.4,
+      "max_discount_pct": 30.4
     },
     {
       "id": 14084,
@@ -27848,6 +28204,44 @@
       "max_discount_pct": 20.1
     },
     {
+      "id": 15948,
+      "name": "Funky Fluid Brewery – Final Eight England It´s Coming Home – New England IPA – 0,5 l. – 6,2%",
+      "image": "https://www.bestofbeers.dk/wp-content/uploads/2026/05/FunkyFluidEngland.jpg",
+      "type": "New England IPA",
+      "abv": 6.2,
+      "volume_cl": 50.0,
+      "brewery": "Funky Fluid",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Vild med Vin",
+          "price": 56.0,
+          "url": "https://www.vildmedvin.dk/funky-fluid-it-s-coming-home-england",
+          "discount_pct": 0,
+          "old_price": null
+        },
+        {
+          "shop_name": "Beermatch",
+          "price": 57.0,
+          "url": "https://www.beermatch.dk/products/funky-fluid-it-s-coming-home-final-eight-england",
+          "discount_pct": 0,
+          "old_price": null
+        },
+        {
+          "shop_name": "Best of Beers",
+          "price": 61.0,
+          "url": "https://www.bestofbeers.dk/shop/funky-fluid-brewery-final-eight-england-its-coming-home-new-england-ipa-05-l-62/",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 56.0,
+      "min_price": 56.0,
+      "shop": "Vild med Vin",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
       "id": 13624,
       "name": "Bad Seed Brewing – Moonage Daydream – Hazy Session IPA – 0,44 l. – 5,0%",
       "image": "https://www.bestofbeers.dk/wp-content/uploads/2026/04/BadSeedMoonageDaydream-1.jpg",
@@ -27868,37 +28262,6 @@
       "cheapest_price": 56.0,
       "min_price": 56.0,
       "shop": "Best of Beers",
-      "discount_pct": 0,
-      "max_discount_pct": 0
-    },
-    {
-      "id": 15948,
-      "name": "Funky Fluid Brewery – Final Eight England It´s Coming Home – New England IPA – 0,5 l. – 6,2%",
-      "image": "https://www.bestofbeers.dk/wp-content/uploads/2026/05/FunkyFluidEngland.jpg",
-      "type": "New England IPA",
-      "abv": 6.2,
-      "volume_cl": 50.0,
-      "brewery": "Funky Fluid",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Vild med Vin",
-          "price": 56.0,
-          "url": "https://www.vildmedvin.dk/funky-fluid-it-s-coming-home-england",
-          "discount_pct": 0,
-          "old_price": null
-        },
-        {
-          "shop_name": "Best of Beers",
-          "price": 61.0,
-          "url": "https://www.bestofbeers.dk/shop/funky-fluid-brewery-final-eight-england-its-coming-home-new-england-ipa-05-l-62/",
-          "discount_pct": 0,
-          "old_price": null
-        }
-      ],
-      "cheapest_price": 56.0,
-      "min_price": 56.0,
-      "shop": "Vild med Vin",
       "discount_pct": 0,
       "max_discount_pct": 0
     },
@@ -27947,6 +28310,78 @@
       "cheapest_price": 56.0,
       "min_price": 56.0,
       "shop": "Brygshoppen",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
+      "id": 16881,
+      "name": "Sharktor Brewing - Sherbet Sour",
+      "image": "https://cdn.shopify.com/s/files/1/0551/6600/9423/files/BC44C398-6678-4C96-BBB8-5F44AC59583A.jpg?v=1780308894",
+      "type": "Sour",
+      "abv": 6.0,
+      "volume_cl": 44.0,
+      "brewery": "Sharktor Brewing",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Beermatch",
+          "price": 56.0,
+          "url": "https://www.beermatch.dk/products/sharktor-brewing-sherbet-sour",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 56.0,
+      "min_price": 56.0,
+      "shop": "Beermatch",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
+      "id": 16917,
+      "name": "JustOne - Tropical Thirst Trap",
+      "image": "https://cdn.shopify.com/s/files/1/0551/6600/9423/files/EDCCDE13-E0DD-4A7A-96FE-8B2FE8051CBF.jpg?v=1773996417",
+      "type": "New England IPA",
+      "abv": 6.0,
+      "volume_cl": 44.0,
+      "brewery": "JustOne",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Beermatch",
+          "price": 56.0,
+          "url": "https://www.beermatch.dk/products/justone-tropical-thirst-trap",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 56.0,
+      "min_price": 56.0,
+      "shop": "Beermatch",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
+      "id": 16919,
+      "name": "Vault City - Sjampanje Brus",
+      "image": "https://cdn.shopify.com/s/files/1/0551/6600/9423/files/560BB4B4-9C75-4CA9-B3A4-3EA7361134ED.jpg?v=1773996417",
+      "type": "Sour",
+      "abv": 4.8,
+      "volume_cl": 44.0,
+      "brewery": "Vault City",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Beermatch",
+          "price": 56.0,
+          "url": "https://www.beermatch.dk/products/vault-city-sjampanje-brus",
+          "discount_pct": 0,
+          "old_price": 0.0
+        }
+      ],
+      "cheapest_price": 56.0,
+      "min_price": 56.0,
+      "shop": "Beermatch",
       "discount_pct": 0,
       "max_discount_pct": 0
     },
@@ -28095,30 +28530,6 @@
       "max_discount_pct": 0
     },
     {
-      "id": 16115,
-      "name": "Track Brewing Co.- Sonoma (Cultivate CY25)",
-      "image": "https://cdn.shopify.com/s/files/1/0776/5209/9400/files/DB0769E9-80DF-4913-9852-A861EF3B55E1.jpg?v=1780482557",
-      "type": "Pale Ale",
-      "abv": 3.8,
-      "volume_cl": 44.0,
-      "brewery": "Øltanken",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Øltanken",
-          "price": 56.0,
-          "url": "https://oltanken.dk/products/ultivate-cy25-3-8-abv-440ml",
-          "discount_pct": 0,
-          "old_price": null
-        }
-      ],
-      "cheapest_price": 56.0,
-      "min_price": 56.0,
-      "shop": "Øltanken",
-      "discount_pct": 0,
-      "max_discount_pct": 0
-    },
-    {
       "id": 14390,
       "name": "Sáez & Son - Kiwi & Co.",
       "image": "https://cdn.shopify.com/s/files/1/0776/5209/9400/files/B9077B5D-BA4D-4216-9266-0A21DD455925.jpg?v=1776796966",
@@ -28253,6 +28664,92 @@
       "max_discount_pct": 0
     },
     {
+      "id": 15986,
+      "name": "Funky Fluid, Oranje Netherland - Øl",
+      "image": "https://www.vildmedvin.dk/img/1000/1000/resize/f/u/funky_fluid_oranje_netherland.jpg",
+      "type": "IPA",
+      "abv": 8.0,
+      "volume_cl": 50.0,
+      "brewery": "Funky Fluid",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Vild med Vin",
+          "price": 57.0,
+          "url": "https://www.vildmedvin.dk/funky-fluid-oranje-netherland",
+          "discount_pct": 0,
+          "old_price": null
+        },
+        {
+          "shop_name": "Beermatch",
+          "price": 58.0,
+          "url": "https://www.beermatch.dk/products/funky-fluid-oranje-final-eight-netherlands-kopi",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 57.0,
+      "min_price": 57.0,
+      "shop": "Vild med Vin",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
+      "id": 15949,
+      "name": "Funky Fluid Brewery – Final Eight Argentina Hand of God – New England IPA – 0,5 l. – 6,5%",
+      "image": "https://www.bestofbeers.dk/wp-content/uploads/2026/05/FunkyFluidArgentina.jpg",
+      "type": "New England IPA",
+      "abv": 6.5,
+      "volume_cl": 50.0,
+      "brewery": "Funky Fluid Brewery",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Beermatch",
+          "price": 57.0,
+          "url": "https://www.beermatch.dk/products/funky-fluid-hand-of-god-final-eight-argentina",
+          "discount_pct": 0,
+          "old_price": null
+        },
+        {
+          "shop_name": "Best of Beers",
+          "price": 61.0,
+          "url": "https://www.bestofbeers.dk/shop/funky-fluid-brewery-final-eight-argentina-hand-of-god-new-england-ipa-05-l-65/",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 57.0,
+      "min_price": 57.0,
+      "shop": "Beermatch",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
+      "id": 16903,
+      "name": "Gamma - Flying Doink (Flying Couch Collab)",
+      "image": "https://cdn.shopify.com/s/files/1/0551/6600/9423/files/673666FF-4421-4308-BE8B-05E9531015C1.jpg?v=1777616103",
+      "type": "India Pale Ale (IPA)",
+      "abv": 5.0,
+      "volume_cl": 44.0,
+      "brewery": "Gamma",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Beermatch",
+          "price": 57.0,
+          "url": "https://www.beermatch.dk/products/gamma-flying-doink-flying-couch-collab",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 57.0,
+      "min_price": 57.0,
+      "shop": "Beermatch",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
       "id": 16294,
       "name": "Vault city - Marvellous Liquids Brainmelting Fluid",
       "image": "https://cdn.shopify.com/s/files/1/0776/5209/9400/files/1340A452-9190-4C70-AA7F-8CA103EA127B.jpg?v=1781119106",
@@ -28380,30 +28877,6 @@
       "max_discount_pct": 0
     },
     {
-      "id": 15986,
-      "name": "Funky Fluid, Oranje Netherland - Øl",
-      "image": "https://www.vildmedvin.dk/img/1000/1000/resize/f/u/funky_fluid_oranje_netherland.jpg",
-      "type": "IPA",
-      "abv": 8.0,
-      "volume_cl": 50.0,
-      "brewery": "Funky Fluid",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Vild med Vin",
-          "price": 57.0,
-          "url": "https://www.vildmedvin.dk/funky-fluid-oranje-netherland",
-          "discount_pct": 0,
-          "old_price": null
-        }
-      ],
-      "cheapest_price": 57.0,
-      "min_price": 57.0,
-      "shop": "Vild med Vin",
-      "discount_pct": 0,
-      "max_discount_pct": 0
-    },
-    {
       "id": 12840,
       "name": "Mok Hazelnut 13% 33cl",
       "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/mok-hazelnut-13-33cl.png?v=1776092375",
@@ -28476,7 +28949,7 @@
       "max_discount_pct": 0
     },
     {
-      "id": 16844,
+      "id": 16861,
       "name": "Öö 10,5% 33cl",
       "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/oo-10-5-33cl.png?v=1750597033",
       "type": "Imperial Stout",
@@ -28973,6 +29446,78 @@
       "cheapest_price": 59.0,
       "min_price": 59.0,
       "shop": "Brygshoppen",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
+      "id": 16894,
+      "name": "Observatoriet - Tableau",
+      "image": "https://cdn.shopify.com/s/files/1/0551/6600/9423/files/IMG-4880.jpg?v=1698587921",
+      "type": "Sour",
+      "abv": 4.5,
+      "volume_cl": 37.5,
+      "brewery": "Observatoriet",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Beermatch",
+          "price": 59.0,
+          "url": "https://www.beermatch.dk/products/observatoriet-tableau-1",
+          "discount_pct": 0,
+          "old_price": 0.0
+        }
+      ],
+      "cheapest_price": 59.0,
+      "min_price": 59.0,
+      "shop": "Beermatch",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
+      "id": 16897,
+      "name": "Tankbusters - The BeeKeeper Vol. 7",
+      "image": "https://cdn.shopify.com/s/files/1/0551/6600/9423/files/9F548E9A-0908-4090-B0DF-1246B309B97F.jpg?v=1777995392",
+      "type": "Sour",
+      "abv": 6.8,
+      "volume_cl": 44.0,
+      "brewery": "Tankbusters",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Beermatch",
+          "price": 59.0,
+          "url": "https://www.beermatch.dk/products/tankbusters-the-beekeeper-vol-7",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 59.0,
+      "min_price": 59.0,
+      "shop": "Beermatch",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
+      "id": 16921,
+      "name": "Stigbergets - Alpha Boss",
+      "image": "https://cdn.shopify.com/s/files/1/0551/6600/9423/files/E78B06CD-23E2-48DE-A307-4707203922BB.jpg?v=1772190078",
+      "type": "West Coast IPA",
+      "abv": 7.0,
+      "volume_cl": 44.0,
+      "brewery": "Stigbergets",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Beermatch",
+          "price": 59.0,
+          "url": "https://www.beermatch.dk/products/stigbergets-alpha-boss",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 59.0,
+      "min_price": 59.0,
+      "shop": "Beermatch",
       "discount_pct": 0,
       "max_discount_pct": 0
     },
@@ -29795,6 +30340,30 @@
       "shop": "A Good Case",
       "discount_pct": 14.6,
       "max_discount_pct": 14.6
+    },
+    {
+      "id": 15027,
+      "name": "Sudden Death - Cherry Berry Crush - 5,5% Smoothie Sour",
+      "image": "https://cdn.shopify.com/s/files/1/0402/1239/8243/files/SuddenDeath_CherryBerry.png?v=1778476261",
+      "type": "Sour",
+      "abv": 5.5,
+      "volume_cl": 44.0,
+      "brewery": "Best Before: 24/11-2026",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "A Good Case",
+          "price": 59.75,
+          "url": "https://agoodcase.dk/products/sudden-death-cherry-berry-crush-5-5-smoothie-sour",
+          "discount_pct": 20.3,
+          "old_price": 75.0
+        }
+      ],
+      "cheapest_price": 59.75,
+      "min_price": 59.75,
+      "shop": "A Good Case",
+      "discount_pct": 20.3,
+      "max_discount_pct": 20.3
     },
     {
       "id": 15028,
@@ -30792,6 +31361,54 @@
       "max_discount_pct": 0
     },
     {
+      "id": 16911,
+      "name": "Pomona Island - Double Lemon Yellow Sun",
+      "image": "https://cdn.shopify.com/s/files/1/0551/6600/9423/files/6C7AC2C0-A845-45E5-B833-6C51028A9EE4.jpg?v=1775247744",
+      "type": "Dubbel",
+      "abv": 8.0,
+      "volume_cl": 44.0,
+      "brewery": "Pomona Island",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Beermatch",
+          "price": 60.0,
+          "url": "https://www.beermatch.dk/products/pomona-island-double-lemon-yellow-sun",
+          "discount_pct": 24.1,
+          "old_price": 79.0
+        }
+      ],
+      "cheapest_price": 60.0,
+      "min_price": 60.0,
+      "shop": "Beermatch",
+      "discount_pct": 24.1,
+      "max_discount_pct": 24.1
+    },
+    {
+      "id": 16962,
+      "name": "Whoosh - Stepping Stone -  44 cl. - 6,7%",
+      "image": "https://cdn.shopify.com/s/files/1/0600/9438/2263/files/Whoosh.jpg?v=1782825265",
+      "type": "Beer",
+      "abv": 6.7,
+      "volume_cl": 44.0,
+      "brewery": "Beershoppen",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Beershoppen",
+          "price": 60.0,
+          "url": "https://beershoppen.dk/products/whoosh-stepping-stone-44-cl-6-7",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 60.0,
+      "min_price": 60.0,
+      "shop": "Beershoppen",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
       "id": 16579,
       "name": "Lollies - Garage Beer Barcelona-  44 cl. - 5,0%",
       "image": "https://cdn.shopify.com/s/files/1/0600/9438/2263/files/lollies.jpg?v=1782382699",
@@ -31340,30 +31957,6 @@
           "shop_name": "Best of Beers",
           "price": 61.0,
           "url": "https://www.bestofbeers.dk/shop/funky-fluid-brewery-final-eight-holland-oranje-double-ipa-05-l-80/",
-          "discount_pct": 0,
-          "old_price": null
-        }
-      ],
-      "cheapest_price": 61.0,
-      "min_price": 61.0,
-      "shop": "Best of Beers",
-      "discount_pct": 0,
-      "max_discount_pct": 0
-    },
-    {
-      "id": 15949,
-      "name": "Funky Fluid Brewery – Final Eight Argentina Hand of God – New England IPA – 0,5 l. – 6,5%",
-      "image": "https://www.bestofbeers.dk/wp-content/uploads/2026/05/FunkyFluidArgentina.jpg",
-      "type": "New England IPA",
-      "abv": 6.5,
-      "volume_cl": 50.0,
-      "brewery": "Funky Fluid Brewery",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Best of Beers",
-          "price": 61.0,
-          "url": "https://www.bestofbeers.dk/shop/funky-fluid-brewery-final-eight-argentina-hand-of-god-new-england-ipa-05-l-65/",
           "discount_pct": 0,
           "old_price": null
         }
@@ -32006,6 +32599,30 @@
       "max_discount_pct": 0
     },
     {
+      "id": 16901,
+      "name": "Gamma - Bad Doink (Bad Seed Collab)",
+      "image": "https://cdn.shopify.com/s/files/1/0551/6600/9423/files/4D5E681B-7542-4724-A65D-23ED284DC627.jpg?v=1777616102",
+      "type": "Double IPA",
+      "abv": 8.2,
+      "volume_cl": 44.0,
+      "brewery": "Gamma",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Beermatch",
+          "price": 62.0,
+          "url": "https://www.beermatch.dk/products/gamma-bad-doink-bad-seed-collab",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 62.0,
+      "min_price": 62.0,
+      "shop": "Beermatch",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
       "id": 14023,
       "name": "Vision - Port BA Dark Sour fra Blackout Brewing",
       "image": "https://cdn-main.ideal.shop/images/by_hash/a39adfd16bbc8f2e61470af9cabe8eb455edddfdb29c096e382bad12547da18e/500-0/vision.jpg",
@@ -32284,10 +32901,10 @@
       "max_discount_pct": 10.0
     },
     {
-      "id": 13998,
-      "name": "Gold Standard Â· Imperial Stout fra Vault City",
-      "image": "https://cdn-main.ideal.shop/images/by_hash/4a395e986763aa0c07b43ee89ce98cae412e88db75d44cc77e40a90947a98e2e/500-0/goldstandard.jpg",
-      "type": "Imperial Stout",
+      "id": 14517,
+      "name": "Vault City - Gold Standard Pastry Stout",
+      "image": "https://cdn.shopify.com/s/files/1/0776/5209/9400/files/D8EFD862-E774-41AA-8209-31512F2AC1DC.jpg?v=1762293434",
+      "type": "Pastry Stout",
       "abv": 15.0,
       "volume_cl": 33.0,
       "brewery": "Vault City",
@@ -32299,6 +32916,13 @@
           "url": "https://www.partner-ads.com/dk/klikbanner.php?bannerid=74625&partnerid=56605&htmlurl=https://www.beer-me.dk/vare/gold-standard-imperial-stout-fra-vault-city",
           "discount_pct": 15.0,
           "old_price": 75.0
+        },
+        {
+          "shop_name": "Beermatch",
+          "price": 76.0,
+          "url": "https://www.beermatch.dk/products/vault-city-gold-standard",
+          "discount_pct": 0,
+          "old_price": 0.0
         }
       ],
       "cheapest_price": 63.75,
@@ -32306,44 +32930,6 @@
       "shop": "Beer Me",
       "discount_pct": 15.0,
       "max_discount_pct": 15.0
-    },
-    {
-      "id": 14320,
-      "name": "De Dolle Browers Stille Nacht 2025 - 33 cl  -  12%",
-      "image": "https://cdn.shopify.com/s/files/1/0600/9438/2263/files/Stillenacht.jpg?v=1734032445",
-      "type": "Beer",
-      "abv": 12.0,
-      "volume_cl": 33.0,
-      "brewery": "Beershoppen",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Øltanken",
-          "price": 64.0,
-          "url": "https://oltanken.dk/products/stille-nacht-2025",
-          "discount_pct": 0,
-          "old_price": null
-        },
-        {
-          "shop_name": "Beershoppen",
-          "price": 65.0,
-          "url": "https://beershoppen.dk/products/de-dolle-browers-stille-nacht-2024-33-cl-12",
-          "discount_pct": 0,
-          "old_price": null
-        },
-        {
-          "shop_name": "Best of Beers",
-          "price": 66.0,
-          "url": "https://www.bestofbeers.dk/shop/de-dolle-stille-nacht-2025-ale-033-l-120/",
-          "discount_pct": 0,
-          "old_price": null
-        }
-      ],
-      "cheapest_price": 64.0,
-      "min_price": 64.0,
-      "shop": "Øltanken",
-      "discount_pct": 0,
-      "max_discount_pct": 0
     },
     {
       "id": 13142,
@@ -32373,6 +32959,78 @@
       "cheapest_price": 64.0,
       "min_price": 64.0,
       "shop": "Vild med Vin",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
+      "id": 16868,
+      "name": "Salikatt - Feedwater (Westum Collab)",
+      "image": null,
+      "type": "Double IPA",
+      "abv": 8.0,
+      "volume_cl": 44.0,
+      "brewery": "Salikatt",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Beermatch",
+          "price": 64.0,
+          "url": "https://www.beermatch.dk/products/salikatt-feedwater-westum-collab",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 64.0,
+      "min_price": 64.0,
+      "shop": "Beermatch",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
+      "id": 16869,
+      "name": "Salikatt - Pocket Pair",
+      "image": null,
+      "type": "Double IPA",
+      "abv": 8.0,
+      "volume_cl": 44.0,
+      "brewery": "Salikatt",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Beermatch",
+          "price": 64.0,
+          "url": "https://www.beermatch.dk/products/salikatt-pocket-pair",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 64.0,
+      "min_price": 64.0,
+      "shop": "Beermatch",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
+      "id": 16875,
+      "name": "Thyras Bryg - Barrel Aged 50",
+      "image": "https://cdn.shopify.com/s/files/1/0551/6600/9423/files/062B87D0-62D4-4C89-A4E9-7CF6D7C6CC1E.jpg?v=1780402226",
+      "type": "Imperial Stout",
+      "abv": 9.5,
+      "volume_cl": 33.0,
+      "brewery": "Thyras Bryg",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Beermatch",
+          "price": 64.0,
+          "url": "https://www.beermatch.dk/products/thyras-bryg-barrel-aged-50",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 64.0,
+      "min_price": 64.0,
+      "shop": "Beermatch",
       "discount_pct": 0,
       "max_discount_pct": 0
     },
@@ -32665,6 +33323,82 @@
       "max_discount_pct": 0
     },
     {
+      "id": 15966,
+      "name": "Vault City, MEGA Rødgrød med Fløde - Øl",
+      "image": "https://www.vildmedvin.dk/img/1000/1000/resize/m/e/mega-r-dgr-d-med-fl-de-9-44cl-removebg.jpg",
+      "type": "Sour Beer",
+      "abv": 9.0,
+      "volume_cl": 44.0,
+      "brewery": "Vault City Brewing",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Vild med Vin",
+          "price": 65.0,
+          "url": "https://www.vildmedvin.dk/vault-city-mega-rodgrod-med-flode",
+          "discount_pct": 0,
+          "old_price": null
+        },
+        {
+          "shop_name": "Brygshoppen",
+          "price": 65.0,
+          "url": "https://brygshoppen.dk/products/mega-rodgrod-med-flode-9-44cl",
+          "discount_pct": 0,
+          "old_price": 0.0
+        },
+        {
+          "shop_name": "Beermatch",
+          "price": 67.0,
+          "url": "https://www.beermatch.dk/products/vault-city-mega-rodgrod-med-flode",
+          "discount_pct": 0,
+          "old_price": 0.0
+        }
+      ],
+      "cheapest_price": 65.0,
+      "min_price": 65.0,
+      "shop": "Vild med Vin",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
+      "id": 15967,
+      "name": "Vault City, KÆMPE Kjøbenhavnerstang - Øl",
+      "image": "https://www.vildmedvin.dk/img/1000/1000/resize/v/a/vault_city_k_mpe_kj_benhavnerstang.jpg",
+      "type": "Sour Beer",
+      "abv": 9.0,
+      "volume_cl": 44.0,
+      "brewery": "Vault City Brewing",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Vild med Vin",
+          "price": 65.0,
+          "url": "https://www.vildmedvin.dk/vault-city-kaempe-kjobenhavnerstang",
+          "discount_pct": 0,
+          "old_price": null
+        },
+        {
+          "shop_name": "Brygshoppen",
+          "price": 65.0,
+          "url": "https://brygshoppen.dk/products/kaempe-kjobenhavner-stang-9-44cl",
+          "discount_pct": 0,
+          "old_price": 0.0
+        },
+        {
+          "shop_name": "Beermatch",
+          "price": 67.0,
+          "url": "https://www.beermatch.dk/products/vault-city-kaempe-kjobenhavner-stang",
+          "discount_pct": 0,
+          "old_price": 0.0
+        }
+      ],
+      "cheapest_price": 65.0,
+      "min_price": 65.0,
+      "shop": "Vild med Vin",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
       "id": 16083,
       "name": "You Won’t Believe It’s Not Crumble! 6% 44cl",
       "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/you-won-t-believe-it-s-not-crumble-6-44cl.png?v=1774450353",
@@ -32680,6 +33414,13 @@
           "url": "https://brygshoppen.dk/products/you-won-t-believe-it-s-not-crumble-6-44cl",
           "discount_pct": 13.3,
           "old_price": 75.0
+        },
+        {
+          "shop_name": "Beermatch",
+          "price": 79.0,
+          "url": "https://www.beermatch.dk/products/vault-city-you-wont-believe-its-not-a-crumble-sudden-death-collab",
+          "discount_pct": 0,
+          "old_price": 0.0
         }
       ],
       "cheapest_price": 65.0,
@@ -32687,68 +33428,6 @@
       "shop": "Brygshoppen",
       "discount_pct": 13.3,
       "max_discount_pct": 13.3
-    },
-    {
-      "id": 15076,
-      "name": "Mega Rødgrød Med Fløde 9% 44cl",
-      "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/mega-r-dgr-d-med-fl-de-9-44cl.png?v=1779380455",
-      "type": "Pastry Sour",
-      "abv": 9.0,
-      "volume_cl": 44.0,
-      "brewery": "Vault City Brewing",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Brygshoppen",
-          "price": 65.0,
-          "url": "https://brygshoppen.dk/products/mega-rodgrod-med-flode-9-44cl",
-          "discount_pct": 0,
-          "old_price": 0.0
-        },
-        {
-          "shop_name": "Vild med Vin",
-          "price": 65.0,
-          "url": "https://www.vildmedvin.dk/vault-city-mega-rodgrod-med-flode",
-          "discount_pct": 0,
-          "old_price": null
-        }
-      ],
-      "cheapest_price": 65.0,
-      "min_price": 65.0,
-      "shop": "Brygshoppen",
-      "discount_pct": 0,
-      "max_discount_pct": 0
-    },
-    {
-      "id": 15077,
-      "name": "Kæmpe Kjøbenhavner Stang 9% 44cl",
-      "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/k-mpe-kj-benhavner-stang-9-44cl.png?v=1779379910",
-      "type": "Pastry Sour",
-      "abv": 9.0,
-      "volume_cl": 44.0,
-      "brewery": "Vault City Brewing",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Brygshoppen",
-          "price": 65.0,
-          "url": "https://brygshoppen.dk/products/kaempe-kjobenhavner-stang-9-44cl",
-          "discount_pct": 0,
-          "old_price": 0.0
-        },
-        {
-          "shop_name": "Vild med Vin",
-          "price": 65.0,
-          "url": "https://www.vildmedvin.dk/vault-city-kaempe-kjobenhavnerstang",
-          "discount_pct": 0,
-          "old_price": null
-        }
-      ],
-      "cheapest_price": 65.0,
-      "min_price": 65.0,
-      "shop": "Brygshoppen",
-      "discount_pct": 0,
-      "max_discount_pct": 0
     },
     {
       "id": 15079,
@@ -32812,6 +33491,30 @@
           "shop_name": "Brygshoppen",
           "price": 65.0,
           "url": "https://brygshoppen.dk/products/douzepot-10-5-33cl",
+          "discount_pct": 0,
+          "old_price": 0.0
+        }
+      ],
+      "cheapest_price": 65.0,
+      "min_price": 65.0,
+      "shop": "Brygshoppen",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
+      "id": 16857,
+      "name": "Kwaremont 6,6% 75cl",
+      "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/kwaremont-6-6-75cl.png?v=1774945694",
+      "type": "Belgian Blonde",
+      "abv": 6.6,
+      "volume_cl": 75.0,
+      "brewery": "Brouwerij De Brabandere",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Brygshoppen",
+          "price": 65.0,
+          "url": "https://brygshoppen.dk/products/kwaremont-6-6-75cl",
           "discount_pct": 0,
           "old_price": 0.0
         }
@@ -33324,28 +34027,35 @@
       "max_discount_pct": 0
     },
     {
-      "id": 13415,
-      "name": "FrauGruber - Spiky Sago - 9,8% Triple IPA",
-      "image": "https://cdn.shopify.com/s/files/1/0402/1239/8243/files/FrauGruber_SpikySago.png?v=1773652745",
+      "id": 13375,
+      "name": "Fermenterarna - Hoppy Holiday - 9,5% Triple IPA",
+      "image": "https://cdn.shopify.com/s/files/1/0402/1239/8243/files/Fermenterarna_HoppyHolidays.png?v=1776669421",
       "type": "India Pale Ale (IPA)",
-      "abv": 9.8,
+      "abv": 9.5,
       "volume_cl": 44.0,
-      "brewery": "Best before: 31/12-2026",
+      "brewery": "Best before: 16/02-2027",
       "category": null,
       "prices": [
         {
           "shop_name": "A Good Case",
           "price": 65.75,
-          "url": "https://agoodcase.dk/products/frau-gruber-spiky-sago-9-8-triple-ipa",
-          "discount_pct": 17.8,
-          "old_price": 80.0
+          "url": "https://agoodcase.dk/products/fermenterarna-triplic-9-5-triple-ipa",
+          "discount_pct": 12.3,
+          "old_price": 75.0
+        },
+        {
+          "shop_name": "Beermatch",
+          "price": 69.0,
+          "url": "https://www.beermatch.dk/products/fermenterarna-hoppy-holiday",
+          "discount_pct": 0,
+          "old_price": null
         }
       ],
       "cheapest_price": 65.75,
       "min_price": 65.75,
       "shop": "A Good Case",
-      "discount_pct": 17.8,
-      "max_discount_pct": 17.8
+      "discount_pct": 12.3,
+      "max_discount_pct": 12.3
     },
     {
       "id": 16003,
@@ -33370,30 +34080,6 @@
       "shop": "A Good Case",
       "discount_pct": 17.8,
       "max_discount_pct": 17.8
-    },
-    {
-      "id": 13375,
-      "name": "Fermenterarna - Hoppy Holiday - 9,5% Triple IPA",
-      "image": "https://cdn.shopify.com/s/files/1/0402/1239/8243/files/Fermenterarna_HoppyHolidays.png?v=1776669421",
-      "type": "India Pale Ale (IPA)",
-      "abv": 9.5,
-      "volume_cl": 44.0,
-      "brewery": "Best before: 16/02-2027",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "A Good Case",
-          "price": 65.75,
-          "url": "https://agoodcase.dk/products/fermenterarna-triplic-9-5-triple-ipa",
-          "discount_pct": 12.3,
-          "old_price": 75.0
-        }
-      ],
-      "cheapest_price": 65.75,
-      "min_price": 65.75,
-      "shop": "A Good Case",
-      "discount_pct": 12.3,
-      "max_discount_pct": 12.3
     },
     {
       "id": 13461,
@@ -34383,6 +35069,54 @@
       "cheapest_price": 67.0,
       "min_price": 67.0,
       "shop": "Brygshoppen",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
+      "id": 16885,
+      "name": "Equilibrium - MC2",
+      "image": "https://cdn.shopify.com/s/files/1/0551/6600/9423/files/BFD97AD0-4807-4D0B-B164-8DD2A1F49F08.jpg?v=1779451873",
+      "type": "Double IPA",
+      "abv": 8.0,
+      "volume_cl": 47.3,
+      "brewery": "Equilibrium",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Beermatch",
+          "price": 67.0,
+          "url": "https://www.beermatch.dk/products/equilibrium-mc2",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 67.0,
+      "min_price": 67.0,
+      "shop": "Beermatch",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
+      "id": 16906,
+      "name": "Stigbergets - Don’t Believe A Word (Whiplash Collab)",
+      "image": "https://cdn.shopify.com/s/files/1/0551/6600/9423/files/FCA2DE7B-4F7E-41B1-8317-6ADB77A86973.jpg?v=1770049549",
+      "type": "Double IPA",
+      "abv": 8.5,
+      "volume_cl": 44.0,
+      "brewery": "Stigbergets",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Beermatch",
+          "price": 67.0,
+          "url": "https://www.beermatch.dk/products/stigbergets-don-t-believe-a-word-whiplash-collab",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 67.0,
+      "min_price": 67.0,
+      "shop": "Beermatch",
       "discount_pct": 0,
       "max_discount_pct": 0
     },
@@ -36308,6 +37042,30 @@
       "max_discount_pct": 0
     },
     {
+      "id": 16922,
+      "name": "Pipeworks - Devil Firefish",
+      "image": "https://cdn.shopify.com/s/files/1/0551/6600/9423/files/80258523-0ECF-4AEC-97B2-6D1E4040DF73.jpg?v=1772190077",
+      "type": "Double IPA",
+      "abv": 9.5,
+      "volume_cl": 47.3,
+      "brewery": "Pipeworks",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Beermatch",
+          "price": 72.0,
+          "url": "https://www.beermatch.dk/products/pipeworks-devil-firefish",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 72.0,
+      "min_price": 72.0,
+      "shop": "Beermatch",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
       "id": 16289,
       "name": "Factory Brewing - Double Reveries of Riwaka",
       "image": "https://cdn.shopify.com/s/files/1/0776/5209/9400/files/F39B9B15-E769-41D8-B299-B8ED653CF5CA.jpg?v=1781172444",
@@ -36514,6 +37272,37 @@
       "max_discount_pct": 0
     },
     {
+      "id": 15968,
+      "name": "Funky Fluid, Gelato Xtreme Tricolore France - Øl",
+      "image": "https://www.vildmedvin.dk/img/1000/1000/resize/f/u/funky_fluid_gelato_xtreme_tricolore_france.jpg",
+      "type": "Sour Beer",
+      "abv": 8.0,
+      "volume_cl": 50.0,
+      "brewery": "Funky Fluid",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Beermatch",
+          "price": 74.0,
+          "url": "https://www.beermatch.dk/products/funky-fluid-gelato-xtreme-tricolore-final-eight-france",
+          "discount_pct": 0,
+          "old_price": null
+        },
+        {
+          "shop_name": "Vild med Vin",
+          "price": 74.0,
+          "url": "https://www.vildmedvin.dk/funky-fluid-gelato-xtreme-der-klassiker-germany",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 74.0,
+      "min_price": 74.0,
+      "shop": "Beermatch",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
       "id": 15757,
       "name": "Bicycle Brewing - Topaz cider",
       "image": "https://cdn.shopify.com/s/files/1/0776/5209/9400/files/A38DAB67-048F-465A-A6F1-EC6A7A6DC888.jpg?v=1779568653",
@@ -36534,6 +37323,30 @@
       "cheapest_price": 74.0,
       "min_price": 74.0,
       "shop": "Øltanken",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
+      "id": 16900,
+      "name": "Observatoriet - Audacia Oak Juice",
+      "image": "https://cdn.shopify.com/s/files/1/0551/6600/9423/files/FB4DCB6D-4FA3-45A7-B2BE-FB029523B7DE.jpg?v=1762106802",
+      "type": "Sour",
+      "abv": 6.5,
+      "volume_cl": 37.5,
+      "brewery": "Observatoriet",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Beermatch",
+          "price": 74.0,
+          "url": "https://www.beermatch.dk/products/observatoriet-audacia-oak-juice",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 74.0,
+      "min_price": 74.0,
+      "shop": "Beermatch",
       "discount_pct": 0,
       "max_discount_pct": 0
     },
@@ -36754,30 +37567,6 @@
       "max_discount_pct": 0
     },
     {
-      "id": 15968,
-      "name": "Funky Fluid, Gelato Xtreme Tricolore France - Øl",
-      "image": "https://www.vildmedvin.dk/img/1000/1000/resize/f/u/funky_fluid_gelato_xtreme_tricolore_france.jpg",
-      "type": "Sour Beer",
-      "abv": 8.0,
-      "volume_cl": 50.0,
-      "brewery": "Funky Fluid",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Vild med Vin",
-          "price": 74.0,
-          "url": "https://www.vildmedvin.dk/funky-fluid-gelato-xtreme-der-klassiker-germany",
-          "discount_pct": 0,
-          "old_price": null
-        }
-      ],
-      "cheapest_price": 74.0,
-      "min_price": 74.0,
-      "shop": "Vild med Vin",
-      "discount_pct": 0,
-      "max_discount_pct": 0
-    },
-    {
       "id": 14054,
       "name": "Profan - BA Imperial Stout fra Blackout Brewing",
       "image": "https://cdn-main.ideal.shop/images/by_hash/bf4cdfd7b312f0aace4ba34bab94b7934071627ce34abb7d86540e439b19aee9/500-0/profan.jpg",
@@ -36819,6 +37608,13 @@
           "old_price": 0.0
         },
         {
+          "shop_name": "Beermatch",
+          "price": 89.0,
+          "url": "https://www.beermatch.dk/products/st-bernardus-abt-12-kopi",
+          "discount_pct": 0,
+          "old_price": null
+        },
+        {
           "shop_name": "Best of Beers",
           "price": 111.0,
           "url": "https://www.bestofbeers.dk/shop/st-bernardus-abt-12-075-l-10/",
@@ -36833,7 +37629,38 @@
       "max_discount_pct": 0
     },
     {
-      "id": 16841,
+      "id": 14176,
+      "name": "Echoring Current - Track Brew - 44 cl. - 7,2%",
+      "image": "https://cdn.shopify.com/s/files/1/0600/9438/2263/files/trackech.jpg?v=1777970394",
+      "type": "Beer",
+      "abv": 7.2,
+      "volume_cl": 44.0,
+      "brewery": "Beershoppen",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Beermatch",
+          "price": 75.0,
+          "url": "https://www.beermatch.dk/products/track-brewing-co-echoing-current",
+          "discount_pct": 0,
+          "old_price": null
+        },
+        {
+          "shop_name": "Beershoppen",
+          "price": 85.0,
+          "url": "https://beershoppen.dk/products/echoring-current-track-brew-44-cl-7-2",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 75.0,
+      "min_price": 75.0,
+      "shop": "Beermatch",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
+      "id": 16856,
       "name": "Raw Beer 8% 44cl",
       "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/raw-beer-8.png?v=1782404785",
       "type": "India Pale Ale (IPA)",
@@ -37241,6 +38068,68 @@
       "max_discount_pct": 15.0
     },
     {
+      "id": 16439,
+      "name": "Waimea - Observatoriet - 37,5 cl. -  6,5%",
+      "image": "https://cdn.shopify.com/s/files/1/0600/9438/2263/files/waimea.jpg?v=1781703316",
+      "type": "Beer",
+      "abv": 6.5,
+      "volume_cl": 37.5,
+      "brewery": "Beershoppen",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Beermatch",
+          "price": 76.0,
+          "url": "https://www.beermatch.dk/products/observatoriet-vieux-1",
+          "discount_pct": 0,
+          "old_price": null
+        },
+        {
+          "shop_name": "Beershoppen",
+          "price": 80.0,
+          "url": "https://beershoppen.dk/products/waimea-observatoriet-37-5-cl-6-5",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 76.0,
+      "min_price": 76.0,
+      "shop": "Beermatch",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
+      "id": 13632,
+      "name": "Sudden Death Brewing – None The Wiser – Imperial Stout – 0,44 l. – 13,0%",
+      "image": "https://www.bestofbeers.dk/wp-content/uploads/2026/04/SuddenDeathNoneTheWiser.jpg",
+      "type": "Imperial Stout",
+      "abv": 13.0,
+      "volume_cl": 44.0,
+      "brewery": "Sudden Death Brewing",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Best of Beers",
+          "price": 76.0,
+          "url": "https://www.bestofbeers.dk/shop/sudden-death-brewing-none-the-wiser-imperial-stout-044-l-130/",
+          "discount_pct": 0,
+          "old_price": null
+        },
+        {
+          "shop_name": "Beermatch",
+          "price": 79.0,
+          "url": "https://www.beermatch.dk/products/sudden-death-none-the-wiser-puhaste-collab",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 76.0,
+      "min_price": 76.0,
+      "shop": "Best of Beers",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
       "id": 16390,
       "name": "Factory Brewing x Juova – Ummagumma – Double India Pale Ale – 0,44 l. – 8,0%",
       "image": "https://www.bestofbeers.dk/wp-content/uploads/2026/06/FactoryBrewingUmmaGumma.jpg",
@@ -37261,6 +38150,30 @@
       "cheapest_price": 76.0,
       "min_price": 76.0,
       "shop": "Best of Beers",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
+      "id": 16942,
+      "name": "Vault City - Espresso Martini",
+      "image": "https://cdn.shopify.com/s/files/1/0551/6600/9423/files/8864A6A0-D29C-43FE-8393-1241B4AD3944.jpg?v=1762776946",
+      "type": "Imperial Stout",
+      "abv": 13.0,
+      "volume_cl": 33.0,
+      "brewery": "Vault City",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Beermatch",
+          "price": 76.0,
+          "url": "https://www.beermatch.dk/products/vault-city-espresso-martini",
+          "discount_pct": 0,
+          "old_price": 0.0
+        }
+      ],
+      "cheapest_price": 76.0,
+      "min_price": 76.0,
+      "shop": "Beermatch",
       "discount_pct": 0,
       "max_discount_pct": 0
     },
@@ -37440,30 +38353,6 @@
       "max_discount_pct": 0
     },
     {
-      "id": 13632,
-      "name": "Sudden Death Brewing – None The Wiser – Imperial Stout – 0,44 l. – 13,0%",
-      "image": "https://www.bestofbeers.dk/wp-content/uploads/2026/04/SuddenDeathNoneTheWiser.jpg",
-      "type": "Imperial Stout",
-      "abv": 13.0,
-      "volume_cl": 44.0,
-      "brewery": "Sudden Death Brewing",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Best of Beers",
-          "price": 76.0,
-          "url": "https://www.bestofbeers.dk/shop/sudden-death-brewing-none-the-wiser-imperial-stout-044-l-130/",
-          "discount_pct": 0,
-          "old_price": null
-        }
-      ],
-      "cheapest_price": 76.0,
-      "min_price": 76.0,
-      "shop": "Best of Beers",
-      "discount_pct": 0,
-      "max_discount_pct": 0
-    },
-    {
       "id": 13670,
       "name": "Outer Range Brewing Co. x Fidens – Above the Noise – Hazy Double India Pale Ale – 0,44 l. – 9,0%",
       "image": "https://www.bestofbeers.dk/wp-content/uploads/2026/03/OuterRangeFidensAbovethenoise.jpg",
@@ -37628,6 +38517,30 @@
       "cheapest_price": 77.0,
       "min_price": 77.0,
       "shop": "Brygshoppen",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
+      "id": 16924,
+      "name": "BlackStack Brewing - Local 755",
+      "image": "https://cdn.shopify.com/s/files/1/0551/6600/9423/files/D7723EA3-6AD4-4075-8555-3BEE966690AF.jpg?v=1772190077",
+      "type": "New England IPA",
+      "abv": 6.8,
+      "volume_cl": 47.3,
+      "brewery": "BlackStack Brewing",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Beermatch",
+          "price": 77.0,
+          "url": "https://www.beermatch.dk/products/blackstack-brewing-local-755",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 77.0,
+      "min_price": 77.0,
+      "shop": "Beermatch",
       "discount_pct": 0,
       "max_discount_pct": 0
     },
@@ -37807,6 +38720,75 @@
       "max_discount_pct": 0
     },
     {
+      "id": 14255,
+      "name": "Oerbier Special Reserva (2024) - De Dolle Brouwers - 33 cl  10,0%",
+      "image": "https://cdn.shopify.com/s/files/1/0600/9438/2263/files/oerbierreserva.jpg?v=1765970640",
+      "type": "Beer",
+      "abv": 10.0,
+      "volume_cl": 33.0,
+      "brewery": "Beershoppen",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Beermatch",
+          "price": 79.0,
+          "url": "https://www.beermatch.dk/products/de-dolle-oerbier-reserva-2024",
+          "discount_pct": 0,
+          "old_price": null
+        },
+        {
+          "shop_name": "Beershoppen",
+          "price": 95.0,
+          "url": "https://beershoppen.dk/products/oerbier-special-reserva-2024-de-dolle-brouwers-33-cl-10-0",
+          "discount_pct": 0,
+          "old_price": null
+        },
+        {
+          "shop_name": "Best of Beers",
+          "price": 101.0,
+          "url": "https://www.bestofbeers.dk/shop/de-dolle-brouwers-special-reserva-oerbier-2023-amarone-barrels-ale-033-l-100/",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 79.0,
+      "min_price": 79.0,
+      "shop": "Beermatch",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
+      "id": 14467,
+      "name": "Evil Twin NYC x Cervecería Rámuri - Even More Lagrimas  NYC Version",
+      "image": "https://cdn.shopify.com/s/files/1/0776/5209/9400/files/171F9171-F0F1-4749-B135-294087D9CA47.jpg?v=1772463539",
+      "type": "Imperial Stout",
+      "abv": 13.0,
+      "volume_cl": 47.3,
+      "brewery": "Evil Twin NYC x Cervecería Rámuri",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Øltanken",
+          "price": 79.0,
+          "url": "https://oltanken.dk/products/evil-twin-nyc-x-cerveceria-ramuri-even-more-lagrimas-nyc-version",
+          "discount_pct": 0,
+          "old_price": null
+        },
+        {
+          "shop_name": "Beermatch",
+          "price": 89.0,
+          "url": "https://www.beermatch.dk/products/evil-twin-nyc-even-more-lagrimas-nyc-version",
+          "discount_pct": 0,
+          "old_price": 0.0
+        }
+      ],
+      "cheapest_price": 79.0,
+      "min_price": 79.0,
+      "shop": "Øltanken",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
       "id": 13129,
       "name": "Grand Cru 9,5% 75cl",
       "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/grand-cru-9-5-75cl.png?v=1710873811",
@@ -37855,6 +38837,30 @@
       "max_discount_pct": 0
     },
     {
+      "id": 16929,
+      "name": "Holy Goat - Solar Tomb",
+      "image": "https://cdn.shopify.com/s/files/1/0551/6600/9423/files/DB6D170F-165A-4D84-8AF2-ECE22D197F12.jpg?v=1769002262",
+      "type": "Sour",
+      "abv": 5.3,
+      "volume_cl": 37.5,
+      "brewery": "Holy Goat",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Beermatch",
+          "price": 79.0,
+          "url": "https://www.beermatch.dk/products/holy-goat-solar-tomb",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 79.0,
+      "min_price": 79.0,
+      "shop": "Beermatch",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
       "id": 15132,
       "name": "Pure Project Brewing - Sun Peak",
       "image": "https://cdn.shopify.com/s/files/1/0776/5209/9400/files/0F721653-8233-497B-874E-8252BF52CB69.jpg?v=1779401729",
@@ -37892,30 +38898,6 @@
           "shop_name": "Øltanken",
           "price": 79.0,
           "url": "https://oltanken.dk/products/finback-brewery-4",
-          "discount_pct": 0,
-          "old_price": null
-        }
-      ],
-      "cheapest_price": 79.0,
-      "min_price": 79.0,
-      "shop": "Øltanken",
-      "discount_pct": 0,
-      "max_discount_pct": 0
-    },
-    {
-      "id": 14467,
-      "name": "Evil Twin NYC x Cervecería Rámuri - Even More Lagrimas  NYC Version",
-      "image": "https://cdn.shopify.com/s/files/1/0776/5209/9400/files/171F9171-F0F1-4749-B135-294087D9CA47.jpg?v=1772463539",
-      "type": "Imperial Stout",
-      "abv": 13.0,
-      "volume_cl": 47.3,
-      "brewery": "Evil Twin NYC x Cervecería Rámuri",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Øltanken",
-          "price": 79.0,
-          "url": "https://oltanken.dk/products/evil-twin-nyc-x-cerveceria-ramuri-even-more-lagrimas-nyc-version",
           "discount_pct": 0,
           "old_price": null
         }
@@ -38249,6 +39231,30 @@
           "shop_name": "A Good Case",
           "price": 79.75,
           "url": "https://agoodcase.dk/products/pohjala-northern-decadence-14-5-ba-imperial-stout",
+          "discount_pct": 11.4,
+          "old_price": 90.0
+        }
+      ],
+      "cheapest_price": 79.75,
+      "min_price": 79.75,
+      "shop": "A Good Case",
+      "discount_pct": 11.4,
+      "max_discount_pct": 11.4
+    },
+    {
+      "id": 13549,
+      "name": "Epochal - Visionary Pursuits - 8,7% Scottish Pale Ale",
+      "image": "https://cdn.shopify.com/s/files/1/0402/1239/8243/files/Epochal_VisionaryPursuits.png?v=1730575064",
+      "type": "Pale Ale",
+      "abv": 8.7,
+      "volume_cl": 37.5,
+      "brewery": "Best Before: 05/03-2028",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "A Good Case",
+          "price": 79.75,
+          "url": "https://agoodcase.dk/products/epochal-visionary-pursuits-8-7-scottish-pale-ale",
           "discount_pct": 11.4,
           "old_price": 90.0
         }
@@ -38609,30 +39615,6 @@
           "shop_name": "Beershoppen",
           "price": 80.0,
           "url": "https://beershoppen.dk/products/experiment-638-observatoriet-6-5",
-          "discount_pct": 0,
-          "old_price": null
-        }
-      ],
-      "cheapest_price": 80.0,
-      "min_price": 80.0,
-      "shop": "Beershoppen",
-      "discount_pct": 0,
-      "max_discount_pct": 0
-    },
-    {
-      "id": 16439,
-      "name": "Waimea - Observatoriet - 37,5 cl. -  6,5%",
-      "image": "https://cdn.shopify.com/s/files/1/0600/9438/2263/files/waimea.jpg?v=1781703316",
-      "type": "Beer",
-      "abv": 6.5,
-      "volume_cl": 37.5,
-      "brewery": "Beershoppen",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Beershoppen",
-          "price": 80.0,
-          "url": "https://beershoppen.dk/products/waimea-observatoriet-37-5-cl-6-5",
           "discount_pct": 0,
           "old_price": null
         }
@@ -39642,6 +40624,30 @@
       "max_discount_pct": 10.9
     },
     {
+      "id": 16923,
+      "name": "Beak - Big Cosm (Uchu Brewing Collab)",
+      "image": "https://cdn.shopify.com/s/files/1/0551/6600/9423/files/1E1F11F2-9DC2-4799-A928-ED4498F316E8.jpg?v=1772190077",
+      "type": "Double IPA",
+      "abv": 8.0,
+      "volume_cl": 44.0,
+      "brewery": "Beak",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Beermatch",
+          "price": 82.0,
+          "url": "https://www.beermatch.dk/products/beak-big-cosm-uchu-brewing-collab",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 82.0,
+      "min_price": 82.0,
+      "shop": "Beermatch",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
       "id": 15325,
       "name": "La Chouffe, Nice Chouffe 75cl - Øl",
       "image": "https://www.vildmedvin.dk/img/1000/1000/resize/l/e/le_chouffe_nice_chouffe_vmv.jpg",
@@ -40057,7 +41063,7 @@
       "max_discount_pct": 0
     },
     {
-      "id": 16845,
+      "id": 16862,
       "name": "No Way Out B.A. 10,5% 33cl",
       "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/no-way-out-b-a-10-5-33cl.png?v=1750592682",
       "type": "Barley Wine",
@@ -40153,6 +41159,54 @@
       "max_discount_pct": 0
     },
     {
+      "id": 16876,
+      "name": "Thyras Bryg - Sort BA (Brewsketeers Collab)",
+      "image": "https://cdn.shopify.com/s/files/1/0551/6600/9423/files/B241EBB4-4291-4FA6-A930-7BCC60C60155.jpg?v=1780402227",
+      "type": "Imperial Stout",
+      "abv": 11.0,
+      "volume_cl": 44.0,
+      "brewery": "Thyras Bryg",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Beermatch",
+          "price": 85.0,
+          "url": "https://www.beermatch.dk/products/thyras-bryg-sort-ba-brewsketeers-collab",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 85.0,
+      "min_price": 85.0,
+      "shop": "Beermatch",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
+      "id": 16909,
+      "name": "Trillium - Melcher Street",
+      "image": "https://cdn.shopify.com/s/files/1/0551/6600/9423/files/FA7B8E0F-EE9F-4AB3-A516-79A3508DFEC5.jpg?v=1774799177",
+      "type": "New England IPA",
+      "abv": 7.2,
+      "volume_cl": 47.3,
+      "brewery": "Trillium",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Beermatch",
+          "price": 85.0,
+          "url": "https://www.beermatch.dk/products/trillium-melcher-street",
+          "discount_pct": 0,
+          "old_price": 0.0
+        }
+      ],
+      "cheapest_price": 85.0,
+      "min_price": 85.0,
+      "shop": "Beermatch",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
       "id": 16585,
       "name": "Ikaros - Bad seed Brew. - 44 cl. - 10,0%",
       "image": "https://cdn.shopify.com/s/files/1/0600/9438/2263/files/ikaros.jpg?v=1782307134",
@@ -40166,30 +41220,6 @@
           "shop_name": "Beershoppen",
           "price": 85.0,
           "url": "https://beershoppen.dk/products/ikaros-bad-seed-brew-44-cl-10-0",
-          "discount_pct": 0,
-          "old_price": null
-        }
-      ],
-      "cheapest_price": 85.0,
-      "min_price": 85.0,
-      "shop": "Beershoppen",
-      "discount_pct": 0,
-      "max_discount_pct": 0
-    },
-    {
-      "id": 14176,
-      "name": "Echoring Current - Track Brew - 44 cl. - 7,2%",
-      "image": "https://cdn.shopify.com/s/files/1/0600/9438/2263/files/trackech.jpg?v=1777970394",
-      "type": "Beer",
-      "abv": 7.2,
-      "volume_cl": 44.0,
-      "brewery": "Beershoppen",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Beershoppen",
-          "price": 85.0,
-          "url": "https://beershoppen.dk/products/echoring-current-track-brew-44-cl-7-2",
           "discount_pct": 0,
           "old_price": null
         }
@@ -40873,6 +41903,37 @@
       "max_discount_pct": 0
     },
     {
+      "id": 13561,
+      "name": "Track Brewing Company – Abundance – Gold Top DIPA – 0,44 l. – 8,4%",
+      "image": "https://www.bestofbeers.dk/wp-content/uploads/2026/05/TrackAbundance.jpg",
+      "type": "Double IPA",
+      "abv": 8.4,
+      "volume_cl": 44.0,
+      "brewery": "Track Brewing Company",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Beermatch",
+          "price": 89.0,
+          "url": "https://www.beermatch.dk/products/track-brewing-co-abundance-gold-top",
+          "discount_pct": 0,
+          "old_price": null
+        },
+        {
+          "shop_name": "Best of Beers",
+          "price": 91.0,
+          "url": "https://www.bestofbeers.dk/shop/track-brewing-company-ddh-everything-illuminated-ddh-dipa-044-l-84/",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 89.0,
+      "min_price": 89.0,
+      "shop": "Beermatch",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
       "id": 15279,
       "name": "Lindemans, Gueuze Cuvée René 75 cl. - Øl",
       "image": "https://www.vildmedvin.dk/img/1000/1000/resize/l/i/lindemans_cuvee_rene_gueuze_2_.jpg",
@@ -40917,6 +41978,78 @@
       "cheapest_price": 89.0,
       "min_price": 89.0,
       "shop": "Brygshoppen",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
+      "id": 16905,
+      "name": "Track Brewing Co. - Overturn (Gold Top)",
+      "image": "https://cdn.shopify.com/s/files/1/0551/6600/9423/files/FDBDE5BF-5FDC-4A12-B6FF-774DEF239FA1.jpg?v=1777378531",
+      "type": "Double IPA",
+      "abv": 8.4,
+      "volume_cl": 44.0,
+      "brewery": "Track Brewing Co.",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Beermatch",
+          "price": 89.0,
+          "url": "https://www.beermatch.dk/products/track-brewing-co-overturn-gold-top",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 89.0,
+      "min_price": 89.0,
+      "shop": "Beermatch",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
+      "id": 16910,
+      "name": "Trillium - Mettle",
+      "image": "https://cdn.shopify.com/s/files/1/0551/6600/9423/files/621EE58B-DAC9-4013-A37A-FB82632C0211.jpg?v=1774799177",
+      "type": "Double IPA",
+      "abv": 8.4,
+      "volume_cl": 47.3,
+      "brewery": "Trillium",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Beermatch",
+          "price": 89.0,
+          "url": "https://www.beermatch.dk/products/trillium-mettle",
+          "discount_pct": 0,
+          "old_price": 0.0
+        }
+      ],
+      "cheapest_price": 89.0,
+      "min_price": 89.0,
+      "shop": "Beermatch",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
+      "id": 16937,
+      "name": "Pohjala - Pime Öö PX (Cellar Series)",
+      "image": "https://cdn.shopify.com/s/files/1/0551/6600/9423/files/A37781DB-09B6-45F3-9C8A-B20459FC64BC.jpg?v=1764313407",
+      "type": "Imperial Stout",
+      "abv": 13.0,
+      "volume_cl": 33.0,
+      "brewery": "Pohjala",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Beermatch",
+          "price": 89.0,
+          "url": "https://www.beermatch.dk/products/puhaste-pime-oo-px-cellar-series",
+          "discount_pct": 0,
+          "old_price": 0.0
+        }
+      ],
+      "cheapest_price": 89.0,
+      "min_price": 89.0,
+      "shop": "Beermatch",
       "discount_pct": 0,
       "max_discount_pct": 0
     },
@@ -41205,30 +42338,6 @@
           "shop_name": "Best of Beers",
           "price": 91.0,
           "url": "https://www.bestofbeers.dk/shop/amager-bryghus-american-outlaws-kid-curry-golden-edition-bourbon-barrel-aged-double-mash-quadrupel-044-l-112/",
-          "discount_pct": 0,
-          "old_price": null
-        }
-      ],
-      "cheapest_price": 91.0,
-      "min_price": 91.0,
-      "shop": "Best of Beers",
-      "discount_pct": 0,
-      "max_discount_pct": 0
-    },
-    {
-      "id": 13561,
-      "name": "Track Brewing Company – Abundance – Gold Top DIPA – 0,44 l. – 8,4%",
-      "image": "https://www.bestofbeers.dk/wp-content/uploads/2026/05/TrackAbundance.jpg",
-      "type": "Double IPA",
-      "abv": 8.4,
-      "volume_cl": 44.0,
-      "brewery": "Track Brewing Company",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Best of Beers",
-          "price": 91.0,
-          "url": "https://www.bestofbeers.dk/shop/track-brewing-company-ddh-everything-illuminated-ddh-dipa-044-l-84/",
           "discount_pct": 0,
           "old_price": null
         }
@@ -42176,37 +43285,6 @@
       "max_discount_pct": 0
     },
     {
-      "id": 14255,
-      "name": "Oerbier Special Reserva (2024) - De Dolle Brouwers - 33 cl  10,0%",
-      "image": "https://cdn.shopify.com/s/files/1/0600/9438/2263/files/oerbierreserva.jpg?v=1765970640",
-      "type": "Beer",
-      "abv": 10.0,
-      "volume_cl": 33.0,
-      "brewery": "Beershoppen",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Beershoppen",
-          "price": 95.0,
-          "url": "https://beershoppen.dk/products/oerbier-special-reserva-2024-de-dolle-brouwers-33-cl-10-0",
-          "discount_pct": 0,
-          "old_price": null
-        },
-        {
-          "shop_name": "Best of Beers",
-          "price": 101.0,
-          "url": "https://www.bestofbeers.dk/shop/de-dolle-brouwers-special-reserva-oerbier-2023-amarone-barrels-ale-033-l-100/",
-          "discount_pct": 0,
-          "old_price": null
-        }
-      ],
-      "cheapest_price": 95.0,
-      "min_price": 95.0,
-      "shop": "Beershoppen",
-      "discount_pct": 0,
-      "max_discount_pct": 0
-    },
-    {
       "id": 14279,
       "name": "Anniversary 35th Cuvée barrel aged - goose island - 35,5 cl - 14,7%",
       "image": "https://cdn.shopify.com/s/files/1/0600/9438/2263/files/Gooseislandcuvee.jpg?v=1751791250",
@@ -42537,38 +43615,55 @@
       "max_discount_pct": 0
     },
     {
-      "id": 14540,
-      "name": "Funky Fluid x Nerd Brewing - Barrel Aged Royal Cookie: S'mores Stout",
-      "image": "https://cdn.shopify.com/s/files/1/0776/5209/9400/files/61EE764B-B751-48D6-BAA6-E94E31D704CA.jpg?v=1756411233",
-      "type": "Stout",
-      "abv": 13.0,
-      "volume_cl": 33.0,
-      "brewery": "Funky Fluid x Nerd Brewing",
+      "id": 16888,
+      "name": "Brasserie Du Bas-Canada - DDH Constantin",
+      "image": "https://cdn.shopify.com/s/files/1/0551/6600/9423/files/665B92E0-D9C4-41BB-B248-975A58316AA1.jpg?v=1779451874",
+      "type": "Double IPA",
+      "abv": 8.2,
+      "volume_cl": 47.3,
+      "brewery": "Brasserie Du Bas-Canada",
       "category": null,
       "prices": [
         {
-          "shop_name": "Øltanken",
+          "shop_name": "Beermatch",
           "price": 99.0,
-          "url": "https://oltanken.dk/products/funky-fluid-x-nerd-brewing-barrel-aged-royal-cookie-smores-stout",
-          "discount_pct": 22.7,
-          "old_price": 128.0
-        },
-        {
-          "shop_name": "Best of Beers",
-          "price": 131.0,
-          "url": "https://www.bestofbeers.dk/shop/funky-fluid-brewery-x-nerd-brewing-barrel-aged-royal-cookie-smores-imperial-stout-033-l-130/",
+          "url": "https://www.beermatch.dk/products/brasserie-du-bas-canada-ddh-constantin",
           "discount_pct": 0,
           "old_price": null
         }
       ],
       "cheapest_price": 99.0,
       "min_price": 99.0,
-      "shop": "Øltanken",
-      "discount_pct": 22.7,
-      "max_discount_pct": 22.7
+      "shop": "Beermatch",
+      "discount_pct": 0,
+      "max_discount_pct": 0
     },
     {
-      "id": 16843,
+      "id": 16925,
+      "name": "Tired Hands - Milkshake IPA (DDH Double Nelson Sauvin) (Omnipollo Collab)",
+      "image": "https://cdn.shopify.com/s/files/1/0551/6600/9423/files/01D7A6E6-6472-4C00-B368-79D0BF3557E5.jpg?v=1770669683",
+      "type": "India Pale Ale (IPA)",
+      "abv": 9.0,
+      "volume_cl": 47.3,
+      "brewery": "Tired Hands",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Beermatch",
+          "price": 99.0,
+          "url": "https://www.beermatch.dk/products/tired-hands-milkshake-ipa-ddh-double-nelson-sauvin-omnipollo-collab",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 99.0,
+      "min_price": 99.0,
+      "shop": "Beermatch",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
+      "id": 16858,
       "name": "10 - Imperial Stout 10% 44cl",
       "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/10-imperial-stout-10-44cl_9645d1f7-914c-43d6-b687-b07453f1aaf2.png?v=1761637026",
       "type": "Imperial Stout",
@@ -42588,6 +43683,222 @@
       "cheapest_price": 99.0,
       "min_price": 99.0,
       "shop": "Brygshoppen",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
+      "id": 16884,
+      "name": "Hudson Valley - Secret Life Of Plants (Root+Branch x TEST Collab)",
+      "image": "https://cdn.shopify.com/s/files/1/0551/6600/9423/files/1140DDC8-FA36-4848-ACB0-03148C769E9C.jpg?v=1779451874",
+      "type": "Double IPA",
+      "abv": 8.0,
+      "volume_cl": 47.3,
+      "brewery": "Hudson Valley",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Beermatch",
+          "price": 99.0,
+          "url": "https://www.beermatch.dk/products/hudson-valley-secret-life-of-plants-root-branch-x-test-collab",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 99.0,
+      "min_price": 99.0,
+      "shop": "Beermatch",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
+      "id": 16887,
+      "name": "Brasserie Du Bas-Canada - Perséphone",
+      "image": "https://cdn.shopify.com/s/files/1/0551/6600/9423/files/F8A394C9-9B3C-4D78-BC66-3C5525D57F7A.jpg?v=1779451873",
+      "type": "Double IPA",
+      "abv": 8.7,
+      "volume_cl": 47.3,
+      "brewery": "Brasserie Du Bas-Canada",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Beermatch",
+          "price": 99.0,
+          "url": "https://www.beermatch.dk/products/brasserie-du-bas-canada-persephone",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 99.0,
+      "min_price": 99.0,
+      "shop": "Beermatch",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
+      "id": 16891,
+      "name": "Bad Bones - Extra Dry-Hopped Brain Damage",
+      "image": "https://cdn.shopify.com/s/files/1/0551/6600/9423/files/F7D75443-8FED-4C01-AB6B-D0DA2117EFDB.jpg?v=1779182492",
+      "type": "New England IPA",
+      "abv": 6.8,
+      "volume_cl": 47.3,
+      "brewery": "Bad Bones",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Beermatch",
+          "price": 99.0,
+          "url": "https://www.beermatch.dk/products/bad-bones-extra-dry-hopped-brain-damage",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 99.0,
+      "min_price": 99.0,
+      "shop": "Beermatch",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
+      "id": 16892,
+      "name": "Bad Bones - Malpractice",
+      "image": "https://cdn.shopify.com/s/files/1/0551/6600/9423/files/1AE9EE22-9E46-4E9B-9A61-31C00104D9A9.jpg?v=1779182491",
+      "type": "New England IPA",
+      "abv": 6.8,
+      "volume_cl": 47.3,
+      "brewery": "Bad Bones",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Beermatch",
+          "price": 99.0,
+          "url": "https://www.beermatch.dk/products/bad-bones-malpractice",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 99.0,
+      "min_price": 99.0,
+      "shop": "Beermatch",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
+      "id": 16893,
+      "name": "Bad Bones - Overcapacity",
+      "image": "https://cdn.shopify.com/s/files/1/0551/6600/9423/files/E57E6731-91BF-4A2C-B9B9-ABA3DBA24DD0.jpg?v=1779182492",
+      "type": "American Pale Ale",
+      "abv": 6.2,
+      "volume_cl": 47.3,
+      "brewery": "Bad Bones",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Beermatch",
+          "price": 99.0,
+          "url": "https://www.beermatch.dk/products/bad-bones-overcapacity",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 99.0,
+      "min_price": 99.0,
+      "shop": "Beermatch",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
+      "id": 16938,
+      "name": "Drekker - Madam Mumble: The Fortune Teller",
+      "image": "https://cdn.shopify.com/s/files/1/0551/6600/9423/files/026A0ED2-740D-4666-9359-4362A905DC46.jpg?v=1764338065",
+      "type": "Sour",
+      "abv": 6.4,
+      "volume_cl": 47.3,
+      "brewery": "Drekker",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Beermatch",
+          "price": 99.0,
+          "url": "https://www.beermatch.dk/products/drekker-madam-mumble-the-fortune-teller",
+          "discount_pct": 0,
+          "old_price": 0.0
+        }
+      ],
+      "cheapest_price": 99.0,
+      "min_price": 99.0,
+      "shop": "Beermatch",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
+      "id": 16939,
+      "name": "Drekker - Circue du Swerve: The Contortionist (Arpus Collab)",
+      "image": "https://cdn.shopify.com/s/files/1/0551/6600/9423/files/72DFF702-474F-4683-9D31-3753863A64B9.jpg?v=1764313407",
+      "type": "Sour",
+      "abv": 6.3,
+      "volume_cl": 47.3,
+      "brewery": "Drekker",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Beermatch",
+          "price": 99.0,
+          "url": "https://www.beermatch.dk/products/drekker-circue-du-swerve-the-contortionist-arpus-collab",
+          "discount_pct": 0,
+          "old_price": 0.0
+        }
+      ],
+      "cheapest_price": 99.0,
+      "min_price": 99.0,
+      "shop": "Beermatch",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
+      "id": 16944,
+      "name": "Drekker - Swirlee Passionfruit Creamsicle",
+      "image": "https://cdn.shopify.com/s/files/1/0551/6600/9423/files/6556FE59-0D3C-4A9A-B4E8-107248D26067.jpg?v=1762340338",
+      "type": "Sour",
+      "abv": 6.4,
+      "volume_cl": 47.3,
+      "brewery": "Drekker",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Beermatch",
+          "price": 99.0,
+          "url": "https://www.beermatch.dk/products/drekker-swirlee-passionfruit-creamsicle",
+          "discount_pct": 0,
+          "old_price": 0.0
+        }
+      ],
+      "cheapest_price": 99.0,
+      "min_price": 99.0,
+      "shop": "Beermatch",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
+      "id": 16945,
+      "name": "Drekker - Braaaaains Peach Pomegranate",
+      "image": "https://cdn.shopify.com/s/files/1/0551/6600/9423/files/289DF628-F134-4CDB-9ADA-1C458F9BA789.jpg?v=1762340339",
+      "type": "Sour",
+      "abv": 6.5,
+      "volume_cl": 47.3,
+      "brewery": "Drekker",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Beermatch",
+          "price": 99.0,
+          "url": "https://www.beermatch.dk/products/drekker-braaaaains-peach-pomegranate",
+          "discount_pct": 0,
+          "old_price": 0.0
+        }
+      ],
+      "cheapest_price": 99.0,
+      "min_price": 99.0,
+      "shop": "Beermatch",
       "discount_pct": 0,
       "max_discount_pct": 0
     },
@@ -43391,6 +44702,54 @@
       "max_discount_pct": 0
     },
     {
+      "id": 16889,
+      "name": "Bad Bones - The Pain",
+      "image": "https://cdn.shopify.com/s/files/1/0551/6600/9423/files/C1869DCA-6592-4DC0-8B09-7F21750A3CA3.jpg?v=1779182494",
+      "type": "Double IPA",
+      "abv": 8.1,
+      "volume_cl": 47.3,
+      "brewery": "Bad Bones",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Beermatch",
+          "price": 105.0,
+          "url": "https://www.beermatch.dk/products/bad-bones-the-pain",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 105.0,
+      "min_price": 105.0,
+      "shop": "Beermatch",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
+      "id": 16890,
+      "name": "Bad Bones - Pharmacy",
+      "image": "https://cdn.shopify.com/s/files/1/0551/6600/9423/files/04AF2536-D65F-4511-B948-58A853B66233.jpg?v=1779182492",
+      "type": "Double IPA",
+      "abv": 8.7,
+      "volume_cl": 47.3,
+      "brewery": "Bad Bones",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Beermatch",
+          "price": 105.0,
+          "url": "https://www.beermatch.dk/products/bad-bones-pharmacy",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 105.0,
+      "min_price": 105.0,
+      "shop": "Beermatch",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
       "id": 13767,
       "name": "Badlands Brewing Company – July (2025) – DIPA – 0,473 l. – 8,2%",
       "image": "https://www.bestofbeers.dk/wp-content/uploads/2025/09/BadlandsBrewingJuly.jpg",
@@ -43555,6 +44914,102 @@
       "cheapest_price": 109.0,
       "min_price": 109.0,
       "shop": "Øltanken",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
+      "id": 16886,
+      "name": "Brasserie Du Bas-Canada - Néréide #2 (Nano Cinco Collab)",
+      "image": "https://cdn.shopify.com/s/files/1/0551/6600/9423/files/A7D27744-ACCD-479B-87AF-DE62DBC2A7E5.jpg?v=1779451874",
+      "type": "New England IPA",
+      "abv": 10.0,
+      "volume_cl": 47.3,
+      "brewery": "Brasserie Du Bas-Canada",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Beermatch",
+          "price": 109.0,
+          "url": "https://www.beermatch.dk/products/brasserie-du-bas-canada-nereide-2",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 109.0,
+      "min_price": 109.0,
+      "shop": "Beermatch",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
+      "id": 16936,
+      "name": "Beer Gift Box (2 or 3 beers)",
+      "image": "https://cdn.shopify.com/s/files/1/0551/6600/9423/files/391F7040-FA70-4AD7-834C-33C48A073B07.jpg?v=1765452658",
+      "type": null,
+      "abv": null,
+      "volume_cl": null,
+      "brewery": null,
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Beermatch",
+          "price": 109.0,
+          "url": "https://www.beermatch.dk/products/beer-gift-box-2-or-3-beers",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 109.0,
+      "min_price": 109.0,
+      "shop": "Beermatch",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
+      "id": 16947,
+      "name": "Puhaste - Embus Bourbon BA (Silver Series) (Alive Collab)",
+      "image": "https://cdn.shopify.com/s/files/1/0551/6600/9423/files/A93A961A-50FC-420D-9418-C23357889700.jpg?v=1761922050",
+      "type": "Barley Wine",
+      "abv": 14.8,
+      "volume_cl": 33.0,
+      "brewery": "Puhaste",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Beermatch",
+          "price": 109.0,
+          "url": "https://www.beermatch.dk/products/puhaste-embus-bourbon-ba-silver-series-alive-collab",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 109.0,
+      "min_price": 109.0,
+      "shop": "Beermatch",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
+      "id": 16951,
+      "name": "Anderson's Brewery - Anderson X",
+      "image": "https://cdn.shopify.com/s/files/1/0551/6600/9423/files/33E89232-0046-48E8-87B8-AA2C573F83D8.jpg?v=1756198511",
+      "type": "Imperial Stout",
+      "abv": 12.34,
+      "volume_cl": 33.0,
+      "brewery": "Anderson's Brewery",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Beermatch",
+          "price": 109.0,
+          "url": "https://www.beermatch.dk/products/andersons-brewery-anderson-x",
+          "discount_pct": 0,
+          "old_price": 0.0
+        }
+      ],
+      "cheapest_price": 109.0,
+      "min_price": 109.0,
+      "shop": "Beermatch",
       "discount_pct": 0,
       "max_discount_pct": 0
     },
@@ -44115,6 +45570,30 @@
       "max_discount_pct": 11.5
     },
     {
+      "id": 16918,
+      "name": "Omnipollo - Dengar’s Church (No Damson) (Emperor’s Collab)",
+      "image": "https://cdn.shopify.com/s/files/1/0551/6600/9423/files/655D7656-0D93-4ED3-80E1-539CCE734CF5.jpg?v=1774358475",
+      "type": "Imperial Stout",
+      "abv": 11.0,
+      "volume_cl": 33.0,
+      "brewery": "Omnipollo",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Beermatch",
+          "price": 115.0,
+          "url": "https://www.beermatch.dk/products/omnipollo-dengar-s-church-no-damson-emperor-s-collab",
+          "discount_pct": 0,
+          "old_price": 0.0
+        }
+      ],
+      "cheapest_price": 115.0,
+      "min_price": 115.0,
+      "shop": "Beermatch",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
       "id": 16587,
       "name": "Omnipollo x Great Divide Brewing Co. - Yeti Pecan Mud Cake",
       "image": "https://cdn.shopify.com/s/files/1/0776/5209/9400/files/34DB0C39-46C0-4189-82DB-52A57695661C.jpg?v=1782400285",
@@ -44578,6 +46057,54 @@
       "max_discount_pct": 0
     },
     {
+      "id": 16915,
+      "name": "RYGR Brygghus - Hugin: Cold Mash",
+      "image": "https://cdn.shopify.com/s/files/1/0551/6600/9423/files/C4BBAFA7-74DE-4711-9D91-4E8EC754A254.jpg?v=1774440110",
+      "type": "Imperial Stout",
+      "abv": 15.5,
+      "volume_cl": 33.0,
+      "brewery": "RYGR Brygghus",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Beermatch",
+          "price": 122.0,
+          "url": "https://www.beermatch.dk/products/rygr-brygghus-hugin-cold-mash",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 122.0,
+      "min_price": 122.0,
+      "shop": "Beermatch",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
+      "id": 16946,
+      "name": "Bad Seed Brewing - Hypocrite",
+      "image": "https://cdn.shopify.com/s/files/1/0551/6600/9423/files/65FA8999-59C7-4BDC-9A2F-F4DB45319734.jpg?v=1761899999",
+      "type": "Imperial Stout",
+      "abv": 14.0,
+      "volume_cl": 33.0,
+      "brewery": "Bad Seed Brewing",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Beermatch",
+          "price": 122.0,
+          "url": "https://www.beermatch.dk/products/bottle-logic-darkstar-november-kopi",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 122.0,
+      "min_price": 122.0,
+      "shop": "Beermatch",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
       "id": 15578,
       "name": "Alefarm, Through the Ages - A Concept og Linearity - Øl",
       "image": "https://www.vildmedvin.dk/img/1000/1000/resize/t/h/throughtheages_kakao_f_rdig.jpg",
@@ -44720,6 +46247,30 @@
       "shop": "A Good Case",
       "discount_pct": 44.4,
       "max_discount_pct": 44.4
+    },
+    {
+      "id": 16914,
+      "name": "RYGR Brygghus - Hugin: Wild Mint & Chocolate",
+      "image": "https://cdn.shopify.com/s/files/1/0551/6600/9423/files/F989EE56-3BAE-4360-AD4E-F19F356041CC.jpg?v=1774440109",
+      "type": "Imperial Stout",
+      "abv": 15.0,
+      "volume_cl": 33.0,
+      "brewery": "RYGR Brygghus",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Beermatch",
+          "price": 125.0,
+          "url": "https://www.beermatch.dk/products/rygr-brygghus-hugin-wild-mint-chocolate",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 125.0,
+      "min_price": 125.0,
+      "shop": "Beermatch",
+      "discount_pct": 0,
+      "max_discount_pct": 0
     },
     {
       "id": 13546,
@@ -45271,6 +46822,30 @@
       "max_discount_pct": 0
     },
     {
+      "id": 14540,
+      "name": "Funky Fluid x Nerd Brewing - Barrel Aged Royal Cookie: S'mores Stout",
+      "image": "https://cdn.shopify.com/s/files/1/0776/5209/9400/files/61EE764B-B751-48D6-BAA6-E94E31D704CA.jpg?v=1756411233",
+      "type": "Stout",
+      "abv": 13.0,
+      "volume_cl": 33.0,
+      "brewery": "Funky Fluid x Nerd Brewing",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Best of Beers",
+          "price": 131.0,
+          "url": "https://www.bestofbeers.dk/shop/funky-fluid-brewery-x-nerd-brewing-barrel-aged-royal-cookie-smores-imperial-stout-033-l-130/",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 131.0,
+      "min_price": 131.0,
+      "shop": "Best of Beers",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
       "id": 16780,
       "name": "Tilquin - Oude Gueuze a l'Ancienne 0,75 L",
       "image": "https://cdn.shopify.com/s/files/1/0776/5209/9400/files/F3CCD518-0C27-42EB-AE7E-C8B8C6AE4A7C.jpg?v=1699475879",
@@ -45499,6 +47074,30 @@
       "shop": "Brygshoppen",
       "discount_pct": 6.2,
       "max_discount_pct": 6.2
+    },
+    {
+      "id": 16953,
+      "name": "Alesong - Cinnamon Roll Maestro",
+      "image": "https://cdn.shopify.com/s/files/1/0551/6600/9423/files/AFE5F60B-3DA0-436B-99AC-FDBD58F50C0E.jpg?v=1754994536",
+      "type": "Barley Wine",
+      "abv": 13.3,
+      "volume_cl": 50.0,
+      "brewery": "Alesong",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Beermatch",
+          "price": 135.0,
+          "url": "https://www.beermatch.dk/products/alesong-cinnamon-roll-maestro",
+          "discount_pct": 24.6,
+          "old_price": 179.0
+        }
+      ],
+      "cheapest_price": 135.0,
+      "min_price": 135.0,
+      "shop": "Beermatch",
+      "discount_pct": 24.6,
+      "max_discount_pct": 24.6
     },
     {
       "id": 15097,
@@ -45737,6 +47336,30 @@
       "cheapest_price": 139.0,
       "min_price": 139.0,
       "shop": "Brygshoppen",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
+      "id": 16916,
+      "name": "RYGR Brygghus - Valhall: Hiernagla Peated Whisky Cask",
+      "image": "https://cdn.shopify.com/s/files/1/0551/6600/9423/files/3E4141F6-65D6-4DA3-9360-DE5BEBC2012C.jpg?v=1774440110",
+      "type": "Barley Wine",
+      "abv": 16.0,
+      "volume_cl": 33.0,
+      "brewery": "RYGR Brygghus",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Beermatch",
+          "price": 139.0,
+          "url": "https://www.beermatch.dk/products/rygr-brygghus-valhall-hiernagla-peated-whisky-cask",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 139.0,
+      "min_price": 139.0,
+      "shop": "Beermatch",
       "discount_pct": 0,
       "max_discount_pct": 0
     },
@@ -46235,6 +47858,54 @@
       "max_discount_pct": 0
     },
     {
+      "id": 16883,
+      "name": "Omnipollo - Andromeda 2026 (3 Sons & Bottle Logic Collab)",
+      "image": "https://cdn.shopify.com/s/files/1/0551/6600/9423/files/14E75F93-513C-4873-BB0C-CDE9E048D7F9.jpg?v=1779453557",
+      "type": "Imperial Stout",
+      "abv": 12.4,
+      "volume_cl": 33.0,
+      "brewery": "Omnipollo",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Beermatch",
+          "price": 149.0,
+          "url": "https://www.beermatch.dk/products/omnipollo-andromeda-2026-3-sons-bottle-logic-collab",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 149.0,
+      "min_price": 149.0,
+      "shop": "Beermatch",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
+      "id": 16948,
+      "name": "AleSmith - Barrel Aged Speedway Stout (Hammerhead Edition)",
+      "image": "https://cdn.shopify.com/s/files/1/0551/6600/9423/files/216F4453-499D-4FD9-B9AE-0E5D2C9587E1.jpg?v=1758981530",
+      "type": "Stout",
+      "abv": 13.46,
+      "volume_cl": 47.3,
+      "brewery": "AleSmith",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Beermatch",
+          "price": 149.0,
+          "url": "https://www.beermatch.dk/products/alesmith-barrel-aged-speedway-stout-hammerhead-edition",
+          "discount_pct": 0,
+          "old_price": 0.0
+        }
+      ],
+      "cheapest_price": 149.0,
+      "min_price": 149.0,
+      "shop": "Beermatch",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
       "id": 13835,
       "name": "Fanø Bryghus x Kissmeyer – Défi Accepé – Saison With Toasted Green Peppercorn And Lemons – 0,75 l. – 7,3%",
       "image": "https://www.bestofbeers.dk/wp-content/uploads/2025/04/FanoeBryghusDefi.jpg",
@@ -46466,6 +48137,13 @@
           "url": "https://www.bestofbeers.dk/shop/omnipollo-three-times-three-vol-8-imperial-stout-044-l-110/",
           "discount_pct": 0,
           "old_price": null
+        },
+        {
+          "shop_name": "Beermatch",
+          "price": 159.0,
+          "url": "https://www.beermatch.dk/products/omnipollo-three-times-three-vol-8",
+          "discount_pct": 0,
+          "old_price": 0.0
         }
       ],
       "cheapest_price": 151.0,
@@ -46658,6 +48336,13 @@
           "url": "https://oltanken.dk/products/bcs-2022-biscotti-case-12-500ml-btl",
           "discount_pct": 0,
           "old_price": null
+        },
+        {
+          "shop_name": "Beermatch",
+          "price": 175.0,
+          "url": "https://www.beermatch.dk/products/goose-island-bourbon-county-brand-stout-midnight-orange-2018",
+          "discount_pct": 0,
+          "old_price": null
         }
       ],
       "cheapest_price": 159.0,
@@ -46783,6 +48468,13 @@
           "shop_name": "Beershoppen",
           "price": 165.0,
           "url": "https://beershoppen.dk/products/bourbon-county-ba-goose-island-arg-2017-50-cl-14-7",
+          "discount_pct": 0,
+          "old_price": null
+        },
+        {
+          "shop_name": "Beermatch",
+          "price": 199.0,
+          "url": "https://www.beermatch.dk/products/goose-island-bourbon-county-brand-stout-chocolate-prailine-2025",
           "discount_pct": 0,
           "old_price": null
         }
@@ -47049,6 +48741,13 @@
           "url": "https://beershoppen.dk/products/bourbon-county-ba-goose-island-arg-2020-50-cl-14-2",
           "discount_pct": 0,
           "old_price": null
+        },
+        {
+          "shop_name": "Beermatch",
+          "price": 175.0,
+          "url": "https://www.beermatch.dk/products/goose-island-bourbon-county-brand-coffee-barleywine-2018",
+          "discount_pct": 0,
+          "old_price": null
         }
       ],
       "cheapest_price": 165.0,
@@ -47178,6 +48877,30 @@
       "max_discount_pct": 0
     },
     {
+      "id": 16931,
+      "name": "Jackie O's - Endolith",
+      "image": "https://cdn.shopify.com/s/files/1/0551/6600/9423/files/E9F0AC70-A98D-4FBB-90B4-879FD1C1554F.jpg?v=1765813134",
+      "type": "Barley Wine",
+      "abv": 13.3,
+      "volume_cl": 3.55,
+      "brewery": "Jackie O's",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Beermatch",
+          "price": 169.0,
+          "url": "https://www.beermatch.dk/products/jackie-os-endolith",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 169.0,
+      "min_price": 169.0,
+      "shop": "Beermatch",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
       "id": 14569,
       "name": "Tilquin - Oude Gueuze a l'Ancienne\nCuvée Arthur",
       "image": "https://cdn.shopify.com/s/files/1/0776/5209/9400/files/6ECC3A99-B100-46F0-9832-34DC3DAA08D1.jpg?v=1740000944",
@@ -47298,6 +49021,61 @@
       "max_discount_pct": 0
     },
     {
+      "id": 16952,
+      "name": "Alesong - Single Origin",
+      "image": "https://cdn.shopify.com/s/files/1/0551/6600/9423/files/B7A2D9B5-29AD-446D-802C-3150875FE66C.jpg?v=1754994536",
+      "type": "Sour",
+      "abv": 6.0,
+      "volume_cl": 50.0,
+      "brewery": "Alesong",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Beermatch",
+          "price": 174.0,
+          "url": "https://www.beermatch.dk/products/alesong-single-origin",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 174.0,
+      "min_price": 174.0,
+      "shop": "Beermatch",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
+      "id": 13590,
+      "name": "Cantillon, Cuveé Saint-Gilloise 2025 – 0,75 l. – 5,5%",
+      "image": "https://www.bestofbeers.dk/wp-content/uploads/2024/12/CantillonCuveeSaintGilloise.jpg",
+      "type": "Lambic",
+      "abv": 5.5,
+      "volume_cl": 75.0,
+      "brewery": "Cantillon, Cuveé Saint-Gilloise 2025",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Beermatch",
+          "price": 175.0,
+          "url": "https://www.beermatch.dk/products/cantillon-cuvee-saint-gilloise-75-cl-2025",
+          "discount_pct": 0,
+          "old_price": null
+        },
+        {
+          "shop_name": "Best of Beers",
+          "price": 251.0,
+          "url": "https://www.bestofbeers.dk/shop/cantillon-cuvee-saint-gilloise-2025-075-l-55/",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 175.0,
+      "min_price": 175.0,
+      "shop": "Beermatch",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
       "id": 16589,
       "name": "Parish Brewing Co. Bundle",
       "image": "https://cdn.shopify.com/s/files/1/0776/5209/9400/files/CADAB982-33F4-4955-8E3D-64779136D05F.jpg?v=1782400884",
@@ -47390,6 +49168,30 @@
       "cheapest_price": 179.0,
       "min_price": 179.0,
       "shop": "Brygshoppen",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
+      "id": 16870,
+      "name": "Ølrejsen Til Prag - og andre byer i Tjekkiet (BOG)",
+      "image": "https://cdn.shopify.com/s/files/1/0551/6600/9423/files/3210C150-6DD8-42B2-8554-CEB46BF6612B.jpg?v=1782128454",
+      "type": null,
+      "abv": null,
+      "volume_cl": null,
+      "brewery": "Ølrejsen Til Prag",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Beermatch",
+          "price": 179.0,
+          "url": "https://www.beermatch.dk/products/olrejsen-til-prag-og-andre-byer-i-tjekkiet",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 179.0,
+      "min_price": 179.0,
+      "shop": "Beermatch",
       "discount_pct": 0,
       "max_discount_pct": 0
     },
@@ -47689,6 +49491,44 @@
       "max_discount_pct": 0
     },
     {
+      "id": 13679,
+      "name": "Fanø Bryghus – White Wedding Limited Edition – 24 Month Aged Imperial Stout – 0,50 l. – 14,6%",
+      "image": "https://www.bestofbeers.dk/wp-content/uploads/2026/03/FanoeBryghusWhiteWeddingLE24Month.jpg",
+      "type": "Imperial Stout",
+      "abv": 14.6,
+      "volume_cl": 50.0,
+      "brewery": "Fanø Bryghus",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Beermatch",
+          "price": 195.0,
+          "url": "https://www.beermatch.dk/products/fano-bryghus-white-wedding-limited-edition-24-months-aged-2025-pre-order",
+          "discount_pct": 0,
+          "old_price": 0.0
+        },
+        {
+          "shop_name": "Vild med Vin",
+          "price": 238.0,
+          "url": "https://www.vildmedvin.dk/fano-white-wedding-limited-edition-2026",
+          "discount_pct": 0,
+          "old_price": null
+        },
+        {
+          "shop_name": "Best of Beers",
+          "price": 241.0,
+          "url": "https://www.bestofbeers.dk/shop/fanoe-bryghus-white-wedding-limited-edition-24-month-aged-imperial-stout-050-l-146/",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 195.0,
+      "min_price": 195.0,
+      "shop": "Beermatch",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
       "id": 12855,
       "name": "Gulden Draak Cuvée Prestige Bourbon 10,5% 75cl",
       "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/gulden-draak-cuvee-prestige-bourbon-10-5-75cl-2025.png?v=1775043754",
@@ -47915,6 +49755,78 @@
       "cheapest_price": 199.0,
       "min_price": 199.0,
       "shop": "Brygshoppen",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
+      "id": 16871,
+      "name": "Ølrejsen Til Bruxelles og Antwerpen (BOG)",
+      "image": "https://cdn.shopify.com/s/files/1/0551/6600/9423/files/936B4060-0E95-4545-8957-013694CEE50E.jpg?v=1782128453",
+      "type": null,
+      "abv": null,
+      "volume_cl": null,
+      "brewery": null,
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Beermatch",
+          "price": 199.0,
+          "url": "https://www.beermatch.dk/products/olrejsen-til-bruxelles-og-antwerpen-bog",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 199.0,
+      "min_price": 199.0,
+      "shop": "Beermatch",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
+      "id": 16912,
+      "name": "Cantillon - Saint Lamvinus (75 cl.) (2024)",
+      "image": "https://cdn.shopify.com/s/files/1/0551/6600/9423/files/EA0E5F50-D241-41AF-B774-FC2F6BDA1A79.jpg?v=1723750378",
+      "type": "Lambic",
+      "abv": 7.5,
+      "volume_cl": 75.0,
+      "brewery": "Cantillon",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Beermatch",
+          "price": 199.0,
+          "url": "https://www.beermatch.dk/products/cantillon-saint-lamvinus-75-cl-2024",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 199.0,
+      "min_price": 199.0,
+      "shop": "Beermatch",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
+      "id": 13858,
+      "name": "Cantillon, Iris 2024 – 0,75 l. – 6,5%",
+      "image": "https://www.bestofbeers.dk/wp-content/uploads/2024/12/CantillonIris.jpg",
+      "type": "Lambic",
+      "abv": 6.5,
+      "volume_cl": 75.0,
+      "brewery": "Cantillon",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Beermatch",
+          "price": 199.0,
+          "url": "https://www.beermatch.dk/products/cantillon-iris-75-cl-1",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 199.0,
+      "min_price": 199.0,
+      "shop": "Beermatch",
       "discount_pct": 0,
       "max_discount_pct": 0
     },
@@ -48900,6 +50812,54 @@
       "max_discount_pct": 0
     },
     {
+      "id": 16958,
+      "name": "Finback - BQE (Double Banana Coconut)",
+      "image": "https://cdn.shopify.com/s/files/1/0551/6600/9423/files/1FDB98A7-6B81-4AE9-8D59-651DB25EEC23.jpg?v=1754925272",
+      "type": "Dubbel",
+      "abv": 14.8,
+      "volume_cl": 50.0,
+      "brewery": "Finback",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Beermatch",
+          "price": 225.0,
+          "url": "https://www.beermatch.dk/products/finback-bqe-double-banana-coconut",
+          "discount_pct": 24.7,
+          "old_price": 299.0
+        }
+      ],
+      "cheapest_price": 225.0,
+      "min_price": 225.0,
+      "shop": "Beermatch",
+      "discount_pct": 24.7,
+      "max_discount_pct": 24.7
+    },
+    {
+      "id": 16959,
+      "name": "Finback - BA Blueberry Drip",
+      "image": "https://cdn.shopify.com/s/files/1/0551/6600/9423/files/D79B435C-8DB2-49A4-821B-C9ABA88BBBF2.jpg?v=1754925271",
+      "type": "Imperial Stout",
+      "abv": 13.2,
+      "volume_cl": 50.0,
+      "brewery": "Finback",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Beermatch",
+          "price": 225.0,
+          "url": "https://www.beermatch.dk/products/finback-ba-blueberry-drip",
+          "discount_pct": 24.7,
+          "old_price": 299.0
+        }
+      ],
+      "cheapest_price": 225.0,
+      "min_price": 225.0,
+      "shop": "Beermatch",
+      "discount_pct": 24.7,
+      "max_discount_pct": 24.7
+    },
+    {
       "id": 16649,
       "name": "Alkoholfri Smagekasse (12 stk.)(Gns. 18,75 kr. pr. øl)",
       "image": "https://cdn.shopify.com/s/files/1/0402/1239/8243/files/Alkoholfri_Smagekasse_c26d7ca1-43be-4b14-8d9a-cdb9a3cb9806.png?v=1780498405",
@@ -49016,6 +50976,30 @@
       "cheapest_price": 229.0,
       "min_price": 229.0,
       "shop": "Øltanken",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
+      "id": 16874,
+      "name": "Penyllan - Carolyn (2020 Vintage)",
+      "image": "https://cdn.shopify.com/s/files/1/0551/6600/9423/files/IMG-6711.jpg?v=1781525786",
+      "type": "Sour",
+      "abv": 5.5,
+      "volume_cl": 75.0,
+      "brewery": "Penyllan",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Beermatch",
+          "price": 229.0,
+          "url": "https://www.beermatch.dk/products/penyllan-carolyn-2020-vintage",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 229.0,
+      "min_price": 229.0,
+      "shop": "Beermatch",
       "discount_pct": 0,
       "max_discount_pct": 0
     },
@@ -49186,37 +51170,6 @@
       "shop": "Beershoppen",
       "discount_pct": 8.5,
       "max_discount_pct": 8.5
-    },
-    {
-      "id": 13679,
-      "name": "Fanø Bryghus – White Wedding Limited Edition – 24 Month Aged Imperial Stout – 0,50 l. – 14,6%",
-      "image": "https://www.bestofbeers.dk/wp-content/uploads/2026/03/FanoeBryghusWhiteWeddingLE24Month.jpg",
-      "type": "Imperial Stout",
-      "abv": 14.6,
-      "volume_cl": 50.0,
-      "brewery": "Fanø Bryghus",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Vild med Vin",
-          "price": 238.0,
-          "url": "https://www.vildmedvin.dk/fano-white-wedding-limited-edition-2026",
-          "discount_pct": 0,
-          "old_price": null
-        },
-        {
-          "shop_name": "Best of Beers",
-          "price": 241.0,
-          "url": "https://www.bestofbeers.dk/shop/fanoe-bryghus-white-wedding-limited-edition-24-month-aged-imperial-stout-050-l-146/",
-          "discount_pct": 0,
-          "old_price": null
-        }
-      ],
-      "cheapest_price": 238.0,
-      "min_price": 238.0,
-      "shop": "Vild med Vin",
-      "discount_pct": 0,
-      "max_discount_pct": 0
     },
     {
       "id": 16639,
@@ -49490,6 +51443,78 @@
       "max_discount_pct": 0
     },
     {
+      "id": 16872,
+      "name": "Penyllan - Lucia (2019 Vintage)",
+      "image": "https://cdn.shopify.com/s/files/1/0551/6600/9423/files/IMG-6712.jpg?v=1781525785",
+      "type": "Sour",
+      "abv": 9.0,
+      "volume_cl": 75.0,
+      "brewery": "Penyllan",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Beermatch",
+          "price": 249.0,
+          "url": "https://www.beermatch.dk/products/penyllan-lucia-2019-vintage",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 249.0,
+      "min_price": 249.0,
+      "shop": "Beermatch",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
+      "id": 16873,
+      "name": "Penyllan - Frances (2017 Vintage)",
+      "image": "https://cdn.shopify.com/s/files/1/0551/6600/9423/files/IMG-6713.jpg?v=1781525784",
+      "type": "Sour",
+      "abv": 6.0,
+      "volume_cl": 75.0,
+      "brewery": "Penyllan",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Beermatch",
+          "price": 249.0,
+          "url": "https://www.beermatch.dk/products/penyllan-frances-2017-vintage",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 249.0,
+      "min_price": 249.0,
+      "shop": "Beermatch",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
+      "id": 16949,
+      "name": "Cantillon - Nath (75 cl.)",
+      "image": "https://cdn.shopify.com/s/files/1/0551/6600/9423/files/Cantillon_Nath.jpg?v=1758702676",
+      "type": "Lambic",
+      "abv": 5.0,
+      "volume_cl": 75.0,
+      "brewery": "Cantillon",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Beermatch",
+          "price": 249.0,
+          "url": "https://www.beermatch.dk/products/cantillon-nath",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 249.0,
+      "min_price": 249.0,
+      "shop": "Beermatch",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
       "id": 16641,
       "name": "Gross Smagekasse (6 stk.)(Gns. 41,5 kr. pr. øl)",
       "image": "https://cdn.shopify.com/s/files/1/0402/1239/8243/files/Gross_Smagekasse.png?v=1781032817",
@@ -49730,30 +51755,6 @@
       "max_discount_pct": 0
     },
     {
-      "id": 13590,
-      "name": "Cantillon, Cuveé Saint-Gilloise 2025 – 0,75 l. – 5,5%",
-      "image": "https://www.bestofbeers.dk/wp-content/uploads/2024/12/CantillonCuveeSaintGilloise.jpg",
-      "type": null,
-      "abv": 5.5,
-      "volume_cl": 75.0,
-      "brewery": "Cantillon, Cuveé Saint-Gilloise 2025",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Best of Beers",
-          "price": 251.0,
-          "url": "https://www.bestofbeers.dk/shop/cantillon-cuvee-saint-gilloise-2025-075-l-55/",
-          "discount_pct": 0,
-          "old_price": null
-        }
-      ],
-      "cheapest_price": 251.0,
-      "min_price": 251.0,
-      "shop": "Best of Beers",
-      "discount_pct": 0,
-      "max_discount_pct": 0
-    },
-    {
       "id": 13772,
       "name": "Cantillon – Nath – Lambic 2025 Bottled 2025 – 0,75 l. – 5,0%",
       "image": "https://www.bestofbeers.dk/wp-content/uploads/2025/09/CantillonNath2025.jpg",
@@ -49944,6 +51945,30 @@
       "shop": "Vild med Vin",
       "discount_pct": 0,
       "max_discount_pct": 0
+    },
+    {
+      "id": 16960,
+      "name": "Bottle Logic - Føldånroll",
+      "image": "https://cdn.shopify.com/s/files/1/0551/6600/9423/files/56A91342-51A4-4651-91CA-6DECA437DA49.png?v=1732797428",
+      "type": "Imperial Stout",
+      "abv": 12.3,
+      "volume_cl": 50.0,
+      "brewery": "Bottle Logic",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Beermatch",
+          "price": 255.0,
+          "url": "https://www.beermatch.dk/products/bottle-logic-foldanroll",
+          "discount_pct": 24.8,
+          "old_price": 339.0
+        }
+      ],
+      "cheapest_price": 255.0,
+      "min_price": 255.0,
+      "shop": "Beermatch",
+      "discount_pct": 24.8,
+      "max_discount_pct": 24.8
     },
     {
       "id": 15227,
@@ -50402,30 +52427,6 @@
       "max_discount_pct": 0
     },
     {
-      "id": 13819,
-      "name": "Brasserie Du Bas Canada – Substance – Noix de Coco, Cacao, Vanille Et Lactose Imperial Sweet Stout – 0,375 l. – 10,0%",
-      "image": "https://www.bestofbeers.dk/wp-content/uploads/2025/05/BrasserieDuBasCanadaSubstance.jpg",
-      "type": "Stout",
-      "abv": 10.0,
-      "volume_cl": 37.5,
-      "brewery": "Brasserie Du Bas Canada",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Best of Beers",
-          "price": 276.0,
-          "url": "https://www.bestofbeers.dk/shop/brasserie-du-bas-canada-substance-noix-de-coco-cacao-vanille-et-lactose-imperial-sweet-stout-0375-l-100/",
-          "discount_pct": 0,
-          "old_price": null
-        }
-      ],
-      "cheapest_price": 276.0,
-      "min_price": 276.0,
-      "shop": "Best of Beers",
-      "discount_pct": 0,
-      "max_discount_pct": 0
-    },
-    {
       "id": 15196,
       "name": "Ølpakke - Stout - Øl",
       "image": "https://www.vildmedvin.dk/img/1000/1000/resize/2/9/29045-bundle_1_23.jpg",
@@ -50446,6 +52447,30 @@
       "cheapest_price": 278.0,
       "min_price": 278.0,
       "shop": "Vild med Vin",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
+      "id": 16950,
+      "name": "Cantillon - Fou' Foune (75 cl.)",
+      "image": "https://cdn.shopify.com/s/files/1/0551/6600/9423/files/83048A0A-9D56-4025-A854-BD3E47A31705.jpg?v=1731619873",
+      "type": "Lambic",
+      "abv": 6.0,
+      "volume_cl": 75.0,
+      "brewery": "Cantillon",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Beermatch",
+          "price": 279.0,
+          "url": "https://www.beermatch.dk/products/cantillon-fou-foune-75-cl",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 279.0,
+      "min_price": 279.0,
+      "shop": "Beermatch",
       "discount_pct": 0,
       "max_discount_pct": 0
     },
@@ -50546,28 +52571,100 @@
       "max_discount_pct": 0
     },
     {
-      "id": 14442,
-      "name": "20 % Funky Fluid stout smagskasse 2025",
-      "image": "https://cdn.shopify.com/s/files/1/0776/5209/9400/files/D0A6EEB8-A573-4AC1-8E2B-9EF13770D9DE.jpg?v=1756551817",
-      "type": "Stout",
-      "abv": 20.0,
-      "volume_cl": null,
-      "brewery": "Øltanken",
+      "id": 16954,
+      "name": "Bottle Logic - Teraphobia (Voodoo Brewing Collab)",
+      "image": "https://cdn.shopify.com/s/files/1/0551/6600/9423/files/E2A9FE9D-A5CC-47D3-B9C0-50B0E4E2FDA5.jpg?v=1754944015",
+      "type": "Imperial Stout",
+      "abv": 14.5,
+      "volume_cl": 50.0,
+      "brewery": "Bottle Logic",
       "category": null,
       "prices": [
         {
-          "shop_name": "Øltanken",
-          "price": 284.0,
-          "url": "https://oltanken.dk/products/funky-fluid-stout-smagskasse-2025",
-          "discount_pct": 26.0,
-          "old_price": 384.0
+          "shop_name": "Beermatch",
+          "price": 285.0,
+          "url": "https://www.beermatch.dk/products/bottle-logic-teraphobia",
+          "discount_pct": 24.8,
+          "old_price": 379.0
         }
       ],
-      "cheapest_price": 284.0,
-      "min_price": 284.0,
-      "shop": "Øltanken",
-      "discount_pct": 26.0,
-      "max_discount_pct": 26.0
+      "cheapest_price": 285.0,
+      "min_price": 285.0,
+      "shop": "Beermatch",
+      "discount_pct": 24.8,
+      "max_discount_pct": 24.8
+    },
+    {
+      "id": 16955,
+      "name": "Bottle Logic - Technical Challenges",
+      "image": "https://cdn.shopify.com/s/files/1/0551/6600/9423/files/9E3474FF-3439-4427-9945-5B9E86EC0C90.jpg?v=1754944017",
+      "type": "Imperial Stout",
+      "abv": 13.77,
+      "volume_cl": 50.0,
+      "brewery": "Bottle Logic",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Beermatch",
+          "price": 285.0,
+          "url": "https://www.beermatch.dk/products/bottle-logic-technical-challenges",
+          "discount_pct": 24.8,
+          "old_price": 379.0
+        }
+      ],
+      "cheapest_price": 285.0,
+      "min_price": 285.0,
+      "shop": "Beermatch",
+      "discount_pct": 24.8,
+      "max_discount_pct": 24.8
+    },
+    {
+      "id": 16956,
+      "name": "Bottle Logic - Jam The Radar",
+      "image": "https://cdn.shopify.com/s/files/1/0551/6600/9423/files/554D4DCC-0D87-4BBF-8247-5A5769CCAB18.jpg?v=1754944015",
+      "type": "Imperial Stout",
+      "abv": 12.5,
+      "volume_cl": 50.0,
+      "brewery": "Bottle Logic",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Beermatch",
+          "price": 285.0,
+          "url": "https://www.beermatch.dk/products/bottle-logic-jam-the-radar",
+          "discount_pct": 24.8,
+          "old_price": 379.0
+        }
+      ],
+      "cheapest_price": 285.0,
+      "min_price": 285.0,
+      "shop": "Beermatch",
+      "discount_pct": 24.8,
+      "max_discount_pct": 24.8
+    },
+    {
+      "id": 16957,
+      "name": "Bottle Logic - Darkstar November",
+      "image": "https://cdn.shopify.com/s/files/1/0551/6600/9423/files/DBEE7CC1-E142-4EC2-BB4E-2D4913B917E9.jpg?v=1754944015",
+      "type": "Imperial Stout",
+      "abv": 13.5,
+      "volume_cl": 50.0,
+      "brewery": "Bottle Logic",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Beermatch",
+          "price": 285.0,
+          "url": "https://www.beermatch.dk/products/bottle-logic-darkstar-november",
+          "discount_pct": 24.8,
+          "old_price": 379.0
+        }
+      ],
+      "cheapest_price": 285.0,
+      "min_price": 285.0,
+      "shop": "Beermatch",
+      "discount_pct": 24.8,
+      "max_discount_pct": 24.8
     },
     {
       "id": 16625,
@@ -51434,30 +53531,6 @@
       "max_discount_pct": 0
     },
     {
-      "id": 14530,
-      "name": "Funky Fluid BA Royal Cookie smagskasse",
-      "image": "https://cdn.shopify.com/s/files/1/0776/5209/9400/files/4087B164-5567-4956-BD54-DDB543E77B6D.jpg?v=1758795375",
-      "type": "Imperial Stout",
-      "abv": null,
-      "volume_cl": null,
-      "brewery": "Øltanken",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Øltanken",
-          "price": 334.0,
-          "url": "https://oltanken.dk/products/funky-fluid-ba-royal-cookie-smagskasse",
-          "discount_pct": 13.0,
-          "old_price": 384.0
-        }
-      ],
-      "cheapest_price": 334.0,
-      "min_price": 334.0,
-      "shop": "Øltanken",
-      "discount_pct": 13.0,
-      "max_discount_pct": 13.0
-    },
-    {
       "id": 15110,
       "name": "Finback Brewery IPA bundle",
       "image": "https://cdn.shopify.com/s/files/1/0776/5209/9400/files/B10E05E8-5ED8-4F1B-A9C5-B5BFCA440B79.jpg?v=1779366191",
@@ -51554,6 +53627,54 @@
       "max_discount_pct": 24.0
     },
     {
+      "id": 16882,
+      "name": "Funky Fluid - Final Eight World Cup Beer Bundle (6-Beer Bundle)",
+      "image": "https://cdn.shopify.com/s/files/1/0551/6600/9423/files/FA01A715-6705-4C29-8D93-B962D99C8D48.jpg?v=1780906196",
+      "type": "Double IPA",
+      "abv": null,
+      "volume_cl": null,
+      "brewery": "Funky Fluid",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Beermatch",
+          "price": 349.0,
+          "url": "https://www.beermatch.dk/products/funky-fluid-final-eight-world-cup-beer-bundle-6-beer-bundle",
+          "discount_pct": 8.9,
+          "old_price": 383.0
+        }
+      ],
+      "cheapest_price": 349.0,
+      "min_price": 349.0,
+      "shop": "Beermatch",
+      "discount_pct": 8.9,
+      "max_discount_pct": 8.9
+    },
+    {
+      "id": 16941,
+      "name": "The Bruery - Black Tuesday Grand Reserve 2021",
+      "image": "https://cdn.shopify.com/s/files/1/0551/6600/9423/files/B9716B31-EDC9-4872-AC73-374FEAEEA602.jpg?v=1764313407",
+      "type": "Imperial Stout",
+      "abv": 21.3,
+      "volume_cl": 37.5,
+      "brewery": "The Bruery",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Beermatch",
+          "price": 349.0,
+          "url": "https://www.beermatch.dk/products/the-bruery-black-tuesday-grand-reserve-2021",
+          "discount_pct": 0,
+          "old_price": 0.0
+        }
+      ],
+      "cheapest_price": 349.0,
+      "min_price": 349.0,
+      "shop": "Beermatch",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
       "id": 16664,
       "name": "Insight Cellars Smagekasse nr. 2 (3 stk.)(Gns. 116,25 Kr. Pr. Øl)",
       "image": "https://cdn.shopify.com/s/files/1/0402/1239/8243/files/3_Insight.png?v=1737988208",
@@ -51646,6 +53767,30 @@
       "cheapest_price": 351.0,
       "min_price": 351.0,
       "shop": "Best of Beers",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
+      "id": 16880,
+      "name": "Månedspakken - Juni",
+      "image": "https://cdn.shopify.com/s/files/1/0551/6600/9423/files/4A8AB2B7-91A6-4925-BFB6-5868D48C2E34.jpg?v=1780308894",
+      "type": null,
+      "abv": null,
+      "volume_cl": null,
+      "brewery": "Månedspakken",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Beermatch",
+          "price": 352.0,
+          "url": "https://www.beermatch.dk/products/manedspakken-juni-4",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 352.0,
+      "min_price": 352.0,
+      "shop": "Beermatch",
       "discount_pct": 0,
       "max_discount_pct": 0
     },
@@ -51818,6 +53963,54 @@
       "max_discount_pct": 0
     },
     {
+      "id": 16933,
+      "name": "Fremont - BBA Dark Star - Coffee Edition (2015)",
+      "image": "https://cdn.shopify.com/s/files/1/0551/6600/9423/files/05F67375-D5B0-4C5E-84C5-024185C2E567.jpg?v=1765813134",
+      "type": "Imperial Stout",
+      "abv": 14.5,
+      "volume_cl": 65.0,
+      "brewery": "Fremont",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Beermatch",
+          "price": 399.0,
+          "url": "https://www.beermatch.dk/products/fremont-bba-dark-star-coffee-edition-2015-pre-order-very-few-in-stock",
+          "discount_pct": 0,
+          "old_price": 0.0
+        }
+      ],
+      "cheapest_price": 399.0,
+      "min_price": 399.0,
+      "shop": "Beermatch",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
+      "id": 16934,
+      "name": "Fremont - Coconut Cacao BA Dark Star 2022",
+      "image": "https://cdn.shopify.com/s/files/1/0551/6600/9423/files/IMG-4139.jpg?v=1692378750",
+      "type": "Imperial Stout",
+      "abv": 13.5,
+      "volume_cl": 65.0,
+      "brewery": "Fremont",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Beermatch",
+          "price": 399.0,
+          "url": "https://www.beermatch.dk/products/fremont-coconut-cacao-ba-dark-star-2022-pre-order-very-few-in-stock",
+          "discount_pct": 0,
+          "old_price": 0.0
+        }
+      ],
+      "cheapest_price": 399.0,
+      "min_price": 399.0,
+      "shop": "Beermatch",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
       "id": 16621,
       "name": "Danish Craft Smagekasse (12 stk.) (Gns. 33,25 kr. pr. øl)",
       "image": "https://cdn.shopify.com/s/files/1/0402/1239/8243/files/Danish_Craft_Smagekasse_044194e8-9e40-478b-bf62-20a803710167.png?v=1782377615",
@@ -51986,6 +54179,85 @@
       "max_discount_pct": 0
     },
     {
+      "id": 14458,
+      "name": "Timber Ales - BA Maris Blend 4(Yellow wax)",
+      "image": "https://cdn.shopify.com/s/files/1/0776/5209/9400/files/2B1740F7-921F-4A31-9A89-0A9DAAD4D826.jpg?v=1773150442",
+      "type": "Stout",
+      "abv": 12.5,
+      "volume_cl": 50.0,
+      "brewery": "Timber Ales",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Beermatch",
+          "price": 429.0,
+          "url": "https://www.beermatch.dk/products/timber-ales-ba-maris-single-barrel-weller-12yr-aqua-wax",
+          "discount_pct": 0,
+          "old_price": 0.0
+        },
+        {
+          "shop_name": "Øltanken",
+          "price": 430.0,
+          "url": "https://oltanken.dk/products/timber-ales-barrel-aged-maris-blend-4-yellow-wax",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 429.0,
+      "min_price": 429.0,
+      "shop": "Beermatch",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
+      "id": 16940,
+      "name": "Timber Ales - BA Among Monsters (Blue Metallic Wax)",
+      "image": "https://cdn.shopify.com/s/files/1/0551/6600/9423/files/6338F6A4-A71A-4474-86AE-706D73AB2EB9.jpg?v=1764313407",
+      "type": "Imperial Stout",
+      "abv": 12.5,
+      "volume_cl": 50.0,
+      "brewery": "Timber Ales",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Beermatch",
+          "price": 429.0,
+          "url": "https://www.beermatch.dk/products/timber-ales-ba-among-monsters-blue-metallic-wax",
+          "discount_pct": 0,
+          "old_price": 0.0
+        }
+      ],
+      "cheapest_price": 429.0,
+      "min_price": 429.0,
+      "shop": "Beermatch",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
+      "id": 16943,
+      "name": "Private Press - Cosmic Echoes (Batch 4)",
+      "image": "https://cdn.shopify.com/s/files/1/0551/6600/9423/files/AB605FD0-C900-49CD-BD3F-1F5626353984.jpg?v=1762340337",
+      "type": "Imperial Stout",
+      "abv": 16.3,
+      "volume_cl": 50.0,
+      "brewery": "Private Press",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Beermatch",
+          "price": 429.0,
+          "url": "https://www.beermatch.dk/products/private-press-cosmic-echoes-batch-4",
+          "discount_pct": 0,
+          "old_price": 0.0
+        }
+      ],
+      "cheapest_price": 429.0,
+      "min_price": 429.0,
+      "shop": "Beermatch",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
       "id": 14456,
       "name": "Timber Ales - Lumberjack Style (Tangerine wax)",
       "image": "https://cdn.shopify.com/s/files/1/0776/5209/9400/files/46A815AD-8435-49D6-A674-422E9BA0CA7B.jpg?v=1773150442",
@@ -52034,26 +54306,26 @@
       "max_discount_pct": 0
     },
     {
-      "id": 14458,
-      "name": "Timber Ales - BA Maris Blend 4(Yellow wax)",
-      "image": "https://cdn.shopify.com/s/files/1/0776/5209/9400/files/2B1740F7-921F-4A31-9A89-0A9DAAD4D826.jpg?v=1773150442",
-      "type": "Stout",
-      "abv": 12.5,
+      "id": 16932,
+      "name": "Private Press - Electric Roads (Batch 5)",
+      "image": "https://cdn.shopify.com/s/files/1/0551/6600/9423/files/52EB523A-7A86-465B-8DD9-096DE16BBF3B.jpg?v=1765813133",
+      "type": "Barley Wine",
+      "abv": 16.7,
       "volume_cl": 50.0,
-      "brewery": "Timber Ales",
+      "brewery": "Private Press",
       "category": null,
       "prices": [
         {
-          "shop_name": "Øltanken",
-          "price": 430.0,
-          "url": "https://oltanken.dk/products/timber-ales-barrel-aged-maris-blend-4-yellow-wax",
+          "shop_name": "Beermatch",
+          "price": 439.0,
+          "url": "https://www.beermatch.dk/products/private-press-electric-roads-batch-5-pre-order",
           "discount_pct": 0,
-          "old_price": null
+          "old_price": 0.0
         }
       ],
-      "cheapest_price": 430.0,
-      "min_price": 430.0,
-      "shop": "Øltanken",
+      "cheapest_price": 439.0,
+      "min_price": 439.0,
+      "shop": "Beermatch",
       "discount_pct": 0,
       "max_discount_pct": 0
     },
@@ -52126,6 +54398,30 @@
       "cheapest_price": 449.0,
       "min_price": 449.0,
       "shop": "Øltanken",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
+      "id": 16879,
+      "name": "Humle Månedspakken - Juni",
+      "image": "https://cdn.shopify.com/s/files/1/0551/6600/9423/files/7A976370-185A-4553-8E32-86C9F2C2EEAE.jpg?v=1780308894",
+      "type": "Double IPA",
+      "abv": null,
+      "volume_cl": null,
+      "brewery": "Humle Månedspakken",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Beermatch",
+          "price": 450.0,
+          "url": "https://www.beermatch.dk/products/humle-manedspakken-juni-1",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 450.0,
+      "min_price": 450.0,
+      "shop": "Beermatch",
       "discount_pct": 0,
       "max_discount_pct": 0
     },
@@ -52401,6 +54697,30 @@
       "max_discount_pct": 26.8
     },
     {
+      "id": 16935,
+      "name": "3 Sons - Coconut Daydreams (VERY FEW IN STOCK)",
+      "image": "https://cdn.shopify.com/s/files/1/0551/6600/9423/files/2779BA3B-23DD-4510-AB1C-7D2570A3C6DB.jpg?v=1765813134",
+      "type": "Imperial Stout",
+      "abv": 14.8,
+      "volume_cl": 50.0,
+      "brewery": "3 Sons",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Beermatch",
+          "price": 569.0,
+          "url": "https://www.beermatch.dk/products/3-sons-coconut-daydreams-pre-order-very-few-in-stock",
+          "discount_pct": 0,
+          "old_price": 0.0
+        }
+      ],
+      "cheapest_price": 569.0,
+      "min_price": 569.0,
+      "shop": "Beermatch",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
       "id": 16648,
       "name": "European Craft Smagekasse (12 stk.) (Gns. 47,95 kr. pr. øl)",
       "image": "https://cdn.shopify.com/s/files/1/0402/1239/8243/files/Euro_Craft_Smagekasse.png?v=1780564123",
@@ -52444,30 +54764,6 @@
       ],
       "cheapest_price": 585.0,
       "min_price": 585.0,
-      "shop": "Vild med Vin",
-      "discount_pct": 0,
-      "max_discount_pct": 0
-    },
-    {
-      "id": 15173,
-      "name": "Ølpakke - Deluxe - Øl",
-      "image": "https://www.vildmedvin.dk/img/1000/1000/resize/2/9/29139-bundle_1_14.jpg",
-      "type": "Ølpakker",
-      "abv": null,
-      "volume_cl": null,
-      "brewery": null,
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Vild med Vin",
-          "price": 589.0,
-          "url": "https://www.vildmedvin.dk/deluxe-olpakken",
-          "discount_pct": 0,
-          "old_price": null
-        }
-      ],
-      "cheapest_price": 589.0,
-      "min_price": 589.0,
       "shop": "Vild med Vin",
       "discount_pct": 0,
       "max_discount_pct": 0
