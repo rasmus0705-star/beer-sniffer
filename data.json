@@ -1,9 +1,9 @@
 {
-  "updated_at": "2026-06-30T20:20:10.143403",
+  "updated_at": "2026-06-30T20:35:12.732135",
   "stats": {
-    "total": 2225,
-    "deals": 572,
-    "shops": 8,
+    "total": 2365,
+    "deals": 604,
+    "shops": 9,
     "shop_names": [
       "A Good Case",
       "Beer Me",
@@ -11,6 +11,7 @@
       "Beershoppen",
       "Best of Beers",
       "Brygshoppen",
+      "Drikbeer",
       "Vild med Vin",
       "Øltanken"
     ],
@@ -884,6 +885,30 @@
       "max_discount_pct": 17.4
     },
     {
+      "id": 15449,
+      "name": "Schöfferhofer Grapefruit - Øl",
+      "image": "https://www.vildmedvin.dk/img/1000/1000/resize/s/c/sch_fferhoffer_grapefruit.jpg",
+      "type": "Frugtøl",
+      "abv": 2.5,
+      "volume_cl": 50.0,
+      "brewery": "Schöfferhofer",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Vild med Vin",
+          "price": 19.0,
+          "url": "https://www.vildmedvin.dk/schofferhofer-grapefruit",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 19.0,
+      "min_price": 19.0,
+      "shop": "Vild med Vin",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
       "id": 16680,
       "name": "San Miguel 0,0% Alkoholfri - Øl",
       "image": "https://www.vildmedvin.dk/img/1000/1000/resize/s/a/san_miguel_00procent.jpg",
@@ -921,30 +946,6 @@
           "shop_name": "Vild med Vin",
           "price": 19.0,
           "url": "https://www.vildmedvin.dk/svaneke-bryghys-bingo-gringo-mexican-lager",
-          "discount_pct": 0,
-          "old_price": null
-        }
-      ],
-      "cheapest_price": 19.0,
-      "min_price": 19.0,
-      "shop": "Vild med Vin",
-      "discount_pct": 0,
-      "max_discount_pct": 0
-    },
-    {
-      "id": 15449,
-      "name": "Schöfferhofer Grapefruit - Øl",
-      "image": "https://www.vildmedvin.dk/img/1000/1000/resize/s/c/sch_fferhoffer_grapefruit.jpg",
-      "type": "Frugtøl",
-      "abv": 2.5,
-      "volume_cl": 50.0,
-      "brewery": "Schöfferhofer",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Vild med Vin",
-          "price": 19.0,
-          "url": "https://www.vildmedvin.dk/schofferhofer-grapefruit",
           "discount_pct": 0,
           "old_price": null
         }
@@ -1663,7 +1664,7 @@
       "max_discount_pct": 0
     },
     {
-      "id": 16964,
+      "id": 17111,
       "name": "Leo Beer - Øl",
       "image": "https://www.vildmedvin.dk/img/1000/1000/resize/l/e/leo-beer-33-cl_large.jpg",
       "type": "Lager Øl",
@@ -2579,7 +2580,7 @@
       "max_discount_pct": 24.2
     },
     {
-      "id": 16867,
+      "id": 16973,
       "name": "Belgian Brown 6,8% 33cl",
       "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/belgien-brown-33cl.png?v=1753443086",
       "type": "Dubbel",
@@ -2603,30 +2604,6 @@
       "max_discount_pct": 28.6
     },
     {
-      "id": 15373,
-      "name": "Sanwald Sport Weizen  - BEDST FØR: 08.11.2026 - Øl",
-      "image": "https://www.vildmedvin.dk/img/1000/1000/resize/s/a/sanwald_alkoholfri.jpg",
-      "type": "Hvedeøl",
-      "abv": 0.5,
-      "volume_cl": 50.0,
-      "brewery": "Sanwald",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Vild med Vin",
-          "price": 25.0,
-          "url": "https://www.vildmedvin.dk/sanwald-sport-weizen",
-          "discount_pct": 0,
-          "old_price": null
-        }
-      ],
-      "cheapest_price": 25.0,
-      "min_price": 25.0,
-      "shop": "Vild med Vin",
-      "discount_pct": 0,
-      "max_discount_pct": 0
-    },
-    {
       "id": 15450,
       "name": "Schöfferhofer Hefeweizen - Øl",
       "image": "https://www.vildmedvin.dk/img/1000/1000/resize/s/c/sch_fferhoffer_hefeweizen.jpg",
@@ -2640,6 +2617,30 @@
           "shop_name": "Vild med Vin",
           "price": 25.0,
           "url": "https://www.vildmedvin.dk/schofferhofer-hefeweizen",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 25.0,
+      "min_price": 25.0,
+      "shop": "Vild med Vin",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
+      "id": 15373,
+      "name": "Sanwald Sport Weizen  - BEDST FØR: 08.11.2026 - Øl",
+      "image": "https://www.vildmedvin.dk/img/1000/1000/resize/s/a/sanwald_alkoholfri.jpg",
+      "type": "Hvedeøl",
+      "abv": 0.5,
+      "volume_cl": 50.0,
+      "brewery": "Sanwald",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Vild med Vin",
+          "price": 25.0,
+          "url": "https://www.vildmedvin.dk/sanwald-sport-weizen",
           "discount_pct": 0,
           "old_price": null
         }
@@ -2975,6 +2976,30 @@
       "shop": "Brygshoppen",
       "discount_pct": 0,
       "max_discount_pct": 0
+    },
+    {
+      "id": 17069,
+      "name": "Westbrook - IPA",
+      "image": "https://cdn.shopify.com/s/files/1/0368/1628/9924/files/westbrook_ipa_48965e81-8ed9-493d-869c-390fea2c65e9.png?v=1738923848",
+      "type": "India Pale Ale (IPA)",
+      "abv": 6.8,
+      "volume_cl": 35.5,
+      "brewery": "Westbrook",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Drikbeer",
+          "price": 26.0,
+          "url": "https://drikbeer.com/products/westbrook-ipa",
+          "discount_pct": 33.3,
+          "old_price": 39.0
+        }
+      ],
+      "cheapest_price": 26.0,
+      "min_price": 26.0,
+      "shop": "Drikbeer",
+      "discount_pct": 33.3,
+      "max_discount_pct": 33.3
     },
     {
       "id": 15913,
@@ -4575,6 +4600,30 @@
       "shop": "Beermatch",
       "discount_pct": 0,
       "max_discount_pct": 0
+    },
+    {
+      "id": 17086,
+      "name": "AleSmith - Japanese Rice Lager",
+      "image": "https://cdn.shopify.com/s/files/1/0368/1628/9924/files/japanese_rice_lager_5f5d058d-4c1d-4429-a456-42c49b0fb6f6.png?v=1749200605",
+      "type": "American Pale Ale",
+      "abv": 5.1,
+      "volume_cl": 47.3,
+      "brewery": "AleSmith",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Drikbeer",
+          "price": 29.0,
+          "url": "https://drikbeer.com/products/alesmith-japanese-rice-lager",
+          "discount_pct": 38.3,
+          "old_price": 47.0
+        }
+      ],
+      "cheapest_price": 29.0,
+      "min_price": 29.0,
+      "shop": "Drikbeer",
+      "discount_pct": 38.3,
+      "max_discount_pct": 38.3
     },
     {
       "id": 16669,
@@ -6663,6 +6712,30 @@
       "max_discount_pct": 0
     },
     {
+      "id": 15448,
+      "name": "Poppels, Mango Sour - Øl",
+      "image": "https://www.vildmedvin.dk/img/1000/1000/resize/m/a/mango-sour-1.jpg",
+      "type": "Sour",
+      "abv": 4.5,
+      "volume_cl": 33.0,
+      "brewery": "Poppels",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Vild med Vin",
+          "price": 31.0,
+          "url": "https://www.vildmedvin.dk/poppels-mango-sour",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 31.0,
+      "min_price": 31.0,
+      "shop": "Vild med Vin",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
       "id": 15203,
       "name": "Ebeltoft Gårdbryggeri, Bock Me - Øl",
       "image": "https://www.vildmedvin.dk/img/1000/1000/resize/b/o/bock_me.jpg",
@@ -6796,30 +6869,6 @@
           "shop_name": "Vild med Vin",
           "price": 31.0,
           "url": "https://www.vildmedvin.dk/benediktiner-weissbier",
-          "discount_pct": 0,
-          "old_price": null
-        }
-      ],
-      "cheapest_price": 31.0,
-      "min_price": 31.0,
-      "shop": "Vild med Vin",
-      "discount_pct": 0,
-      "max_discount_pct": 0
-    },
-    {
-      "id": 15448,
-      "name": "Poppels, Mango Sour - Øl",
-      "image": "https://www.vildmedvin.dk/img/1000/1000/resize/m/a/mango-sour-1.jpg",
-      "type": "Sour",
-      "abv": 4.5,
-      "volume_cl": 33.0,
-      "brewery": "Poppels",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Vild med Vin",
-          "price": 31.0,
-          "url": "https://www.vildmedvin.dk/poppels-mango-sour",
           "discount_pct": 0,
           "old_price": null
         }
@@ -7023,7 +7072,7 @@
       "max_discount_pct": 0
     },
     {
-      "id": 16866,
+      "id": 16972,
       "name": "It's A Blond 5,9% 33cl",
       "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/its-a-blond-33cl_27db0da2-5945-4111-8396-339312eae8d3.png?v=1773482918",
       "type": "Blond",
@@ -7733,7 +7782,7 @@
       "max_discount_pct": 0
     },
     {
-      "id": 16863,
+      "id": 16969,
       "name": "Maître Tripel 8,5% 33cl",
       "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/maitre-tripel-8-5-33cl.png?v=1733847666",
       "type": "Tripel",
@@ -9922,7 +9971,7 @@
       "max_discount_pct": 10.3
     },
     {
-      "id": 16864,
+      "id": 16970,
       "name": "Imperial Stout 9,3% 33cl",
       "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/imperial-stout-9-3-33cl_e5717b14-1296-4555-8e23-bc8da32992e9.png?v=1753446200",
       "type": "Imperial Stout",
@@ -13524,6 +13573,30 @@
       "max_discount_pct": 0
     },
     {
+      "id": 16984,
+      "name": "2085 - UA Lager Light",
+      "image": "https://cdn.shopify.com/s/files/1/0368/1628/9924/files/2085-ua-lager-light.png?v=1781245641",
+      "type": "Lager",
+      "abv": 4.8,
+      "volume_cl": 33.0,
+      "brewery": "2085",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Drikbeer",
+          "price": 39.0,
+          "url": "https://drikbeer.com/products/2085-ua-lager-light",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 39.0,
+      "min_price": 39.0,
+      "shop": "Drikbeer",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
       "id": 15485,
       "name": "Bryg 365, Fars Gamle Glæde - Øl",
       "image": "https://www.vildmedvin.dk/img/1000/1000/resize/f/a/fars_gamle_gl_der.jpg",
@@ -13618,6 +13691,78 @@
       "shop": "Beermatch",
       "discount_pct": 37.1,
       "max_discount_pct": 37.1
+    },
+    {
+      "id": 17077,
+      "name": "Creature Comforts - Fall",
+      "image": "https://cdn.shopify.com/s/files/1/0368/1628/9924/files/Creature_Comforts_-_Fall_-_Traditional_Oktoberfest.png?v=1761311822",
+      "type": null,
+      "abv": 6.0,
+      "volume_cl": 35.5,
+      "brewery": "Creature Comforts",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Drikbeer",
+          "price": 39.0,
+          "url": "https://drikbeer.com/products/creature-comforts-fall",
+          "discount_pct": 43.5,
+          "old_price": 69.0
+        }
+      ],
+      "cheapest_price": 39.0,
+      "min_price": 39.0,
+      "shop": "Drikbeer",
+      "discount_pct": 43.5,
+      "max_discount_pct": 43.5
+    },
+    {
+      "id": 17082,
+      "name": "AleSmith x Firestone Walker & HoneyCo - Schwarzbier",
+      "image": "https://cdn.shopify.com/s/files/1/0368/1628/9924/files/alesmith_coffee_schwarzbier_8f4a4477-3ba1-43d6-b69a-e370c518761c.png?v=1754040943",
+      "type": null,
+      "abv": 5.1,
+      "volume_cl": 47.3,
+      "brewery": "AleSmith",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Drikbeer",
+          "price": 39.0,
+          "url": "https://drikbeer.com/products/alesmith-firestone-walker-honeyco-schwarzbier",
+          "discount_pct": 33.9,
+          "old_price": 59.0
+        }
+      ],
+      "cheapest_price": 39.0,
+      "min_price": 39.0,
+      "shop": "Drikbeer",
+      "discount_pct": 33.9,
+      "max_discount_pct": 33.9
+    },
+    {
+      "id": 17083,
+      "name": "AleSmith x Arizona Wilderness & Peixoto - Flat White Blonde",
+      "image": "https://cdn.shopify.com/s/files/1/0368/1628/9924/files/alesmith_coffee_blonde_a14067cd-a38f-4334-a311-779f81cb7d18.png?v=1754040932",
+      "type": null,
+      "abv": 6.0,
+      "volume_cl": 47.3,
+      "brewery": "AleSmith",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Drikbeer",
+          "price": 39.0,
+          "url": "https://drikbeer.com/products/alesmith-arizona-wilderness-peixoto-blonde",
+          "discount_pct": 33.9,
+          "old_price": 59.0
+        }
+      ],
+      "cheapest_price": 39.0,
+      "min_price": 39.0,
+      "shop": "Drikbeer",
+      "discount_pct": 33.9,
+      "max_discount_pct": 33.9
     },
     {
       "id": 16596,
@@ -18727,7 +18872,7 @@
       "max_discount_pct": 0
     },
     {
-      "id": 16865,
+      "id": 16971,
       "name": "Ry Pilsner 5,6% 50cl",
       "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/ry-pilsner.png?v=1747399627",
       "type": "Pilsner",
@@ -19694,7 +19839,7 @@
       "max_discount_pct": 0
     },
     {
-      "id": 16963,
+      "id": 17110,
       "name": "To Øl, #DIPA - Øl",
       "image": "https://www.vildmedvin.dk/img/1000/1000/resize/7/7/7777_1..jpg",
       "type": "Double IPA",
@@ -20925,6 +21070,30 @@
       "max_discount_pct": 0
     },
     {
+      "id": 17073,
+      "name": "Pipeworks - Abominable Snowman Vs Unicorn",
+      "image": "https://cdn.shopify.com/s/files/1/0368/1628/9924/files/abonimable_snowman_vs_unicorn.png?v=1764269408",
+      "type": "New England IPA",
+      "abv": 7.6,
+      "volume_cl": 47.3,
+      "brewery": "Pipeworks",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Drikbeer",
+          "price": 47.0,
+          "url": "https://drikbeer.com/products/pipeworks-abominable-snowman-vs-unicorn",
+          "discount_pct": 31.9,
+          "old_price": 69.0
+        }
+      ],
+      "cheapest_price": 47.0,
+      "min_price": 47.0,
+      "shop": "Drikbeer",
+      "discount_pct": 31.9,
+      "max_discount_pct": 31.9
+    },
+    {
       "id": 15205,
       "name": "Trappisten, Rochefort Blauw 10 - Øl",
       "image": "https://www.vildmedvin.dk/img/1000/1000/resize/r/o/rochefort_trappistes_blau__10.jpg",
@@ -21779,6 +21948,37 @@
       "max_discount_pct": 0
     },
     {
+      "id": 16922,
+      "name": "Pipeworks - Devil Firefish",
+      "image": "https://cdn.shopify.com/s/files/1/0551/6600/9423/files/80258523-0ECF-4AEC-97B2-6D1E4040DF73.jpg?v=1772190077",
+      "type": "Double IPA",
+      "abv": 9.5,
+      "volume_cl": 47.3,
+      "brewery": "Pipeworks",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Drikbeer",
+          "price": 49.0,
+          "url": "https://drikbeer.com/products/pipeworks-devil-firefish",
+          "discount_pct": 29.0,
+          "old_price": 69.0
+        },
+        {
+          "shop_name": "Beermatch",
+          "price": 72.0,
+          "url": "https://www.beermatch.dk/products/pipeworks-devil-firefish",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 49.0,
+      "min_price": 49.0,
+      "shop": "Drikbeer",
+      "discount_pct": 29.0,
+      "max_discount_pct": 29.0
+    },
+    {
       "id": 15454,
       "name": "Vemb Bryghus, Husets Classic - Øl",
       "image": "https://www.vildmedvin.dk/img/1000/1000/resize/v/e/vemb_bryghus_husets_classic.jpg",
@@ -21995,6 +22195,366 @@
       "max_discount_pct": 0
     },
     {
+      "id": 16982,
+      "name": "2085 - 1 Bohemian Pilsner",
+      "image": "https://cdn.shopify.com/s/files/1/0368/1628/9924/files/2085-1-bohemian-pilsner.png?v=1781245641",
+      "type": "Pilsner",
+      "abv": 5.5,
+      "volume_cl": 33.0,
+      "brewery": "2085",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Drikbeer",
+          "price": 49.0,
+          "url": "https://drikbeer.com/products/2085-1-bohemian-pilsner",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 49.0,
+      "min_price": 49.0,
+      "shop": "Drikbeer",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
+      "id": 16989,
+      "name": "2085 - 25.2 Italian Spicy Gose",
+      "image": "https://cdn.shopify.com/s/files/1/0368/1628/9924/files/2085-25-2-italian-spicy-gose.png?v=1781245641",
+      "type": "Gose",
+      "abv": 4.4,
+      "volume_cl": 33.0,
+      "brewery": "2085",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Drikbeer",
+          "price": 49.0,
+          "url": "https://drikbeer.com/products/2085-25-2-italian-spicy-gose",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 49.0,
+      "min_price": 49.0,
+      "shop": "Drikbeer",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
+      "id": 16992,
+      "name": "2085 - 3 Hoppy Mexical Lager",
+      "image": "https://cdn.shopify.com/s/files/1/0368/1628/9924/files/2085-3-hoppy-mexical-lager.png?v=1781245641",
+      "type": "Lager",
+      "abv": 5.7,
+      "volume_cl": 33.0,
+      "brewery": "2085",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Drikbeer",
+          "price": 49.0,
+          "url": "https://drikbeer.com/products/2085-3-hoppy-mexical-lager",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 49.0,
+      "min_price": 49.0,
+      "shop": "Drikbeer",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
+      "id": 16993,
+      "name": "2085 - 2 Wallonia Wit",
+      "image": "https://cdn.shopify.com/s/files/1/0368/1628/9924/files/2085-2-wallonia-wit.png?v=1781245641",
+      "type": null,
+      "abv": 5.5,
+      "volume_cl": 33.0,
+      "brewery": "2085",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Drikbeer",
+          "price": 49.0,
+          "url": "https://drikbeer.com/products/2085-2-wallonia-wit",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 49.0,
+      "min_price": 49.0,
+      "shop": "Drikbeer",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
+      "id": 16999,
+      "name": "Underwood - Rising Sun",
+      "image": "https://cdn.shopify.com/s/files/1/0368/1628/9924/files/underwood-rising-sun.png?v=1781245641",
+      "type": "Lager",
+      "abv": 5.0,
+      "volume_cl": 33.0,
+      "brewery": "Underwood",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Drikbeer",
+          "price": 49.0,
+          "url": "https://drikbeer.com/products/underwood-rising-sun",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 49.0,
+      "min_price": 49.0,
+      "shop": "Drikbeer",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
+      "id": 17000,
+      "name": "Underwood - Noir",
+      "image": "https://cdn.shopify.com/s/files/1/0368/1628/9924/files/underwood-noir.png?v=1781245640",
+      "type": "Stout",
+      "abv": 5.6,
+      "volume_cl": 33.0,
+      "brewery": "Underwood",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Drikbeer",
+          "price": 49.0,
+          "url": "https://drikbeer.com/products/underwood-noir",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 49.0,
+      "min_price": 49.0,
+      "shop": "Drikbeer",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
+      "id": 17001,
+      "name": "IIIO - Czech Lager",
+      "image": "https://cdn.shopify.com/s/files/1/0368/1628/9924/files/iiio-czech-lager.png?v=1781245641",
+      "type": "Lager",
+      "abv": 4.7,
+      "volume_cl": 33.0,
+      "brewery": "IIIO",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Drikbeer",
+          "price": 49.0,
+          "url": "https://drikbeer.com/products/iiio-czech-lager",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 49.0,
+      "min_price": 49.0,
+      "shop": "Drikbeer",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
+      "id": 17017,
+      "name": "Fat Orange Cat - Baby Kittens",
+      "image": "https://cdn.shopify.com/s/files/1/0368/1628/9924/files/fat-orange-cat-baby-kittens.png?v=1778230840",
+      "type": "New England IPA",
+      "abv": 6.5,
+      "volume_cl": 47.3,
+      "brewery": "Fat Orange Cat",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Drikbeer",
+          "price": 49.0,
+          "url": "https://drikbeer.com/products/fat-orange-cat-baby-kittens",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 49.0,
+      "min_price": 49.0,
+      "shop": "Drikbeer",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
+      "id": 17026,
+      "name": "Jolly Pumpkin - iO Saison",
+      "image": "https://cdn.shopify.com/s/files/1/0368/1628/9924/files/jolly-pumpkin-io-saison.png?v=1777455391",
+      "type": "Saison",
+      "abv": 6.8,
+      "volume_cl": 47.3,
+      "brewery": "Jolly Pumpkin",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Drikbeer",
+          "price": 49.0,
+          "url": "https://drikbeer.com/products/jolly-pumpkin-io-saison",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 49.0,
+      "min_price": 49.0,
+      "shop": "Drikbeer",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
+      "id": 17027,
+      "name": "Jolly Pumpkin - Madrugada Obscura",
+      "image": "https://cdn.shopify.com/s/files/1/0368/1628/9924/files/jolly-pumpkin-madrugada-obscura.png?v=1777455390",
+      "type": "Stout",
+      "abv": 8.1,
+      "volume_cl": 47.3,
+      "brewery": "Jolly Pumpkin",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Drikbeer",
+          "price": 49.0,
+          "url": "https://drikbeer.com/products/jolly-pumpkin-madrugada-obscura",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 49.0,
+      "min_price": 49.0,
+      "shop": "Drikbeer",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
+      "id": 17028,
+      "name": "Enegren - Valkyrie",
+      "image": "https://cdn.shopify.com/s/files/1/0368/1628/9924/files/enegren-valkyrie.png?v=1777538741",
+      "type": null,
+      "abv": 4.9,
+      "volume_cl": 35.5,
+      "brewery": "Enegren",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Drikbeer",
+          "price": 49.0,
+          "url": "https://drikbeer.com/products/enegren-valkyrie",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 49.0,
+      "min_price": 49.0,
+      "shop": "Drikbeer",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
+      "id": 17031,
+      "name": "Jolly Pumpkin - Biere de Mars",
+      "image": "https://cdn.shopify.com/s/files/1/0368/1628/9924/files/jolly-pumpkin-biere-de-mars.png?v=1777455391",
+      "type": "Sour",
+      "abv": 7.0,
+      "volume_cl": 47.3,
+      "brewery": "Jolly Pumpkin",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Drikbeer",
+          "price": 49.0,
+          "url": "https://drikbeer.com/products/jolly-pumpkin-biere-de-mars",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 49.0,
+      "min_price": 49.0,
+      "shop": "Drikbeer",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
+      "id": 17060,
+      "name": "Blackout - VI-BRANCE",
+      "image": "https://cdn.shopify.com/s/files/1/0368/1628/9924/files/vibrance_7543a938-09af-432f-a143-d3b0153a0311.png?v=1746118245",
+      "type": "India Pale Ale (IPA)",
+      "abv": 6.0,
+      "volume_cl": 44.0,
+      "brewery": "Blackout",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Drikbeer",
+          "price": 49.0,
+          "url": "https://drikbeer.com/products/blackout-vi-brance",
+          "discount_pct": 16.9,
+          "old_price": 59.0
+        }
+      ],
+      "cheapest_price": 49.0,
+      "min_price": 49.0,
+      "shop": "Drikbeer",
+      "discount_pct": 16.9,
+      "max_discount_pct": 16.9
+    },
+    {
+      "id": 17062,
+      "name": "Blackout - VI-SION",
+      "image": "https://cdn.shopify.com/s/files/1/0368/1628/9924/files/vision_df655d4b-2350-410f-930a-8cb858f5d4ff.png?v=1746118262",
+      "type": "Sour",
+      "abv": 10.0,
+      "volume_cl": 33.0,
+      "brewery": "Blackout",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Drikbeer",
+          "price": 49.0,
+          "url": "https://drikbeer.com/products/blackout-vi-sion",
+          "discount_pct": 38.0,
+          "old_price": 79.0
+        }
+      ],
+      "cheapest_price": 49.0,
+      "min_price": 49.0,
+      "shop": "Drikbeer",
+      "discount_pct": 38.0,
+      "max_discount_pct": 38.0
+    },
+    {
+      "id": 17063,
+      "name": "Blackout - Blood of the transistor",
+      "image": "https://cdn.shopify.com/s/files/1/0368/1628/9924/files/blood_of_the_transistor.png?v=1764272523",
+      "type": "Imperial Stout",
+      "abv": 12.0,
+      "volume_cl": 33.0,
+      "brewery": "Blackout",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Drikbeer",
+          "price": 49.0,
+          "url": "https://drikbeer.com/products/blackout-blood-of-the-transistor",
+          "discount_pct": 40.2,
+          "old_price": 82.0
+        }
+      ],
+      "cheapest_price": 49.0,
+      "min_price": 49.0,
+      "shop": "Drikbeer",
+      "discount_pct": 40.2,
+      "max_discount_pct": 40.2
+    },
+    {
       "id": 14187,
       "name": "Hr. Frederiksen- 44 cl, 10,5%, Imperial Stout - Amager Bryghus",
       "image": "https://cdn.shopify.com/s/files/1/0600/9438/2263/products/Hr.Frederiksen.jpg?v=1680599385",
@@ -22070,6 +22630,54 @@
       "cheapest_price": 49.0,
       "min_price": 49.0,
       "shop": "Øltanken",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
+      "id": 15451,
+      "name": "Vemb Bryghus, Havre Stout - Øl",
+      "image": "https://www.vildmedvin.dk/img/1000/1000/resize/v/e/vemb_bryghus_havre_stout.jpg",
+      "type": "Stout",
+      "abv": 7.2,
+      "volume_cl": 50.0,
+      "brewery": "Vemb Bryghus",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Vild med Vin",
+          "price": 49.0,
+          "url": "https://www.vildmedvin.dk/vemb-bryghus-havre-stout",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 49.0,
+      "min_price": 49.0,
+      "shop": "Vild med Vin",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
+      "id": 15452,
+      "name": "Vemb Bryghus, Blodappelsin Pale Ale - Øl",
+      "image": "https://www.vildmedvin.dk/img/1000/1000/resize/v/e/vemb_bryghus_blodappelsin_pale_ale.jpg",
+      "type": "Pale Ale",
+      "abv": 4.9,
+      "volume_cl": 50.0,
+      "brewery": "Vemb Bryghus",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Vild med Vin",
+          "price": 49.0,
+          "url": "https://www.vildmedvin.dk/vemb-bryghus-blodappelsin-pale-ale",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 49.0,
+      "min_price": 49.0,
+      "shop": "Vild med Vin",
       "discount_pct": 0,
       "max_discount_pct": 0
     },
@@ -22170,6 +22778,30 @@
       "max_discount_pct": 0
     },
     {
+      "id": 15453,
+      "name": "Vemb Bryghus, Husets Blanc - Øl",
+      "image": "https://www.vildmedvin.dk/img/1000/1000/resize/v/e/vemb_bryghus_husets_blanc.jpg",
+      "type": null,
+      "abv": 4.5,
+      "volume_cl": 50.0,
+      "brewery": "Vemb Bryghus",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Vild med Vin",
+          "price": 49.0,
+          "url": "https://www.vildmedvin.dk/vemb-bryghus-husets-blanc",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 49.0,
+      "min_price": 49.0,
+      "shop": "Vild med Vin",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
       "id": 15397,
       "name": "Bad Seed, Sleigher - Øl",
       "image": "https://www.vildmedvin.dk/img/1000/1000/resize/b/a/bad_seed_sleigher.jpg",
@@ -22207,78 +22839,6 @@
           "shop_name": "Vild med Vin",
           "price": 49.0,
           "url": "https://www.vildmedvin.dk/shepherd-neame-christmas-ale-luxury-box",
-          "discount_pct": 0,
-          "old_price": null
-        }
-      ],
-      "cheapest_price": 49.0,
-      "min_price": 49.0,
-      "shop": "Vild med Vin",
-      "discount_pct": 0,
-      "max_discount_pct": 0
-    },
-    {
-      "id": 15451,
-      "name": "Vemb Bryghus, Havre Stout - Øl",
-      "image": "https://www.vildmedvin.dk/img/1000/1000/resize/v/e/vemb_bryghus_havre_stout.jpg",
-      "type": "Stout",
-      "abv": 7.2,
-      "volume_cl": 50.0,
-      "brewery": "Vemb Bryghus",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Vild med Vin",
-          "price": 49.0,
-          "url": "https://www.vildmedvin.dk/vemb-bryghus-havre-stout",
-          "discount_pct": 0,
-          "old_price": null
-        }
-      ],
-      "cheapest_price": 49.0,
-      "min_price": 49.0,
-      "shop": "Vild med Vin",
-      "discount_pct": 0,
-      "max_discount_pct": 0
-    },
-    {
-      "id": 15452,
-      "name": "Vemb Bryghus, Blodappelsin Pale Ale - Øl",
-      "image": "https://www.vildmedvin.dk/img/1000/1000/resize/v/e/vemb_bryghus_blodappelsin_pale_ale.jpg",
-      "type": "Pale Ale",
-      "abv": 4.9,
-      "volume_cl": 50.0,
-      "brewery": "Vemb Bryghus",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Vild med Vin",
-          "price": 49.0,
-          "url": "https://www.vildmedvin.dk/vemb-bryghus-blodappelsin-pale-ale",
-          "discount_pct": 0,
-          "old_price": null
-        }
-      ],
-      "cheapest_price": 49.0,
-      "min_price": 49.0,
-      "shop": "Vild med Vin",
-      "discount_pct": 0,
-      "max_discount_pct": 0
-    },
-    {
-      "id": 15453,
-      "name": "Vemb Bryghus, Husets Blanc - Øl",
-      "image": "https://www.vildmedvin.dk/img/1000/1000/resize/v/e/vemb_bryghus_husets_blanc.jpg",
-      "type": null,
-      "abv": 4.5,
-      "volume_cl": 50.0,
-      "brewery": "Vemb Bryghus",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Vild med Vin",
-          "price": 49.0,
-          "url": "https://www.vildmedvin.dk/vemb-bryghus-husets-blanc",
           "discount_pct": 0,
           "old_price": null
         }
@@ -26228,44 +26788,6 @@
       "max_discount_pct": 5.2
     },
     {
-      "id": 16146,
-      "name": "Vault City, Større Sjampanjebrus - Øl",
-      "image": "https://www.vildmedvin.dk/img/1000/1000/resize/v/a/vault_city_st_rre_sjampanjebrus.jpg",
-      "type": "Sour Beer",
-      "abv": 6.0,
-      "volume_cl": 44.0,
-      "brewery": "Vault City Brewing",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Vild med Vin",
-          "price": 55.0,
-          "url": "https://www.vildmedvin.dk/vault-city-storre-sjampanjebrus",
-          "discount_pct": 0,
-          "old_price": null
-        },
-        {
-          "shop_name": "Beermatch",
-          "price": 59.0,
-          "url": "https://www.beermatch.dk/products/vault-city-storre-sjampanje-brus",
-          "discount_pct": 0,
-          "old_price": 0.0
-        },
-        {
-          "shop_name": "Brygshoppen",
-          "price": 60.0,
-          "url": "https://brygshoppen.dk/products/storre-sjampanjebrus-6-44cl",
-          "discount_pct": 0,
-          "old_price": 0.0
-        }
-      ],
-      "cheapest_price": 55.0,
-      "min_price": 55.0,
-      "shop": "Vild med Vin",
-      "discount_pct": 0,
-      "max_discount_pct": 0
-    },
-    {
       "id": 13200,
       "name": "St. Bernardus Tripel 8% 75cl",
       "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/st-bernardus-tripel-75cl.png?v=1773490558",
@@ -26350,6 +26872,44 @@
           "url": "https://www.beermatch.dk/products/funky-fluid-gelato-jogo-bonito-final-eight-brasil",
           "discount_pct": 0,
           "old_price": null
+        }
+      ],
+      "cheapest_price": 55.0,
+      "min_price": 55.0,
+      "shop": "Vild med Vin",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
+      "id": 16146,
+      "name": "Vault City, Større Sjampanjebrus - Øl",
+      "image": "https://www.vildmedvin.dk/img/1000/1000/resize/v/a/vault_city_st_rre_sjampanjebrus.jpg",
+      "type": "Sour Beer",
+      "abv": 6.0,
+      "volume_cl": 44.0,
+      "brewery": "Vault City Brewing",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Vild med Vin",
+          "price": 55.0,
+          "url": "https://www.vildmedvin.dk/vault-city-storre-sjampanjebrus",
+          "discount_pct": 0,
+          "old_price": null
+        },
+        {
+          "shop_name": "Beermatch",
+          "price": 59.0,
+          "url": "https://www.beermatch.dk/products/vault-city-storre-sjampanje-brus",
+          "discount_pct": 0,
+          "old_price": 0.0
+        },
+        {
+          "shop_name": "Brygshoppen",
+          "price": 60.0,
+          "url": "https://brygshoppen.dk/products/storre-sjampanjebrus-6-44cl",
+          "discount_pct": 0,
+          "old_price": 0.0
         }
       ],
       "cheapest_price": 55.0,
@@ -26971,6 +27531,78 @@
       "shop": "Beermatch",
       "discount_pct": 38.2,
       "max_discount_pct": 38.2
+    },
+    {
+      "id": 16974,
+      "name": "Blackout - Too Much Bliss - Bearface Whiskey BA",
+      "image": "https://cdn.shopify.com/s/files/1/0368/1628/9924/files/too_much_bliss_2355aa54-ff4e-4acd-86b7-a9f75f9d5790.png?v=1746180187",
+      "type": "Imperial Stout",
+      "abv": 13.0,
+      "volume_cl": 33.0,
+      "brewery": "Blackout",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Drikbeer",
+          "price": 55.0,
+          "url": "https://drikbeer.com/products/blackout-too-much-bliss",
+          "discount_pct": 38.2,
+          "old_price": 89.0
+        }
+      ],
+      "cheapest_price": 55.0,
+      "min_price": 55.0,
+      "shop": "Drikbeer",
+      "discount_pct": 38.2,
+      "max_discount_pct": 38.2
+    },
+    {
+      "id": 17034,
+      "name": "Lost Abbey - Devotion",
+      "image": "https://cdn.shopify.com/s/files/1/0368/1628/9924/files/devotion_cfb27dea-034b-4df2-99da-8f882f02a4f3.png?v=1752826794",
+      "type": "Belgian Blonde",
+      "abv": 6.0,
+      "volume_cl": 47.3,
+      "brewery": "Lost Abbey",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Drikbeer",
+          "price": 55.0,
+          "url": "https://drikbeer.com/products/lost-abbey-devotion",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 55.0,
+      "min_price": 55.0,
+      "shop": "Drikbeer",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
+      "id": 17061,
+      "name": "Blackout - Double Vibrance",
+      "image": "https://cdn.shopify.com/s/files/1/0368/1628/9924/files/double_vibrance_a6db5a80-4349-42e2-884f-aa7f9e97cda0.png?v=1746118249",
+      "type": "Dubbel",
+      "abv": 8.0,
+      "volume_cl": 44.0,
+      "brewery": "Blackout",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Drikbeer",
+          "price": 55.0,
+          "url": "https://drikbeer.com/products/blackout-double-vibrance",
+          "discount_pct": 6.8,
+          "old_price": 59.0
+        }
+      ],
+      "cheapest_price": 55.0,
+      "min_price": 55.0,
+      "shop": "Drikbeer",
+      "discount_pct": 6.8,
+      "max_discount_pct": 6.8
     },
     {
       "id": 16665,
@@ -28386,6 +29018,30 @@
       "max_discount_pct": 0
     },
     {
+      "id": 17087,
+      "name": "AleSmith - My Bloody Valentine",
+      "image": "https://cdn.shopify.com/s/files/1/0368/1628/9924/files/my_bloody_valentine_ce20f31d-25fd-4011-bf15-5feaac5443fa.png?v=1749200602",
+      "type": null,
+      "abv": 6.6,
+      "volume_cl": 47.3,
+      "brewery": "AleSmith",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Drikbeer",
+          "price": 56.0,
+          "url": "https://drikbeer.com/products/alesmith-my-bloody-valentine",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 56.0,
+      "min_price": 56.0,
+      "shop": "Drikbeer",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
       "id": 13661,
       "name": "Bad Seed Brewing – Anvil – DDH American Light Lager – Med et ekstra skud Mosaic i form af Dynaboost, Hyper Boost, T90 og Cryo &#8211; 0,44 l. – 4,4%",
       "image": "https://www.bestofbeers.dk/wp-content/uploads/2026/03/DDH-Anvil.png",
@@ -28750,6 +29406,30 @@
       "max_discount_pct": 0
     },
     {
+      "id": 17067,
+      "name": "Blackout - VI-CE",
+      "image": "https://cdn.shopify.com/s/files/1/0368/1628/9924/files/vice_d52b61e6-5929-460f-a5c5-be1f9ade436f.png?v=1746118252",
+      "type": "Imperial Stout",
+      "abv": 13.0,
+      "volume_cl": 33.0,
+      "brewery": "Blackout",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Drikbeer",
+          "price": 57.0,
+          "url": "https://drikbeer.com/products/blackout-vi-ce",
+          "discount_pct": 40.6,
+          "old_price": 96.0
+        }
+      ],
+      "cheapest_price": 57.0,
+      "min_price": 57.0,
+      "shop": "Drikbeer",
+      "discount_pct": 40.6,
+      "max_discount_pct": 40.6
+    },
+    {
       "id": 16294,
       "name": "Vault city - Marvellous Liquids Brainmelting Fluid",
       "image": "https://cdn.shopify.com/s/files/1/0776/5209/9400/files/1340A452-9190-4C70-AA7F-8CA103EA127B.jpg?v=1781119106",
@@ -28949,7 +29629,7 @@
       "max_discount_pct": 0
     },
     {
-      "id": 16861,
+      "id": 16967,
       "name": "Öö 10,5% 33cl",
       "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/oo-10-5-33cl.png?v=1750597033",
       "type": "Imperial Stout",
@@ -29309,6 +29989,51 @@
       "max_discount_pct": 10.0
     },
     {
+      "id": 14449,
+      "name": "AleSmith - Speedway Stout",
+      "image": "https://cdn.shopify.com/s/files/1/0776/5209/9400/files/24936D22-9612-44F4-A0D4-01673A938A34.jpg?v=1713950452",
+      "type": "Stout",
+      "abv": 12.0,
+      "volume_cl": 47.3,
+      "brewery": "AleSmith",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Drikbeer",
+          "price": 59.0,
+          "url": "https://drikbeer.com/products/alesmith-speedway-stout",
+          "discount_pct": 0,
+          "old_price": null
+        },
+        {
+          "shop_name": "Øltanken",
+          "price": 63.0,
+          "url": "https://oltanken.dk/products/alesmith-speedway-stout",
+          "discount_pct": 0,
+          "old_price": null
+        },
+        {
+          "shop_name": "Best of Beers",
+          "price": 86.0,
+          "url": "https://www.bestofbeers.dk/shop/alesmith-speedway-stout-imp-coffee-stout-0473-l-120/",
+          "discount_pct": 0,
+          "old_price": null
+        },
+        {
+          "shop_name": "Beershoppen",
+          "price": 90.0,
+          "url": "https://beershoppen.dk/products/salted-caramel-speedway-stout-alesmith-47-5cl-12",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 59.0,
+      "min_price": 59.0,
+      "shop": "Drikbeer",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
       "id": 13179,
       "name": "Geuze Mariage Parfait 8% 37,5cl",
       "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/geuze-mariage-parfait-8-37-5cl.png?v=1737806467",
@@ -29360,6 +30085,54 @@
       "cheapest_price": 59.0,
       "min_price": 59.0,
       "shop": "Brygshoppen",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
+      "id": 17016,
+      "name": "Fat Orange Cat - Imperial Jack",
+      "image": "https://cdn.shopify.com/s/files/1/0368/1628/9924/files/fat-orange-cat-imperial-jack.png?v=1778230176",
+      "type": "Pale Ale",
+      "abv": 8.0,
+      "volume_cl": 47.3,
+      "brewery": "Fat Orange Cat",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Drikbeer",
+          "price": 59.0,
+          "url": "https://drikbeer.com/products/fat-orange-cat-imperial-jack",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 59.0,
+      "min_price": 59.0,
+      "shop": "Drikbeer",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
+      "id": 17039,
+      "name": "Superstition Meadery - Crystal Sail",
+      "image": "https://cdn.shopify.com/s/files/1/0368/1628/9924/files/crystal_sail.png?v=1775759954",
+      "type": "Mjød",
+      "abv": 6.0,
+      "volume_cl": 35.5,
+      "brewery": "Superstition Meadery",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Drikbeer",
+          "price": 59.0,
+          "url": "https://drikbeer.com/products/superstition-meadery-crystal-sail",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 59.0,
+      "min_price": 59.0,
+      "shop": "Drikbeer",
       "discount_pct": 0,
       "max_discount_pct": 0
     },
@@ -29518,6 +30291,534 @@
       "cheapest_price": 59.0,
       "min_price": 59.0,
       "shop": "Beermatch",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
+      "id": 16983,
+      "name": "Eredità - Papapils",
+      "image": "https://cdn.shopify.com/s/files/1/0368/1628/9924/files/eredita-papapils_3028d700-5db7-497f-b088-f74094a6eee4.png?v=1781253464",
+      "type": "American Pale Ale",
+      "abv": 4.8,
+      "volume_cl": 47.3,
+      "brewery": "Eredità",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Drikbeer",
+          "price": 59.0,
+          "url": "https://drikbeer.com/products/eredita-papapils",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 59.0,
+      "min_price": 59.0,
+      "shop": "Drikbeer",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
+      "id": 16985,
+      "name": "2085 - 19 West Coast IPA",
+      "image": "https://cdn.shopify.com/s/files/1/0368/1628/9924/files/2085-19-west-coast-ipa.png?v=1781245641",
+      "type": "West Coast IPA",
+      "abv": 6.3,
+      "volume_cl": 33.0,
+      "brewery": "2085",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Drikbeer",
+          "price": 59.0,
+          "url": "https://drikbeer.com/products/2085-19-west-coast-ipa",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 59.0,
+      "min_price": 59.0,
+      "shop": "Drikbeer",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
+      "id": 13585,
+      "name": "Underwood Brewery – Negroni DIPA – Double IPA – 0,33 l. – 8,0%",
+      "image": "https://www.bestofbeers.dk/wp-content/uploads/2026/05/UnderwoodbreweryNegroni.jpg",
+      "type": "Double IPA",
+      "abv": 8.0,
+      "volume_cl": 33.0,
+      "brewery": "Underwood",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Drikbeer",
+          "price": 59.0,
+          "url": "https://drikbeer.com/products/underwood-dipa",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 59.0,
+      "min_price": 59.0,
+      "shop": "Drikbeer",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
+      "id": 16988,
+      "name": "Eredità - Arcana",
+      "image": "https://cdn.shopify.com/s/files/1/0368/1628/9924/files/eredita-arcana_2b4c7bca-70b7-42a7-874f-8491f2960cd5.png?v=1781253464",
+      "type": "Lager",
+      "abv": 5.0,
+      "volume_cl": 47.3,
+      "brewery": "Eredità",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Drikbeer",
+          "price": 59.0,
+          "url": "https://drikbeer.com/products/eredita-arcana",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 59.0,
+      "min_price": 59.0,
+      "shop": "Drikbeer",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
+      "id": 16994,
+      "name": "Van Ewing - Light of Day",
+      "image": "https://cdn.shopify.com/s/files/1/0368/1628/9924/files/van-ewing-light-of-day_695f0a9b-9194-4fc7-ac02-727296b1574b.png?v=1781253464",
+      "type": "Pilsner",
+      "abv": 5.3,
+      "volume_cl": 47.3,
+      "brewery": "Van Ewing",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Drikbeer",
+          "price": 59.0,
+          "url": "https://drikbeer.com/products/van-ewing-light-of-day",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 59.0,
+      "min_price": 59.0,
+      "shop": "Drikbeer",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
+      "id": 16995,
+      "name": "IIIO - Pyrizhok",
+      "image": "https://cdn.shopify.com/s/files/1/0368/1628/9924/files/iiio-pyrizhok.png?v=1781245641",
+      "type": "India Pale Ale (IPA)",
+      "abv": 6.0,
+      "volume_cl": 33.0,
+      "brewery": "IIIO",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Drikbeer",
+          "price": 59.0,
+          "url": "https://drikbeer.com/products/iiio-pyrizhok",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 59.0,
+      "min_price": 59.0,
+      "shop": "Drikbeer",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
+      "id": 16996,
+      "name": "IIIO - Cosaco Mexicano",
+      "image": "https://cdn.shopify.com/s/files/1/0368/1628/9924/files/iiio-cosaco-mexicano.png?v=1781245641",
+      "type": "Gose",
+      "abv": 5.0,
+      "volume_cl": 33.0,
+      "brewery": "IIIO",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Drikbeer",
+          "price": 59.0,
+          "url": "https://drikbeer.com/products/iiio-cosaco-mexicano",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 59.0,
+      "min_price": 59.0,
+      "shop": "Drikbeer",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
+      "id": 16997,
+      "name": "IIIO - Tenditnist",
+      "image": "https://cdn.shopify.com/s/files/1/0368/1628/9924/files/iiio-tenditnist.png?v=1781245641",
+      "type": null,
+      "abv": 4.8,
+      "volume_cl": 33.0,
+      "brewery": "IIIO",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Drikbeer",
+          "price": 59.0,
+          "url": "https://drikbeer.com/products/iiio-tenditnist",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 59.0,
+      "min_price": 59.0,
+      "shop": "Drikbeer",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
+      "id": 16998,
+      "name": "IIIO - Sukhyi Chornyi",
+      "image": "https://cdn.shopify.com/s/files/1/0368/1628/9924/files/iiio-sukhyi-chornyi.png?v=1781245641",
+      "type": "Stout",
+      "abv": 5.5,
+      "volume_cl": 33.0,
+      "brewery": "IIIO",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Drikbeer",
+          "price": 59.0,
+          "url": "https://drikbeer.com/products/iiio-sukhyi-chornyi",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 59.0,
+      "min_price": 59.0,
+      "shop": "Drikbeer",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
+      "id": 17010,
+      "name": "AleSmith - Pace Car",
+      "image": "https://cdn.shopify.com/s/files/1/0368/1628/9924/files/alesmith-pace-car.png?v=1780651843",
+      "type": "Stout",
+      "abv": 6.0,
+      "volume_cl": 47.3,
+      "brewery": "AleSmith",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Drikbeer",
+          "price": 59.0,
+          "url": "https://drikbeer.com/products/alesmith-pace-car",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 59.0,
+      "min_price": 59.0,
+      "shop": "Drikbeer",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
+      "id": 17011,
+      "name": "Evil Twin NYC - You Said You Liked IPAs but This Is a Pale Ale",
+      "image": "https://cdn.shopify.com/s/files/1/0368/1628/9924/files/you_said_you_liked_ipas_but_this_is_a_pale_ale_b6ef072f-8176-4e1c-83a0-0acbdbd53e00.png?v=1771577336",
+      "type": "India Pale Ale (IPA)",
+      "abv": 5.0,
+      "volume_cl": 47.3,
+      "brewery": "Evil Twin NYC",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Drikbeer",
+          "price": 59.0,
+          "url": "https://drikbeer.com/products/evil-twin-nyc-you-said-you-liked-ipas-but-this-is-a-pale-ale",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 59.0,
+      "min_price": 59.0,
+      "shop": "Drikbeer",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
+      "id": 17018,
+      "name": "Brix City - Tasty Jams",
+      "image": "https://cdn.shopify.com/s/files/1/0368/1628/9924/files/brix-city-tasty-jams.png?v=1778231708",
+      "type": "New England IPA",
+      "abv": 6.5,
+      "volume_cl": 47.3,
+      "brewery": "Brix City",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Drikbeer",
+          "price": 59.0,
+          "url": "https://drikbeer.com/products/brix-city-tasty-jams",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 59.0,
+      "min_price": 59.0,
+      "shop": "Drikbeer",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
+      "id": 17020,
+      "name": "Abomination - Sticky Oven - Peanut Butter, Banana & Marshmallow Pie",
+      "image": "https://cdn.shopify.com/s/files/1/0368/1628/9924/files/abomination-sticky-oven-peanut-butter-banana-marshmallow-pie.png?v=1778231760",
+      "type": "Brown Ale",
+      "abv": 7.0,
+      "volume_cl": 47.3,
+      "brewery": "Abomination",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Drikbeer",
+          "price": 59.0,
+          "url": "https://drikbeer.com/products/abomination-sticky-oven-peanut-butter-banana-marshmallow-pie",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 59.0,
+      "min_price": 59.0,
+      "shop": "Drikbeer",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
+      "id": 17025,
+      "name": "Evil Twin NYC - Purple Rice Lager",
+      "image": "https://cdn.shopify.com/s/files/1/0368/1628/9924/files/evil-twin-nyc-purple-rice-lager.png?v=1777614684",
+      "type": "Lager",
+      "abv": 5.0,
+      "volume_cl": 47.3,
+      "brewery": "Evil Twin NYC",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Drikbeer",
+          "price": 59.0,
+          "url": "https://drikbeer.com/products/evil-twin-nyc-purple-rice-lager",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 59.0,
+      "min_price": 59.0,
+      "shop": "Drikbeer",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
+      "id": 17030,
+      "name": "Evil Twin NYC - Greenhouse Czech Pils Conditioned on American Oak Foudre",
+      "image": "https://cdn.shopify.com/s/files/1/0368/1628/9924/files/evil-twin-nyc-greenhouse-czech-pils.png?v=1777455391",
+      "type": "Pilsner",
+      "abv": 5.0,
+      "volume_cl": 47.3,
+      "brewery": "Evil Twin NYC",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Drikbeer",
+          "price": 59.0,
+          "url": "https://drikbeer.com/products/evil-twin-nyc-greenhouse-czech-pils-american-oak-foudre",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 59.0,
+      "min_price": 59.0,
+      "shop": "Drikbeer",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
+      "id": 17035,
+      "name": "Didko - Memento Mori",
+      "image": "https://cdn.shopify.com/s/files/1/0368/1628/9924/files/memento_mori.png?v=1777023281",
+      "type": "Porter",
+      "abv": 6.9,
+      "volume_cl": 50.0,
+      "brewery": "Didko",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Drikbeer",
+          "price": 59.0,
+          "url": "https://drikbeer.com/products/didko-memento-mori",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 59.0,
+      "min_price": 59.0,
+      "shop": "Drikbeer",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
+      "id": 17036,
+      "name": "Didko - Cones",
+      "image": "https://cdn.shopify.com/s/files/1/0368/1628/9924/files/cones.png?v=1777023318",
+      "type": "New England IPA",
+      "abv": 5.5,
+      "volume_cl": 50.0,
+      "brewery": "Didko",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Drikbeer",
+          "price": 59.0,
+          "url": "https://drikbeer.com/products/didko-cones",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 59.0,
+      "min_price": 59.0,
+      "shop": "Drikbeer",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
+      "id": 17037,
+      "name": "Didko - Swamp",
+      "image": "https://cdn.shopify.com/s/files/1/0368/1628/9924/files/swamp.png?v=1777023250",
+      "type": "Imperial Stout",
+      "abv": 8.0,
+      "volume_cl": 50.0,
+      "brewery": "Didko",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Drikbeer",
+          "price": 59.0,
+          "url": "https://drikbeer.com/products/didko-swamp",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 59.0,
+      "min_price": 59.0,
+      "shop": "Drikbeer",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
+      "id": 17057,
+      "name": "Evil Twin NYC - A Little Bit Fancy",
+      "image": "https://cdn.shopify.com/s/files/1/0368/1628/9924/files/dandies_73f03815-d674-4318-9304-f9ba700bf168.png?v=1771577335",
+      "type": "Pilsner",
+      "abv": 5.0,
+      "volume_cl": 47.3,
+      "brewery": "Evil Twin NYC",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Drikbeer",
+          "price": 59.0,
+          "url": "https://drikbeer.com/products/evil-twin-nyc-a-little-bit-fancy",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 59.0,
+      "min_price": 59.0,
+      "shop": "Drikbeer",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
+      "id": 17071,
+      "name": "Trillium - Oenobier Semillon",
+      "image": "https://cdn.shopify.com/s/files/1/0368/1628/9924/files/oenobiersemillon.png?v=1695384994",
+      "type": "Sour",
+      "abv": 10.8,
+      "volume_cl": 33.0,
+      "brewery": "Trillium",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Drikbeer",
+          "price": 59.0,
+          "url": "https://drikbeer.com/products/trillium-oenobier-semillon",
+          "discount_pct": 41.0,
+          "old_price": 100.0
+        }
+      ],
+      "cheapest_price": 59.0,
+      "min_price": 59.0,
+      "shop": "Drikbeer",
+      "discount_pct": 41.0,
+      "max_discount_pct": 41.0
+    },
+    {
+      "id": 17079,
+      "name": "Brewing Projekt - Squeeze & Crush",
+      "image": "https://cdn.shopify.com/s/files/1/0368/1628/9924/files/squeeze_crush.png?v=1759482982",
+      "type": "Lager",
+      "abv": 4.9,
+      "volume_cl": 35.5,
+      "brewery": "Brewing Projekt",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Drikbeer",
+          "price": 59.0,
+          "url": "https://drikbeer.com/products/brewing-projekt-squeeze-and-crush",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 59.0,
+      "min_price": 59.0,
+      "shop": "Drikbeer",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
+      "id": 17092,
+      "name": "Pipeworks - Cold Crispy Lime",
+      "image": "https://cdn.shopify.com/s/files/1/0368/1628/9924/files/cold_crispy_lime_e2d0cd61-248c-4dcf-931f-04b61fbe1a19.png?v=1744798349",
+      "type": "Lager",
+      "abv": 4.2,
+      "volume_cl": 47.3,
+      "brewery": "Pipeworks",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Drikbeer",
+          "price": 59.0,
+          "url": "https://drikbeer.com/products/pipeworks-cold-crispy-lime",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 59.0,
+      "min_price": 59.0,
+      "shop": "Drikbeer",
       "discount_pct": 0,
       "max_discount_pct": 0
     },
@@ -32767,44 +34068,6 @@
       "max_discount_pct": 3.1
     },
     {
-      "id": 15065,
-      "name": "Salted caramel - Speedway Stout - AleSmith - 47,5cl - 12%",
-      "image": "https://cdn.shopify.com/s/files/1/0600/9438/2263/files/speedwaysaltedcaramel.jpg?v=1779283246",
-      "type": "Stout",
-      "abv": 12.0,
-      "volume_cl": 47.5,
-      "brewery": "Beershoppen",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Øltanken",
-          "price": 63.0,
-          "url": "https://oltanken.dk/products/alesmith-speedway-stout",
-          "discount_pct": 0,
-          "old_price": null
-        },
-        {
-          "shop_name": "Best of Beers",
-          "price": 86.0,
-          "url": "https://www.bestofbeers.dk/shop/alesmith-speedway-stout-imp-coffee-stout-0473-l-120/",
-          "discount_pct": 0,
-          "old_price": null
-        },
-        {
-          "shop_name": "Beershoppen",
-          "price": 90.0,
-          "url": "https://beershoppen.dk/products/salted-caramel-speedway-stout-alesmith-47-5cl-12",
-          "discount_pct": 0,
-          "old_price": null
-        }
-      ],
-      "cheapest_price": 63.0,
-      "min_price": 63.0,
-      "shop": "Øltanken",
-      "discount_pct": 0,
-      "max_discount_pct": 0
-    },
-    {
       "id": 16593,
       "name": "Prizm Brewing Co. × Ophiussa Brewing Co. - Heavy Crown",
       "image": "https://cdn.shopify.com/s/files/1/0776/5209/9400/files/08C722C5-CBA7-4897-A4B8-6944326DDBE7.jpg?v=1782391549",
@@ -33690,6 +34953,30 @@
       "cheapest_price": 65.0,
       "min_price": 65.0,
       "shop": "Brygshoppen",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
+      "id": 17094,
+      "name": "Pipeworks - Blood of the Unicorn",
+      "image": "https://cdn.shopify.com/s/files/1/0368/1628/9924/files/blood_of_the_unicorn_859ea18a-6684-4d29-94b0-b4c935a775db.png?v=1744798324",
+      "type": null,
+      "abv": 6.5,
+      "volume_cl": 47.3,
+      "brewery": "Pipeworks",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Drikbeer",
+          "price": 65.0,
+          "url": "https://drikbeer.com/products/pipeworks-blood-of-the-unicorn",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 65.0,
+      "min_price": 65.0,
+      "shop": "Drikbeer",
       "discount_pct": 0,
       "max_discount_pct": 0
     },
@@ -35296,6 +36583,30 @@
       "max_discount_pct": 0
     },
     {
+      "id": 17024,
+      "name": "Pipeworks - South Paw Peach (6-pack)",
+      "image": "https://cdn.shopify.com/s/files/1/0368/1628/9924/files/south_paw_peach_d956cd32-882c-495e-95b3-80070c45519c.png?v=1777628848",
+      "type": "Kölsch",
+      "abv": 4.7,
+      "volume_cl": 47.3,
+      "brewery": "Pipeworks",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Drikbeer",
+          "price": 68.0,
+          "url": "https://drikbeer.com/products/pipeworks-south-paw-peach",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 68.0,
+      "min_price": 68.0,
+      "shop": "Drikbeer",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
       "id": 12871,
       "name": "Brigand 9% 75cl",
       "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/brigand-9.png?v=1774699943",
@@ -35464,6 +36775,30 @@
       "max_discount_pct": 0
     },
     {
+      "id": 17023,
+      "name": "Root + Branch - Oude Greg (6-pack)",
+      "image": "https://cdn.shopify.com/s/files/1/0368/1628/9924/files/oude_greg_26c9550a-5b60-4324-8e44-f216686a402c.png?v=1777628509",
+      "type": null,
+      "abv": 5.0,
+      "volume_cl": 35.5,
+      "brewery": "Root + Branch",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Drikbeer",
+          "price": 69.0,
+          "url": "https://drikbeer.com/products/root-branch-oude-greg",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 69.0,
+      "min_price": 69.0,
+      "shop": "Drikbeer",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
       "id": 16607,
       "name": "Den Sidste Olie 8% 44cl",
       "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/den-sidste-olie-8-44cl.png?v=1782470392",
@@ -35539,6 +36874,246 @@
       "cheapest_price": 69.0,
       "min_price": 69.0,
       "shop": "Brygshoppen",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
+      "id": 14368,
+      "name": "Van Ewing - Nary a Cloud",
+      "image": "https://cdn.shopify.com/s/files/1/0776/5209/9400/files/70FA106A-BE2C-432A-841D-A822B3295FF8.jpg?v=1777791646",
+      "type": "Sour",
+      "abv": 5.0,
+      "volume_cl": 47.3,
+      "brewery": "Van Ewing",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Drikbeer",
+          "price": 69.0,
+          "url": "https://drikbeer.com/products/van-ewing-nary-a-cloud",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 69.0,
+      "min_price": 69.0,
+      "shop": "Drikbeer",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
+      "id": 17013,
+      "name": "Evil Twin NYC - IPA for People Who Smell in Color",
+      "image": "https://cdn.shopify.com/s/files/1/0368/1628/9924/files/ipa_for_people_who_smell_in_color_647d15ba-fc7a-4bdb-8a82-05c2ea068939.png?v=1771577338",
+      "type": "India Pale Ale (IPA)",
+      "abv": 5.0,
+      "volume_cl": 47.3,
+      "brewery": "Evil Twin NYC",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Drikbeer",
+          "price": 69.0,
+          "url": "https://drikbeer.com/products/evil-twin-nyc-ipa-for-people-who-smell-in-color",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 69.0,
+      "min_price": 69.0,
+      "shop": "Drikbeer",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
+      "id": 17014,
+      "name": "Tox - Digitox",
+      "image": "https://cdn.shopify.com/s/files/1/0368/1628/9924/files/tox-digitox.png?v=1778230748",
+      "type": "Double IPA",
+      "abv": 8.5,
+      "volume_cl": 47.3,
+      "brewery": "Tox",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Drikbeer",
+          "price": 69.0,
+          "url": "https://drikbeer.com/products/tox-digitox",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 69.0,
+      "min_price": 69.0,
+      "shop": "Drikbeer",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
+      "id": 17015,
+      "name": "Fat Orange Cat - Walkabout - Watermelon & Blueberry",
+      "image": "https://cdn.shopify.com/s/files/1/0368/1628/9924/files/fat-orange-cat-walkabout-watermelon-blueberry.png?v=1778230643",
+      "type": "Sour",
+      "abv": 5.2,
+      "volume_cl": 47.3,
+      "brewery": "Fat Orange Cat",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Drikbeer",
+          "price": 69.0,
+          "url": "https://drikbeer.com/products/fat-orange-cat-walkabout-watermelon-blueberry",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 69.0,
+      "min_price": 69.0,
+      "shop": "Drikbeer",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
+      "id": 17019,
+      "name": "Abomination - Wandering into the Fog: Moonlit Dark Berry",
+      "image": "https://cdn.shopify.com/s/files/1/0368/1628/9924/files/abomination-wandering-into-the-fog-moonlit-dark-berry.png?v=1778231065",
+      "type": "Double IPA",
+      "abv": 8.6,
+      "volume_cl": 47.3,
+      "brewery": "Abomination",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Drikbeer",
+          "price": 69.0,
+          "url": "https://drikbeer.com/products/abomination-wandering-into-the-fog-moonlit-dark-berry",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 69.0,
+      "min_price": 69.0,
+      "shop": "Drikbeer",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
+      "id": 17021,
+      "name": "Abomination - Midsomer Night's Snack",
+      "image": "https://cdn.shopify.com/s/files/1/0368/1628/9924/files/abomination-midsomer-nights-snack.png?v=1778230054",
+      "type": "Pastry Stout",
+      "abv": 7.0,
+      "volume_cl": 47.3,
+      "brewery": "Abomination",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Drikbeer",
+          "price": 69.0,
+          "url": "https://drikbeer.com/products/abomination-midsomer-nights-snack",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 69.0,
+      "min_price": 69.0,
+      "shop": "Drikbeer",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
+      "id": 17058,
+      "name": "Hoppin' Frog - Roasted Chestnut Winter Warmer",
+      "image": "https://cdn.shopify.com/s/files/1/0368/1628/9924/files/roasted_chestnut_winter_warmer.png?v=1766142562",
+      "type": null,
+      "abv": 9.6,
+      "volume_cl": 47.3,
+      "brewery": "Hoppin' Frog",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Drikbeer",
+          "price": 69.0,
+          "url": "https://drikbeer.com/products/hoppin-frog-roasted-chestnut-winter-warmer",
+          "discount_pct": 30.3,
+          "old_price": 99.0
+        }
+      ],
+      "cheapest_price": 69.0,
+      "min_price": 69.0,
+      "shop": "Drikbeer",
+      "discount_pct": 30.3,
+      "max_discount_pct": 30.3
+    },
+    {
+      "id": 17059,
+      "name": "Pipeworks - Rudolph Vs Unicorn",
+      "image": "https://cdn.shopify.com/s/files/1/0368/1628/9924/files/rudolph_vs_unicorn.png?v=1766140566",
+      "type": "Imperial Stout",
+      "abv": 10.0,
+      "volume_cl": 47.3,
+      "brewery": "Pipeworks",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Drikbeer",
+          "price": 69.0,
+          "url": "https://drikbeer.com/products/pipeworks-rudolph-vs-unicorn",
+          "discount_pct": 22.5,
+          "old_price": 89.0
+        }
+      ],
+      "cheapest_price": 69.0,
+      "min_price": 69.0,
+      "shop": "Drikbeer",
+      "discount_pct": 22.5,
+      "max_discount_pct": 22.5
+    },
+    {
+      "id": 17072,
+      "name": "Pipeworks - El Unicornio",
+      "image": "https://cdn.shopify.com/s/files/1/0368/1628/9924/files/el_unicornioa.png?v=1764269438",
+      "type": "Imperial Stout",
+      "abv": 9.0,
+      "volume_cl": 47.3,
+      "brewery": "Pipeworks",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Drikbeer",
+          "price": 69.0,
+          "url": "https://drikbeer.com/products/pipeworks-el-unicornio",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 69.0,
+      "min_price": 69.0,
+      "shop": "Drikbeer",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
+      "id": 17093,
+      "name": "Pipeworks - Plum Catcher",
+      "image": "https://cdn.shopify.com/s/files/1/0368/1628/9924/files/plum_catcher_b57aa604-f5a3-4f0d-92ac-7742e03a7872.png?v=1744798337",
+      "type": "Sour",
+      "abv": 4.4,
+      "volume_cl": 47.3,
+      "brewery": "Pipeworks",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Drikbeer",
+          "price": 69.0,
+          "url": "https://drikbeer.com/products/pipeworks-plum-catcher",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 69.0,
+      "min_price": 69.0,
+      "shop": "Drikbeer",
       "discount_pct": 0,
       "max_discount_pct": 0
     },
@@ -37042,30 +38617,6 @@
       "max_discount_pct": 0
     },
     {
-      "id": 16922,
-      "name": "Pipeworks - Devil Firefish",
-      "image": "https://cdn.shopify.com/s/files/1/0551/6600/9423/files/80258523-0ECF-4AEC-97B2-6D1E4040DF73.jpg?v=1772190077",
-      "type": "Double IPA",
-      "abv": 9.5,
-      "volume_cl": 47.3,
-      "brewery": "Pipeworks",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Beermatch",
-          "price": 72.0,
-          "url": "https://www.beermatch.dk/products/pipeworks-devil-firefish",
-          "discount_pct": 0,
-          "old_price": null
-        }
-      ],
-      "cheapest_price": 72.0,
-      "min_price": 72.0,
-      "shop": "Beermatch",
-      "discount_pct": 0,
-      "max_discount_pct": 0
-    },
-    {
       "id": 16289,
       "name": "Factory Brewing - Double Reveries of Riwaka",
       "image": "https://cdn.shopify.com/s/files/1/0776/5209/9400/files/F39B9B15-E769-41D8-B299-B8ED653CF5CA.jpg?v=1781172444",
@@ -37660,7 +39211,7 @@
       "max_discount_pct": 0
     },
     {
-      "id": 16856,
+      "id": 16965,
       "name": "Raw Beer 8% 44cl",
       "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/raw-beer-8.png?v=1782404785",
       "type": "India Pale Ale (IPA)",
@@ -38545,6 +40096,30 @@
       "max_discount_pct": 0
     },
     {
+      "id": 14466,
+      "name": "Evil Twin Brewing NYC – Body By ETNYC",
+      "image": "https://cdn.shopify.com/s/files/1/0776/5209/9400/files/8A8254C3-4373-4DC8-964D-8CA9864873BC.jpg?v=1772463846",
+      "type": "Sour",
+      "abv": 6.0,
+      "volume_cl": 47.3,
+      "brewery": "Øltanken",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Drikbeer",
+          "price": 77.0,
+          "url": "https://drikbeer.com/products/evil-twin-nyc-body-by-etnyc",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 77.0,
+      "min_price": 77.0,
+      "shop": "Drikbeer",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
       "id": 16106,
       "name": "Holy Goat - Venom Hell",
       "image": "https://cdn.shopify.com/s/files/1/0776/5209/9400/files/D941F595-F292-45F7-BACC-2D864EB16AB3.jpg?v=1780482558",
@@ -38613,6 +40188,30 @@
       "cheapest_price": 78.0,
       "min_price": 78.0,
       "shop": "Brygshoppen",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
+      "id": 17088,
+      "name": "Root + Branch - American Original",
+      "image": "https://cdn.shopify.com/s/files/1/0368/1628/9924/files/american_original_63dec714-5204-4630-9b5e-842939f972a6.png?v=1747882732",
+      "type": "Lager",
+      "abv": 5.0,
+      "volume_cl": 35.5,
+      "brewery": "Root + Branch",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Drikbeer",
+          "price": 78.0,
+          "url": "https://drikbeer.com/products/root-branch-american-original",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 78.0,
+      "min_price": 78.0,
+      "shop": "Drikbeer",
       "discount_pct": 0,
       "max_discount_pct": 0
     },
@@ -38789,6 +40388,30 @@
       "max_discount_pct": 0
     },
     {
+      "id": 16975,
+      "name": "Blackstack - Pull Tabs (6-pack)",
+      "image": "https://cdn.shopify.com/s/files/1/0368/1628/9924/files/pull_tabs_01a1b2d5-3821-495f-99ee-e3818db6d372.png?v=1777628686",
+      "type": "Pale Ale",
+      "abv": 5.7,
+      "volume_cl": 47.3,
+      "brewery": "Blackstack",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Drikbeer",
+          "price": 79.0,
+          "url": "https://drikbeer.com/products/blackstack-pull-tabs",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 79.0,
+      "min_price": 79.0,
+      "shop": "Drikbeer",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
       "id": 13129,
       "name": "Grand Cru 9,5% 75cl",
       "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/grand-cru-9-5-75cl.png?v=1710873811",
@@ -38859,6 +40482,150 @@
       "shop": "Beermatch",
       "discount_pct": 0,
       "max_discount_pct": 0
+    },
+    {
+      "id": 16987,
+      "name": "False Hope - Slammer",
+      "image": "https://cdn.shopify.com/s/files/1/0368/1628/9924/files/false-hope-slammer_62241183-7ff0-4d98-8cf1-2dd1cec859ef.png?v=1781253465",
+      "type": "Imperial Stout",
+      "abv": 8.5,
+      "volume_cl": 47.3,
+      "brewery": "False Hope",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Drikbeer",
+          "price": 79.0,
+          "url": "https://drikbeer.com/products/false-hope-slammer",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 79.0,
+      "min_price": 79.0,
+      "shop": "Drikbeer",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
+      "id": 16990,
+      "name": "Timber Ales - Bourbon Barrel-Aged Fields of Fall",
+      "image": "https://cdn.shopify.com/s/files/1/0368/1628/9924/files/timber-ales-bba-fields-of-fall_af95334f-7742-4d76-bc44-e38126e81ef2.png?v=1781253464",
+      "type": "Imperial Stout",
+      "abv": 12.0,
+      "volume_cl": 35.5,
+      "brewery": "Timber Ales",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Drikbeer",
+          "price": 79.0,
+          "url": "https://drikbeer.com/products/timber-ales-bba-fields-of-fall",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 79.0,
+      "min_price": 79.0,
+      "shop": "Drikbeer",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
+      "id": 16991,
+      "name": "False Hope - Fading Hours",
+      "image": "https://cdn.shopify.com/s/files/1/0368/1628/9924/files/false-hope-fading-hours_213d7009-811f-43a1-8ccb-b46da1ae7339.png?v=1781253465",
+      "type": "Imperial Stout",
+      "abv": 12.0,
+      "volume_cl": 47.3,
+      "brewery": "False Hope",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Drikbeer",
+          "price": 79.0,
+          "url": "https://drikbeer.com/products/false-hope-fading-hours",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 79.0,
+      "min_price": 79.0,
+      "shop": "Drikbeer",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
+      "id": 17022,
+      "name": "Abomination - Midnight Snack - Peppermint Mocha",
+      "image": "https://cdn.shopify.com/s/files/1/0368/1628/9924/files/abomination-midnight-snack-peppermint-mocha.png?v=1778230238",
+      "type": "Imperial Stout",
+      "abv": 14.0,
+      "volume_cl": 47.3,
+      "brewery": "Abomination",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Drikbeer",
+          "price": 79.0,
+          "url": "https://drikbeer.com/products/abomination-midnight-snack-peppermint-mocha",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 79.0,
+      "min_price": 79.0,
+      "shop": "Drikbeer",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
+      "id": 17033,
+      "name": "Sante Adairius - Chapter & Verse",
+      "image": "https://cdn.shopify.com/s/files/1/0368/1628/9924/files/sante-adairius-chapter-and-verse.png?v=1777455391",
+      "type": "Golden Ale",
+      "abv": 6.0,
+      "volume_cl": 47.3,
+      "brewery": "Sante Adairius",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Drikbeer",
+          "price": 79.0,
+          "url": "https://drikbeer.com/products/sante-adairius-chapter-verse",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 79.0,
+      "min_price": 79.0,
+      "shop": "Drikbeer",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
+      "id": 17098,
+      "name": "The Bruery - Rueuze",
+      "image": "https://cdn.shopify.com/s/files/1/0368/1628/9924/files/Rueuze_9dadb623-c144-4473-b59f-4a1edff83f25.png?v=1683278223",
+      "type": "Sour",
+      "abv": 6.3,
+      "volume_cl": 37.5,
+      "brewery": "The Bruery",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Drikbeer",
+          "price": 79.0,
+          "url": "https://drikbeer.com/products/the-bruery-rueuze",
+          "discount_pct": 40.6,
+          "old_price": 133.0
+        }
+      ],
+      "cheapest_price": 79.0,
+      "min_price": 79.0,
+      "shop": "Drikbeer",
+      "discount_pct": 40.6,
+      "max_discount_pct": 40.6
     },
     {
       "id": 15132,
@@ -41063,7 +42830,7 @@
       "max_discount_pct": 0
     },
     {
-      "id": 16862,
+      "id": 16968,
       "name": "No Way Out B.A. 10,5% 33cl",
       "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/no-way-out-b-a-10-5-33cl.png?v=1750592682",
       "type": "Barley Wine",
@@ -41205,6 +42972,30 @@
       "shop": "Beermatch",
       "discount_pct": 0,
       "max_discount_pct": 0
+    },
+    {
+      "id": 17085,
+      "name": "Grugg & Makk - MOLTA 25",
+      "image": "https://cdn.shopify.com/s/files/1/0368/1628/9924/files/molta_9d960d59-a536-4189-8b9f-e1b49cf4b0c6.png?v=1750411197",
+      "type": "Sour",
+      "abv": 6.5,
+      "volume_cl": 37.5,
+      "brewery": "Grugg & Makk",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Drikbeer",
+          "price": 85.0,
+          "url": "https://drikbeer.com/products/grugg-makk-molta-25",
+          "discount_pct": 38.8,
+          "old_price": 139.0
+        }
+      ],
+      "cheapest_price": 85.0,
+      "min_price": 85.0,
+      "shop": "Drikbeer",
+      "discount_pct": 38.8,
+      "max_discount_pct": 38.8
     },
     {
       "id": 16585,
@@ -41807,6 +43598,30 @@
       "max_discount_pct": 0
     },
     {
+      "id": 17044,
+      "name": "3 Fonteinen - Pruim Belle de Louvain nº27 22/23 (BD 17/01/23)",
+      "image": "https://cdn.shopify.com/s/files/1/0368/1628/9924/files/pruim.png?v=1774607909",
+      "type": "Lambic",
+      "abv": 7.0,
+      "volume_cl": 37.5,
+      "brewery": "3 Fonteinen",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Drikbeer",
+          "price": 87.0,
+          "url": "https://drikbeer.com/products/3-fonteinen-oude-geuze-7-2024-25-375ml",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 87.0,
+      "min_price": 87.0,
+      "shop": "Drikbeer",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
       "id": 12818,
       "name": "Pastry Factory: Pistachio Gelato 10% 44cl",
       "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/pastry-factory-pistachio-gelato-10-44cl.png?v=1778869815",
@@ -41827,6 +43642,54 @@
       "cheapest_price": 87.0,
       "min_price": 87.0,
       "shop": "Brygshoppen",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
+      "id": 17012,
+      "name": "Evil Twin NYC - Taoiseach Marlon",
+      "image": "https://cdn.shopify.com/s/files/1/0368/1628/9924/files/taoiseach_marlon_4e5453f7-0f75-49cb-804e-a70615727007.png?v=1771577333",
+      "type": null,
+      "abv": 12.0,
+      "volume_cl": 47.3,
+      "brewery": "Evil Twin NYC",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Drikbeer",
+          "price": 87.0,
+          "url": "https://drikbeer.com/products/evil-twin-nyc-taoiseach-marlon",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 87.0,
+      "min_price": 87.0,
+      "shop": "Drikbeer",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
+      "id": 17038,
+      "name": "Root + Branch - Historical Society: 10°P Czech Pils",
+      "image": "https://cdn.shopify.com/s/files/1/0368/1628/9924/files/Root_Branch_-_Historical_Society_10P_Czech_Lager_-_Classic_Czech_Lager.png?v=1760088849",
+      "type": "Pilsner",
+      "abv": 4.0,
+      "volume_cl": 35.5,
+      "brewery": "Root + Branch",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Drikbeer",
+          "price": 87.0,
+          "url": "https://drikbeer.com/products/root-branch-historical-society-10p-czech-lager",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 87.0,
+      "min_price": 87.0,
+      "shop": "Drikbeer",
       "discount_pct": 0,
       "max_discount_pct": 0
     },
@@ -41875,6 +43738,30 @@
       "cheapest_price": 88.0,
       "min_price": 88.0,
       "shop": "Brygshoppen",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
+      "id": 17089,
+      "name": "Root + Branch - Les Fleurs Du Mal",
+      "image": "https://cdn.shopify.com/s/files/1/0368/1628/9924/files/les_fleurs_du_mal_b0192413-eed2-43e5-9b7b-db20fa65d14d.png?v=1747882728",
+      "type": "Hvedeøl",
+      "abv": 5.0,
+      "volume_cl": 47.3,
+      "brewery": "Root + Branch",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Drikbeer",
+          "price": 88.0,
+          "url": "https://drikbeer.com/products/root-branch-les-fleurs-du-mal",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 88.0,
+      "min_price": 88.0,
+      "shop": "Drikbeer",
       "discount_pct": 0,
       "max_discount_pct": 0
     },
@@ -41930,6 +43817,37 @@
       "cheapest_price": 89.0,
       "min_price": 89.0,
       "shop": "Beermatch",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
+      "id": 13577,
+      "name": "Evil Twin Brewing – Special Edition The Sour IPA Is Dead Long Live The Sour IPA! – Sour India Pale Ale – 0,473 l. – 7,0%",
+      "image": "https://www.bestofbeers.dk/wp-content/uploads/2026/05/EvilTwinTheSourIPAIsDead.jpg",
+      "type": "India Pale Ale (IPA)",
+      "abv": 7.0,
+      "volume_cl": 47.3,
+      "brewery": "Evil Twin Brewing",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Drikbeer",
+          "price": 89.0,
+          "url": "https://drikbeer.com/products/evil-twin-nyc-the-sour-ipa-is-dead-long-live-the-sour-ipa-special",
+          "discount_pct": 0,
+          "old_price": null
+        },
+        {
+          "shop_name": "Best of Beers",
+          "price": 91.0,
+          "url": "https://www.bestofbeers.dk/shop/evil-twin-brewing-special-edition-the-sour-ipa-is-dead-long-live-the-sour-ipa-sour-india-pale-ale-0473-l-70/",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 89.0,
+      "min_price": 89.0,
+      "shop": "Drikbeer",
       "discount_pct": 0,
       "max_discount_pct": 0
     },
@@ -42050,6 +43968,78 @@
       "cheapest_price": 89.0,
       "min_price": 89.0,
       "shop": "Beermatch",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
+      "id": 16986,
+      "name": "Timber Ales - Breakfast With Maris",
+      "image": "https://cdn.shopify.com/s/files/1/0368/1628/9924/files/timber-ales-breakfast-with-maris_40c5d4a6-e690-4b05-8666-50094b4a0cf7.png?v=1781253464",
+      "type": "Barley Wine",
+      "abv": 13.0,
+      "volume_cl": 35.5,
+      "brewery": "Timber Ales",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Drikbeer",
+          "price": 89.0,
+          "url": "https://drikbeer.com/products/timber-ales-breakfast-with-maris",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 89.0,
+      "min_price": 89.0,
+      "shop": "Drikbeer",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
+      "id": 17029,
+      "name": "Evil Twin NYC - Danish American Guy",
+      "image": "https://cdn.shopify.com/s/files/1/0368/1628/9924/files/evil-twin-nyc-danish-american-guy.png?v=1777455391",
+      "type": "Imperial Stout",
+      "abv": 14.2,
+      "volume_cl": 47.3,
+      "brewery": "Evil Twin NYC",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Drikbeer",
+          "price": 89.0,
+          "url": "https://drikbeer.com/products/evil-twin-nyc-danish-american-guy",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 89.0,
+      "min_price": 89.0,
+      "shop": "Drikbeer",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
+      "id": 17091,
+      "name": "Evil Twin NYC - Evil Fusion - Winter Edition",
+      "image": "https://cdn.shopify.com/s/files/1/0368/1628/9924/files/evil_fusion_winter_edition_4088eecf-be42-4466-9b17-f61b9ff5401b.png?v=1745495396",
+      "type": "Sour",
+      "abv": 7.0,
+      "volume_cl": 47.3,
+      "brewery": "Evil Twin NYC",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Drikbeer",
+          "price": 89.0,
+          "url": "https://drikbeer.com/products/evil-twin-nyc-evil-fusion-winter-edition",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 89.0,
+      "min_price": 89.0,
+      "shop": "Drikbeer",
       "discount_pct": 0,
       "max_discount_pct": 0
     },
@@ -42482,30 +44472,6 @@
           "shop_name": "Best of Beers",
           "price": 91.0,
           "url": "https://www.bestofbeers.dk/shop/evil-twin-brewing-x-woven-water-evil-fusion-autumn-edition-sour-ale-brewed-with-apple-cinnamon-cranberry-0473-l-70/",
-          "discount_pct": 0,
-          "old_price": null
-        }
-      ],
-      "cheapest_price": 91.0,
-      "min_price": 91.0,
-      "shop": "Best of Beers",
-      "discount_pct": 0,
-      "max_discount_pct": 0
-    },
-    {
-      "id": 13577,
-      "name": "Evil Twin Brewing – Special Edition The Sour IPA Is Dead Long Live The Sour IPA! – Sour India Pale Ale – 0,473 l. – 7,0%",
-      "image": "https://www.bestofbeers.dk/wp-content/uploads/2026/05/EvilTwinTheSourIPAIsDead.jpg",
-      "type": "India Pale Ale (IPA)",
-      "abv": 7.0,
-      "volume_cl": 47.3,
-      "brewery": "Evil Twin Brewing",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Best of Beers",
-          "price": 91.0,
-          "url": "https://www.bestofbeers.dk/shop/evil-twin-brewing-special-edition-the-sour-ipa-is-dead-long-live-the-sour-ipa-sour-india-pale-ale-0473-l-70/",
           "discount_pct": 0,
           "old_price": null
         }
@@ -43117,6 +45083,30 @@
       "max_discount_pct": 0
     },
     {
+      "id": 17084,
+      "name": "Alesong - Gose Añejo",
+      "image": "https://cdn.shopify.com/s/files/1/0368/1628/9924/files/gose_anejo_40b01bdf-f464-4093-8dde-a29bce8fbb3a.png?v=1753434241",
+      "type": "Gose",
+      "abv": 7.8,
+      "volume_cl": 50.0,
+      "brewery": "Alesong",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Drikbeer",
+          "price": 94.0,
+          "url": "https://drikbeer.com/products/alesong-gose-anejo",
+          "discount_pct": 40.9,
+          "old_price": 159.0
+        }
+      ],
+      "cheapest_price": 94.0,
+      "min_price": 94.0,
+      "shop": "Drikbeer",
+      "discount_pct": 40.9,
+      "max_discount_pct": 40.9
+    },
+    {
       "id": 15597,
       "name": "Samiclaus 75 cl. - Øl",
       "image": "https://www.vildmedvin.dk/img/1000/1000/resize/s/a/sami-classic-75cl.jpg",
@@ -43663,7 +45653,31 @@
       "max_discount_pct": 0
     },
     {
-      "id": 16858,
+      "id": 17043,
+      "name": "3 Fonteinen - Platinum Blend nº57 21/22 (BD 31/03/22)",
+      "image": "https://cdn.shopify.com/s/files/1/0368/1628/9924/files/platinum_blend_375.png?v=1774607938",
+      "type": "Lambic",
+      "abv": 6.0,
+      "volume_cl": 37.5,
+      "brewery": "3 Fonteinen",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Drikbeer",
+          "price": 99.0,
+          "url": "https://drikbeer.com/products/3-fonteinen-oude-geuze-51-2023-375ml",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 99.0,
+      "min_price": 99.0,
+      "shop": "Drikbeer",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
+      "id": 16966,
       "name": "10 - Imperial Stout 10% 44cl",
       "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/10-imperial-stout-10-44cl_9645d1f7-914c-43d6-b687-b07453f1aaf2.png?v=1761637026",
       "type": "Imperial Stout",
@@ -43899,6 +45913,30 @@
       "cheapest_price": 99.0,
       "min_price": 99.0,
       "shop": "Beermatch",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
+      "id": 17078,
+      "name": "The Veil - Typhoon Lagoon Tastee",
+      "image": "https://cdn.shopify.com/s/files/1/0368/1628/9924/files/The_Veil_-_Typhoon_Lagoon_Tastee_-_Smoothie_Sour_with_Coconut_Tropical_Fruit.png?v=1760692503",
+      "type": "Sour",
+      "abv": 5.5,
+      "volume_cl": 47.3,
+      "brewery": "The Veil",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Drikbeer",
+          "price": 99.0,
+          "url": "https://drikbeer.com/products/the-veil-typhoon-lagoon-tastee",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 99.0,
+      "min_price": 99.0,
+      "shop": "Drikbeer",
       "discount_pct": 0,
       "max_discount_pct": 0
     },
@@ -44189,6 +46227,30 @@
       "shop": "Brygshoppen",
       "discount_pct": 20.0,
       "max_discount_pct": 20.0
+    },
+    {
+      "id": 17047,
+      "name": "Evil Twin Brewing - Aún Mas Todo Jesús 2015",
+      "image": "https://cdn.shopify.com/s/files/1/0368/1628/9924/files/aun_mas_todo_jesus.png?v=1773125487",
+      "type": "Imperial Stout",
+      "abv": 12.0,
+      "volume_cl": 33.0,
+      "brewery": "Evil Twin NYC",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Drikbeer",
+          "price": 100.0,
+          "url": "https://drikbeer.com/products/evil-twin-aun-mas-todo-jesus",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 100.0,
+      "min_price": 100.0,
+      "shop": "Drikbeer",
+      "discount_pct": 0,
+      "max_discount_pct": 0
     },
     {
       "id": 13749,
@@ -44894,6 +46956,61 @@
       "max_discount_pct": 0
     },
     {
+      "id": 13187,
+      "name": "3 Fonteinen Oude Geuze Cuvée Armand & Gaston 6,9% 37,5cl",
+      "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/3-fonteinen-oude-geuze-cuvee-armand-gaston-6-7-37-5cl_2f1142a0-e6e5-4e4e-90a7-e267908a06c3.png?v=1737805186",
+      "type": "Lambic",
+      "abv": 6.9,
+      "volume_cl": 37.5,
+      "brewery": "Brouwerij 3 Fonteinen",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Drikbeer",
+          "price": 109.0,
+          "url": "https://drikbeer.com/products/3-fonteinen-cuvee-armand-gaston-29-2023-24-375ml",
+          "discount_pct": 0,
+          "old_price": null
+        },
+        {
+          "shop_name": "Brygshoppen",
+          "price": 110.0,
+          "url": "https://brygshoppen.dk/products/3-fonteinen-oude-geuze-cuvee-armand-gaston-6-7-37-5cl",
+          "discount_pct": 0,
+          "old_price": 0.0
+        }
+      ],
+      "cheapest_price": 109.0,
+      "min_price": 109.0,
+      "shop": "Drikbeer",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
+      "id": 17032,
+      "name": "Pipeworks - Barrel Aged End of Days",
+      "image": "https://cdn.shopify.com/s/files/1/0368/1628/9924/files/pipeworks-barrel-aged-end-of-days.png?v=1777455391",
+      "type": "Milk Stout",
+      "abv": 13.5,
+      "volume_cl": 47.3,
+      "brewery": "Pipeworks",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Drikbeer",
+          "price": 109.0,
+          "url": "https://drikbeer.com/products/pipeworks-barrel-aged-end-of-days",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 109.0,
+      "min_price": 109.0,
+      "shop": "Drikbeer",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
       "id": 14459,
       "name": "Revolution Brewing - Deths Tar 2025",
       "image": "https://cdn.shopify.com/s/files/1/0776/5209/9400/files/B888692E-02C9-4FA5-84A0-39BB0859F93B.jpg?v=1772566378",
@@ -45014,6 +47131,102 @@
       "max_discount_pct": 0
     },
     {
+      "id": 17007,
+      "name": "Jester King - Das Wunderkind! (Batch #26)",
+      "image": "https://cdn.shopify.com/s/files/1/0368/1628/9924/files/daswunderkind.png?v=1721985134",
+      "type": "Saison",
+      "abv": 5.0,
+      "volume_cl": 75.0,
+      "brewery": "Jester King",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Drikbeer",
+          "price": 109.0,
+          "url": "https://drikbeer.com/products/jester-king-das-wunderking",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 109.0,
+      "min_price": 109.0,
+      "shop": "Drikbeer",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
+      "id": 17074,
+      "name": "Pipeworks - As You Wish",
+      "image": "https://cdn.shopify.com/s/files/1/0368/1628/9924/files/as_you_wish.png?v=1764269542",
+      "type": "Porter",
+      "abv": 14.8,
+      "volume_cl": 47.3,
+      "brewery": "Pipeworks",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Drikbeer",
+          "price": 109.0,
+          "url": "https://drikbeer.com/products/pipeworks-as-you-wish",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 109.0,
+      "min_price": 109.0,
+      "shop": "Drikbeer",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
+      "id": 17090,
+      "name": "Root + Branch - Anthora (Burundi Muramvya Teka Hill)",
+      "image": "https://cdn.shopify.com/s/files/1/0368/1628/9924/files/anthora_c9e75cfd-dabb-47b7-84dd-640d9356df9c.png?v=1747882758",
+      "type": "Milk Stout",
+      "abv": 8.0,
+      "volume_cl": 47.3,
+      "brewery": "Root + Branch",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Drikbeer",
+          "price": 109.0,
+          "url": "https://drikbeer.com/products/root-branch-anthora",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 109.0,
+      "min_price": 109.0,
+      "shop": "Drikbeer",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
+      "id": 17106,
+      "name": "3 Fonteinen - Armand & Gaston 19/20 #8",
+      "image": "https://cdn.shopify.com/s/files/1/0368/1628/9924/products/375ml_A_G_2016_f4cc28eb-0a49-4c07-962c-a3308bf68cc4.jpg?v=1773826764",
+      "type": "Lambic",
+      "abv": 6.4,
+      "volume_cl": 37.5,
+      "brewery": "3 Fonteinen",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Drikbeer",
+          "price": 109.0,
+          "url": "https://drikbeer.com/products/3-fonteinen-armand-gaston-19-20-8",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 109.0,
+      "min_price": 109.0,
+      "shop": "Drikbeer",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
       "id": 14515,
       "name": "Omnipollo x Moska - All The Coconut",
       "image": "https://cdn.shopify.com/s/files/1/0776/5209/9400/files/4F529474-B7AB-4911-A449-68090472FF96.jpg?v=1763413982",
@@ -45099,30 +47312,6 @@
           "shop_name": "Brygshoppen",
           "price": 110.0,
           "url": "https://brygshoppen.dk/products/extravagant-peacherine-11-44cl",
-          "discount_pct": 0,
-          "old_price": 0.0
-        }
-      ],
-      "cheapest_price": 110.0,
-      "min_price": 110.0,
-      "shop": "Brygshoppen",
-      "discount_pct": 0,
-      "max_discount_pct": 0
-    },
-    {
-      "id": 13187,
-      "name": "3 Fonteinen Oude Geuze Cuvée Armand & Gaston 6,9% 37,5cl",
-      "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/3-fonteinen-oude-geuze-cuvee-armand-gaston-6-7-37-5cl_2f1142a0-e6e5-4e4e-90a7-e267908a06c3.png?v=1737805186",
-      "type": "Lambic",
-      "abv": 6.9,
-      "volume_cl": 37.5,
-      "brewery": "Brouwerij 3 Fonteinen",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Brygshoppen",
-          "price": 110.0,
-          "url": "https://brygshoppen.dk/products/3-fonteinen-oude-geuze-cuvee-armand-gaston-6-7-37-5cl",
           "discount_pct": 0,
           "old_price": 0.0
         }
@@ -45539,13 +47728,13 @@
       "max_discount_pct": 0
     },
     {
-      "id": 13090,
-      "name": "3 Fonteinen Kweepeer 7,2% 37,5cl",
-      "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/3-fonteinen-kweepeer-7-2-37-5cl_cf2dc1c2-0933-4436-8325-3bc442a12fc7.png?v=1737804975",
+      "id": 13844,
+      "name": "3 Fonteinen &#8211; Kweepeer &#8211; 2022/2023 No. 76 &#8211; Lambic – 0,375 l. – 7,2%",
+      "image": "https://www.bestofbeers.dk/wp-content/uploads/2025/02/3fonteinenKweepeer.jpg",
       "type": "Lambic",
       "abv": 7.2,
       "volume_cl": 37.5,
-      "brewery": "Brouwerij 3 Fonteinen",
+      "brewery": "3 Fonteinen",
       "category": null,
       "prices": [
         {
@@ -45559,6 +47748,13 @@
           "shop_name": "Best of Beers",
           "price": 126.0,
           "url": "https://www.bestofbeers.dk/shop/3-fonteinen-kweepeer-2022-2023-no-76-lambic-0375-l-72/",
+          "discount_pct": 0,
+          "old_price": null
+        },
+        {
+          "shop_name": "Drikbeer",
+          "price": 128.0,
+          "url": "https://drikbeer.com/products/3-fonteinen-kweeper-76-2022-23-375ml",
           "discount_pct": 0,
           "old_price": null
         }
@@ -45712,6 +47908,54 @@
       "shop": "Øltanken",
       "discount_pct": 20.3,
       "max_discount_pct": 20.3
+    },
+    {
+      "id": 17095,
+      "name": "Pipeworks - Barrel Aged Jones Dog",
+      "image": "https://cdn.shopify.com/s/files/1/0368/1628/9924/files/barrel_aged_jones_dog_3c5c536b-0ce4-4f43-b6bd-3b6fab494547.png?v=1744798313",
+      "type": "Milk Stout",
+      "abv": 14.1,
+      "volume_cl": 47.3,
+      "brewery": "Pipeworks",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Drikbeer",
+          "price": 119.0,
+          "url": "https://drikbeer.com/products/pipeworks-barrel-aged-jones-dog",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 119.0,
+      "min_price": 119.0,
+      "shop": "Drikbeer",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
+      "id": 17096,
+      "name": "Wildflower / Brash Higgins - Vibe",
+      "image": "https://cdn.shopify.com/s/files/1/0368/1628/9924/files/vibe_a02e1a51-0595-4963-96dd-0162e2692490.png?v=1742991314",
+      "type": "Sour",
+      "abv": 4.2,
+      "volume_cl": 75.0,
+      "brewery": "Wildflower",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Drikbeer",
+          "price": 119.0,
+          "url": "https://drikbeer.com/products/wildflower-vibe",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 119.0,
+      "min_price": 119.0,
+      "shop": "Drikbeer",
+      "discount_pct": 0,
+      "max_discount_pct": 0
     },
     {
       "id": 15959,
@@ -46485,6 +48729,61 @@
       "cheapest_price": 126.0,
       "min_price": 126.0,
       "shop": "Øltanken",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
+      "id": 16948,
+      "name": "AleSmith - Barrel Aged Speedway Stout (Hammerhead Edition)",
+      "image": "https://cdn.shopify.com/s/files/1/0551/6600/9423/files/216F4453-499D-4FD9-B9AE-0E5D2C9587E1.jpg?v=1758981530",
+      "type": "Stout",
+      "abv": 13.46,
+      "volume_cl": 47.3,
+      "brewery": "AleSmith",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Drikbeer",
+          "price": 129.0,
+          "url": "https://drikbeer.com/products/alesmith-ba-speedway-stout-hammerhead-edition-2025",
+          "discount_pct": 0,
+          "old_price": null
+        },
+        {
+          "shop_name": "Beermatch",
+          "price": 149.0,
+          "url": "https://www.beermatch.dk/products/alesmith-barrel-aged-speedway-stout-hammerhead-edition",
+          "discount_pct": 0,
+          "old_price": 0.0
+        }
+      ],
+      "cheapest_price": 129.0,
+      "min_price": 129.0,
+      "shop": "Drikbeer",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
+      "id": 17008,
+      "name": "AleSmith - BA Speedway Stout: Rye Vietnamese 2025",
+      "image": "https://cdn.shopify.com/s/files/1/0368/1628/9924/files/alesmith-ba-speedway-stout-rye-vietnamese-2025.png?v=1780651454",
+      "type": "Stout",
+      "abv": 13.89,
+      "volume_cl": 47.3,
+      "brewery": "AleSmith",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Drikbeer",
+          "price": 129.0,
+          "url": "https://drikbeer.com/products/alesmith-ba-speedway-stout-rye-vietnamese-2025",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 129.0,
+      "min_price": 129.0,
+      "shop": "Drikbeer",
       "discount_pct": 0,
       "max_discount_pct": 0
     },
@@ -47882,30 +50181,6 @@
       "max_discount_pct": 0
     },
     {
-      "id": 16948,
-      "name": "AleSmith - Barrel Aged Speedway Stout (Hammerhead Edition)",
-      "image": "https://cdn.shopify.com/s/files/1/0551/6600/9423/files/216F4453-499D-4FD9-B9AE-0E5D2C9587E1.jpg?v=1758981530",
-      "type": "Stout",
-      "abv": 13.46,
-      "volume_cl": 47.3,
-      "brewery": "AleSmith",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Beermatch",
-          "price": 149.0,
-          "url": "https://www.beermatch.dk/products/alesmith-barrel-aged-speedway-stout-hammerhead-edition",
-          "discount_pct": 0,
-          "old_price": 0.0
-        }
-      ],
-      "cheapest_price": 149.0,
-      "min_price": 149.0,
-      "shop": "Beermatch",
-      "discount_pct": 0,
-      "max_discount_pct": 0
-    },
-    {
       "id": 13835,
       "name": "Fanø Bryghus x Kissmeyer – Défi Accepé – Saison With Toasted Green Peppercorn And Lemons – 0,75 l. – 7,3%",
       "image": "https://www.bestofbeers.dk/wp-content/uploads/2025/04/FanoeBryghusDefi.jpg",
@@ -48853,6 +51128,102 @@
       "max_discount_pct": 0
     },
     {
+      "id": 17056,
+      "name": "Wildflower - Hive: Post Brood",
+      "image": "https://cdn.shopify.com/s/files/1/0368/1628/9924/files/hive_post_brood.png?v=1772635224",
+      "type": "Sour",
+      "abv": 7.0,
+      "volume_cl": 75.0,
+      "brewery": "Wildflower",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Drikbeer",
+          "price": 167.0,
+          "url": "https://drikbeer.com/products/wildflower-hive-post-brood",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 167.0,
+      "min_price": 167.0,
+      "shop": "Drikbeer",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
+      "id": 17054,
+      "name": "Wildflower - Clos de Billy",
+      "image": "https://cdn.shopify.com/s/files/1/0368/1628/9924/files/clos_de_billy.png?v=1772703652",
+      "type": "Sour",
+      "abv": 5.7,
+      "volume_cl": 75.0,
+      "brewery": "Wildflower",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Drikbeer",
+          "price": 168.0,
+          "url": "https://drikbeer.com/products/wildflower-clos-de-billy",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 168.0,
+      "min_price": 168.0,
+      "shop": "Drikbeer",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
+      "id": 17055,
+      "name": "Wildflower - Zibeerbo 2025",
+      "image": "https://cdn.shopify.com/s/files/1/0368/1628/9924/files/zibeerbo.png?v=1772703848",
+      "type": "Sour",
+      "abv": 5.8,
+      "volume_cl": 75.0,
+      "brewery": "Wildflower",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Drikbeer",
+          "price": 168.0,
+          "url": "https://drikbeer.com/products/wildflower-zibeerbo-2025",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 168.0,
+      "min_price": 168.0,
+      "shop": "Drikbeer",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
+      "id": 17076,
+      "name": "Wildflower - Serenity (Batch 4)",
+      "image": "https://cdn.shopify.com/s/files/1/0368/1628/9924/files/serenity_1_24a619c1-5858-4193-b758-ece023684f5c.png?v=1762443367",
+      "type": "Sour",
+      "abv": 5.8,
+      "volume_cl": 75.0,
+      "brewery": "Wildflower",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Drikbeer",
+          "price": 168.0,
+          "url": "https://drikbeer.com/products/wildflower-serenity",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 168.0,
+      "min_price": 168.0,
+      "shop": "Drikbeer",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
       "id": 14560,
       "name": "Cushwa x Mortalis -  Periclean Age Stout",
       "image": "https://cdn.shopify.com/s/files/1/0776/5209/9400/files/9DE62C73-7FE4-4577-9BDA-3EEB01FE46FF.jpg?v=1746138394",
@@ -48899,6 +51270,54 @@
       "shop": "Beermatch",
       "discount_pct": 0,
       "max_discount_pct": 0
+    },
+    {
+      "id": 17080,
+      "name": "Hildegard - Gray Winds - Fly by Night",
+      "image": "https://cdn.shopify.com/s/files/1/0368/1628/9924/files/gray_winds_cc09faee-e6e2-4ee0-b015-ba26215488cb.png?v=1755250398",
+      "type": "Sour",
+      "abv": 5.6,
+      "volume_cl": 75.0,
+      "brewery": "Hildegard",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Drikbeer",
+          "price": 169.0,
+          "url": "https://drikbeer.com/products/hildegard-gray-winds-fly-by-night",
+          "discount_pct": 39.4,
+          "old_price": 279.0
+        }
+      ],
+      "cheapest_price": 169.0,
+      "min_price": 169.0,
+      "shop": "Drikbeer",
+      "discount_pct": 39.4,
+      "max_discount_pct": 39.4
+    },
+    {
+      "id": 17081,
+      "name": "Hildegard - Sumomo - Sun Tracker 2024",
+      "image": "https://cdn.shopify.com/s/files/1/0368/1628/9924/files/sumomo_b2dde558-441d-47c1-b513-22cc37fcee08.png?v=1755250405",
+      "type": "Saison",
+      "abv": 6.9,
+      "volume_cl": 75.0,
+      "brewery": "Hildegard",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Drikbeer",
+          "price": 169.0,
+          "url": "https://drikbeer.com/products/hildegard-sumomo-sun-tracker-2024",
+          "discount_pct": 39.4,
+          "old_price": 279.0
+        }
+      ],
+      "cheapest_price": 169.0,
+      "min_price": 169.0,
+      "shop": "Drikbeer",
+      "discount_pct": 39.4,
+      "max_discount_pct": 39.4
     },
     {
       "id": 14569,
@@ -49216,6 +51635,30 @@
       "cheapest_price": 179.0,
       "min_price": 179.0,
       "shop": "Øltanken",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
+      "id": 17005,
+      "name": "Jester King - Hibernal Dichotomous (2023)",
+      "image": "https://cdn.shopify.com/s/files/1/0368/1628/9924/files/hibernal.png?v=1713951918",
+      "type": "Saison",
+      "abv": 3.8,
+      "volume_cl": 75.0,
+      "brewery": "Jester King",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Drikbeer",
+          "price": 180.0,
+          "url": "https://drikbeer.com/products/jester-king-hibernal-dichotomous-2023",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 180.0,
+      "min_price": 180.0,
+      "shop": "Drikbeer",
       "discount_pct": 0,
       "max_discount_pct": 0
     },
@@ -49707,6 +52150,37 @@
       "cheapest_price": 199.0,
       "min_price": 199.0,
       "shop": "Vild med Vin",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
+      "id": 13675,
+      "name": "3 Fonteinen – Oude Kriek no 104 &#8211; 22/23 – Økologisk Lambic – 0,75 l. – 7,8%",
+      "image": "https://www.bestofbeers.dk/wp-content/uploads/2026/03/3FonteinenOudeKriek22_23.jpg",
+      "type": "Lambic",
+      "abv": 7.8,
+      "volume_cl": 75.0,
+      "brewery": "3 Fonteinen",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Drikbeer",
+          "price": 199.0,
+          "url": "https://drikbeer.com/products/3-fonteinen-oude-kriek-104-2022-23-750ml",
+          "discount_pct": 0,
+          "old_price": null
+        },
+        {
+          "shop_name": "Best of Beers",
+          "price": 226.0,
+          "url": "https://www.bestofbeers.dk/shop/3-fonteinen-oude-kriek-no-104-22-23-oekologisk-lambic-075-l-78/",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 199.0,
+      "min_price": 199.0,
+      "shop": "Drikbeer",
       "discount_pct": 0,
       "max_discount_pct": 0
     },
@@ -50356,6 +52830,30 @@
       "max_discount_pct": 0
     },
     {
+      "id": 17097,
+      "name": "The Bruery - Black Tuesday Red Wine Barrel-Aged (2022)",
+      "image": "https://cdn.shopify.com/s/files/1/0368/1628/9924/files/BT_Red_Wine_a0596b7e-bbbe-41c9-97dd-e4a0f7d92f8a.png?v=1740737404",
+      "type": "Imperial Stout",
+      "abv": 18.3,
+      "volume_cl": 37.5,
+      "brewery": "The Bruery",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Drikbeer",
+          "price": 214.0,
+          "url": "https://drikbeer.com/products/the-bruery-black-tuesday-red-wine-2022",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 214.0,
+      "min_price": 214.0,
+      "shop": "Drikbeer",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
       "id": 14129,
       "name": "Anatomie Du Temps - BA Imperial Stout - Brasserie Sir John Brewing Co.",
       "image": "https://cdn-main.ideal.shop/images/by_hash/0ff25f0cf8a71ad58817ecbd6b95f3c0ca0196a97805636abdd6f01f69ac27a9/500-0/anatomie.jpg",
@@ -50570,6 +53068,30 @@
       "shop": "Vild med Vin",
       "discount_pct": 0,
       "max_discount_pct": 0
+    },
+    {
+      "id": 17070,
+      "name": "Trillium / Weathered Souls - Feed Your Soul",
+      "image": "https://cdn.shopify.com/s/files/1/0368/1628/9924/files/FeedYourSoul.png?v=1702049243",
+      "type": "Imperial Stout",
+      "abv": 14.8,
+      "volume_cl": 50.0,
+      "brewery": "Trillium",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Drikbeer",
+          "price": 219.0,
+          "url": "https://drikbeer.com/products/trillium-feed",
+          "discount_pct": 40.0,
+          "old_price": 365.0
+        }
+      ],
+      "cheapest_price": 219.0,
+      "min_price": 219.0,
+      "shop": "Drikbeer",
+      "discount_pct": 40.0,
+      "max_discount_pct": 40.0
     },
     {
       "id": 16724,
@@ -50884,30 +53406,6 @@
       "max_discount_pct": 40.8
     },
     {
-      "id": 13675,
-      "name": "3 Fonteinen – Oude Kriek no 104 &#8211; 22/23 – Økologisk Lambic – 0,75 l. – 7,8%",
-      "image": "https://www.bestofbeers.dk/wp-content/uploads/2026/03/3FonteinenOudeKriek22_23.jpg",
-      "type": "Lambic",
-      "abv": 7.8,
-      "volume_cl": 75.0,
-      "brewery": "3 Fonteinen",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Best of Beers",
-          "price": 226.0,
-          "url": "https://www.bestofbeers.dk/shop/3-fonteinen-oude-kriek-no-104-22-23-oekologisk-lambic-075-l-78/",
-          "discount_pct": 0,
-          "old_price": null
-        }
-      ],
-      "cheapest_price": 226.0,
-      "min_price": 226.0,
-      "shop": "Best of Beers",
-      "discount_pct": 0,
-      "max_discount_pct": 0
-    },
-    {
       "id": 15499,
       "name": "3 Fonteinen Braambes Oogst - Øl",
       "image": "https://www.vildmedvin.dk/img/1000/1000/resize/b/r/braambes_oogst_2021.jpg",
@@ -51000,6 +53498,30 @@
       "cheapest_price": 229.0,
       "min_price": 229.0,
       "shop": "Beermatch",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
+      "id": 17002,
+      "name": "The Veil - All That I Am",
+      "image": "https://cdn.shopify.com/s/files/1/0368/1628/9924/files/the-veil-all-that-i-am.png?v=1781203295",
+      "type": "Saison",
+      "abv": 7.3,
+      "volume_cl": 75.0,
+      "brewery": "The Veil",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Drikbeer",
+          "price": 229.0,
+          "url": "https://drikbeer.com/products/the-veil-all-that-i-am",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 229.0,
+      "min_price": 229.0,
+      "shop": "Drikbeer",
       "discount_pct": 0,
       "max_discount_pct": 0
     },
@@ -51146,6 +53668,30 @@
       "shop": "Beer Me",
       "discount_pct": 10.0,
       "max_discount_pct": 10.0
+    },
+    {
+      "id": 17068,
+      "name": "Trillium / Omnipollo - Way Outside the Lines",
+      "image": "https://cdn.shopify.com/s/files/1/0368/1628/9924/files/WayOutsidetheLines.png?v=1702049200",
+      "type": "Imperial Stout",
+      "abv": 13.0,
+      "volume_cl": 50.0,
+      "brewery": "Trillium",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Drikbeer",
+          "price": 238.0,
+          "url": "https://drikbeer.com/products/trillium-omnipollo-way-outside-the-lines",
+          "discount_pct": 40.4,
+          "old_price": 399.0
+        }
+      ],
+      "cheapest_price": 238.0,
+      "min_price": 238.0,
+      "shop": "Drikbeer",
+      "discount_pct": 40.4,
+      "max_discount_pct": 40.4
     },
     {
       "id": 14291,
@@ -51511,6 +54057,30 @@
       "cheapest_price": 249.0,
       "min_price": 249.0,
       "shop": "Beermatch",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
+      "id": 17006,
+      "name": "Sante Adairius - Precise Discussion",
+      "image": "https://cdn.shopify.com/s/files/1/0368/1628/9924/files/precise_disscussion_2454aaa2-4f09-4daf-a770-7c85ed12a0af.png?v=1758879874",
+      "type": "Saison",
+      "abv": 7.6,
+      "volume_cl": 75.0,
+      "brewery": "Sante Adairius",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Drikbeer",
+          "price": 249.0,
+          "url": "https://drikbeer.com/products/sante-adairius-precise-discussion",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 249.0,
+      "min_price": 249.0,
+      "shop": "Drikbeer",
       "discount_pct": 0,
       "max_discount_pct": 0
     },
@@ -52091,6 +54661,126 @@
       "max_discount_pct": 0
     },
     {
+      "id": 17003,
+      "name": "The Bruery - Etain: Red Wine BA (2018)",
+      "image": "https://cdn.shopify.com/s/files/1/0368/1628/9924/files/Bruery_Etain.jpg?v=1613582299",
+      "type": null,
+      "abv": 14.2,
+      "volume_cl": 75.0,
+      "brewery": "The Bruery",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Drikbeer",
+          "price": 259.0,
+          "url": "https://drikbeer.com/products/the-bruery-etain-red-wine-ba-2018",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 259.0,
+      "min_price": 259.0,
+      "shop": "Drikbeer",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
+      "id": 17004,
+      "name": "The Bruery - Bois: Bourbon BA (2013)",
+      "image": "https://cdn.shopify.com/s/files/1/0368/1628/9924/files/Bruery_Bois.jpg?v=1613582299",
+      "type": null,
+      "abv": 15.0,
+      "volume_cl": 75.0,
+      "brewery": "The Bruery",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Drikbeer",
+          "price": 259.0,
+          "url": "https://drikbeer.com/products/the-bruery-bois-bourbon-ba-2013",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 259.0,
+      "min_price": 259.0,
+      "shop": "Drikbeer",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
+      "id": 17045,
+      "name": "3 Fonteinen - Platinum Blend nº59 21/22 (BD 08/04/22)",
+      "image": "https://cdn.shopify.com/s/files/1/0368/1628/9924/files/platinum_blend_750.png?v=1774608066",
+      "type": "Lambic",
+      "abv": 5.7,
+      "volume_cl": 75.0,
+      "brewery": "3 Fonteinen",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Drikbeer",
+          "price": 259.0,
+          "url": "https://drikbeer.com/products/3-fonteinen-platinum-blend-59-2021-22-750ml",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 259.0,
+      "min_price": 259.0,
+      "shop": "Drikbeer",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
+      "id": 17065,
+      "name": "The Bruery - Poterie: Scotch BA (2016)",
+      "image": "https://cdn.shopify.com/s/files/1/0368/1628/9924/files/poterie.png?v=1764272793",
+      "type": null,
+      "abv": 14.8,
+      "volume_cl": 75.0,
+      "brewery": "The Bruery",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Drikbeer",
+          "price": 259.0,
+          "url": "https://drikbeer.com/products/the-bruery-poterie-scotch-ba-2016",
+          "discount_pct": 0,
+          "old_price": 259.0
+        }
+      ],
+      "cheapest_price": 259.0,
+      "min_price": 259.0,
+      "shop": "Drikbeer",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
+      "id": 17066,
+      "name": "The Bruery - Saule",
+      "image": "https://cdn.shopify.com/s/files/1/0368/1628/9924/files/saule.png?v=1764272729",
+      "type": null,
+      "abv": 16.1,
+      "volume_cl": 75.0,
+      "brewery": "The Bruery",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Drikbeer",
+          "price": 259.0,
+          "url": "https://drikbeer.com/products/5-the-bruery-saule-english-style-old-ale-16-1-abv-33p",
+          "discount_pct": 0,
+          "old_price": 259.0
+        }
+      ],
+      "cheapest_price": 259.0,
+      "min_price": 259.0,
+      "shop": "Drikbeer",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
       "id": 13866,
       "name": "Ultra Pres, Varm Øl Belgian Beer Liquor &#8211; 0,70 l. &#8211; 20,0%",
       "image": "https://www.bestofbeers.dk/wp-content/uploads/2024/08/Ultrapresoellikoer70cl.jpg",
@@ -52547,6 +55237,30 @@
       "max_discount_pct": 0
     },
     {
+      "id": 17109,
+      "name": "3 Fonteinen - Druif/Kriek Dornfelder #26 2021",
+      "image": "https://cdn.shopify.com/s/files/1/0368/1628/9924/products/dornfelder_kriek.jpg?v=1646921583",
+      "type": "Lambic",
+      "abv": 8.3,
+      "volume_cl": 75.0,
+      "brewery": "3 Fonteinen",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Drikbeer",
+          "price": 280.0,
+          "url": "https://drikbeer.com/products/3-fonteinen-druif-kriek-dornfelder-26-2021-750",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 280.0,
+      "min_price": 280.0,
+      "shop": "Drikbeer",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
       "id": 16451,
       "name": "Salikatt - Black Silk",
       "image": "https://cdn.shopify.com/s/files/1/0776/5209/9400/files/7D88E6C3-3D07-4BFF-B7D3-4B4456EA01DA.jpg?v=1781717476",
@@ -52883,6 +55597,30 @@
       "max_discount_pct": 16.9
     },
     {
+      "id": 17041,
+      "name": "Jarnit Family Wines - Grenache 2023",
+      "image": "https://cdn.shopify.com/s/files/1/0368/1628/9924/files/grenache.png?v=1775047021",
+      "type": null,
+      "abv": 14.7,
+      "volume_cl": 75.0,
+      "brewery": "Jarnit Family Wines",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Drikbeer",
+          "price": 295.0,
+          "url": "https://drikbeer.com/products/jarnit-family-wines-grenache-2023",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 295.0,
+      "min_price": 295.0,
+      "shop": "Drikbeer",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
       "id": 12828,
       "name": "Double Black Mash Coconut Version 12% 75cl",
       "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/double-black-mash-2021-coconut-version-12-75cl.png?v=1777923136",
@@ -52903,6 +55641,54 @@
       "cheapest_price": 295.0,
       "min_price": 295.0,
       "shop": "Brygshoppen",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
+      "id": 16976,
+      "name": "Weaver Hollow / Root + Branch - Drifter Waves",
+      "image": "https://cdn.shopify.com/s/files/1/0368/1628/9924/files/drifter_1db5365c-9f21-47e2-a9a1-3be80e7e8060.png?v=1737054724",
+      "type": "Sour",
+      "abv": 6.0,
+      "volume_cl": 75.0,
+      "brewery": "Weaver Hollow",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Drikbeer",
+          "price": 295.0,
+          "url": "https://drikbeer.com/products/drifter-waves",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 295.0,
+      "min_price": 295.0,
+      "shop": "Drikbeer",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
+      "id": 17042,
+      "name": "Jarnit Family Wines - Chardonnay 2023",
+      "image": "https://cdn.shopify.com/s/files/1/0368/1628/9924/files/chardonnay.png?v=1775047102",
+      "type": null,
+      "abv": 14.1,
+      "volume_cl": 75.0,
+      "brewery": "Jarnit Family Wines",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Drikbeer",
+          "price": 295.0,
+          "url": "https://drikbeer.com/products/jarnit-family-wines-chardonnay-2023",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 295.0,
+      "min_price": 295.0,
+      "shop": "Drikbeer",
       "discount_pct": 0,
       "max_discount_pct": 0
     },
@@ -53001,6 +55787,30 @@
       "shop": "Vild med Vin",
       "discount_pct": 0,
       "max_discount_pct": 0
+    },
+    {
+      "id": 16981,
+      "name": "2085 - Brewery Bundle",
+      "image": "https://cdn.shopify.com/s/files/1/0368/1628/9924/files/2085-release-120626.png?v=1781245641",
+      "type": null,
+      "abv": null,
+      "volume_cl": null,
+      "brewery": "2085",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Drikbeer",
+          "price": 299.0,
+          "url": "https://drikbeer.com/products/2085-brewery-bundle-1",
+          "discount_pct": 10.2,
+          "old_price": 333.0
+        }
+      ],
+      "cheapest_price": 299.0,
+      "min_price": 299.0,
+      "shop": "Drikbeer",
+      "discount_pct": 10.2,
+      "max_discount_pct": 10.2
     },
     {
       "id": 16647,
@@ -53219,6 +56029,61 @@
       "max_discount_pct": 0
     },
     {
+      "id": 17050,
+      "name": "Evil Twin Brewing - Imperial Biscotti Break Raspberry Umami 2016",
+      "image": "https://cdn.shopify.com/s/files/1/0368/1628/9924/files/imperial_biscotti_break_raspberry_umami.png?v=1773125194",
+      "type": "Imperial Stout",
+      "abv": 11.5,
+      "volume_cl": 65.0,
+      "brewery": "Evil Twin NYC",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Drikbeer",
+          "price": 300.0,
+          "url": "https://drikbeer.com/products/evil-twin-imperial-biscotti-break-raspberry-umami-2016",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 300.0,
+      "min_price": 300.0,
+      "shop": "Drikbeer",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
+      "id": 13917,
+      "name": "3 Fonteinen, Druif, Muscat Bleu, Lambic, No 47, 19/20, &#8211; 0,75 l. &#8211; 8,0%",
+      "image": "https://www.bestofbeers.dk/wp-content/uploads/2022/02/PhotoRoom_001_20220204_110110.png",
+      "type": "Lambic",
+      "abv": 8.0,
+      "volume_cl": 75.0,
+      "brewery": "3 Fonteinen, Druif, Muscat Bleu, Lambic, No 47, 19/20,",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Best of Beers",
+          "price": 301.0,
+          "url": "https://www.bestofbeers.dk/shop/3-fonteinen-druif-lambic-no-47-19-20-075-l-80/",
+          "discount_pct": 0,
+          "old_price": null
+        },
+        {
+          "shop_name": "Drikbeer",
+          "price": 316.0,
+          "url": "https://drikbeer.com/products/3-fonteinen-druif-muscat-bleu-47-2020",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 301.0,
+      "min_price": 301.0,
+      "shop": "Best of Beers",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
       "id": 13605,
       "name": "Bissel Brothers Brewing Co. – Angels With Filthy Souls – Double Barrel aged Maple Porter 2025 – 0,5 l. – 16,2%",
       "image": "https://www.bestofbeers.dk/wp-content/uploads/2026/04/BisselBrothersAngelsWithFilthySoulsDblBarrel.jpg",
@@ -53291,30 +56156,6 @@
       "max_discount_pct": 0
     },
     {
-      "id": 13917,
-      "name": "3 Fonteinen, Druif, Muscat Bleu, Lambic, No 47, 19/20, &#8211; 0,75 l. &#8211; 8,0%",
-      "image": "https://www.bestofbeers.dk/wp-content/uploads/2022/02/PhotoRoom_001_20220204_110110.png",
-      "type": "Lambic",
-      "abv": 8.0,
-      "volume_cl": 75.0,
-      "brewery": "3 Fonteinen, Druif, Muscat Bleu, Lambic, No 47, 19/20,",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Best of Beers",
-          "price": 301.0,
-          "url": "https://www.bestofbeers.dk/shop/3-fonteinen-druif-lambic-no-47-19-20-075-l-80/",
-          "discount_pct": 0,
-          "old_price": null
-        }
-      ],
-      "cheapest_price": 301.0,
-      "min_price": 301.0,
-      "shop": "Best of Beers",
-      "discount_pct": 0,
-      "max_discount_pct": 0
-    },
-    {
       "id": 15169,
       "name": "Ølpakke - Trappist - Øl",
       "image": "https://www.vildmedvin.dk/img/1000/1000/resize/2/8/28802-bundle_1_16.jpg",
@@ -53335,6 +56176,54 @@
       "cheapest_price": 304.0,
       "min_price": 304.0,
       "shop": "Vild med Vin",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
+      "id": 17107,
+      "name": "3 Fonteinen - Druif Dornfelder #27 2021",
+      "image": "https://cdn.shopify.com/s/files/1/0368/1628/9924/products/druif_dornfelder.jpg?v=1646921581",
+      "type": "Lambic",
+      "abv": 7.7,
+      "volume_cl": 75.0,
+      "brewery": "3 Fonteinen",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Drikbeer",
+          "price": 313.0,
+          "url": "https://drikbeer.com/products/3-fonteinen-druif-dornfelder-27-2021-750",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 313.0,
+      "min_price": 313.0,
+      "shop": "Drikbeer",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
+      "id": 17108,
+      "name": "3 Fonteinen - Druif Muscaris #16 2021",
+      "image": "https://cdn.shopify.com/s/files/1/0368/1628/9924/products/druif_muscaris.jpg?v=1646921580",
+      "type": "Lambic",
+      "abv": 9.1,
+      "volume_cl": 75.0,
+      "brewery": "3 Fonteinen",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Drikbeer",
+          "price": 314.0,
+          "url": "https://drikbeer.com/products/3-fonteinen-druif-muscaris-16-2021-750",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 314.0,
+      "min_price": 314.0,
+      "shop": "Drikbeer",
       "discount_pct": 0,
       "max_discount_pct": 0
     },
@@ -53627,6 +56516,30 @@
       "max_discount_pct": 24.0
     },
     {
+      "id": 17103,
+      "name": "3 Fonteinen - Hommage Blend #9 (2018 vintage)",
+      "image": "https://cdn.shopify.com/s/files/1/0368/1628/9924/files/hommage9.png?v=1724401750",
+      "type": "Lambic",
+      "abv": 6.0,
+      "volume_cl": 75.0,
+      "brewery": "3 Fonteinen",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Drikbeer",
+          "price": 349.0,
+          "url": "https://drikbeer.com/products/3-fonteinen-hommage-blend-9-2018-vintage",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 349.0,
+      "min_price": 349.0,
+      "shop": "Drikbeer",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
       "id": 16882,
       "name": "Funky Fluid - Final Eight World Cup Beer Bundle (6-Beer Bundle)",
       "image": "https://cdn.shopify.com/s/files/1/0551/6600/9423/files/FA01A715-6705-4C29-8D93-B962D99C8D48.jpg?v=1780906196",
@@ -53795,6 +56708,102 @@
       "max_discount_pct": 0
     },
     {
+      "id": 17101,
+      "name": "3 Fonteinen - Hommage Blend #36 (2017 vintage)",
+      "image": "https://cdn.shopify.com/s/files/1/0368/1628/9924/files/hommage36.png?v=1724401713",
+      "type": "Lambic",
+      "abv": 5.0,
+      "volume_cl": 75.0,
+      "brewery": "3 Fonteinen",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Drikbeer",
+          "price": 359.0,
+          "url": "https://drikbeer.com/products/3-fonteinen-hommage-blend-36-2016-vintage",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 359.0,
+      "min_price": 359.0,
+      "shop": "Drikbeer",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
+      "id": 17102,
+      "name": "3 Fonteinen - Hommage Blend #10 (2016 vintage)",
+      "image": "https://cdn.shopify.com/s/files/1/0368/1628/9924/files/hommage10.png?v=1724401649",
+      "type": "Lambic",
+      "abv": 4.5,
+      "volume_cl": 75.0,
+      "brewery": "3 Fonteinen",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Drikbeer",
+          "price": 359.0,
+          "url": "https://drikbeer.com/products/3-fonteinen-hommage-blend-10-2016-vintage",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 359.0,
+      "min_price": 359.0,
+      "shop": "Drikbeer",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
+      "id": 17064,
+      "name": "Westbrook Brewing - BA Mexican Cake (Tequila) - 2016",
+      "image": "https://cdn.shopify.com/s/files/1/0368/1628/9924/files/mexican_cake_tequila.png?v=1764272850",
+      "type": "Imperial Stout",
+      "abv": 10.5,
+      "volume_cl": 65.0,
+      "brewery": "Westbrook",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Drikbeer",
+          "price": 366.0,
+          "url": "https://drikbeer.com/products/westbrook-brewing-ba-mexican-cake-tequila-2016",
+          "discount_pct": 40.6,
+          "old_price": 616.0
+        }
+      ],
+      "cheapest_price": 366.0,
+      "min_price": 366.0,
+      "shop": "Drikbeer",
+      "discount_pct": 40.6,
+      "max_discount_pct": 40.6
+    },
+    {
+      "id": 16977,
+      "name": "Weaver Hollow - Salmagundi Vol. 4",
+      "image": "https://cdn.shopify.com/s/files/1/0368/1628/9924/files/salmagundi_v4_d899ad2e-b04b-425f-8621-c9c97c617f2e.png?v=1737054735",
+      "type": "Sour",
+      "abv": 6.0,
+      "volume_cl": 75.0,
+      "brewery": "Weaver Hollow",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Drikbeer",
+          "price": 369.0,
+          "url": "https://drikbeer.com/products/salmagundi-vol-4",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 369.0,
+      "min_price": 369.0,
+      "shop": "Drikbeer",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
       "id": 13809,
       "name": "Omnipollo x Phase Three – Metaphase – Barrel Aged Coconut Peanut Butter Imperial Stout – 0,375 l. – 11,0%",
       "image": "https://www.bestofbeers.dk/wp-content/uploads/2025/06/OmnipolloPhaseThreeMetaphase.jpg",
@@ -53839,6 +56848,78 @@
       "cheapest_price": 379.0,
       "min_price": 379.0,
       "shop": "Øltanken",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
+      "id": 17100,
+      "name": "The Bruery - Black Tuesday (2021)",
+      "image": "https://cdn.shopify.com/s/files/1/0368/1628/9924/files/black_tuesday_2021_145b4633-7fa3-45b8-a934-e9080f296e30.png?v=1734688888",
+      "type": "Imperial Stout",
+      "abv": 18.9,
+      "volume_cl": 75.0,
+      "brewery": "The Bruery",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Drikbeer",
+          "price": 389.0,
+          "url": "https://drikbeer.com/products/black-tuesday-dtc-2021-750ml",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 389.0,
+      "min_price": 389.0,
+      "shop": "Drikbeer",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
+      "id": 17099,
+      "name": "The Bruery - Black Tuesday [Scotch Barrel-Aged] (2022)",
+      "image": "https://cdn.shopify.com/s/files/1/0368/1628/9924/files/black_tuesday_scotch_22_46c54afb-e0d5-4ea7-9191-a313e1b8883e.png?v=1734688899",
+      "type": "Imperial Stout",
+      "abv": 17.7,
+      "volume_cl": 75.0,
+      "brewery": "The Bruery",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Drikbeer",
+          "price": 389.0,
+          "url": "https://drikbeer.com/products/black-tuesday-scotch-2022-750ml",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 389.0,
+      "min_price": 389.0,
+      "shop": "Drikbeer",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
+      "id": 14885,
+      "name": "The Bruery - Black Tuesday 2024",
+      "image": "https://cdn.shopify.com/s/files/1/0776/5209/9400/files/449A2146-D87D-4B6D-B8CD-98EA830533F3.jpg?v=1772478223",
+      "type": "Imperial Stout",
+      "abv": 19.7,
+      "volume_cl": 75.0,
+      "brewery": "The Bruery",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Drikbeer",
+          "price": 389.0,
+          "url": "https://drikbeer.com/products/black-tuesday-2023-750ml",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 389.0,
+      "min_price": 389.0,
+      "shop": "Drikbeer",
       "discount_pct": 0,
       "max_discount_pct": 0
     },
@@ -54155,6 +57236,54 @@
       "max_discount_pct": 0
     },
     {
+      "id": 17049,
+      "name": "Evil Twin Brewing - Maple Bourbon Imperial Doughnut Break 2018",
+      "image": "https://cdn.shopify.com/s/files/1/0368/1628/9924/files/imperial_doughnut_maple_syrup_BBA.png?v=1773125607",
+      "type": "Porter",
+      "abv": 13.0,
+      "volume_cl": 65.0,
+      "brewery": "Evil Twin NYC",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Drikbeer",
+          "price": 420.0,
+          "url": "https://drikbeer.com/products/evil-twin-maple-bourbon-imperial-doughnut-break-2018",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 420.0,
+      "min_price": 420.0,
+      "shop": "Drikbeer",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
+      "id": 17053,
+      "name": "Evil Twin Brewing / Prairie - Double Barrel Bible Belt 2018",
+      "image": "https://cdn.shopify.com/s/files/1/0368/1628/9924/files/double_barrel_bible_belt.png?v=1773123599",
+      "type": "Dubbel",
+      "abv": 14.0,
+      "volume_cl": 65.0,
+      "brewery": "Evil Twin NYC",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Drikbeer",
+          "price": 420.0,
+          "url": "https://drikbeer.com/products/evil-twin-prairie-double-barrel-bible-belt-2018",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 420.0,
+      "min_price": 420.0,
+      "shop": "Drikbeer",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
       "id": 15569,
       "name": "Gouden Carolus, Årgangsøl Imperial Serien 2025 - Øl",
       "image": "https://www.vildmedvin.dk/img/1000/1000/resize/g/o/gouden_carolus_imperial_gave_ske.jpg",
@@ -54378,6 +57507,30 @@
       "max_discount_pct": 0
     },
     {
+      "id": 16978,
+      "name": "Weaver Hollow - Atto Terzo Albarino",
+      "image": "https://cdn.shopify.com/s/files/1/0368/1628/9924/files/atto_terzo_altarino_grapes_214ff387-4cff-4a30-934e-e75d16aee116.png?v=1737054760",
+      "type": "Sour",
+      "abv": 8.0,
+      "volume_cl": 75.0,
+      "brewery": "Weaver Hollow",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Drikbeer",
+          "price": 449.0,
+          "url": "https://drikbeer.com/products/atto-terzo-albarino",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 449.0,
+      "min_price": 449.0,
+      "shop": "Drikbeer",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
       "id": 14821,
       "name": "Evil Twin x Side Project - The Great Northern Barrel Aged Series 55",
       "image": "https://cdn.shopify.com/s/files/1/0776/5209/9400/files/342C40F8-EBC1-4999-AEB4-8999FDEA87B5.jpg?v=1777754353",
@@ -54402,6 +57555,30 @@
       "max_discount_pct": 0
     },
     {
+      "id": 17048,
+      "name": "Evil Twin Brewing - Harlan's Even More Jesus 2018",
+      "image": "https://cdn.shopify.com/s/files/1/0368/1628/9924/files/harlam_s_even_more_jesus.png?v=1773123447",
+      "type": "Imperial Stout",
+      "abv": 12.0,
+      "volume_cl": 65.0,
+      "brewery": "Evil Twin NYC",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Drikbeer",
+          "price": 450.0,
+          "url": "https://drikbeer.com/products/evil-twin-maple-bourbon-syrup-even-more-jesus-2017",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 450.0,
+      "min_price": 450.0,
+      "shop": "Drikbeer",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
       "id": 16879,
       "name": "Humle Månedspakken - Juni",
       "image": "https://cdn.shopify.com/s/files/1/0551/6600/9423/files/7A976370-185A-4553-8E32-86C9F2C2EEAE.jpg?v=1780308894",
@@ -54422,6 +57599,54 @@
       "cheapest_price": 450.0,
       "min_price": 450.0,
       "shop": "Beermatch",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
+      "id": 17051,
+      "name": "Evil Twin Brewing - Some People Are Immune to Good Advice Maple Bourbon BA Stout 2018",
+      "image": "https://cdn.shopify.com/s/files/1/0368/1628/9924/files/some_people_are_immune_to_good_advice.png?v=1773125357",
+      "type": "Stout",
+      "abv": 10.7,
+      "volume_cl": 65.0,
+      "brewery": "Evil Twin NYC",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Drikbeer",
+          "price": 450.0,
+          "url": "https://drikbeer.com/products/evil-twin-some-people-are-immune-to-good-advice-2018",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 450.0,
+      "min_price": 450.0,
+      "shop": "Drikbeer",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
+      "id": 17052,
+      "name": "Evil Twin Brewing - Oh My God, He's a Bozo! 2019",
+      "image": "https://cdn.shopify.com/s/files/1/0368/1628/9924/files/oh_my_god_he_s_a_bozo.png?v=1773125228",
+      "type": "Imperial Stout",
+      "abv": 17.2,
+      "volume_cl": 65.0,
+      "brewery": "Evil Twin NYC",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Drikbeer",
+          "price": 450.0,
+          "url": "https://drikbeer.com/products/evil-twin-oh-my-god-hes-a-bozo-2019",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 450.0,
+      "min_price": 450.0,
+      "shop": "Drikbeer",
       "discount_pct": 0,
       "max_discount_pct": 0
     },
@@ -54601,6 +57826,30 @@
       "max_discount_pct": 0
     },
     {
+      "id": 17105,
+      "name": "3 Fonteinen - Zenne y Frontera blend no.94 (2019 vintage) (Subscriber Only)",
+      "image": "https://cdn.shopify.com/s/files/1/0368/1628/9924/files/zenne94.png?v=1716901672",
+      "type": "Lambic",
+      "abv": 6.8,
+      "volume_cl": 75.0,
+      "brewery": "3 Fonteinen",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Drikbeer",
+          "price": 495.0,
+          "url": "https://drikbeer.com/products/3-fonteinen-zenne-y-frontera-blend-n94-2019-vintage",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 495.0,
+      "min_price": 495.0,
+      "shop": "Drikbeer",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
       "id": 16556,
       "name": "Sophia Lambic 6,5% 75cl",
       "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/sophia-lambic-6-5-75cl.png?v=1782316588",
@@ -54649,6 +57898,30 @@
       "max_discount_pct": 8.5
     },
     {
+      "id": 16980,
+      "name": "Eredità / False Hope / Timber Ales / Van Ewing - American Bundle",
+      "image": "https://cdn.shopify.com/s/files/1/0368/1628/9924/files/americanbundle.png?v=1781257900",
+      "type": null,
+      "abv": null,
+      "volume_cl": null,
+      "brewery": "Drikbeer",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Drikbeer",
+          "price": 509.0,
+          "url": "https://drikbeer.com/products/american-bundle",
+          "discount_pct": 11.0,
+          "old_price": 572.0
+        }
+      ],
+      "cheapest_price": 509.0,
+      "min_price": 509.0,
+      "shop": "Drikbeer",
+      "discount_pct": 11.0,
+      "max_discount_pct": 11.0
+    },
+    {
       "id": 14382,
       "name": "Side Project - Hazel Ave 75 cl.",
       "image": "https://cdn.shopify.com/s/files/1/0776/5209/9400/files/412F84C8-ECE3-4A00-AE64-6376F33200C6.jpg?v=1777161127",
@@ -54671,6 +57944,30 @@
       "shop": "Øltanken",
       "discount_pct": 0,
       "max_discount_pct": 0
+    },
+    {
+      "id": 17009,
+      "name": "AleSmith - Speedway Bundle",
+      "image": "https://cdn.shopify.com/s/files/1/0368/1628/9924/files/alesmith_bundle_06a6407c-8cac-4b31-89cd-4397c469378c.png?v=1780651530",
+      "type": null,
+      "abv": null,
+      "volume_cl": null,
+      "brewery": "AleSmith",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Drikbeer",
+          "price": 539.0,
+          "url": "https://drikbeer.com/products/alesmith-brewery-bundle-1",
+          "discount_pct": 10.8,
+          "old_price": 604.0
+        }
+      ],
+      "cheapest_price": 539.0,
+      "min_price": 539.0,
+      "shop": "Drikbeer",
+      "discount_pct": 10.8,
+      "max_discount_pct": 10.8
     },
     {
       "id": 16624,
@@ -54865,6 +58162,54 @@
       "max_discount_pct": 12.6
     },
     {
+      "id": 17075,
+      "name": "The Bruery - 12 Days of Christmas",
+      "image": "https://cdn.shopify.com/s/files/1/0368/1628/9924/files/12daysofchristmas.png?v=1762510862",
+      "type": null,
+      "abv": 9.0,
+      "volume_cl": 37.5,
+      "brewery": "The Bruery",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Drikbeer",
+          "price": 750.0,
+          "url": "https://drikbeer.com/products/the-bruery-12-days-of-christmas",
+          "discount_pct": 24.9,
+          "old_price": 999.0
+        }
+      ],
+      "cheapest_price": 750.0,
+      "min_price": 750.0,
+      "shop": "Drikbeer",
+      "discount_pct": 24.9,
+      "max_discount_pct": 24.9
+    },
+    {
+      "id": 17040,
+      "name": "Jarnit Family Wines - Bundle",
+      "image": "https://cdn.shopify.com/s/files/1/0368/1628/9924/files/jarnit_bundle.png?v=1775047139",
+      "type": null,
+      "abv": null,
+      "volume_cl": null,
+      "brewery": "Drikbeer",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Drikbeer",
+          "price": 799.0,
+          "url": "https://drikbeer.com/products/jarnit-family-wines-bundle",
+          "discount_pct": 9.7,
+          "old_price": 885.0
+        }
+      ],
+      "cheapest_price": 799.0,
+      "min_price": 799.0,
+      "shop": "Drikbeer",
+      "discount_pct": 9.7,
+      "max_discount_pct": 9.7
+    },
+    {
       "id": 14381,
       "name": "15 % Side Project - Marple Lions + BA",
       "image": "https://cdn.shopify.com/s/files/1/0776/5209/9400/files/1EEDB8DC-2687-4C4D-B02F-163B67CD71A5.jpg?v=1777161127",
@@ -54889,6 +58234,30 @@
       "max_discount_pct": 0
     },
     {
+      "id": 17104,
+      "name": "Zenne y Frontera Subscriber Only Vintage Bundle",
+      "image": "https://cdn.shopify.com/s/files/1/0368/1628/9924/files/zennesubbun.png?v=1716968301",
+      "type": null,
+      "abv": null,
+      "volume_cl": null,
+      "brewery": "3 Fonteinen",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Drikbeer",
+          "price": 889.0,
+          "url": "https://drikbeer.com/products/zenne-y-frontera-subscriber-only-vintage-bundle",
+          "discount_pct": 10.2,
+          "old_price": 990.0
+        }
+      ],
+      "cheapest_price": 889.0,
+      "min_price": 889.0,
+      "shop": "Drikbeer",
+      "discount_pct": 10.2,
+      "max_discount_pct": 10.2
+    },
+    {
       "id": 16729,
       "name": "Timber Ales Bundle spar 350 kr.",
       "image": "https://cdn.shopify.com/s/files/1/0776/5209/9400/files/D9B728EE-8238-4B1C-AA0D-29FF3202CF4F.jpg?v=1773150628",
@@ -54911,6 +58280,54 @@
       "shop": "Øltanken",
       "discount_pct": 27.1,
       "max_discount_pct": 27.1
+    },
+    {
+      "id": 17046,
+      "name": "3 Fonteinen  - Brewery Bundle",
+      "image": "https://cdn.shopify.com/s/files/1/0368/1628/9924/files/3_fonteinen_bundle.png?v=1774608098",
+      "type": null,
+      "abv": null,
+      "volume_cl": null,
+      "brewery": "3 Fonteinen",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Drikbeer",
+          "price": 949.0,
+          "url": "https://drikbeer.com/products/3-fonteinen-brewery-bundle",
+          "discount_pct": 10.5,
+          "old_price": 1060.0
+        }
+      ],
+      "cheapest_price": 949.0,
+      "min_price": 949.0,
+      "shop": "Drikbeer",
+      "discount_pct": 10.5,
+      "max_discount_pct": 10.5
+    },
+    {
+      "id": 16979,
+      "name": "Side Project - Fruited Specials Bundle",
+      "image": "https://cdn.shopify.com/s/files/1/0368/1628/9924/files/fruited_bundle.png?v=1781856982",
+      "type": "Sour",
+      "abv": null,
+      "volume_cl": null,
+      "brewery": "Side Project",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Drikbeer",
+          "price": 1249.0,
+          "url": "https://drikbeer.com/products/side-project-fruited-specials-bundle",
+          "discount_pct": 6.9,
+          "old_price": 1341.0
+        }
+      ],
+      "cheapest_price": 1249.0,
+      "min_price": 1249.0,
+      "shop": "Drikbeer",
+      "discount_pct": 6.9,
+      "max_discount_pct": 6.9
     }
   ]
 }
