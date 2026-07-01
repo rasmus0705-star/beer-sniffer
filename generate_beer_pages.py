@@ -19,7 +19,8 @@ import os
 import sys
 from datetime import datetime
 from html import escape
-from app.utils.slugify import clean_name
+from urllib.parse import quote
+from app.utils.slugify import clean_name, is_valid_brewery, strip_accents
 
 SITE_URL = "https://www.beersniffer.dk"
 OUTPUT_DIR = "ol"
@@ -64,7 +65,24 @@ def render_price_row(price, is_cheapest):
     </div>"""
 
 
-def render_page(beer, updated_at):
+def render_related_card(beer):
+    name = escape(clean_name(beer.get("name", "")))
+    slug = beer["slug"]
+    image = beer.get("image") or ""
+    min_price = beer.get("min_price") or 0
+    img_html = (
+        f'<img src="{escape(image)}" alt="{name}" loading="lazy">'
+        if image else '<div class="related-img-placeholder">🍺</div>'
+    )
+    return f"""
+    <a class="related-card" href="{SITE_URL}/ol/{slug}/">
+        {img_html}
+        <div class="related-name">{name}</div>
+        <div class="related-price">{format_price(min_price)} kr</div>
+    </a>"""
+
+
+def render_page(beer, updated_at, brewery_index, type_index):
     raw_name = beer.get("name", "")
     display_name = clean_name(raw_name)
     name = escape(display_name)
@@ -78,6 +96,18 @@ def render_page(beer, updated_at):
     min_price = beer.get("min_price") or (prices[0]["price"] if prices else 0)
     max_discount = beer.get("max_discount_pct") or 0
     shop_count = len(prices)
+
+    # ── Relaterede øl: samme bryggeri først, ellers samme stilart ──
+    related = []
+    if is_valid_brewery(beer.get("brewery")):
+        key = strip_accents(clean_name(beer.get("brewery")).lower())
+        related = [b for b in brewery_index.get(key, []) if b.get("slug") != slug][:6]
+    if not related and beer.get("type"):
+        related = [b for b in type_index.get(beer["type"], []) if b.get("slug") != slug][:6]
+    related_heading = (
+        f"Flere øl fra {brewery}" if related and is_valid_brewery(beer.get("brewery"))
+        else f"Andre {beer_type}-øl" if related else ""
+    )
 
     page_title = f"{name} – {format_price(min_price)} kr | BeerSniffer"
     meta_desc_parts = [name]
@@ -105,7 +135,6 @@ def render_page(beer, updated_at):
     )
 
     untappd_query_name = display_name
-    from urllib.parse import quote
     untappd_query = quote(untappd_query_name)
 
     schema = {
@@ -135,6 +164,16 @@ def render_page(beer, updated_at):
     }
     schema_json = json.dumps(schema, ensure_ascii=False)
 
+    breadcrumb_schema = {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {"@type": "ListItem", "position": 1, "name": "BeerSniffer", "item": f"{SITE_URL}/"},
+            {"@type": "ListItem", "position": 2, "name": display_name, "item": canonical},
+        ],
+    }
+    breadcrumb_json = json.dumps(breadcrumb_schema, ensure_ascii=False)
+
     image_html = (
         f'<img class="beer-image" src="{escape(image)}" alt="{name}" loading="eager">'
         if image else '<div class="beer-image-placeholder">🍺</div>'
@@ -148,12 +187,19 @@ def render_page(beer, updated_at):
 <title>{escape(page_title)}</title>
 <meta name="description" content="{meta_description}">
 <link rel="canonical" href="{canonical}">
+<link rel="icon" href="{SITE_URL}/favicon.ico">
+<meta property="og:site_name" content="BeerSniffer">
 <meta property="og:title" content="{escape(page_title)}">
 <meta property="og:description" content="{meta_description}">
 <meta property="og:type" content="product">
 <meta property="og:url" content="{canonical}">
 {f'<meta property="og:image" content="{escape(image)}">' if image else ''}
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{escape(page_title)}">
+<meta name="twitter:description" content="{meta_description}">
+{f'<meta name="twitter:image" content="{escape(image)}">' if image else ''}
 <script type="application/ld+json">{schema_json}</script>
+<script type="application/ld+json">{breadcrumb_json}</script>
 <style>
 :root {{
     --bg: #0a0805; --surface: #141009; --surface2: #1e1810;
@@ -184,6 +230,14 @@ body {{ background: var(--bg); color: var(--text); font-family: 'DM Sans', sans-
 .old-price {{ font-size: 0.8rem; color: #c0a878; text-decoration: line-through; margin-left: 0.5rem; }}
 .discount-badge {{ background: var(--discount); color: #000; font-size: 0.65rem; font-weight: 800; padding: 0.1rem 0.4rem; border-radius: 4px; }}
 .buy-btn {{ background: linear-gradient(135deg, #ffd54a, #ffb300); color: #000; font-weight: 800; padding: 0.5rem 1rem; border-radius: 7px; text-decoration: none; font-size: 0.8rem; }}
+.related-section {{ margin-top: 2rem; }}
+.related-heading {{ font-size: 0.9rem; font-weight: 700; color: var(--gold-light); margin-bottom: 0.8rem; }}
+.related-grid {{ display: grid; grid-template-columns: repeat(auto-fill, minmax(110px, 1fr)); gap: 0.7rem; }}
+.related-card {{ background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 0.6rem; text-decoration: none; color: var(--text); transition: border-color 0.15s; }}
+.related-card:hover {{ border-color: var(--gold); }}
+.related-card img, .related-img-placeholder {{ width: 100%; height: 70px; object-fit: contain; background: var(--surface2); border-radius: 6px; margin-bottom: 0.4rem; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; }}
+.related-name {{ font-size: 0.72rem; line-height: 1.3; margin-bottom: 0.2rem; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; min-height: 1.9em; }}
+.related-price {{ font-size: 0.78rem; font-weight: 700; color: var(--gold-light); }}
 .disclaimer {{ font-size: 0.72rem; color: var(--text-muted); margin-top: 2rem; line-height: 1.6; border-top: 1px solid var(--border); padding-top: 1rem; }}
 </style>
 </head>
@@ -206,6 +260,11 @@ body {{ background: var(--bg); color: var(--text); font-family: 'DM Sans', sans-
     <p style="font-size:0.8rem;color:var(--text-muted)">
         Se også <a href="https://untappd.com/search?q={untappd_query}" target="_blank" rel="noopener" style="color:var(--gold)">{name} på Untappd</a>
     </p>
+
+    {f'''<div class="related-section">
+        <div class="related-heading">{escape(related_heading)}</div>
+        <div class="related-grid">{"".join(render_related_card(r) for r in related)}</div>
+    </div>''' if related else ''}
 
     <div class="disclaimer">
         📢 Affiliate disclosure: BeerSniffer kan modtage provision når du køber via vores links.
@@ -237,18 +296,30 @@ def main():
         print(f"⚠️ {skipped_no_slug} øl har ingen slug endnu og springes over.")
 
     if not all_mode:
-        beers = beers[:limit]
-        print(f"TEST-TILSTAND: genererer kun {len(beers)} sider (brug --all for alle {len(data.get('beers', []))}).")
+        beers_to_render = beers[:limit]
+        print(f"TEST-TILSTAND: genererer kun {len(beers_to_render)} sider (brug --all for alle {len(data.get('beers', []))}).")
     else:
-        print(f"Genererer {len(beers)} sider...")
+        beers_to_render = beers
+        print(f"Genererer {len(beers_to_render)} sider...")
+
+    # Indekser til "relaterede øl" bygges ud fra ALLE øl (ikke kun test-batchen),
+    # så relaterede forslag er retvisende selv i test-tilstand.
+    brewery_index = {}
+    type_index = {}
+    for b in beers:
+        if is_valid_brewery(b.get("brewery")):
+            key = strip_accents(clean_name(b["brewery"]).lower())
+            brewery_index.setdefault(key, []).append(b)
+        if b.get("type"):
+            type_index.setdefault(b["type"], []).append(b)
 
     os.makedirs(OUTPUT_DIR, exist_ok=True)
     written = []
-    for beer in beers:
+    for beer in beers_to_render:
         slug = beer["slug"]
         page_dir = os.path.join(OUTPUT_DIR, slug)
         os.makedirs(page_dir, exist_ok=True)
-        html = render_page(beer, updated_at_display)
+        html = render_page(beer, updated_at_display, brewery_index, type_index)
         path = os.path.join(page_dir, "index.html")
         with open(path, "w", encoding="utf-8") as f:
             f.write(html)

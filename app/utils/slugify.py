@@ -164,6 +164,23 @@ def resolve_collisions(slug: str, existing_slugs: set) -> str:
     return f"{slug}-{n}"
 
 
+def is_valid_brewery(brewery) -> bool:
+    """Offentlig helper: afgør om et brewery-felt er troværdigt (ikke en
+    'Best Before'-dato eller et forkert indsat shop-navn — se kendte
+    databugs fundet i Beershoppen/A Good Case-scraperne). Bruges bl.a. af
+    'relaterede øl'-sektionen på de individuelle sider."""
+    if not brewery:
+        return False
+    cleaned = clean_name(brewery)
+    if not cleaned:
+        return False
+    if re.search(r"\d{2,4}", cleaned):
+        return False
+    if strip_accents(cleaned.lower()) in _KNOWN_SHOP_NAMES:
+        return False
+    return True
+
+
 # ── TEST mod rigtige eksempler fra jeres data.json ──────────────────
 if __name__ == "__main__":
     test_cases = [
