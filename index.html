@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <title>BeerSniffer — Find de bedste øltilbud i Danmark</title>
     <meta name="description" content="Sammenlign priser på specialøl fra danske webshops. Find tilbud på IPA, stout, pilsner og meget mere. Opdateres dagligt.">
-    <meta name="keywords" content="øltilbud, specialøl, craft beer, billig øl, ølpriser, IPA tilbud, stout tilbud, dansk øl, brygshoppen, beershoppen, agoodcase, smagekasse, øl tilbud">
+    <meta name="keywords" content="øltilbud, specialøl, craft beer, billig øl, ølpriser, IPA tilbud, stout tilbud, dansk øl, brygshoppen, beershoppen, agoodcase, beermatch, drikbeer, smagekasse, øl tilbud">
     <meta property="og:title" content="BeerSniffer — Find de bedste øltilbud i Danmark">
     <meta property="og:description" content="Sammenlign priser på specialøl fra danske webshops. Opdateres dagligt.">
     <meta property="og:url" content="https://www.beersniffer.dk/">
@@ -918,6 +918,14 @@
             text-align: left;
         }
         .shipping-btn.tooltip-open .shipping-tooltip { opacity: 1; pointer-events: auto; transform: translateY(0); }
+        /* Hover-visning kun for musebrugere — touch-skærme beholder klik-adfærden */
+        @media (hover: hover) and (pointer: fine) {
+            .shipping-btn:hover .shipping-tooltip { opacity: 1; pointer-events: auto; transform: translateY(0); }
+        }
+        /* Hover-visning kun for musebrugere — touch-skærme beholder klik-adfærden */
+        @media (hover: hover) and (pointer: fine) {
+            .shipping-btn:hover .shipping-tooltip { opacity: 1; pointer-events: auto; transform: translateY(0); }
+        }
         .tt-row { display: flex; justify-content: space-between; align-items: center; gap: 0.75rem; font-size: 0.78rem; line-height: 1.6; }
         .tt-label { color: #a09070; font-size: 0.76rem; }
         .tt-value { color: #f0e6d0; font-weight: 600; white-space: nowrap; font-size: 0.8rem; }
@@ -1271,7 +1279,7 @@
 
 <section class="seo-section">
     <h2>Find de bedste øltilbud online</h2>
-    <p>BeerSniffer hjælper dig med at finde de billigste priser på specialøl fra danske webshops. Vi sammenligner IPA, stout, pilsner, sour og meget mere på tværs af butikker som Brygshoppen, A Good Case, Beershoppen, Best of Beers, Øltanken, Beer Me og Vild med Vin – så du altid får den bedste pris uden at bruge timer på at søge selv.</p>
+    <p>BeerSniffer hjælper dig med at finde de billigste priser på specialøl fra danske webshops. Vi sammenligner IPA, stout, pilsner, sour og meget mere på tværs af butikker som Brygshoppen, A Good Case, Beershoppen, Best of Beers, Øltanken, Beer Me, Vild med Vin, Beermatch og Drikbeer – så du altid får den bedste pris uden at bruge timer på at søge selv.</p>
 </section>
 
 <footer>
@@ -1297,6 +1305,10 @@
             <a href="https://oeltanken.dk" target="_blank" rel="noopener">Øltanken</a>
             <a href="https://beerme.dk" target="_blank" rel="noopener">Beer Me</a>
             <a href="https://vildmedvin.dk" target="_blank" rel="noopener">Vild med Vin</a>
+            <a href="https://www.beermatch.dk" target="_blank" rel="noopener">Beermatch</a>
+            <a href="https://drikbeer.com" target="_blank" rel="noopener">Drikbeer</a>
+            <a href="https://www.beermatch.dk" target="_blank" rel="noopener">Beermatch</a>
+            <a href="https://drikbeer.com" target="_blank" rel="noopener">Drikbeer</a>
         </div>
         <div class="footer-col">
             <span class="footer-col-title">Kontakt</span>
@@ -1304,7 +1316,7 @@
             <a href="#" onclick="Cookiebot.renew()">🍪 Cookieindstillinger</a>
         </div>
     </div>
-    <div class="footer-bottom">BeerSniffer &copy; 2025 &mdash; Kun for personer over 18 år &mdash; Drik med omtanke 🍺</div>
+    <div class="footer-bottom">BeerSniffer &copy; 2026 &mdash; Kun for personer over 18 år &mdash; Drik med omtanke 🍺</div>
 </footer>
 
 <script>
@@ -1312,12 +1324,15 @@
 
     const SHIPPING = {
         'A Good Case':   { price: 59,  freeOver: 499, note: 'Levering med Burd eller PostNord' },
-        'Brygshoppen':   { price: 70,  freeOver: 499, note: 'Levering med Burd eller DAO' },
         'Beershoppen':   { price: 68,  freeOver: 899, note: 'Levering med GLS eller PostNord' },
-        'Best of Beers': { price: 49,  freeOver: 499, note: 'Levering 1-3 hverdage' },
-        'Øltanken':      { price: 49,  freeOver: 499, note: 'Levering 2-4 hverdage' },
-        'Beer Me':       { price: 45,  freeOver: 500, note: 'Levering via PostNord' },
-        'Vild med Vin':  { price: 49,  freeOver: 499, note: 'Levering via GLS' },
+        'Best of Beers': { price: 39,  freeOver: 499, note: 'Levering 1-3 hverdage' },
+        'Øltanken':      { price: 49,  freeOver: 899, note: 'Levering til pakkeshop, 2-3 hverdage' },
+        'Vild med Vin':  { price: 29,  freeOver: 399, note: 'Levering til pakkeshop' },
+        'Beermatch':     { price: 69,  freeOver: 599, note: 'Levering med GLS eller PostNord til pakkeshop' },
+        'Drikbeer':      { price: 49,  freeOver: 750, note: 'Levering til pakkeshop eller hjemmeadresse' },
+        // Brygshoppen og Beer Me udeladt bevidst — begge beregner nu
+        // fragt ved checkout uden et fast offentligt beløb. Knappen
+        // falder automatisk tilbage til "ikke tilgængelig"-visningen.
     };
 
     let allBeers = [];
@@ -1405,6 +1420,7 @@
         const cls = !s ? ' no-info' : isFree ? ' free-shipping' : '';
         const label = !s ? 'Fragtinfo ikke tilgængelig' : isFree ? 'Gratis fragt' : `Fragt: ${s.price} kr`;
         return `<span class="shipping-btn${cls}" aria-label="${label}"
+                    onmouseenter="positionTooltip(this)"
                     onclick="positionTooltip(this);this.classList.toggle('tooltip-open');event.stopPropagation();event.preventDefault()">
                     🚚<div class="shipping-tooltip">${shippingTooltipHTML(shopName, itemPrice)}</div></span>`;
     }
