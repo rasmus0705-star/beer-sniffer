@@ -10,6 +10,8 @@ Kør med: python build_data.py
 """
 
 import json
+import sys
+import subprocess
 import time
 from datetime import datetime
 from dotenv import load_dotenv
@@ -292,7 +294,16 @@ def main():
     with open("data.json", "w", encoding="utf-8") as f:
         json.dump(output, f, ensure_ascii=False, indent=2)
 
-    # 7. Opdater facitliste (bevarer dine rettelser, flagger nye huller)
+    # 7. Generér individuelle øl-sider og sitemap ud fra det nye data.json
+    print(f"\n🌐 Genererer øl-sider og sitemap...")
+    try:
+        subprocess.run([sys.executable, "generate_beer_pages.py", "--all"], check=True)
+        subprocess.run([sys.executable, "generate_sitemap.py"], check=True)
+    except subprocess.CalledProcessError as e:
+        print(f"⚠️ Fejl under generering af øl-sider/sitemap: {e}")
+        print("   data.json er stadig skrevet korrekt — kør generatorerne manuelt for at se fejlen.")
+
+    # 8. Opdater facitliste (bevarer dine rettelser, flagger nye huller)
     _stats = write_fejlliste(items, _facit, "fejlliste.xlsx")
     print(f"\U0001F4DD fejlliste.xlsx opdateret: {_stats['rows']} raekker, {_stats['mangler']} mangler")
 
@@ -302,7 +313,7 @@ def main():
     print(f"   Aktive tilbud: {deals_count}")
     print(f"   Billigste øl: {round(cheapest, 2)} kr")
     print(f"\n📤 Næste skridt:")
-    print(f"   git add data.json")
+    print(f"   git add data.json ol/ sitemap.xml")
     print(f"   git commit -m \"Daglig opdatering {datetime.now().strftime('%Y-%m-%d')}\"")
     print(f"   git push")
 
