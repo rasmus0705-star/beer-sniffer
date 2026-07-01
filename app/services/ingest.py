@@ -2,6 +2,7 @@ from sqlalchemy.orm import Session
 
 from app.models import Beer, Price, PriceHistory, PriceAlert
 from app.utils.normalize import normalize_name
+from app.utils.slugify import slugify, resolve_collisions
 from app.services.matching import (
     normalize_for_matching,
     style_fingerprint,
@@ -96,6 +97,8 @@ def ingest_batch(db: Session, items: list[dict]):
 
     all_beers = db.query(Beer).all()
 
+    existing_slugs = {b.slug for b in all_beers if b.slug}
+
     beers_by_volume = {}
     beers_with_no_volume = []
     for beer in all_beers:
@@ -142,6 +145,10 @@ def ingest_batch(db: Session, items: list[dict]):
         )
 
         if not beer:
+            new_slug = slugify(item_name, item_brewery)
+            new_slug = resolve_collisions(new_slug, existing_slugs)
+            existing_slugs.add(new_slug)
+
             beer = Beer(
                 name=item_name,
                 normalized_name=normalize_name(item_name),
@@ -150,6 +157,7 @@ def ingest_batch(db: Session, items: list[dict]):
                 volume_cl=item_vol,
                 abv=item_abv,
                 image=item.get("image"),
+                slug=new_slug,
             )
             db.add(beer)
             db.flush()

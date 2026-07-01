@@ -139,6 +139,9 @@ def build_beer_list_from_db(db):
 
         if best_key and best_score >= best_threshold:
             target = grouped[best_key]
+            if beer.id < target["id"]:
+                target["id"] = beer.id
+                target["slug"] = beer.slug
             for p in beer.prices:
                 target["prices"].append({
                     "shop_name": p.shop_name,
@@ -163,6 +166,7 @@ def build_beer_list_from_db(db):
             key = f"g_{counter}"
             grouped[key] = {
                 "id": beer.id,
+                "slug": beer.slug,
                 "name": beer.name,
                 "image": beer.image,
                 "type": beer.type,

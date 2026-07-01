@@ -11,6 +11,7 @@ class Beer(Base):
 
     name = Column(String)
     normalized_name = Column(String, index=True)
+    slug = Column(String, unique=True, index=True, nullable=True)
 
     brewery = Column(String)
     type = Column(String)

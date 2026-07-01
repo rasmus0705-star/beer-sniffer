@@ -743,7 +743,9 @@
             -webkit-box-orient: vertical;
             overflow: hidden;
             min-height: 2.3em;
+            text-decoration: none;
         }
+        .card-name:hover { color: var(--gold-light); }
         .card-meta { display: flex; gap: 0.3rem; flex-wrap: wrap; margin-bottom: 0.6rem; min-height: 22px; }
         .tag {
             font-size: 0.58rem;
@@ -1541,11 +1543,13 @@
         const totalLabel = totalInclShipping !== null ? `<span class="price-row-total">Inkl. fragt: ${totalInclShipping.toFixed(0)} kr</span>` : '';
         const pplTag = b.volume_cl && b.volume_cl > 0 ? `<span class="tag tag-ppl" title="Pris pr. liter">${((minPrice / b.volume_cl) * 100).toFixed(0)} kr/L</span>` : '';
         const untappdQuery = encodeURIComponent((() => { const n = b.name.replace(/\d+[.,]?\d*\s?%/g,'').replace(/\d+\s?(cl|ml)/gi,'').trim(); return n.split(/\s+/).slice(0,4).join(' ').trim(); })());
+        const detailUrl = b.slug ? `ol/${b.slug}/` : (best.url || '#');
+        const detailTarget = b.slug ? '' : ' target="_blank"';
 
         let html = `<div class="card${maxDiscount > 0 ? ' has-deal' : ''}" style="animation-delay:${delay}s" role="listitem">`;
         if (maxDiscount > 0) html += `<div class="ribbon">−${maxDiscount}%</div>`;
 
-        html += `<a class="card-img-wrap" ${best.url ? `href="${best.url}" target="_blank" onclick="gtag('event','billede_klik',{beer_name:'${bName}',shop:'${bShop}',price:${minPrice}})"` : ''} aria-label="${b.name} — køb hos ${best.shop_name || 'butik'}">`;
+        html += `<a class="card-img-wrap" href="${detailUrl}"${detailTarget} onclick="gtag('event','produkt_klik',{beer_name:'${bName}',shop:'${bShop}',price:${minPrice}})" aria-label="Se ${b.name} hos BeerSniffer">`;
         if (b.image) {
             html += `<img class="card-img" src="${b.image}" alt="${b.name}" loading="lazy" decoding="async" onerror="this.style.display='none'">`;
         } else {
@@ -1561,7 +1565,7 @@
                     ${isFav ? '❤️' : '🤍'}</button>`;
         html += `</a>`;
 
-        html += `<div class="card-body"><div class="card-name">${b.name}</div>`;
+        html += `<div class="card-body"><a class="card-name" href="${detailUrl}"${detailTarget}>${b.name}</a>`;
         html += `<div class="card-meta">`;
         if (b.volume_cl) html += `<span class="tag">${b.volume_cl} cl</span>`;
         if (b.abv) html += `<span class="tag">${b.abv}%</span>`;
