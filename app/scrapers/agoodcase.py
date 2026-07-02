@@ -1,7 +1,9 @@
 import requests
+import time
 import re
 import html
 from app.utils.detect_type import detect_type
+from app.utils.description import clean_description
 
 
 HEADERS = {
@@ -201,6 +203,8 @@ def scrape_agoodcase():
                 "smagssæt", "sæt", "mix", "bundle", "pakke"
             ])
 
+            body_html = product.get("body_html", "")
+
             # Volumen: søg i titel, variant-titler og tags (i den rækkefølge)
             volume = None
             if not is_smagekasse:
@@ -224,7 +228,7 @@ def scrape_agoodcase():
 
                 # Prøv body_html (A Good Case har 'Størrelse: 44 cl' i en tabel)
                 if volume is None:
-                    volume = parse_volume(product.get("body_html", ""))
+                    volume = parse_volume(body_html)
 
             # ABV
             abv = None
@@ -260,6 +264,7 @@ def scrape_agoodcase():
                 "brewery": brewery,
                 "category": "smagekasse" if is_smagekasse else "øl",
                 "bulk_discounts": clean_bulk if clean_bulk else None,
+                "description": clean_description(body_html),
             }
 
             items.append(item)
@@ -267,6 +272,7 @@ def scrape_agoodcase():
         print(f"📦 A Good Case side {page}: {len(products)} produkter hentet")
         page += 1
 
+        time.sleep(1.0)
     return items
 
 
@@ -277,3 +283,11 @@ if __name__ == "__main__":
     with_volume = sum(1 for it in items if it.get("volume_cl"))
     print(f"Med bryggeri: {with_brewery}/{len(items)}")
     print(f"Med volumen:  {with_volume}/{len(items)}")
+    with_desc = sum(1 for it in items if it.get("description"))
+    print(f"Med beskrivelse: {with_desc}/{len(items)}")
+    shown = 0
+    for it in items:
+        if it.get("description") and shown < 3:
+            print(f"\n  📖 {it['name'][:60]}")
+            print(f"     {it['description'][:200]}")
+            shown += 1

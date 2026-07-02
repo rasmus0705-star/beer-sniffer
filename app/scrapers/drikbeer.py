@@ -1,7 +1,11 @@
 import requests
+import time
 import re
 import html
 from app.utils.detect_type import detect_type
+from app.utils.slugify import is_valid_brewery
+from app.utils.slugify import is_valid_brewery
+from app.utils.description import clean_description
 
 # Drikbeer.com er en Shopify-shop (niche US/belgisk import). Vol + ABV ligger i
 # body_html ("ABV: 13.0%", "Size: 330ML"), saa ingen sidehentning/cache noedvendig.
@@ -184,8 +188,11 @@ def scrape_drikbeer():
                 volume = _parse_volume(body_html) or _parse_volume(name)
                 abv = _parse_abv(body_html) or _parse_abv(name)
 
-            # Bryggeri: vendor er korrekt hos Drikbeer; titel-split som fallback
-            brewery = product.get("vendor") or None
+            # Bryggeri: vendor er normalt korrekt hos Drikbeer, men valider
+            # alligevel — for en sikkerheds skyld mod samme type shop-navn/
+            # dato-kontaminering set hos andre Shopify-butikker.
+            _vendor = product.get("vendor") or None
+            brewery = _vendor if is_valid_brewery(_vendor) else None
             if not brewery and ' - ' in name:
                 brewery = name.split(' - ')[0].strip()
 
@@ -216,6 +223,7 @@ def scrape_drikbeer():
                 "untappd_url": None,
                 "untappd_id": None,
                 "tags": tags,
+                "description": clean_description(body_html),
             }
 
             items.append(item)
@@ -223,6 +231,7 @@ def scrape_drikbeer():
         print(f"\U0001f4e6 Drikbeer side {page}: {len(products)} produkter hentet")
         page += 1
 
+        time.sleep(1.0)
     return items
 
 

@@ -1,4 +1,5 @@
 import requests
+import time
 import re
 import html
 from app.utils.detect_type import detect_type
@@ -150,6 +151,7 @@ def scrape_bestofbeers():
         print(f"📦 Best of Beers side {page}: {len(products)} produkter hentet")
         page += 1
 
+        time.sleep(1.0)
         if len(products) < per_page:
             break
 

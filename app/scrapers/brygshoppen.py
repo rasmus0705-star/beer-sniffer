@@ -1,6 +1,10 @@
 import requests
+import time
 import re
 from app.utils.detect_type import detect_type
+from app.utils.slugify import is_valid_brewery
+from app.utils.slugify import is_valid_brewery
+from app.utils.description import clean_description
 
 
 HEADERS = {
@@ -92,6 +96,20 @@ def scrape_brygshoppen():
             elif product.get("images") and len(product["images"]) > 0:
                 image = product["images"][0].get("src")
 
+            body_html = product.get("body_html", "")
+
+            # Bryggeri: prøv titel først, ellers vendor — kun hvis vendor
+            # rent faktisk ligner et bryggeri, ikke bare shop-navnet selv.
+            brewery = None
+            if ' - ' in name:
+                _candidate = name.split(' - ')[0].strip()
+                if len(_candidate) > 2:
+                    brewery = _candidate
+            if not brewery:
+                _vendor = product.get("vendor") or None
+                if is_valid_brewery(_vendor):
+                    brewery = _vendor
+
             volume = None
             volume_match = re.search(r"(\d+(?:[.,]\d+)?)\s*(cl|ml|l)\b", name.lower())
             if volume_match:
@@ -128,8 +146,9 @@ def scrape_brygshoppen():
                 "abv": abv,
                 "image": image,
                 "type": detect_type(name) or (product_type if product_type else None),
-                "brewery": product.get("vendor") or None,
+                "brewery": brewery,
                 "category": "øl",
+                "description": clean_description(body_html),
             }
 
             items.append(item)
@@ -137,9 +156,18 @@ def scrape_brygshoppen():
         print(f"📦 Brygshoppen side {page}: {len(products)} produkter hentet")
         page += 1
 
+        time.sleep(1.0)
     return items
 
 
 if __name__ == "__main__":
     items = scrape_brygshoppen()
     print(f"\n✅ Total: {len(items)} items")
+    with_desc = sum(1 for it in items if it.get("description"))
+    print(f"Med beskrivelse: {with_desc}/{len(items)}")
+    shown = 0
+    for it in items:
+        if it.get("description") and shown < 3:
+            print(f"\n  📖 {it['name'][:60]}")
+            print(f"     {it['description'][:200]}")
+            shown += 1

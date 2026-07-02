@@ -1,6 +1,9 @@
 import requests
+import time
 import re
 from app.utils.detect_type import detect_type
+from app.utils.slugify import is_valid_brewery
+from app.utils.description import clean_description
 
 
 HEADERS = {
@@ -83,6 +86,22 @@ def scrape_beershoppen():
             elif product.get("images") and len(product["images"]) > 0:
                 image = product["images"][0].get("src")
 
+            body_html = product.get("body_html", "")
+
+            # Bryggeri: Beershoppens titler er 'Produkt - Bryggeri - detaljer'
+            # (bekræftet af rigtige eksempler — IKKE 'Bryggeri - Produkt').
+            # Fald tilbage til vendor, kun hvis det rent faktisk ligner et
+            # bryggeri og ikke bare shop-navnet selv.
+            brewery = None
+            if ' - ' in name:
+                _parts = [p.strip() for p in name.split(' - ')]
+                if len(_parts) >= 2 and len(_parts[1]) > 2:
+                    brewery = _parts[1]
+            if not brewery:
+                _vendor = product.get("vendor") or None
+                if is_valid_brewery(_vendor):
+                    brewery = _vendor
+
             volume = None
             # Bundle/smagekasse-detektor. 'smage kasse' (med mellemrum) og
             # 'jylland rundt' (flere-flaske-sæt) tilføjet.
@@ -129,8 +148,9 @@ def scrape_beershoppen():
                 "abv": abv,
                 "image": image,
                 "type": detect_type(name) or (product_type if product_type else None),
-                "brewery": product.get("vendor") or None,
+                "brewery": brewery,
                 "category": "smagekasse" if is_smagekasse else "øl",
+                "description": clean_description(body_html),
             }
 
             items.append(item)
@@ -138,9 +158,18 @@ def scrape_beershoppen():
         print(f"📦 Beershoppen side {page}: {len(products)} produkter hentet")
         page += 1
 
+        time.sleep(1.0)
     return items
 
 
 if __name__ == "__main__":
     items = scrape_beershoppen()
     print(f"\n✅ Total: {len(items)} items")
+    with_desc = sum(1 for it in items if it.get("description"))
+    print(f"Med beskrivelse: {with_desc}/{len(items)}")
+    shown = 0
+    for it in items:
+        if it.get("description") and shown < 3:
+            print(f"\n  📖 {it['name'][:60]}")
+            print(f"     {it['description'][:200]}")
+            shown += 1

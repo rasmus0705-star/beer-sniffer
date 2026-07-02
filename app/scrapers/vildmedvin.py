@@ -2,6 +2,7 @@ import requests
 import xml.etree.ElementTree as ET
 import re
 from app.utils.detect_type import detect_type
+from app.utils.description import clean_description
 
 
 # --- Brewery-fallback: udled bryggeri fra titel naar g:brand er tom ---
@@ -225,6 +226,7 @@ def scrape_vildmedvin():
             "type": beer_type,
             "brewery": brewery,
             "category": "øl",
+            "description": clean_description(description),
         }
 
         items.append(item_dict)
@@ -242,6 +244,7 @@ if __name__ == "__main__":
     with_volume = sum(1 for it in items if it.get("volume_cl"))
     with_abv = sum(1 for it in items if it.get("abv"))
     with_image = sum(1 for it in items if it.get("image"))
+    with_description = sum(1 for it in items if it.get("description"))
 
     if items:
         print(f"\n📊 Coverage:")
@@ -249,6 +252,15 @@ if __name__ == "__main__":
         print(f"  Volume:   {with_volume}/{len(items)} ({100*with_volume//len(items)}%)")
         print(f"  ABV:      {with_abv}/{len(items)} ({100*with_abv//len(items)}%)")
         print(f"  Billede:  {with_image}/{len(items)} ({100*with_image//len(items)}%)")
+        print(f"  Beskrivelse: {with_description}/{len(items)} ({100*with_description//len(items)}%)")
+
+        print(f"\nEksempler på beskrivelser:")
+        shown = 0
+        for it in items:
+            if it.get("description") and shown < 3:
+                print(f"\n  📖 {it['name'][:60]}")
+                print(f"     {it['description'][:200]}")
+                shown += 1
 
         print(f"\nFørste 5 items:")
         for it in items[:5]:

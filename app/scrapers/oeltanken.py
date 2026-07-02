@@ -3,6 +3,9 @@ import re
 import html
 import time
 from app.utils.detect_type import detect_type
+from app.utils.slugify import is_valid_brewery
+from app.utils.slugify import is_valid_brewery
+from app.utils.description import clean_description
 
 # --- PERF: persistent volumen/ABV-cache (vol/abv aendrer sig aldrig pr. produkt) ---
 import json as _json, os as _os
@@ -255,12 +258,16 @@ def scrape_oeltanken():
             elif _cached:
                 _cache_hits += 1
 
-            # Bryggeri: split på ' - ' eller brug vendor
+            # Bryggeri: split på ' - ' eller brug vendor — men KUN hvis vendor
+            # rent faktisk ligner et bryggeri (ikke shop-navnet selv, set i
+            # rigtig data for bundle-produkter uden eget vendor-felt udfyldt)
             brewery = None
             if ' - ' in name:
                 brewery = name.split(' - ')[0].strip()
             if not brewery:
-                brewery = product.get("vendor") or None
+                _vendor = product.get("vendor") or None
+                if is_valid_brewery(_vendor):
+                    brewery = _vendor
 
             # Untappd
             untappd_url = None
@@ -299,6 +306,7 @@ def scrape_oeltanken():
                 "untappd_url": untappd_url,
                 "untappd_id": untappd_id,
                 "tags": tags,
+                "description": clean_description(body_html),
             }
 
             items.append(item)

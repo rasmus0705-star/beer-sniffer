@@ -1,0 +1,283 @@
+import requests
+import re
+import html
+from app.utils.detect_type import detect_type
+from app.utils.description import clean_description
+
+
+HEADERS = {
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+    "Accept": "application/json",
+    "Accept-Language": "da-DK,da;q=0.9,en;q=0.8",
+}
+
+_BEST_BEFORE_RE = re.compile(r'best\s*before', re.IGNORECASE)
+
+
+def _extract_brewery(name, vendor):
+    """
+    vendor er i A Good Case sat til 'Best Before: ...' for mange produkter
+    — det er en Shopify-fejl i deres data. Brug vendor kun hvis det IKKE
+    ligner en dato. Ellers udtræk bryggeri fra titlen (første segment
+    før ' - ').
+    """
+    if vendor and not _BEST_BEFORE_RE.search(vendor):
+        return vendor.strip() or None
+
+    # Udtræk fra titel: 'Bryggeri - Produkt - ABV Stil'
+    if name and ' - ' in name:
+        candidate = name.split(' - ')[0].strip()
+        # Afvis hvis det ligner ABV, volumen eller tal alene
+        if candidate and not re.search(r'^\d+|%|cl|ml\b', candidate.lower()):
+            return candidate
+
+    return None
+
+
+def scrape_agoodcase():
+    items = []
+    page = 1
+
+    allowed_types = {'', 'Øl', 'Smagekasse'}
+
+    skip_keywords = [
+        "glas", "glass", "krus", "opener", "trøje", "t-shirt",
+        "cap", "hat", "gave", "gavekort", "merchandise", "sodavand",
+        "juice", "spiritus", "whisky", "gin", "rom", "vin", "wine",
+        "snack", "chips", "nødder", "tilbehør", "renser", "brush",
+        "børste", "tap", "pumpe", "slange", "pant", "ølglas",
+        "chokolade", "chocolate", "fustage", "fadøl", "keg", "anker",
+        "abonnement", "subscription", "giftbox", "gift box",
+        "diverse", "mystery"
+    ]
+
+    bulk_keywords = [
+        r"\b(\d+)\s*stk\.?\b",
+        r"\b(\d+)\s*pack\b",
+        r"\b(\d+)\s*pak\b",
+        r"\bx\s*(\d+)\b",
+        r"\b(\d+)\s*x\b",
+    ]
+
+    def parse_bulk_qty(title):
+        if not title:
+            return None
+        t = title.lower().strip()
+        for pattern in bulk_keywords:
+            m = re.search(pattern, t)
+            if m:
+                try:
+                    qty = int(m.group(1))
+                    if 2 <= qty <= 48:
+                        return qty
+                except:
+                    pass
+        return None
+
+    def parse_volume(text):
+        """
+        Forsøg at finde volumen i en tekststreng.
+        Renser HTML først (A Good Case har volumen i en <table> i body_html
+        som 'Størrelse: 44 cl'). Returnerer cl som float eller None.
+        """
+        if not text:
+            return None
+        clean = re.sub(r'<[^>]+>', ' ', text)
+        clean = html.unescape(clean).lower()
+        m = re.search(r'(\d+(?:[.,]\d+)?)\s*(cl|ml|l)\b', clean)
+        if m:
+            val = float(m.group(1).replace(',', '.'))
+            unit = m.group(2)
+            if unit == 'l':
+                val *= 100
+            elif unit == 'ml':
+                val /= 10
+            if val <= 75:
+                return val
+        # Sammenskrevne varianter
+        for pattern, vol in [('33cl', 33), ('44cl', 44), ('50cl', 50)]:
+            if pattern in clean:
+                return vol
+        return None
+
+    while True:
+        url = f"https://agoodcase.dk/products.json?limit=250&page={page}"
+        try:
+            response = requests.get(url, headers=HEADERS, timeout=30)
+            data = response.json()
+        except Exception as e:
+            print(f"❌ A Good Case fejl på side {page}: {e}")
+            break
+
+        products = data.get("products", [])
+        if not products:
+            break
+
+        for product in products:
+            name = product.get("title")
+            if not name:
+                continue
+
+            if any(kw in name.lower() for kw in skip_keywords):
+                continue
+
+            product_type = product.get("product_type", "")
+            if product_type not in allowed_types:
+                continue
+
+            variants = product.get("variants", [])
+            if not variants:
+                continue
+
+            single_variant = None
+            bulk_variants = []
+
+            for v in variants:
+                if not v.get("available"):
+                    continue
+                try:
+                    v_price = float(v.get("price", 0))
+                except:
+                    continue
+                if v_price <= 0:
+                    continue
+
+                v_title = v.get("title", "")
+                qty = parse_bulk_qty(v_title)
+
+                if qty and qty > 1:
+                    bulk_variants.append({
+                        "qty": qty,
+                        "price_per_unit": round(v_price / qty, 2),
+                        "total_price": v_price,
+                        "variant_title": v_title,
+                        "variant": v,
+                    })
+                else:
+                    if single_variant is None:
+                        single_variant = v
+
+            bulk_only = False
+            if single_variant is None and bulk_variants:
+                bulk_variants.sort(key=lambda x: x["price_per_unit"])
+                cheapest_bulk = bulk_variants[0]
+                single_variant = cheapest_bulk["variant"]
+                bulk_only = True
+                bulk_qty = cheapest_bulk["qty"]
+                bulk_price_per_unit = cheapest_bulk["price_per_unit"]
+                bulk_total = cheapest_bulk["total_price"]
+
+            if single_variant is None:
+                continue
+
+            try:
+                if bulk_only:
+                    price = bulk_price_per_unit
+                    display_name = f"{name} ({bulk_qty} stk.)"
+                    old_price_raw = single_variant.get("compare_at_price")
+                    old_price = round(float(old_price_raw) / bulk_qty, 2) if old_price_raw else None
+                else:
+                    price = float(single_variant.get("price"))
+                    display_name = name
+                    old_price_raw = single_variant.get("compare_at_price")
+                    old_price = float(old_price_raw) if old_price_raw else None
+            except:
+                continue
+
+            discount = None
+            if old_price and old_price > price:
+                discount = round((old_price - price) / old_price * 100, 1)
+
+            handle = product.get("handle")
+            product_url = f"https://agoodcase.dk/products/{handle}"
+
+            image = None
+            if product.get("image") and product["image"]:
+                image = product["image"].get("src")
+            elif product.get("images") and len(product["images"]) > 0:
+                image = product["images"][0].get("src")
+
+            is_smagekasse = any(kw in name.lower() for kw in [
+                "smagekasse", "smagekasser", "smagesæt", "smagskasse",
+                "smagssæt", "sæt", "mix", "bundle", "pakke"
+            ])
+
+            body_html = product.get("body_html", "")
+
+            # Volumen: søg i titel, variant-titler og tags (i den rækkefølge)
+            volume = None
+            if not is_smagekasse:
+                volume = parse_volume(name)
+
+                # Prøv variant-titler hvis titlen ikke gav noget
+                if volume is None:
+                    for v in variants:
+                        v_vol = parse_volume(v.get("title", ""))
+                        if v_vol:
+                            volume = v_vol
+                            break
+
+                # Prøv tags
+                if volume is None:
+                    for tag in product.get("tags", []):
+                        v_vol = parse_volume(tag)
+                        if v_vol:
+                            volume = v_vol
+                            break
+
+                # Prøv body_html (A Good Case har 'Størrelse: 44 cl' i en tabel)
+                if volume is None:
+                    volume = parse_volume(body_html)
+
+            # ABV
+            abv = None
+            abv_match = re.search(r'(\d+(?:[.,]\d+)?)\s*%', name)
+            if abv_match:
+                abv = float(abv_match.group(1).replace(",", "."))
+
+            # Bryggeri: brug vendor kun hvis det ikke er en best-before-dato
+            vendor = product.get("vendor") or None
+            brewery = _extract_brewery(name, vendor)
+
+            clean_bulk = sorted([
+                {
+                    "qty": b["qty"],
+                    "price_per_unit": b["price_per_unit"],
+                    "total_price": b["total_price"],
+                    "variant_title": b["variant_title"],
+                }
+                for b in bulk_variants
+            ], key=lambda x: x["qty"])
+
+            item = {
+                "name": display_name,
+                "price": price,
+                "old_price": old_price,
+                "discount_pct": discount,
+                "url": product_url,
+                "shop_name": "A Good Case",
+                "volume_cl": volume,
+                "abv": abv,
+                "image": image,
+                "type": detect_type(name) or (product_type if product_type else None),
+                "brewery": brewery,
+                "category": "smagekasse" if is_smagekasse else "øl",
+                "bulk_discounts": clean_bulk if clean_bulk else None,
+                "description": clean_description(body_html),
+            }
+
+            items.append(item)
+
+        print(f"📦 A Good Case side {page}: {len(products)} produkter hentet")
+        page += 1
+
+    return items
+
+
+if __name__ == "__main__":
+    items = scrape_agoodcase()
+    print(f"\n✅ Total: {len(items)} items")
+    with_brewery = sum(1 for it in items if it.get("brewery"))
+    with_volume = sum(1 for it in items if it.get("volume_cl"))
+    print(f"Med bryggeri: {with_brewery}/{len(items)}")
+    print(f"Med volumen:  {with_volume}/{len(items)}")

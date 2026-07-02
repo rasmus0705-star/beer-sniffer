@@ -1,7 +1,9 @@
 import requests
+import time
 import re
 import html
 from app.utils.detect_type import detect_type
+from app.utils.description import clean_description
 
 # Beermatch.dk er en Shopify-shop. Vol + ABV ligger i body_html paa hvert
 # produkt ("Alcohol: 8 %", "Size: 440 ml."), saa vi behoever INGEN
@@ -200,6 +202,7 @@ def scrape_beermatch():
                 "untappd_url": None,   # Beermatch har ingen Untappd-URL i feed'et
                 "untappd_id": None,
                 "tags": tags,
+                "description": clean_description(body_html),
             }
 
             items.append(item)
@@ -207,6 +210,7 @@ def scrape_beermatch():
         print(f"\U0001f4e6 Beermatch side {page}: {len(products)} produkter hentet")
         page += 1
 
+        time.sleep(1.0)
     return items
 
 
