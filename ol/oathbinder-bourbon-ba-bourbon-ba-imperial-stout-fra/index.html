@@ -67,6 +67,10 @@ body { background: var(--bg); color: var(--text); font-family: 'DM Sans', sans-s
 .related-name { font-size: 0.72rem; line-height: 1.3; margin-bottom: 0.2rem; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; min-height: 1.9em; }
 .related-price { font-size: 0.78rem; font-weight: 700; color: var(--gold-light); }
 .disclaimer { font-size: 0.72rem; color: var(--text-muted); margin-top: 2rem; line-height: 1.6; border-top: 1px solid var(--border); padding-top: 1rem; }
+.chart-section { margin: 1.5rem 0; background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 1rem 1.1rem; }
+.chart-heading { font-size: 0.7rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 0.7rem; }
+.price-chart { width: 100%; height: 90px; display: block; }
+.chart-range { display: flex; justify-content: space-between; font-size: 0.72rem; color: var(--text-muted); margin-top: 0.5rem; }
 .lightbox {
     position: fixed; inset: 0; background: rgba(5,4,2,0.94);
     display: none; align-items: center; justify-content: center;
@@ -121,6 +125,19 @@ body { background: var(--bg); color: var(--text); font-family: 'DM Sans', sans-s
             <a class="buy-btn" href="https://www.partner-ads.com/dk/klikbanner.php?bannerid=74625&amp;partnerid=56605&amp;htmlurl=https://www.beer-me.dk/vare/oathbinder-bourbon-ba-bourbon-ba-imperial-stout-fra-p-haste" target="_blank" rel="noopener nofollow sponsored">Køb →</a>
         </div>
     </div>
+    </div>
+
+    
+    <div class="chart-section">
+        <div class="chart-heading">📈 Prisudvikling (2026-05-17 – 2026-07-01)</div>
+        <svg viewBox="0 0 320 90" class="price-chart" preserveAspectRatio="none">
+            <polyline points="8.0,8.0 84.0,82.0 160.0,82.0 236.0,82.0 312.0,8.0" fill="none" style="stroke: var(--gold); stroke-width: 2;" />
+            <circle cx="312.0" cy="8.0" r="3.5" style="fill: var(--gold-light);" />
+        </svg>
+        <div class="chart-range">
+            <span>Laveste: 80,00 kr</span>
+            <span>Højeste: 89,00 kr</span>
+        </div>
     </div>
 
     <p style="font-size:0.8rem;color:var(--text-muted)">

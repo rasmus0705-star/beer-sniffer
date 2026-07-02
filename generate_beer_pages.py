@@ -82,7 +82,46 @@ def render_related_card(beer):
     </a>"""
 
 
-def render_page(beer, updated_at, brewery_index, type_index):
+def render_price_chart(history):
+    """Genererer en simpel SVG-linjegraf ud fra prishistorik — ingen
+    JS-bibliotek nødvendigt, alt tegnes som ren SVG ved build-tid."""
+    if not history or len(history) < 2:
+        return ""
+
+    prices = [h["price"] for h in history]
+    min_p, max_p = min(prices), max(prices)
+    span = (max_p - min_p) or 1
+    w, h = 320, 90
+    pad = 8
+    n = len(prices)
+
+    points = []
+    for i, p in enumerate(prices):
+        x = pad + (i / (n - 1)) * (w - 2 * pad) if n > 1 else pad
+        y = pad + (1 - (p - min_p) / span) * (h - 2 * pad)
+        points.append((x, y))
+
+    polyline = " ".join(f"{x:.1f},{y:.1f}" for x, y in points)
+    last_x, last_y = points[-1]
+
+    start_date = history[0]["date"]
+    end_date = history[-1]["date"]
+
+    return f"""
+    <div class="chart-section">
+        <div class="chart-heading">📈 Prisudvikling ({start_date} – {end_date})</div>
+        <svg viewBox="0 0 {w} {h}" class="price-chart" preserveAspectRatio="none">
+            <polyline points="{polyline}" fill="none" style="stroke: var(--gold); stroke-width: 2;" />
+            <circle cx="{last_x:.1f}" cy="{last_y:.1f}" r="3.5" style="fill: var(--gold-light);" />
+        </svg>
+        <div class="chart-range">
+            <span>Laveste: {format_price(min_p)} kr</span>
+            <span>Højeste: {format_price(max_p)} kr</span>
+        </div>
+    </div>"""
+
+
+def render_page(beer, updated_at, brewery_index, type_index, history_map):
     raw_name = beer.get("name", "")
     display_name = clean_name(raw_name)
     name = escape(display_name)
@@ -141,6 +180,7 @@ def render_page(beer, updated_at, brewery_index, type_index):
     price_rows_html = "".join(
         render_price_row(p, i == 0) for i, p in enumerate(prices)
     )
+    chart_html = render_price_chart(history_map.get(slug, []))
 
     untappd_query_name = display_name
     untappd_query = quote(untappd_query_name)
@@ -260,6 +300,10 @@ body {{ background: var(--bg); color: var(--text); font-family: 'DM Sans', sans-
 .related-name {{ font-size: 0.72rem; line-height: 1.3; margin-bottom: 0.2rem; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; min-height: 1.9em; }}
 .related-price {{ font-size: 0.78rem; font-weight: 700; color: var(--gold-light); }}
 .disclaimer {{ font-size: 0.72rem; color: var(--text-muted); margin-top: 2rem; line-height: 1.6; border-top: 1px solid var(--border); padding-top: 1rem; }}
+.chart-section {{ margin: 1.5rem 0; background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 1rem 1.1rem; }}
+.chart-heading {{ font-size: 0.7rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 0.7rem; }}
+.price-chart {{ width: 100%; height: 90px; display: block; }}
+.chart-range {{ display: flex; justify-content: space-between; font-size: 0.72rem; color: var(--text-muted); margin-top: 0.5rem; }}
 .lightbox {{
     position: fixed; inset: 0; background: rgba(5,4,2,0.94);
     display: none; align-items: center; justify-content: center;
@@ -308,6 +352,8 @@ body {{ background: var(--bg); color: var(--text); font-family: 'DM Sans', sans-
     <div class="price-rows">
         {price_rows_html}
     </div>
+
+    {chart_html}
 
     <p style="font-size:0.8rem;color:var(--text-muted)">
         Se også <a href="https://untappd.com/search?q={untappd_query}" target="_blank" rel="noopener" style="color:var(--gold)">{name} på Untappd</a>
@@ -366,6 +412,14 @@ def main():
     if skipped_no_slug:
         print(f"⚠️ {skipped_no_slug} øl har ingen slug endnu og springes over.")
 
+    try:
+        with open("price_history.json", encoding="utf-8") as f:
+            history_map = json.load(f)
+        print(f"Prishistorik indlæst for {len(history_map)} øl.")
+    except FileNotFoundError:
+        history_map = {}
+        print("Ingen price_history.json fundet — sider genereres uden graf.")
+
     if not all_mode:
         beers_to_render = beers[:limit]
         print(f"TEST-TILSTAND: genererer kun {len(beers_to_render)} sider (brug --all for alle {len(data.get('beers', []))}).")
@@ -390,7 +444,7 @@ def main():
         slug = beer["slug"]
         page_dir = os.path.join(OUTPUT_DIR, slug)
         os.makedirs(page_dir, exist_ok=True)
-        html = render_page(beer, updated_at_display, brewery_index, type_index)
+        html = render_page(beer, updated_at_display, brewery_index, type_index, history_map)
         path = os.path.join(page_dir, "index.html")
         with open(path, "w", encoding="utf-8") as f:
             f.write(html)

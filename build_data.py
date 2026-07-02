@@ -13,7 +13,7 @@ import json
 import sys
 import subprocess
 import time
-from datetime import datetime
+from datetime import datetime, timedelta
 from dotenv import load_dotenv
 
 # Indlæs DB_URL fra .env
@@ -144,6 +144,12 @@ def build_beer_list_from_db(db):
             if beer.id < target["id"]:
                 target["id"] = beer.id
                 target["slug"] = beer.slug
+            if beer.description and (
+                not target.get("description")
+                or len(beer.description) > len(target["description"])
+            ):
+                target["description"] = beer.description
+            target.setdefault("_all_ids", [target["id"]]).append(beer.id)
             for p in beer.prices:
                 target["prices"].append({
                     "shop_name": p.shop_name,
@@ -169,6 +175,8 @@ def build_beer_list_from_db(db):
             grouped[key] = {
                 "id": beer.id,
                 "slug": beer.slug,
+                "description": beer.description,
+                "_all_ids": [beer.id],
                 "name": beer.name,
                 "image": beer.image,
                 "type": beer.type,
@@ -226,6 +234,60 @@ def build_beer_list_from_db(db):
     return result
 
 
+def build_price_history(db, beer_list, days=90, min_points=2):
+    """
+    Bygger price_history.json: {slug: [{date, price}, ...]}
+    Én samlet forespørgsel til PriceHistory for alle relevante id'er,
+    fremfor én forespørgsel pr. øl (samme performance-lektie som ingest.py).
+    Viser billigste pris PÅ TVÆRS AF BUTIKKER pr. dag.
+    """
+    all_ids = set()
+    for b in beer_list:
+        all_ids.update(b.get("_all_ids", []))
+
+    if not all_ids:
+        print("   Ingen id'er fundet — springer prishistorik over")
+        return
+
+    cutoff = datetime.utcnow() - timedelta(days=days)
+    rows = (
+        db.query(PriceHistory.beer_id, PriceHistory.price_dkk, PriceHistory.created_at)
+        .filter(PriceHistory.beer_id.in_(all_ids))
+        .filter(PriceHistory.created_at >= cutoff)
+        .all()
+    )
+
+    # beer_id -> {dato: billigste pris den dag}
+    by_id = {}
+    for beer_id, price, created_at in rows:
+        date_str = created_at.strftime("%Y-%m-%d")
+        d = by_id.setdefault(beer_id, {})
+        if date_str not in d or price < d[date_str]:
+            d[date_str] = price
+
+    history_out = {}
+    for b in beer_list:
+        slug = b.get("slug")
+        ids = b.get("_all_ids", [])
+        if not slug or not ids:
+            continue
+        merged = {}
+        for bid in ids:
+            for date_str, price in by_id.get(bid, {}).items():
+                if date_str not in merged or price < merged[date_str]:
+                    merged[date_str] = price
+        if len(merged) < min_points:
+            continue
+        history_out[slug] = [
+            {"date": d, "price": p} for d, p in sorted(merged.items())
+        ]
+
+    with open("price_history.json", "w", encoding="utf-8") as f:
+        json.dump(history_out, f, ensure_ascii=False)
+
+    print(f"   {len(history_out)} øl fik en prishistorik-graf (ud af {len(beer_list)} i alt)")
+
+
 def main():
     start_time = time.time()
     print("=" * 60)
@@ -263,7 +325,14 @@ def main():
     # 3. Byg grupperet liste fra database
     print(f"\n🔗 Bygger grupperet ølliste...")
     beer_list = build_beer_list_from_db(db)
+
+    print(f"\n📈 Bygger prishistorik...")
+    build_price_history(db, beer_list)
     db.close()
+
+    # Fjern interne id-lister — de skal ikke med i data.json
+    for _b in beer_list:
+        _b.pop("_all_ids", None)
 
     # 4. Beregn stats
     total_beers = len(beer_list)

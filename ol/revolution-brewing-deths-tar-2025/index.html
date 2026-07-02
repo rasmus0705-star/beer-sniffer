@@ -67,6 +67,10 @@ body { background: var(--bg); color: var(--text); font-family: 'DM Sans', sans-s
 .related-name { font-size: 0.72rem; line-height: 1.3; margin-bottom: 0.2rem; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; min-height: 1.9em; }
 .related-price { font-size: 0.78rem; font-weight: 700; color: var(--gold-light); }
 .disclaimer { font-size: 0.72rem; color: var(--text-muted); margin-top: 2rem; line-height: 1.6; border-top: 1px solid var(--border); padding-top: 1rem; }
+.chart-section { margin: 1.5rem 0; background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 1rem 1.1rem; }
+.chart-heading { font-size: 0.7rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 0.7rem; }
+.price-chart { width: 100%; height: 90px; display: block; }
+.chart-range { display: flex; justify-content: space-between; font-size: 0.72rem; color: var(--text-muted); margin-top: 0.5rem; }
 .lightbox {
     position: fixed; inset: 0; background: rgba(5,4,2,0.94);
     display: none; align-items: center; justify-content: center;
@@ -124,6 +128,19 @@ body { background: var(--bg); color: var(--text); font-family: 'DM Sans', sans-s
             <a class="buy-btn" href="https://oltanken.dk/products/revolution-brewing-deths-tar-2024" target="_blank" rel="noopener nofollow sponsored">Køb →</a>
         </div>
     </div>
+    </div>
+
+    
+    <div class="chart-section">
+        <div class="chart-heading">📈 Prisudvikling (2026-05-17 – 2026-07-02)</div>
+        <svg viewBox="0 0 320 90" class="price-chart" preserveAspectRatio="none">
+            <polyline points="8.0,82.0 16.7,8.0 25.4,82.0 34.1,8.0 42.7,82.0 51.4,8.0 60.1,82.0 68.8,82.0 77.5,82.0 86.2,82.0 94.9,82.0 103.5,82.0 112.2,8.0 120.9,82.0 129.6,82.0 138.3,82.0 147.0,82.0 155.7,8.0 164.3,82.0 173.0,8.0 181.7,82.0 190.4,8.0 199.1,82.0 207.8,8.0 216.5,82.0 225.1,8.0 233.8,82.0 242.5,82.0 251.2,8.0 259.9,82.0 268.6,8.0 277.3,82.0 285.9,82.0 294.6,82.0 303.3,82.0 312.0,82.0" fill="none" style="stroke: var(--gold); stroke-width: 2;" />
+            <circle cx="312.0" cy="82.0" r="3.5" style="fill: var(--gold-light);" />
+        </svg>
+        <div class="chart-range">
+            <span>Laveste: 109,00 kr</span>
+            <span>Højeste: 110,00 kr</span>
+        </div>
     </div>
 
     <p style="font-size:0.8rem;color:var(--text-muted)">

@@ -67,6 +67,10 @@ body { background: var(--bg); color: var(--text); font-family: 'DM Sans', sans-s
 .related-name { font-size: 0.72rem; line-height: 1.3; margin-bottom: 0.2rem; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; min-height: 1.9em; }
 .related-price { font-size: 0.78rem; font-weight: 700; color: var(--gold-light); }
 .disclaimer { font-size: 0.72rem; color: var(--text-muted); margin-top: 2rem; line-height: 1.6; border-top: 1px solid var(--border); padding-top: 1rem; }
+.chart-section { margin: 1.5rem 0; background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 1rem 1.1rem; }
+.chart-heading { font-size: 0.7rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 0.7rem; }
+.price-chart { width: 100%; height: 90px; display: block; }
+.chart-range { display: flex; justify-content: space-between; font-size: 0.72rem; color: var(--text-muted); margin-top: 0.5rem; }
 .lightbox {
     position: fixed; inset: 0; background: rgba(5,4,2,0.94);
     display: none; align-items: center; justify-content: center;
@@ -124,6 +128,19 @@ body { background: var(--bg); color: var(--text); font-family: 'DM Sans', sans-s
             <a class="buy-btn" href="https://brygshoppen.dk/products/straffe-hendrik-quadrupel-75cl" target="_blank" rel="noopener nofollow sponsored">Køb →</a>
         </div>
     </div>
+    </div>
+
+    
+    <div class="chart-section">
+        <div class="chart-heading">📈 Prisudvikling (2026-05-17 – 2026-07-02)</div>
+        <svg viewBox="0 0 320 90" class="price-chart" preserveAspectRatio="none">
+            <polyline points="8.0,64.8 15.4,64.8 22.8,40.4 30.2,40.4 37.7,8.0 45.1,64.8 52.5,64.8 59.9,64.8 67.3,40.4 74.7,64.8 82.1,64.8 89.6,40.4 97.0,40.4 104.4,64.8 111.8,64.8 119.2,64.8 126.6,64.8 134.0,82.0 141.5,40.4 148.9,64.8 156.3,40.4 163.7,64.8 171.1,40.4 178.5,64.8 186.0,64.8 193.4,40.4 200.8,64.8 208.2,64.8 215.6,40.4 223.0,64.8 230.4,40.4 237.9,64.8 245.3,64.8 252.7,40.4 260.1,64.8 267.5,40.4 274.9,64.8 282.3,64.8 289.8,64.8 297.2,64.8 304.6,64.8 312.0,64.8" fill="none" style="stroke: var(--gold); stroke-width: 2;" />
+            <circle cx="312.0" cy="64.8" r="3.5" style="fill: var(--gold-light);" />
+        </svg>
+        <div class="chart-range">
+            <span>Laveste: 63,75 kr</span>
+            <span>Højeste: 155,00 kr</span>
+        </div>
     </div>
 
     <p style="font-size:0.8rem;color:var(--text-muted)">
