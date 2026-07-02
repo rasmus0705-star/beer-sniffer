@@ -1419,7 +1419,6 @@
         const cls = !s ? ' no-info' : isFree ? ' free-shipping' : '';
         const label = !s ? 'Fragtinfo ikke tilgængelig' : isFree ? 'Gratis fragt' : `Fragt: ${s.price} kr`;
         return `<span class="shipping-btn${cls}" aria-label="${label}"
-                    onmouseenter="positionTooltip(this)"
                     onclick="positionTooltip(this);this.classList.toggle('tooltip-open');event.stopPropagation();event.preventDefault()">
                     🚚<div class="shipping-tooltip">${shippingTooltipHTML(shopName, itemPrice)}</div></span>`;
     }
