@@ -376,13 +376,21 @@ def main():
     _stats = write_fejlliste(items, _facit, "fejlliste.xlsx")
     print(f"\U0001F4DD fejlliste.xlsx opdateret: {_stats['rows']} raekker, {_stats['mangler']} mangler")
 
+    # 9. Stempl DATA_VERSION i index.html — så CDN-cachen invalideres
+    #    præcis når (og kun når) der er ny data.
+    try:
+        subprocess.run([sys.executable, "stamp_data_version.py"], check=True)
+    except subprocess.CalledProcessError as e:
+        print(f"⚠️ Kunne ikke stemple DATA_VERSION i index.html: {e}")
+        print("   Kør 'python stamp_data_version.py' manuelt, ellers ser besøgende gammel data fra cache.")
+
     file_size = round(time.time() - start_time, 1)
     print(f"\n✅ FÆRDIG på {file_size}s")
     print(f"   Skrev data.json med {total_beers} unikke øl fra {len(shop_names)} butikker")
     print(f"   Aktive tilbud: {deals_count}")
     print(f"   Billigste øl: {round(cheapest, 2)} kr")
     print(f"\n📤 Næste skridt:")
-    print(f"   git add data.json ol/ sitemap.xml")
+    print(f"   git add data.json ol/ sitemap.xml index.html")
     print(f"   git commit -m \"Daglig opdatering {datetime.now().strftime('%Y-%m-%d')}\"")
     print(f"   git push")
 
