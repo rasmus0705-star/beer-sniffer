@@ -785,9 +785,6 @@
             text-overflow: ellipsis;
             flex: 1;
             min-width: 0;
-            display: flex;
-            align-items: center;
-            gap: 0.3rem;
             font-weight: 600;
         }
         .price-row-cheapest .price-row-shop { color: #ffd54a; font-weight: 700; }
@@ -1429,6 +1426,18 @@
     document.addEventListener('click', () => {
         document.querySelectorAll('.shipping-btn.tooltip-open').forEach(b => b.classList.remove('tooltip-open'));
     });
+    // Luk evt. åben fragt-tooltip ved scroll — forhindrer at den bliver
+    // "hængende" og overlapper andre ølkort på mobil, hvor scroll (swipe)
+    // ikke tæller som et klik.
+    window.addEventListener('scroll', () => {
+        document.querySelectorAll('.shipping-btn.tooltip-open').forEach(b => b.classList.remove('tooltip-open'));
+    }, { passive: true });
+    // Luk evt. åben fragt-tooltip ved scroll — forhindrer at den bliver
+    // "hængende" og overlapper andre ølkort på mobil, hvor scroll (swipe)
+    // ikke tæller som et klik.
+    window.addEventListener('scroll', () => {
+        document.querySelectorAll('.shipping-btn.tooltip-open').forEach(b => b.classList.remove('tooltip-open'));
+    }, { passive: true });
     function totalWithShipping(shopName, price) {
         const s = SHIPPING[shopName];
         if (!s) return null;
