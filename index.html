@@ -921,10 +921,6 @@
         @media (hover: hover) and (pointer: fine) {
             .shipping-btn:hover .shipping-tooltip { opacity: 1; pointer-events: auto; transform: translateY(0); }
         }
-        /* Hover-visning kun for musebrugere — touch-skærme beholder klik-adfærden */
-        @media (hover: hover) and (pointer: fine) {
-            .shipping-btn:hover .shipping-tooltip { opacity: 1; pointer-events: auto; transform: translateY(0); }
-        }
         .tt-row { display: flex; justify-content: space-between; align-items: center; gap: 0.75rem; font-size: 0.78rem; line-height: 1.6; }
         .tt-label { color: #a09070; font-size: 0.76rem; }
         .tt-value { color: #f0e6d0; font-weight: 600; white-space: nowrap; font-size: 0.8rem; }
@@ -1301,11 +1297,9 @@
             <a href="https://agoodcase.dk" target="_blank" rel="noopener">A Good Case</a>
             <a href="https://beershoppen.dk" target="_blank" rel="noopener">Beershoppen</a>
             <a href="https://bestofbeers.dk" target="_blank" rel="noopener">Best of Beers</a>
-            <a href="https://oeltanken.dk" target="_blank" rel="noopener">Øltanken</a>
+            <a href="https://oltanken.dk" target="_blank" rel="noopener">Øltanken</a>
             <a href="https://beerme.dk" target="_blank" rel="noopener">Beer Me</a>
             <a href="https://vildmedvin.dk" target="_blank" rel="noopener">Vild med Vin</a>
-            <a href="https://www.beermatch.dk" target="_blank" rel="noopener">Beermatch</a>
-            <a href="https://drikbeer.com" target="_blank" rel="noopener">Drikbeer</a>
             <a href="https://www.beermatch.dk" target="_blank" rel="noopener">Beermatch</a>
             <a href="https://drikbeer.com" target="_blank" rel="noopener">Drikbeer</a>
         </div>
@@ -1425,12 +1419,6 @@
     document.addEventListener('click', () => {
         document.querySelectorAll('.shipping-btn.tooltip-open').forEach(b => b.classList.remove('tooltip-open'));
     });
-    // Luk evt. åben fragt-tooltip ved scroll — forhindrer at den bliver
-    // "hængende" og overlapper andre ølkort på mobil, hvor scroll (swipe)
-    // ikke tæller som et klik.
-    window.addEventListener('scroll', () => {
-        document.querySelectorAll('.shipping-btn.tooltip-open').forEach(b => b.classList.remove('tooltip-open'));
-    }, { passive: true });
     // Luk evt. åben fragt-tooltip ved scroll — forhindrer at den bliver
     // "hængende" og overlapper andre ølkort på mobil, hvor scroll (swipe)
     // ikke tæller som et klik.
@@ -1749,7 +1737,7 @@
                             b.abv ? b.abv + '% ABV' : null,
                             'Køb billigt hos ' + best.shop_name
                         ].filter(Boolean).join(' — '),
-                        "brand": { "@type": "Brand", "name": best.shop_name },
+                        "brand": b.brewery ? { "@type": "Brand", "name": b.brewery } : undefined,
                         "offers": {
                             "@type": "Offer",
                             "price": best.price.toFixed(2),
@@ -1775,15 +1763,7 @@
                                         "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"]
                                     }
                                 }
-                            } : undefined,
-                            "hasMerchantReturnPolicy": {
-                                "@type": "MerchantReturnPolicy",
-                                "applicableCountry": "DK",
-                                "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
-                                "merchantReturnDays": 14,
-                                "returnMethod": "https://schema.org/ReturnByMail",
-                                "returnFees": "https://schema.org/FreeReturn"
-                            }
+                            } : undefined
                         }
                     }
                 };
@@ -1840,7 +1820,7 @@
     window.clearFilter = function(type, value) {
         if (type==='flag') { activeFlags.delete(value); syncFlagButtons(); }
         else if (type==='shop') { selectedShops.delete(value); updateShopBtn(); }
-        else if (type==='type') { selectedTypes.delete(value); updateTypeBtn(); document.querySelectorAll('.cat-btn').forEach(b=>b.classList.remove('active')); }
+        else if (type==='type') { selectedTypes.delete(value); updateTypeBtn(); const tb=document.querySelector('.cat-btn[data-cat="'+value+'"]'); if (tb) tb.classList.remove('active'); syncFlagButtons(); }
         else if (type==='search') { document.getElementById('search').value=''; }
         else if (type==='price') { priceMin=0; priceMax=parseInt(document.getElementById('price-max').max||500); document.getElementById('price-min').value=0; document.getElementById('price-max').value=priceMax; updateDualRange('price'); }
         else if (type==='abv') { abvMin=0; abvMax=15; document.getElementById('abv-min').value=0; document.getElementById('abv-max').value=15; updateDualRange('abv'); }
