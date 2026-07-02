@@ -84,7 +84,7 @@
             flex-direction: column;
             align-items: center;
             gap: 0.6rem;
-            padding: 1.8rem 1.5rem 1.4rem;
+            padding: 1.1rem 1.5rem 1rem;
             max-width: 1200px;
             margin: 0 auto;
             position: relative;
@@ -94,9 +94,9 @@
         .mascot-wrap::before {
             content: '';
             position: absolute;
-            inset: -22px;
+            inset: -32px;
             border-radius: 50%;
-            background: radial-gradient(circle, rgba(200,146,14,0.16) 0%, transparent 68%);
+            background: radial-gradient(circle, rgba(200,146,14,0.24) 0%, transparent 68%);
             animation: glowPulse 5s ease-in-out infinite;
         }
         @keyframes glowPulse {
@@ -122,6 +122,8 @@
             font-weight: 500;
         }
         .brand-tagline strong { color: var(--gold-light); font-weight: 700; }
+        .brand-sub { font-size: 0.74rem; color: var(--text-muted); letter-spacing: 0.03em; }
+        .brand-sub strong { color: var(--gold); font-weight: 700; }
         .header-right { display: flex; align-items: center; gap: 1rem; }
         .header-updated { font-size: 0.66rem; color: var(--text-dim); text-align: center; line-height: 1.4; }
         .header-updated strong { color: var(--text-muted); }
@@ -145,6 +147,13 @@
         }
         .mini-header.visible { transform: translateY(0); }
         .mini-header img { width: 38px; height: auto; }
+        .mini-header .mini-brand {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 1.15rem;
+            letter-spacing: 0.08em;
+            color: var(--gold-light);
+            line-height: 1;
+        }
         .mini-header .mini-tagline {
             font-size: 0.78rem;
             color: var(--text-muted);
@@ -153,7 +162,7 @@
         }
 
         /* ── RENT HERO — søgefeltet er midtpunktet ── */
-        .hero-search { background: var(--surface); border-bottom: 1px solid var(--border); padding: 1.5rem 2rem 1.3rem; }
+        .hero-search { background: var(--surface); border-bottom: 1px solid var(--border); padding: 1.2rem 2rem 1.1rem; }
         .hero-search-inner { max-width: 900px; margin: 0 auto; text-align: center; }
         .hero-search-sub {
             font-size: 0.8rem;
@@ -202,6 +211,10 @@
             flex-wrap: wrap;
             margin-top: 1rem;
             padding-bottom: 0.4rem;
+            /* Balancerede raekker (ca. 6+6) i stedet for 8+4 */
+            max-width: 820px;
+            margin-left: auto;
+            margin-right: auto;
         }
         .category-bar::-webkit-scrollbar { display: none; }
 
@@ -1060,7 +1073,8 @@
             .logo-img { width: 140px; }
             .brand-tagline { font-size: 0.8rem; }
             .mini-header img { width: 32px; }
-            .mini-header .mini-tagline { font-size: 0.7rem; }
+            .mini-header .mini-brand { font-size: 1.05rem; }
+            .mini-header .mini-tagline { display: none; }
             .stat { padding: 0.6rem 0.7rem; max-width: none; }
             .stat-number { font-size: 1.5rem; }
             .stat-label { font-size: 0.52rem; }
@@ -1112,7 +1126,8 @@
 <!-- Sticky mini-header — vises ved scroll -->
 <div class="mini-header" id="mini-header">
     <img src="logo.png" alt="BeerSniffer" decoding="async">
-    <span class="mini-tagline">Snus dig frem til de bedste øltilbud</span>
+    <span class="mini-brand">BeerSniffer</span>
+    <span class="mini-tagline">— snus dig frem til de bedste øltilbud</span>
 </div>
 
 <header>
@@ -1122,6 +1137,7 @@
         </div>
         <div class="brand">
             <p class="brand-tagline">Snus dig frem til de bedste <strong>øltilbud</strong> i Danmark</p>
+            <p class="brand-sub">Prissammenligning på tværs af <strong id="brand-shop-count">9</strong> danske ølbutikker</p>
             <div class="header-updated" id="header-updated"></div>
         </div>
     </div>
@@ -1161,7 +1177,7 @@
     <div class="stat"><div class="stat-number" id="stat-total">–</div><div class="stat-label">Øl i alt</div></div>
     <div class="stat clickable" onclick="quickCat('deals')" role="button" tabindex="0" aria-label="Filtrer til aktive tilbud"><div class="stat-number" id="stat-deals">–</div><div class="stat-label">Aktive tilbud</div></div>
     <div class="stat"><div class="stat-number" id="stat-max-discount">–</div><div class="stat-label">Største rabat</div></div>
-    <div class="stat"><div class="stat-number" id="stat-cheapest">–</div><div class="stat-label">Billigste (kr)</div></div>
+    <div class="stat"><div class="stat-number" id="stat-cheapest">–</div><div class="stat-label">Billigste øl (kr)</div></div>
 </div>
 
 <!-- TOP DEALS CAROUSEL -->
@@ -1325,7 +1341,7 @@
 
 <script>
     // AUTO-STEMPLES af stamp_data_version.py ved hvert build — rediger ikke manuelt
-    const DATA_VERSION = '20260702-1305';
+    const DATA_VERSION = '20260702-1403';
 
     const PAGE_SIZE = 50;
 
@@ -1917,6 +1933,7 @@
             document.getElementById('stat-max-discount').textContent = maxDiscount>0?maxDiscount+'%':'–';
             document.getElementById('stat-cheapest').textContent = (stats.cheapest||Math.min(...allBeers.filter(b=>b.min_price).map(b=>b.min_price))).toFixed(0);
             document.getElementById('hero-beer-count').textContent = (stats.total||allBeers.length).toLocaleString('da-DK');
+            if (stats.shops) { const sc = document.getElementById('brand-shop-count'); if (sc) sc.textContent = stats.shops; }
 
             if (raw.updated_at) {
                 const d=new Date(raw.updated_at), opts={day:'numeric',month:'short',hour:'2-digit',minute:'2-digit'};

@@ -332,6 +332,73 @@ def build_price_history(db, beer_list, days=90, min_points=2):
             print(f"      ... og {len(_implausible_drops) - 10} flere")
 
 
+import re as _navne_re
+
+_MOJIBAKE_MARKERS = ("\u00c2", "\u00c3", "\u00e2\u20ac")
+
+# Kendte mojibake-sekvenser -> korrekt tegn. Bruges naar fuld
+# re-dekodning ikke er mulig, fordi strengen OGSAA indeholder aegte
+# non-ASCII (fx 'Ängla-Pils Â· ...'). Laengste sekvenser foerst.
+_MOJIBAKE_MAP = (
+    ("\u00e2\u20ac\u201c", "\u2013"),
+    ("\u00e2\u20ac\u2122", "\u2019"),
+    ("\u00c3\u00a6", "\u00e6"),
+    ("\u00c3\u00b8", "\u00f8"),
+    ("\u00c3\u00a5", "\u00e5"),
+    ("\u00c3\u00a9", "\u00e9"),
+    ("\u00c3\u00bc", "\u00fc"),
+    ("\u00c3\u00a4", "\u00e4"),
+    ("\u00c3\u00b6", "\u00f6"),
+    ("\u00c2\u00b7", "\u00b7"),
+    ("\u00c2\u00a0", " "),
+)
+
+def _fix_mojibake(s):
+    """Reparer UTF-8-tekst fejllaest som Latin-1 ('Â·' -> '·').
+    Foerst forsoeges fuld re-dekodning (bedst naar hele strengen er
+    mojibake). Fejler den — eller hjaelper den ikke — rettes kendte
+    sekvenser punktvis via _MOJIBAKE_MAP."""
+    if not s or not any(m in s for m in _MOJIBAKE_MARKERS):
+        return s
+    try:
+        repaired = s.encode("latin-1").decode("utf-8")
+        before = sum(s.count(m) for m in _MOJIBAKE_MARKERS)
+        after = sum(repaired.count(m) for m in _MOJIBAKE_MARKERS)
+        if after < before:
+            return repaired
+    except (UnicodeEncodeError, UnicodeDecodeError):
+        pass
+    for _bad, _good in _MOJIBAKE_MAP:
+        s = s.replace(_bad, _good)
+    return s
+
+_BEST_FOER_RE = _navne_re.compile(
+    r"\s*[\u2013\-\u2014]?\s*(BEDST\s*F\u00d8R|BEST\s*BEFORE)\s*:?\s*"
+    r"\d{1,2}[./-]\d{1,2}[./-]\d{2,4}\s*",
+    _navne_re.IGNORECASE,
+)
+_DUP_PAK_RE = _navne_re.compile(r"(\(\d+\s*stk\.?\))(\s*\1)+", _navne_re.IGNORECASE)
+
+def sanitize_item_names(item):
+    """Renser navne-stoej fra kilderne: mojibake, BEDST FOER-datoer og
+    dublerede pak-angivelser. Facit anvendes EFTER og vinder stadig."""
+    name = item.get("name")
+    if name:
+        name = _fix_mojibake(name)
+        name = _BEST_FOER_RE.sub(" ", name)
+        name = _DUP_PAK_RE.sub(r"\1", name)
+        name = _navne_re.sub(r"\s{2,}", " ", name).strip(" -\u2013\u2014,")
+        item["name"] = name
+    for _f in ("brewery", "description", "type"):
+        _v = item.get(_f)
+        if _v:
+            _v = _fix_mojibake(_v)
+            if _f == "description":
+                _v = _BEST_FOER_RE.sub(" ", _v)
+                _v = _navne_re.sub(r"\s{2,}", " ", _v).strip()
+            item[_f] = _v
+
+
 def main():
     start_time = time.time()
     print("=" * 60)
@@ -350,6 +417,17 @@ def main():
     if not items:
         print("\n❌ Ingen items hentet — afbryder")
         return
+
+    # 1a2. Rens navne-stoej fra kilderne (mojibake, BEDST FOER-datoer,
+    #       dublerede pak-angivelser) — facit anvendes efter og vinder.
+    _renset = 0
+    for _it in items:
+        _foer = _it.get("name")
+        sanitize_item_names(_it)
+        if _it.get("name") != _foer:
+            _renset += 1
+    if _renset:
+        print(f"   \U0001F9F9 {_renset} navne renset for kilde-stoej")
 
     # 1b. Facitliste: anvend manuelle overrides FOER matchning (facit vinder)
     print(f"\n\U0001F4D8 Anvender facitliste (fejlliste.xlsx)...")
@@ -373,6 +451,19 @@ def main():
     print(f"\n📈 Bygger prishistorik...")
     build_price_history(db, beer_list)
     db.close()
+
+    # Rens navne-stoej OGSAA paa output-siden: navnene her kommer fra
+    # databasen, hvor oel fra tidligere ingests stadig kan baere
+    # mojibake/BEDST FOER/dublerede pak-angivelser. (Input-rensningen
+    # i trin 1a2 forhindrer kun NY forurening.)
+    _renset_out = 0
+    for _b in beer_list:
+        _foer = _b.get("name")
+        sanitize_item_names(_b)
+        if _b.get("name") != _foer:
+            _renset_out += 1
+    if _renset_out:
+        print(f"   \U0001F9F9 {_renset_out} navne renset i output (gamle DB-navne)")
 
     # Fjern interne id-lister — de skal ikke med i data.json
     for _b in beer_list:
