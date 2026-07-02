@@ -183,8 +183,11 @@ def render_page(beer, updated_at, brewery_index, type_index):
     breadcrumb_json = json.dumps(breadcrumb_schema, ensure_ascii=False)
 
     image_html = (
+        f'<div class="beer-image-col">'
         f'<div class="beer-image-wrap" onclick="openLightbox(\'{escape(image)}\', \'{escape(display_name)}\')">'
         f'<img class="beer-image" src="{escape(image)}" alt="{name}" loading="eager"></div>'
+        f'<button class="zoom-link" onclick="openLightbox(\'{escape(image)}\', \'{escape(display_name)}\')">🔍 Se i fuld størrelse</button>'
+        f'</div>'
         if image else '<div class="beer-image-placeholder">🍺</div>'
     )
 
@@ -222,11 +225,16 @@ body {{ background: var(--bg); color: var(--text); font-family: 'DM Sans', sans-
 .back-link {{ display: inline-block; color: var(--gold); text-decoration: none; font-size: 0.85rem; margin-bottom: 1.2rem; }}
 .back-link:hover {{ color: var(--gold-light); }}
 .beer-header {{ display: flex; gap: 1.2rem; margin-bottom: 1.5rem; }}
-.beer-image-wrap, .beer-image-placeholder {{
-    width: 140px; height: 140px; object-fit: contain; background: var(--surface2);
-    border-radius: 12px; padding: 0.8rem; flex-shrink: 0;
-    display: flex; align-items: center; justify-content: center; font-size: 3rem;
-    box-sizing: border-box;
+.beer-image-col, .beer-image-placeholder {{
+    width: 140px; flex-shrink: 0; display: flex; flex-direction: column; gap: 0.4rem;
+}}
+.beer-image-placeholder {{
+    height: 140px; background: var(--surface2); border-radius: 12px;
+    align-items: center; justify-content: center; font-size: 3rem; box-sizing: border-box;
+}}
+.beer-image-wrap {{
+    width: 140px; height: 140px; background: var(--surface2); border-radius: 12px;
+    padding: 0.8rem; box-sizing: border-box; display: flex; align-items: center; justify-content: center;
 }}
 .beer-image {{ width: 100%; height: 100%; object-fit: contain; }}
 .beer-info h1 {{ font-size: 1.3rem; line-height: 1.35; margin-bottom: 0.4rem; }}
@@ -272,6 +280,12 @@ body {{ background: var(--bg); color: var(--text); font-family: 'DM Sans', sans-
 .beer-image {{ transition: transform 0.15s; pointer-events: none; }}
 .beer-image-wrap {{ cursor: zoom-in; }}
 .beer-image-wrap:hover .beer-image {{ transform: scale(1.03); }}
+.zoom-link {{
+    background: var(--surface); border: 1px solid var(--border-light); color: var(--text-muted);
+    border-radius: 7px; padding: 0.4rem 0.3rem; font-size: 0.66rem; cursor: pointer;
+    font-family: 'DM Sans', sans-serif; text-align: center; width: 100%;
+}}
+.zoom-link:hover {{ border-color: var(--gold); color: var(--gold-light); }}
 </style>
 </head>
 <body>
