@@ -917,11 +917,10 @@
             z-index: 999999;
             text-align: left;
         }
-        .shipping-btn.tooltip-open .shipping-tooltip { opacity: 1; pointer-events: auto; transform: translateY(0); }
-        /* Hover-visning kun for musebrugere — touch-skærme beholder klik-adfærden */
-        @media (hover: hover) and (pointer: fine) {
-            .shipping-btn:hover .shipping-tooltip { opacity: 1; pointer-events: auto; transform: translateY(0); }
-        }
+        /* Tooltippen lever som EET delt element direkte paa <body> —
+           kort har transform/animation, som fanger position:fixed i
+           kortets stacking context (derfor roeg den bag nabokortet). */
+        .shipping-tooltip.open { opacity: 1; pointer-events: auto; }
         .tt-row { display: flex; justify-content: space-between; align-items: center; gap: 0.75rem; font-size: 0.78rem; line-height: 1.6; }
         .tt-label { color: #a09070; font-size: 0.76rem; }
         .tt-value { color: #f0e6d0; font-weight: 600; white-space: nowrap; font-size: 0.8rem; }
@@ -1387,17 +1386,50 @@
     }
 
     // Shipping
-    function positionTooltip(btn) {
-        const tt = btn.querySelector('.shipping-tooltip');
-        if (!tt) return;
+    // ── Global fragt-tooltip: eet delt element paa <body> ──
+    let _ttEl = null, _ttOwner = null;
+    function _ensureTT() {
+        if (!_ttEl) {
+            _ttEl = document.createElement('div');
+            _ttEl.className = 'shipping-tooltip';
+            document.body.appendChild(_ttEl);
+        }
+        return _ttEl;
+    }
+    function closeShippingTooltip() {
+        if (_ttEl) _ttEl.classList.remove('open');
+        _ttOwner = null;
+    }
+    function toggleShippingTooltip(ev, btn) {
+        ev.stopPropagation(); ev.preventDefault();
+        const tt = _ensureTT();
+        // Klik paa samme knap igen = luk. Klik paa en ANDEN knap =
+        // indholdet skiftes og tooltippen flytter derhen (loeser at
+        // den gamle blev haengende).
+        if (_ttOwner === btn && tt.classList.contains('open')) { closeShippingTooltip(); return; }
+        _ttOwner = btn;
+        const tpl = btn.querySelector('template.shipping-tooltip-content');
+        tt.innerHTML = tpl ? tpl.innerHTML : '';
         const r = btn.getBoundingClientRect();
         tt.style.top = (r.top - 8) + 'px'; tt.style.transform = 'translateY(-100%)';
         tt.style.left = 'auto'; tt.style.right = (window.innerWidth - r.right) + 'px';
+        tt.classList.add('open');
         setTimeout(() => {
             const tr = tt.getBoundingClientRect();
             if (tr.left < 10) { tt.style.right = 'auto'; tt.style.left = '10px'; }
             if (tr.top < 10) { tt.style.top = (r.bottom + 8) + 'px'; tt.style.transform = 'translateY(0)'; }
         }, 0);
+    }
+    // Desktop: vis ogsaa ved hover — kun fine pointers, touch beholder klik
+    if (window.matchMedia('(hover: hover) and (pointer: fine)').matches) {
+        document.addEventListener('mouseover', e => {
+            const btn = e.target.closest('.shipping-btn');
+            if (btn && btn !== _ttOwner) toggleShippingTooltip(e, btn);
+        });
+        document.addEventListener('mouseout', e => {
+            const btn = e.target.closest('.shipping-btn');
+            if (btn && !btn.contains(e.relatedTarget)) closeShippingTooltip();
+        });
     }
     function shippingTooltipHTML(shopName, itemPrice) {
         const s = SHIPPING[shopName];
@@ -1417,18 +1449,13 @@
         const cls = !s ? ' no-info' : isFree ? ' free-shipping' : '';
         const label = !s ? 'Fragtinfo ikke tilgængelig' : isFree ? 'Gratis fragt' : `Fragt: ${s.price} kr`;
         return `<span class="shipping-btn${cls}" aria-label="${label}"
-                    onclick="positionTooltip(this);this.classList.toggle('tooltip-open');event.stopPropagation();event.preventDefault()">
-                    🚚<div class="shipping-tooltip">${shippingTooltipHTML(shopName, itemPrice)}</div></span>`;
+                    onclick="toggleShippingTooltip(event, this)">
+                    🚚<template class="shipping-tooltip-content">${shippingTooltipHTML(shopName, itemPrice)}</template></span>`;
     }
-    document.addEventListener('click', () => {
-        document.querySelectorAll('.shipping-btn.tooltip-open').forEach(b => b.classList.remove('tooltip-open'));
-    });
+    document.addEventListener('click', closeShippingTooltip);
     // Luk evt. åben fragt-tooltip ved scroll — forhindrer at den bliver
-    // "hængende" og overlapper andre ølkort på mobil, hvor scroll (swipe)
-    // ikke tæller som et klik.
-    window.addEventListener('scroll', () => {
-        document.querySelectorAll('.shipping-btn.tooltip-open').forEach(b => b.classList.remove('tooltip-open'));
-    }, { passive: true });
+    // "hængende" og overlapper andre ølkort paa mobil.
+    window.addEventListener('scroll', closeShippingTooltip, { passive: true });
     function totalWithShipping(shopName, price) {
         const s = SHIPPING[shopName];
         if (!s) return null;
