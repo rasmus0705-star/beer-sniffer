@@ -611,8 +611,19 @@
             display: flex;
             flex-wrap: wrap;
             gap: 0.4rem;
-            padding: 0.8rem 1.5rem 0;
+            padding: 0.8rem 1.5rem 0.6rem;
             align-items: center;
+            /* Sticky: altid synlig i toppen ved scroll. top saettes
+               dynamisk fra JS, saa den klaeber UNDER mini-headeren /
+               mobil-Filtrér-knappen naar de fylder i toppen. */
+            position: sticky;
+            top: 0;
+            z-index: 700;
+            background: rgba(10,8,5,0.94);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            border-bottom: 1px solid var(--border);
+            transition: top 0.28s ease;
         }
         .active-filters:empty { display: none; }
         .filter-chip {
@@ -2014,10 +2025,27 @@
 
         const stBtn = document.getElementById('scroll-top');
         const miniHeader = document.getElementById('mini-header');
+        // Sticky-offset for aktive filtre: klaeb under mini-headeren
+        // og/eller mobil-Filtrér-knappen, alt efter hvad der er synligt.
+        const activeFiltersEl = document.getElementById('active-filters');
+        const mobileToggleEl = document.querySelector('.mobile-filter-toggle');
+        function updateFilterStickyTop() {
+            let top = 0;
+            if (mobileToggleEl && getComputedStyle(mobileToggleEl).display !== 'none') {
+                top = mobileToggleEl.offsetHeight;
+            }
+            if (miniHeader && miniHeader.classList.contains('visible')) {
+                top = Math.max(top, miniHeader.offsetHeight);
+            }
+            if (activeFiltersEl) activeFiltersEl.style.top = top + 'px';
+        }
         window.addEventListener('scroll', () => {
             stBtn.classList.toggle('visible', window.scrollY>600);
             if (miniHeader) miniHeader.classList.toggle('visible', window.scrollY>320);
+            updateFilterStickyTop();
         }, {passive:true});
+        window.addEventListener('resize', updateFilterStickyTop, {passive:true});
+        updateFilterStickyTop();
         stBtn.addEventListener('click', () => window.scrollTo({top:0,behavior:'smooth'}));
 
         document.getElementById('fav-count-badge').textContent = favorites.size>0?`(${favorites.size})`:'';
