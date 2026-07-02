@@ -266,6 +266,7 @@ def build_price_history(db, beer_list, days=90, min_points=2):
             d[date_str] = price
 
     history_out = {}
+    _implausible_drops = []
     for b in beer_list:
         slug = b.get("slug")
         ids = b.get("_all_ids", [])
@@ -282,10 +283,53 @@ def build_price_history(db, beer_list, days=90, min_points=2):
             {"date": d, "price": p} for d, p in sorted(merged.items())
         ]
 
+        # Prisaendring over de seneste ~7 dage — bruges til 📉-badge
+        # paa forsiden. Tidligste pris i vinduet vs. nyeste.
+        _week_cutoff = (datetime.utcnow() - timedelta(days=8)).strftime("%Y-%m-%d")
+        _recent = [(d, p) for d, p in sorted(merged.items()) if d >= _week_cutoff]
+        if len(_recent) >= 2:
+            _ref_price = _recent[0][1]
+            _change = round(_recent[-1][1] - _ref_price, 2)
+            if abs(_change) >= 1:
+                # Plausibilitets-gate (prisloft): et aegte prisfald —
+                # ogsaa store udloebsrabatter paa 80%+ — har en udgangs-
+                # pris, der ligner hvad oellen faktisk koster i dag
+                # (andre butikkers pris eller old_price). En falsk match
+                # i historikken (kasse vs. enkeltdaase) har en udgangs-
+                # pris langt over alt, hvad oellen koster nogen steder.
+                _ceiling = 0
+                for _p in b.get("prices", []):
+                    _ceiling = max(
+                        _ceiling,
+                        _p.get("price_dkk") or _p.get("price") or 0,
+                        _p.get("old_price") or 0,
+                    )
+                if _change >= 0:
+                    _plausible = True
+                else:
+                    _pct = abs(_change) / _ref_price if _ref_price > 0 else 0
+                    # Frasortér kun naar BEGGE alarmklokker ringer:
+                    # faldet er ekstremt (>60%) OG referenceprisen har
+                    # ingen stoette i nutidens priser (old_price eller
+                    # andre butikker). Store men bekraeftede udloebs-
+                    # rabatter (80%+) passerer via loftet; moderate fald
+                    # (<=60%) passerer altid.
+                    _plausible = _pct <= 0.60 or (_ceiling > 0 and _ref_price <= _ceiling * 1.3)
+                if _plausible:
+                    b["price_change_7d"] = _change
+                else:
+                    _implausible_drops.append((slug, _ref_price, _recent[-1][1]))
+
     with open("price_history.json", "w", encoding="utf-8") as f:
         json.dump(history_out, f, ensure_ascii=False)
 
     print(f"   {len(history_out)} øl fik en prishistorik-graf (ud af {len(beer_list)} i alt)")
+    if _implausible_drops:
+        print(f"   ⚠️ {len(_implausible_drops)} usandsynlige prisfald frasorteret (>60% fald uden stoette i nutidens priser — sandsynligvis falske matches):")
+        for _slug, _old_p, _new_p in _implausible_drops[:10]:
+            print(f"      {_old_p:8.2f} → {_new_p:8.2f} kr   {_slug}")
+        if len(_implausible_drops) > 10:
+            print(f"      ... og {len(_implausible_drops) - 10} flere")
 
 
 def main():

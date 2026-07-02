@@ -759,6 +759,7 @@
         .tag-type { background: rgba(200,146,14,0.1); color: var(--gold); border-color: rgba(200,146,14,0.25); }
         .tag-shops { background: rgba(74,158,255,0.1); color: #4a9eff; border-color: rgba(74,158,255,0.25); }
         .tag-ppl { background: rgba(61,186,111,0.08); color: #3dba6f; border-color: rgba(61,186,111,0.2); }
+        .tag-drop { background: rgba(61,200,186,0.1); color: #3dd6c8; border-color: rgba(61,200,186,0.3); font-weight: 700; }
 
         .price-rows { display: flex; flex-direction: column; gap: 0.35rem; margin-top: auto; margin-bottom: 0.5rem; }
         .price-row {
@@ -1314,7 +1315,7 @@
 
 <script>
     // AUTO-STEMPLES af stamp_data_version.py ved hvert build — rediger ikke manuelt
-    const DATA_VERSION = '20260702-1219';
+    const DATA_VERSION = '20260702-1305';
 
     const PAGE_SIZE = 50;
 
@@ -1570,6 +1571,7 @@
         if (b.abv) html += `<span class="tag">${b.abv}%</span>`;
         if (b.type) html += `<span class="tag tag-type">${b.type}</span>`;
         if (prices.length > 1) html += `<span class="tag tag-shops">🏪 ${prices.length} butikker</span>`;
+        if (b.price_change_7d && b.price_change_7d <= -1) html += `<span class="tag tag-drop" title="Prisen er faldet de seneste 7 dage">📉 Faldet ${Math.abs(b.price_change_7d).toFixed(0)} kr</span>`;
         html += pplTag;
         html += `</div>`;
 
