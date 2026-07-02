@@ -110,14 +110,22 @@ def render_page(beer, updated_at, brewery_index, type_index):
     )
 
     page_title = f"{name} – {format_price(min_price)} kr | BeerSniffer"
-    meta_desc_parts = [name]
-    if brewery:
-        meta_desc_parts.append(f"fra {brewery}")
-    meta_desc_parts.append(
-        f"– sammenlign priser hos {shop_count} butik{'ker' if shop_count != 1 else ''}. "
-        f"Billigste pris: {format_price(min_price)} kr."
-    )
-    meta_description = escape(" ".join(meta_desc_parts))
+    real_description = beer.get("description")
+    if real_description:
+        description_text = (
+            real_description[:155].rsplit(" ", 1)[0] + "…"
+            if len(real_description) > 155 else real_description
+        )
+    else:
+        meta_desc_parts = [name]
+        if brewery:
+            meta_desc_parts.append(f"fra {brewery}")
+        meta_desc_parts.append(
+            f"– sammenlign priser hos {shop_count} butik{'ker' if shop_count != 1 else ''}. "
+            f"Billigste pris: {format_price(min_price)} kr."
+        )
+        description_text = " ".join(meta_desc_parts)
+    meta_description = escape(description_text)
 
     canonical = f"{SITE_URL}/ol/{slug}/"
 
@@ -142,7 +150,7 @@ def render_page(beer, updated_at, brewery_index, type_index):
         "@type": "Product",
         "name": display_name,
         "image": image or None,
-        "description": " ".join(meta_desc_parts),
+        "description": description_text,
         "brand": {"@type": "Brand", "name": beer.get("brewery") or "BeerSniffer"},
         "offers": {
             "@type": "AggregateOffer",
@@ -221,6 +229,8 @@ body {{ background: var(--bg); color: var(--text); font-family: 'DM Sans', sans-
 .beer-info h1 {{ font-size: 1.3rem; line-height: 1.35; margin-bottom: 0.4rem; }}
 .beer-meta {{ font-size: 0.82rem; color: var(--text-muted); margin-bottom: 0.6rem; }}
 .beer-brewery {{ font-size: 0.85rem; color: var(--gold-light); }}
+.about-section {{ margin: 1.2rem 0 1.5rem; font-size: 0.86rem; line-height: 1.6; color: var(--text); background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 1rem 1.1rem; }}
+.about-heading {{ font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 0.5rem; }}
 .price-rows {{ display: flex; flex-direction: column; gap: 0.6rem; margin: 1.5rem 0; }}
 .price-row {{ background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 0.8rem 1rem; }}
 .price-row.cheapest {{ border: 2px solid var(--gold); background: linear-gradient(135deg, rgba(200,146,14,0.1), rgba(212,98,10,0.04)); }}
@@ -252,6 +262,11 @@ body {{ background: var(--bg); color: var(--text); font-family: 'DM Sans', sans-
             <div class="beer-meta">{meta_line}</div>
         </div>
     </div>
+
+    {f'''<div class="about-section">
+        <div class="about-heading">Om øllet</div>
+        {escape(real_description)}
+    </div>''' if real_description else ''}
 
     <div class="price-rows">
         {price_rows_html}

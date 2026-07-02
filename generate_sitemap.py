@@ -60,7 +60,7 @@ def main():
     with open("sitemap.xml", "w", encoding="utf-8") as f:
         f.write(sitemap)
 
-    print(f"✅ sitemap.xml skrevet med {len(urls)} URL'er (1 forside + {len(beers)} øl-sider).")
+    print(f"✅ sitemap.xml skrevet med {len(urls)} URL'er (1 forside + {len(static_pages)-1} statiske + {len(beers)} øl-sider).")
 
 
 if __name__ == "__main__":
