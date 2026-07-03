@@ -2,7 +2,7 @@ from sqlalchemy.orm import Session
 
 from app.models import Beer, Price, PriceHistory, PriceAlert
 from app.utils.normalize import normalize_name
-from app.utils.slugify import slugify, resolve_collisions
+from app.utils.slugify import slugify, resolve_collisions, is_valid_brewery, is_valid_brewery
 from app.services.matching import (
     normalize_for_matching,
     style_fingerprint,
@@ -158,6 +158,7 @@ def ingest_batch(db: Session, items: list[dict]):
                 abv=item_abv,
                 image=item.get("image"),
                 slug=new_slug,
+                description=item.get("description"),
             )
             db.add(beer)
             db.flush()
@@ -170,7 +171,19 @@ def ingest_batch(db: Session, items: list[dict]):
 
         if not beer.image and item.get("image"):
             beer.image = item["image"]
-        if not beer.brewery and item_brewery:
+        # Opgradér til en bedre (længere) beskrivelse, hvis en findes —
+        # i modsætning til de andre felter ovenfor vil vi altid have den
+        # bedste tekst, ikke bare "udfyld hvis tom".
+        _new_desc = item.get("description")
+        if _new_desc and (not beer.description or len(_new_desc) > len(beer.description)):
+            beer.description = _new_desc
+        # Udfyld hvis tomt, ELLER opgradér hvis den nuværende værdi er
+        # ugyldig (shop-navn/dato) og den nye rent faktisk er gyldig —
+        # retter historiske fejl automatisk over de kommende dage.
+        if item_brewery and (
+            not beer.brewery
+            or (not is_valid_brewery(beer.brewery) and is_valid_brewery(item_brewery))
+        ):
             beer.brewery = item_brewery
         if not beer.type and item.get("type"):
             beer.type = item["type"]

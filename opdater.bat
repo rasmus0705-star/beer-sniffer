@@ -6,7 +6,6 @@ echo ============================================================
 echo            BeerSniffer - Daglig Opdatering
 echo ============================================================
 echo.
-
 REM Aktiver virtual environment
 call .venv\Scripts\activate.bat
 if errorlevel 1 (
@@ -14,7 +13,6 @@ if errorlevel 1 (
     pause
     exit /b 1
 )
-
 REM ---- Tjek om fejlliste.xlsx er laast (Excel aaben) ----
 echo [0/4] Tjekker om fejlliste.xlsx er aaben i Excel...
 python -c "open('fejlliste.xlsx','a').close()" 2>nul
@@ -30,7 +28,6 @@ if errorlevel 1 (
 )
 echo    OK - filen er ikke laast.
 echo.
-
 REM ---- Koer build_data.py (scraper + facit + data.json) ----
 echo [1/4] Scraper alle butikker, anvender facit og bygger data.json...
 echo.
@@ -41,12 +38,15 @@ if errorlevel 1 (
     pause
     exit /b 1
 )
-
-REM ---- Stage baade data.json og fejlliste.xlsx ----
+REM ---- Stage alle build-outputs ----
+REM data.json      = selve prisdata
+REM fejlliste.xlsx = facitliste
+REM index.html     = DATA_VERSION cache-stempel (opdateres hvert build)
+REM ol/            = individuelle oel-sider med dagens priser
+REM sitemap.xml    = regenereres hvert build
 echo.
-echo [2/4] Tilfoejer data.json og fejlliste.xlsx til git...
-git add data.json fejlliste.xlsx
-
+echo [2/4] Tilfoejer build-outputs til git...
+git add data.json price_history.json fejlliste.xlsx index.html ol/ sitemap.xml
 REM ---- Commit (kun hvis der er aendringer) ----
 echo.
 echo [3/4] Committer...
@@ -63,7 +63,6 @@ if errorlevel 1 (
     pause
     exit /b 1
 )
-
 REM ---- Push ----
 echo.
 echo [4/4] Pusher til GitHub...
@@ -74,7 +73,6 @@ if errorlevel 1 (
     pause
     exit /b 1
 )
-
 :done
 echo.
 echo ============================================================

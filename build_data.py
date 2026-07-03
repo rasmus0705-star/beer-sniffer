@@ -379,15 +379,21 @@ _BEST_FOER_RE = _navne_re.compile(
 )
 _DUP_PAK_RE = _navne_re.compile(r"(\(\d+\s*stk\.?\))(\s*\1)+", _navne_re.IGNORECASE)
 
-def sanitize_item_names(item):
+def sanitize_item_names(item, strip_kategori=False):
     """Renser navne-stoej fra kilderne: mojibake, BEDST FOER-datoer og
-    dublerede pak-angivelser. Facit anvendes EFTER og vinder stadig."""
+    dublerede pak-angivelser. Facit anvendes EFTER og vinder stadig.
+    strip_kategori: fjern ogsaa '– Øl'-kategorisuffiks — KUN til
+    output/visning; paa input-siden er navnet oellens identitet i
+    matchingen, og suffiks-fjernelse dér skaber dublet-raekker."""
     name = item.get("name")
     if name:
         name = _fix_mojibake(name)
         name = _BEST_FOER_RE.sub(" ", name)
         name = _DUP_PAK_RE.sub(r"\1", name)
         name = _navne_re.sub(r"\s{2,}", " ", name).strip(" -\u2013\u2014,")
+        if strip_kategori:
+            # Vild med Vins kategorisuffiks tilfoerer intet i visningen
+            name = _navne_re.sub(r"\s*[,\-\u2013\u2014]\s*\u00d8l\s*$", "", name).strip()
         item["name"] = name
     for _f in ("brewery", "description", "type"):
         _v = item.get(_f)
@@ -459,7 +465,7 @@ def main():
     _renset_out = 0
     for _b in beer_list:
         _foer = _b.get("name")
-        sanitize_item_names(_b)
+        sanitize_item_names(_b, strip_kategori=True)
         if _b.get("name") != _foer:
             _renset_out += 1
     if _renset_out:

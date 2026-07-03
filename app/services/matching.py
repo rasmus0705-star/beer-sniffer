@@ -272,8 +272,16 @@ def similarity_score(name_a, name_b, abv_a, abv_b, brewery_a, brewery_b, fp_a, f
     ts_sort = fuzz.token_sort_ratio(name_a, name_b)
     base = (ts_set + ts_sort) / 2
 
-    tc_a = _token_count(name_a)
-    tc_b = _token_count(name_b)
+    # Fjern bryggeri-tokens fra navnene FOER laengde-strafen. Nogle kilder
+    # (fx Vild med Vin) skriver bryggeriet ind i selve navnet, saa navnet
+    # bliver kunstigt laengere og udloeser en falsk laengde-straf — selv om
+    # det ekstra netop er bryggeriet, der allerede matcher.
+    _brew_tokens = set()
+    for _bw in (brewery_a, brewery_b):
+        if _bw:
+            _brew_tokens |= set(normalize_for_matching(_bw).split())
+    tc_a = len([t for t in name_a.split() if t not in _brew_tokens])
+    tc_b = len([t for t in name_b.split() if t not in _brew_tokens])
     if tc_a > 0 and tc_b > 0:
         ratio = min(tc_a, tc_b) / max(tc_a, tc_b)
         if ratio < 0.5:

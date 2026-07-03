@@ -168,13 +168,23 @@ def is_valid_brewery(brewery) -> bool:
     """Offentlig helper: afgør om et brewery-felt er troværdigt (ikke en
     'Best Before'-dato eller et forkert indsat shop-navn — se kendte
     databugs fundet i Beershoppen/A Good Case-scraperne). Bruges bl.a. af
-    'relaterede øl'-sektionen på de individuelle sider."""
+    'relaterede øl'-sektionen på de individuelle sider.
+
+    VIGTIGT: dato/'best before'-tjek køres på den RÅ streng, FØR
+    clean_name() renser den — clean_name er lavet til at rense titler og
+    kan "spise" kun en del af en lang dato-kontamineret streng, hvilket
+    efterlader en rest der ikke længere ligner en dato. Tjekkes derfor før
+    rensning. Tal-tjekket kræver et RIGTIGT datoformat (fx '31/08-2026'),
+    ikke bare et vilkårligt tal — mange ægte bryggerinavne indeholder tal
+    (fx 'Bryg365'), og skal ikke afvises fejlagtigt."""
     if not brewery:
+        return False
+    if re.search(r"\d{1,2}[./-]\d{1,2}[./-]\d{2,4}", brewery):
+        return False
+    if re.search(r"best\s*before|bedst\s*f[øo]r", brewery, re.IGNORECASE):
         return False
     cleaned = clean_name(brewery)
     if not cleaned:
-        return False
-    if re.search(r"\d{2,4}", cleaned):
         return False
     if strip_accents(cleaned.lower()) in _KNOWN_SHOP_NAMES:
         return False
