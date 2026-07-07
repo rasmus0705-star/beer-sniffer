@@ -140,9 +140,9 @@ def render_page(beer, updated_at, brewery_index, type_index, history_map):
     related = []
     if is_valid_brewery(beer.get("brewery")):
         key = strip_accents(clean_name(beer.get("brewery")).lower())
-        related = [b for b in brewery_index.get(key, []) if b.get("slug") != slug][:6]
+        related = [b for b in brewery_index.get(key, []) if b.get("slug") != slug]
     if not related and beer.get("type"):
-        related = [b for b in type_index.get(beer["type"], []) if b.get("slug") != slug][:6]
+        related = [b for b in type_index.get(beer["type"], []) if b.get("slug") != slug]
     related_heading = (
         f"Flere øl fra {brewery}" if related and is_valid_brewery(beer.get("brewery"))
         else f"Andre {beer_type}-øl" if related else ""
@@ -299,6 +299,9 @@ body {{ background: var(--bg); color: var(--text); font-family: 'DM Sans', sans-
 .related-card img, .related-img-placeholder {{ width: 100%; height: 70px; object-fit: contain; background: var(--surface2); border-radius: 6px; margin-bottom: 0.4rem; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; }}
 .related-name {{ font-size: 0.72rem; line-height: 1.3; margin-bottom: 0.2rem; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; min-height: 1.9em; }}
 .related-price {{ font-size: 0.78rem; font-weight: 700; color: var(--gold-light); }}
+.related-hidden { display: none; }
+.related-toggle { display: block; margin: 0.8rem auto 0; background: var(--surface2); border: 1px solid var(--border-light); border-radius: 999px; padding: 0.45rem 1.2rem; color: var(--gold); font-family: 'DM Sans', sans-serif; font-size: 0.78rem; cursor: pointer; transition: border-color 0.15s; }
+.related-toggle:hover { border-color: var(--gold); color: var(--gold-light); }
 .disclaimer {{ font-size: 0.72rem; color: var(--text-muted); margin-top: 2rem; line-height: 1.6; border-top: 1px solid var(--border); padding-top: 1rem; }}
 .chart-section {{ margin: 1.5rem 0; background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 1rem 1.1rem; }}
 .chart-heading {{ font-size: 0.7rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 0.7rem; }}
@@ -361,7 +364,8 @@ body {{ background: var(--bg); color: var(--text); font-family: 'DM Sans', sans-
 
     {f'''<div class="related-section">
         <div class="related-heading">{escape(related_heading)}</div>
-        <div class="related-grid">{"".join(render_related_card(r) for r in related)}</div>
+        <div class="related-grid">{"".join(f'<div class="related-item{"  related-hidden" if i >= 6 else ""}">{render_related_card(r)}</div>' for i, r in enumerate(related))}</div>
+        {f'<button class="related-toggle" onclick="this.previousElementSibling.querySelectorAll(&quot;.related-hidden&quot;).forEach(e=>e.style.display=&quot;block&quot;);this.style.display=&quot;none&quot;">Vis alle ({len(related)})</button>' if len(related) > 6 else ''}
     </div>''' if related else ''}
 
     <div class="disclaimer">

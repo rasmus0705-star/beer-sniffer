@@ -352,6 +352,7 @@
             border: 1px solid rgba(61,186,111,0.25);
             border-radius: 12px;
             overflow: hidden;
+            cursor: pointer;
             position: relative;
             transition: transform 0.2s, box-shadow 0.2s;
             flex: 0 0 160px;
@@ -1365,7 +1366,7 @@
 
 <script>
     // AUTO-STEMPLES af stamp_data_version.py ved hvert build — rediger ikke manuelt
-    const DATA_VERSION = '20260703-1652';
+    const DATA_VERSION = '20260707-1512';
 
     const PAGE_SIZE = 50;
 
@@ -1787,6 +1788,14 @@
                         onclick="gtag('event','koeb_klik',{beer_name:'${esc(deal.name)}',shop:'${esc(best.shop_name)}',price:${best.price||0},placering:'top_deals',rabat:${deal.max_discount_pct||0}})">Køb nu →</a>` : ''}
                 </div></div>`;
         }).join('');
+        // Klik paa kort -> oelside; 'Koeb nu' aabner stadig butikken
+        document.querySelectorAll('.top-card').forEach((card, i) => {
+            const deal = topDeals[i];
+            if (deal && deal.slug) {
+                card.addEventListener('click', () => { window.location = '/ol/' + deal.slug + '/'; });
+                card.querySelectorAll('a').forEach(a => a.addEventListener('click', e => e.stopPropagation()));
+            }
+        });
     }
 
     // ══════════════════════════════════════════
