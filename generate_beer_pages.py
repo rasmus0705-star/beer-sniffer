@@ -366,7 +366,7 @@ body {{ background: var(--bg); color: var(--text); font-family: 'DM Sans', sans-
     {f'''<div class="related-section">
         <div class="related-heading">{escape(related_heading)}</div>
         <div class="related-grid">{"".join(f'<div class="related-item{"  related-hidden" if i >= 6 else ""}">{render_related_card(r)}</div>' for i, r in enumerate(related))}</div>
-        {f'<button class="related-toggle" onclick="this.previousElementSibling.querySelectorAll(&quot;.related-hidden&quot;).forEach(e=>e.style.display=&quot;block&quot;);this.style.display=&quot;none&quot;">Vis alle ({len(related)})</button>' if len(related) > 6 else ''}
+        {f'<button class="related-toggle" onclick="this.previousElementSibling.querySelectorAll(&quot;.related-hidden&quot;).forEach(e=>e.style.display=&quot;contents&quot;);this.style.display=&quot;none&quot;">Vis alle ({len(related)})</button>' if len(related) > 6 else ''}
     </div>''' if related else ''}
 
     <div class="disclaimer">
