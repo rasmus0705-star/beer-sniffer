@@ -66,6 +66,9 @@ body { background: var(--bg); color: var(--text); font-family: 'DM Sans', sans-s
 .related-card img, .related-img-placeholder { width: 100%; height: 70px; object-fit: contain; background: var(--surface2); border-radius: 6px; margin-bottom: 0.4rem; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; }
 .related-name { font-size: 0.72rem; line-height: 1.3; margin-bottom: 0.2rem; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; min-height: 1.9em; }
 .related-price { font-size: 0.78rem; font-weight: 700; color: var(--gold-light); }
+.related-hidden { display: none; }
+.related-toggle { display: block; margin: 0.8rem auto 0; background: var(--surface2); border: 1px solid var(--border-light); border-radius: 999px; padding: 0.45rem 1.2rem; color: var(--gold); font-family: 'DM Sans', sans-serif; font-size: 0.78rem; cursor: pointer; transition: border-color 0.15s; }
+.related-toggle:hover { border-color: var(--gold); color: var(--gold-light); }
 .disclaimer { font-size: 0.72rem; color: var(--text-muted); margin-top: 2rem; line-height: 1.6; border-top: 1px solid var(--border); padding-top: 1rem; }
 .chart-section { margin: 1.5rem 0; background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 1rem 1.1rem; }
 .chart-heading { font-size: 0.7rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 0.7rem; }
@@ -138,37 +141,38 @@ body { background: var(--bg); color: var(--text); font-family: 'DM Sans', sans-s
 
     <div class="related-section">
         <div class="related-heading">Flere øl fra Vemb Bryghus</div>
-        <div class="related-grid">
+        <div class="related-grid"><div class="related-item">
     <a class="related-card" href="https://www.beersniffer.dk/ol/vemb-bryghus-ipa/">
         <img src="https://www.vildmedvin.dk/img/1000/1000/resize/v/e/vemb_bryghus_ipa.jpg" alt="Vemb Bryghus, IPA" loading="lazy">
         <div class="related-name">Vemb Bryghus, IPA</div>
         <div class="related-price">48,00 kr</div>
-    </a>
+    </a></div><div class="related-item">
     <a class="related-card" href="https://www.beersniffer.dk/ol/vemb-bryghus-havre-stout/">
         <img src="https://www.vildmedvin.dk/img/1000/1000/resize/v/e/vemb_bryghus_havre_stout.jpg" alt="Vemb Bryghus, Havre Stout" loading="lazy">
         <div class="related-name">Vemb Bryghus, Havre Stout</div>
         <div class="related-price">49,00 kr</div>
-    </a>
+    </a></div><div class="related-item">
     <a class="related-card" href="https://www.beersniffer.dk/ol/vemb-bryghus-blodappelsin-pale-ale/">
         <img src="https://www.vildmedvin.dk/img/1000/1000/resize/v/e/vemb_bryghus_blodappelsin_pale_ale.jpg" alt="Vemb Bryghus, Blodappelsin Pale Ale" loading="lazy">
         <div class="related-name">Vemb Bryghus, Blodappelsin Pale Ale</div>
         <div class="related-price">49,00 kr</div>
-    </a>
+    </a></div><div class="related-item">
     <a class="related-card" href="https://www.beersniffer.dk/ol/vemb-bryghus-husets-blanc/">
         <img src="https://www.vildmedvin.dk/img/1000/1000/resize/v/e/vemb_bryghus_husets_blanc.jpg" alt="Vemb Bryghus, Husets Blanc" loading="lazy">
         <div class="related-name">Vemb Bryghus, Husets Blanc</div>
         <div class="related-price">49,00 kr</div>
-    </a>
+    </a></div><div class="related-item">
     <a class="related-card" href="https://www.beersniffer.dk/ol/vemb-bryghus-marzen/">
         <img src="https://www.vildmedvin.dk/img/1000/1000/resize/v/e/vemb_bryghus_m_rzen.jpg" alt="Vemb Bryghus, Märzen" loading="lazy">
         <div class="related-name">Vemb Bryghus, Märzen</div>
         <div class="related-price">49,00 kr</div>
-    </a></div>
+    </a></div></div>
+        
     </div>
 
     <div class="disclaimer">
         📢 Affiliate disclosure: BeerSniffer kan modtage provision når du køber via vores links.
-        Priser opdateret 03.07.2026. Tjek altid den endelige pris hos forhandleren før køb.
+        Priser opdateret 07.07.2026. Tjek altid den endelige pris hos forhandleren før køb.
     </div>
 </div>
 

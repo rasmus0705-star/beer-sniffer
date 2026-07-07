@@ -66,6 +66,9 @@ body { background: var(--bg); color: var(--text); font-family: 'DM Sans', sans-s
 .related-card img, .related-img-placeholder { width: 100%; height: 70px; object-fit: contain; background: var(--surface2); border-radius: 6px; margin-bottom: 0.4rem; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; }
 .related-name { font-size: 0.72rem; line-height: 1.3; margin-bottom: 0.2rem; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; min-height: 1.9em; }
 .related-price { font-size: 0.78rem; font-weight: 700; color: var(--gold-light); }
+.related-hidden { display: none; }
+.related-toggle { display: block; margin: 0.8rem auto 0; background: var(--surface2); border: 1px solid var(--border-light); border-radius: 999px; padding: 0.45rem 1.2rem; color: var(--gold); font-family: 'DM Sans', sans-serif; font-size: 0.78rem; cursor: pointer; transition: border-color 0.15s; }
+.related-toggle:hover { border-color: var(--gold); color: var(--gold-light); }
 .disclaimer { font-size: 0.72rem; color: var(--text-muted); margin-top: 2rem; line-height: 1.6; border-top: 1px solid var(--border); padding-top: 1rem; }
 .chart-section { margin: 1.5rem 0; background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 1rem 1.1rem; }
 .chart-heading { font-size: 0.7rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 0.7rem; }
@@ -132,9 +135,9 @@ body { background: var(--bg); color: var(--text); font-family: 'DM Sans', sans-s
 
     
     <div class="chart-section">
-        <div class="chart-heading">📈 Prisudvikling (2026-05-17 – 2026-07-03)</div>
+        <div class="chart-heading">📈 Prisudvikling (2026-05-17 – 2026-07-07)</div>
         <svg viewBox="0 0 320 90" class="price-chart" preserveAspectRatio="none">
-            <polyline points="8.0,21.5 15.4,21.5 22.8,8.0 30.2,8.0 37.7,21.5 45.1,21.5 52.5,21.5 59.9,21.5 67.3,21.5 74.7,21.5 82.1,21.5 89.6,8.0 97.0,21.5 104.4,21.5 111.8,21.5 119.2,21.5 126.6,82.0 134.0,8.0 141.5,21.5 148.9,21.5 156.3,8.0 163.7,21.5 171.1,8.0 178.5,21.5 186.0,21.5 193.4,21.5 200.8,8.0 208.2,21.5 215.6,8.0 223.0,21.5 230.4,8.0 237.9,21.5 245.3,21.5 252.7,8.0 260.1,21.5 267.5,8.0 274.9,21.5 282.3,21.5 289.8,21.5 297.2,21.5 304.6,21.5 312.0,21.5" fill="none" style="stroke: var(--gold); stroke-width: 2;" />
+            <polyline points="8.0,21.5 14.9,21.5 21.8,8.0 28.7,8.0 35.6,21.5 42.5,21.5 49.5,21.5 56.4,21.5 63.3,21.5 70.2,21.5 77.1,21.5 84.0,8.0 90.9,21.5 97.8,21.5 104.7,21.5 111.6,21.5 118.5,82.0 125.5,8.0 132.4,21.5 139.3,21.5 146.2,8.0 153.1,21.5 160.0,8.0 166.9,21.5 173.8,21.5 180.7,21.5 187.6,8.0 194.5,21.5 201.5,8.0 208.4,21.5 215.3,8.0 222.2,21.5 229.1,21.5 236.0,8.0 242.9,21.5 249.8,8.0 256.7,21.5 263.6,21.5 270.5,21.5 277.5,21.5 284.4,21.5 291.3,21.5 298.2,21.5 305.1,21.5 312.0,21.5" fill="none" style="stroke: var(--gold); stroke-width: 2;" />
             <circle cx="312.0" cy="21.5" r="3.5" style="fill: var(--gold-light);" />
         </svg>
         <div class="chart-range">
@@ -149,42 +152,43 @@ body { background: var(--bg); color: var(--text); font-family: 'DM Sans', sans-s
 
     <div class="related-section">
         <div class="related-heading">Flere øl fra Brouwerij Van Steenberge</div>
-        <div class="related-grid">
+        <div class="related-grid"><div class="related-item">
     <a class="related-card" href="https://www.beersniffer.dk/ol/brouwerij-van-steenberge-leute-bokbier/">
         <img src="https://cdn.shopify.com/s/files/1/0509/8477/9975/files/leute-bokbier-7-5-33cl.png?v=1729336458" alt="Leute Bokbier" loading="lazy">
         <div class="related-name">Leute Bokbier</div>
         <div class="related-price">30,00 kr</div>
-    </a>
+    </a></div><div class="related-item">
     <a class="related-card" href="https://www.beersniffer.dk/ol/brouwerij-van-steenberge-gulden-draak-red/">
         <img src="https://cdn.shopify.com/s/files/1/0509/8477/9975/files/gulden-draak-red-8-33cl.png?v=1760275644" alt="Gulden Draak Red" loading="lazy">
         <div class="related-name">Gulden Draak Red</div>
         <div class="related-price">31,00 kr</div>
-    </a>
+    </a></div><div class="related-item">
     <a class="related-card" href="https://www.beersniffer.dk/ol/brouwerij-van-steenberge-piraat-triple-hop/">
         <img src="https://cdn.shopify.com/s/files/1/0509/8477/9975/products/piraat-triple-hop-33cl.png?v=1607873423" alt="Piraat Triple Hop" loading="lazy">
         <div class="related-name">Piraat Triple Hop</div>
         <div class="related-price">40,00 kr</div>
-    </a>
+    </a></div><div class="related-item">
     <a class="related-card" href="https://www.beersniffer.dk/ol/brouwerij-van-steenberge-gulden-draak-imperial-stout/">
         <img src="https://cdn.shopify.com/s/files/1/0509/8477/9975/products/gulden-draak-imperial-stout-12-33cl.png?v=1626093911" alt="Gulden Draak Imperial Stout" loading="lazy">
         <div class="related-name">Gulden Draak Imperial Stout</div>
         <div class="related-price">44,00 kr</div>
-    </a>
+    </a></div><div class="related-item">
     <a class="related-card" href="https://www.beersniffer.dk/ol/brouwerij-van-steenberge-gulden-draak-classic/">
         <img src="https://cdn.shopify.com/s/files/1/0509/8477/9975/files/gulden-draak-classic-75cl.png?v=1773488387" alt="Gulden Draak Classic" loading="lazy">
         <div class="related-name">Gulden Draak Classic</div>
         <div class="related-price">85,00 kr</div>
-    </a>
+    </a></div><div class="related-item">
     <a class="related-card" href="https://www.beersniffer.dk/ol/brouwerij-van-steenberge-gulden-draak-cuvee-prestige-bourbon/">
         <img src="https://cdn.shopify.com/s/files/1/0509/8477/9975/files/gulden-draak-cuvee-prestige-bourbon-10-5-75cl-2025.png?v=1775043754" alt="Gulden Draak Cuvée Prestige Bourbon" loading="lazy">
         <div class="related-name">Gulden Draak Cuvée Prestige Bourbon</div>
         <div class="related-price">195,00 kr</div>
-    </a></div>
+    </a></div></div>
+        
     </div>
 
     <div class="disclaimer">
         📢 Affiliate disclosure: BeerSniffer kan modtage provision når du køber via vores links.
-        Priser opdateret 03.07.2026. Tjek altid den endelige pris hos forhandleren før køb.
+        Priser opdateret 07.07.2026. Tjek altid den endelige pris hos forhandleren før køb.
     </div>
 </div>
 

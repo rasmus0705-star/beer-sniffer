@@ -66,6 +66,9 @@ body { background: var(--bg); color: var(--text); font-family: 'DM Sans', sans-s
 .related-card img, .related-img-placeholder { width: 100%; height: 70px; object-fit: contain; background: var(--surface2); border-radius: 6px; margin-bottom: 0.4rem; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; }
 .related-name { font-size: 0.72rem; line-height: 1.3; margin-bottom: 0.2rem; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; min-height: 1.9em; }
 .related-price { font-size: 0.78rem; font-weight: 700; color: var(--gold-light); }
+.related-hidden { display: none; }
+.related-toggle { display: block; margin: 0.8rem auto 0; background: var(--surface2); border: 1px solid var(--border-light); border-radius: 999px; padding: 0.45rem 1.2rem; color: var(--gold); font-family: 'DM Sans', sans-serif; font-size: 0.78rem; cursor: pointer; transition: border-color 0.15s; }
+.related-toggle:hover { border-color: var(--gold); color: var(--gold-light); }
 .disclaimer { font-size: 0.72rem; color: var(--text-muted); margin-top: 2rem; line-height: 1.6; border-top: 1px solid var(--border); padding-top: 1rem; }
 .chart-section { margin: 1.5rem 0; background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 1rem 1.1rem; }
 .chart-heading { font-size: 0.7rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 0.7rem; }
@@ -146,42 +149,218 @@ body { background: var(--bg); color: var(--text); font-family: 'DM Sans', sans-s
 
     <div class="related-section">
         <div class="related-heading">Flere øl fra Schneider weisse</div>
-        <div class="related-grid">
+        <div class="related-grid"><div class="related-item">
     <a class="related-card" href="https://www.beersniffer.dk/ol/oerbaek-fynsk-fri-alkoholfri-hvedeoel/">
         <img src="https://cdn.shopify.com/s/files/1/0402/1239/8243/files/FysnkFri_1stk._1.png?v=1781174581" alt="Ørbæk - Fynsk Fri - Alkoholfri Hvedeøl" loading="lazy">
         <div class="related-name">Ørbæk - Fynsk Fri - Alkoholfri Hvedeøl</div>
         <div class="related-price">19,00 kr</div>
-    </a>
+    </a></div><div class="related-item">
     <a class="related-card" href="https://www.beersniffer.dk/ol/sanwald-sport-weizen/">
         <img src="https://www.vildmedvin.dk/img/1000/1000/resize/s/a/sanwald_alkoholfri.jpg" alt="Sanwald Sport Weizen" loading="lazy">
         <div class="related-name">Sanwald Sport Weizen</div>
         <div class="related-price">25,00 kr</div>
-    </a>
+    </a></div><div class="related-item">
     <a class="related-card" href="https://www.beersniffer.dk/ol/schofferhofer-hefeweizen/">
         <img src="https://www.vildmedvin.dk/img/1000/1000/resize/s/c/sch_fferhoffer_hefeweizen.jpg" alt="Schöfferhofer Hefeweizen" loading="lazy">
         <div class="related-name">Schöfferhofer Hefeweizen</div>
         <div class="related-price">25,00 kr</div>
-    </a>
+    </a></div><div class="related-item">
     <a class="related-card" href="https://www.beersniffer.dk/ol/reeper-b-blondes-weissbier-hefeweizen-24-stk/">
         <img src="https://cdn.shopify.com/s/files/1/0402/1239/8243/files/Kasser_ReeperB.Weiss.png?v=1750759604" alt="Reeper B. - Blondes Weissbier - Hefeweizen (24 stk.)" loading="lazy">
         <div class="related-name">Reeper B. - Blondes Weissbier - Hefeweizen (24 stk.)</div>
         <div class="related-price">25,75 kr</div>
-    </a>
+    </a></div><div class="related-item">
     <a class="related-card" href="https://www.beersniffer.dk/ol/stangen-weiss-bier-hefeweizen/">
         <img src="https://cdn.shopify.com/s/files/1/0402/1239/8243/files/Stangen_Weissbier.png?v=1741078159" alt="Stangen - Weiss Bier - Hefeweizen" loading="lazy">
         <div class="related-name">Stangen - Weiss Bier - Hefeweizen</div>
         <div class="related-price">25,75 kr</div>
-    </a>
+    </a></div><div class="related-item">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/primator-weizen/">
+        <img src="https://www.vildmedvin.dk/img/1000/1000/resize/p/r/primator_weizen.jpg" alt="Primator Weizen" loading="lazy">
+        <div class="related-name">Primator Weizen</div>
+        <div class="related-price">27,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/ebeltoft-gaardbryggeri-weissbier/">
+        <img src="https://www.vildmedvin.dk/img/1000/1000/resize/w/e/weissbier.jpg" alt="Ebeltoft Gårdbryggeri, Weissbier" loading="lazy">
+        <div class="related-name">Ebeltoft Gårdbryggeri, Weissbier</div>
+        <div class="related-price">29,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/thisted-bryghus-thy-oekologisk-hvedeoel/">
+        <img src="https://www.vildmedvin.dk/img/1000/1000/resize/t/h/thisted_bryghus_thy_okologisk_hvede.jpg" alt="Thisted Bryghus, Thy Økologisk Hvedeøl" loading="lazy">
+        <div class="related-name">Thisted Bryghus, Thy Økologisk Hvedeøl</div>
+        <div class="related-price">29,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/aaben-stolen-red-berries-fruited-berliner-weisse/">
+        <img src="https://cdn.shopify.com/s/files/1/0402/1239/8243/files/Aben_StolenRedBerrries33cl.png?v=1781415881" alt="Åben - Stolen Red Berries - Fruited Berliner Weisse ( )" loading="lazy">
+        <div class="related-name">Åben - Stolen Red Berries - Fruited Berliner Weisse ( )</div>
+        <div class="related-price">29,12 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/dragonfly-feather-light-wheat-hvedeoel/">
+        <img src="https://cdn.shopify.com/s/files/1/0402/1239/8243/files/Feather_Light_Wheat_6.png?v=1737987437" alt="Dragonfly - Feather Light Wheat - Hvedeøl" loading="lazy">
+        <div class="related-name">Dragonfly - Feather Light Wheat - Hvedeøl</div>
+        <div class="related-price">29,75 kr</div>
+    </a></div><div class="related-item  related-hidden">
     <a class="related-card" href="https://www.beersniffer.dk/ol/mikkeller-drinkinin-the-sun-alkoholfri/">
         <img src="https://www.vildmedvin.dk/img/1000/1000/resize/m/i/mikkeller_in_the_sun.jpg" alt="Mikkeller, Drinkin&#x27;in The Sun Alkoholfri" loading="lazy">
         <div class="related-name">Mikkeller, Drinkin&#x27;in The Sun Alkoholfri</div>
-        <div class="related-price">27,00 kr</div>
-    </a></div>
+        <div class="related-price">31,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/benediktiner-weissbier/">
+        <img src="https://www.vildmedvin.dk/img/1000/1000/resize/b/e/benediktiner_weissbier.jpg" alt="Benediktiner, Weissbier" loading="lazy">
+        <div class="related-name">Benediktiner, Weissbier</div>
+        <div class="related-price">31,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/hornbeer-oekologisk-weissbier/">
+        <img src="https://www.vildmedvin.dk/img/1000/1000/resize/w/e/weissbier-flaske_2233.jpg" alt="Hornbeer, Økologisk Weissbier" loading="lazy">
+        <div class="related-name">Hornbeer, Økologisk Weissbier</div>
+        <div class="related-price">33,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/krenkerup-weissbeer-2/">
+        <img src="https://www.vildmedvin.dk/img/1000/1000/resize/w/e/weiiss_33.jpg" alt="Krenkerup, Weissbeer" loading="lazy">
+        <div class="related-name">Krenkerup, Weissbeer</div>
+        <div class="related-price">33,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/maisel-weisse-original/">
+        <img src="https://www.vildmedvin.dk/img/1000/1000/resize/m/a/maisel-weisse-origina.jpg" alt="Maisel Weisse Original" loading="lazy">
+        <div class="related-name">Maisel Weisse Original</div>
+        <div class="related-price">33,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/schneider-mein-kristall-tap-2/">
+        <img src="https://www.vildmedvin.dk/img/1000/1000/resize/m/e/mein_kristall_tap_2.jpg" alt="Schneider, Mein Kristall Tap 2" loading="lazy">
+        <div class="related-name">Schneider, Mein Kristall Tap 2</div>
+        <div class="related-price">34,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/thisted-bryghus-oekologisk-alive-hazy-fruited-wheat-beer/">
+        <img src="https://www.vildmedvin.dk/img/1000/1000/resize/u/n/unavngivet_3_2.jpg" alt="Thisted Bryghus, Økologisk Alive Hazy Fruited Wheat Beer" loading="lazy">
+        <div class="related-name">Thisted Bryghus, Økologisk Alive Hazy Fruited Wheat Beer</div>
+        <div class="related-price">34,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/moen-bryghus-rytzebaek-blanc/">
+        <img src="https://www.vildmedvin.dk/img/1000/1000/resize/m/_/m_n_bryghus_rytzeb_k_blanc.jpg" alt="Møn Bryghus, Rytzebæk Blanc" loading="lazy">
+        <div class="related-name">Møn Bryghus, Rytzebæk Blanc</div>
+        <div class="related-price">35,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/jopen-adriaan-wit-witbier/">
+        <img src="https://cdn.shopify.com/s/files/1/0402/1239/8243/files/Jopen_Adriaan.png?v=1776216156" alt="Jopen - Adriaan Wit - Witbier" loading="lazy">
+        <div class="related-name">Jopen - Adriaan Wit - Witbier</div>
+        <div class="related-price">35,75 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/paulaner-paulaner-weissbier/">
+        <img src="https://www.vildmedvin.dk/img/1000/1000/resize/p/a/paulaner.jpg" alt="Paulaner, Paulaner Weissbier" loading="lazy">
+        <div class="related-name">Paulaner, Paulaner Weissbier</div>
+        <div class="related-price">36,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/ayinger-urweisse/">
+        <img src="https://www.vildmedvin.dk/img/1000/1000/resize/a/y/ayinger_urweisse_flasche.jpg" alt="Ayinger, Urweisse" loading="lazy">
+        <div class="related-name">Ayinger, Urweisse</div>
+        <div class="related-price">36,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/rygr-brygghus-sure-paloma/">
+        <img src="https://cdn.shopify.com/s/files/1/0776/5209/9400/files/266B4217-94BB-4E96-89E0-35A85C3FCB0C.jpg?v=1781812947" alt="RYGR Brygghús - Sure Paloma" loading="lazy">
+        <div class="related-name">RYGR Brygghús - Sure Paloma</div>
+        <div class="related-price">37,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/schneider-hopfenweisse-tap-5/">
+        <img src="https://www.bestofbeers.dk/wp-content/uploads/2017/09/Untitled-1-1.jpg" alt="Schneider Weisse, Mein Aventinus &amp;#8211; Tap 6 &amp;#8211; &amp;#8211;" loading="lazy">
+        <div class="related-name">Schneider Weisse, Mein Aventinus &amp;#8211; Tap 6 &amp;#8211; &amp;#8211;</div>
+        <div class="related-price">37,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/apfelweisse-andechs-kloster-alkoholfrei/">
+        <img src="https://cdn.shopify.com/s/files/1/0600/9438/2263/files/andecheraeble.jpg?v=1781634398" alt="Apfelweisse - Andechs Kloster - Alkoholfrei - -" loading="lazy">
+        <div class="related-name">Apfelweisse - Andechs Kloster - Alkoholfrei - -</div>
+        <div class="related-price">38,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/gamma-brewing-organic-hefeweizen-oeko/">
+        <img src="https://www.vildmedvin.dk/img/1000/1000/resize/o/r/organic-hefeweizen_front.jpg" alt="Gamma Brewing, Organic Hefeweizen (øko)" loading="lazy">
+        <div class="related-name">Gamma Brewing, Organic Hefeweizen (øko)</div>
+        <div class="related-price">39,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/tjonge-jonge-witbier-fra-spike-brewery/">
+        <img src="https://cdn-main.ideal.shop/images/by_hash/c156bef509ee7d8e63ff61a6cba6eb392d5a56b20523f0b7d63c4f84af46e159/500-0/tjongejonge.jpg" alt="Tjonge Jonge · Witbier fra Spike Brewery" loading="lazy">
+        <div class="related-name">Tjonge Jonge · Witbier fra Spike Brewery</div>
+        <div class="related-price">40,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/lad-os-alle-hvede-hefeweizen-fra-flying-couch/">
+        <img src="https://cdn-main.ideal.shop/images/by_hash/5c506c2aba71e3ae75c7e8175f03f866213a9ec41cf333b9d5941cbdf073d913/500-0/ladosallehvede.jpg" alt="Lad os alle hvede - Hefeweizen fra Flying Couch" loading="lazy">
+        <div class="related-name">Lad os alle hvede - Hefeweizen fra Flying Couch</div>
+        <div class="related-price">40,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/krenkerup-weissbeer/">
+        <img src="https://www.vildmedvin.dk/img/1000/1000/resize/w/e/weiss_50.jpg" alt="Krenkerup, Weissbeer" loading="lazy">
+        <div class="related-name">Krenkerup, Weissbeer</div>
+        <div class="related-price">44,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/skoel-flottenhejmer-fruited-berliner-weisse/">
+        <img src="https://cdn.shopify.com/s/files/1/0402/1239/8243/files/Skol_Flottenhejmer.png?v=1753630602" alt="Skøl - Flottenhejmer - Fruited Berliner Weisse" loading="lazy">
+        <div class="related-name">Skøl - Flottenhejmer - Fruited Berliner Weisse</div>
+        <div class="related-price">45,75 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/schneider-weisse-aventinus-weizen-eisbock-tap-9-8211/">
+        <img src="https://www.bestofbeers.dk/wp-content/uploads/2017/09/eisbock.jpg" alt="Schneider Weisse, Aventinus Weizen Eisbock, Tap 9, &amp;#8211; &amp;#8211;" loading="lazy">
+        <div class="related-name">Schneider Weisse, Aventinus Weizen Eisbock, Tap 9, &amp;#8211; &amp;#8211;</div>
+        <div class="related-price">46,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/sol-over-sundet-hvedeoel-svendborgsund-bryghus/">
+        <img src="https://cdn.shopify.com/s/files/1/0600/9438/2263/files/IMG_1550.heic?v=1736852958" alt="Sol over Sundet - , , Hvedeøl - Svendborgsund Bryghus" loading="lazy">
+        <div class="related-name">Sol over Sundet - , , Hvedeøl - Svendborgsund Bryghus</div>
+        <div class="related-price">50,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/beershoppen-dk-joennes-favorit-hvedeoel-lille-holmgaard-bryghus/">
+        <img src="https://cdn.shopify.com/s/files/1/0600/9438/2263/files/IMG_3175.heic?v=1759147328" alt="Jønnes Favorit - , , Hvedeøl - Lille Holmgård Bryghus" loading="lazy">
+        <div class="related-name">Jønnes Favorit - , , Hvedeøl - Lille Holmgård Bryghus</div>
+        <div class="related-price">50,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/beershoppen-dk-svigerinden-witbier-lille-holmgaard-bryghus/">
+        <img src="https://cdn.shopify.com/s/files/1/0600/9438/2263/files/IMG_2746.heic?v=1754049092" alt="Svigerinden - , , Witbier - Lille Holmgård Bryghus" loading="lazy">
+        <div class="related-name">Svigerinden - , , Witbier - Lille Holmgård Bryghus</div>
+        <div class="related-price">50,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/rygr-brygghus-sure-linda/">
+        <img src="https://cdn.shopify.com/s/files/1/0776/5209/9400/files/819CBEE1-0121-4AA5-AF7C-C9B96F14286A.jpg?v=1780000261" alt="RYGR Brygghús - Sure Linda" loading="lazy">
+        <div class="related-name">RYGR Brygghús - Sure Linda</div>
+        <div class="related-price">50,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/fanoe-lynghvede/">
+        <img src="https://www.vildmedvin.dk/img/1000/1000/resize/9/8/98.jpg" alt="Fanø, Lynghvede" loading="lazy">
+        <div class="related-name">Fanø, Lynghvede</div>
+        <div class="related-price">52,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/parish-brewing-co-sips-pinot-noir-black-currant/">
+        <img src="https://cdn.shopify.com/s/files/1/0776/5209/9400/files/0C3BEF66-A065-429F-A3FC-A98144109898.jpg?v=1782391549" alt="Parish Brewing Co. - SIPS Pinot Noir &amp; Black Currant" loading="lazy">
+        <div class="related-name">Parish Brewing Co. - SIPS Pinot Noir &amp; Black Currant</div>
+        <div class="related-price">55,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/parish-brewing-co-sips-parish-sunrise/">
+        <img src="https://cdn.shopify.com/s/files/1/0776/5209/9400/files/BCAEC3FC-3E3C-4371-8300-4CEFF44843D9.jpg?v=1782391549" alt="Parish Brewing Co. - SIPS Parish Sunrise" loading="lazy">
+        <div class="related-name">Parish Brewing Co. - SIPS Parish Sunrise</div>
+        <div class="related-price">55,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/bierbrouwerij-de-koningshoeven-la-trappe-witte/">
+        <img src="https://cdn.shopify.com/s/files/1/0509/8477/9975/products/la-trappe-witte-5-5-75cl.png?v=1660124480" alt="La Trappe Witte" loading="lazy">
+        <div class="related-name">La Trappe Witte</div>
+        <div class="related-price">58,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/holy-goat-venom-hell/">
+        <img src="https://cdn.shopify.com/s/files/1/0776/5209/9400/files/D941F595-F292-45F7-BACC-2D864EB16AB3.jpg?v=1780482558" alt="Holy Goat - Venom Hell" loading="lazy">
+        <div class="related-name">Holy Goat - Venom Hell</div>
+        <div class="related-price">77,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/mont-blanc-la-blanche/">
+        <img src="https://www.vildmedvin.dk/img/1000/1000/resize/m/o/mont_blanc_la_blanche.jpg" alt="Mont Blanc La Blanche" loading="lazy">
+        <div class="related-name">Mont Blanc La Blanche</div>
+        <div class="related-price">78,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/root-branch-les-fleurs-du-mal/">
+        <img src="https://cdn.shopify.com/s/files/1/0368/1628/9924/files/les_fleurs_du_mal_b0192413-eed2-43e5-9b7b-db20fa65d14d.png?v=1747882728" alt="Root + Branch - Les Fleurs Du Mal" loading="lazy">
+        <div class="related-name">Root + Branch - Les Fleurs Du Mal</div>
+        <div class="related-price">88,00 kr</div>
+    </a></div></div>
+        <button class="related-toggle" onclick="this.previousElementSibling.querySelectorAll(&quot;.related-hidden&quot;).forEach(e=>e.style.display=&quot;block&quot;);this.style.display=&quot;none&quot;">Vis alle (41)</button>
     </div>
 
     <div class="disclaimer">
         📢 Affiliate disclosure: BeerSniffer kan modtage provision når du køber via vores links.
-        Priser opdateret 03.07.2026. Tjek altid den endelige pris hos forhandleren før køb.
+        Priser opdateret 07.07.2026. Tjek altid den endelige pris hos forhandleren før køb.
     </div>
 </div>
 

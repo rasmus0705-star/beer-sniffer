@@ -66,6 +66,9 @@ body { background: var(--bg); color: var(--text); font-family: 'DM Sans', sans-s
 .related-card img, .related-img-placeholder { width: 100%; height: 70px; object-fit: contain; background: var(--surface2); border-radius: 6px; margin-bottom: 0.4rem; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; }
 .related-name { font-size: 0.72rem; line-height: 1.3; margin-bottom: 0.2rem; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; min-height: 1.9em; }
 .related-price { font-size: 0.78rem; font-weight: 700; color: var(--gold-light); }
+.related-hidden { display: none; }
+.related-toggle { display: block; margin: 0.8rem auto 0; background: var(--surface2); border: 1px solid var(--border-light); border-radius: 999px; padding: 0.45rem 1.2rem; color: var(--gold); font-family: 'DM Sans', sans-serif; font-size: 0.78rem; cursor: pointer; transition: border-color 0.15s; }
+.related-toggle:hover { border-color: var(--gold); color: var(--gold-light); }
 .disclaimer { font-size: 0.72rem; color: var(--text-muted); margin-top: 2rem; line-height: 1.6; border-top: 1px solid var(--border); padding-top: 1rem; }
 .chart-section { margin: 1.5rem 0; background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 1rem 1.1rem; }
 .chart-heading { font-size: 0.7rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 0.7rem; }
@@ -132,9 +135,9 @@ body { background: var(--bg); color: var(--text); font-family: 'DM Sans', sans-s
 
     
     <div class="chart-section">
-        <div class="chart-heading">📈 Prisudvikling (2026-05-17 – 2026-07-03)</div>
+        <div class="chart-heading">📈 Prisudvikling (2026-05-17 – 2026-07-07)</div>
         <svg viewBox="0 0 320 90" class="price-chart" preserveAspectRatio="none">
-            <polyline points="8.0,64.8 15.2,64.8 22.5,40.4 29.7,40.4 37.0,8.0 44.2,64.8 51.4,64.8 58.7,64.8 65.9,40.4 73.1,64.8 80.4,64.8 87.6,40.4 94.9,40.4 102.1,64.8 109.3,64.8 116.6,64.8 123.8,64.8 131.0,82.0 138.3,40.4 145.5,64.8 152.8,40.4 160.0,64.8 167.2,40.4 174.5,64.8 181.7,64.8 189.0,40.4 196.2,64.8 203.4,64.8 210.7,40.4 217.9,64.8 225.1,40.4 232.4,64.8 239.6,64.8 246.9,40.4 254.1,64.8 261.3,40.4 268.6,64.8 275.8,64.8 283.0,64.8 290.3,64.8 297.5,64.8 304.8,64.8 312.0,64.8" fill="none" style="stroke: var(--gold); stroke-width: 2;" />
+            <polyline points="8.0,64.8 14.8,64.8 21.5,40.4 28.3,40.4 35.0,8.0 41.8,64.8 48.5,64.8 55.3,64.8 62.0,40.4 68.8,64.8 75.6,64.8 82.3,40.4 89.1,40.4 95.8,64.8 102.6,64.8 109.3,64.8 116.1,64.8 122.8,82.0 129.6,40.4 136.4,64.8 143.1,40.4 149.9,64.8 156.6,40.4 163.4,64.8 170.1,64.8 176.9,40.4 183.6,64.8 190.4,64.8 197.2,40.4 203.9,64.8 210.7,40.4 217.4,64.8 224.2,64.8 230.9,40.4 237.7,64.8 244.4,40.4 251.2,64.8 258.0,64.8 264.7,64.8 271.5,64.8 278.2,64.8 285.0,64.8 291.7,64.8 298.5,64.8 305.2,64.8 312.0,64.8" fill="none" style="stroke: var(--gold); stroke-width: 2;" />
             <circle cx="312.0" cy="64.8" r="3.5" style="fill: var(--gold-light);" />
         </svg>
         <div class="chart-range">
@@ -149,27 +152,28 @@ body { background: var(--bg); color: var(--text); font-family: 'DM Sans', sans-s
 
     <div class="related-section">
         <div class="related-heading">Flere øl fra Brouwerij De Halve Maan</div>
-        <div class="related-grid">
+        <div class="related-grid"><div class="related-item">
     <a class="related-card" href="https://www.beersniffer.dk/ol/brouwerij-de-halve-maan-straffe-hendrik-wild/">
         <img src="https://cdn.shopify.com/s/files/1/0509/8477/9975/files/straffe-hendrik-wild-2023-33cl_575af290-c87f-4c81-98c5-63793103e2a7.png?v=1739273242" alt="Straffe Hendrik Wild" loading="lazy">
         <div class="related-name">Straffe Hendrik Wild</div>
         <div class="related-price">40,00 kr</div>
-    </a>
+    </a></div><div class="related-item">
     <a class="related-card" href="https://www.beersniffer.dk/ol/brouwerij-de-halve-maan-straffe-hendrik-quadrupel/">
         <img src="https://cdn.shopify.com/s/files/1/0509/8477/9975/files/straffe-hendrik-quadrupel-33cl.png?v=1739273435" alt="Straffe Hendrik Quadrupel" loading="lazy">
         <div class="related-name">Straffe Hendrik Quadrupel</div>
         <div class="related-price">45,00 kr</div>
-    </a>
+    </a></div><div class="related-item">
     <a class="related-card" href="https://www.beersniffer.dk/ol/brouwerij-de-halve-maan-straffe-hendrik-brugs-tripel/">
         <img src="https://cdn.shopify.com/s/files/1/0509/8477/9975/files/straffe-hendrik-triple-75cl.png?v=1737797130" alt="Straffe Hendrik Brugs Tripel" loading="lazy">
         <div class="related-name">Straffe Hendrik Brugs Tripel</div>
         <div class="related-price">79,00 kr</div>
-    </a></div>
+    </a></div></div>
+        
     </div>
 
     <div class="disclaimer">
         📢 Affiliate disclosure: BeerSniffer kan modtage provision når du køber via vores links.
-        Priser opdateret 03.07.2026. Tjek altid den endelige pris hos forhandleren før køb.
+        Priser opdateret 07.07.2026. Tjek altid den endelige pris hos forhandleren før køb.
     </div>
 </div>
 

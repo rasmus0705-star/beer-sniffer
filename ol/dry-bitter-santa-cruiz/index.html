@@ -66,6 +66,9 @@ body { background: var(--bg); color: var(--text); font-family: 'DM Sans', sans-s
 .related-card img, .related-img-placeholder { width: 100%; height: 70px; object-fit: contain; background: var(--surface2); border-radius: 6px; margin-bottom: 0.4rem; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; }
 .related-name { font-size: 0.72rem; line-height: 1.3; margin-bottom: 0.2rem; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; min-height: 1.9em; }
 .related-price { font-size: 0.78rem; font-weight: 700; color: var(--gold-light); }
+.related-hidden { display: none; }
+.related-toggle { display: block; margin: 0.8rem auto 0; background: var(--surface2); border: 1px solid var(--border-light); border-radius: 999px; padding: 0.45rem 1.2rem; color: var(--gold); font-family: 'DM Sans', sans-serif; font-size: 0.78rem; cursor: pointer; transition: border-color 0.15s; }
+.related-toggle:hover { border-color: var(--gold); color: var(--gold-light); }
 .disclaimer { font-size: 0.72rem; color: var(--text-muted); margin-top: 2rem; line-height: 1.6; border-top: 1px solid var(--border); padding-top: 1rem; }
 .chart-section { margin: 1.5rem 0; background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 1rem 1.1rem; }
 .chart-heading { font-size: 0.7rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 0.7rem; }
@@ -138,42 +141,43 @@ body { background: var(--bg); color: var(--text); font-family: 'DM Sans', sans-s
 
     <div class="related-section">
         <div class="related-heading">Flere øl fra Dry &amp;amp; Bitter</div>
-        <div class="related-grid">
+        <div class="related-grid"><div class="related-item">
     <a class="related-card" href="https://www.beersniffer.dk/ol/dry-bitter-free-ride-alkoholfri-ipa/">
         <img src="https://cdn.shopify.com/s/files/1/0402/1239/8243/files/DryBitter_FreeRide.png?v=1780219840" alt="Dry &amp; Bitter - Free Ride - Alkoholfri IPA" loading="lazy">
         <div class="related-name">Dry &amp; Bitter - Free Ride - Alkoholfri IPA</div>
         <div class="related-price">39,95 kr</div>
-    </a>
+    </a></div><div class="related-item">
     <a class="related-card" href="https://www.beersniffer.dk/ol/dry-bitter-tyrian-quest/">
         <img src="https://www.vildmedvin.dk/img/1000/1000/resize/d/r/dry_bitter_tyrian_quest.jpg" alt="Dry &amp; Bitter, Tyrian Quest" loading="lazy">
         <div class="related-name">Dry &amp; Bitter, Tyrian Quest</div>
         <div class="related-price">51,00 kr</div>
-    </a>
+    </a></div><div class="related-item">
     <a class="related-card" href="https://www.beersniffer.dk/ol/dry-bitter-double-dippy-doo/">
         <img src="https://www.vildmedvin.dk/img/1000/1000/resize/d/r/dry_bitter_double_dippy_doo_d_se_.jpg" alt="Dry &amp; Bitter, Double Dippy Doo" loading="lazy">
         <div class="related-name">Dry &amp; Bitter, Double Dippy Doo</div>
         <div class="related-price">54,00 kr</div>
-    </a>
+    </a></div><div class="related-item">
     <a class="related-card" href="https://www.beersniffer.dk/ol/noche-buena-dry-bitter-2/">
         <img src="https://cdn.shopify.com/s/files/1/0600/9438/2263/files/Nochebuena.jpg?v=1764858959" alt="Noche Buena - Dry &amp; Bitter - -" loading="lazy">
         <div class="related-name">Noche Buena - Dry &amp; Bitter - -</div>
         <div class="related-price">55,00 kr</div>
-    </a>
+    </a></div><div class="related-item">
     <a class="related-card" href="https://www.beersniffer.dk/ol/dry-bitter-peach-bums/">
         <img src="https://www.vildmedvin.dk/img/1000/1000/resize/d/r/dry_bitter_peach_bums.jpg" alt="Dry &amp; Bitter, Peach Bums" loading="lazy">
         <div class="related-name">Dry &amp; Bitter, Peach Bums</div>
         <div class="related-price">57,00 kr</div>
-    </a>
+    </a></div><div class="related-item">
     <a class="related-card" href="https://www.beersniffer.dk/ol/dry-bitter-flowers-go-to-die/">
         <img src="https://www.vildmedvin.dk/img/1000/1000/resize/d/r/dry_bitter_flowers_go_to_die.jpg" alt="Dry &amp; Bitter, Flowers Go To Die" loading="lazy">
         <div class="related-name">Dry &amp; Bitter, Flowers Go To Die</div>
         <div class="related-price">59,00 kr</div>
-    </a></div>
+    </a></div></div>
+        
     </div>
 
     <div class="disclaimer">
         📢 Affiliate disclosure: BeerSniffer kan modtage provision når du køber via vores links.
-        Priser opdateret 03.07.2026. Tjek altid den endelige pris hos forhandleren før køb.
+        Priser opdateret 07.07.2026. Tjek altid den endelige pris hos forhandleren før køb.
     </div>
 </div>
 

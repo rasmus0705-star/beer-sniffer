@@ -66,6 +66,9 @@ body { background: var(--bg); color: var(--text); font-family: 'DM Sans', sans-s
 .related-card img, .related-img-placeholder { width: 100%; height: 70px; object-fit: contain; background: var(--surface2); border-radius: 6px; margin-bottom: 0.4rem; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; }
 .related-name { font-size: 0.72rem; line-height: 1.3; margin-bottom: 0.2rem; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; min-height: 1.9em; }
 .related-price { font-size: 0.78rem; font-weight: 700; color: var(--gold-light); }
+.related-hidden { display: none; }
+.related-toggle { display: block; margin: 0.8rem auto 0; background: var(--surface2); border: 1px solid var(--border-light); border-radius: 999px; padding: 0.45rem 1.2rem; color: var(--gold); font-family: 'DM Sans', sans-serif; font-size: 0.78rem; cursor: pointer; transition: border-color 0.15s; }
+.related-toggle:hover { border-color: var(--gold); color: var(--gold-light); }
 .disclaimer { font-size: 0.72rem; color: var(--text-muted); margin-top: 2rem; line-height: 1.6; border-top: 1px solid var(--border); padding-top: 1rem; }
 .chart-section { margin: 1.5rem 0; background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 1rem 1.1rem; }
 .chart-heading { font-size: 0.7rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 0.7rem; }
@@ -135,42 +138,163 @@ body { background: var(--bg); color: var(--text); font-family: 'DM Sans', sans-s
 
     <div class="related-section">
         <div class="related-heading">Flere øl fra Moersleutel Pastry Factory</div>
-        <div class="related-grid">
+        <div class="related-grid"><div class="related-item">
     <a class="related-card" href="https://www.beersniffer.dk/ol/syndikatet-elskerinden/">
         <img src="https://cdn.shopify.com/s/files/1/0509/8477/9975/products/elskerinden-10-0-33cl.png?v=1660118206" alt="Elskerinden" loading="lazy">
         <div class="related-name">Elskerinden</div>
         <div class="related-price">40,00 kr</div>
-    </a>
-    <a class="related-card" href="https://www.beersniffer.dk/ol/amundsen-brewery-dessert-in-a-can-passionfruit-creamsicle/">
-        <img src="https://cdn.shopify.com/s/files/1/0509/8477/9975/files/dessert-in-a-can-passionfruit-creamsicle-10-5-33cl.png?v=1770377260" alt="Dessert In A Can - Passionfruit Creamsicle" loading="lazy">
-        <div class="related-name">Dessert In A Can - Passionfruit Creamsicle</div>
-        <div class="related-price">45,00 kr</div>
-    </a>
-    <a class="related-card" href="https://www.beersniffer.dk/ol/amundsen-brewery-dessert-in-a-can-coconut-choc/">
-        <img src="https://cdn.shopify.com/s/files/1/0509/8477/9975/files/dessert-in-a-can-coconut-choc-chip-cookie-10-5-33cl.png?v=1754645962" alt="Dessert In A Can - Coconut Choc Chip Cookie" loading="lazy">
-        <div class="related-name">Dessert In A Can - Coconut Choc Chip Cookie</div>
-        <div class="related-price">45,00 kr</div>
-    </a>
+    </a></div><div class="related-item">
     <a class="related-card" href="https://www.beersniffer.dk/ol/vocation-brewery-naughty-nice/">
         <img src="https://cdn.shopify.com/s/files/1/0509/8477/9975/files/naughty-nice-5-9-44cl.png?v=1755262537" alt="Naughty &amp; Nice" loading="lazy">
         <div class="related-name">Naughty &amp; Nice</div>
         <div class="related-price">45,00 kr</div>
-    </a>
-    <a class="related-card" href="https://www.beersniffer.dk/ol/amundsen-brewery-dessert-in-a-can-pineapple-upsidedown/">
-        <img src="https://cdn.shopify.com/s/files/1/0509/8477/9975/files/dessert-in-a-can-pineapple-upsidedown-cake-10-5-33cl.png?v=1770389624" alt="Dessert In A Can - Pineapple Upsidedown Cake" loading="lazy">
-        <div class="related-name">Dessert In A Can - Pineapple Upsidedown Cake</div>
-        <div class="related-price">45,00 kr</div>
-    </a>
+    </a></div><div class="related-item">
     <a class="related-card" href="https://www.beersniffer.dk/ol/brouwerij-kees-pindakees-xl/">
         <img src="https://cdn.shopify.com/s/files/1/0509/8477/9975/files/pindakees-xl-10-5-33cl.png?v=1736082982" alt="Pindakees XL" loading="lazy">
         <div class="related-name">Pindakees XL</div>
         <div class="related-price">48,00 kr</div>
-    </a></div>
+    </a></div><div class="related-item">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/amundsen-brewery-dessert-in-a-can-passionfruit-creamsicle/">
+        <img src="https://cdn.shopify.com/s/files/1/0509/8477/9975/files/dessert-in-a-can-passionfruit-creamsicle-10-5-33cl.png?v=1770377260" alt="Dessert In A Can - Passionfruit Creamsicle" loading="lazy">
+        <div class="related-name">Dessert In A Can - Passionfruit Creamsicle</div>
+        <div class="related-price">50,00 kr</div>
+    </a></div><div class="related-item">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/amundsen-brewery-dessert-in-a-can-coconut-choc/">
+        <img src="https://cdn.shopify.com/s/files/1/0509/8477/9975/files/dessert-in-a-can-coconut-choc-chip-cookie-10-5-33cl.png?v=1754645962" alt="Dessert In A Can - Coconut Choc Chip Cookie" loading="lazy">
+        <div class="related-name">Dessert In A Can - Coconut Choc Chip Cookie</div>
+        <div class="related-price">50,00 kr</div>
+    </a></div><div class="related-item">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/amundsen-brewery-the-darkening/">
+        <img src="https://cdn.shopify.com/s/files/1/0509/8477/9975/files/the-darkening-12-44cl.png?v=1773997666" alt="The Darkening" loading="lazy">
+        <div class="related-name">The Darkening</div>
+        <div class="related-price">50,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/brouwerij-kees-ready-to-crumble/">
+        <img src="https://cdn.shopify.com/s/files/1/0509/8477/9975/files/ready-to-crumble-10-33cl.png?v=1772378102" alt="Ready To Crumble" loading="lazy">
+        <div class="related-name">Ready To Crumble</div>
+        <div class="related-price">50,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/amundsen-brewery-dessert-in-a-can-pineapple-upsidedown/">
+        <img src="https://cdn.shopify.com/s/files/1/0509/8477/9975/files/dessert-in-a-can-pineapple-upsidedown-cake-10-5-33cl.png?v=1770389624" alt="Dessert In A Can - Pineapple Upsidedown Cake" loading="lazy">
+        <div class="related-name">Dessert In A Can - Pineapple Upsidedown Cake</div>
+        <div class="related-price">50,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/vault-city-brewing-mini-choc-eggs/">
+        <img src="https://cdn.shopify.com/s/files/1/0509/8477/9975/files/mini-choc-eggs-6-44cl.png?v=1774003779" alt="Mini Choc Eggs" loading="lazy">
+        <div class="related-name">Mini Choc Eggs</div>
+        <div class="related-price">55,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/peels-like-heaven-imperialpastry-stout-fra-andersons/">
+        <img src="https://cdn-main.ideal.shop/images/by_hash/1a4544d83599cefb9448fe89696d7543bbb51b6fd8658c4bf0c91a88d5fc94eb/500-0/peelslikeheaven.jpg" alt="Peels Like Heaven - ImperialPastry Stout fra Anderson&#x27;s" loading="lazy">
+        <div class="related-name">Peels Like Heaven - ImperialPastry Stout fra Anderson&#x27;s</div>
+        <div class="related-price">55,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/emperors-brewery-executor/">
+        <img src="https://cdn.shopify.com/s/files/1/0509/8477/9975/files/executor-12-6-33cl.png?v=1782310889" alt="Executor" loading="lazy">
+        <div class="related-name">Executor</div>
+        <div class="related-price">56,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/emperors-brewery-hokey-religion/">
+        <img src="https://cdn.shopify.com/s/files/1/0509/8477/9975/files/hokey-religion-12-6-33cl.png?v=1782312207" alt="Hokey Religion" loading="lazy">
+        <div class="related-name">Hokey Religion</div>
+        <div class="related-price">59,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/amager-bryghus-worlds-best/">
+        <img src="https://cdn.shopify.com/s/files/1/0509/8477/9975/files/worlds-best-11-44cl_dffee0e2-b53d-4753-8743-e143a9ac6e09.png?v=1773473310" alt="World&#x27;s Best" loading="lazy">
+        <div class="related-name">World&#x27;s Best</div>
+        <div class="related-price">64,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/amager-bryghus-dubstep-in-dubai/">
+        <img src="https://cdn.shopify.com/s/files/1/0509/8477/9975/files/dubstep-in-dubai-11-44cl.png?v=1778844384" alt="Dubstep In Dubai" loading="lazy">
+        <div class="related-name">Dubstep In Dubai</div>
+        <div class="related-price">65,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/pecan-bliss-imperial-pastry-stout-fra-attik-brewing/">
+        <img src="https://cdn-main.ideal.shop/images/by_hash/ee3c264e7029017cbafe9636136b70eb2a857b35df7ca787cc1ecad56e8fbb0a/500-0/pecanbliss.jpg" alt="Pecan Bliss - Imperial Pastry Stout fra Attik Brewing" loading="lazy">
+        <div class="related-name">Pecan Bliss - Imperial Pastry Stout fra Attik Brewing</div>
+        <div class="related-price">65,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/abomination-midsomer-nights-snack/">
+        <img src="https://cdn.shopify.com/s/files/1/0368/1628/9924/files/abomination-midsomer-nights-snack.png?v=1778230054" alt="Abomination - Midsomer Night&#x27;s Snack" loading="lazy">
+        <div class="related-name">Abomination - Midsomer Night&#x27;s Snack</div>
+        <div class="related-price">69,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/moersleutel-craft-brewery-almond-ganache-bulldozer/">
+        <img src="https://cdn.shopify.com/s/files/1/0509/8477/9975/files/almond-ganache-bulldozer-11-44cl.png?v=1741522769" alt="Almond Ganache Bulldozer" loading="lazy">
+        <div class="related-name">Almond Ganache Bulldozer</div>
+        <div class="related-price">70,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/gold-standard-imperial-stout-fra-vault-city/">
+        <img src="https://cdn.shopify.com/s/files/1/0776/5209/9400/files/D8EFD862-E774-41AA-8209-31512F2AC1DC.jpg?v=1762293434" alt="Vault City - Gold Standard Pastry Stout" loading="lazy">
+        <div class="related-name">Vault City - Gold Standard Pastry Stout</div>
+        <div class="related-price">75,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/moersleutel-craft-brewery-pastry-factory-turbinado-cookie/">
+        <img src="https://cdn.shopify.com/s/files/1/0509/8477/9975/files/pastry-factory-turbinado-cookie-10-44cl.png?v=1778870835" alt="Pastry Factory: Turbinado Cookie" loading="lazy">
+        <div class="related-name">Pastry Factory: Turbinado Cookie</div>
+        <div class="related-price">80,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/funky-fluid-royal-cookie-makowiec/">
+        <img src="https://cdn.shopify.com/s/files/1/0776/5209/9400/files/926B4172-7D24-45FD-A179-BB83C9FA2467.jpg?v=1757006010" alt="Funky Fluid - Royal Cookie: Rocky Road Pastry Stout" loading="lazy">
+        <div class="related-name">Funky Fluid - Royal Cookie: Rocky Road Pastry Stout</div>
+        <div class="related-price">80,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/moersleutel-craft-brewery-pastry-factory-golden-syrup-bacon/">
+        <img src="https://cdn.shopify.com/s/files/1/0509/8477/9975/files/pastry-factory-golden-syrup-bacon-pancakes.png?v=1779289187" alt="Pastry Factory: Golden Syrup Bacon Pancakes" loading="lazy">
+        <div class="related-name">Pastry Factory: Golden Syrup Bacon Pancakes</div>
+        <div class="related-price">80,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/moersleutel-craft-brewery-pastry-factory-panna-cotta/">
+        <img src="https://cdn.shopify.com/s/files/1/0509/8477/9975/files/pastry-factory-panna-cotta-10-44cl.png?v=1778855959" alt="Pastry Factory: Panna Cotta" loading="lazy">
+        <div class="related-name">Pastry Factory: Panna Cotta</div>
+        <div class="related-price">80,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/brouwerij-frontaal-piece-of-cake-apple-crumble-pie/">
+        <img src="https://cdn.shopify.com/s/files/1/0509/8477/9975/files/piece-of-cake-apple-crumble-pie-10-5-33cl.png?v=1750594577" alt="Piece of Cake: Apple Crumble Pie" loading="lazy">
+        <div class="related-name">Piece of Cake: Apple Crumble Pie</div>
+        <div class="related-price">80,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/moersleutel-10-years-celebration-8211-drift-candybar-pastry/">
+        <img src="https://www.bestofbeers.dk/wp-content/uploads/2026/05/MoersleutelDrift.jpg" alt="Moersleutel – 10 Years Celebration &amp;#8211; Drift – Candybar Pastry Stout – –" loading="lazy">
+        <div class="related-name">Moersleutel – 10 Years Celebration &amp;#8211; Drift – Candybar Pastry Stout – –</div>
+        <div class="related-price">81,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/moersleutel-extravagant-nuts-038-honey-pastry-stout/">
+        <img src="https://www.bestofbeers.dk/wp-content/uploads/2026/01/MoersleutelExtravagant.jpg" alt="Moersleutel Extravagant – Nuts &amp;#038; Honey – Pastry Stout – –" loading="lazy">
+        <div class="related-name">Moersleutel Extravagant – Nuts &amp;#038; Honey – Pastry Stout – –</div>
+        <div class="related-price">81,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/moersleutel-10-years-celebration-inferno-mega-pastry-stout/">
+        <img src="https://www.bestofbeers.dk/wp-content/uploads/2026/06/MoersleutelInferno.jpg" alt="Moersleutel – 10 Years Celebration – Inferno – Mega Pastry Stout Mocha Almond Vanilla – –" loading="lazy">
+        <div class="related-name">Moersleutel – 10 Years Celebration – Inferno – Mega Pastry Stout Mocha Almond Vanilla – –</div>
+        <div class="related-price">86,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/moersleutel-craft-brewery-pastry-factory-pistachio-gelato/">
+        <img src="https://cdn.shopify.com/s/files/1/0509/8477/9975/files/pastry-factory-pistachio-gelato-10-44cl.png?v=1778869815" alt="Pastry Factory: Pistachio Gelato" loading="lazy">
+        <div class="related-name">Pastry Factory: Pistachio Gelato</div>
+        <div class="related-price">87,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/moersleutel-craft-brewery-pastry-factory-vanilla-glazed-eclair/">
+        <img src="https://cdn.shopify.com/s/files/1/0509/8477/9975/files/pastry-factory-vanilla-glazed-clair-10-44cl.png?v=1778871595" alt="Pastry Factory: Vanilla Glazed Éclair" loading="lazy">
+        <div class="related-name">Pastry Factory: Vanilla Glazed Éclair</div>
+        <div class="related-price">90,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/factory-brewing-lady-cupcake-10-imperial-pastry-stout/">
+        <img src="https://www.bestofbeers.dk/wp-content/uploads/2026/01/FactoryBrewingLadyCupcake10.jpg" alt="Factory Brewing – Lady Cupcake #10 – Imperial Pastry Stout Cocoa Nibs, Vanilla &amp;#038; Caramel – –" loading="lazy">
+        <div class="related-name">Factory Brewing – Lady Cupcake #10 – Imperial Pastry Stout Cocoa Nibs, Vanilla &amp;#038; Caramel – –</div>
+        <div class="related-price">101,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/omnipollo-x-trillium-kanelbullar-ba-pastry-stout/">
+        <img src="https://cdn.shopify.com/s/files/1/0776/5209/9400/files/FE8AD6CD-2633-4D32-810A-FB7950803274.jpg?v=1761858881" alt="Omnipollo x Trillium - Kanelbullar BA Pastry Stout" loading="lazy">
+        <div class="related-name">Omnipollo x Trillium - Kanelbullar BA Pastry Stout</div>
+        <div class="related-price">140,00 kr</div>
+    </a></div></div>
+        <button class="related-toggle" onclick="this.previousElementSibling.querySelectorAll(&quot;.related-hidden&quot;).forEach(e=>e.style.display=&quot;block&quot;);this.style.display=&quot;none&quot;">Vis alle (30)</button>
     </div>
 
     <div class="disclaimer">
         📢 Affiliate disclosure: BeerSniffer kan modtage provision når du køber via vores links.
-        Priser opdateret 03.07.2026. Tjek altid den endelige pris hos forhandleren før køb.
+        Priser opdateret 07.07.2026. Tjek altid den endelige pris hos forhandleren før køb.
     </div>
 </div>
 

@@ -66,6 +66,9 @@ body { background: var(--bg); color: var(--text); font-family: 'DM Sans', sans-s
 .related-card img, .related-img-placeholder { width: 100%; height: 70px; object-fit: contain; background: var(--surface2); border-radius: 6px; margin-bottom: 0.4rem; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; }
 .related-name { font-size: 0.72rem; line-height: 1.3; margin-bottom: 0.2rem; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; min-height: 1.9em; }
 .related-price { font-size: 0.78rem; font-weight: 700; color: var(--gold-light); }
+.related-hidden { display: none; }
+.related-toggle { display: block; margin: 0.8rem auto 0; background: var(--surface2); border: 1px solid var(--border-light); border-radius: 999px; padding: 0.45rem 1.2rem; color: var(--gold); font-family: 'DM Sans', sans-serif; font-size: 0.78rem; cursor: pointer; transition: border-color 0.15s; }
+.related-toggle:hover { border-color: var(--gold); color: var(--gold-light); }
 .disclaimer { font-size: 0.72rem; color: var(--text-muted); margin-top: 2rem; line-height: 1.6; border-top: 1px solid var(--border); padding-top: 1rem; }
 .chart-section { margin: 1.5rem 0; background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 1rem 1.1rem; }
 .chart-heading { font-size: 0.7rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 0.7rem; }
@@ -135,42 +138,38 @@ body { background: var(--bg); color: var(--text); font-family: 'DM Sans', sans-s
 
     <div class="related-section">
         <div class="related-heading">Flere øl fra Moersleutel</div>
-        <div class="related-grid">
-    <a class="related-card" href="https://www.beersniffer.dk/ol/9-years-celebration-moersleutel/">
-        <img src="https://cdn.shopify.com/s/files/1/0600/9438/2263/files/9yarscelebration.jpg?v=1768318770" alt="9 years celebration - Moersleutel - -" loading="lazy">
-        <div class="related-name">9 years celebration - Moersleutel - -</div>
-        <div class="related-price">68,00 kr</div>
-    </a>
+        <div class="related-grid"><div class="related-item">
     <a class="related-card" href="https://www.beersniffer.dk/ol/moersleutel-breakout-10th-anniversary/">
         <img src="https://cdn.shopify.com/s/files/1/0776/5209/9400/files/7B7B7B76-9506-4BAC-96CF-D7A84D5B77E9.jpg?v=1779043997" alt="Moersleutel - Breakout 10th anniversary" loading="lazy">
         <div class="related-name">Moersleutel - Breakout 10th anniversary</div>
         <div class="related-price">72,00 kr</div>
-    </a>
+    </a></div><div class="related-item">
     <a class="related-card" href="https://www.beersniffer.dk/ol/moersleutel-10-years-celebration-8211-drift-candybar-pastry/">
         <img src="https://www.bestofbeers.dk/wp-content/uploads/2026/05/MoersleutelDrift.jpg" alt="Moersleutel – 10 Years Celebration &amp;#8211; Drift – Candybar Pastry Stout – –" loading="lazy">
         <div class="related-name">Moersleutel – 10 Years Celebration &amp;#8211; Drift – Candybar Pastry Stout – –</div>
         <div class="related-price">81,00 kr</div>
-    </a>
+    </a></div><div class="related-item">
     <a class="related-card" href="https://www.beersniffer.dk/ol/moersleutel-10-years-celebration-inferno-mega-pastry-stout/">
         <img src="https://www.bestofbeers.dk/wp-content/uploads/2026/06/MoersleutelInferno.jpg" alt="Moersleutel – 10 Years Celebration – Inferno – Mega Pastry Stout Mocha Almond Vanilla – –" loading="lazy">
         <div class="related-name">Moersleutel – 10 Years Celebration – Inferno – Mega Pastry Stout Mocha Almond Vanilla – –</div>
         <div class="related-price">86,00 kr</div>
-    </a>
+    </a></div><div class="related-item">
     <a class="related-card" href="https://www.beersniffer.dk/ol/moersleutel-barcode-silver-aquamarine/">
         <img src="https://cdn.shopify.com/s/files/1/0776/5209/9400/files/39481F5C-65FB-4706-A973-795B574E64D7.jpg?v=1776792315" alt="Moersleutel - Barcode Silver Aquamarine" loading="lazy">
         <div class="related-name">Moersleutel - Barcode Silver Aquamarine</div>
         <div class="related-price">129,00 kr</div>
-    </a>
+    </a></div><div class="related-item">
     <a class="related-card" href="https://www.beersniffer.dk/ol/moersleutel-10-years-celebration-8211-arrival-mega-adjunct/">
         <img src="https://www.bestofbeers.dk/wp-content/uploads/2026/05/MoersleutelArrival.jpg" alt="Moersleutel – 10 Years Celebration &amp;#8211; Arrival – Mega Adjunct BA Stout – –" loading="lazy">
         <div class="related-name">Moersleutel – 10 Years Celebration &amp;#8211; Arrival – Mega Adjunct BA Stout – –</div>
         <div class="related-price">131,00 kr</div>
-    </a></div>
+    </a></div></div>
+        
     </div>
 
     <div class="disclaimer">
         📢 Affiliate disclosure: BeerSniffer kan modtage provision når du køber via vores links.
-        Priser opdateret 03.07.2026. Tjek altid den endelige pris hos forhandleren før køb.
+        Priser opdateret 07.07.2026. Tjek altid den endelige pris hos forhandleren før køb.
     </div>
 </div>
 

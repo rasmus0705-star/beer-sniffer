@@ -66,6 +66,9 @@ body { background: var(--bg); color: var(--text); font-family: 'DM Sans', sans-s
 .related-card img, .related-img-placeholder { width: 100%; height: 70px; object-fit: contain; background: var(--surface2); border-radius: 6px; margin-bottom: 0.4rem; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; }
 .related-name { font-size: 0.72rem; line-height: 1.3; margin-bottom: 0.2rem; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; min-height: 1.9em; }
 .related-price { font-size: 0.78rem; font-weight: 700; color: var(--gold-light); }
+.related-hidden { display: none; }
+.related-toggle { display: block; margin: 0.8rem auto 0; background: var(--surface2); border: 1px solid var(--border-light); border-radius: 999px; padding: 0.45rem 1.2rem; color: var(--gold); font-family: 'DM Sans', sans-serif; font-size: 0.78rem; cursor: pointer; transition: border-color 0.15s; }
+.related-toggle:hover { border-color: var(--gold); color: var(--gold-light); }
 .disclaimer { font-size: 0.72rem; color: var(--text-muted); margin-top: 2rem; line-height: 1.6; border-top: 1px solid var(--border); padding-top: 1rem; }
 .chart-section { margin: 1.5rem 0; background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 1rem 1.1rem; }
 .chart-heading { font-size: 0.7rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 0.7rem; }
@@ -135,42 +138,548 @@ body { background: var(--bg); color: var(--text); font-family: 'DM Sans', sans-s
 
     <div class="related-section">
         <div class="related-heading">Flere øl fra Polly´s Brew</div>
-        <div class="related-grid">
+        <div class="related-grid"><div class="related-item">
     <a class="related-card" href="https://www.beersniffer.dk/ol/grumpy-christmas-double-ipa-fra-stepping-stone/">
         <img src="https://cdn-main.ideal.shop/images/by_hash/bb9431d5ccb62a24cd5baafef71f2c155c010f4966c351097cc55d787eee277f/500-0/GrumpyChristmas.jpg" alt="Grumpy Christmas - Double IPA fra Stepping Stone" loading="lazy">
         <div class="related-name">Grumpy Christmas - Double IPA fra Stepping Stone</div>
         <div class="related-price">30,00 kr</div>
-    </a>
+    </a></div><div class="related-item">
     <a class="related-card" href="https://www.beersniffer.dk/ol/la-luna-double-ipa-fra-sanfrutos/">
         <img src="https://cdn-main.ideal.shop/images/by_hash/440096b3e5291c37881820a97eb4faee61a2731ef27f77c183e4b7b569059ef2/500-0/laluna.jpg" alt="La Luna · Double IPA fra SanFrutos" loading="lazy">
         <div class="related-name">La Luna · Double IPA fra SanFrutos</div>
         <div class="related-price">30,00 kr</div>
-    </a>
+    </a></div><div class="related-item">
     <a class="related-card" href="https://www.beersniffer.dk/ol/oharas-double-ipa-2/">
         <img src="https://www.vildmedvin.dk/img/1000/1000/resize/o/h/ohara_s_double_ipa.jpg" alt="Ohara&#x27;s, Double IPA" loading="lazy">
         <div class="related-name">Ohara&#x27;s, Double IPA</div>
         <div class="related-price">31,00 kr</div>
-    </a>
+    </a></div><div class="related-item">
     <a class="related-card" href="https://www.beersniffer.dk/ol/double-ipa-oharas/">
         <img src="https://cdn.shopify.com/s/files/1/0600/9438/2263/files/ohara.jpg?v=1773316270" alt="Double IPA - O&#x27;Haras -" loading="lazy">
         <div class="related-name">Double IPA - O&#x27;Haras -</div>
         <div class="related-price">35,00 kr</div>
-    </a>
+    </a></div><div class="related-item">
     <a class="related-card" href="https://www.beersniffer.dk/ol/the-bitter-endeavour-west-coast-double-ipa-fra/">
         <img src="https://cdn-main.ideal.shop/images/by_hash/4a17d3564e367cf9f96499e9aeac14089b2b8a7c70fa69a8d3cf0253b2252c41/500-0/the-bitter-endeavour.jpg" alt="The Bitter Endeavour - West Coast Double IPA fra Hopalaa" loading="lazy">
         <div class="related-name">The Bitter Endeavour - West Coast Double IPA fra Hopalaa</div>
         <div class="related-price">40,00 kr</div>
-    </a>
-    <a class="related-card" href="https://www.beersniffer.dk/ol/to-oel-dipa-84/">
+    </a></div><div class="related-item">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/to-oel-dipa-99/">
         <img src="https://www.vildmedvin.dk/img/1000/1000/resize/7/7/7777_1..jpg" alt="To Øl, #DIPA" loading="lazy">
         <div class="related-name">To Øl, #DIPA</div>
         <div class="related-price">45,00 kr</div>
-    </a></div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/browar-stu-mostow-new-england-dipa-alkoholfri-double/">
+        <img src="https://cdn.shopify.com/s/files/1/0402/1239/8243/files/BrowarStuMostow_NewDIPA.png?v=1771886541" alt="Browar Stu Mostow - New England DIPA - Alkoholfri Double IPA" loading="lazy">
+        <div class="related-name">Browar Stu Mostow - New England DIPA - Alkoholfri Double IPA</div>
+        <div class="related-price">45,75 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/brewery-de-meester-master-hazy-double-ipa-01/">
+        <img src="https://cdn.shopify.com/s/files/1/0509/8477/9975/files/master-hazy-double-ipa-01-8-5-33cl.png?v=1774962363" alt="Master Hazy Double IPA #01" loading="lazy">
+        <div class="related-name">Master Hazy Double IPA #01</div>
+        <div class="related-price">47,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/dr-jones-senior-double-ipa-fra-andersons/">
+        <img src="https://cdn-main.ideal.shop/images/by_hash/7a96181752e2a5272e298f84dba0a06ec913c47c290af81dfd2b586b811ce6b7/500-0/DrJones-Senior.jpg" alt="Dr. Jones Senior - Double IPA fra Anderson&#x27;s" loading="lazy">
+        <div class="related-name">Dr. Jones Senior - Double IPA fra Anderson&#x27;s</div>
+        <div class="related-price">48,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/zion-double-ipa-fra-rec-brew-rockmill/">
+        <img src="https://cdn-main.ideal.shop/images/by_hash/d0dee04d207031985925d0c161544147a002931b77ccea2b88e6a2044e2403d7/500-0/zion.jpg" alt="Zion - Double IPA fra Rec Brew &amp; Rockmill" loading="lazy">
+        <div class="related-name">Zion - Double IPA fra Rec Brew &amp; Rockmill</div>
+        <div class="related-price">48,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/pipeworks-devil-firefish/">
+        <img src="https://cdn.shopify.com/s/files/1/0551/6600/9423/files/80258523-0ECF-4AEC-97B2-6D1E4040DF73.jpg?v=1772190077" alt="Pipeworks - Devil Firefish" loading="lazy">
+        <div class="related-name">Pipeworks - Devil Firefish</div>
+        <div class="related-price">49,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/outer-range-pillow-stacks/">
+        <img src="https://cdn.shopify.com/s/files/1/0551/6600/9423/files/1647F79D-25C7-42BC-8C1F-35DE2DDA7BB3.jpg?v=1776022545" alt="Outer Range - Pillow Stacks" loading="lazy">
+        <div class="related-name">Outer Range - Pillow Stacks</div>
+        <div class="related-price">49,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/garage-beer-co-soup-dipa/">
+        <img src="https://cdn.shopify.com/s/files/1/0776/5209/9400/files/E256879C-C72C-4E2E-8A10-B9ED9888AEAE.jpg?v=1777791369" alt="Garage Beer Co. - Soup DIPA" loading="lazy">
+        <div class="related-name">Garage Beer Co. - Soup DIPA</div>
+        <div class="related-price">49,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/midtfyns-double-ipa/">
+        <img src="https://www.vildmedvin.dk/img/1000/1000/resize/t/e/tegnebr_t-3clasic.jpg" alt="Midtfyns, Double IPA" loading="lazy">
+        <div class="related-name">Midtfyns, Double IPA</div>
+        <div class="related-price">49,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/gamma-big-doink-double-ipa/">
+        <img src="https://cdn.shopify.com/s/files/1/0402/1239/8243/files/Gamma_BigDoink_7df7895b-5295-4541-ac45-18e8bac05247.png?v=1686228102" alt="Gamma - Big Doink - Double IPA" loading="lazy">
+        <div class="related-name">Gamma - Big Doink - Double IPA</div>
+        <div class="related-price">49,75 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/undercover-safehouse-double-ipa/">
+        <img src="https://cdn.shopify.com/s/files/1/0402/1239/8243/files/UndercoverBrewing_Safehouse.png?v=1756067990" alt="Undercover - Safehouse - Double IPA" loading="lazy">
+        <div class="related-name">Undercover - Safehouse - Double IPA</div>
+        <div class="related-price">49,75 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/vitosha-double-ipa-fra-puhaste/">
+        <img src="https://cdn-main.ideal.shop/images/by_hash/97ad57a05a700ff1bce52b58a3afa0fea41d4f971401fd0e277c43a4de842d9e/500-0/VITOSHA.jpg" alt="VITOSHA - Double IPA fra Pühaste" loading="lazy">
+        <div class="related-name">VITOSHA - Double IPA fra Pühaste</div>
+        <div class="related-price">50,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/fermenting-frank-double-ipa-two-chefs/">
+        <img src="https://cdn-main.ideal.shop/images/by_hash/32c10bd9bee64d6f52e07ce43c38553714929e898cd43cc30ed447e1ed5499a9/500-0/fermantingfrank.jpg" alt="Fermenting Frank - Double IPA · Two Chefs" loading="lazy">
+        <div class="related-name">Fermenting Frank - Double IPA · Two Chefs</div>
+        <div class="related-price">50,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/sudden-death-luna-mortua-double-ipa/">
+        <img src="https://cdn.shopify.com/s/files/1/0402/1239/8243/files/SuddenDeath_LunaMortua.png?v=1778478239" alt="Sudden Death - Luna Mortua - Double IPA" loading="lazy">
+        <div class="related-name">Sudden Death - Luna Mortua - Double IPA</div>
+        <div class="related-price">53,17 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/elmeleven-solar-science-double-ipa/">
+        <img src="https://cdn.shopify.com/s/files/1/0402/1239/8243/files/Elmeleven_ShellOfLight.png?v=1781470404" alt="Elmeleven - Shell of Light - Double IPA" loading="lazy">
+        <div class="related-name">Elmeleven - Shell of Light - Double IPA</div>
+        <div class="related-price">53,17 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/sudden-death-brewing-my-first-and-last-dip/">
+        <img src="https://cdn.shopify.com/s/files/1/0402/1239/8243/files/SuddenDeath_FirstLastDip.png?v=1778477617" alt="Sudden Death - My First And Last Dip - Double IPA" loading="lazy">
+        <div class="related-name">Sudden Death - My First And Last Dip - Double IPA</div>
+        <div class="related-price">53,17 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/underwood-brewery-negroni-dipa-double-ipa/">
+        <img src="https://www.bestofbeers.dk/wp-content/uploads/2026/05/UnderwoodbreweryNegroni.jpg" alt="Underwood Brewery – Negroni DIPA – Double IPA – –" loading="lazy">
+        <div class="related-name">Underwood Brewery – Negroni DIPA – Double IPA – –</div>
+        <div class="related-price">54,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/brouwerij-kees-barrel-project-2026-double-ipa/">
+        <img src="https://cdn.shopify.com/s/files/1/0509/8477/9975/files/barrel-project-2026-double-ipa-8-33cl.png?v=1774964026" alt="Barrel Project 2026 Double IPA" loading="lazy">
+        <div class="related-name">Barrel Project 2026 Double IPA</div>
+        <div class="related-price">55,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/basqueland-aiako-harria-penas-de-aia-verdant-collab/">
+        <img src="https://cdn.shopify.com/s/files/1/0551/6600/9423/files/1F806224-27E0-4D13-B927-E5088FAE5382.jpg?v=1777995392" alt="Basqueland - Aiako Harria / Peñas De Aia (Verdant Collab)" loading="lazy">
+        <div class="related-name">Basqueland - Aiako Harria / Peñas De Aia (Verdant Collab)</div>
+        <div class="related-price">55,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/alefarm-sequoia/">
+        <img src="https://www.vildmedvin.dk/img/1000/1000/resize/7/6/7654_1.jpg" alt="Alefarm, Sequoia" loading="lazy">
+        <div class="related-name">Alefarm, Sequoia</div>
+        <div class="related-price">55,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/sudden-death-virus-detected-new-england-double-ipa/">
+        <img src="https://cdn.shopify.com/s/files/1/0402/1239/8243/files/SuddenDeath_Virus.png?v=1765212063" alt="Sudden Death - Virus Detected - New England Double IPA" loading="lazy">
+        <div class="related-name">Sudden Death - Virus Detected - New England Double IPA</div>
+        <div class="related-price">55,75 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/fermenterarna-rare-double-ipa/">
+        <img src="https://cdn.shopify.com/s/files/1/0402/1239/8243/files/Fermenterarna_Rare.png?v=1780219381" alt="Fermenterarna - Rare - Double IPA" loading="lazy">
+        <div class="related-name">Fermenterarna - Rare - Double IPA</div>
+        <div class="related-price">55,75 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/fermenterarna-golden-buzz-double-ipa/">
+        <img src="https://cdn.shopify.com/s/files/1/0402/1239/8243/files/Fermenterarna_GoldenBuzz.png?v=1779783638" alt="Fermenterarna - Golden Buzz - Double IPA" loading="lazy">
+        <div class="related-name">Fermenterarna - Golden Buzz - Double IPA</div>
+        <div class="related-price">55,75 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/sudden-death-x-bad-seed-illegal-cargo-double/">
+        <img src="https://cdn.shopify.com/s/files/1/0402/1239/8243/files/SuddenDeath_IllegalCargo.png?v=1778477357" alt="Sudden Death x Bad Seed - Illegal Cargo - Double IPA" loading="lazy">
+        <div class="related-name">Sudden Death x Bad Seed - Illegal Cargo - Double IPA</div>
+        <div class="related-price">55,75 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/p-hjala-p-hja-konn-double-ipa/">
+        <img src="https://cdn.shopify.com/s/files/1/0402/1239/8243/files/Pohjala_PohjaKonn.png?v=1776218490" alt="Põhjala - Põhja Konn - Double IPA" loading="lazy">
+        <div class="related-name">Põhjala - Põhja Konn - Double IPA</div>
+        <div class="related-price">55,75 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/jopen-intergalactic-collission-double-ipa/">
+        <img src="https://cdn.shopify.com/s/files/1/0402/1239/8243/files/Jopen_Intergalactic.png?v=1776186619" alt="Jopen - Intergalactic Collission - Double IPA" loading="lazy">
+        <div class="related-name">Jopen - Intergalactic Collission - Double IPA</div>
+        <div class="related-price">55,75 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/stigbergets-bigger-bolder-double-ipa/">
+        <img src="https://cdn.shopify.com/s/files/1/0402/1239/8243/files/Stigbergets_BiggerBolder.png?v=1761482645" alt="Stigbergets - BIGGER! BOLDER! - Double IPA" loading="lazy">
+        <div class="related-name">Stigbergets - BIGGER! BOLDER! - Double IPA</div>
+        <div class="related-price">55,75 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/fat-orange-cat-beer-co-chonkey-cat/">
+        <img src="https://cdn.shopify.com/s/files/1/0776/5209/9400/files/0D5FFC3D-ED34-41C4-B007-4A41AB64B4BC.jpg?v=1782939974" alt="Fat Orange Cat Beer Co. - Chonkey Cat" loading="lazy">
+        <div class="related-name">Fat Orange Cat Beer Co. - Chonkey Cat</div>
+        <div class="related-price">56,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/oharas-double-ipa/">
+        <img src="https://www.vildmedvin.dk/img/1000/1000/resize/o/h/oharas_double_ipa_vmv.jpg" alt="Ohara&#x27;s, Double IPA" loading="lazy">
+        <div class="related-name">Ohara&#x27;s, Double IPA</div>
+        <div class="related-price">58,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/rpus-tdh-nectaron-x-superdelic-x-mosaic-dipa/">
+        <img src="https://cdn.shopify.com/s/files/1/0402/1239/8243/files/Arpus_TDHNectarron.png?v=1781471031" alt="Ārpus - TDH Nectaron x Superdelic x Mosaic DIPA - Double IPA" loading="lazy">
+        <div class="related-name">Ārpus - TDH Nectaron x Superdelic x Mosaic DIPA - Double IPA</div>
+        <div class="related-price">59,75 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/rpus-tdh-hand-selected-riwaka-dipa-double-ipa/">
+        <img src="https://cdn.shopify.com/s/files/1/0402/1239/8243/files/Arpus_TDHHandSelectedRiwaka.png?v=1779780716" alt="Ārpus - TDH Hand-Selected Riwaka DIPA - Double IPA" loading="lazy">
+        <div class="related-name">Ārpus - TDH Hand-Selected Riwaka DIPA - Double IPA</div>
+        <div class="related-price">59,75 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/gross-grosszilla-double-ipa/">
+        <img src="https://cdn.shopify.com/s/files/1/0402/1239/8243/files/Gross_Grosszilla.png?v=1779258253" alt="Gross - Grosszilla - Double IPA" loading="lazy">
+        <div class="related-name">Gross - Grosszilla - Double IPA</div>
+        <div class="related-price">59,75 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/gross-meme-dealer-west-coast-double-ipa/">
+        <img src="https://cdn.shopify.com/s/files/1/0402/1239/8243/files/Gross_MemeDealer.png?v=1779261257" alt="Gross - Meme Dealer - West Coast Double IPA" loading="lazy">
+        <div class="related-name">Gross - Meme Dealer - West Coast Double IPA</div>
+        <div class="related-price">59,75 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/fraugruber-surrender-my-love-double-ipa/">
+        <img src="https://cdn.shopify.com/s/files/1/0402/1239/8243/files/FrauGruber_SurrenderMyLove.png?v=1773652844" alt="FrauGruber - Surrender My Love - Double IPA" loading="lazy">
+        <div class="related-name">FrauGruber - Surrender My Love - Double IPA</div>
+        <div class="related-price">59,75 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/fraugruber-relax-your-mind-double-ipa/">
+        <img src="https://cdn.shopify.com/s/files/1/0402/1239/8243/files/FrauGruber_RelaxYourMind.png?v=1773650658" alt="FrauGruber - Relax Your Mind - Double IPA" loading="lazy">
+        <div class="related-name">FrauGruber - Relax Your Mind - Double IPA</div>
+        <div class="related-price">59,75 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/funky-fluid-brewery-final-eight-holland-oranje-double/">
+        <img src="https://www.bestofbeers.dk/wp-content/uploads/2026/05/FunkyFluidHolland.jpg" alt="Funky Fluid Brewery – Final Eight Holland Oranje – Double IPA – –" loading="lazy">
+        <div class="related-name">Funky Fluid Brewery – Final Eight Holland Oranje – Double IPA – –</div>
+        <div class="related-price">61,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/stepping-stone-brewing-co-the-great-reset-double/">
+        <img src="https://www.bestofbeers.dk/wp-content/uploads/2026/04/SteppingStoneTheGreatResetDIPA2026.jpg" alt="Stepping Stone Brewing Co. – The Great Reset – Double IPA 2026 Edition – –" loading="lazy">
+        <div class="related-name">Stepping Stone Brewing Co. – The Great Reset – Double IPA 2026 Edition – –</div>
+        <div class="related-price">61,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/gamma-bad-doink-bad-seed-collab/">
+        <img src="https://cdn.shopify.com/s/files/1/0551/6600/9423/files/4D5E681B-7542-4724-A65D-23ED284DC627.jpg?v=1777616102" alt="Gamma - Bad Doink (Bad Seed Collab)" loading="lazy">
+        <div class="related-name">Gamma - Bad Doink (Bad Seed Collab)</div>
+        <div class="related-price">62,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/salikatt-feedwater-westum-collab/">
+        <img src="https://cdn.shopify.com/s/files/1/0551/6600/9423/files/C49F9540-1E41-4AA2-8B65-C4B71F756659.jpg?v=1782128453" alt="Salikatt - Feedwater (Westum Collab)" loading="lazy">
+        <div class="related-name">Salikatt - Feedwater (Westum Collab)</div>
+        <div class="related-price">64,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/salikatt-pocket-pair/">
+        <img src="https://cdn.shopify.com/s/files/1/0551/6600/9423/files/5EB4F8EC-A6FD-469C-A155-8EAE0AB14CAC.jpg?v=1782128453" alt="Salikatt - Pocket Pair" loading="lazy">
+        <div class="related-name">Salikatt - Pocket Pair</div>
+        <div class="related-price">64,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/double-hyper-double-ipa-fra-blackout-brewing/">
+        <img src="https://cdn-main.ideal.shop/images/by_hash/e15e84619db5a34224b19022cc0d9dbb95cd06d65e738e80c7f5ab78cd40bea0/500-0/DoubleHyper.jpg" alt="Double Hyper - Double IPA fra Blackout Brewing" loading="lazy">
+        <div class="related-name">Double Hyper - Double IPA fra Blackout Brewing</div>
+        <div class="related-price">65,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/retrouvailles-qdh-double-ipa-fra-hopalaa/">
+        <img src="https://cdn-main.ideal.shop/images/by_hash/73b68fa2dda2d0b3e57da69d6d8049ec4d388811bb8eba65898558f54753bd9e/500-0/Retrouvailles.jpg" alt="Retrouvailles - QDH Double IPA fra Hopalaa" loading="lazy">
+        <div class="related-name">Retrouvailles - QDH Double IPA fra Hopalaa</div>
+        <div class="related-price">65,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/goliath-double-ipa-fra-hopalaa/">
+        <img src="https://cdn-main.ideal.shop/images/by_hash/ae0ce55d2187b759a665801cb72b3b0b51f5bbcc972613cc14596a2ce0d73b27/500-0/goliath.jpg" alt="Goliath - Double IPA fra Hopalaa" loading="lazy">
+        <div class="related-name">Goliath - Double IPA fra Hopalaa</div>
+        <div class="related-price">65,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/forbidden-fruit-double-ipa-fra-nurme/">
+        <img src="https://cdn-main.ideal.shop/images/by_hash/80b6b442f786b68309a4407540117217e42277f5720ec05638f401a3b40b5b2a/500-0/forbiddenfruit.jpg" alt="Forbidden Fruit - Double IPA fra Nurme" loading="lazy">
+        <div class="related-name">Forbidden Fruit - Double IPA fra Nurme</div>
+        <div class="related-price">65,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/cogs-double-ipa-fra-saro/">
+        <img src="https://cdn-main.ideal.shop/images/by_hash/22be88436b2dcacead6f8e02a4172d5f605b9300ca894001f073300ddd2c3581/500-0/cogs.jpg" alt="Cogs - Double IPA fra SARO" loading="lazy">
+        <div class="related-name">Cogs - Double IPA fra SARO</div>
+        <div class="related-price">65,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/ghetto-bird-double-ipa-fra-spike/">
+        <img src="https://cdn-main.ideal.shop/images/by_hash/c173e9eb9b2e4585d2ced2f7940c447836eec9e2dc02e2a06ed56c868ffc99fe/500-0/ghettobird.jpg" alt="Ghetto Bird - Double IPA fra Spike" loading="lazy">
+        <div class="related-name">Ghetto Bird - Double IPA fra Spike</div>
+        <div class="related-price">65,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/verdant-pulp-double-ipa/">
+        <img src="https://cdn.shopify.com/s/files/1/0402/1239/8243/files/Verdant_Pulp.png?v=1779780953" alt="Verdant - Pulp - Double IPA" loading="lazy">
+        <div class="related-name">Verdant - Pulp - Double IPA</div>
+        <div class="related-price">65,75 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/burnt-mill-stones-ruins-west-coast-double-ipa/">
+        <img src="https://cdn.shopify.com/s/files/1/0402/1239/8243/files/BurntMill_StonesRuins_5daddda3-ef77-4a62-9f6a-1e1c83245867.png?v=1771585513" alt="Burnt Mill - Stones &amp; Ruins - West Coast Double IPA" loading="lazy">
+        <div class="related-name">Burnt Mill - Stones &amp; Ruins - West Coast Double IPA</div>
+        <div class="related-price">65,75 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/pollys-within-reason-double-ipa/">
+        <img src="https://cdn.shopify.com/s/files/1/0402/1239/8243/files/Pollys_WithinReason.png?v=1781420042" alt="Polly’s - Within Reason - Double IPA" loading="lazy">
+        <div class="related-name">Polly’s - Within Reason - Double IPA</div>
+        <div class="related-price">65,95 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/salikatt-outset-new-england-style-double-ipa/">
+        <img src="https://www.bestofbeers.dk/wp-content/uploads/2026/05/SalikattOutset.jpg" alt="Salikatt – Outset – New England-Style Double IPA – –" loading="lazy">
+        <div class="related-name">Salikatt – Outset – New England-Style Double IPA – –</div>
+        <div class="related-price">66,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/sudden-death-brewing-can-of-whoop-ass-8211/">
+        <img src="https://www.bestofbeers.dk/wp-content/uploads/2026/04/SuddenDeathFullyLoaded.jpg" alt="Sudden Death Brewing – Can of Whoop ASS &amp;#8211; Fully Loaded – Hazy Double IPA – –" loading="lazy">
+        <div class="related-name">Sudden Death Brewing – Can of Whoop ASS &amp;#8211; Fully Loaded – Hazy Double IPA – –</div>
+        <div class="related-price">66,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/sudden-death-brewing-amplifier-hazy-double-ipa/">
+        <img src="https://www.bestofbeers.dk/wp-content/uploads/2026/04/SuddenDeathAmplifier.jpg" alt="Sudden Death Brewing – Amplifier – Hazy Double IPA – –" loading="lazy">
+        <div class="related-name">Sudden Death Brewing – Amplifier – Hazy Double IPA – –</div>
+        <div class="related-price">66,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/sudden-death-brewing-half-shell-heroes-8211-red/">
+        <img src="https://www.bestofbeers.dk/wp-content/uploads/2026/03/SuddenDeathBrewingHalf-ShellHeroes.jpg" alt="Sudden Death Brewing – Half-Shell Heroes &amp;#8211; Red Edition – Hazy Double IPA – –" loading="lazy">
+        <div class="related-name">Sudden Death Brewing – Half-Shell Heroes &amp;#8211; Red Edition – Hazy Double IPA – –</div>
+        <div class="related-price">66,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/equilibrium-mc2/">
+        <img src="https://cdn.shopify.com/s/files/1/0551/6600/9423/files/BFD97AD0-4807-4D0B-B164-8DD2A1F49F08.jpg?v=1779451873" alt="Equilibrium - MC2" loading="lazy">
+        <div class="related-name">Equilibrium - MC2</div>
+        <div class="related-price">67,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/stigbergets-dont-believe-a-word-whiplash-collab/">
+        <img src="https://cdn.shopify.com/s/files/1/0551/6600/9423/files/FCA2DE7B-4F7E-41B1-8317-6ADB77A86973.jpg?v=1770049549" alt="Stigbergets - Don’t Believe A Word (Whiplash Collab)" loading="lazy">
+        <div class="related-name">Stigbergets - Don’t Believe A Word (Whiplash Collab)</div>
+        <div class="related-price">67,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/brix-city-mango-jams/">
+        <img src="https://cdn.shopify.com/s/files/1/0368/1628/9924/files/brix-city-mango-jams.png?v=1778231518" alt="Brix City - Mango Jams" loading="lazy">
+        <div class="related-name">Brix City - Mango Jams</div>
+        <div class="related-price">69,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/tox-digitox/">
+        <img src="https://cdn.shopify.com/s/files/1/0368/1628/9924/files/tox-digitox.png?v=1778230748" alt="Tox - Digitox" loading="lazy">
+        <div class="related-name">Tox - Digitox</div>
+        <div class="related-price">69,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/abomination-wandering-into-the-fog-moonlit-dark-berry/">
+        <img src="https://cdn.shopify.com/s/files/1/0368/1628/9924/files/abomination-wandering-into-the-fog-moonlit-dark-berry.png?v=1778231065" alt="Abomination - Wandering into the Fog: Moonlit Dark Berry" loading="lazy">
+        <div class="related-name">Abomination - Wandering into the Fog: Moonlit Dark Berry</div>
+        <div class="related-price">69,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/salikatt-even-keel/">
+        <img src="https://cdn.shopify.com/s/files/1/0776/5209/9400/files/E760596B-AAF8-443D-A7E5-C804F226FCC5.jpg?v=1781717477" alt="Salikatt - Even Keel" loading="lazy">
+        <div class="related-name">Salikatt - Even Keel</div>
+        <div class="related-price">69,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/track-x-badlands-caledon-double-ipa/">
+        <img src="https://cdn.shopify.com/s/files/1/0402/1239/8243/files/Track_Caledon.png?v=1781471861" alt="Track x Badlands - Caledon - Double IPA" loading="lazy">
+        <div class="related-name">Track x Badlands - Caledon - Double IPA</div>
+        <div class="related-price">69,75 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/bad-seed-brewing-chameleon-paint-tdh-modern-west/">
+        <img src="https://www.bestofbeers.dk/wp-content/uploads/2026/06/Fin-Diesel.png" alt="Bad Seed Brewing – Fin Diesel – TDH Modern West Coast DIPA – –" loading="lazy">
+        <div class="related-name">Bad Seed Brewing – Fin Diesel – TDH Modern West Coast DIPA – –</div>
+        <div class="related-price">71,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/stigbergets-bryggeri-bryggan-beerfest-the-official-collaboration-dipa/">
+        <img src="https://www.bestofbeers.dk/wp-content/uploads/2026/05/StigbergetsBrygganBeerfest.jpg" alt="Stigbergets Bryggeri – Bryggan Beerfest The Official Collaboration – DIPA – –" loading="lazy">
+        <div class="related-name">Stigbergets Bryggeri – Bryggan Beerfest The Official Collaboration – DIPA – –</div>
+        <div class="related-price">71,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/bad-seed-brewing-x-tuju-ad-mortem-alba/">
+        <img src="https://www.bestofbeers.dk/wp-content/uploads/2025/05/BadSeedAdMortemAlba.jpg" alt="Bad Seed Brewing x Tuju – Ad Mortem Alba – Triple Dry Hopped New England Double IPA – –" loading="lazy">
+        <div class="related-name">Bad Seed Brewing x Tuju – Ad Mortem Alba – Triple Dry Hopped New England Double IPA – –</div>
+        <div class="related-price">71,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/moersleutel-breakout-10th-anniversary/">
+        <img src="https://cdn.shopify.com/s/files/1/0776/5209/9400/files/7B7B7B76-9506-4BAC-96CF-D7A84D5B77E9.jpg?v=1779043997" alt="Moersleutel - Breakout 10th anniversary" loading="lazy">
+        <div class="related-name">Moersleutel - Breakout 10th anniversary</div>
+        <div class="related-price">72,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/soma-beer-apex/">
+        <img src="https://cdn.shopify.com/s/files/1/0776/5209/9400/files/9A4E4F8C-EF96-47BF-9956-EE3EFC0C42E3.jpg?v=1782166162" alt="SOMA Beer - Apex" loading="lazy">
+        <div class="related-name">SOMA Beer - Apex</div>
+        <div class="related-price">73,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/bearwood-brewing-future-rust-dipa/">
+        <img src="https://www.bestofbeers.dk/wp-content/uploads/2026/07/BearWoodFutureRust.jpg" alt="BearWood Brewing – Future Rust – DIPA – –" loading="lazy">
+        <div class="related-name">BearWood Brewing – Future Rust – DIPA – –</div>
+        <div class="related-price">76,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/soma-beer-nectar-dipa/">
+        <img src="https://www.bestofbeers.dk/wp-content/uploads/2026/07/SomaBeerNectar.jpg" alt="Soma Beer – Nectar – DIPA – –" loading="lazy">
+        <div class="related-name">Soma Beer – Nectar – DIPA – –</div>
+        <div class="related-price">76,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/soma-beer-sudden-death-crossbar/">
+        <img src="https://cdn.shopify.com/s/files/1/0776/5209/9400/files/B3856538-D7D5-472C-9BBD-E4428D613A1B.jpg?v=1782166162" alt="SOMA Beer &amp; Sudden Death - Crossbar" loading="lazy">
+        <div class="related-name">SOMA Beer &amp; Sudden Death - Crossbar</div>
+        <div class="related-price">76,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/hoppy-people-x-xul-tnt-ddh-dipa/">
+        <img src="https://www.bestofbeers.dk/wp-content/uploads/2026/05/HoppyPeopleTNT.jpg" alt="Hoppy People x XÜL – TNT – DDH DIPA – –" loading="lazy">
+        <div class="related-name">Hoppy People x XÜL – TNT – DDH DIPA – –</div>
+        <div class="related-price">76,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/evil-twin-nyc-x-mortalis-even-more-oldmanbearma/">
+        <img src="https://cdn.shopify.com/s/files/1/0776/5209/9400/files/20296C74-6F59-4FD3-98B3-20BD836C1CE7.jpg?v=1783063112" alt="Evil Twin NYC x Mortalis - Even More OldManBearMa – 16 Year Anniversary Beer" loading="lazy">
+        <div class="related-name">Evil Twin NYC x Mortalis - Even More OldManBearMa – 16 Year Anniversary Beer</div>
+        <div class="related-price">79,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/de-molen-bourbon-2023-white-wine-dipa/">
+        <img src="https://www.vildmedvin.dk/img/1000/1000/resize/d/e/de_molen_bourbon_2023_white_wine_dipa.jpg" alt="De Molen, Bourbon 2023 White Wine DIPA" loading="lazy">
+        <div class="related-name">De Molen, Bourbon 2023 White Wine DIPA</div>
+        <div class="related-price">79,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/beak-squeeze-double-ipa/">
+        <img src="https://cdn.shopify.com/s/files/1/0402/1239/8243/files/Beak_Squeeze.png?v=1781470643" alt="BEAK - Squeeze - Double IPA" loading="lazy">
+        <div class="related-name">BEAK - Squeeze - Double IPA</div>
+        <div class="related-price">79,75 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/cloudwater-brewing-co-8211-citraboost-8211-dipa/">
+        <img src="https://cdn.shopify.com/s/files/1/0402/1239/8243/files/Cloudwater_Citraboost.png?v=1779783367" alt="Cloudwater - Citraboost - Double IPA" loading="lazy">
+        <div class="related-name">Cloudwater - Citraboost - Double IPA</div>
+        <div class="related-price">79,75 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/beak-big-cosm-uchu-brewing-collab/">
+        <img src="https://cdn.shopify.com/s/files/1/0551/6600/9423/files/1E1F11F2-9DC2-4799-A928-ED4498F316E8.jpg?v=1772190077" alt="Beak - Big Cosm (Uchu Brewing Collab)" loading="lazy">
+        <div class="related-name">Beak - Big Cosm (Uchu Brewing Collab)</div>
+        <div class="related-price">82,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/other-half-brewing-co-dip-a-roos/">
+        <img src="https://cdn.shopify.com/s/files/1/0776/5209/9400/files/91A844FC-5CE9-4345-8D19-1E06145C5E49.jpg?v=1782391549" alt="Other Half Brewing Co. - Dip-a-Roos!" loading="lazy">
+        <div class="related-name">Other Half Brewing Co. - Dip-a-Roos!</div>
+        <div class="related-price">83,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/beak-brewery-axon-dipa/">
+        <img src="https://www.bestofbeers.dk/wp-content/uploads/2026/01/BEAKAxon.jpg" alt="BEAK Brewery – AXON – DIPA – –" loading="lazy">
+        <div class="related-name">BEAK Brewery – AXON – DIPA – –</div>
+        <div class="related-price">86,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/omnipollo-x-fidens-steve-8217-s-axe-double/">
+        <img src="https://www.bestofbeers.dk/wp-content/uploads/2025/11/OmnipolloStevesAxe.jpg" alt="Omnipollo x Fidens – Steve&amp;#8217;s Axe – Double IPA – –" loading="lazy">
+        <div class="related-name">Omnipollo x Fidens – Steve&amp;#8217;s Axe – Double IPA – –</div>
+        <div class="related-price">86,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/omnipollo-three-times-three-vol-6-double-ipa/">
+        <img src="https://www.bestofbeers.dk/wp-content/uploads/2025/09/OmnipolloTreeTimesThree.jpg" alt="Omnipollo – Three Times Three Vol.6 – Double IPA – –" loading="lazy">
+        <div class="related-name">Omnipollo – Three Times Three Vol.6 – Double IPA – –</div>
+        <div class="related-price">86,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/omnipollo-x-lyric-brewing-denver-double-ipa/">
+        <img src="https://www.bestofbeers.dk/wp-content/uploads/2025/09/OmnipolloDenver.jpg" alt="Omnipollo x Lyric Brewing – Denver – Double IPA – –" loading="lazy">
+        <div class="related-name">Omnipollo x Lyric Brewing – Denver – Double IPA – –</div>
+        <div class="related-price">86,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/omnipollo-x-verdant-practice-the-art-of-connection/">
+        <img src="https://www.bestofbeers.dk/wp-content/uploads/2025/09/OmnipolloPractice.jpg" alt="Omnipollo x Verdant – Practice (The Art Of) Connection – Double IPA – –" loading="lazy">
+        <div class="related-name">Omnipollo x Verdant – Practice (The Art Of) Connection – Double IPA – –</div>
+        <div class="related-price">86,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/omnipollo-x-fidens-paradis-passion-fruit-double-ipa/">
+        <img src="https://www.bestofbeers.dk/wp-content/uploads/2025/07/OmnipolloParadisPassion.jpg" alt="Omnipollo x Fidens – Paradis – Passion Fruit Double IPA – –" loading="lazy">
+        <div class="related-name">Omnipollo x Fidens – Paradis – Passion Fruit Double IPA – –</div>
+        <div class="related-price">86,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/track-brewing-company-abundance-gold-top-dipa/">
+        <img src="https://www.bestofbeers.dk/wp-content/uploads/2026/05/TrackAbundance.jpg" alt="Track Brewing Company – Abundance – Gold Top DIPA – –" loading="lazy">
+        <div class="related-name">Track Brewing Company – Abundance – Gold Top DIPA – –</div>
+        <div class="related-price">89,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/track-brewing-co-luminescence-gold-top-series/">
+        <img src="https://cdn.shopify.com/s/files/1/0551/6600/9423/files/7AF8BA82-17D3-4F1B-89C8-BF502AFCB35E.jpg?v=1783119724" alt="Track Brewing Co. - Luminescence (Gold Top Series)" loading="lazy">
+        <div class="related-name">Track Brewing Co. - Luminescence (Gold Top Series)</div>
+        <div class="related-price">89,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/trillium-mettle/">
+        <img src="https://cdn.shopify.com/s/files/1/0551/6600/9423/files/621EE58B-DAC9-4013-A37A-FB82632C0211.jpg?v=1774799177" alt="Trillium - Mettle" loading="lazy">
+        <div class="related-name">Trillium - Mettle</div>
+        <div class="related-price">89,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/track-brewing-company-everything-illuminated-dipa/">
+        <img src="https://www.bestofbeers.dk/wp-content/uploads/2026/03/TrackBrewingEverythingIlluminated.jpg" alt="Track Brewing Company – Everything Illuminated – DIPA – –" loading="lazy">
+        <div class="related-name">Track Brewing Company – Everything Illuminated – DIPA – –</div>
+        <div class="related-price">91,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/track-brewing-company-x-queer-brewing-wild-and/">
+        <img src="https://www.bestofbeers.dk/wp-content/uploads/2026/05/TrackWildAndPrecious.jpg" alt="Track Brewing Company x Queer Brewing – Wild And Precious IWD 2026 – DIPA – –" loading="lazy">
+        <div class="related-name">Track Brewing Company x Queer Brewing – Wild And Precious IWD 2026 – DIPA – –</div>
+        <div class="related-price">91,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/hudson-valley-secret-life-of-plants-root-branch/">
+        <img src="https://cdn.shopify.com/s/files/1/0551/6600/9423/files/1140DDC8-FA36-4848-ACB0-03148C769E9C.jpg?v=1779451874" alt="Hudson Valley - Secret Life Of Plants (Root+Branch x TEST Collab)" loading="lazy">
+        <div class="related-name">Hudson Valley - Secret Life Of Plants (Root+Branch x TEST Collab)</div>
+        <div class="related-price">99,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/brasserie-du-bas-canada-persephone/">
+        <img src="https://cdn.shopify.com/s/files/1/0551/6600/9423/files/F8A394C9-9B3C-4D78-BC66-3C5525D57F7A.jpg?v=1779451873" alt="Brasserie Du Bas-Canada - Perséphone" loading="lazy">
+        <div class="related-name">Brasserie Du Bas-Canada - Perséphone</div>
+        <div class="related-price">99,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/brasserie-du-bas-canada-ddh-constantin/">
+        <img src="https://cdn.shopify.com/s/files/1/0551/6600/9423/files/665B92E0-D9C4-41BB-B248-975A58316AA1.jpg?v=1779451874" alt="Brasserie Du Bas-Canada - DDH Constantin" loading="lazy">
+        <div class="related-name">Brasserie Du Bas-Canada - DDH Constantin</div>
+        <div class="related-price">99,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/deep-fried-beers-three-times-three-vol-7/">
+        <img src="https://www.bestofbeers.dk/wp-content/uploads/2025/12/OmnipolloThreeTimeThreeVol7.jpg" alt="Deep Fried Beers – Three Times Three Vol. 7 – Double IPA – –" loading="lazy">
+        <div class="related-name">Deep Fried Beers – Three Times Three Vol. 7 – Double IPA – –</div>
+        <div class="related-price">99,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/dankhouse-brewing-co-spreading-stoke-double-ipa/">
+        <img src="https://www.bestofbeers.dk/wp-content/uploads/2025/11/DankHouseBrewingSpredaingStoke.jpg" alt="DankHouse Brewing Co. – Spreading Stoke – Double IPA – –" loading="lazy">
+        <div class="related-name">DankHouse Brewing Co. – Spreading Stoke – Double IPA – –</div>
+        <div class="related-price">101,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/third-moon-brewing-co-8211-shake-the-mountains/">
+        <img src="https://www.bestofbeers.dk/wp-content/uploads/2025/05/ThirdMoonShakeTheMountains.jpg" alt="Third Moon Brewing Co. &amp;#8211; Shake The Mountains &amp;#8211; Double IPA &amp;#8211; –" loading="lazy">
+        <div class="related-name">Third Moon Brewing Co. &amp;#8211; Shake The Mountains &amp;#8211; Double IPA &amp;#8211; –</div>
+        <div class="related-price">101,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/bad-bones-the-pain/">
+        <img src="https://cdn.shopify.com/s/files/1/0551/6600/9423/files/C1869DCA-6592-4DC0-8B09-7F21750A3CA3.jpg?v=1779182494" alt="Bad Bones - The Pain" loading="lazy">
+        <div class="related-name">Bad Bones - The Pain</div>
+        <div class="related-price">105,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/bad-bones-pharmacy/">
+        <img src="https://cdn.shopify.com/s/files/1/0551/6600/9423/files/04AF2536-D65F-4511-B948-58A853B66233.jpg?v=1779182492" alt="Bad Bones - Pharmacy" loading="lazy">
+        <div class="related-name">Bad Bones - Pharmacy</div>
+        <div class="related-price">105,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/badlands-brewing-company-july-2025-dipa/">
+        <img src="https://www.bestofbeers.dk/wp-content/uploads/2025/09/BadlandsBrewingJuly.jpg" alt="Badlands Brewing Company – July (2025) – DIPA – –" loading="lazy">
+        <div class="related-name">Badlands Brewing Company – July (2025) – DIPA – –</div>
+        <div class="related-price">106,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/parish-brewing-co-x-other-half-brewing-ghost/">
+        <img src="https://www.bestofbeers.dk/wp-content/uploads/2025/09/GhostBrewingGhostDaydream.jpg" alt="Parish Brewing Co. x Other Half Brewing – Ghost Daydream – Double Dry Hopped Oat Cream DIPA – –" loading="lazy">
+        <div class="related-name">Parish Brewing Co. x Other Half Brewing – Ghost Daydream – Double Dry Hopped Oat Cream DIPA – –</div>
+        <div class="related-price">106,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/monkish-wonder-kid-plus/">
+        <img src="https://cdn.shopify.com/s/files/1/0368/1628/9924/files/monkish-wonder-kid-plus.png?v=1782998749" alt="Monkish - Wonder Kid Plus" loading="lazy">
+        <div class="related-name">Monkish - Wonder Kid Plus</div>
+        <div class="related-price">119,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/monkish-beyond-atomically/">
+        <img src="https://cdn.shopify.com/s/files/1/0368/1628/9924/files/monkish-beyond-atomically.png?v=1782998825" alt="Monkish - Beyond Atomically" loading="lazy">
+        <div class="related-name">Monkish - Beyond Atomically</div>
+        <div class="related-price">119,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/fidens-brewing-co-orchid-with-guava/">
+        <img src="https://cdn.shopify.com/s/files/1/0776/5209/9400/files/0D73D8CE-5CD4-4FAC-8FE8-8E73842E3037.jpg?v=1779229437" alt="Fidens Brewing Co. - Orchid with Guava" loading="lazy">
+        <div class="related-name">Fidens Brewing Co. - Orchid with Guava</div>
+        <div class="related-price">149,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/double-ipa-smagekasse-6-stk-gns-49-kr/">
+        <img src="https://cdn.shopify.com/s/files/1/0402/1239/8243/files/Double_IPA_Smagekasse_cf209033-d87d-4b82-9a9f-5c69ac42b133.png?v=1782124610" alt="Double IPA Smagekasse (6 stk.)(Gns. 49 kr. pr. øl)" loading="lazy">
+        <div class="related-name">Double IPA Smagekasse (6 stk.)(Gns. 49 kr. pr. øl)</div>
+        <div class="related-price">269,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/humle-maanedspakken-juni/">
+        <img src="https://cdn.shopify.com/s/files/1/0551/6600/9423/files/4A8AB2B7-91A6-4925-BFB6-5868D48C2E34.jpg?v=1780308894" alt="Månedspakken - Juni" loading="lazy">
+        <div class="related-name">Månedspakken - Juni</div>
+        <div class="related-price">343,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/funky-fluid-final-eight-world-cup-beer-bundle/">
+        <img src="https://cdn.shopify.com/s/files/1/0551/6600/9423/files/FA01A715-6705-4C29-8D93-B962D99C8D48.jpg?v=1780906196" alt="Funky Fluid - Final Eight World Cup Beer Bundle (6-Beer Bundle)" loading="lazy">
+        <div class="related-name">Funky Fluid - Final Eight World Cup Beer Bundle (6-Beer Bundle)</div>
+        <div class="related-price">349,00 kr</div>
+    </a></div></div>
+        <button class="related-toggle" onclick="this.previousElementSibling.querySelectorAll(&quot;.related-hidden&quot;).forEach(e=>e.style.display=&quot;block&quot;);this.style.display=&quot;none&quot;">Vis alle (107)</button>
     </div>
 
     <div class="disclaimer">
         📢 Affiliate disclosure: BeerSniffer kan modtage provision når du køber via vores links.
-        Priser opdateret 03.07.2026. Tjek altid den endelige pris hos forhandleren før køb.
+        Priser opdateret 07.07.2026. Tjek altid den endelige pris hos forhandleren før køb.
     </div>
 </div>
 

@@ -66,6 +66,9 @@ body { background: var(--bg); color: var(--text); font-family: 'DM Sans', sans-s
 .related-card img, .related-img-placeholder { width: 100%; height: 70px; object-fit: contain; background: var(--surface2); border-radius: 6px; margin-bottom: 0.4rem; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; }
 .related-name { font-size: 0.72rem; line-height: 1.3; margin-bottom: 0.2rem; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; min-height: 1.9em; }
 .related-price { font-size: 0.78rem; font-weight: 700; color: var(--gold-light); }
+.related-hidden { display: none; }
+.related-toggle { display: block; margin: 0.8rem auto 0; background: var(--surface2); border: 1px solid var(--border-light); border-radius: 999px; padding: 0.45rem 1.2rem; color: var(--gold); font-family: 'DM Sans', sans-serif; font-size: 0.78rem; cursor: pointer; transition: border-color 0.15s; }
+.related-toggle:hover { border-color: var(--gold); color: var(--gold-light); }
 .disclaimer { font-size: 0.72rem; color: var(--text-muted); margin-top: 2rem; line-height: 1.6; border-top: 1px solid var(--border); padding-top: 1rem; }
 .chart-section { margin: 1.5rem 0; background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 1rem 1.1rem; }
 .chart-heading { font-size: 0.7rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 0.7rem; }
@@ -138,42 +141,678 @@ body { background: var(--bg); color: var(--text); font-family: 'DM Sans', sans-s
 
     <div class="related-section">
         <div class="related-heading">Flere øl fra Norbæk Gårdbryggeri</div>
-        <div class="related-grid">
+        <div class="related-grid"><div class="related-item">
     <a class="related-card" href="https://www.beersniffer.dk/ol/brand-garage-mama-passion-oeko-2/">
         <img src="https://cdn.shopify.com/s/files/1/0776/5209/9400/files/69DB38AF-2B36-4E0F-B0FE-A5646D6FA914.jpg?v=1782679103" alt="Brand Garage - MAMA Passion ØKO" loading="lazy">
         <div class="related-name">Brand Garage - MAMA Passion ØKO</div>
         <div class="related-price">21,00 kr</div>
-    </a>
+    </a></div><div class="related-item">
     <a class="related-card" href="https://www.beersniffer.dk/ol/brand-garage-mama-lemon-oeko-2/">
         <img src="https://cdn.shopify.com/s/files/1/0776/5209/9400/files/BC50286F-A254-4ED8-8221-266A9EDF4654.jpg?v=1782679078" alt="Brand Garage - MAMA Lemon ØKO" loading="lazy">
         <div class="related-name">Brand Garage - MAMA Lemon ØKO</div>
         <div class="related-price">21,00 kr</div>
-    </a>
+    </a></div><div class="related-item">
     <a class="related-card" href="https://www.beersniffer.dk/ol/rodenbach-classic/">
         <img src="https://cdn.shopify.com/s/files/1/0509/8477/9975/files/rodenbach-classic-25cl_28c6b8cf-15fd-46b3-8d6f-665973e60bf8.png?v=1737802330" alt="Rodenbach Classic" loading="lazy">
         <div class="related-name">Rodenbach Classic</div>
         <div class="related-price">27,00 kr</div>
-    </a>
+    </a></div><div class="related-item">
     <a class="related-card" href="https://www.beersniffer.dk/ol/to-oel-implosion-pink-sour-alkoholfri-2/">
         <img src="https://www.vildmedvin.dk/img/1000/1000/resize/t/o/to_l_implosion_pink_sour_alkoholfri.jpg" alt="To Øl, Implosion Pink Sour Alkoholfri" loading="lazy">
         <div class="related-name">To Øl, Implosion Pink Sour Alkoholfri</div>
         <div class="related-price">27,00 kr</div>
-    </a>
+    </a></div><div class="related-item">
     <a class="related-card" href="https://www.beersniffer.dk/ol/poppels-mango-sour/">
         <img src="https://www.vildmedvin.dk/img/1000/1000/resize/m/a/mango-sour-1.jpg" alt="Poppels, Mango Sour" loading="lazy">
         <div class="related-name">Poppels, Mango Sour</div>
         <div class="related-price">31,00 kr</div>
-    </a>
+    </a></div><div class="related-item">
     <a class="related-card" href="https://www.beersniffer.dk/ol/aaben-w-sour-alkoholfri/">
         <img src="https://www.vildmedvin.dk/img/1000/1000/resize/_/b/_ben_w_sour.jpg" alt="Åben, W Sour Alkoholfri" loading="lazy">
         <div class="related-name">Åben, W Sour Alkoholfri</div>
         <div class="related-price">31,00 kr</div>
-    </a></div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/brouwerij-verhaeghe-duchesse-du-bourgogne/">
+        <img src="https://cdn.shopify.com/s/files/1/0509/8477/9975/files/duchesse-de-bourgogne-25cl_d4f852c1-cd3b-4386-aafb-bca08efe3148.png?v=1739274889" alt="Duchesse Du Bourgogne" loading="lazy">
+        <div class="related-name">Duchesse Du Bourgogne</div>
+        <div class="related-price">33,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/rodenbach-grand-cru/">
+        <img src="https://cdn.shopify.com/s/files/1/0509/8477/9975/files/rodenbach-grand-cru-33cl-2024_8ce501de-bcba-4dce-9870-517f17bfd918.png?v=1737801817" alt="Rodenbach Grand Cru" loading="lazy">
+        <div class="related-name">Rodenbach Grand Cru</div>
+        <div class="related-price">35,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/rodenbach-alexander/">
+        <img src="https://cdn.shopify.com/s/files/1/0509/8477/9975/files/rodenbach-alexander-5-6-33cl.png?v=1737801543" alt="Rodenbach Alexander" loading="lazy">
+        <div class="related-name">Rodenbach Alexander</div>
+        <div class="related-price">35,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/vault-city-lemon-ice-tea-table-sour/">
+        <img src="https://www.vildmedvin.dk/img/1000/1000/resize/v/a/vault_city_lemon_ice_tea_table_sour.jpg" alt="Vault City, Lemon Ice Tea Table Sour" loading="lazy">
+        <div class="related-name">Vault City, Lemon Ice Tea Table Sour</div>
+        <div class="related-price">37,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/brouwerij-verhaeghe-duchesse-cherry/">
+        <img src="https://cdn.shopify.com/s/files/1/0509/8477/9975/files/duchesse-de-bourgogne-cherry-33cl.png?v=1739274939" alt="Duchesse Cherry" loading="lazy">
+        <div class="related-name">Duchesse Cherry</div>
+        <div class="related-price">40,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/porn-star-sour-fra-genys/">
+        <img src="https://cdn-main.ideal.shop/images/by_hash/f5dfd9eb3d14ec2e99d4a38d0c6e7c0a6e2511688821d97d396f7919e7a449aa/500-0/pornstar.jpg" alt="Porn Star - Sour fra Genys" loading="lazy">
+        <div class="related-name">Porn Star - Sour fra Genys</div>
+        <div class="related-price">40,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/wicklow-wolf-solstice-sour/">
+        <img src="https://www.vildmedvin.dk/img/1000/1000/resize/w/i/wicklow_wolf_solstice_sour.jpg" alt="Wicklow Wolf, Solstice Sour" loading="lazy">
+        <div class="related-name">Wicklow Wolf, Solstice Sour</div>
+        <div class="related-price">41,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/vault-city-brewing-strawberry-sundae/">
+        <img src="https://cdn.shopify.com/s/files/1/0776/5209/9400/files/460A011D-BBBA-4D0E-BE1C-BD4898DC54A1.jpg?v=1769892536" alt="Vault City - Strawberry Sundae" loading="lazy">
+        <div class="related-name">Vault City - Strawberry Sundae</div>
+        <div class="related-price">45,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/brouwerij-verhaeghe-duchesse-de-bourgogne-37-5-2/">
+        <img src="https://cdn.shopify.com/s/files/1/0509/8477/9975/files/duchesse-de-bourgogne-6-2-37-5.png?v=1765012389" alt="Duchesse de Bourgogne 37,5" loading="lazy">
+        <div class="related-name">Duchesse de Bourgogne 37,5</div>
+        <div class="related-price">45,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/vault-city-root-beer/">
+        <img src="https://cdn.shopify.com/s/files/1/0776/5209/9400/files/ABD872BD-1297-4D85-936A-E543401B9044.jpg?v=1781717476" alt="Vault City - Root Beer" loading="lazy">
+        <div class="related-name">Vault City - Root Beer</div>
+        <div class="related-price">46,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/jolly-pumpkin-biere-de-mars/">
+        <img src="https://cdn.shopify.com/s/files/1/0368/1628/9924/files/jolly-pumpkin-biere-de-mars.png?v=1777455391" alt="Jolly Pumpkin - Biere de Mars" loading="lazy">
+        <div class="related-name">Jolly Pumpkin - Biere de Mars</div>
+        <div class="related-price">49,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/blackout-vi-sion/">
+        <img src="https://cdn.shopify.com/s/files/1/0368/1628/9924/files/vision_df655d4b-2350-410f-930a-8cb858f5d4ff.png?v=1746118262" alt="Blackout - VI-SION" loading="lazy">
+        <div class="related-name">Blackout - VI-SION</div>
+        <div class="related-price">49,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/funky-fluid-mango-kiwi-sour-ale/">
+        <img src="https://cdn.shopify.com/s/files/1/0776/5209/9400/files/6CD3E06C-932E-4237-ADB5-62F777EB851C.jpg?v=1777704127" alt="Funky Fluid - Mango &amp; Kiwi Sour Ale" loading="lazy">
+        <div class="related-name">Funky Fluid - Mango &amp; Kiwi Sour Ale</div>
+        <div class="related-price">49,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/vault-city-brewing-teacake-sour/">
+        <img src="https://cdn.shopify.com/s/files/1/0509/8477/9975/files/teacake-sour-5-44cl.png?v=1759408488" alt="Teacake Sour" loading="lazy">
+        <div class="related-name">Teacake Sour</div>
+        <div class="related-price">50,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/amundsen-brewery-uncle-pops-sour-series-raspberry-christmas/">
+        <img src="https://cdn.shopify.com/s/files/1/0509/8477/9975/files/uncle-pops-sour-series-raspberry-christmas-float-pastry-sour-6-5-44cl.png?v=1762707936" alt="Uncle Pop&#x27;s sour Series - Raspberry Christmas Float Pastry Sour" loading="lazy">
+        <div class="related-name">Uncle Pop&#x27;s sour Series - Raspberry Christmas Float Pastry Sour</div>
+        <div class="related-price">50,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/vault-city-brewing-tonka-black-forest-gateau-pastry/">
+        <img src="https://www.vildmedvin.dk/img/1000/1000/resize/v/a/vault_city_tonka_black_forest_gateau.jpg" alt="Vault City Brewing – Tonka Black Forest Gateau – Pastry Sour – –" loading="lazy">
+        <div class="related-name">Vault City Brewing – Tonka Black Forest Gateau – Pastry Sour – –</div>
+        <div class="related-price">53,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/brouwerij-frontaal-smooth-criminals-pornstar-martini/">
+        <img src="https://cdn.shopify.com/s/files/1/0509/8477/9975/files/smooth-criminals-pornstar-martini-6-5-33cl.png?v=1778684442" alt="Smooth Criminals: Pornstar Martini" loading="lazy">
+        <div class="related-name">Smooth Criminals: Pornstar Martini</div>
+        <div class="related-price">54,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/frontaal-brewing-co-smooth-criminals-exotic-cream/">
+        <img src="https://cdn.shopify.com/s/files/1/0509/8477/9975/files/smooth-criminals-exotic-cream-6-5-33cl.png?v=1782649767" alt="Smooth Criminals: Exotic Cream" loading="lazy">
+        <div class="related-name">Smooth Criminals: Exotic Cream</div>
+        <div class="related-price">54,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/brouwerij-frontaal-smooth-criminals-orange-vanilla/">
+        <img src="https://cdn.shopify.com/s/files/1/0509/8477/9975/files/smooth-criminals-orange-vanilla-6-5-33cl.png?v=1782397183" alt="Smooth Criminals: Orange Vanilla" loading="lazy">
+        <div class="related-name">Smooth Criminals: Orange Vanilla</div>
+        <div class="related-price">54,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/brouwerij-frontaal-smooth-criminals-cosmic-blast/">
+        <img src="https://cdn.shopify.com/s/files/1/0509/8477/9975/files/smooth-criminals-cosmic-blast-6-5-33cl.png?v=1782396867" alt="Smooth Criminals: Cosmic Blast" loading="lazy">
+        <div class="related-name">Smooth Criminals: Cosmic Blast</div>
+        <div class="related-price">54,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/tankbusters-co-the-beekeeper-vol-14/">
+        <img src="https://cdn.shopify.com/s/files/1/0776/5209/9400/files/0C9B3E48-AC07-4AD2-8ABE-8607FD4778AE.jpg?v=1783063112" alt="TankBusters.Co - The BeeKeeper Vol. 14" loading="lazy">
+        <div class="related-name">TankBusters.Co - The BeeKeeper Vol. 14</div>
+        <div class="related-price">55,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/saez-son-fem-om-dagen-2026/">
+        <img src="https://cdn.shopify.com/s/files/1/0776/5209/9400/files/6A5D3902-7439-481A-ACB2-0D3B882557A4.jpg?v=1776796966" alt="Sáez &amp; Son - Fem om dagen 2026" loading="lazy">
+        <div class="related-name">Sáez &amp; Son - Fem om dagen 2026</div>
+        <div class="related-price">55,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/vault-city-brewing-kjoebenhavner-stang/">
+        <img src="https://cdn.shopify.com/s/files/1/0509/8477/9975/files/kjobenhavner-stang-6-44cl.png?v=1756658543" alt="Kjøbenhavner Stang" loading="lazy">
+        <div class="related-name">Kjøbenhavner Stang</div>
+        <div class="related-price">55,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/funky-fluid-gelato-green/">
+        <img src="https://cdn.shopify.com/s/files/1/0776/5209/9400/files/4FE5B1EF-03F9-49CB-BFA5-9F29F8CE7C2E.jpg?v=1773873654" alt="Funky Fluid - Gelato Green" loading="lazy">
+        <div class="related-name">Funky Fluid - Gelato Green</div>
+        <div class="related-price">55,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/sharktor-brewing-sherbet-sour/">
+        <img src="https://cdn.shopify.com/s/files/1/0551/6600/9423/files/BC44C398-6678-4C96-BBB8-5F44AC59583A.jpg?v=1780308894" alt="Sharktor Brewing - Sherbet Sour" loading="lazy">
+        <div class="related-name">Sharktor Brewing - Sherbet Sour</div>
+        <div class="related-price">56,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/vault-city-sjampanje-brus/">
+        <img src="https://cdn.shopify.com/s/files/1/0551/6600/9423/files/560BB4B4-9C75-4CA9-B3A4-3EA7361134ED.jpg?v=1773996417" alt="Vault City - Sjampanje Brus" loading="lazy">
+        <div class="related-name">Vault City - Sjampanje Brus</div>
+        <div class="related-price">56,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/tankbusters-co-the-beekeeper-vol-7/">
+        <img src="https://cdn.shopify.com/s/files/1/0776/5209/9400/files/7F4A21F2-94EC-4CA3-BFD8-5D1E12788321.jpg?v=1783063112" alt="TankBusters.Co - The BeeKeeper Vol. 7" loading="lazy">
+        <div class="related-name">TankBusters.Co - The BeeKeeper Vol. 7</div>
+        <div class="related-price">56,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/vault-city-grape-soda/">
+        <img src="https://cdn.shopify.com/s/files/1/0776/5209/9400/files/AA332ED5-D0E7-4DF9-AE0D-FECFDC538A40.jpg?v=1781717476" alt="Vault City - Grape Soda" loading="lazy">
+        <div class="related-name">Vault City - Grape Soda</div>
+        <div class="related-price">56,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/saez-son-kiwi-co/">
+        <img src="https://cdn.shopify.com/s/files/1/0776/5209/9400/files/B9077B5D-BA4D-4216-9266-0A21DD455925.jpg?v=1776796966" alt="Sáez &amp; Son - Kiwi &amp; Co." loading="lazy">
+        <div class="related-name">Sáez &amp; Son - Kiwi &amp; Co.</div>
+        <div class="related-price">56,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/vault-city-vaeskeballance-kjoebenhavner-stang-sour/">
+        <img src="https://cdn.shopify.com/s/files/1/0776/5209/9400/files/1DA83AEF-6DBF-41F7-BFE6-3B561E00C6E0.jpg?v=1744668970" alt="Vault City &amp; Væskeballance - Kjøbenhavner Stang Sour" loading="lazy">
+        <div class="related-name">Vault City &amp; Væskeballance - Kjøbenhavner Stang Sour</div>
+        <div class="related-price">58,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/vault-city-brewing-berry-strudel-pastry-sour/">
+        <img src="https://www.vildmedvin.dk/img/1000/1000/resize/v/a/vault_city_berry_strudel.jpg" alt="Vault City Brewing – Berry Strudel – Pastry Sour – –" loading="lazy">
+        <div class="related-name">Vault City Brewing – Berry Strudel – Pastry Sour – –</div>
+        <div class="related-price">59,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/observatoriet-tableau/">
+        <img src="https://cdn.shopify.com/s/files/1/0551/6600/9423/files/IMG-4880.jpg?v=1698587921" alt="Observatoriet - Tableau" loading="lazy">
+        <div class="related-name">Observatoriet - Tableau</div>
+        <div class="related-price">59,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/trillium-oenobier-semillon/">
+        <img src="https://cdn.shopify.com/s/files/1/0368/1628/9924/files/oenobiersemillon.png?v=1695384994" alt="Trillium - Oenobier Semillon" loading="lazy">
+        <div class="related-name">Trillium - Oenobier Semillon</div>
+        <div class="related-price">59,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/gamma-brewing-undulation-sour/">
+        <img src="https://www.vildmedvin.dk/img/1000/1000/resize/u/n/undulation_front.jpg" alt="Gamma Brewing, Undulation Sour" loading="lazy">
+        <div class="related-name">Gamma Brewing, Undulation Sour</div>
+        <div class="related-price">59,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/saez-son-kiwi-co-2/">
+        <img src="https://cdn.shopify.com/s/files/1/0776/5209/9400/files/B9077B5D-BA4D-4216-9266-0A21DD455925.jpg?v=1776796966" alt="Sáez &amp; Son - Kiwi &amp; Co." loading="lazy">
+        <div class="related-name">Sáez &amp; Son - Kiwi &amp; Co.</div>
+        <div class="related-price">59,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/saez-son-palm-beach-2/">
+        <img src="https://cdn.shopify.com/s/files/1/0776/5209/9400/files/0A6989CE-4229-4E6B-8407-BD51A4FF8C5A.jpg?v=1776796966" alt="Sáez &amp; Son - Palm Beach" loading="lazy">
+        <div class="related-name">Sáez &amp; Son - Palm Beach</div>
+        <div class="related-price">59,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/sudden-death-cherry-berry-crush-smoothie-sour/">
+        <img src="https://cdn.shopify.com/s/files/1/0402/1239/8243/files/SuddenDeath_CherryBerry.png?v=1778476261" alt="Sudden Death - Cherry Berry Crush - Smoothie Sour" loading="lazy">
+        <div class="related-name">Sudden Death - Cherry Berry Crush - Smoothie Sour</div>
+        <div class="related-price">59,75 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/sudden-death-three-more-quarters-smoothie-sour/">
+        <img src="https://cdn.shopify.com/s/files/1/0402/1239/8243/files/SuddenDeath_ThreeMoreQuarters.png?v=1778476096" alt="Sudden Death - Three More Quarters - Smoothie Sour" loading="lazy">
+        <div class="related-name">Sudden Death - Three More Quarters - Smoothie Sour</div>
+        <div class="related-price">59,75 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/vault-city-brewing-a-lil-stoopid-strawberry-blackberry/">
+        <img src="https://cdn.shopify.com/s/files/1/0509/8477/9975/files/a-lil-stoopid-strawberry-blackberry-coconut-4-5-44cl.png?v=1774445117" alt="A Lil Stoopid: Strawberry, Blackberry &amp; Coconut" loading="lazy">
+        <div class="related-name">A Lil Stoopid: Strawberry, Blackberry &amp; Coconut</div>
+        <div class="related-price">60,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/funky-fluid-brewery-final-eight-spain-tiki-taka/">
+        <img src="https://www.bestofbeers.dk/wp-content/uploads/2026/05/FunkyFluidSpain.jpg" alt="Funky Fluid Brewery – Final Eight Spain Tiki Taka – Frutas de Temporada Ice Cream Sour – –" loading="lazy">
+        <div class="related-name">Funky Fluid Brewery – Final Eight Spain Tiki Taka – Frutas de Temporada Ice Cream Sour – –</div>
+        <div class="related-price">61,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/mad-scientist-tropical-space-muffin-2026-boay-edt/">
+        <img src="https://www.bestofbeers.dk/wp-content/uploads/2026/03/MadScientistTropicalSpaceMuffin2026.jpg" alt="Mad Scientist – Tropical Space Muffin 2026 Boay Edt – Tropical Imperial Pastry Sour Braggot – –" loading="lazy">
+        <div class="related-name">Mad Scientist – Tropical Space Muffin 2026 Boay Edt – Tropical Imperial Pastry Sour Braggot – –</div>
+        <div class="related-price">61,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/vault-city-brewing-x-l-8217-antalante-tarte/">
+        <img src="https://www.bestofbeers.dk/wp-content/uploads/2026/03/VaultCityTarteTatin.jpg" alt="Vault City Brewing x L&amp;#8217;Antalante – Tarte Tatin – Caramelised Apple Tart Sour – –" loading="lazy">
+        <div class="related-name">Vault City Brewing x L&amp;#8217;Antalante – Tarte Tatin – Caramelised Apple Tart Sour – –</div>
+        <div class="related-price">61,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/mad-scientist-hindbaersnitte-sherbet-ice-cream-smoothie-braggot/">
+        <img src="https://www.bestofbeers.dk/wp-content/uploads/2026/02/MadScientistHindbaersnitte.jpeg" alt="Mad Scientist – Hindbærsnitte Sherbet – Ice Cream Smoothie Braggot – –" loading="lazy">
+        <div class="related-name">Mad Scientist – Hindbærsnitte Sherbet – Ice Cream Smoothie Braggot – –</div>
+        <div class="related-price">61,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/prizm-brewing-co-ophiussa-brewing-co-heavy-crown/">
+        <img src="https://cdn.shopify.com/s/files/1/0776/5209/9400/files/08C722C5-CBA7-4897-A4B8-6944326DDBE7.jpg?v=1782391549" alt="Prizm Brewing Co. × Ophiussa Brewing Co. - Heavy Crown" loading="lazy">
+        <div class="related-name">Prizm Brewing Co. × Ophiussa Brewing Co. - Heavy Crown</div>
+        <div class="related-price">63,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/prizm-brewing-co-narita/">
+        <img src="https://cdn.shopify.com/s/files/1/0776/5209/9400/files/D420BA93-A3F3-45C5-827D-655FCB7C208A.jpg?v=1782289879" alt="Prizm Brewing Co. - Narita" loading="lazy">
+        <div class="related-name">Prizm Brewing Co. - Narita</div>
+        <div class="related-price">64,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/vault-city-you-wont-believe-its-not-crumble/">
+        <img src="https://cdn.shopify.com/s/files/1/0509/8477/9975/files/you-won-t-believe-it-s-not-crumble-6-44cl.png?v=1774450353" alt="You Won’t Believe It’s Not Crumble!" loading="lazy">
+        <div class="related-name">You Won’t Believe It’s Not Crumble!</div>
+        <div class="related-price">65,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/vault-city-brewing-stoopid-passionfruit-apricot-mango-coconut/">
+        <img src="https://cdn.shopify.com/s/files/1/0509/8477/9975/files/stoopid-passionfruit-apricot-mango-coconut-6-2-44cl.png?v=1774448612" alt="Stoopid: Passionfruit, Apricot, Mango &amp; Coconut" loading="lazy">
+        <div class="related-name">Stoopid: Passionfruit, Apricot, Mango &amp; Coconut</div>
+        <div class="related-price">65,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/vault-city-brewing-strawberry-coconut-creme-delight/">
+        <img src="https://cdn.shopify.com/s/files/1/0509/8477/9975/files/strawberry-coconut-creme-delight-6-4-44cl.png?v=1764529818" alt="Strawberry Coconut Creme Delight" loading="lazy">
+        <div class="related-name">Strawberry Coconut Creme Delight</div>
+        <div class="related-price">65,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/smoothie-bowl-full-of-passion-smoothie-sour-fra/">
+        <img src="https://cdn-main.ideal.shop/images/by_hash/283f629136df6e89803b7e3be9e43caa92f1f8f6368f09b9a4e0377c27705bd3/500-0/fullofpasion.jpg" alt="Smoothie Bowl: Full of Passion - Smoothie Sour fra Nepo" loading="lazy">
+        <div class="related-name">Smoothie Bowl: Full of Passion - Smoothie Sour fra Nepo</div>
+        <div class="related-price">65,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/blueberry-fluff-smoothie-sour-lost/">
+        <img src="https://cdn-main.ideal.shop/images/by_hash/d519f22ddc59a590a6bd9744b67d03a022ef4903d94909fd54cb864e4b02b32f/500-0/BlueberryFluff.jpg" alt="Blueberry Fluff · Smoothie Sour · LOST" loading="lazy">
+        <div class="related-name">Blueberry Fluff · Smoothie Sour · LOST</div>
+        <div class="related-price">65,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/smoothie-bowl-pina-colada-fluff-smoothie-sour-fra/">
+        <img src="https://cdn-main.ideal.shop/images/by_hash/f3aca9b0efe7be5c785b726579e0bc938cf7aa4c084ba10fb2d4fe45142d6212/500-0/pinacoladafluff.jpg" alt="Smoothie Bowl: Pina Colada Fluff - Smoothie Sour fra Nepo" loading="lazy">
+        <div class="related-name">Smoothie Bowl: Pina Colada Fluff - Smoothie Sour fra Nepo</div>
+        <div class="related-price">65,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/reason-in-madness-smoohie-sour-fra-norm-brewing/">
+        <img src="https://cdn-main.ideal.shop/images/by_hash/97caa25f8885e76d0a7732b29f21c26e7d22a15e402504c1434a039815e8c825/500-0/reasoninmadness.jpg" alt="Reason In Madness - Smoohie Sour fra Norm Brewing" loading="lazy">
+        <div class="related-name">Reason In Madness - Smoohie Sour fra Norm Brewing</div>
+        <div class="related-price">65,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/vault-city-brewing-x-vaeskebalancen-kaempe-kjoebenhavner-stang/">
+        <img src="https://www.bestofbeers.dk/wp-content/uploads/2026/05/VaultCityKaempeKjoevenhavnerstang.jpg" alt="Vault City Brewing x Væskebalancen – KÆMPE Kjøbenhavner Stang – Pine Apple Modern Sour Beer – –" loading="lazy">
+        <div class="related-name">Vault City Brewing x Væskebalancen – KÆMPE Kjøbenhavner Stang – Pine Apple Modern Sour Beer – –</div>
+        <div class="related-price">66,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/vault-city-brewing-x-funky-fluid-xtremely-stoopid/">
+        <img src="https://www.bestofbeers.dk/wp-content/uploads/2026/05/VaultCityXtremelyStoopid.jpg" alt="Vault City Brewing x Funky Fluid – XTREMELY Stoopid – Blackberry, Raspberry, Coconut Cheescake Smoothie Sour Beer – –" loading="lazy">
+        <div class="related-name">Vault City Brewing x Funky Fluid – XTREMELY Stoopid – Blackberry, Raspberry, Coconut Cheescake Smoothie Sour Beer – –</div>
+        <div class="related-price">66,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/iiio-brewery-est-2017-8211-kysil-8211-smoothie/">
+        <img src="https://www.bestofbeers.dk/wp-content/uploads/2026/05/IIIOKysil.jpg" alt="IIIO Brewery est. 2017 &amp;#8211; Kysil &amp;#8211; Smoothie Pastry Sour &amp;#8211; &amp;#8211;" loading="lazy">
+        <div class="related-name">IIIO Brewery est. 2017 &amp;#8211; Kysil &amp;#8211; Smoothie Pastry Sour &amp;#8211; &amp;#8211;</div>
+        <div class="related-price">66,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/ten-men-brewery-not-for-breakfast-mango-blueberry/">
+        <img src="https://www.bestofbeers.dk/wp-content/uploads/2026/05/TenMenNotForBreakfast.jpg" alt="Ten Men Brewery – Not For Breakfast: Mango Blueberry Blackberry Black Currant Cheescake – Sour – –" loading="lazy">
+        <div class="related-name">Ten Men Brewery – Not For Breakfast: Mango Blueberry Blackberry Black Currant Cheescake – Sour – –</div>
+        <div class="related-price">66,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/vault-city-brewing-x-iron-brew-buckie-bomb/">
+        <img src="https://www.bestofbeers.dk/wp-content/uploads/2026/02/VaultCityBuckieBomb.jpeg" alt="Vault City Brewing x Iron Brew – Buckie BOMB – Modern Sour Beer – –" loading="lazy">
+        <div class="related-name">Vault City Brewing x Iron Brew – Buckie BOMB – Modern Sour Beer – –</div>
+        <div class="related-price">66,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/vault-city-brewing-x-long-live-overnight-oats/">
+        <img src="https://www.bestofbeers.dk/wp-content/uploads/2026/02/VaultCityOvernightOats.jpeg" alt="Vault City Brewing x Long Live – Overnight Oats – Modern Sour Beer Raspberry, Blueberry &amp;#038; Pomegranate – –" loading="lazy">
+        <div class="related-name">Vault City Brewing x Long Live – Overnight Oats – Modern Sour Beer Raspberry, Blueberry &amp;#038; Pomegranate – –</div>
+        <div class="related-price">66,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/vault-city-brewing-x-one-drop-brewing-co/">
+        <img src="https://www.bestofbeers.dk/wp-content/uploads/2026/02/VaultCitySummerDownUnder.jpeg" alt="Vault City Brewing x One Drop Brewing Co. – Summer Down Under – Mandarin, Mango &amp;#038; Peach Smoothie Sour – –" loading="lazy">
+        <div class="related-name">Vault City Brewing x One Drop Brewing Co. – Summer Down Under – Mandarin, Mango &amp;#038; Peach Smoothie Sour – –</div>
+        <div class="related-price">66,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/vault-city-bigger-zestier-cola/">
+        <img src="https://cdn.shopify.com/s/files/1/0776/5209/9400/files/3BE48ED1-8394-4B66-BAFD-7C2FD8E26A34.jpg?v=1781812814" alt="Vault City - Bigger Zestier Cola" loading="lazy">
+        <div class="related-name">Vault City - Bigger Zestier Cola</div>
+        <div class="related-price">66,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/van-ewing-nary-a-cloud/">
+        <img src="https://cdn.shopify.com/s/files/1/0776/5209/9400/files/70FA106A-BE2C-432A-841D-A822B3295FF8.jpg?v=1777791646" alt="Van Ewing - Nary a Cloud" loading="lazy">
+        <div class="related-name">Van Ewing - Nary a Cloud</div>
+        <div class="related-price">69,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/fat-orange-cat-walkabout-watermelon-blueberry/">
+        <img src="https://cdn.shopify.com/s/files/1/0368/1628/9924/files/fat-orange-cat-walkabout-watermelon-blueberry.png?v=1778230643" alt="Fat Orange Cat - Walkabout - Watermelon &amp; Blueberry" loading="lazy">
+        <div class="related-name">Fat Orange Cat - Walkabout - Watermelon &amp; Blueberry</div>
+        <div class="related-price">69,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/pipeworks-plum-catcher/">
+        <img src="https://cdn.shopify.com/s/files/1/0368/1628/9924/files/plum_catcher_b57aa604-f5a3-4f0d-92ac-7742e03a7872.png?v=1744798337" alt="Pipeworks - Plum Catcher" loading="lazy">
+        <div class="related-name">Pipeworks - Plum Catcher</div>
+        <div class="related-price">69,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/vault-city-brewing-sweet-shop-series-8211-giant/">
+        <img src="https://www.bestofbeers.dk/wp-content/uploads/2026/03/VaultCityGiantRhubarb.jpg" alt="Vault City Brewing – Sweet Shop Series &amp;#8211; Giant Rhubarb &amp;#038; Custard – Sour – –" loading="lazy">
+        <div class="related-name">Vault City Brewing – Sweet Shop Series &amp;#8211; Giant Rhubarb &amp;#038; Custard – Sour – –</div>
+        <div class="related-price">71,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/observatoriet-audacia-oak-juice/">
+        <img src="https://cdn.shopify.com/s/files/1/0551/6600/9423/files/FB4DCB6D-4FA3-45A7-B2BE-FB029523B7DE.jpg?v=1762106802" alt="Observatoriet - Audacia Oak Juice" loading="lazy">
+        <div class="related-name">Observatoriet - Audacia Oak Juice</div>
+        <div class="related-price">74,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/vault-city-brewing-cherry-cocoa-mocha-melt/">
+        <img src="https://cdn.shopify.com/s/files/1/0509/8477/9975/files/cherry-cocoa-mocha-melt-8-44cl.png?v=1762535308" alt="Cherry Cocoa Mocha Melt" loading="lazy">
+        <div class="related-name">Cherry Cocoa Mocha Melt</div>
+        <div class="related-price">75,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/down-by-law-fadlagret-sour-fra-attik-brewing/">
+        <img src="https://cdn-main.ideal.shop/images/by_hash/87ccc9cc4ba2f347cd2eec31d0a2cc4e92a7b48713681a6c69f427328e4c1859/500-0/DownbyLaw.jpg" alt="Down by Law · Fadlagret Sour fra Attik Brewing" loading="lazy">
+        <div class="related-name">Down by Law · Fadlagret Sour fra Attik Brewing</div>
+        <div class="related-price">75,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/funky-fluid-brewery-final-eight-france-tricolore-tropical/">
+        <img src="https://www.bestofbeers.dk/wp-content/uploads/2026/05/FunkyFluidFrance.jpg" alt="Funky Fluid Brewery – Final Eight France Tricolore – Tropical Macaron Ice Cream Sour – –" loading="lazy">
+        <div class="related-name">Funky Fluid Brewery – Final Eight France Tricolore – Tropical Macaron Ice Cream Sour – –</div>
+        <div class="related-price">76,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/hoppy-people-x-elmeleven-extratropical-cyclone-smoothie-sour/">
+        <img src="https://www.bestofbeers.dk/wp-content/uploads/2026/05/HoppyPeopleExtratropicalCyclone.jpg" alt="Hoppy People x Elmeleven – Extratropical Cyclone – Smoothie Sour – –" loading="lazy">
+        <div class="related-name">Hoppy People x Elmeleven – Extratropical Cyclone – Smoothie Sour – –</div>
+        <div class="related-price">76,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/evil-twin-brewing-nyc-body-by-etnyc/">
+        <img src="https://cdn.shopify.com/s/files/1/0776/5209/9400/files/8A8254C3-4373-4DC8-964D-8CA9864873BC.jpg?v=1772463846" alt="Evil Twin Brewing NYC – Body By ETNYC" loading="lazy">
+        <div class="related-name">Evil Twin Brewing NYC – Body By ETNYC</div>
+        <div class="related-price">77,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/holy-goat-solar-tomb/">
+        <img src="https://cdn.shopify.com/s/files/1/0551/6600/9423/files/DB6D170F-165A-4D84-8AF2-ECE22D197F12.jpg?v=1769002262" alt="Holy Goat - Solar Tomb" loading="lazy">
+        <div class="related-name">Holy Goat - Solar Tomb</div>
+        <div class="related-price">79,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/the-bruery-rueuze/">
+        <img src="https://cdn.shopify.com/s/files/1/0368/1628/9924/files/Rueuze_9dadb623-c144-4473-b59f-4a1edff83f25.png?v=1683278223" alt="The Bruery - Rueuze" loading="lazy">
+        <div class="related-name">The Bruery - Rueuze</div>
+        <div class="related-price">79,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/cuvee-de-ranke/">
+        <img src="https://cdn.shopify.com/s/files/1/0509/8477/9975/files/cuvee-de-rank-7-75cl_bfcee75a-5a1d-4d7d-8486-1918c4f2b03e.png?v=1737799889" alt="Cuvée De Ranke" loading="lazy">
+        <div class="related-name">Cuvée De Ranke</div>
+        <div class="related-price">80,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/holy-goat-brewing-sun-smasher-2026-edition-sour/">
+        <img src="https://www.bestofbeers.dk/wp-content/uploads/2026/05/HolyGoatsunsmasher2026.jpg" alt="Holy Goat Brewing – Sun Smasher 2026 Edition – Sour With Apricots – –" loading="lazy">
+        <div class="related-name">Holy Goat Brewing – Sun Smasher 2026 Edition – Sour With Apricots – –</div>
+        <div class="related-price">81,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/holy-goat-brewing-venom-hell-sour-with-bueberries/">
+        <img src="https://www.bestofbeers.dk/wp-content/uploads/2026/05/HolyGoatVenomHell.jpg" alt="Holy Goat Brewing – Venom Hell – Sour With Bueberries Hibiscus And Vanilla – –" loading="lazy">
+        <div class="related-name">Holy Goat Brewing – Venom Hell – Sour With Bueberries Hibiscus And Vanilla – –</div>
+        <div class="related-price">81,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/evil-twin-brewing-body-by-etnyc-sour-ale/">
+        <img src="https://www.bestofbeers.dk/wp-content/uploads/2026/05/EvilTwinBodyByETNYC.jpg" alt="Evil Twin Brewing – Body By ETNYC – Sour Ale Brewed With Energy Drink Syrup – –" loading="lazy">
+        <div class="related-name">Evil Twin Brewing – Body By ETNYC – Sour Ale Brewed With Energy Drink Syrup – –</div>
+        <div class="related-price">81,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/hop-hooligans-brewery-good-morning-pineapple-pineapple-peach/">
+        <img src="https://www.bestofbeers.dk/wp-content/uploads/2026/03/HopHooligansGoodMorningPineapple.jpg" alt="Hop Hooligans Brewery – Good Morning Pineapple – Pineapple, Peach, Banana and Pineapple Express Terpenes Smoothie Sour Ale – –" loading="lazy">
+        <div class="related-name">Hop Hooligans Brewery – Good Morning Pineapple – Pineapple, Peach, Banana and Pineapple Express Terpenes Smoothie Sour Ale – –</div>
+        <div class="related-price">81,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/vault-city-brewing-dragonfruit-peach-038-vanilla-sour/">
+        <img src="https://www.bestofbeers.dk/wp-content/uploads/2025/10/VaulCityDragonfruit.jpg" alt="Vault City Brewing – Dragonfruit, Peach &amp;#038; Vanilla Sour – –" loading="lazy">
+        <div class="related-name">Vault City Brewing – Dragonfruit, Peach &amp;#038; Vanilla Sour – –</div>
+        <div class="related-price">81,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/hop-hooligans-brewery-8211-melissa-038-sambucus-8211/">
+        <img src="https://www.bestofbeers.dk/wp-content/uploads/2026/02/HopHooligansMelissa.jpeg" alt="Hop Hooligans Brewery &amp;#8211; Melissa &amp;#038; Sambucus &amp;#8211; Lemon Balm, Elderberry, Blueberry and Citrus Ice Cream Smoothie Sour Ale – –" loading="lazy">
+        <div class="related-name">Hop Hooligans Brewery &amp;#8211; Melissa &amp;#038; Sambucus &amp;#8211; Lemon Balm, Elderberry, Blueberry and Citrus Ice Cream Smoothie Sour Ale – –</div>
+        <div class="related-price">81,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/krebs-brewing-co-prairie-artisan-ales-buzzer-beater/">
+        <img src="https://www.bestofbeers.dk/wp-content/uploads/2024/09/PrairieBuzzerBeater.jpg" alt="Krebs Brewing Co. Prairie Artisan Ales Buzzer Beater – Sour Ale With Natural Flavors and FD&amp;#038;C Blue1 – –" loading="lazy">
+        <div class="related-name">Krebs Brewing Co. Prairie Artisan Ales Buzzer Beater – Sour Ale With Natural Flavors and FD&amp;#038;C Blue1 – –</div>
+        <div class="related-price">81,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/brouwerij-verhaeghe-duchesse-de-bourgogne-37-5/">
+        <img src="https://cdn.shopify.com/s/files/1/0509/8477/9975/files/duchesse-de-bourgogne-6-2-37-5.png?v=1765012389" alt="Duchesse de Bourgogne 37,5" loading="lazy">
+        <div class="related-name">Duchesse de Bourgogne 37,5</div>
+        <div class="related-price">85,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/grugg-makk-molta-25/">
+        <img src="https://cdn.shopify.com/s/files/1/0368/1628/9924/files/molta_9d960d59-a536-4189-8b9f-e1b49cf4b0c6.png?v=1750411197" alt="Grugg &amp; Makk - MOLTA 25" loading="lazy">
+        <div class="related-name">Grugg &amp; Makk - MOLTA 25</div>
+        <div class="related-price">85,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/vault-city-brewing-x-sudden-death-brewing-you/">
+        <img src="https://www.bestofbeers.dk/wp-content/uploads/2026/02/VaultCityYouWontBelive.jpeg" alt="Vault City Brewing x Sudden Death Brewing – You Won&amp;#8217;t belive it&amp;#8217;s Not Crumble – Modern Sour Beer – –" loading="lazy">
+        <div class="related-name">Vault City Brewing x Sudden Death Brewing – You Won&amp;#8217;t belive it&amp;#8217;s Not Crumble – Modern Sour Beer – –</div>
+        <div class="related-price">86,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/evil-twin-nyc-evil-fusion-winter-edition/">
+        <img src="https://cdn.shopify.com/s/files/1/0368/1628/9924/files/evil_fusion_winter_edition_4088eecf-be42-4466-9b17-f61b9ff5401b.png?v=1745495396" alt="Evil Twin NYC - Evil Fusion - Winter Edition" loading="lazy">
+        <div class="related-name">Evil Twin NYC - Evil Fusion - Winter Edition</div>
+        <div class="related-price">89,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/applehoff-cherry-brandy-ba-sour-ba-fra-andersons/">
+        <img src="https://cdn-main.ideal.shop/images/by_hash/8f5bf857a69f042dfab3122961e46b13bb87bbcdc54e05738b4ee384d6f3f73b/500-0/Applehoff-Cherry-Brandy-BA.jpg" alt="Applehoff Cherry Brandy BA - Sour BA fra Anderson&#x27;s" loading="lazy">
+        <div class="related-name">Applehoff Cherry Brandy BA - Sour BA fra Anderson&#x27;s</div>
+        <div class="related-price">89,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/vision-port-ba-dark-sour-fra-blackout-brewing/">
+        <img src="https://cdn-main.ideal.shop/images/by_hash/a39adfd16bbc8f2e61470af9cabe8eb455edddfdb29c096e382bad12547da18e/500-0/vision.jpg" alt="Vision - Port BA Dark Sour fra Blackout Brewing" loading="lazy">
+        <div class="related-name">Vision - Port BA Dark Sour fra Blackout Brewing</div>
+        <div class="related-price">89,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/evil-twin-brewing-et-stay-home-4-royal/">
+        <img src="https://www.bestofbeers.dk/wp-content/uploads/2026/05/EvilTwinETStayRoyal.jpg" alt="Evil Twin Brewing – Et Stay Home 4 Royal Treatment – Sour Ale Brewed With Raspberry – –" loading="lazy">
+        <div class="related-name">Evil Twin Brewing – Et Stay Home 4 Royal Treatment – Sour Ale Brewed With Raspberry – –</div>
+        <div class="related-price">91,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/evil-twin-brewing-dumb-fruit-1-sour-ale/">
+        <img src="https://www.bestofbeers.dk/wp-content/uploads/2026/05/EvilTwinDumbFruit1.jpg" alt="Evil Twin Brewing – DUMB Fruit 1 – Sour Ale – –" loading="lazy">
+        <div class="related-name">Evil Twin Brewing – DUMB Fruit 1 – Sour Ale – –</div>
+        <div class="related-price">91,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/evil-twin-brewing-x-woven-water-evil-fusion/">
+        <img src="https://www.bestofbeers.dk/wp-content/uploads/2026/05/EvilTwinEvilFusion.jpg" alt="Evil Twin Brewing x Woven Water – Evil Fusion Autumn Edition – Sour Ale Brewed With Apple, Cinnamon, Cranberry – –" loading="lazy">
+        <div class="related-name">Evil Twin Brewing x Woven Water – Evil Fusion Autumn Edition – Sour Ale Brewed With Apple, Cinnamon, Cranberry – –</div>
+        <div class="related-price">91,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/holy-goat-brewing-x-party-cannon-stupefier-mango/">
+        <img src="https://www.bestofbeers.dk/wp-content/uploads/2025/09/HolyGoatBrewingStupefier.jpg" alt="Holy Goat Brewing x Party Cannon – Stupefier – Mango &amp;#038; Passionfruit Sour – –" loading="lazy">
+        <div class="related-name">Holy Goat Brewing x Party Cannon – Stupefier – Mango &amp;#038; Passionfruit Sour – –</div>
+        <div class="related-price">91,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/drekker-madam-mumble-the-fortune-teller/">
+        <img src="https://cdn.shopify.com/s/files/1/0551/6600/9423/files/026A0ED2-740D-4666-9359-4362A905DC46.jpg?v=1764338065" alt="Drekker - Madam Mumble: The Fortune Teller" loading="lazy">
+        <div class="related-name">Drekker - Madam Mumble: The Fortune Teller</div>
+        <div class="related-price">99,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/drekker-circue-du-swerve-the-contortionist-arpus-collab/">
+        <img src="https://cdn.shopify.com/s/files/1/0551/6600/9423/files/72DFF702-474F-4683-9D31-3753863A64B9.jpg?v=1764313407" alt="Drekker - Circue du Swerve: The Contortionist (Arpus Collab)" loading="lazy">
+        <div class="related-name">Drekker - Circue du Swerve: The Contortionist (Arpus Collab)</div>
+        <div class="related-price">99,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/drekker-swirlee-passionfruit-creamsicle/">
+        <img src="https://cdn.shopify.com/s/files/1/0551/6600/9423/files/6556FE59-0D3C-4A9A-B4E8-107248D26067.jpg?v=1762340338" alt="Drekker - Swirlee Passionfruit Creamsicle" loading="lazy">
+        <div class="related-name">Drekker - Swirlee Passionfruit Creamsicle</div>
+        <div class="related-price">99,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/drekker-braaaaains-peach-pomegranate/">
+        <img src="https://cdn.shopify.com/s/files/1/0551/6600/9423/files/289DF628-F134-4CDB-9ADA-1C458F9BA789.jpg?v=1762340339" alt="Drekker - Braaaaains Peach Pomegranate" loading="lazy">
+        <div class="related-name">Drekker - Braaaaains Peach Pomegranate</div>
+        <div class="related-price">99,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/the-veil-typhoon-lagoon-tastee/">
+        <img src="https://cdn.shopify.com/s/files/1/0368/1628/9924/files/The_Veil_-_Typhoon_Lagoon_Tastee_-_Smoothie_Sour_with_Coconut_Tropical_Fruit.png?v=1760692503" alt="The Veil - Typhoon Lagoon Tastee" loading="lazy">
+        <div class="related-name">The Veil - Typhoon Lagoon Tastee</div>
+        <div class="related-price">99,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/prizm-brewing-co-sour-bundle-spar-20-kr/">
+        <img src="https://cdn.shopify.com/s/files/1/0776/5209/9400/files/73BD1E01-BF6B-45A6-8BD5-BD5C06B83F2A.jpg?v=1782682133" alt="Prizm Brewing Co. sour Bundle spar 20 kr." loading="lazy">
+        <div class="related-name">Prizm Brewing Co. sour Bundle spar 20 kr.</div>
+        <div class="related-price">99,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/pierzanie-cognac-ba-imperial-dark-sour-ale-fra/">
+        <img src="https://cdn-main.ideal.shop/images/by_hash/44a43c983cf58bca6ce5c590f340f5a32ccd9e221dd769fb05bc59df98eafd6f/500-0/Pierzanie.jpg" alt="Pierzanie - Cognac BA Imperial Dark Sour Ale fra Blackout Brewing" loading="lazy">
+        <div class="related-name">Pierzanie - Cognac BA Imperial Dark Sour Ale fra Blackout Brewing</div>
+        <div class="related-price">99,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/evil-twin-brewing-no-more-dumplings-v-5/">
+        <img src="https://www.bestofbeers.dk/wp-content/uploads/2026/02/EvilTwinNoMoreDumplingsV5.jpg" alt="Evil Twin Brewing – No More Dumplings V.5 – Sour Ale Brewed With Strawberry, Lime &amp;#038; Peach – –" loading="lazy">
+        <div class="related-name">Evil Twin Brewing – No More Dumplings V.5 – Sour Ale Brewed With Strawberry, Lime &amp;#038; Peach – –</div>
+        <div class="related-price">101,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/rodenbach-grand-cru-2/">
+        <img src="https://www.bestofbeers.dk/wp-content/uploads/2024/08/RodenbachGrandcru750ml.jpg" alt="Rodenbach Grand Cru – –" loading="lazy">
+        <div class="related-name">Rodenbach Grand Cru – –</div>
+        <div class="related-price">101,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/wax-wings-brewing-c0-condor-valley-stuffed-french/">
+        <img src="https://cdn.shopify.com/s/files/1/0776/5209/9400/files/47E4A5B1-1A55-4C82-8897-0D1C4804EE92.jpg?v=1779401729" alt="Wax Wings Brewing C0. - Condor Valley Stuffed French Toast" loading="lazy">
+        <div class="related-name">Wax Wings Brewing C0. - Condor Valley Stuffed French Toast</div>
+        <div class="related-price">119,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/de-struise-brouwers-ypres-reserva-2015-dark-horse/">
+        <img src="https://cdn.shopify.com/s/files/1/0509/8477/9975/products/dark-horse-reserva-75cl.png?v=1607873479" alt="Ypres Reserva 2015 - Dark Horse" loading="lazy">
+        <div class="related-name">Ypres Reserva 2015 - Dark Horse</div>
+        <div class="related-price">126,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/omnipollo-x-michelberger-hard-pineapple-sour-fruited/">
+        <img src="https://www.bestofbeers.dk/wp-content/uploads/2026/01/OmnipolloxMichelbergerHardPineapple.jpg" alt="Omnipollo x Michelberger – Hard Pineapple – Sour Fruited – –" loading="lazy">
+        <div class="related-name">Omnipollo x Michelberger – Hard Pineapple – Sour Fruited – –</div>
+        <div class="related-price">136,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/omnipollo-x-450-north-8211-bianca-slushy-xxl/">
+        <img src="https://www.bestofbeers.dk/wp-content/uploads/2026/01/Omnipollox450NorthBiancaSlushyXXL.jpg" alt="Omnipollo x 450 North &amp;#8211; Bianca Slushy XXL – Sour Fruited – –" loading="lazy">
+        <div class="related-name">Omnipollo x 450 North &amp;#8211; Bianca Slushy XXL – Sour Fruited – –</div>
+        <div class="related-price">136,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/rouge-ales-8211-cotes-du-rogue-8211-oud/">
+        <img src="https://www.bestofbeers.dk/wp-content/uploads/2025/01/RogueCotesduRogueOudBruin.jpg" alt="Rouge Ales &amp;#8211; Cotes du Rogue &amp;#8211; Oud Bruin Sour – –" loading="lazy">
+        <div class="related-name">Rouge Ales &amp;#8211; Cotes du Rogue &amp;#8211; Oud Bruin Sour – –</div>
+        <div class="related-price">148,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/hop-hooligans-sparklepuss-strawberry-shortcake-rum-ba/">
+        <img src="https://cdn.shopify.com/s/files/1/0776/5209/9400/files/A339193F-F82A-4778-BD28-AFB343C69452.jpg?v=1774383035" alt="Hop Hooligans - Sparklepuss Strawberry Shortcake Rum BA" loading="lazy">
+        <div class="related-name">Hop Hooligans - Sparklepuss Strawberry Shortcake Rum BA</div>
+        <div class="related-price">160,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/wildflower-hive-post-brood/">
+        <img src="https://cdn.shopify.com/s/files/1/0368/1628/9924/files/hive_post_brood.png?v=1772635224" alt="Wildflower - Hive: Post Brood" loading="lazy">
+        <div class="related-name">Wildflower - Hive: Post Brood</div>
+        <div class="related-price">167,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/wildflower-clos-de-billy/">
+        <img src="https://cdn.shopify.com/s/files/1/0368/1628/9924/files/clos_de_billy.png?v=1772703652" alt="Wildflower - Clos de Billy" loading="lazy">
+        <div class="related-name">Wildflower - Clos de Billy</div>
+        <div class="related-price">168,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/wildflower-zibeerbo-2025/">
+        <img src="https://cdn.shopify.com/s/files/1/0368/1628/9924/files/zibeerbo.png?v=1772703848" alt="Wildflower - Zibeerbo 2025" loading="lazy">
+        <div class="related-name">Wildflower - Zibeerbo 2025</div>
+        <div class="related-price">168,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/wildflower-serenity-batch-4/">
+        <img src="https://cdn.shopify.com/s/files/1/0368/1628/9924/files/serenity_1_24a619c1-5858-4193-b758-ece023684f5c.png?v=1762443367" alt="Wildflower - Serenity (Batch 4)" loading="lazy">
+        <div class="related-name">Wildflower - Serenity (Batch 4)</div>
+        <div class="related-price">168,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/hildegard-gray-winds-fly-by-night/">
+        <img src="https://cdn.shopify.com/s/files/1/0368/1628/9924/files/gray_winds_cc09faee-e6e2-4ee0-b015-ba26215488cb.png?v=1755250398" alt="Hildegard - Gray Winds - Fly by Night" loading="lazy">
+        <div class="related-name">Hildegard - Gray Winds - Fly by Night</div>
+        <div class="related-price">169,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/alesong-single-origin/">
+        <img src="https://cdn.shopify.com/s/files/1/0551/6600/9423/files/B7A2D9B5-29AD-446D-802C-3150875FE66C.jpg?v=1754994536" alt="Alesong - Single Origin" loading="lazy">
+        <div class="related-name">Alesong - Single Origin</div>
+        <div class="related-price">174,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/the-bruery-annuel-2019-bourbon-038-oak-solera/">
+        <img src="https://www.bestofbeers.dk/wp-content/uploads/2021/02/PhotoRoom_20210208_130728.png" alt="The Bruery, Annuel 2019, Bourbon &amp;#038; Oak Solera Sour Ale, &amp;#8211; &amp;#8211;" loading="lazy">
+        <div class="related-name">The Bruery, Annuel 2019, Bourbon &amp;#038; Oak Solera Sour Ale, &amp;#8211; &amp;#8211;</div>
+        <div class="related-price">206,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/the-bruery-annuel-2018-bourbon-038-oak-solera/">
+        <img src="https://www.bestofbeers.dk/wp-content/uploads/2021/02/PhotoRoom_20210208_130613.png" alt="The Bruery, Annuel 2018, Bourbon &amp;#038; Oak Solera Sour Ale, &amp;#8211; &amp;#8211;" loading="lazy">
+        <div class="related-name">The Bruery, Annuel 2018, Bourbon &amp;#038; Oak Solera Sour Ale, &amp;#8211; &amp;#8211;</div>
+        <div class="related-price">206,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/sour-pakke-m-4-oel-fra-vault-city-3/">
+        <img src="https://cdn.shopify.com/s/files/1/0600/9438/2263/files/Sour_1924dcbf-df5f-4347-8b6e-b05a4b00ae32.jpg?v=1773836805" alt="Sour pakke m/ 4 øl fra Vault City" loading="lazy">
+        <div class="related-name">Sour pakke m/ 4 øl fra Vault City</div>
+        <div class="related-price">220,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/penyllan-carolyn-2020-vintage/">
+        <img src="https://cdn.shopify.com/s/files/1/0551/6600/9423/files/IMG-6711.jpg?v=1781525786" alt="Penyllan - Carolyn (2020 Vintage)" loading="lazy">
+        <div class="related-name">Penyllan - Carolyn (2020 Vintage)</div>
+        <div class="related-price">229,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/huyghe-brewery-delirium-barrel-aged-sour-blond/">
+        <img src="https://cdn.shopify.com/s/files/1/0509/8477/9975/files/delirium-barrel-aged-sour-blond-10-8-75cl.png?v=1744887271" alt="Delirium Barrel Aged Sour Blond" loading="lazy">
+        <div class="related-name">Delirium Barrel Aged Sour Blond</div>
+        <div class="related-price">245,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/penyllan-lucia-2019-vintage/">
+        <img src="https://cdn.shopify.com/s/files/1/0551/6600/9423/files/IMG-6712.jpg?v=1781525785" alt="Penyllan - Lucia (2019 Vintage)" loading="lazy">
+        <div class="related-name">Penyllan - Lucia (2019 Vintage)</div>
+        <div class="related-price">249,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/penyllan-frances-2017-vintage/">
+        <img src="https://cdn.shopify.com/s/files/1/0551/6600/9423/files/IMG-6713.jpg?v=1781525784" alt="Penyllan - Frances (2017 Vintage)" loading="lazy">
+        <div class="related-name">Penyllan - Frances (2017 Vintage)</div>
+        <div class="related-price">249,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/brussels-beer-project-go-west-red-sally-dansaert/">
+        <img src="https://www.bestofbeers.dk/wp-content/uploads/2023/06/PhotoRoom_003_20230615_121904.jpg" alt="Brussels Beer Project, Go West Red Sally, Dansaert, Sour Red Ale, &amp;#8211; &amp;#8211;" loading="lazy">
+        <div class="related-name">Brussels Beer Project, Go West Red Sally, Dansaert, Sour Red Ale, &amp;#8211; &amp;#8211;</div>
+        <div class="related-price">251,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/oelpakke-sour-beer/">
+        <img src="https://www.vildmedvin.dk/img/1000/1000/resize/3/0/30541-bundle_1_20.jpg" alt="Ølpakke - Sour Beer" loading="lazy">
+        <div class="related-name">Ølpakke - Sour Beer</div>
+        <div class="related-price">264,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/vault-city-sour-sommer-bundle-spar-50-kr/">
+        <img src="https://cdn.shopify.com/s/files/1/0776/5209/9400/files/EDE8AA9D-D6ED-4FAB-BA0A-ED4F393C0C3E.jpg?v=1782678919" alt="Vault City Sour sommer Bundle spar 50 kr." loading="lazy">
+        <div class="related-name">Vault City Sour sommer Bundle spar 50 kr.</div>
+        <div class="related-price">273,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/sour-smagekasse-6-stk-gns-47-5-kr/">
+        <img src="https://cdn.shopify.com/s/files/1/0402/1239/8243/files/Sour_Smagekasse_b351d11f-2f68-453f-b703-c1e5c2a33e02.png?v=1781002820" alt="Sour Smagekasse (6 stk)(Gns. 47,5 Kr. Pr. Øl)" loading="lazy">
+        <div class="related-name">Sour Smagekasse (6 stk)(Gns. 47,5 Kr. Pr. Øl)</div>
+        <div class="related-price">285,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/weaver-hollow-root-branch-drifter-waves/">
+        <img src="https://cdn.shopify.com/s/files/1/0368/1628/9924/files/drifter_1db5365c-9f21-47e2-a9a1-3be80e7e8060.png?v=1737054724" alt="Weaver Hollow / Root + Branch - Drifter Waves" loading="lazy">
+        <div class="related-name">Weaver Hollow / Root + Branch - Drifter Waves</div>
+        <div class="related-price">295,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/brouwerij-st-bernardus-st-bernardus-abt-12-barrel/">
+        <img src="https://cdn.shopify.com/s/files/1/0509/8477/9975/files/st-bernardus-abt-12-barrel-aged-sour-10-75cl.png?v=1742314720" alt="St. Bernardus Abt 12 Barrel Aged Sour" loading="lazy">
+        <div class="related-name">St. Bernardus Abt 12 Barrel Aged Sour</div>
+        <div class="related-price">325,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/weaver-hollow-salmagundi-vol-4/">
+        <img src="https://cdn.shopify.com/s/files/1/0368/1628/9924/files/salmagundi_v4_d899ad2e-b04b-425f-8621-c9c97c617f2e.png?v=1737054735" alt="Weaver Hollow - Salmagundi Vol. 4" loading="lazy">
+        <div class="related-name">Weaver Hollow - Salmagundi Vol. 4</div>
+        <div class="related-price">369,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/weaver-hollow-atto-terzo-albarino/">
+        <img src="https://cdn.shopify.com/s/files/1/0368/1628/9924/files/atto_terzo_altarino_grapes_214ff387-4cff-4a30-934e-e75d16aee116.png?v=1737054760" alt="Weaver Hollow - Atto Terzo Albarino" loading="lazy">
+        <div class="related-name">Weaver Hollow - Atto Terzo Albarino</div>
+        <div class="related-price">449,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/side-project-fruited-specials-bundle/">
+        <img src="https://cdn.shopify.com/s/files/1/0368/1628/9924/files/fruited_bundle.png?v=1781856982" alt="Side Project - Fruited Specials Bundle" loading="lazy">
+        <div class="related-name">Side Project - Fruited Specials Bundle</div>
+        <div class="related-price">1249,00 kr</div>
+    </a></div></div>
+        <button class="related-toggle" onclick="this.previousElementSibling.querySelectorAll(&quot;.related-hidden&quot;).forEach(e=>e.style.display=&quot;block&quot;);this.style.display=&quot;none&quot;">Vis alle (133)</button>
     </div>
 
     <div class="disclaimer">
         📢 Affiliate disclosure: BeerSniffer kan modtage provision når du køber via vores links.
-        Priser opdateret 03.07.2026. Tjek altid den endelige pris hos forhandleren før køb.
+        Priser opdateret 07.07.2026. Tjek altid den endelige pris hos forhandleren før køb.
     </div>
 </div>
 

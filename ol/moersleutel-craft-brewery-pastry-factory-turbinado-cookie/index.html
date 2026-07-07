@@ -66,6 +66,9 @@ body { background: var(--bg); color: var(--text); font-family: 'DM Sans', sans-s
 .related-card img, .related-img-placeholder { width: 100%; height: 70px; object-fit: contain; background: var(--surface2); border-radius: 6px; margin-bottom: 0.4rem; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; }
 .related-name { font-size: 0.72rem; line-height: 1.3; margin-bottom: 0.2rem; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; min-height: 1.9em; }
 .related-price { font-size: 0.78rem; font-weight: 700; color: var(--gold-light); }
+.related-hidden { display: none; }
+.related-toggle { display: block; margin: 0.8rem auto 0; background: var(--surface2); border: 1px solid var(--border-light); border-radius: 999px; padding: 0.45rem 1.2rem; color: var(--gold); font-family: 'DM Sans', sans-serif; font-size: 0.78rem; cursor: pointer; transition: border-color 0.15s; }
+.related-toggle:hover { border-color: var(--gold); color: var(--gold-light); }
 .disclaimer { font-size: 0.72rem; color: var(--text-muted); margin-top: 2rem; line-height: 1.6; border-top: 1px solid var(--border); padding-top: 1rem; }
 .chart-section { margin: 1.5rem 0; background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 1rem 1.1rem; }
 .chart-heading { font-size: 0.7rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 0.7rem; }
@@ -132,9 +135,9 @@ body { background: var(--bg); color: var(--text); font-family: 'DM Sans', sans-s
 
     
     <div class="chart-section">
-        <div class="chart-heading">📈 Prisudvikling (2026-05-17 – 2026-07-03)</div>
+        <div class="chart-heading">📈 Prisudvikling (2026-05-17 – 2026-07-07)</div>
         <svg viewBox="0 0 320 90" class="price-chart" preserveAspectRatio="none">
-            <polyline points="8.0,39.7 15.2,39.7 22.5,8.0 29.7,39.7 37.0,8.0 44.2,39.7 51.4,39.7 58.7,39.7 65.9,8.0 73.1,39.7 80.4,39.7 87.6,8.0 94.9,39.7 102.1,8.0 109.3,39.7 116.6,39.7 123.8,39.7 131.0,82.0 138.3,8.0 145.5,39.7 152.8,8.0 160.0,39.7 167.2,8.0 174.5,39.7 181.7,39.7 189.0,8.0 196.2,39.7 203.4,39.7 210.7,8.0 217.9,39.7 225.1,8.0 232.4,39.7 239.6,39.7 246.9,8.0 254.1,39.7 261.3,8.0 268.6,39.7 275.8,39.7 283.0,39.7 290.3,39.7 297.5,39.7 304.8,39.7 312.0,39.7" fill="none" style="stroke: var(--gold); stroke-width: 2;" />
+            <polyline points="8.0,39.7 14.8,39.7 21.5,8.0 28.3,39.7 35.0,8.0 41.8,39.7 48.5,39.7 55.3,39.7 62.0,8.0 68.8,39.7 75.6,39.7 82.3,8.0 89.1,39.7 95.8,8.0 102.6,39.7 109.3,39.7 116.1,39.7 122.8,82.0 129.6,8.0 136.4,39.7 143.1,8.0 149.9,39.7 156.6,8.0 163.4,39.7 170.1,39.7 176.9,8.0 183.6,39.7 190.4,39.7 197.2,8.0 203.9,39.7 210.7,8.0 217.4,39.7 224.2,39.7 230.9,8.0 237.7,39.7 244.4,8.0 251.2,39.7 258.0,39.7 264.7,39.7 271.5,39.7 278.2,39.7 285.0,39.7 291.7,39.7 298.5,39.7 305.2,39.7 312.0,39.7" fill="none" style="stroke: var(--gold); stroke-width: 2;" />
             <circle cx="312.0" cy="39.7" r="3.5" style="fill: var(--gold-light);" />
         </svg>
         <div class="chart-range">
@@ -149,42 +152,73 @@ body { background: var(--bg); color: var(--text); font-family: 'DM Sans', sans-s
 
     <div class="related-section">
         <div class="related-heading">Flere øl fra Moersleutel Craft Brewery</div>
-        <div class="related-grid">
+        <div class="related-grid"><div class="related-item">
     <a class="related-card" href="https://www.beersniffer.dk/ol/moersleutel-craft-brewery-crank-the-spring-2026/">
         <img src="https://cdn.shopify.com/s/files/1/0509/8477/9975/files/crank-the-spring-2026-5-5-44cl.png?v=1778868535" alt="Crank the Spring 2026" loading="lazy">
         <div class="related-name">Crank the Spring 2026</div>
         <div class="related-price">60,00 kr</div>
-    </a>
+    </a></div><div class="related-item">
     <a class="related-card" href="https://www.beersniffer.dk/ol/moersleutel-craft-brewery-motor-oil-nitro/">
         <img src="https://cdn.shopify.com/s/files/1/0509/8477/9975/files/motor-oil-nitro-12-44cl.png?v=1745939885" alt="Motor Oil Nitro" loading="lazy">
         <div class="related-name">Motor Oil Nitro</div>
         <div class="related-price">65,00 kr</div>
-    </a>
+    </a></div><div class="related-item">
     <a class="related-card" href="https://www.beersniffer.dk/ol/moersleutel-craft-brewery-almond-ganache-bulldozer/">
         <img src="https://cdn.shopify.com/s/files/1/0509/8477/9975/files/almond-ganache-bulldozer-11-44cl.png?v=1741522769" alt="Almond Ganache Bulldozer" loading="lazy">
         <div class="related-name">Almond Ganache Bulldozer</div>
         <div class="related-price">70,00 kr</div>
-    </a>
+    </a></div><div class="related-item">
     <a class="related-card" href="https://www.beersniffer.dk/ol/moersleutel-craft-brewery-pastry-factory-golden-syrup-bacon/">
         <img src="https://cdn.shopify.com/s/files/1/0509/8477/9975/files/pastry-factory-golden-syrup-bacon-pancakes.png?v=1779289187" alt="Pastry Factory: Golden Syrup Bacon Pancakes" loading="lazy">
         <div class="related-name">Pastry Factory: Golden Syrup Bacon Pancakes</div>
         <div class="related-price">80,00 kr</div>
-    </a>
+    </a></div><div class="related-item">
     <a class="related-card" href="https://www.beersniffer.dk/ol/moersleutel-craft-brewery-pastry-factory-panna-cotta/">
         <img src="https://cdn.shopify.com/s/files/1/0509/8477/9975/files/pastry-factory-panna-cotta-10-44cl.png?v=1778855959" alt="Pastry Factory: Panna Cotta" loading="lazy">
         <div class="related-name">Pastry Factory: Panna Cotta</div>
         <div class="related-price">80,00 kr</div>
-    </a>
+    </a></div><div class="related-item">
     <a class="related-card" href="https://www.beersniffer.dk/ol/moersleutel-craft-brewery-9-years-celebration-return-to/">
         <img src="https://www.bestofbeers.dk/wp-content/uploads/2025/06/MoersleutelReturn.jpg" alt="Moersleutel Craft Brewery – 9 Years Celebration Return to Ithaca – Oaked Quadrupel – –" loading="lazy">
         <div class="related-name">Moersleutel Craft Brewery – 9 Years Celebration Return to Ithaca – Oaked Quadrupel – –</div>
         <div class="related-price">86,00 kr</div>
-    </a></div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/moersleutel-craft-brewery-pastry-factory-pistachio-gelato/">
+        <img src="https://cdn.shopify.com/s/files/1/0509/8477/9975/files/pastry-factory-pistachio-gelato-10-44cl.png?v=1778869815" alt="Pastry Factory: Pistachio Gelato" loading="lazy">
+        <div class="related-name">Pastry Factory: Pistachio Gelato</div>
+        <div class="related-price">87,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/moersleutel-craft-brewery-pastry-factory-vanilla-glazed-eclair/">
+        <img src="https://cdn.shopify.com/s/files/1/0509/8477/9975/files/pastry-factory-vanilla-glazed-clair-10-44cl.png?v=1778871595" alt="Pastry Factory: Vanilla Glazed Éclair" loading="lazy">
+        <div class="related-name">Pastry Factory: Vanilla Glazed Éclair</div>
+        <div class="related-price">90,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/moersleutel-craft-brewery-extravagant-peacherine/">
+        <img src="https://cdn.shopify.com/s/files/1/0509/8477/9975/files/extravagant-peacherine-11-44cl.png?v=1778853045" alt="Extravagant: Peacherine" loading="lazy">
+        <div class="related-name">Extravagant: Peacherine</div>
+        <div class="related-price">110,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/moersleutel-craft-brewery-barcode-turquoise-off-white/">
+        <img src="https://cdn.shopify.com/s/files/1/0509/8477/9975/files/barcode-turquoise-off-white-14-44cl.png?v=1779290398" alt="Barcode: Turquoise Off-White" loading="lazy">
+        <div class="related-name">Barcode: Turquoise Off-White</div>
+        <div class="related-price">130,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/moersleutel-craft-brewery-barcode-silver-jet-black/">
+        <img src="https://cdn.shopify.com/s/files/1/0509/8477/9975/files/barcode-silver-jet-black-14-44cl.png?v=1775216441" alt="Barcode: Silver &amp; Jet Black" loading="lazy">
+        <div class="related-name">Barcode: Silver &amp; Jet Black</div>
+        <div class="related-price">135,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/moersleutel-craft-brewery-barcode-turquoise-orange/">
+        <img src="https://cdn.shopify.com/s/files/1/0509/8477/9975/files/barcode-turquoise-orange-15-44cl.png?v=1745937094" alt="Barcode Turquoise Orange" loading="lazy">
+        <div class="related-name">Barcode Turquoise Orange</div>
+        <div class="related-price">135,00 kr</div>
+    </a></div></div>
+        <button class="related-toggle" onclick="this.previousElementSibling.querySelectorAll(&quot;.related-hidden&quot;).forEach(e=>e.style.display=&quot;block&quot;);this.style.display=&quot;none&quot;">Vis alle (12)</button>
     </div>
 
     <div class="disclaimer">
         📢 Affiliate disclosure: BeerSniffer kan modtage provision når du køber via vores links.
-        Priser opdateret 03.07.2026. Tjek altid den endelige pris hos forhandleren før køb.
+        Priser opdateret 07.07.2026. Tjek altid den endelige pris hos forhandleren før køb.
     </div>
 </div>
 

@@ -66,6 +66,9 @@ body { background: var(--bg); color: var(--text); font-family: 'DM Sans', sans-s
 .related-card img, .related-img-placeholder { width: 100%; height: 70px; object-fit: contain; background: var(--surface2); border-radius: 6px; margin-bottom: 0.4rem; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; }
 .related-name { font-size: 0.72rem; line-height: 1.3; margin-bottom: 0.2rem; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; min-height: 1.9em; }
 .related-price { font-size: 0.78rem; font-weight: 700; color: var(--gold-light); }
+.related-hidden { display: none; }
+.related-toggle { display: block; margin: 0.8rem auto 0; background: var(--surface2); border: 1px solid var(--border-light); border-radius: 999px; padding: 0.45rem 1.2rem; color: var(--gold); font-family: 'DM Sans', sans-serif; font-size: 0.78rem; cursor: pointer; transition: border-color 0.15s; }
+.related-toggle:hover { border-color: var(--gold); color: var(--gold-light); }
 .disclaimer { font-size: 0.72rem; color: var(--text-muted); margin-top: 2rem; line-height: 1.6; border-top: 1px solid var(--border); padding-top: 1rem; }
 .chart-section { margin: 1.5rem 0; background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 1rem 1.1rem; }
 .chart-heading { font-size: 0.7rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 0.7rem; }
@@ -132,9 +135,9 @@ body { background: var(--bg); color: var(--text); font-family: 'DM Sans', sans-s
 
     
     <div class="chart-section">
-        <div class="chart-heading">📈 Prisudvikling (2026-05-17 – 2026-07-03)</div>
+        <div class="chart-heading">📈 Prisudvikling (2026-05-17 – 2026-07-07)</div>
         <svg viewBox="0 0 320 90" class="price-chart" preserveAspectRatio="none">
-            <polyline points="8.0,15.6 16.0,15.6 24.0,8.0 32.0,15.6 40.0,15.6 48.0,15.6 56.0,8.0 64.0,15.6 72.0,15.6 80.0,8.0 88.0,15.6 96.0,15.6 104.0,15.6 112.0,15.6 120.0,82.0 128.0,8.0 136.0,15.6 144.0,8.0 152.0,15.6 160.0,8.0 168.0,15.6 176.0,15.6 184.0,15.6 192.0,8.0 200.0,15.6 208.0,8.0 216.0,15.6 224.0,8.0 232.0,15.6 240.0,15.6 248.0,8.0 256.0,15.6 264.0,30.8 272.0,30.8 280.0,30.8 288.0,30.8 296.0,30.8 304.0,30.8 312.0,30.8" fill="none" style="stroke: var(--gold); stroke-width: 2;" />
+            <polyline points="8.0,15.6 15.4,15.6 22.8,8.0 30.2,15.6 37.7,15.6 45.1,15.6 52.5,8.0 59.9,15.6 67.3,15.6 74.7,8.0 82.1,15.6 89.6,15.6 97.0,15.6 104.4,15.6 111.8,82.0 119.2,8.0 126.6,15.6 134.0,8.0 141.5,15.6 148.9,8.0 156.3,15.6 163.7,15.6 171.1,15.6 178.5,8.0 186.0,15.6 193.4,8.0 200.8,15.6 208.2,8.0 215.6,15.6 223.0,15.6 230.4,8.0 237.9,15.6 245.3,30.8 252.7,30.8 260.1,30.8 267.5,30.8 274.9,30.8 282.3,30.8 289.8,30.8 297.2,30.8 304.6,30.8 312.0,30.8" fill="none" style="stroke: var(--gold); stroke-width: 2;" />
             <circle cx="312.0" cy="30.8" r="3.5" style="fill: var(--gold-light);" />
         </svg>
         <div class="chart-range">
@@ -149,17 +152,18 @@ body { background: var(--bg); color: var(--text); font-family: 'DM Sans', sans-s
 
     <div class="related-section">
         <div class="related-heading">Flere øl fra Brasserie d’Achouffe</div>
-        <div class="related-grid">
+        <div class="related-grid"><div class="related-item">
     <a class="related-card" href="https://www.beersniffer.dk/ol/brasserie-dachouffe-chouffe-ipa/">
         <img src="https://cdn.shopify.com/s/files/1/0509/8477/9975/files/houblon-chouffe-2025-33cl.png?v=1763917955" alt="Chouffe IPA" loading="lazy">
         <div class="related-name">Chouffe IPA</div>
         <div class="related-price">38,00 kr</div>
-    </a></div>
+    </a></div></div>
+        
     </div>
 
     <div class="disclaimer">
         📢 Affiliate disclosure: BeerSniffer kan modtage provision når du køber via vores links.
-        Priser opdateret 03.07.2026. Tjek altid den endelige pris hos forhandleren før køb.
+        Priser opdateret 07.07.2026. Tjek altid den endelige pris hos forhandleren før køb.
     </div>
 </div>
 

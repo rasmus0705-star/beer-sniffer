@@ -66,6 +66,9 @@ body { background: var(--bg); color: var(--text); font-family: 'DM Sans', sans-s
 .related-card img, .related-img-placeholder { width: 100%; height: 70px; object-fit: contain; background: var(--surface2); border-radius: 6px; margin-bottom: 0.4rem; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; }
 .related-name { font-size: 0.72rem; line-height: 1.3; margin-bottom: 0.2rem; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; min-height: 1.9em; }
 .related-price { font-size: 0.78rem; font-weight: 700; color: var(--gold-light); }
+.related-hidden { display: none; }
+.related-toggle { display: block; margin: 0.8rem auto 0; background: var(--surface2); border: 1px solid var(--border-light); border-radius: 999px; padding: 0.45rem 1.2rem; color: var(--gold); font-family: 'DM Sans', sans-serif; font-size: 0.78rem; cursor: pointer; transition: border-color 0.15s; }
+.related-toggle:hover { border-color: var(--gold); color: var(--gold-light); }
 .disclaimer { font-size: 0.72rem; color: var(--text-muted); margin-top: 2rem; line-height: 1.6; border-top: 1px solid var(--border); padding-top: 1rem; }
 .chart-section { margin: 1.5rem 0; background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 1rem 1.1rem; }
 .chart-heading { font-size: 0.7rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 0.7rem; }
@@ -149,42 +152,58 @@ body { background: var(--bg); color: var(--text); font-family: 'DM Sans', sans-s
 
     <div class="related-section">
         <div class="related-heading">Flere øl fra Lindemans</div>
-        <div class="related-grid">
+        <div class="related-grid"><div class="related-item">
     <a class="related-card" href="https://www.beersniffer.dk/ol/lindemans-gueuze/">
         <img src="https://www.vildmedvin.dk/img/1000/1000/resize/l/i/linde.jpg" alt="Lindemans, Gueuze" loading="lazy">
         <div class="related-name">Lindemans, Gueuze</div>
         <div class="related-price">22,00 kr</div>
-    </a>
+    </a></div><div class="related-item">
     <a class="related-card" href="https://www.beersniffer.dk/ol/lindemans-kriek-2/">
         <img src="https://www.vildmedvin.dk/img/1000/1000/resize/l/i/lindemans_kriek_1.jpg" alt="Lindemans, Kriek" loading="lazy">
         <div class="related-name">Lindemans, Kriek</div>
         <div class="related-price">24,00 kr</div>
-    </a>
+    </a></div><div class="related-item">
     <a class="related-card" href="https://www.beersniffer.dk/ol/lindemans-faro-2/">
         <img src="https://www.vildmedvin.dk/img/1000/1000/resize/l/i/lindemans_faro_1.jpg" alt="Lindemans, Faro" loading="lazy">
         <div class="related-name">Lindemans, Faro</div>
         <div class="related-price">24,00 kr</div>
-    </a>
+    </a></div><div class="related-item">
     <a class="related-card" href="https://www.beersniffer.dk/ol/lindemans-alkoholfri-kriek/">
         <img src="https://www.vildmedvin.dk/img/1000/1000/resize/l/i/lindemans-kriek-alkoholfri.jpg" alt="Lindemans Alkoholfri Kriek" loading="lazy">
         <div class="related-name">Lindemans Alkoholfri Kriek</div>
         <div class="related-price">27,00 kr</div>
-    </a>
+    </a></div><div class="related-item">
     <a class="related-card" href="https://www.beersniffer.dk/ol/cassis-lindemans/">
         <img src="https://cdn.shopify.com/s/files/1/0600/9438/2263/files/cassis.jpg?v=1742307521" alt="Cassis - Lindemans - -" loading="lazy">
         <div class="related-name">Cassis - Lindemans - -</div>
         <div class="related-price">28,00 kr</div>
-    </a>
+    </a></div><div class="related-item">
     <a class="related-card" href="https://www.beersniffer.dk/ol/lindemans-framboise-3/">
         <img src="https://www.vildmedvin.dk/img/1000/1000/resize/l/i/lindemans_framboise_1.jpg" alt="Lindemans, Framboise" loading="lazy">
         <div class="related-name">Lindemans, Framboise</div>
         <div class="related-price">28,00 kr</div>
-    </a></div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/lindemans-tarot-noir/">
+        <img src="https://www.vildmedvin.dk/img/1000/1000/resize/l/i/lindemans_tarot_noir_8l.jpg" alt="Lindemans, Tarot Noir" loading="lazy">
+        <div class="related-name">Lindemans, Tarot Noir</div>
+        <div class="related-price">28,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/lindemans-strawberry/">
+        <img src="https://www.vildmedvin.dk/img/1000/1000/resize/4/4/4444_3.jpg" alt="Lindemans, Strawberry" loading="lazy">
+        <div class="related-name">Lindemans, Strawberry</div>
+        <div class="related-price">29,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/lindemans-gueuze-cuvee-rene/">
+        <img src="https://www.vildmedvin.dk/img/1000/1000/resize/l/i/lindemans_cuvee_rene_gueuze_2_.jpg" alt="Lindemans, Gueuze Cuvée René" loading="lazy">
+        <div class="related-name">Lindemans, Gueuze Cuvée René</div>
+        <div class="related-price">89,00 kr</div>
+    </a></div></div>
+        <button class="related-toggle" onclick="this.previousElementSibling.querySelectorAll(&quot;.related-hidden&quot;).forEach(e=>e.style.display=&quot;block&quot;);this.style.display=&quot;none&quot;">Vis alle (9)</button>
     </div>
 
     <div class="disclaimer">
         📢 Affiliate disclosure: BeerSniffer kan modtage provision når du køber via vores links.
-        Priser opdateret 03.07.2026. Tjek altid den endelige pris hos forhandleren før køb.
+        Priser opdateret 07.07.2026. Tjek altid den endelige pris hos forhandleren før køb.
     </div>
 </div>
 

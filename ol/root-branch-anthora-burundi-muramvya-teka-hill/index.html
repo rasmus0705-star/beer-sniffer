@@ -66,6 +66,9 @@ body { background: var(--bg); color: var(--text); font-family: 'DM Sans', sans-s
 .related-card img, .related-img-placeholder { width: 100%; height: 70px; object-fit: contain; background: var(--surface2); border-radius: 6px; margin-bottom: 0.4rem; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; }
 .related-name { font-size: 0.72rem; line-height: 1.3; margin-bottom: 0.2rem; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; min-height: 1.9em; }
 .related-price { font-size: 0.78rem; font-weight: 700; color: var(--gold-light); }
+.related-hidden { display: none; }
+.related-toggle { display: block; margin: 0.8rem auto 0; background: var(--surface2); border: 1px solid var(--border-light); border-radius: 999px; padding: 0.45rem 1.2rem; color: var(--gold); font-family: 'DM Sans', sans-serif; font-size: 0.78rem; cursor: pointer; transition: border-color 0.15s; }
+.related-toggle:hover { border-color: var(--gold); color: var(--gold-light); }
 .disclaimer { font-size: 0.72rem; color: var(--text-muted); margin-top: 2rem; line-height: 1.6; border-top: 1px solid var(--border); padding-top: 1rem; }
 .chart-section { margin: 1.5rem 0; background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 1rem 1.1rem; }
 .chart-heading { font-size: 0.7rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 0.7rem; }
@@ -138,27 +141,28 @@ body { background: var(--bg); color: var(--text); font-family: 'DM Sans', sans-s
 
     <div class="related-section">
         <div class="related-heading">Flere øl fra Root + Branch</div>
-        <div class="related-grid">
+        <div class="related-grid"><div class="related-item">
     <a class="related-card" href="https://www.beersniffer.dk/ol/root-branch-oude-greg-6-pack/">
         <img src="https://cdn.shopify.com/s/files/1/0368/1628/9924/files/oude_greg_26c9550a-5b60-4324-8e44-f216686a402c.png?v=1777628509" alt="Root + Branch - Oude Greg (6-pack)" loading="lazy">
         <div class="related-name">Root + Branch - Oude Greg (6-pack)</div>
         <div class="related-price">69,00 kr</div>
-    </a>
+    </a></div><div class="related-item">
     <a class="related-card" href="https://www.beersniffer.dk/ol/root-branch-historical-society-10-p-czech-pils/">
         <img src="https://cdn.shopify.com/s/files/1/0368/1628/9924/files/Root_Branch_-_Historical_Society_10P_Czech_Lager_-_Classic_Czech_Lager.png?v=1760088849" alt="Root + Branch - Historical Society: 10°P Czech Pils" loading="lazy">
         <div class="related-name">Root + Branch - Historical Society: 10°P Czech Pils</div>
         <div class="related-price">87,00 kr</div>
-    </a>
+    </a></div><div class="related-item">
     <a class="related-card" href="https://www.beersniffer.dk/ol/root-branch-les-fleurs-du-mal/">
         <img src="https://cdn.shopify.com/s/files/1/0368/1628/9924/files/les_fleurs_du_mal_b0192413-eed2-43e5-9b7b-db20fa65d14d.png?v=1747882728" alt="Root + Branch - Les Fleurs Du Mal" loading="lazy">
         <div class="related-name">Root + Branch - Les Fleurs Du Mal</div>
         <div class="related-price">88,00 kr</div>
-    </a></div>
+    </a></div></div>
+        
     </div>
 
     <div class="disclaimer">
         📢 Affiliate disclosure: BeerSniffer kan modtage provision når du køber via vores links.
-        Priser opdateret 03.07.2026. Tjek altid den endelige pris hos forhandleren før køb.
+        Priser opdateret 07.07.2026. Tjek altid den endelige pris hos forhandleren før køb.
     </div>
 </div>
 

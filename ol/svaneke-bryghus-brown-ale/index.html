@@ -66,6 +66,9 @@ body { background: var(--bg); color: var(--text); font-family: 'DM Sans', sans-s
 .related-card img, .related-img-placeholder { width: 100%; height: 70px; object-fit: contain; background: var(--surface2); border-radius: 6px; margin-bottom: 0.4rem; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; }
 .related-name { font-size: 0.72rem; line-height: 1.3; margin-bottom: 0.2rem; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; min-height: 1.9em; }
 .related-price { font-size: 0.78rem; font-weight: 700; color: var(--gold-light); }
+.related-hidden { display: none; }
+.related-toggle { display: block; margin: 0.8rem auto 0; background: var(--surface2); border: 1px solid var(--border-light); border-radius: 999px; padding: 0.45rem 1.2rem; color: var(--gold); font-family: 'DM Sans', sans-serif; font-size: 0.78rem; cursor: pointer; transition: border-color 0.15s; }
+.related-toggle:hover { border-color: var(--gold); color: var(--gold-light); }
 .disclaimer { font-size: 0.72rem; color: var(--text-muted); margin-top: 2rem; line-height: 1.6; border-top: 1px solid var(--border); padding-top: 1rem; }
 .chart-section { margin: 1.5rem 0; background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 1rem 1.1rem; }
 .chart-heading { font-size: 0.7rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 0.7rem; }
@@ -132,9 +135,9 @@ body { background: var(--bg); color: var(--text); font-family: 'DM Sans', sans-s
 
     
     <div class="chart-section">
-        <div class="chart-heading">📈 Prisudvikling (2026-05-23 – 2026-07-03)</div>
+        <div class="chart-heading">📈 Prisudvikling (2026-05-23 – 2026-07-07)</div>
         <svg viewBox="0 0 320 90" class="price-chart" preserveAspectRatio="none">
-            <polyline points="8.0,82.0 22.5,82.0 37.0,70.2 51.4,8.0 65.9,82.0 80.4,82.0 94.9,70.2 109.3,82.0 123.8,82.0 138.3,70.2 152.8,82.0 167.2,82.0 181.7,70.2 196.2,82.0 210.7,82.0 225.1,82.0 239.6,82.0 254.1,82.0 268.6,82.0 283.0,70.2 297.5,70.2 312.0,70.2" fill="none" style="stroke: var(--gold); stroke-width: 2;" />
+            <polyline points="8.0,82.0 20.7,82.0 33.3,70.2 46.0,8.0 58.7,82.0 71.3,82.0 84.0,70.2 96.7,82.0 109.3,82.0 122.0,70.2 134.7,82.0 147.3,82.0 160.0,70.2 172.7,82.0 185.3,82.0 198.0,82.0 210.7,82.0 223.3,82.0 236.0,82.0 248.7,70.2 261.3,70.2 274.0,70.2 286.7,70.2 299.3,70.2 312.0,70.2" fill="none" style="stroke: var(--gold); stroke-width: 2;" />
             <circle cx="312.0" cy="70.2" r="3.5" style="fill: var(--gold-light);" />
         </svg>
         <div class="chart-range">
@@ -149,42 +152,58 @@ body { background: var(--bg); color: var(--text); font-family: 'DM Sans', sans-s
 
     <div class="related-section">
         <div class="related-heading">Flere øl fra Svaneke bryghus</div>
-        <div class="related-grid">
-    <a class="related-card" href="https://www.beersniffer.dk/ol/svaneke-bryghus-bingo-gringo-mexican-lager/">
-        <img src="https://www.vildmedvin.dk/img/1000/1000/resize/b/i/bingo_gringo.jpg" alt="Svaneke bryghus, Bingo Gringo Mexican Lager" loading="lazy">
-        <div class="related-name">Svaneke bryghus, Bingo Gringo Mexican Lager</div>
-        <div class="related-price">19,00 kr</div>
-    </a>
+        <div class="related-grid"><div class="related-item">
     <a class="related-card" href="https://www.beersniffer.dk/ol/svaneke-bryghus-dont-worry-brown-ale-alkoholfri/">
         <img src="https://www.vildmedvin.dk/img/1000/1000/resize/3/3/333.jpg" alt="Svaneke bryghus, Don&#x27;t Worry Brown Ale Alkoholfri" loading="lazy">
         <div class="related-name">Svaneke bryghus, Don&#x27;t Worry Brown Ale Alkoholfri</div>
         <div class="related-price">26,00 kr</div>
-    </a>
+    </a></div><div class="related-item">
     <a class="related-card" href="https://www.beersniffer.dk/ol/svaneke-bryghus-calma-pilsner/">
         <img src="https://www.vildmedvin.dk/img/1000/1000/resize/s/v/svaneke_calma_pilsner.jpg" alt="Svaneke bryghus, Calma Pilsner" loading="lazy">
         <div class="related-name">Svaneke bryghus, Calma Pilsner</div>
         <div class="related-price">27,00 kr</div>
-    </a>
+    </a></div><div class="related-item">
     <a class="related-card" href="https://www.beersniffer.dk/ol/svaneke-bryghus-juicy-island-ipa/">
         <img src="https://www.vildmedvin.dk/img/1000/1000/resize/s/v/svaneke_bryghus_juicy_island_ipa.jpg" alt="Svaneke bryghus, Juicy Island IPA" loading="lazy">
         <div class="related-name">Svaneke bryghus, Juicy Island IPA</div>
         <div class="related-price">27,00 kr</div>
-    </a>
+    </a></div><div class="related-item">
     <a class="related-card" href="https://www.beersniffer.dk/ol/svaneke-bryghus-seaside-session-ipa/">
         <img src="https://www.vildmedvin.dk/img/1000/1000/resize/s/v/svaneke_bryghus_seaside_session_ipa.jpg" alt="Svaneke bryghus, Seaside Session IPA" loading="lazy">
         <div class="related-name">Svaneke bryghus, Seaside Session IPA</div>
         <div class="related-price">27,00 kr</div>
-    </a>
-    <a class="related-card" href="https://www.beersniffer.dk/ol/svaneke-bryghus-oekologisk-classic/">
-        <img src="https://www.vildmedvin.dk/img/1000/1000/resize/s/v/svanek_classic.jpg" alt="Svaneke bryghus, Økologisk Classic" loading="lazy">
-        <div class="related-name">Svaneke bryghus, Økologisk Classic</div>
+    </a></div><div class="related-item">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/svaneke-bryghus-moerk-guld/">
+        <img src="https://www.vildmedvin.dk/img/1000/1000/resize/s/v/svaneke_m_rk_guld.jpg" alt="Svaneke bryghus, Mørk Guld" loading="lazy">
+        <div class="related-name">Svaneke bryghus, Mørk Guld</div>
         <div class="related-price">28,00 kr</div>
-    </a></div>
+    </a></div><div class="related-item">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/svaneke-bryghus-stout/">
+        <img src="https://www.vildmedvin.dk/img/1000/1000/resize/s/v/svaneke_stout.jpg" alt="Svaneke bryghus, Stout" loading="lazy">
+        <div class="related-name">Svaneke bryghus, Stout</div>
+        <div class="related-price">28,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/choko-stout-svaneke-bryghus/">
+        <div class="related-img-placeholder">🍺</div>
+        <div class="related-name">Choko stout - Svaneke Bryghus - -</div>
+        <div class="related-price">35,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/svaneke-bryghus-sweet-mary/">
+        <img src="https://www.vildmedvin.dk/img/1000/1000/resize/s/v/svanene_sweet_mary.jpg" alt="Svaneke bryghus, Sweet Mary" loading="lazy">
+        <div class="related-name">Svaneke bryghus, Sweet Mary</div>
+        <div class="related-price">39,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/svaneke-bryghus-baltic-liqourice-porter-baltic-porter-3/">
+        <img src="https://cdn.shopify.com/s/files/1/0600/9438/2263/files/IMG_20240801_125441.jpg?v=1722510076" alt="Svaneke Bryghus &quot;Baltic Liqourice Porter&quot; | | | Baltic Porter" loading="lazy">
+        <div class="related-name">Svaneke Bryghus &quot;Baltic Liqourice Porter&quot; | | | Baltic Porter</div>
+        <div class="related-price">58,00 kr</div>
+    </a></div></div>
+        <button class="related-toggle" onclick="this.previousElementSibling.querySelectorAll(&quot;.related-hidden&quot;).forEach(e=>e.style.display=&quot;block&quot;);this.style.display=&quot;none&quot;">Vis alle (9)</button>
     </div>
 
     <div class="disclaimer">
         📢 Affiliate disclosure: BeerSniffer kan modtage provision når du køber via vores links.
-        Priser opdateret 03.07.2026. Tjek altid den endelige pris hos forhandleren før køb.
+        Priser opdateret 07.07.2026. Tjek altid den endelige pris hos forhandleren før køb.
     </div>
 </div>
 

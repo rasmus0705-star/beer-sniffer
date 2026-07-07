@@ -66,6 +66,9 @@ body { background: var(--bg); color: var(--text); font-family: 'DM Sans', sans-s
 .related-card img, .related-img-placeholder { width: 100%; height: 70px; object-fit: contain; background: var(--surface2); border-radius: 6px; margin-bottom: 0.4rem; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; }
 .related-name { font-size: 0.72rem; line-height: 1.3; margin-bottom: 0.2rem; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; min-height: 1.9em; }
 .related-price { font-size: 0.78rem; font-weight: 700; color: var(--gold-light); }
+.related-hidden { display: none; }
+.related-toggle { display: block; margin: 0.8rem auto 0; background: var(--surface2); border: 1px solid var(--border-light); border-radius: 999px; padding: 0.45rem 1.2rem; color: var(--gold); font-family: 'DM Sans', sans-serif; font-size: 0.78rem; cursor: pointer; transition: border-color 0.15s; }
+.related-toggle:hover { border-color: var(--gold); color: var(--gold-light); }
 .disclaimer { font-size: 0.72rem; color: var(--text-muted); margin-top: 2rem; line-height: 1.6; border-top: 1px solid var(--border); padding-top: 1rem; }
 .chart-section { margin: 1.5rem 0; background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 1rem 1.1rem; }
 .chart-heading { font-size: 0.7rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 0.7rem; }
@@ -138,42 +141,308 @@ body { background: var(--bg); color: var(--text); font-family: 'DM Sans', sans-s
 
     <div class="related-section">
         <div class="related-heading">Andre Pilsner-øl</div>
-        <div class="related-grid">
+        <div class="related-grid"><div class="related-item">
     <a class="related-card" href="https://www.beersniffer.dk/ol/hancock-hoekerbajer/">
         <img src="https://www.vildmedvin.dk/img/1000/1000/resize/h/_/h_ker.jpg" alt="Hancock, Høkerbajer" loading="lazy">
         <div class="related-name">Hancock, Høkerbajer</div>
         <div class="related-price">11,00 kr</div>
-    </a>
+    </a></div><div class="related-item">
     <a class="related-card" href="https://www.beersniffer.dk/ol/angla-pils-glutenfri-pilsner-fra-spike-brewery/">
         <img src="https://cdn-main.ideal.shop/images/by_hash/2db6a4bb0e8b881a891de61e5f6e9f30de12dcbff84eaebaad5d2e726b9102f9/500-0/anglepils.jpg" alt="Ängla-Pils · Glutenfri Pilsner fra Spike Brewery" loading="lazy">
         <div class="related-name">Ängla-Pils · Glutenfri Pilsner fra Spike Brewery</div>
         <div class="related-price">12,00 kr</div>
-    </a>
+    </a></div><div class="related-item">
     <a class="related-card" href="https://www.beersniffer.dk/ol/thisted-bryghus-oeko-thy-pilsner/">
         <img src="https://www.vildmedvin.dk/img/1000/1000/resize/f/f/ffffff.jpg" alt="Thisted Bryghus, ØKO Thy Pilsner" loading="lazy">
         <div class="related-name">Thisted Bryghus, ØKO Thy Pilsner</div>
         <div class="related-price">14,00 kr</div>
-    </a>
+    </a></div><div class="related-item">
     <a class="related-card" href="https://www.beersniffer.dk/ol/hancock-oekologisk-pilsner/">
         <img src="https://www.vildmedvin.dk/img/1000/1000/resize/h/a/hancock___kologisk_pilsner.jpg" alt="Hancock Økologisk pilsner" loading="lazy">
         <div class="related-name">Hancock Økologisk pilsner</div>
         <div class="related-price">14,00 kr</div>
-    </a>
+    </a></div><div class="related-item">
     <a class="related-card" href="https://www.beersniffer.dk/ol/efes-pilsner/">
         <img src="https://www.vildmedvin.dk/img/1000/1000/resize/e/f/efes_pilsner_1.jpg" alt="Efes Pilsner" loading="lazy">
         <div class="related-name">Efes Pilsner</div>
         <div class="related-price">14,00 kr</div>
-    </a>
+    </a></div><div class="related-item">
     <a class="related-card" href="https://www.beersniffer.dk/ol/hancock-old-gambrinus-light/">
         <img src="https://www.vildmedvin.dk/img/1000/1000/resize/o/l/old_light.jpg" alt="Hancock, Old Gambrinus Light" loading="lazy">
         <div class="related-name">Hancock, Old Gambrinus Light</div>
         <div class="related-price">15,00 kr</div>
-    </a></div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/brewdog-lost-lager-pilsner/">
+        <img src="https://cdn.shopify.com/s/files/1/0402/1239/8243/files/Brewdog_LostLager33glas.png?v=1781624952" alt="Brewdog - Lost Lager - Pilsner" loading="lazy">
+        <div class="related-name">Brewdog - Lost Lager - Pilsner</div>
+        <div class="related-price">19,75 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/pilsner-urquell/">
+        <img src="https://www.vildmedvin.dk/img/1000/1000/resize/p/i/pilsner-urquell-500-ml-d_se_large.jpg" alt="Pilsner Urquell" loading="lazy">
+        <div class="related-name">Pilsner Urquell</div>
+        <div class="related-price">21,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/wannabe-pilsner-fra-hophead/">
+        <img src="https://cdn-main.ideal.shop/images/by_hash/b64b93312e943f1dbe8a20e44d92b477fa377871ef2cfef93d00133b2979c848/500-0/wannabe.jpg" alt="Wannabe - Pilsner fra Hophead" loading="lazy">
+        <div class="related-name">Wannabe - Pilsner fra Hophead</div>
+        <div class="related-price">22,50 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/foroya-bjor-vaedder/">
+        <img src="https://www.vildmedvin.dk/img/1000/1000/resize/p/i/pilsnar_v_dder.jpg" alt="Föroya Bjór, Vædder" loading="lazy">
+        <div class="related-name">Föroya Bjór, Vædder</div>
+        <div class="related-price">24,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/budvar-original/">
+        <img src="https://www.vildmedvin.dk/img/1000/1000/resize/b/u/budvar_original.jpg" alt="Budvar Original" loading="lazy">
+        <div class="related-name">Budvar Original</div>
+        <div class="related-price">24,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/asahi-super-dry/">
+        <img src="https://www.vildmedvin.dk/img/1000/1000/resize/a/s/asahi-super-dry.jpg" alt="Asahi Super Dry" loading="lazy">
+        <div class="related-name">Asahi Super Dry</div>
+        <div class="related-price">24,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/foroya-bjor-8211-pilsnar-8211-pilsner/">
+        <img src="https://www.bestofbeers.dk/wp-content/uploads/2026/05/Foroya-Bjor-Pilsnar.jpg" alt="Föroya Bjór &amp;#8211; Pilsnar &amp;#8211; Pilsner – –" loading="lazy">
+        <div class="related-name">Föroya Bjór &amp;#8211; Pilsnar &amp;#8211; Pilsner – –</div>
+        <div class="related-price">26,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/svaneke-bryghus-calma-pilsner/">
+        <img src="https://www.vildmedvin.dk/img/1000/1000/resize/s/v/svaneke_calma_pilsner.jpg" alt="Svaneke bryghus, Calma Pilsner" loading="lazy">
+        <div class="related-name">Svaneke bryghus, Calma Pilsner</div>
+        <div class="related-price">27,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/fur-bryghus-classic/">
+        <img src="https://www.vildmedvin.dk/img/1000/1000/resize/f/u/fur_bryghus_classic.jpg" alt="Fur Bryghus, Classic" loading="lazy">
+        <div class="related-name">Fur Bryghus, Classic</div>
+        <div class="related-price">29,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/o-o-brewing-pivot-pils/">
+        <img src="https://cdn.shopify.com/s/files/1/0551/6600/9423/files/80F6D245-3EF4-461F-A33B-31D4B4499220.jpg?v=1777995390" alt="O/O Brewing - Pivot Pils" loading="lazy">
+        <div class="related-name">O/O Brewing - Pivot Pils</div>
+        <div class="related-price">29,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/aaben-birch-glutenfri-pilsner-2/">
+        <img src="https://cdn.shopify.com/s/files/1/0402/1239/8243/files/Aben_Birch_33cl.png?v=1759694562" alt="ÅBEN – Birch - Glutenfri Pilsner ( )" loading="lazy">
+        <div class="related-name">ÅBEN – Birch - Glutenfri Pilsner ( )</div>
+        <div class="related-price">29,75 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/randers-bryghus-merry-christmas-jule-pilsner/">
+        <img src="https://cdn.shopify.com/s/files/1/0509/8477/9975/files/merry-christmas-jule-pilsner-7-50cl.png?v=1728650401" alt="Merry Christmas - Jule Pilsner" loading="lazy">
+        <div class="related-name">Merry Christmas - Jule Pilsner</div>
+        <div class="related-price">30,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/pils-pilsner-two-chefs-2/">
+        <img src="https://cdn-main.ideal.shop/images/by_hash/313540ea7c469f96c3677fc7486d6ebe875ee1fe695854e2074280bf47314096/500-0/pils-twochefs.jpg" alt="Pils · Pilsner · Two Chefs" loading="lazy">
+        <div class="related-name">Pils · Pilsner · Two Chefs</div>
+        <div class="related-price">30,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/krenkerup-1367-premium-2/">
+        <img src="https://www.vildmedvin.dk/img/1000/1000/resize/1/3/1367_33.jpg" alt="Krenkerup, 1367 Premium" loading="lazy">
+        <div class="related-name">Krenkerup, 1367 Premium</div>
+        <div class="related-price">31,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/bayreuther-brauhaus-hell/">
+        <img src="https://www.vildmedvin.dk/img/1000/1000/resize/b/a/bayreuther_brauhaus_hell.jpg" alt="Bayreuther Brauhaus Hell" loading="lazy">
+        <div class="related-name">Bayreuther Brauhaus Hell</div>
+        <div class="related-price">31,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/hancock-beer/">
+        <img src="https://www.vildmedvin.dk/img/1000/1000/resize/5/7/5709216002208_0_2.jpg" alt="Hancock Beer" loading="lazy">
+        <div class="related-name">Hancock Beer</div>
+        <div class="related-price">32,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/alhambra-reserva-1925/">
+        <img src="https://www.vildmedvin.dk/img/1000/1000/resize/p/r/premiumbeer-alhambra-reserva1.jpg" alt="Alhambra Reserva 1925" loading="lazy">
+        <div class="related-name">Alhambra Reserva 1925</div>
+        <div class="related-price">32,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/schonramer-pils/">
+        <img src="https://www.vildmedvin.dk/img/1000/1000/resize/s/c/sch_nramer_pils.jpg" alt="Schönramer Pils" loading="lazy">
+        <div class="related-name">Schönramer Pils</div>
+        <div class="related-price">32,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/krenkerup-pilsner-alkoholfri-2/">
+        <img src="https://www.vildmedvin.dk/img/1000/1000/resize/k/r/krenkerup_pilsner_alkoholfri33cl.jpg" alt="Krenkerup, Pilsner Alkoholfri" loading="lazy">
+        <div class="related-name">Krenkerup, Pilsner Alkoholfri</div>
+        <div class="related-price">33,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/mongozo-premium-pilsener/">
+        <img src="https://cdn.shopify.com/s/files/1/0509/8477/9975/files/mongozo-premium-pilsener-5-33cl.png?v=1760280719" alt="Mongozo Premium Pilsener" loading="lazy">
+        <div class="related-name">Mongozo Premium Pilsener</div>
+        <div class="related-price">33,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/moen-bryghus-groenjaegers-pilsner-oekologisk/">
+        <img src="https://www.vildmedvin.dk/img/1000/1000/resize/g/r/gr_nj_gerspilsner_ko-33cl.jpg" alt="Møn Bryghus, Grønjægers Pilsner, Økologisk" loading="lazy">
+        <div class="related-name">Møn Bryghus, Grønjægers Pilsner, Økologisk</div>
+        <div class="related-price">34,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/moen-bryghus-klintekongens-klassik-oekologisk/">
+        <img src="https://www.vildmedvin.dk/img/1000/1000/resize/k/l/klintekongensklassik_ko-33cl.jpg" alt="Møn Bryghus, Klintekongens Klassik, Økologisk" loading="lazy">
+        <div class="related-name">Møn Bryghus, Klintekongens Klassik, Økologisk</div>
+        <div class="related-price">34,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/p-hjala-laager-0-alkoholfri-pilsner/">
+        <img src="https://cdn.shopify.com/s/files/1/0402/1239/8243/files/Pohjala_Laager0.png?v=1776218779" alt="Põhjala - Laager 0 - Alkoholfri Pilsner" loading="lazy">
+        <div class="related-name">Põhjala - Laager 0 - Alkoholfri Pilsner</div>
+        <div class="related-price">35,75 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/randers-bryghus-paaskeoel/">
+        <img src="https://cdn.shopify.com/s/files/1/0509/8477/9975/files/p-ske-l-6-8-50cl.png?v=1772725266" alt="Påskeøl" loading="lazy">
+        <div class="related-name">Påskeøl</div>
+        <div class="related-price">39,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/bryg-365-baellerbajer/">
+        <img src="https://www.vildmedvin.dk/img/1000/1000/resize/b/r/bryg365-baellebajer.jpg" alt="Bryg 365, Bællerbajer" loading="lazy">
+        <div class="related-name">Bryg 365, Bællerbajer</div>
+        <div class="related-price">39,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/p-hjala-laager-german-pilsner/">
+        <img src="https://cdn.shopify.com/s/files/1/0402/1239/8243/files/pohjala_laager.png?v=1763055036" alt="Põhjala - Laager - German Pilsner" loading="lazy">
+        <div class="related-name">Põhjala - Laager - German Pilsner</div>
+        <div class="related-price">39,75 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/undercover-brewing-guess-whos-back-oekologisk-pilsner/">
+        <img src="https://cdn.shopify.com/s/files/1/0402/1239/8243/files/UndercoverBrewing_OrganicPils.png?v=1728025850" alt="Undercover Brewing - Guess Who&#x27;s Back - Økologisk Pilsner" loading="lazy">
+        <div class="related-name">Undercover Brewing - Guess Who&#x27;s Back - Økologisk Pilsner</div>
+        <div class="related-price">39,75 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/seven-bro7hers-pilsner-lager/">
+        <img src="https://cdn.shopify.com/s/files/1/0402/1239/8243/files/SevenBrothers_Pilsner.png?v=1777883098" alt="Seven Bro7hers - Pilsner - Lager" loading="lazy">
+        <div class="related-name">Seven Bro7hers - Pilsner - Lager</div>
+        <div class="related-price">39,75 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/saro-pilsner-pilsner-fra-sarobanans-bryggeri/">
+        <img src="https://cdn-main.ideal.shop/images/by_hash/16f29768a185e471dbc50fc72e71e12823af6589af00b132d258c20f5d4d49ce/500-0/saropilsner.jpg" alt="Saro Pilsner - Pilsner fra Säröbanans Bryggeri" loading="lazy">
+        <div class="related-name">Saro Pilsner - Pilsner fra Säröbanans Bryggeri</div>
+        <div class="related-price">40,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/krenkerup-pilsner-alkoholfri/">
+        <img src="https://www.vildmedvin.dk/img/1000/1000/resize/k/r/krenkerup_pilsner_alkoholfri_50cl.jpg" alt="Krenkerup, Pilsner Alkoholfri" loading="lazy">
+        <div class="related-name">Krenkerup, Pilsner Alkoholfri</div>
+        <div class="related-price">43,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/thyras-bryg-noch-ein-pils-bitte/">
+        <img src="https://cdn.shopify.com/s/files/1/0551/6600/9423/files/57B4EDCF-5F01-476E-9EBE-E7EFCDB2F90F.jpg?v=1780402226" alt="Thyras Bryg - Noch Ein Pils, Bitte!" loading="lazy">
+        <div class="related-name">Thyras Bryg - Noch Ein Pils, Bitte!</div>
+        <div class="related-price">44,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/rybryg-ry-pilsner-105/">
+        <img src="https://cdn.shopify.com/s/files/1/0509/8477/9975/files/ry-pilsner.png?v=1747399627" alt="Ry Pilsner" loading="lazy">
+        <div class="related-name">Ry Pilsner</div>
+        <div class="related-price">45,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/esbjerg-pilsner-esbjerg-bryghus/">
+        <img src="https://cdn.shopify.com/s/files/1/0600/9438/2263/files/rn-image_picker_lib_temp_8db40b26-6533-4269-a5c9-59c609538860.jpg?v=1783430889" alt="Esbjerg Pilsner - Esbjerg bryghus - -" loading="lazy">
+        <div class="related-name">Esbjerg Pilsner - Esbjerg bryghus - -</div>
+        <div class="related-price">45,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/core-range-czech-style-lager-pilsner-blas/">
+        <img src="https://cdn.shopify.com/s/files/1/0600/9438/2263/files/IMG_2906.heic?v=1756115296" alt="Core Range: Czech-style Lager - , , Pilsner - BLAS" loading="lazy">
+        <div class="related-name">Core Range: Czech-style Lager - , , Pilsner - BLAS</div>
+        <div class="related-price">45,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/pilsdee-dry-hopped-pilsner-fra-blackout-brewing/">
+        <img src="https://cdn-main.ideal.shop/images/by_hash/b6f605f54b5b48e9aad4dce75c9466e123b1ec921c56b89d1a08c132af17b6ca/500-0/pilsdet.jpg" alt="PilsdeÈ - Dry Hopped Pilsner fra Blackout Brewing" loading="lazy">
+        <div class="related-name">PilsdeÈ - Dry Hopped Pilsner fra Blackout Brewing</div>
+        <div class="related-price">45,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/bad-seed-uno-pils-italian-style-pilsner/">
+        <img src="https://www.bestofbeers.dk/wp-content/uploads/2026/02/BadSeedUnoPils.jpeg" alt="Bad Seed – UNO Pils – Italian Style Pilsner – –" loading="lazy">
+        <div class="related-name">Bad Seed – UNO Pils – Italian Style Pilsner – –</div>
+        <div class="related-price">46,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/bad-seed-neu-pilsner-8211-8211/">
+        <img src="https://www.bestofbeers.dk/wp-content/uploads/2024/02/Photoroom_002_20240212_100041.jpg" alt="Bad Seed, Neu Pilsner, &amp;#8211; &amp;#8211;" loading="lazy">
+        <div class="related-name">Bad Seed, Neu Pilsner, &amp;#8211; &amp;#8211;</div>
+        <div class="related-price">46,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/vemb-bryghus-husets-classic/">
+        <img src="https://www.vildmedvin.dk/img/1000/1000/resize/v/e/vemb_bryghus_husets_classic.jpg" alt="Vemb Bryghus, Husets Classic" loading="lazy">
+        <div class="related-name">Vemb Bryghus, Husets Classic</div>
+        <div class="related-price">49,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/2085-1-bohemian-pilsner/">
+        <img src="https://cdn.shopify.com/s/files/1/0368/1628/9924/files/2085-1-bohemian-pilsner.png?v=1781245641" alt="2085 - 1 Bohemian Pilsner" loading="lazy">
+        <div class="related-name">2085 - 1 Bohemian Pilsner</div>
+        <div class="related-price">49,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/metamorph-west-coast-pilsner-fra-nurme/">
+        <img src="https://cdn-main.ideal.shop/images/by_hash/af8ab1fdcd9ea9f2a642c76655ae2ea19720274c0fca657949003eac7b01b44e/500-0/metamorph2.jpg" alt="Metamorph - West Coast Pilsner fra Nurme" loading="lazy">
+        <div class="related-name">Metamorph - West Coast Pilsner fra Nurme</div>
+        <div class="related-price">50,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/stepping-stone-brewing-co-new-tides-pilsner/">
+        <img src="https://www.bestofbeers.dk/wp-content/uploads/2026/04/SteppingStoneNewTidesPilsner.jpg" alt="Stepping Stone Brewing Co. – New Tides – Pilsner – –" loading="lazy">
+        <div class="related-name">Stepping Stone Brewing Co. – New Tides – Pilsner – –</div>
+        <div class="related-price">51,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/fanoe-rav/">
+        <img src="https://www.vildmedvin.dk/img/1000/1000/resize/5/4/543_3.jpg" alt="Fanø, Rav" loading="lazy">
+        <div class="related-name">Fanø, Rav</div>
+        <div class="related-price">52,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/hr-skov-lyng-oel/">
+        <img src="https://www.vildmedvin.dk/img/1000/1000/resize/h/r/hr_skov_lyng-ol.jpg" alt="Hr. Skov, Lyng øl" loading="lazy">
+        <div class="related-name">Hr. Skov, Lyng øl</div>
+        <div class="related-price">54,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/bryg-365-verdens-far-ligste-mand/">
+        <img src="https://www.vildmedvin.dk/img/1000/1000/resize/v/e/verdens_farligste_mand.jpg" alt="Bryg 365, Verdens far´ligste mand" loading="lazy">
+        <div class="related-name">Bryg 365, Verdens far´ligste mand</div>
+        <div class="related-price">54,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/van-ewing-light-of-day/">
+        <img src="https://cdn.shopify.com/s/files/1/0368/1628/9924/files/van-ewing-light-of-day_695f0a9b-9194-4fc7-ac02-727296b1574b.png?v=1781253464" alt="Van Ewing - Light of Day" loading="lazy">
+        <div class="related-name">Van Ewing - Light of Day</div>
+        <div class="related-price">59,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/evil-twin-nyc-greenhouse-czech-pils-conditioned-on/">
+        <img src="https://cdn.shopify.com/s/files/1/0368/1628/9924/files/evil-twin-nyc-greenhouse-czech-pils.png?v=1777455391" alt="Evil Twin NYC - Greenhouse Czech Pils Conditioned on American Oak Foudre" loading="lazy">
+        <div class="related-name">Evil Twin NYC - Greenhouse Czech Pils Conditioned on American Oak Foudre</div>
+        <div class="related-price">59,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/evil-twin-nyc-a-little-bit-fancy/">
+        <img src="https://cdn.shopify.com/s/files/1/0368/1628/9924/files/dandies_73f03815-d674-4318-9304-f9ba700bf168.png?v=1771577335" alt="Evil Twin NYC - A Little Bit Fancy" loading="lazy">
+        <div class="related-name">Evil Twin NYC - A Little Bit Fancy</div>
+        <div class="related-price">59,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/finback-brewery-crispy-morning/">
+        <img src="https://cdn.shopify.com/s/files/1/0776/5209/9400/files/2A49AB34-7B3E-4BD5-AA48-690FA787298D.jpg?v=1779359774" alt="Finback Brewery - Crispy Morning" loading="lazy">
+        <div class="related-name">Finback Brewery - Crispy Morning</div>
+        <div class="related-price">65,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/root-branch-historical-society-10-p-czech-pils/">
+        <img src="https://cdn.shopify.com/s/files/1/0368/1628/9924/files/Root_Branch_-_Historical_Society_10P_Czech_Lager_-_Classic_Czech_Lager.png?v=1760088849" alt="Root + Branch - Historical Society: 10°P Czech Pils" loading="lazy">
+        <div class="related-name">Root + Branch - Historical Society: 10°P Czech Pils</div>
+        <div class="related-price">87,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/rothaus-rothaus-pils-tannen-zapfle/">
+        <img src="https://cdn.shopify.com/s/files/1/0776/5209/9400/files/1A24C652-A21E-4385-97AA-1BB56277FF98.jpg?v=1782391549" alt="Rothaus - Rothaus Pils / Tannen Zäpfle" loading="lazy">
+        <div class="related-name">Rothaus - Rothaus Pils / Tannen Zäpfle</div>
+        <div class="related-price">249,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/oelpakke-pilsner/">
+        <img src="https://www.vildmedvin.dk/img/1000/1000/resize/3/0/30999-bundle_1_22.jpg" alt="Ølpakke - Pilsner" loading="lazy">
+        <div class="related-name">Ølpakke - Pilsner</div>
+        <div class="related-price">252,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/lager-pilsner-plus-smagekasse-12-stk-gns-32/">
+        <img src="https://cdn.shopify.com/s/files/1/0402/1239/8243/files/Lager_Pils_Plus_Smagekasse_a15a8b07-d69b-408b-8c5b-7d9bac46fbfe.png?v=1779363555" alt="Lager/Pilsner &quot;Plus&quot; Smagekasse (12 stk.) (Gns. 32,5 Kr. Pr. Øl)" loading="lazy">
+        <div class="related-name">Lager/Pilsner &quot;Plus&quot; Smagekasse (12 stk.) (Gns. 32,5 Kr. Pr. Øl)</div>
+        <div class="related-price">389,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/warsteiner-premium-pilsner-pilsner-24-stk/">
+        <img src="https://cdn.shopify.com/s/files/1/0402/1239/8243/files/warsteiner_1.png?v=1745997115" alt="Warsteiner - Premium Pilsner - Pilsner (24 stk.)" loading="lazy">
+        <div class="related-name">Warsteiner - Premium Pilsner - Pilsner (24 stk.)</div>
+        <div class="related-price">399,00 kr</div>
+    </a></div></div>
+        <button class="related-toggle" onclick="this.previousElementSibling.querySelectorAll(&quot;.related-hidden&quot;).forEach(e=>e.style.display=&quot;block&quot;);this.style.display=&quot;none&quot;">Vis alle (59)</button>
     </div>
 
     <div class="disclaimer">
         📢 Affiliate disclosure: BeerSniffer kan modtage provision når du køber via vores links.
-        Priser opdateret 03.07.2026. Tjek altid den endelige pris hos forhandleren før køb.
+        Priser opdateret 07.07.2026. Tjek altid den endelige pris hos forhandleren før køb.
     </div>
 </div>
 

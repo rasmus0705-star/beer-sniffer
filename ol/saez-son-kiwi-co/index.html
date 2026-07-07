@@ -66,6 +66,9 @@ body { background: var(--bg); color: var(--text); font-family: 'DM Sans', sans-s
 .related-card img, .related-img-placeholder { width: 100%; height: 70px; object-fit: contain; background: var(--surface2); border-radius: 6px; margin-bottom: 0.4rem; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; }
 .related-name { font-size: 0.72rem; line-height: 1.3; margin-bottom: 0.2rem; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; min-height: 1.9em; }
 .related-price { font-size: 0.78rem; font-weight: 700; color: var(--gold-light); }
+.related-hidden { display: none; }
+.related-toggle { display: block; margin: 0.8rem auto 0; background: var(--surface2); border: 1px solid var(--border-light); border-radius: 999px; padding: 0.45rem 1.2rem; color: var(--gold); font-family: 'DM Sans', sans-serif; font-size: 0.78rem; cursor: pointer; transition: border-color 0.15s; }
+.related-toggle:hover { border-color: var(--gold); color: var(--gold-light); }
 .disclaimer { font-size: 0.72rem; color: var(--text-muted); margin-top: 2rem; line-height: 1.6; border-top: 1px solid var(--border); padding-top: 1rem; }
 .chart-section { margin: 1.5rem 0; background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 1rem 1.1rem; }
 .chart-heading { font-size: 0.7rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 0.7rem; }
@@ -146,17 +149,33 @@ body { background: var(--bg); color: var(--text); font-family: 'DM Sans', sans-s
 
     <div class="related-section">
         <div class="related-heading">Flere øl fra Sáez &amp;amp; Son</div>
-        <div class="related-grid">
+        <div class="related-grid"><div class="related-item">
     <a class="related-card" href="https://www.beersniffer.dk/ol/saez-son-fem-om-dagen-2026/">
         <img src="https://cdn.shopify.com/s/files/1/0776/5209/9400/files/6A5D3902-7439-481A-ACB2-0D3B882557A4.jpg?v=1776796966" alt="Sáez &amp; Son - Fem om dagen 2026" loading="lazy">
         <div class="related-name">Sáez &amp; Son - Fem om dagen 2026</div>
         <div class="related-price">55,00 kr</div>
-    </a></div>
+    </a></div><div class="related-item">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/saez-son-fu-rio-sa/">
+        <img src="https://www.vildmedvin.dk/img/1000/1000/resize/o/s/osseth_furiosu.jpg" alt="Saez &amp; Son, Fu Rio Sa" loading="lazy">
+        <div class="related-name">Saez &amp; Son, Fu Rio Sa</div>
+        <div class="related-price">59,00 kr</div>
+    </a></div><div class="related-item">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/saez-son-kiwi-co-2/">
+        <img src="https://cdn.shopify.com/s/files/1/0776/5209/9400/files/B9077B5D-BA4D-4216-9266-0A21DD455925.jpg?v=1776796966" alt="Sáez &amp; Son - Kiwi &amp; Co." loading="lazy">
+        <div class="related-name">Sáez &amp; Son - Kiwi &amp; Co.</div>
+        <div class="related-price">59,00 kr</div>
+    </a></div><div class="related-item">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/saez-son-palm-beach-2/">
+        <img src="https://cdn.shopify.com/s/files/1/0776/5209/9400/files/0A6989CE-4229-4E6B-8407-BD51A4FF8C5A.jpg?v=1776796966" alt="Sáez &amp; Son - Palm Beach" loading="lazy">
+        <div class="related-name">Sáez &amp; Son - Palm Beach</div>
+        <div class="related-price">59,00 kr</div>
+    </a></div></div>
+        
     </div>
 
     <div class="disclaimer">
         📢 Affiliate disclosure: BeerSniffer kan modtage provision når du køber via vores links.
-        Priser opdateret 03.07.2026. Tjek altid den endelige pris hos forhandleren før køb.
+        Priser opdateret 07.07.2026. Tjek altid den endelige pris hos forhandleren før køb.
     </div>
 </div>
 

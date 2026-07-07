@@ -66,6 +66,9 @@ body { background: var(--bg); color: var(--text); font-family: 'DM Sans', sans-s
 .related-card img, .related-img-placeholder { width: 100%; height: 70px; object-fit: contain; background: var(--surface2); border-radius: 6px; margin-bottom: 0.4rem; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; }
 .related-name { font-size: 0.72rem; line-height: 1.3; margin-bottom: 0.2rem; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; min-height: 1.9em; }
 .related-price { font-size: 0.78rem; font-weight: 700; color: var(--gold-light); }
+.related-hidden { display: none; }
+.related-toggle { display: block; margin: 0.8rem auto 0; background: var(--surface2); border: 1px solid var(--border-light); border-radius: 999px; padding: 0.45rem 1.2rem; color: var(--gold); font-family: 'DM Sans', sans-serif; font-size: 0.78rem; cursor: pointer; transition: border-color 0.15s; }
+.related-toggle:hover { border-color: var(--gold); color: var(--gold-light); }
 .disclaimer { font-size: 0.72rem; color: var(--text-muted); margin-top: 2rem; line-height: 1.6; border-top: 1px solid var(--border); padding-top: 1rem; }
 .chart-section { margin: 1.5rem 0; background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 1rem 1.1rem; }
 .chart-heading { font-size: 0.7rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 0.7rem; }
@@ -138,42 +141,48 @@ body { background: var(--bg); color: var(--text); font-family: 'DM Sans', sans-s
 
     <div class="related-section">
         <div class="related-heading">Flere øl fra Tilquin</div>
-        <div class="related-grid">
+        <div class="related-grid"><div class="related-item">
     <a class="related-card" href="https://www.beersniffer.dk/ol/tilquin-oude-gueuze-a-lancienne/">
         <img src="https://www.vildmedvin.dk/img/1000/1000/resize/t/i/tilquin-oude-gueuze-a-l-ancienne.jpg" alt="Tilquin Oude Gueuze a l&#x27;Ancienne" loading="lazy">
         <div class="related-name">Tilquin Oude Gueuze a l&#x27;Ancienne</div>
         <div class="related-price">75,00 kr</div>
-    </a>
+    </a></div><div class="related-item">
     <a class="related-card" href="https://www.beersniffer.dk/ol/tilquin-oude-groseille-a-maquereau-verte-a-lancienne/">
         <img src="https://www.vildmedvin.dk/img/1000/1000/resize/o/u/oude-groseille-a-maquereau.jpg" alt="Tilquin Oude Groseille a Maquereau Verte a l&#x27;Ancienne" loading="lazy">
         <div class="related-name">Tilquin Oude Groseille a Maquereau Verte a l&#x27;Ancienne</div>
         <div class="related-price">99,00 kr</div>
-    </a>
+    </a></div><div class="related-item">
     <a class="related-card" href="https://www.beersniffer.dk/ol/tilquin-quetsche-a-lancienne/">
         <img src="https://www.vildmedvin.dk/img/1000/1000/resize/t/i/tilquin_quetsche_a_lancienne.jpg" alt="Tilquin Quetsche a l&#x27;Ancienne" loading="lazy">
         <div class="related-name">Tilquin Quetsche a l&#x27;Ancienne</div>
         <div class="related-price">108,00 kr</div>
-    </a>
+    </a></div><div class="related-item">
     <a class="related-card" href="https://www.beersniffer.dk/ol/tilquin-oude-mirabelle-a-lancienne/">
         <img src="https://www.vildmedvin.dk/img/1000/1000/resize/t/i/tilquin-oude-mirabelle-a-l-ancienne_done.jpg" alt="Tilquin Oude Mirabelle à l&#x27;ancienne" loading="lazy">
         <div class="related-name">Tilquin Oude Mirabelle à l&#x27;ancienne</div>
         <div class="related-price">114,00 kr</div>
-    </a>
+    </a></div><div class="related-item">
     <a class="related-card" href="https://www.beersniffer.dk/ol/tilquin-oude-gueuze-a-lancienne-cuvee-arthur/">
         <img src="https://cdn.shopify.com/s/files/1/0776/5209/9400/files/6ECC3A99-B100-46F0-9832-34DC3DAA08D1.jpg?v=1740000944" alt="Tilquin - Oude Gueuze a l&#x27;Ancienne Cuvée Arthur" loading="lazy">
         <div class="related-name">Tilquin - Oude Gueuze a l&#x27;Ancienne Cuvée Arthur</div>
         <div class="related-price">169,00 kr</div>
-    </a>
+    </a></div><div class="related-item">
     <a class="related-card" href="https://www.beersniffer.dk/ol/tilquin-oude-pinot-meunier-a-lancienne/">
         <img src="https://cdn.shopify.com/s/files/1/0776/5209/9400/files/C8E2656B-C891-44F8-8A5D-5CC9C154BF53.jpg?v=1699476334" alt="Tilquin - Oude Pinot Meunier a l&#x27;Ancienne" loading="lazy">
         <div class="related-name">Tilquin - Oude Pinot Meunier a l&#x27;Ancienne</div>
         <div class="related-price">182,00 kr</div>
-    </a></div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/tilquin-oude-gueuze-a-lancienne-cuvee-jean-francois/">
+        <img src="https://cdn.shopify.com/s/files/1/0776/5209/9400/files/E15CBBF6-380B-4C4A-8381-EB311B8700A5.jpg?v=1715889646" alt="Tilquin - Oude Gueuze a l&#x27;Ancienne Cuvée Jean-François 1759" loading="lazy">
+        <div class="related-name">Tilquin - Oude Gueuze a l&#x27;Ancienne Cuvée Jean-François 1759</div>
+        <div class="related-price">211,00 kr</div>
+    </a></div></div>
+        <button class="related-toggle" onclick="this.previousElementSibling.querySelectorAll(&quot;.related-hidden&quot;).forEach(e=>e.style.display=&quot;block&quot;);this.style.display=&quot;none&quot;">Vis alle (7)</button>
     </div>
 
     <div class="disclaimer">
         📢 Affiliate disclosure: BeerSniffer kan modtage provision når du køber via vores links.
-        Priser opdateret 03.07.2026. Tjek altid den endelige pris hos forhandleren før køb.
+        Priser opdateret 07.07.2026. Tjek altid den endelige pris hos forhandleren før køb.
     </div>
 </div>
 

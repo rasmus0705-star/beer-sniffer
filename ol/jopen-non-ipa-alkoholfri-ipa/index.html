@@ -66,6 +66,9 @@ body { background: var(--bg); color: var(--text); font-family: 'DM Sans', sans-s
 .related-card img, .related-img-placeholder { width: 100%; height: 70px; object-fit: contain; background: var(--surface2); border-radius: 6px; margin-bottom: 0.4rem; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; }
 .related-name { font-size: 0.72rem; line-height: 1.3; margin-bottom: 0.2rem; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; min-height: 1.9em; }
 .related-price { font-size: 0.78rem; font-weight: 700; color: var(--gold-light); }
+.related-hidden { display: none; }
+.related-toggle { display: block; margin: 0.8rem auto 0; background: var(--surface2); border: 1px solid var(--border-light); border-radius: 999px; padding: 0.45rem 1.2rem; color: var(--gold); font-family: 'DM Sans', sans-serif; font-size: 0.78rem; cursor: pointer; transition: border-color 0.15s; }
+.related-toggle:hover { border-color: var(--gold); color: var(--gold-light); }
 .disclaimer { font-size: 0.72rem; color: var(--text-muted); margin-top: 2rem; line-height: 1.6; border-top: 1px solid var(--border); padding-top: 1rem; }
 .chart-section { margin: 1.5rem 0; background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 1rem 1.1rem; }
 .chart-heading { font-size: 0.7rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 0.7rem; }
@@ -149,42 +152,53 @@ body { background: var(--bg); color: var(--text); font-family: 'DM Sans', sans-s
 
     <div class="related-section">
         <div class="related-heading">Flere øl fra Jopen</div>
-        <div class="related-grid">
+        <div class="related-grid"><div class="related-item">
     <a class="related-card" href="https://www.beersniffer.dk/ol/jopen-adriaan-wit-witbier/">
         <img src="https://cdn.shopify.com/s/files/1/0402/1239/8243/files/Jopen_Adriaan.png?v=1776216156" alt="Jopen - Adriaan Wit - Witbier" loading="lazy">
         <div class="related-name">Jopen - Adriaan Wit - Witbier</div>
         <div class="related-price">35,75 kr</div>
-    </a>
+    </a></div><div class="related-item">
     <a class="related-card" href="https://www.beersniffer.dk/ol/jopen-strooigoed-belgian-dubbel/">
         <img src="https://cdn.shopify.com/s/files/1/0402/1239/8243/files/Jopen_Strooi.png?v=1776216320" alt="Jopen - Strooigoed - Belgian Dubbel" loading="lazy">
         <div class="related-name">Jopen - Strooigoed - Belgian Dubbel</div>
         <div class="related-price">35,75 kr</div>
-    </a>
+    </a></div><div class="related-item">
     <a class="related-card" href="https://www.beersniffer.dk/ol/jopen-mooie-nel-guava-passion-fruit-west-coast/">
         <img src="https://cdn.shopify.com/s/files/1/0402/1239/8243/files/Jopen_MooieNelTrop.png?v=1776215513" alt="Jopen - Mooie Nel Guava &amp; Passion Fruit - West Coast IPA" loading="lazy">
         <div class="related-name">Jopen - Mooie Nel Guava &amp; Passion Fruit - West Coast IPA</div>
         <div class="related-price">39,75 kr</div>
-    </a>
+    </a></div><div class="related-item">
     <a class="related-card" href="https://www.beersniffer.dk/ol/jopen-blurred-lines-new-england-ipa/">
         <img src="https://cdn.shopify.com/s/files/1/0402/1239/8243/files/Jopen_BlurredLines.png?v=1776215063" alt="Jopen - Blurred Lines - New England IPA" loading="lazy">
         <div class="related-name">Jopen - Blurred Lines - New England IPA</div>
         <div class="related-price">39,75 kr</div>
-    </a>
+    </a></div><div class="related-item">
     <a class="related-card" href="https://www.beersniffer.dk/ol/jopen-viva-el-rye-rug-ipa/">
         <img src="https://cdn.shopify.com/s/files/1/0402/1239/8243/files/Jopen_VivaElRye.png?v=1776187430" alt="Jopen - Viva El Rye - Rug IPA" loading="lazy">
         <div class="related-name">Jopen - Viva El Rye - Rug IPA</div>
         <div class="related-price">49,75 kr</div>
-    </a>
+    </a></div><div class="related-item">
     <a class="related-card" href="https://www.beersniffer.dk/ol/jopen-intergalactic-collission-double-ipa/">
         <img src="https://cdn.shopify.com/s/files/1/0402/1239/8243/files/Jopen_Intergalactic.png?v=1776186619" alt="Jopen - Intergalactic Collission - Double IPA" loading="lazy">
         <div class="related-name">Jopen - Intergalactic Collission - Double IPA</div>
         <div class="related-price">55,75 kr</div>
-    </a></div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/jopen-heavy-cross-triple-ipa/">
+        <img src="https://cdn.shopify.com/s/files/1/0402/1239/8243/files/Jopen_HeavyCross.png?v=1776187198" alt="Jopen - Heavy Cross - Triple IPA" loading="lazy">
+        <div class="related-name">Jopen - Heavy Cross - Triple IPA</div>
+        <div class="related-price">59,75 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/jopen-meesterstuk-2024-ba-imperial-porter/">
+        <img src="https://cdn.shopify.com/s/files/1/0402/1239/8243/files/Jopen_Meesterstuk.png?v=1776217493" alt="Jopen - Meesterstuk 2024 - BA Imperial Porter" loading="lazy">
+        <div class="related-name">Jopen - Meesterstuk 2024 - BA Imperial Porter</div>
+        <div class="related-price">66,50 kr</div>
+    </a></div></div>
+        <button class="related-toggle" onclick="this.previousElementSibling.querySelectorAll(&quot;.related-hidden&quot;).forEach(e=>e.style.display=&quot;block&quot;);this.style.display=&quot;none&quot;">Vis alle (8)</button>
     </div>
 
     <div class="disclaimer">
         📢 Affiliate disclosure: BeerSniffer kan modtage provision når du køber via vores links.
-        Priser opdateret 03.07.2026. Tjek altid den endelige pris hos forhandleren før køb.
+        Priser opdateret 07.07.2026. Tjek altid den endelige pris hos forhandleren før køb.
     </div>
 </div>
 

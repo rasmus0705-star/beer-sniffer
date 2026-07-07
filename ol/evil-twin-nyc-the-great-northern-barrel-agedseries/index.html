@@ -66,6 +66,9 @@ body { background: var(--bg); color: var(--text); font-family: 'DM Sans', sans-s
 .related-card img, .related-img-placeholder { width: 100%; height: 70px; object-fit: contain; background: var(--surface2); border-radius: 6px; margin-bottom: 0.4rem; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; }
 .related-name { font-size: 0.72rem; line-height: 1.3; margin-bottom: 0.2rem; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; min-height: 1.9em; }
 .related-price { font-size: 0.78rem; font-weight: 700; color: var(--gold-light); }
+.related-hidden { display: none; }
+.related-toggle { display: block; margin: 0.8rem auto 0; background: var(--surface2); border: 1px solid var(--border-light); border-radius: 999px; padding: 0.45rem 1.2rem; color: var(--gold); font-family: 'DM Sans', sans-serif; font-size: 0.78rem; cursor: pointer; transition: border-color 0.15s; }
+.related-toggle:hover { border-color: var(--gold); color: var(--gold-light); }
 .disclaimer { font-size: 0.72rem; color: var(--text-muted); margin-top: 2rem; line-height: 1.6; border-top: 1px solid var(--border); padding-top: 1rem; }
 .chart-section { margin: 1.5rem 0; background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 1rem 1.1rem; }
 .chart-heading { font-size: 0.7rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 0.7rem; }
@@ -138,42 +141,183 @@ body { background: var(--bg); color: var(--text); font-family: 'DM Sans', sans-s
 
     <div class="related-section">
         <div class="related-heading">Flere øl fra Evil Twin NYC.</div>
-        <div class="related-grid">
+        <div class="related-grid"><div class="related-item">
     <a class="related-card" href="https://www.beersniffer.dk/ol/thisted-bryghus-rum-n-beer/">
         <img src="https://www.vildmedvin.dk/img/1000/1000/resize/r/u/rum_n_beer.jpg" alt="Thisted Bryghus, Rum N&#x27; Beer" loading="lazy">
         <div class="related-name">Thisted Bryghus, Rum N&#x27; Beer</div>
         <div class="related-price">34,00 kr</div>
-    </a>
+    </a></div><div class="related-item">
     <a class="related-card" href="https://www.beersniffer.dk/ol/ebeltoft-gaardbryggeri-mesa-like-it-sweet/">
         <img src="https://cdn.shopify.com/s/files/1/0509/8477/9975/files/messa-like-it-sweet-11-33cl.png?v=1753443591" alt="Mesa Like it Sweet" loading="lazy">
         <div class="related-name">Mesa Like it Sweet</div>
         <div class="related-price">35,00 kr</div>
-    </a>
+    </a></div><div class="related-item">
     <a class="related-card" href="https://www.beersniffer.dk/ol/brewery-de-meester-winter-master-2/">
         <img src="https://cdn.shopify.com/s/files/1/0509/8477/9975/files/winter-master-2-12-33cl.png?v=1733487138" alt="Winter Master #2" loading="lazy">
         <div class="related-name">Winter Master #2</div>
         <div class="related-price">35,00 kr</div>
-    </a>
+    </a></div><div class="related-item">
     <a class="related-card" href="https://www.beersniffer.dk/ol/de-molen-bommen-and-granaten/">
         <img src="https://www.vildmedvin.dk/img/1000/1000/resize/d/e/demolen_bommen.jpg" alt="De Molen, Bommen And Granaten" loading="lazy">
         <div class="related-name">De Molen, Bommen And Granaten</div>
         <div class="related-price">44,00 kr</div>
-    </a>
+    </a></div><div class="related-item">
     <a class="related-card" href="https://www.beersniffer.dk/ol/made-in-the-shade/">
         <img src="https://cdn.shopify.com/s/files/1/0509/8477/9975/files/made-in-the-shade-9-5-33cl.png?v=1773480942" alt="Made in the Shade" loading="lazy">
         <div class="related-name">Made in the Shade</div>
         <div class="related-price">45,00 kr</div>
-    </a>
+    </a></div><div class="related-item">
     <a class="related-card" href="https://www.beersniffer.dk/ol/menno-olivier-brewing-crema-catalana/">
         <img src="https://cdn.shopify.com/s/files/1/0509/8477/9975/files/crema-catalana-10-37-33cl.png?v=1782647830" alt="Crema Catalana" loading="lazy">
         <div class="related-name">Crema Catalana</div>
         <div class="related-price">49,00 kr</div>
-    </a></div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/midtfyns-barleywine/">
+        <img src="https://www.vildmedvin.dk/img/1000/1000/resize/m/i/midtfyns_barleywine.jpeg" alt="Midtfyns, Barleywine" loading="lazy">
+        <div class="related-name">Midtfyns, Barleywine</div>
+        <div class="related-price">49,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/brouwerij-de-dochter-van-de-korenaar-lensemble/">
+        <img src="https://cdn.shopify.com/s/files/1/0509/8477/9975/files/lensemble-13-33cl_a222e84c-e4d5-43f6-bf88-0b90e438f4bf.png?v=1773483990" alt="L&#x27;Ensemble" loading="lazy">
+        <div class="related-name">L&#x27;Ensemble</div>
+        <div class="related-price">50,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/brouwerij-frontaal-piece-of-cake-tarte-tatin/">
+        <img src="https://cdn.shopify.com/s/files/1/0509/8477/9975/files/piece-of-cake-tarte-tatin-10-33cl.png?v=1778507163" alt="Piece of Cake: Tarte Tatin" loading="lazy">
+        <div class="related-name">Piece of Cake: Tarte Tatin</div>
+        <div class="related-price">55,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/bryg-365-baerlivine/">
+        <img src="https://www.vildmedvin.dk/img/1000/1000/resize/b/r/bryg365_-_b_rlivine.jpg" alt="Bryg 365, BærLIvine" loading="lazy">
+        <div class="related-name">Bryg 365, BærLIvine</div>
+        <div class="related-price">59,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/brasserie-minne-ardenne-wood-my-deer-moscatel-b/">
+        <img src="https://cdn.shopify.com/s/files/1/0509/8477/9975/files/ardenne-wood-my-deer-moscatel-b-a-2023-12-5-33cl.png?v=1705740386" alt="Ardenne Wood My Deer Moscatel B.A. (2023)" loading="lazy">
+        <div class="related-name">Ardenne Wood My Deer Moscatel B.A. (2023)</div>
+        <div class="related-price">67,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/brewery-de-meester-american-heaven/">
+        <img src="https://cdn.shopify.com/s/files/1/0509/8477/9975/files/american-heaven-10-33cl.png?v=1760363547" alt="American Heaven" loading="lazy">
+        <div class="related-name">American Heaven</div>
+        <div class="related-price">70,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/brouwerij-kees-frostbite/">
+        <img src="https://cdn.shopify.com/s/files/1/0509/8477/9975/files/frostbite-14-33cl.png?v=1772551650" alt="Frostbite" loading="lazy">
+        <div class="related-name">Frostbite</div>
+        <div class="related-price">75,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/menno-olivier-brewing-red-raven/">
+        <img src="https://cdn.shopify.com/s/files/1/0509/8477/9975/files/red-raven-12-1-44cl.png?v=1782647099" alt="Red Raven" loading="lazy">
+        <div class="related-name">Red Raven</div>
+        <div class="related-price">80,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/la-chouffe-nice-chouffe/">
+        <img src="https://www.vildmedvin.dk/img/1000/1000/resize/l/e/le_chouffe_nice_chouffe_vmv.jpg" alt="La Chouffe, Nice Chouffe" loading="lazy">
+        <div class="related-name">La Chouffe, Nice Chouffe</div>
+        <div class="related-price">82,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/brouwerij-frontaal-no-way-out-b-a-106/">
+        <img src="https://cdn.shopify.com/s/files/1/0509/8477/9975/files/no-way-out-b-a-10-5-33cl.png?v=1750592682" alt="No Way Out B.A." loading="lazy">
+        <div class="related-name">No Way Out B.A.</div>
+        <div class="related-price">85,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/timber-ales-breakfast-with-maris/">
+        <img src="https://cdn.shopify.com/s/files/1/0368/1628/9924/files/timber-ales-breakfast-with-maris_40c5d4a6-e690-4b05-8666-50094b4a0cf7.png?v=1781253464" alt="Timber Ales - Breakfast With Maris" loading="lazy">
+        <div class="related-name">Timber Ales - Breakfast With Maris</div>
+        <div class="related-price">89,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/ba-califer-ba-barleywine-fra-puhaste/">
+        <img src="https://cdn-main.ideal.shop/images/by_hash/2e5a6a9cdc4198d43b01f86fb314ec7f282d21a59135123a9a1013dd8d649a8d/500-0/BA-Califer.jpg" alt="BA Califer - BA Barleywine fra Pühaste" loading="lazy">
+        <div class="related-name">BA Califer - BA Barleywine fra Pühaste</div>
+        <div class="related-price">89,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/de-molen-calvados-edition-2024/">
+        <img src="https://www.vildmedvin.dk/img/1000/1000/resize/d/e/de_molen_calvados_2024.jpg" alt="De Molen, Calvados Edition 2024" loading="lazy">
+        <div class="related-name">De Molen, Calvados Edition 2024</div>
+        <div class="related-price">89,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/jackie-os-bourbon-barrel-brick-kiln-3/">
+        <img src="https://cdn.shopify.com/s/files/1/0776/5209/9400/files/C30D952B-EFE7-4792-9A1C-672DE00C29DA.jpg?v=1765743765" alt="Jackie O’s Bourbon Barrel Brick Kiln" loading="lazy">
+        <div class="related-name">Jackie O’s Bourbon Barrel Brick Kiln</div>
+        <div class="related-price">95,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/jackie-os-endolith-2025-2/">
+        <img src="https://cdn.shopify.com/s/files/1/0776/5209/9400/files/D202A3CD-603E-4781-A216-71BBB2CE72D5.jpg?v=1765743190" alt="Jackie O’s - Endolith 2025" loading="lazy">
+        <div class="related-name">Jackie O’s - Endolith 2025</div>
+        <div class="related-price">99,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/divination-cognac-ba-barley-wine-fra-blackout-brewing/">
+        <img src="https://cdn-main.ideal.shop/images/by_hash/e6a984a512ade42cfeaae2b12f9d63e8f95ff4bc7fc01082f4ff067818ba5ac2/500-0/divination.jpg" alt="Divination - Cognac BA Barley Wine fra Blackout Brewing" loading="lazy">
+        <div class="related-name">Divination - Cognac BA Barley Wine fra Blackout Brewing</div>
+        <div class="related-price">99,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/poke-the-hive-ba-barleywine-fra-blackout-brewing/">
+        <img src="https://cdn-main.ideal.shop/images/by_hash/133e640562b226b96946e78f0ae3c5e2b712fcda96d87183a97c8bc22f734554/500-0/pokethehive.jpg" alt="Poke the Hive - BA barleywine fra Blackout Brewing" loading="lazy">
+        <div class="related-name">Poke the Hive - BA barleywine fra Blackout Brewing</div>
+        <div class="related-price">99,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/visceral-ba-barleywine-fra-blackout-brewing/">
+        <img src="https://cdn-main.ideal.shop/images/by_hash/08d05910e270a0e2df643a6dc3313e0f9888d083d1314af7c6ebc74b6b003489/500-0/Visceral.jpg" alt="Visceral - BA Barleywine fra Blackout Brewing" loading="lazy">
+        <div class="related-name">Visceral - BA Barleywine fra Blackout Brewing</div>
+        <div class="related-price">99,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/puhaste-embus-bourbon-ba-silver-series-alive-collab/">
+        <img src="https://cdn.shopify.com/s/files/1/0551/6600/9423/files/A93A961A-50FC-420D-9418-C23357889700.jpg?v=1761922050" alt="Puhaste - Embus Bourbon BA (Silver Series) (Alive Collab)" loading="lazy">
+        <div class="related-name">Puhaste - Embus Bourbon BA (Silver Series) (Alive Collab)</div>
+        <div class="related-price">109,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/rockabilly-brew-heritage-2024-singel-batch-aargangsoel/">
+        <img src="https://cdn.shopify.com/s/files/1/0509/8477/9975/files/heritage-2024-singel-batch-argangsol-14.png?v=1730486070" alt="Heritage 2024 - Singel Batch - Årgangsøl" loading="lazy">
+        <div class="related-name">Heritage 2024 - Singel Batch - Årgangsøl</div>
+        <div class="related-price">129,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/alesong-cinnamon-roll-maestro/">
+        <img src="https://cdn.shopify.com/s/files/1/0551/6600/9423/files/AFE5F60B-3DA0-436B-99AC-FDBD58F50C0E.jpg?v=1754994536" alt="Alesong - Cinnamon Roll Maestro" loading="lazy">
+        <div class="related-name">Alesong - Cinnamon Roll Maestro</div>
+        <div class="related-price">135,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/rockabilly-brew-heritage-2025-singel-batch-aargangsoel/">
+        <img src="https://cdn.shopify.com/s/files/1/0509/8477/9975/files/heritage-2025-singel-batch-argangsol-16-33cl.png?v=1750346279" alt="Heritage 2025 - Singel Batch - Årgangsøl -" loading="lazy">
+        <div class="related-name">Heritage 2025 - Singel Batch - Årgangsøl -</div>
+        <div class="related-price">139,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/rygr-brygghus-valhall-hiernagla-peated-whisky-cask/">
+        <img src="https://cdn.shopify.com/s/files/1/0551/6600/9423/files/3E4141F6-65D6-4DA3-9360-DE5BEBC2012C.jpg?v=1774440110" alt="RYGR Brygghus - Valhall: Hiernagla Peated Whisky Cask" loading="lazy">
+        <div class="related-name">RYGR Brygghus - Valhall: Hiernagla Peated Whisky Cask</div>
+        <div class="related-price">139,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/brouwerij-kees-bottle-brew-7/">
+        <img src="https://cdn.shopify.com/s/files/1/0509/8477/9975/files/bottle-brew-7-14-2-75cl.png?v=1772206711" alt="Bottle Brew 7" loading="lazy">
+        <div class="related-name">Bottle Brew 7</div>
+        <div class="related-price">160,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/jackie-os-endolith/">
+        <img src="https://cdn.shopify.com/s/files/1/0551/6600/9423/files/E9F0AC70-A98D-4FBB-90B4-879FD1C1554F.jpg?v=1765813134" alt="Jackie O&#x27;s - Endolith" loading="lazy">
+        <div class="related-name">Jackie O&#x27;s - Endolith</div>
+        <div class="related-price">169,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/evil-twin-nyc-the-great-northern-barrel-aged/">
+        <img src="https://cdn.shopify.com/s/files/1/0368/1628/9924/files/evil-twin-nyc-great-northern-58.png?v=1782998860" alt="Evil Twin NYC - The Great Northern Barrel Aged Series 58 - Subscriber Exclusive" loading="lazy">
+        <div class="related-name">Evil Twin NYC - The Great Northern Barrel Aged Series 58 - Subscriber Exclusive</div>
+        <div class="related-price">399,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/private-press-electric-roads-batch-5/">
+        <img src="https://cdn.shopify.com/s/files/1/0551/6600/9423/files/52EB523A-7A86-465B-8DD9-096DE16BBF3B.jpg?v=1765813133" alt="Private Press - Electric Roads (Batch 5)" loading="lazy">
+        <div class="related-name">Private Press - Electric Roads (Batch 5)</div>
+        <div class="related-price">439,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/birrificio-agricolo-baladin-baladin-xyauyu-kentucky/">
+        <img src="https://cdn.shopify.com/s/files/1/0509/8477/9975/files/baladin-xyauyu-kentucky-14-50cl.png?v=1783341817" alt="Baladin Xyauyù Kentucky" loading="lazy">
+        <div class="related-name">Baladin Xyauyù Kentucky</div>
+        <div class="related-price">545,00 kr</div>
+    </a></div></div>
+        <button class="related-toggle" onclick="this.previousElementSibling.querySelectorAll(&quot;.related-hidden&quot;).forEach(e=>e.style.display=&quot;block&quot;);this.style.display=&quot;none&quot;">Vis alle (34)</button>
     </div>
 
     <div class="disclaimer">
         📢 Affiliate disclosure: BeerSniffer kan modtage provision når du køber via vores links.
-        Priser opdateret 03.07.2026. Tjek altid den endelige pris hos forhandleren før køb.
+        Priser opdateret 07.07.2026. Tjek altid den endelige pris hos forhandleren før køb.
     </div>
 </div>
 

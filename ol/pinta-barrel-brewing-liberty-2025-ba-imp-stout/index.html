@@ -66,6 +66,9 @@ body { background: var(--bg); color: var(--text); font-family: 'DM Sans', sans-s
 .related-card img, .related-img-placeholder { width: 100%; height: 70px; object-fit: contain; background: var(--surface2); border-radius: 6px; margin-bottom: 0.4rem; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; }
 .related-name { font-size: 0.72rem; line-height: 1.3; margin-bottom: 0.2rem; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; min-height: 1.9em; }
 .related-price { font-size: 0.78rem; font-weight: 700; color: var(--gold-light); }
+.related-hidden { display: none; }
+.related-toggle { display: block; margin: 0.8rem auto 0; background: var(--surface2); border: 1px solid var(--border-light); border-radius: 999px; padding: 0.45rem 1.2rem; color: var(--gold); font-family: 'DM Sans', sans-serif; font-size: 0.78rem; cursor: pointer; transition: border-color 0.15s; }
+.related-toggle:hover { border-color: var(--gold); color: var(--gold-light); }
 .disclaimer { font-size: 0.72rem; color: var(--text-muted); margin-top: 2rem; line-height: 1.6; border-top: 1px solid var(--border); padding-top: 1rem; }
 .chart-section { margin: 1.5rem 0; background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 1rem 1.1rem; }
 .chart-heading { font-size: 0.7rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 0.7rem; }
@@ -138,42 +141,58 @@ body { background: var(--bg); color: var(--text); font-family: 'DM Sans', sans-s
 
     <div class="related-section">
         <div class="related-heading">Flere øl fra Pinta Barrel Brewing</div>
-        <div class="related-grid">
+        <div class="related-grid"><div class="related-item">
     <a class="related-card" href="https://www.beersniffer.dk/ol/pinta-barrel-brewing-patience-2025-ba-imp-stout/">
         <img src="https://cdn.shopify.com/s/files/1/0776/5209/9400/files/97A00766-44CE-4F23-80D9-06F4404B609F.jpg?v=1757443014" alt="Pinta Barrel Brewing - Patience 2025 BA Imp. Stout" loading="lazy">
         <div class="related-name">Pinta Barrel Brewing - Patience 2025 BA Imp. Stout</div>
         <div class="related-price">82,00 kr</div>
-    </a>
+    </a></div><div class="related-item">
     <a class="related-card" href="https://www.beersniffer.dk/ol/pinta-barrel-brewing-grandeur-2025-ba-stout/">
         <img src="https://cdn.shopify.com/s/files/1/0776/5209/9400/files/BF4CD162-4CFE-46B9-8D96-681EF995809D.jpg?v=1741758761" alt="Pinta Barrel Brewing - Grandeur 2025 BA Stout" loading="lazy">
         <div class="related-name">Pinta Barrel Brewing - Grandeur 2025 BA Stout</div>
         <div class="related-price">91,00 kr</div>
-    </a>
+    </a></div><div class="related-item">
     <a class="related-card" href="https://www.beersniffer.dk/ol/pinta-barrel-brewing-memory-2025-ba-stout/">
         <img src="https://cdn.shopify.com/s/files/1/0776/5209/9400/files/0BFAE021-4C3F-49A3-9054-D259F05907F2.jpg?v=1741758706" alt="Pinta Barrel Brewing - Memory 2025 BA Stout" loading="lazy">
         <div class="related-name">Pinta Barrel Brewing - Memory 2025 BA Stout</div>
         <div class="related-price">91,00 kr</div>
-    </a>
+    </a></div><div class="related-item">
     <a class="related-card" href="https://www.beersniffer.dk/ol/pinta-barrel-brewing-essence/">
         <img src="https://cdn.shopify.com/s/files/1/0776/5209/9400/files/43557525-3EC5-4D18-96E3-D058E402F564.jpg?v=1775927639" alt="Pinta Barrel Brewing - Essence" loading="lazy">
         <div class="related-name">Pinta Barrel Brewing - Essence</div>
         <div class="related-price">92,00 kr</div>
-    </a>
+    </a></div><div class="related-item">
     <a class="related-card" href="https://www.beersniffer.dk/ol/pinta-barrel-brewing-affection-2025-ba-imp-stout/">
         <img src="https://cdn.shopify.com/s/files/1/0776/5209/9400/files/843C0299-7B84-4AFB-82DF-864D374CEC58.jpg?v=1757443014" alt="Pinta Barrel Brewing - Affection 2025 BA Imp. Stout" loading="lazy">
         <div class="related-name">Pinta Barrel Brewing - Affection 2025 BA Imp. Stout</div>
         <div class="related-price">92,00 kr</div>
-    </a>
+    </a></div><div class="related-item">
     <a class="related-card" href="https://www.beersniffer.dk/ol/pinta-barrel-brewing-reputation-2025-ba-imp-stout/">
         <img src="https://cdn.shopify.com/s/files/1/0776/5209/9400/files/464A7699-7FBF-47A4-8DFC-B9D0BEA4B06D.jpg?v=1757443015" alt="Pinta Barrel Brewing - Reputation 2025 BA Imp. Stout" loading="lazy">
         <div class="related-name">Pinta Barrel Brewing - Reputation 2025 BA Imp. Stout</div>
         <div class="related-price">92,00 kr</div>
-    </a></div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/pinta-barrel-brewing-riddle-2025-ba-quadruple/">
+        <img src="https://cdn.shopify.com/s/files/1/0776/5209/9400/files/84774A57-80DC-49BF-9B70-2493303202D5.jpg?v=1757443014" alt="Pinta Barrel Brewing - Riddle 2025 BA Quadruple" loading="lazy">
+        <div class="related-name">Pinta Barrel Brewing - Riddle 2025 BA Quadruple</div>
+        <div class="related-price">92,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/pinta-barrel-brewing-interlude-2025-ba-imp-stout/">
+        <img src="https://cdn.shopify.com/s/files/1/0776/5209/9400/files/2CCC307C-5D14-481C-860C-AFD76C3F3E5E.jpg?v=1757443014" alt="Pinta Barrel Brewing - Interlude 2025 BA Imp. Stout" loading="lazy">
+        <div class="related-name">Pinta Barrel Brewing - Interlude 2025 BA Imp. Stout</div>
+        <div class="related-price">92,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/pinta-barrel-brewing-nobility-2025-ba-imp-stout/">
+        <img src="https://cdn.shopify.com/s/files/1/0776/5209/9400/files/679ACB15-CDA0-46C0-80C4-8910C258FFD8.jpg?v=1757443015" alt="Pinta Barrel Brewing - Nobility 2025 BA Imp. Stout" loading="lazy">
+        <div class="related-name">Pinta Barrel Brewing - Nobility 2025 BA Imp. Stout</div>
+        <div class="related-price">92,00 kr</div>
+    </a></div></div>
+        <button class="related-toggle" onclick="this.previousElementSibling.querySelectorAll(&quot;.related-hidden&quot;).forEach(e=>e.style.display=&quot;block&quot;);this.style.display=&quot;none&quot;">Vis alle (9)</button>
     </div>
 
     <div class="disclaimer">
         📢 Affiliate disclosure: BeerSniffer kan modtage provision når du køber via vores links.
-        Priser opdateret 03.07.2026. Tjek altid den endelige pris hos forhandleren før køb.
+        Priser opdateret 07.07.2026. Tjek altid den endelige pris hos forhandleren før køb.
     </div>
 </div>
 

@@ -66,6 +66,9 @@ body { background: var(--bg); color: var(--text); font-family: 'DM Sans', sans-s
 .related-card img, .related-img-placeholder { width: 100%; height: 70px; object-fit: contain; background: var(--surface2); border-radius: 6px; margin-bottom: 0.4rem; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; }
 .related-name { font-size: 0.72rem; line-height: 1.3; margin-bottom: 0.2rem; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; min-height: 1.9em; }
 .related-price { font-size: 0.78rem; font-weight: 700; color: var(--gold-light); }
+.related-hidden { display: none; }
+.related-toggle { display: block; margin: 0.8rem auto 0; background: var(--surface2); border: 1px solid var(--border-light); border-radius: 999px; padding: 0.45rem 1.2rem; color: var(--gold); font-family: 'DM Sans', sans-serif; font-size: 0.78rem; cursor: pointer; transition: border-color 0.15s; }
+.related-toggle:hover { border-color: var(--gold); color: var(--gold-light); }
 .disclaimer { font-size: 0.72rem; color: var(--text-muted); margin-top: 2rem; line-height: 1.6; border-top: 1px solid var(--border); padding-top: 1rem; }
 .chart-section { margin: 1.5rem 0; background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 1rem 1.1rem; }
 .chart-heading { font-size: 0.7rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 0.7rem; }
@@ -159,42 +162,243 @@ body { background: var(--bg); color: var(--text); font-family: 'DM Sans', sans-s
 
     <div class="related-section">
         <div class="related-heading">Flere øl fra 3 Fonteinen, Kweepeer, Lambik, 2021-22, No. 51</div>
-        <div class="related-grid">
+        <div class="related-grid"><div class="related-item">
     <a class="related-card" href="https://www.beersniffer.dk/ol/schofferhofer-grapefruit/">
         <img src="https://www.vildmedvin.dk/img/1000/1000/resize/s/c/sch_fferhoffer_grapefruit.jpg" alt="Schöfferhofer Grapefruit" loading="lazy">
         <div class="related-name">Schöfferhofer Grapefruit</div>
         <div class="related-price">19,00 kr</div>
-    </a>
+    </a></div><div class="related-item">
     <a class="related-card" href="https://www.beersniffer.dk/ol/lindemans-cassis/">
         <img src="https://www.vildmedvin.dk/img/1000/1000/resize/l/i/lindemans_cassis.jpg" alt="Lindemans Cassis" loading="lazy">
         <div class="related-name">Lindemans Cassis</div>
         <div class="related-price">21,50 kr</div>
-    </a>
+    </a></div><div class="related-item">
     <a class="related-card" href="https://www.beersniffer.dk/ol/brouwerij-huyghe-floris-cactus/">
         <img src="https://www.vildmedvin.dk/img/1000/1000/resize/f/l/floris_cactus.jpg" alt="Floris Cactus" loading="lazy">
         <div class="related-name">Floris Cactus</div>
         <div class="related-price">25,00 kr</div>
-    </a>
+    </a></div><div class="related-item">
     <a class="related-card" href="https://www.beersniffer.dk/ol/fruli-strawberry-beer-8211-8211/">
         <img src="https://www.bestofbeers.dk/wp-content/uploads/2017/09/FryliStrawberry.jpg" alt="Früli Strawberry Beer &amp;#8211; &amp;#8211;" loading="lazy">
         <div class="related-name">Früli Strawberry Beer &amp;#8211; &amp;#8211;</div>
         <div class="related-price">26,00 kr</div>
-    </a>
+    </a></div><div class="related-item">
     <a class="related-card" href="https://www.beersniffer.dk/ol/rodenbach-fruitage/">
         <img src="https://cdn.shopify.com/s/files/1/0509/8477/9975/files/rodenbach-fruitage-3-9-25cl.png?v=1747996432" alt="Rodenbach Fruitage" loading="lazy">
         <div class="related-name">Rodenbach Fruitage</div>
         <div class="related-price">26,00 kr</div>
-    </a>
+    </a></div><div class="related-item">
     <a class="related-card" href="https://www.beersniffer.dk/ol/corsendonk-apple-white/">
         <img src="https://cdn.shopify.com/s/files/1/0509/8477/9975/files/corsendonk-apple-white-3-4-33cl.png?v=1711983933" alt="Corsendonk Apple White" loading="lazy">
         <div class="related-name">Corsendonk Apple White</div>
         <div class="related-price">28,00 kr</div>
-    </a></div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/lindemans-tarot-noir/">
+        <img src="https://www.vildmedvin.dk/img/1000/1000/resize/l/i/lindemans_tarot_noir_8l.jpg" alt="Lindemans, Tarot Noir" loading="lazy">
+        <div class="related-name">Lindemans, Tarot Noir</div>
+        <div class="related-price">28,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/schonramer-naturradler/">
+        <img src="https://www.vildmedvin.dk/img/1000/1000/resize/n/a/naturradler.jpg" alt="Schönramer Naturradler" loading="lazy">
+        <div class="related-name">Schönramer Naturradler</div>
+        <div class="related-price">29,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/stadshaven-brouwerij-devils-fruit/">
+        <img src="https://cdn.shopify.com/s/files/1/0509/8477/9975/files/devil-s-fruit-3-8-33cl.png?v=1772723132" alt="Devil’s Fruit" loading="lazy">
+        <div class="related-name">Devil’s Fruit</div>
+        <div class="related-price">30,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/brouwerij-van-steenberge-gulden-draak-red/">
+        <img src="https://cdn.shopify.com/s/files/1/0509/8477/9975/files/gulden-draak-red-8-33cl.png?v=1760275644" alt="Gulden Draak Red" loading="lazy">
+        <div class="related-name">Gulden Draak Red</div>
+        <div class="related-price">31,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/brasserie-dachouffe-cherry-chouffe/">
+        <img src="https://cdn.shopify.com/s/files/1/0509/8477/9975/files/cherry-chouffe-8-33cl-2025.png?v=1760348297" alt="Cherry Chouffe" loading="lazy">
+        <div class="related-name">Cherry Chouffe</div>
+        <div class="related-price">33,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/brouwerij-lindemans-tarot-noir/">
+        <img src="https://cdn.shopify.com/s/files/1/0509/8477/9975/files/tarot-noir-8-25cl_7bf9e8a0-4dd8-4a02-b46d-5e45d72f2018.png?v=1739268000" alt="Tarot Noir" loading="lazy">
+        <div class="related-name">Tarot Noir</div>
+        <div class="related-price">33,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/abbaye-de-leffe-leffe-ruby/">
+        <img src="https://cdn.shopify.com/s/files/1/0509/8477/9975/files/leffe-ruby-5-33cl.png?v=1782916826" alt="Leffe Ruby" loading="lazy">
+        <div class="related-name">Leffe Ruby</div>
+        <div class="related-price">35,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/brouwerij-der-sint-benedictusabdij-de-achelse-kluis-achel/">
+        <img src="https://cdn.shopify.com/s/files/1/0509/8477/9975/files/achel-rouge-legere-5-5-33cl.png?v=1760277394" alt="Achel Rouge Légère" loading="lazy">
+        <div class="related-name">Achel Rouge Légère</div>
+        <div class="related-price">35,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/the-brew-society-martha-guilty-rouge/">
+        <img src="https://cdn.shopify.com/s/files/1/0509/8477/9975/files/martha-guilty-rouge-8.png?v=1760359882" alt="Martha Guilty Rouge" loading="lazy">
+        <div class="related-name">Martha Guilty Rouge</div>
+        <div class="related-price">35,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/kasteel-brouwerij-vanhonsebrouck-kasteel-tropical/">
+        <img src="https://cdn.shopify.com/s/files/1/0509/8477/9975/files/kasteel-tropical-7-33cl.png?v=1752076771" alt="Kasteel Tropical" loading="lazy">
+        <div class="related-name">Kasteel Tropical</div>
+        <div class="related-price">35,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/brasserie-dubuisson-frambush/">
+        <img src="https://cdn.shopify.com/s/files/1/0509/8477/9975/files/fram-bush-8-5-33cl.png?v=1750869258" alt="Frambush" loading="lazy">
+        <div class="related-name">Frambush</div>
+        <div class="related-price">35,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/brouwerij-bosteels-kwak-rouge/">
+        <img src="https://cdn.shopify.com/s/files/1/0509/8477/9975/files/kwak-rouge-8-33cl.png?v=1752075577" alt="Kwak Rouge" loading="lazy">
+        <div class="related-name">Kwak Rouge</div>
+        <div class="related-price">36,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/huyghe-brewery-floris-apple/">
+        <img src="https://cdn.shopify.com/s/files/1/0509/8477/9975/files/floris-apple-3-6-33cl.png?v=1777387417" alt="Floris Apple" loading="lazy">
+        <div class="related-name">Floris Apple</div>
+        <div class="related-price">36,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/mongozo-banana/">
+        <img src="https://cdn.shopify.com/s/files/1/0509/8477/9975/files/mongozo-mango-3-6-33cl_79d9c2eb-d759-48ec-b5a6-235adbbbf287.png?v=1777386794" alt="Mongozo Banana" loading="lazy">
+        <div class="related-name">Mongozo Banana</div>
+        <div class="related-price">36,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/mongozo-coconut/">
+        <img src="https://cdn.shopify.com/s/files/1/0509/8477/9975/files/mongozo-coconut-3-6-33cl.png?v=1760279059" alt="Mongozo Coconut" loading="lazy">
+        <div class="related-name">Mongozo Coconut</div>
+        <div class="related-price">36,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/huyghe-brewery-floris-honey/">
+        <img src="https://cdn.shopify.com/s/files/1/0509/8477/9975/files/floris-honey-4-5-33cl.png?v=1733659568" alt="Floris Honey" loading="lazy">
+        <div class="related-name">Floris Honey</div>
+        <div class="related-price">36,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/huyghe-brewery-floris-chokolat/">
+        <img src="https://cdn.shopify.com/s/files/1/0509/8477/9975/files/floris-chokolat-4-2-33cl_c46cb666-0651-43f2-b494-9356db085877.png?v=1739270228" alt="Floris Chokolat" loading="lazy">
+        <div class="related-name">Floris Chokolat</div>
+        <div class="related-price">36,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/huyghe-brewery-floris-passion/">
+        <img src="https://cdn.shopify.com/s/files/1/0509/8477/9975/files/floris-passion-3-6-33cl_94b6875a-d47e-49dd-bafc-19466e72cb08.png?v=1739270491" alt="Floris Passion" loading="lazy">
+        <div class="related-name">Floris Passion</div>
+        <div class="related-price">36,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/kasteel-brouwerij-vanhonsebrouck-kasteel-rubus-framboise/">
+        <img src="https://cdn.shopify.com/s/files/1/0509/8477/9975/files/kasteel-rubus-framboise-7-33cl_b626d26c-fbcf-4e1b-924c-753d941671e5.png?v=1745592376" alt="Kasteel Rubus Framboise" loading="lazy">
+        <div class="related-name">Kasteel Rubus Framboise</div>
+        <div class="related-price">36,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/huyghe-brewery-floris-kriek/">
+        <img src="https://cdn.shopify.com/s/files/1/0509/8477/9975/files/floris-kriek-4-8-33cl.png?v=1739270332" alt="Floris Kriek" loading="lazy">
+        <div class="related-name">Floris Kriek</div>
+        <div class="related-price">36,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/huyghe-brewery-floris-fraise-jordbaer/">
+        <img src="https://cdn.shopify.com/s/files/1/0509/8477/9975/files/floris-fraise-3-6-33cl.png?v=1739270575" alt="Floris Fraise (Jordbær)" loading="lazy">
+        <div class="related-name">Floris Fraise (Jordbær)</div>
+        <div class="related-price">36,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/samuel-smith-organic-raspberry/">
+        <img src="https://www.vildmedvin.dk/img/1000/1000/resize/o/r/oraganic_raspberry.jpg" alt="Samuel Smith, Organic Raspberry" loading="lazy">
+        <div class="related-name">Samuel Smith, Organic Raspberry</div>
+        <div class="related-price">37,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/samuel-smith-organic-cherry/">
+        <img src="https://www.vildmedvin.dk/img/1000/1000/resize/o/r/oraganic_cherry.jpg" alt="Samuel Smith, Organic Cherry" loading="lazy">
+        <div class="related-name">Samuel Smith, Organic Cherry</div>
+        <div class="related-price">37,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/huyghe-brewery-floris-peche/">
+        <img src="https://cdn.shopify.com/s/files/1/0509/8477/9975/files/floris-peche-3-6-33cl.png?v=1774981288" alt="Floris Pêche" loading="lazy">
+        <div class="related-name">Floris Pêche</div>
+        <div class="related-price">38,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/vault-city-lemon-ginger-radler/">
+        <img src="https://www.vildmedvin.dk/img/1000/1000/resize/v/a/vault_city_lemon_ginger_radler.jpg" alt="Vault City, Lemon &amp; Ginger Radler" loading="lazy">
+        <div class="related-name">Vault City, Lemon &amp; Ginger Radler</div>
+        <div class="related-price">39,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/lervig-human-nature/">
+        <img src="https://www.vildmedvin.dk/img/1000/1000/resize/l/e/lervig_human_nature.jpg" alt="Lervig, Human Nature" loading="lazy">
+        <div class="related-name">Lervig, Human Nature</div>
+        <div class="related-price">41,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/huyghe-brewery-delirium-red/">
+        <img src="https://cdn.shopify.com/s/files/1/0509/8477/9975/files/delirium-red-33cl.png?v=1760284133" alt="Delirium Red" loading="lazy">
+        <div class="related-name">Delirium Red</div>
+        <div class="related-price">42,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/mango-gelato-fruit-beer-fra-genys/">
+        <img src="https://cdn-main.ideal.shop/images/by_hash/075588b9e9ae4fa71cc3f02858c593b0e3c28941eb24c1913db40307963c05c9/500-0/mango-Gelato.jpg" alt="Mango Gelato - Fruit Beer fra Genys" loading="lazy">
+        <div class="related-name">Mango Gelato - Fruit Beer fra Genys</div>
+        <div class="related-price">55,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/aaben-mumbo-jumbo-6-strawberry-and-rhubarb/">
+        <img src="https://www.vildmedvin.dk/img/1000/1000/resize/_/b/_ben_mumbo.png" alt="Åben, Mumbo Jumbo #6 - Strawberry and Rhubarb" loading="lazy">
+        <div class="related-name">Åben, Mumbo Jumbo #6 - Strawberry and Rhubarb</div>
+        <div class="related-price">59,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/mont-blanc-la-verte/">
+        <img src="https://www.vildmedvin.dk/img/1000/1000/resize/m/o/mont_blanc_la_verte.jpg" alt="Mont Blanc La Verte" loading="lazy">
+        <div class="related-name">Mont Blanc La Verte</div>
+        <div class="related-price">78,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/mont-blanc-la-bleue/">
+        <img src="https://www.vildmedvin.dk/img/1000/1000/resize/m/o/mont_blanc_la_bleue.jpg" alt="Mont Blanc La Bleue" loading="lazy">
+        <div class="related-name">Mont Blanc La Bleue</div>
+        <div class="related-price">78,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/tilquin-oude-groseille-a-maquereau-verte-a-lancienne/">
+        <img src="https://www.vildmedvin.dk/img/1000/1000/resize/o/u/oude-groseille-a-maquereau.jpg" alt="Tilquin Oude Groseille a Maquereau Verte a l&#x27;Ancienne" loading="lazy">
+        <div class="related-name">Tilquin Oude Groseille a Maquereau Verte a l&#x27;Ancienne</div>
+        <div class="related-price">99,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/tilquin-oude-mirabelle-a-lancienne/">
+        <img src="https://www.vildmedvin.dk/img/1000/1000/resize/t/i/tilquin-oude-mirabelle-a-l-ancienne_done.jpg" alt="Tilquin Oude Mirabelle à l&#x27;ancienne" loading="lazy">
+        <div class="related-name">Tilquin Oude Mirabelle à l&#x27;ancienne</div>
+        <div class="related-price">114,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/3-fonteinen-framboos-bio/">
+        <img src="https://www.vildmedvin.dk/img/1000/1000/resize/f/r/framboos_bio.jpg" alt="3 Fonteinen Framboos Bio" loading="lazy">
+        <div class="related-name">3 Fonteinen Framboos Bio</div>
+        <div class="related-price">164,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/3-fonteinen-oude-kirsebaer/">
+        <img src="https://www.vildmedvin.dk/img/1000/1000/resize/o/u/oude_kirsebaer.jpg" alt="3 Fonteinen Oude Kirsebaer" loading="lazy">
+        <div class="related-name">3 Fonteinen Oude Kirsebaer</div>
+        <div class="related-price">178,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/3-fonteinen-druif-muscaris/">
+        <img src="https://www.vildmedvin.dk/img/1000/1000/resize/d/r/druif_muscaris.jpg" alt="3 Fonteinen Druif Muscaris" loading="lazy">
+        <div class="related-name">3 Fonteinen Druif Muscaris</div>
+        <div class="related-price">218,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/3-fonteinen-druif-gewurztraminer/">
+        <img src="https://www.vildmedvin.dk/img/1000/1000/resize/g/e/gewurz_2048x2048.jpg" alt="3 Fonteinen Druif Gewurztraminer" loading="lazy">
+        <div class="related-name">3 Fonteinen Druif Gewurztraminer</div>
+        <div class="related-price">218,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/3-fonteinen-gele-belgishe-perzik/">
+        <img src="https://www.vildmedvin.dk/img/1000/1000/resize/b/e/belgischegeleperzik_2048x2048.jpg" alt="3 Fonteinen Gele Belgishe Perzik" loading="lazy">
+        <div class="related-name">3 Fonteinen Gele Belgishe Perzik</div>
+        <div class="related-price">218,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/3-fonteinen-pruim-belle-de-louvain/">
+        <img src="https://www.vildmedvin.dk/img/1000/1000/resize/p/r/pruim_belle_de_louvain.jpg" alt="3 Fonteinen Pruim Belle De Louvain" loading="lazy">
+        <div class="related-name">3 Fonteinen Pruim Belle De Louvain</div>
+        <div class="related-price">218,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/3-fonteinen-rabarber/">
+        <img src="https://www.vildmedvin.dk/img/1000/1000/resize/3/-/3-fonteinen-rabarber-season-20-21-.jpg" alt="3 Fonteinen Rabarber" loading="lazy">
+        <div class="related-name">3 Fonteinen Rabarber</div>
+        <div class="related-price">218,00 kr</div>
+    </a></div></div>
+        <button class="related-toggle" onclick="this.previousElementSibling.querySelectorAll(&quot;.related-hidden&quot;).forEach(e=>e.style.display=&quot;block&quot;);this.style.display=&quot;none&quot;">Vis alle (46)</button>
     </div>
 
     <div class="disclaimer">
         📢 Affiliate disclosure: BeerSniffer kan modtage provision når du køber via vores links.
-        Priser opdateret 03.07.2026. Tjek altid den endelige pris hos forhandleren før køb.
+        Priser opdateret 07.07.2026. Tjek altid den endelige pris hos forhandleren før køb.
     </div>
 </div>
 

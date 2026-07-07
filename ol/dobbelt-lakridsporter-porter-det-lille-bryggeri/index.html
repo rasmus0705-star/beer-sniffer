@@ -66,6 +66,9 @@ body { background: var(--bg); color: var(--text); font-family: 'DM Sans', sans-s
 .related-card img, .related-img-placeholder { width: 100%; height: 70px; object-fit: contain; background: var(--surface2); border-radius: 6px; margin-bottom: 0.4rem; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; }
 .related-name { font-size: 0.72rem; line-height: 1.3; margin-bottom: 0.2rem; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; min-height: 1.9em; }
 .related-price { font-size: 0.78rem; font-weight: 700; color: var(--gold-light); }
+.related-hidden { display: none; }
+.related-toggle { display: block; margin: 0.8rem auto 0; background: var(--surface2); border: 1px solid var(--border-light); border-radius: 999px; padding: 0.45rem 1.2rem; color: var(--gold); font-family: 'DM Sans', sans-serif; font-size: 0.78rem; cursor: pointer; transition: border-color 0.15s; }
+.related-toggle:hover { border-color: var(--gold); color: var(--gold-light); }
 .disclaimer { font-size: 0.72rem; color: var(--text-muted); margin-top: 2rem; line-height: 1.6; border-top: 1px solid var(--border); padding-top: 1rem; }
 .chart-section { margin: 1.5rem 0; background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 1rem 1.1rem; }
 .chart-heading { font-size: 0.7rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 0.7rem; }
@@ -138,42 +141,218 @@ body { background: var(--bg); color: var(--text); font-family: 'DM Sans', sans-s
 
     <div class="related-section">
         <div class="related-heading">Flere øl fra 44cl, 8,8%, Porter</div>
-        <div class="related-grid">
+        <div class="related-grid"><div class="related-item">
     <a class="related-card" href="https://www.beersniffer.dk/ol/thisted-bryghus-limfjordsporter/">
         <img src="https://www.vildmedvin.dk/img/1000/1000/resize/e/e/eeeree.jpg" alt="Thisted Bryghus, Limfjordsporter" loading="lazy">
         <div class="related-name">Thisted Bryghus, Limfjordsporter</div>
         <div class="related-price">31,00 kr</div>
-    </a>
+    </a></div><div class="related-item">
     <a class="related-card" href="https://www.beersniffer.dk/ol/samuel-smith-taddy-porter/">
         <img src="https://www.vildmedvin.dk/img/1000/1000/resize/t/a/taddy_porter_35_5_cl..jpg" alt="Samuel Smith, Taddy Porter" loading="lazy">
         <div class="related-name">Samuel Smith, Taddy Porter</div>
         <div class="related-price">31,00 kr</div>
-    </a>
+    </a></div><div class="related-item">
     <a class="related-card" href="https://www.beersniffer.dk/ol/o-o-brewing-porter-porter/">
         <img src="https://cdn.shopify.com/s/files/1/0551/6600/9423/files/D211515C-83CB-41F3-A11F-FBD490663E04.jpg?v=1777995390" alt="O/O Brewing - Porter Porter" loading="lazy">
         <div class="related-name">O/O Brewing - Porter Porter</div>
         <div class="related-price">34,00 kr</div>
-    </a>
+    </a></div><div class="related-item">
     <a class="related-card" href="https://www.beersniffer.dk/ol/hornbeer-charlies-cool-porter/">
         <img src="https://www.vildmedvin.dk/img/1000/1000/resize/h/o/hornbeer_charlies_cool_porter.jpg" alt="Hornbeer, Charlies Cool Porter" loading="lazy">
         <div class="related-name">Hornbeer, Charlies Cool Porter</div>
         <div class="related-price">34,00 kr</div>
-    </a>
+    </a></div><div class="related-item">
     <a class="related-card" href="https://www.beersniffer.dk/ol/moen-bryghus-haarboelle-honning-porter/">
         <img src="https://www.vildmedvin.dk/img/1000/1000/resize/h/a/haarboellehonningporter-33cl-683x1024.jpg" alt="Møn Bryghus, Hårbølle Honning Porter" loading="lazy">
         <div class="related-name">Møn Bryghus, Hårbølle Honning Porter</div>
         <div class="related-price">34,00 kr</div>
-    </a>
+    </a></div><div class="related-item">
     <a class="related-card" href="https://www.beersniffer.dk/ol/ebeltoft-gaardbryggeri-damn-brown-porter/">
         <img src="https://cdn.shopify.com/s/files/1/0509/8477/9975/files/damn-brown-porter-33cl_edcc3e74-a9ce-4271-ad7b-80b59b6b9f43.png?v=1741799324" alt="Damn Brown Porter" loading="lazy">
         <div class="related-name">Damn Brown Porter</div>
         <div class="related-price">35,00 kr</div>
-    </a></div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/thornbridge-cocoa-wonderland/">
+        <img src="https://www.vildmedvin.dk/img/1000/1000/resize/t/h/thornbridge_cocoa_wonderland.jpg" alt="Thornbridge, Cocoa Wonderland" loading="lazy">
+        <div class="related-name">Thornbridge, Cocoa Wonderland</div>
+        <div class="related-price">35,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/fullers-london-porter/">
+        <img src="https://www.vildmedvin.dk/img/1000/1000/resize/1/0/103_0.jpeg.mst.jpg" alt="Fullers, London Porter" loading="lazy">
+        <div class="related-name">Fullers, London Porter</div>
+        <div class="related-price">37,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/thisted-bryghus-limfjordsporter-whisky/">
+        <img src="https://www.vildmedvin.dk/img/1000/1000/resize/t/h/thisted_bryghus_limfjordsporter_whisky.jpg" alt="Thisted Bryghus, Limfjordsporter Whisky" loading="lazy">
+        <div class="related-name">Thisted Bryghus, Limfjordsporter Whisky</div>
+        <div class="related-price">39,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/hvide-sande-bryghus-sorte-louis-whisky-porter/">
+        <img src="https://www.vildmedvin.dk/img/1000/1000/resize/s/o/sorte_louis.jpg" alt="Hvide Sande Bryghus, Sorte Louis Whisky Porter" loading="lazy">
+        <div class="related-name">Hvide Sande Bryghus, Sorte Louis Whisky Porter</div>
+        <div class="related-price">40,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/fur-bryghus-porter/">
+        <img src="https://www.vildmedvin.dk/img/1000/1000/resize/f/u/fur_porter.jpg" alt="Fur Bryghus, Porter" loading="lazy">
+        <div class="related-name">Fur Bryghus, Porter</div>
+        <div class="related-price">44,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/brouwerij-kees-export-porter-1750/">
+        <img src="https://cdn.shopify.com/s/files/1/0509/8477/9975/files/export-porter-1750-33cl.png?v=1767448481" alt="Export Porter 1750" loading="lazy">
+        <div class="related-name">Export Porter 1750</div>
+        <div class="related-price">45,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/vibrant-forest-black-forest-english-porter/">
+        <img src="https://cdn.shopify.com/s/files/1/0402/1239/8243/files/VibrantForest_BlackForest.png?v=1777886177" alt="Vibrant Forest - Black Forest - English Porter" loading="lazy">
+        <div class="related-name">Vibrant Forest - Black Forest - English Porter</div>
+        <div class="related-price">45,75 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/p-hjala-emberwood-smoked-porter/">
+        <img src="https://cdn.shopify.com/s/files/1/0402/1239/8243/files/Pohjala_Emberwood.png?v=1773007729" alt="Põhjala - Emberwood - Smoked Porter" loading="lazy">
+        <div class="related-name">Põhjala - Emberwood - Smoked Porter</div>
+        <div class="related-price">45,75 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/p-hjala-htu-american-porter/">
+        <img src="https://cdn.shopify.com/s/files/1/0402/1239/8243/files/Pohjala_Ohtu.png?v=1758655594" alt="Põhjala - Õhtu - American Porter" loading="lazy">
+        <div class="related-name">Põhjala - Õhtu - American Porter</div>
+        <div class="related-price">45,75 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/det-lille-bryggeri-juleporter/">
+        <img src="https://www.vildmedvin.dk/img/1000/1000/resize/j/u/juleporter.png" alt="Det Lille Bryggeri, Juleporter" loading="lazy">
+        <div class="related-name">Det Lille Bryggeri, Juleporter</div>
+        <div class="related-price">48,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/samuel-smith-taddy-porter-2/">
+        <img src="https://www.vildmedvin.dk/img/1000/1000/resize/t/a/taddy_porter_55_cl..jpg" alt="Samuel Smith, Taddy Porter" loading="lazy">
+        <div class="related-name">Samuel Smith, Taddy Porter</div>
+        <div class="related-price">48,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/bryg-365-sorte-satan/">
+        <img src="https://www.vildmedvin.dk/img/1000/1000/resize/b/r/bryg365_-_sorte_satan.jpg" alt="Bryg 365, Sorte Satan" loading="lazy">
+        <div class="related-name">Bryg 365, Sorte Satan</div>
+        <div class="related-price">49,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/bryg-365-baltic-battle/">
+        <img src="https://www.vildmedvin.dk/img/1000/1000/resize/b/a/baltic_battle_bryg365.jpg" alt="Bryg 365, Baltic Battle" loading="lazy">
+        <div class="related-name">Bryg 365, Baltic Battle</div>
+        <div class="related-price">49,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/havnefogedens-porter-roede-port/">
+        <img src="https://cdn.shopify.com/s/files/1/0600/9438/2263/files/rp3.jpg?v=1776345143" alt="Havnefogedens Porter - Røde Port - -" loading="lazy">
+        <div class="related-name">Havnefogedens Porter - Røde Port - -</div>
+        <div class="related-price">50,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/det-lille-bryggeri-lakridsporter/">
+        <img src="https://www.bestofbeers.dk/wp-content/uploads/2025/03/DetLilleBryggeriLakridsporter.jpg" alt="Det Lille Bryggeri – Lakridsporter – –" loading="lazy">
+        <div class="related-name">Det Lille Bryggeri – Lakridsporter – –</div>
+        <div class="related-price">51,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/hr-skov-blomme-rom-porter/">
+        <img src="https://www.vildmedvin.dk/img/1000/1000/resize/b/l/blomme-rom-porter.jpg" alt="Hr. Skov, Blomme Rom Porter" loading="lazy">
+        <div class="related-name">Hr. Skov, Blomme Rom Porter</div>
+        <div class="related-price">54,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/omnipollo-05-45-breakfast-porter-8211-coffee/">
+        <img src="https://www.bestofbeers.dk/wp-content/uploads/2026/01/Omnipollo0545Breakfast.jpg" alt="Omnipollo – 05:45 Breakfast – Porter &amp;#8211; Coffee – –" loading="lazy">
+        <div class="related-name">Omnipollo – 05:45 Breakfast – Porter &amp;#8211; Coffee – –</div>
+        <div class="related-price">56,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/x-porter-midfyns-bryghus-3/">
+        <img src="https://cdn.shopify.com/s/files/1/0600/9438/2263/files/Xporter.jpg?v=1747742681" alt="X - Porter - Midfyns Bryghus - -" loading="lazy">
+        <div class="related-name">X - Porter - Midfyns Bryghus - -</div>
+        <div class="related-price">58,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/didko-memento-mori/">
+        <img src="https://cdn.shopify.com/s/files/1/0368/1628/9924/files/memento_mori.png?v=1777023281" alt="Didko - Memento Mori" loading="lazy">
+        <div class="related-name">Didko - Memento Mori</div>
+        <div class="related-price">59,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/didko-brewery-memento-mori-smoked-porter/">
+        <img src="https://www.bestofbeers.dk/wp-content/uploads/2026/05/DidkoBreweryMementon.jpg" alt="Didko Brewery – Memento Mori – Smoked Porter – –" loading="lazy">
+        <div class="related-name">Didko Brewery – Memento Mori – Smoked Porter – –</div>
+        <div class="related-price">66,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/jopen-meesterstuk-2024-ba-imperial-porter/">
+        <img src="https://cdn.shopify.com/s/files/1/0402/1239/8243/files/Jopen_Meesterstuk.png?v=1776217493" alt="Jopen - Meesterstuk 2024 - BA Imperial Porter" loading="lazy">
+        <div class="related-name">Jopen - Meesterstuk 2024 - BA Imperial Porter</div>
+        <div class="related-price">66,50 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/p-hjala-barrique-noire-ba-imperial-porter/">
+        <img src="https://cdn.shopify.com/s/files/1/0402/1239/8243/files/Pohjala_BarriqueNoire.png?v=1776217734" alt="Põhjala - Barrique Noire - BA Imperial Porter" loading="lazy">
+        <div class="related-name">Põhjala - Barrique Noire - BA Imperial Porter</div>
+        <div class="related-price">79,75 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/p-hjala-kaja-ba-imperial-porter/">
+        <img src="https://cdn.shopify.com/s/files/1/0402/1239/8243/files/Pohjala_Kaja.png?v=1776217985" alt="Põhjala - Kaja - BA Imperial Porter" loading="lazy">
+        <div class="related-name">Põhjala - Kaja - BA Imperial Porter</div>
+        <div class="related-price">79,75 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/fanoe-imperial-juleporter/">
+        <img src="https://www.vildmedvin.dk/img/1000/1000/resize/j/u/jul4e_porter.jpg" alt="Fanø, Imperial Juleporter" loading="lazy">
+        <div class="related-name">Fanø, Imperial Juleporter</div>
+        <div class="related-price">83,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/fullers-chiswick-2025-180th-anniversary-porter-limited-edition/">
+        <img src="https://www.bestofbeers.dk/wp-content/uploads/2026/03/Fullers180thAnniversaryPorter-1.jpg" alt="Fullers Chiswick 2025 – 180th Anniversary – Porter Limited Edition – –" loading="lazy">
+        <div class="related-name">Fullers Chiswick 2025 – 180th Anniversary – Porter Limited Edition – –</div>
+        <div class="related-price">84,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/pipeworks-as-you-wish/">
+        <img src="https://cdn.shopify.com/s/files/1/0368/1628/9924/files/as_you_wish.png?v=1764269542" alt="Pipeworks - As You Wish" loading="lazy">
+        <div class="related-name">Pipeworks - As You Wish</div>
+        <div class="related-price">109,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/infinity-armagnac-ba-imperial-porter-fra-rockmill/">
+        <img src="https://cdn-main.ideal.shop/images/by_hash/77566cabaa2d06b5ce05a09f0e63711119ffeeb558142df029638d237cdcde06/500-0/InfinityArmagnac.jpg" alt="Infinity - Armagnac BA Imperial Porter fra Rockmill" loading="lazy">
+        <div class="related-name">Infinity - Armagnac BA Imperial Porter fra Rockmill</div>
+        <div class="related-price">119,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/4th-anniversary-ba-porter-rockmill/">
+        <img src="https://cdn-main.ideal.shop/images/by_hash/43c50afe9e8927e4106edff343d3d6715c529244d3deb4774823dff39d7ae682/500-0/4thanniversary.jpg" alt="4th anniversary - BA Porter Rockmill" loading="lazy">
+        <div class="related-name">4th anniversary - BA Porter Rockmill</div>
+        <div class="related-price">119,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/alefarm-high-seas-bourbon-barrel-edition/">
+        <img src="https://www.vildmedvin.dk/img/1000/1000/resize/h/i/highseas-_bourbon_barrel_-_f_rdig.jpg" alt="Alefarm, High Seas (Bourbon Barrel Edition)" loading="lazy">
+        <div class="related-name">Alefarm, High Seas (Bourbon Barrel Edition)</div>
+        <div class="related-price">124,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/omnipollo-x-narke-kulturbryggeri-taart-kaggen-barrel-aged/">
+        <img src="https://www.bestofbeers.dk/wp-content/uploads/2024/10/OmnipolloNarkeImperialPorter.jpg" alt="Omnipollo x Närke Kulturbryggeri – Tårt Kaggen – Barrel-Aged Imperial Porter – –" loading="lazy">
+        <div class="related-name">Omnipollo x Närke Kulturbryggeri – Tårt Kaggen – Barrel-Aged Imperial Porter – –</div>
+        <div class="related-price">146,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/the-bruery-the-walnutter/">
+        <img src="https://cdn.shopify.com/s/files/1/0368/1628/9924/files/walnutter.png?v=1706263668" alt="The Bruery - The Walnutter" loading="lazy">
+        <div class="related-name">The Bruery - The Walnutter</div>
+        <div class="related-price">193,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/bissel-brothers-brewing-co-angels-with-filthy-souls-2/">
+        <img src="https://www.bestofbeers.dk/wp-content/uploads/2026/04/BisselBrothersAngelsWithFilthySouls.jpg" alt="Bissel Brothers Brewing Co. – Angels With Filthy Souls – Barrel aged Maple Porter 2025 – –" loading="lazy">
+        <div class="related-name">Bissel Brothers Brewing Co. – Angels With Filthy Souls – Barrel aged Maple Porter 2025 – –</div>
+        <div class="related-price">286,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/porter-smagekasse-6-stk-gns-49-75-kr-2/">
+        <img src="https://cdn.shopify.com/s/files/1/0402/1239/8243/files/Porter_Smagekasse_612d13b9-8d65-438e-b7de-b88e192032b2.png?v=1780999117" alt="Porter Smagekasse (6 stk.)(Gns. 49,75 Kr. Pr. Øl)" loading="lazy">
+        <div class="related-name">Porter Smagekasse (6 stk.)(Gns. 49,75 Kr. Pr. Øl)</div>
+        <div class="related-price">299,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/bissel-brothers-brewing-co-angels-with-filthy-souls/">
+        <img src="https://www.bestofbeers.dk/wp-content/uploads/2026/04/BisselBrothersAngelsWithFilthySoulsDblBarrel.jpg" alt="Bissel Brothers Brewing Co. – Angels With Filthy Souls – Double Barrel aged Maple Porter 2025 – –" loading="lazy">
+        <div class="related-name">Bissel Brothers Brewing Co. – Angels With Filthy Souls – Double Barrel aged Maple Porter 2025 – –</div>
+        <div class="related-price">301,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/evil-twin-brewing-maple-bourbon-imperial-doughnut-break/">
+        <img src="https://cdn.shopify.com/s/files/1/0368/1628/9924/files/imperial_doughnut_maple_syrup_BBA.png?v=1773125607" alt="Evil Twin Brewing - Maple Bourbon Imperial Doughnut Break 2018" loading="lazy">
+        <div class="related-name">Evil Twin Brewing - Maple Bourbon Imperial Doughnut Break 2018</div>
+        <div class="related-price">420,00 kr</div>
+    </a></div></div>
+        <button class="related-toggle" onclick="this.previousElementSibling.querySelectorAll(&quot;.related-hidden&quot;).forEach(e=>e.style.display=&quot;block&quot;);this.style.display=&quot;none&quot;">Vis alle (41)</button>
     </div>
 
     <div class="disclaimer">
         📢 Affiliate disclosure: BeerSniffer kan modtage provision når du køber via vores links.
-        Priser opdateret 03.07.2026. Tjek altid den endelige pris hos forhandleren før køb.
+        Priser opdateret 07.07.2026. Tjek altid den endelige pris hos forhandleren før køb.
     </div>
 </div>
 

@@ -66,6 +66,9 @@ body { background: var(--bg); color: var(--text); font-family: 'DM Sans', sans-s
 .related-card img, .related-img-placeholder { width: 100%; height: 70px; object-fit: contain; background: var(--surface2); border-radius: 6px; margin-bottom: 0.4rem; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; }
 .related-name { font-size: 0.72rem; line-height: 1.3; margin-bottom: 0.2rem; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; min-height: 1.9em; }
 .related-price { font-size: 0.78rem; font-weight: 700; color: var(--gold-light); }
+.related-hidden { display: none; }
+.related-toggle { display: block; margin: 0.8rem auto 0; background: var(--surface2); border: 1px solid var(--border-light); border-radius: 999px; padding: 0.45rem 1.2rem; color: var(--gold); font-family: 'DM Sans', sans-serif; font-size: 0.78rem; cursor: pointer; transition: border-color 0.15s; }
+.related-toggle:hover { border-color: var(--gold); color: var(--gold-light); }
 .disclaimer { font-size: 0.72rem; color: var(--text-muted); margin-top: 2rem; line-height: 1.6; border-top: 1px solid var(--border); padding-top: 1rem; }
 .chart-section { margin: 1.5rem 0; background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 1rem 1.1rem; }
 .chart-heading { font-size: 0.7rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 0.7rem; }
@@ -132,9 +135,9 @@ body { background: var(--bg); color: var(--text); font-family: 'DM Sans', sans-s
 
     
     <div class="chart-section">
-        <div class="chart-heading">📈 Prisudvikling (2026-05-23 – 2026-07-03)</div>
+        <div class="chart-heading">📈 Prisudvikling (2026-05-23 – 2026-07-07)</div>
         <svg viewBox="0 0 320 90" class="price-chart" preserveAspectRatio="none">
-            <polyline points="8.0,82.0 16.4,82.0 24.9,82.0 33.3,82.0 41.8,82.0 50.2,82.0 58.7,8.0 67.1,82.0 75.6,82.0 84.0,82.0 92.4,82.0 100.9,82.0 109.3,8.0 117.8,82.0 126.2,8.0 134.7,82.0 143.1,8.0 151.6,82.0 160.0,82.0 168.4,8.0 176.9,82.0 185.3,82.0 193.8,8.0 202.2,82.0 210.7,82.0 219.1,8.0 227.6,82.0 236.0,82.0 244.4,8.0 252.9,82.0 261.3,8.0 269.8,82.0 278.2,82.0 286.7,82.0 295.1,82.0 303.6,82.0 312.0,82.0" fill="none" style="stroke: var(--gold); stroke-width: 2;" />
+            <polyline points="8.0,82.0 15.8,82.0 23.6,82.0 31.4,82.0 39.2,82.0 47.0,82.0 54.8,8.0 62.6,82.0 70.4,82.0 78.2,82.0 85.9,82.0 93.7,82.0 101.5,8.0 109.3,82.0 117.1,8.0 124.9,82.0 132.7,8.0 140.5,82.0 148.3,82.0 156.1,8.0 163.9,82.0 171.7,82.0 179.5,8.0 187.3,82.0 195.1,82.0 202.9,8.0 210.7,82.0 218.5,82.0 226.3,8.0 234.1,82.0 241.8,8.0 249.6,82.0 257.4,82.0 265.2,82.0 273.0,82.0 280.8,82.0 288.6,82.0 296.4,82.0 304.2,82.0 312.0,82.0" fill="none" style="stroke: var(--gold); stroke-width: 2;" />
             <circle cx="312.0" cy="82.0" r="3.5" style="fill: var(--gold-light);" />
         </svg>
         <div class="chart-range">
@@ -149,27 +152,28 @@ body { background: var(--bg); color: var(--text); font-family: 'DM Sans', sans-s
 
     <div class="related-section">
         <div class="related-heading">Flere øl fra Fullers</div>
-        <div class="related-grid">
+        <div class="related-grid"><div class="related-item">
     <a class="related-card" href="https://www.beersniffer.dk/ol/fullers-esb/">
         <img src="https://www.vildmedvin.dk/img/1000/1000/resize/f/u/fullers_esb.jpg" alt="Fullers, ESB" loading="lazy">
         <div class="related-name">Fullers, ESB</div>
         <div class="related-price">37,00 kr</div>
-    </a>
+    </a></div><div class="related-item">
     <a class="related-card" href="https://www.beersniffer.dk/ol/fullers-london-porter/">
         <img src="https://www.vildmedvin.dk/img/1000/1000/resize/1/0/103_0.jpeg.mst.jpg" alt="Fullers, London Porter" loading="lazy">
         <div class="related-name">Fullers, London Porter</div>
         <div class="related-price">37,00 kr</div>
-    </a>
+    </a></div><div class="related-item">
     <a class="related-card" href="https://www.beersniffer.dk/ol/fullers-london-pride/">
         <img src="https://www.vildmedvin.dk/img/1000/1000/resize/f/u/fullers_london_pride_50_cl.jpeg" alt="Fullers, London Pride" loading="lazy">
         <div class="related-name">Fullers, London Pride</div>
         <div class="related-price">38,00 kr</div>
-    </a></div>
+    </a></div></div>
+        
     </div>
 
     <div class="disclaimer">
         📢 Affiliate disclosure: BeerSniffer kan modtage provision når du køber via vores links.
-        Priser opdateret 03.07.2026. Tjek altid den endelige pris hos forhandleren før køb.
+        Priser opdateret 07.07.2026. Tjek altid den endelige pris hos forhandleren før køb.
     </div>
 </div>
 

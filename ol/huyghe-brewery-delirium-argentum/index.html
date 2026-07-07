@@ -66,6 +66,9 @@ body { background: var(--bg); color: var(--text); font-family: 'DM Sans', sans-s
 .related-card img, .related-img-placeholder { width: 100%; height: 70px; object-fit: contain; background: var(--surface2); border-radius: 6px; margin-bottom: 0.4rem; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; }
 .related-name { font-size: 0.72rem; line-height: 1.3; margin-bottom: 0.2rem; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; min-height: 1.9em; }
 .related-price { font-size: 0.78rem; font-weight: 700; color: var(--gold-light); }
+.related-hidden { display: none; }
+.related-toggle { display: block; margin: 0.8rem auto 0; background: var(--surface2); border: 1px solid var(--border-light); border-radius: 999px; padding: 0.45rem 1.2rem; color: var(--gold); font-family: 'DM Sans', sans-serif; font-size: 0.78rem; cursor: pointer; transition: border-color 0.15s; }
+.related-toggle:hover { border-color: var(--gold); color: var(--gold-light); }
 .disclaimer { font-size: 0.72rem; color: var(--text-muted); margin-top: 2rem; line-height: 1.6; border-top: 1px solid var(--border); padding-top: 1rem; }
 .chart-section { margin: 1.5rem 0; background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 1rem 1.1rem; }
 .chart-heading { font-size: 0.7rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 0.7rem; }
@@ -149,42 +152,78 @@ body { background: var(--bg); color: var(--text); font-family: 'DM Sans', sans-s
 
     <div class="related-section">
         <div class="related-heading">Flere øl fra Huyghe Brewery</div>
-        <div class="related-grid">
+        <div class="related-grid"><div class="related-item">
     <a class="related-card" href="https://www.beersniffer.dk/ol/huyghe-brewery-delirium-nocturnum/">
         <img src="https://cdn.shopify.com/s/files/1/0509/8477/9975/files/delirium-nocturnum-33cl.png?v=1760284820" alt="Delirium Nocturnum" loading="lazy">
         <div class="related-name">Delirium Nocturnum</div>
         <div class="related-price">35,00 kr</div>
-    </a>
+    </a></div><div class="related-item">
     <a class="related-card" href="https://www.beersniffer.dk/ol/huyghe-brewery-floris-apple/">
         <img src="https://cdn.shopify.com/s/files/1/0509/8477/9975/files/floris-apple-3-6-33cl.png?v=1777387417" alt="Floris Apple" loading="lazy">
         <div class="related-name">Floris Apple</div>
         <div class="related-price">36,00 kr</div>
-    </a>
+    </a></div><div class="related-item">
     <a class="related-card" href="https://www.beersniffer.dk/ol/huyghe-brewery-floris-honey/">
         <img src="https://cdn.shopify.com/s/files/1/0509/8477/9975/files/floris-honey-4-5-33cl.png?v=1733659568" alt="Floris Honey" loading="lazy">
         <div class="related-name">Floris Honey</div>
         <div class="related-price">36,00 kr</div>
-    </a>
+    </a></div><div class="related-item">
     <a class="related-card" href="https://www.beersniffer.dk/ol/huyghe-brewery-floris-chokolat/">
         <img src="https://cdn.shopify.com/s/files/1/0509/8477/9975/files/floris-chokolat-4-2-33cl_c46cb666-0651-43f2-b494-9356db085877.png?v=1739270228" alt="Floris Chokolat" loading="lazy">
         <div class="related-name">Floris Chokolat</div>
         <div class="related-price">36,00 kr</div>
-    </a>
+    </a></div><div class="related-item">
     <a class="related-card" href="https://www.beersniffer.dk/ol/huyghe-brewery-floris-passion/">
         <img src="https://cdn.shopify.com/s/files/1/0509/8477/9975/files/floris-passion-3-6-33cl_94b6875a-d47e-49dd-bafc-19466e72cb08.png?v=1739270491" alt="Floris Passion" loading="lazy">
         <div class="related-name">Floris Passion</div>
         <div class="related-price">36,00 kr</div>
-    </a>
+    </a></div><div class="related-item">
     <a class="related-card" href="https://www.beersniffer.dk/ol/huyghe-brewery-floris-kriek/">
         <img src="https://cdn.shopify.com/s/files/1/0509/8477/9975/files/floris-kriek-4-8-33cl.png?v=1739270332" alt="Floris Kriek" loading="lazy">
         <div class="related-name">Floris Kriek</div>
         <div class="related-price">36,00 kr</div>
-    </a></div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/huyghe-brewery-floris-fraise-jordbaer/">
+        <img src="https://cdn.shopify.com/s/files/1/0509/8477/9975/files/floris-fraise-3-6-33cl.png?v=1739270575" alt="Floris Fraise (Jordbær)" loading="lazy">
+        <div class="related-name">Floris Fraise (Jordbær)</div>
+        <div class="related-price">36,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/huyghe-brewery-floris-peche/">
+        <img src="https://cdn.shopify.com/s/files/1/0509/8477/9975/files/floris-peche-3-6-33cl.png?v=1774981288" alt="Floris Pêche" loading="lazy">
+        <div class="related-name">Floris Pêche</div>
+        <div class="related-price">38,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/huyghe-brewery-delirio/">
+        <img src="https://cdn.shopify.com/s/files/1/0509/8477/9975/files/delirio-0-3-33cl.png?v=1760285287" alt="Delirio" loading="lazy">
+        <div class="related-name">Delirio</div>
+        <div class="related-price">40,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/huyghe-brewery-delirium-red/">
+        <img src="https://cdn.shopify.com/s/files/1/0509/8477/9975/files/delirium-red-33cl.png?v=1760284133" alt="Delirium Red" loading="lazy">
+        <div class="related-name">Delirium Red</div>
+        <div class="related-price">42,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/huyghe-brewery-delirium-christmas/">
+        <img src="https://cdn.shopify.com/s/files/1/0509/8477/9975/files/delirium-christmas-75cl_f20298dd-9d92-4ba4-a814-d2e466685df4.png?v=1767455710" alt="Delirium Christmas" loading="lazy">
+        <div class="related-name">Delirium Christmas</div>
+        <div class="related-price">95,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/huyghe-brewery-delirium-blond-barrel-aged/">
+        <img src="https://cdn.shopify.com/s/files/1/0509/8477/9975/files/delirium-blond-barrel-aged-11-5-75cl-2022.png?v=1699886457" alt="Delirium Blond Barrel Aged" loading="lazy">
+        <div class="related-name">Delirium Blond Barrel Aged</div>
+        <div class="related-price">245,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/huyghe-brewery-delirium-barrel-aged-sour-blond/">
+        <img src="https://cdn.shopify.com/s/files/1/0509/8477/9975/files/delirium-barrel-aged-sour-blond-10-8-75cl.png?v=1744887271" alt="Delirium Barrel Aged Sour Blond" loading="lazy">
+        <div class="related-name">Delirium Barrel Aged Sour Blond</div>
+        <div class="related-price">245,00 kr</div>
+    </a></div></div>
+        <button class="related-toggle" onclick="this.previousElementSibling.querySelectorAll(&quot;.related-hidden&quot;).forEach(e=>e.style.display=&quot;block&quot;);this.style.display=&quot;none&quot;">Vis alle (13)</button>
     </div>
 
     <div class="disclaimer">
         📢 Affiliate disclosure: BeerSniffer kan modtage provision når du køber via vores links.
-        Priser opdateret 03.07.2026. Tjek altid den endelige pris hos forhandleren før køb.
+        Priser opdateret 07.07.2026. Tjek altid den endelige pris hos forhandleren før køb.
     </div>
 </div>
 

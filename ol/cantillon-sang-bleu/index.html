@@ -66,6 +66,9 @@ body { background: var(--bg); color: var(--text); font-family: 'DM Sans', sans-s
 .related-card img, .related-img-placeholder { width: 100%; height: 70px; object-fit: contain; background: var(--surface2); border-radius: 6px; margin-bottom: 0.4rem; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; }
 .related-name { font-size: 0.72rem; line-height: 1.3; margin-bottom: 0.2rem; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; min-height: 1.9em; }
 .related-price { font-size: 0.78rem; font-weight: 700; color: var(--gold-light); }
+.related-hidden { display: none; }
+.related-toggle { display: block; margin: 0.8rem auto 0; background: var(--surface2); border: 1px solid var(--border-light); border-radius: 999px; padding: 0.45rem 1.2rem; color: var(--gold); font-family: 'DM Sans', sans-serif; font-size: 0.78rem; cursor: pointer; transition: border-color 0.15s; }
+.related-toggle:hover { border-color: var(--gold); color: var(--gold-light); }
 .disclaimer { font-size: 0.72rem; color: var(--text-muted); margin-top: 2rem; line-height: 1.6; border-top: 1px solid var(--border); padding-top: 1rem; }
 .chart-section { margin: 1.5rem 0; background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 1rem 1.1rem; }
 .chart-heading { font-size: 0.7rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 0.7rem; }
@@ -152,9 +155,9 @@ body { background: var(--bg); color: var(--text); font-family: 'DM Sans', sans-s
 
     
     <div class="chart-section">
-        <div class="chart-heading">📈 Prisudvikling (2026-05-17 – 2026-07-03)</div>
+        <div class="chart-heading">📈 Prisudvikling (2026-05-17 – 2026-07-07)</div>
         <svg viewBox="0 0 320 90" class="price-chart" preserveAspectRatio="none">
-            <polyline points="8.0,53.1 15.2,8.0 22.5,53.1 29.7,8.0 37.0,53.1 44.2,8.0 51.4,53.1 58.7,53.1 65.9,53.1 73.1,53.1 80.4,53.1 87.6,53.1 94.9,8.0 102.1,53.1 109.3,53.1 116.6,53.1 123.8,53.1 131.0,53.1 138.3,8.0 145.5,53.1 152.8,8.0 160.0,53.1 167.2,8.0 174.5,53.1 181.7,53.1 189.0,8.0 196.2,53.1 203.4,53.1 210.7,8.0 217.9,53.1 225.1,53.1 232.4,8.0 239.6,53.1 246.9,53.1 254.1,8.0 261.3,53.1 268.6,8.0 275.8,53.1 283.0,53.1 290.3,53.1 297.5,53.1 304.8,53.1 312.0,82.0" fill="none" style="stroke: var(--gold); stroke-width: 2;" />
+            <polyline points="8.0,53.1 14.8,8.0 21.5,53.1 28.3,8.0 35.0,53.1 41.8,8.0 48.5,53.1 55.3,53.1 62.0,53.1 68.8,53.1 75.6,53.1 82.3,53.1 89.1,8.0 95.8,53.1 102.6,53.1 109.3,53.1 116.1,53.1 122.8,53.1 129.6,8.0 136.4,53.1 143.1,8.0 149.9,53.1 156.6,8.0 163.4,53.1 170.1,53.1 176.9,8.0 183.6,53.1 190.4,53.1 197.2,8.0 203.9,53.1 210.7,53.1 217.4,8.0 224.2,53.1 230.9,53.1 237.7,8.0 244.4,53.1 251.2,8.0 258.0,53.1 264.7,53.1 271.5,53.1 278.2,53.1 285.0,53.1 291.7,82.0 298.5,82.0 305.2,82.0 312.0,82.0" fill="none" style="stroke: var(--gold); stroke-width: 2;" />
             <circle cx="312.0" cy="82.0" r="3.5" style="fill: var(--gold-light);" />
         </svg>
         <div class="chart-range">
@@ -169,37 +172,33 @@ body { background: var(--bg); color: var(--text); font-family: 'DM Sans', sans-s
 
     <div class="related-section">
         <div class="related-heading">Flere øl fra Brasserie Cantillon</div>
-        <div class="related-grid">
+        <div class="related-grid"><div class="related-item">
     <a class="related-card" href="https://www.beersniffer.dk/ol/cantillon-kriek-lambic-bio-2/">
         <img src="https://cdn.shopify.com/s/files/1/0509/8477/9975/files/cantillion-kriek-100-lambic-bio-6-37-5cl_acb64237-8fd7-40ce-87b1-cc2de43ed61a.png?v=1739115973" alt="Cantillon Kriek Lambic Bio" loading="lazy">
         <div class="related-name">Cantillon Kriek Lambic Bio</div>
         <div class="related-price">90,00 kr</div>
-    </a>
+    </a></div><div class="related-item">
     <a class="related-card" href="https://www.beersniffer.dk/ol/cantillon-gueuze-2/">
         <img src="https://cdn.shopify.com/s/files/1/0509/8477/9975/files/cantillion-geuze-lambic-bio-37cl.png?v=1739115242" alt="Cantillon Gueuze" loading="lazy">
         <div class="related-name">Cantillon Gueuze</div>
         <div class="related-price">95,00 kr</div>
-    </a>
+    </a></div><div class="related-item">
     <a class="related-card" href="https://www.beersniffer.dk/ol/cantillon-kriek-lambic-bio/">
         <img src="https://cdn.shopify.com/s/files/1/0509/8477/9975/products/cantillion-kriek-lambic-bio-75cl.png?v=1681125108" alt="Cantillon Kriek Lambic Bio" loading="lazy">
         <div class="related-name">Cantillon Kriek Lambic Bio</div>
         <div class="related-price">135,00 kr</div>
-    </a>
+    </a></div><div class="related-item">
     <a class="related-card" href="https://www.beersniffer.dk/ol/cantillon-gueuze/">
         <img src="https://cdn.shopify.com/s/files/1/0509/8477/9975/files/cantillion-gueuze-75cl_5de7c733-b439-4564-9908-44994cc6e6de.png?v=1739115693" alt="Cantillon Gueuze" loading="lazy">
         <div class="related-name">Cantillon Gueuze</div>
         <div class="related-price">185,00 kr</div>
-    </a>
-    <a class="related-card" href="https://www.beersniffer.dk/ol/brasserie-cantillon-sophia-lambic/">
-        <img src="https://cdn.shopify.com/s/files/1/0509/8477/9975/files/sophia-lambic-6-5-75cl.png?v=1782316588" alt="Sophia Lambic" loading="lazy">
-        <div class="related-name">Sophia Lambic</div>
-        <div class="related-price">495,00 kr</div>
-    </a></div>
+    </a></div></div>
+        
     </div>
 
     <div class="disclaimer">
         📢 Affiliate disclosure: BeerSniffer kan modtage provision når du køber via vores links.
-        Priser opdateret 03.07.2026. Tjek altid den endelige pris hos forhandleren før køb.
+        Priser opdateret 07.07.2026. Tjek altid den endelige pris hos forhandleren før køb.
     </div>
 </div>
 

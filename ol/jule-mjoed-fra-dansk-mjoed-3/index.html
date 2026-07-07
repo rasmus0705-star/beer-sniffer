@@ -17,7 +17,7 @@
 <meta name="twitter:title" content="Jule Mjød fra Dansk Mjød – 120,00 kr | BeerSniffer">
 <meta name="twitter:description" content="En lækker Jule mjød fra Dansk Mjød. Det er en Nordisk Honningvin med æblemost, ingefær og kanel. Et godt alternativ til snaps.">
 <meta name="twitter:image" content="https://cdn.shopify.com/s/files/1/0600/9438/2263/files/IMG_1390.heic?v=1733225392">
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Product", "name": "Jule Mjød fra Dansk Mjød", "image": "https://cdn.shopify.com/s/files/1/0600/9438/2263/files/IMG_1390.heic?v=1733225392", "description": "En lækker Jule mjød fra Dansk Mjød. Det er en Nordisk Honningvin med æblemost, ingefær og kanel. Et godt alternativ til snaps.", "brand": {"@type": "Brand", "name": "Beershoppen"}, "offers": {"@type": "AggregateOffer", "lowPrice": 120.0, "priceCurrency": "DKK", "offerCount": 1, "offers": [{"@type": "Offer", "price": 120.0, "priceCurrency": "DKK", "url": "https://beershoppen.dk/products/jule-mjod-fra-dansk-mjod", "seller": {"@type": "Organization", "name": "Beershoppen"}, "availability": "https://schema.org/InStock"}]}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Product", "name": "Jule Mjød fra Dansk Mjød", "image": "https://cdn.shopify.com/s/files/1/0600/9438/2263/files/IMG_1390.heic?v=1733225392", "description": "En lækker Jule mjød fra Dansk Mjød. Det er en Nordisk Honningvin med æblemost, ingefær og kanel. Et godt alternativ til snaps.", "brand": {"@type": "Brand", "name": "Dansk Mjød"}, "offers": {"@type": "AggregateOffer", "lowPrice": 120.0, "priceCurrency": "DKK", "offerCount": 1, "offers": [{"@type": "Offer", "price": 120.0, "priceCurrency": "DKK", "url": "https://beershoppen.dk/products/jule-mjod-fra-dansk-mjod", "seller": {"@type": "Organization", "name": "Beershoppen"}, "availability": "https://schema.org/InStock"}]}}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "BeerSniffer", "item": "https://www.beersniffer.dk/"}, {"@type": "ListItem", "position": 2, "name": "Jule Mjød fra Dansk Mjød", "item": "https://www.beersniffer.dk/ol/jule-mjoed-fra-dansk-mjoed-3/"}]}</script>
 <style>
 :root {
@@ -66,6 +66,9 @@ body { background: var(--bg); color: var(--text); font-family: 'DM Sans', sans-s
 .related-card img, .related-img-placeholder { width: 100%; height: 70px; object-fit: contain; background: var(--surface2); border-radius: 6px; margin-bottom: 0.4rem; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; }
 .related-name { font-size: 0.72rem; line-height: 1.3; margin-bottom: 0.2rem; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; min-height: 1.9em; }
 .related-price { font-size: 0.78rem; font-weight: 700; color: var(--gold-light); }
+.related-hidden { display: none; }
+.related-toggle { display: block; margin: 0.8rem auto 0; background: var(--surface2); border: 1px solid var(--border-light); border-radius: 999px; padding: 0.45rem 1.2rem; color: var(--gold); font-family: 'DM Sans', sans-serif; font-size: 0.78rem; cursor: pointer; transition: border-color 0.15s; }
+.related-toggle:hover { border-color: var(--gold); color: var(--gold-light); }
 .disclaimer { font-size: 0.72rem; color: var(--text-muted); margin-top: 2rem; line-height: 1.6; border-top: 1px solid var(--border); padding-top: 1rem; }
 .chart-section { margin: 1.5rem 0; background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 1rem 1.1rem; }
 .chart-heading { font-size: 0.7rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 0.7rem; }
@@ -106,7 +109,7 @@ body { background: var(--bg); color: var(--text); font-family: 'DM Sans', sans-s
         <div class="beer-image-col"><div class="beer-image-wrap" onclick="openLightbox('https://cdn.shopify.com/s/files/1/0600/9438/2263/files/IMG_1390.heic?v=1733225392', 'Jule Mjød fra Dansk Mjød')"><img class="beer-image" src="https://cdn.shopify.com/s/files/1/0600/9438/2263/files/IMG_1390.heic?v=1733225392" alt="Jule Mjød fra Dansk Mjød" loading="eager"></div><button class="zoom-link" onclick="openLightbox('https://cdn.shopify.com/s/files/1/0600/9438/2263/files/IMG_1390.heic?v=1733225392', 'Jule Mjød fra Dansk Mjød')">🔍 Se i fuld størrelse</button></div>
         <div class="beer-info">
             <h1>Jule Mjød fra Dansk Mjød</h1>
-            <div class="beer-brewery">Beershoppen</div>
+            <div class="beer-brewery">Dansk Mjød</div>
             <div class="beer-meta">Mjød · 75 cl · 14.8% ABV</div>
         </div>
     </div>
@@ -137,43 +140,44 @@ body { background: var(--bg); color: var(--text); font-family: 'DM Sans', sans-s
     </p>
 
     <div class="related-section">
-        <div class="related-heading">Andre Mjød-øl</div>
-        <div class="related-grid">
-    <a class="related-card" href="https://www.beersniffer.dk/ol/mount-saint-bernard-abbey-tynt-meadow-blond/">
-        <img src="https://cdn.shopify.com/s/files/1/0509/8477/9975/files/tynt-meadow-blond-5-33cl.png?v=1727440396" alt="Tynt Meadow Blond" loading="lazy">
-        <div class="related-name">Tynt Meadow Blond</div>
-        <div class="related-price">45,00 kr</div>
-    </a>
-    <a class="related-card" href="https://www.beersniffer.dk/ol/mount-saint-bernard-abbey-tynt-meadow-trappist/">
-        <img src="https://cdn.shopify.com/s/files/1/0509/8477/9975/files/tynt-meadow-7-4-33cl.png?v=1774553245" alt="Tynt Meadow Trappist" loading="lazy">
-        <div class="related-name">Tynt Meadow Trappist</div>
-        <div class="related-price">45,00 kr</div>
-    </a>
-    <a class="related-card" href="https://www.beersniffer.dk/ol/mad-scientist-matrix-red-pill-8211-low-abv/">
-        <img src="https://www.bestofbeers.dk/wp-content/uploads/2025/12/MadScientistMatrixRedPill.jpg" alt="Mad Scientist – Matrix – Red Pill &amp;#8211; Low ABV Fruited Braggot (Mjød) With Strawberries – –" loading="lazy">
-        <div class="related-name">Mad Scientist – Matrix – Red Pill &amp;#8211; Low ABV Fruited Braggot (Mjød) With Strawberries – –</div>
-        <div class="related-price">51,00 kr</div>
-    </a>
-    <a class="related-card" href="https://www.beersniffer.dk/ol/superstition-meadery-dune-bloom-carbonated-prickly-pear-session/">
-        <img src="https://cdn.shopify.com/s/files/1/0776/5209/9400/files/9B15C1F0-D632-4631-B286-FBFC8D79CFB6.jpg?v=1777238485" alt="Superstition Meadery - Dune Bloom Carbonated Prickly Pear Session Mead" loading="lazy">
-        <div class="related-name">Superstition Meadery - Dune Bloom Carbonated Prickly Pear Session Mead</div>
-        <div class="related-price">58,00 kr</div>
-    </a>
-    <a class="related-card" href="https://www.beersniffer.dk/ol/superstition-meadery-crystal-sail/">
-        <img src="https://cdn.shopify.com/s/files/1/0368/1628/9924/files/crystal_sail.png?v=1775759954" alt="Superstition Meadery - Crystal Sail" loading="lazy">
-        <div class="related-name">Superstition Meadery - Crystal Sail</div>
-        <div class="related-price">59,00 kr</div>
-    </a>
-    <a class="related-card" href="https://www.beersniffer.dk/ol/tynt-meadow-trappist-ale-3/">
-        <img src="https://cdn.shopify.com/s/files/1/0600/9438/2263/files/TyntMeasowale.jpg?v=1776174676" alt="Tynt Meadow Trappist ale - -" loading="lazy">
-        <div class="related-name">Tynt Meadow Trappist ale - -</div>
-        <div class="related-price">60,00 kr</div>
-    </a></div>
+        <div class="related-heading">Flere øl fra Dansk Mjød</div>
+        <div class="related-grid"><div class="related-item">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/dansk-mjoed-8211-ribe-mjoed-8211-8211/">
+        <img src="https://www.bestofbeers.dk/wp-content/uploads/2025/08/DanskMjoedRibeMjoed.jpg" alt="Dansk Mjød &amp;#8211; Ribe Mjød &amp;#8211; &amp;#8211;" loading="lazy">
+        <div class="related-name">Dansk Mjød &amp;#8211; Ribe Mjød &amp;#8211; &amp;#8211;</div>
+        <div class="related-price">120,00 kr</div>
+    </a></div><div class="related-item">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/dansk-mjoed-8211-skjalde-mjoed-8211-8211/">
+        <img src="https://www.bestofbeers.dk/wp-content/uploads/2024/02/Photoroom_000_20240229_104705-1.jpg" alt="Dansk Mjød &amp;#8211; Skjalde Mjød, &amp;#8211; &amp;#8211;" loading="lazy">
+        <div class="related-name">Dansk Mjød &amp;#8211; Skjalde Mjød, &amp;#8211; &amp;#8211;</div>
+        <div class="related-price">120,00 kr</div>
+    </a></div><div class="related-item">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/dansk-mjoed-8211-jyde-mjoed-8211-8211/">
+        <img src="https://www.bestofbeers.dk/wp-content/uploads/2024/02/Photoroom_001_20240229_104705.jpg" alt="Dansk Mjød &amp;#8211; Jyde Mjød, &amp;#8211; &amp;#8211;" loading="lazy">
+        <div class="related-name">Dansk Mjød &amp;#8211; Jyde Mjød, &amp;#8211; &amp;#8211;</div>
+        <div class="related-price">125,00 kr</div>
+    </a></div><div class="related-item">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/dansk-mjoed-8211-viking-blod-8211-8211/">
+        <img src="https://www.bestofbeers.dk/wp-content/uploads/2023/07/PhotoRoom_003_20230725_110431.jpg" alt="Dansk Mjød &amp;#8211; Viking Blod &amp;#8211; &amp;#8211;" loading="lazy">
+        <div class="related-name">Dansk Mjød &amp;#8211; Viking Blod &amp;#8211; &amp;#8211;</div>
+        <div class="related-price">125,00 kr</div>
+    </a></div><div class="related-item">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/dansk-mjoed-8211-vikinge-runer-8211-kirsebaer-edition/">
+        <img src="https://www.bestofbeers.dk/wp-content/uploads/2025/08/DanskMjoedVikingeRuner.jpg" alt="Dansk Mjød &amp;#8211; Vikinge Runer &amp;#8211; Kirsebær Edition &amp;#8211; &amp;#8211;" loading="lazy">
+        <div class="related-name">Dansk Mjød &amp;#8211; Vikinge Runer &amp;#8211; Kirsebær Edition &amp;#8211; &amp;#8211;</div>
+        <div class="related-price">130,00 kr</div>
+    </a></div><div class="related-item">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/dansk-mjoed-8211-fadlagret-mjoed-8211/">
+        <img src="https://www.bestofbeers.dk/wp-content/uploads/2017/11/packs_1680x1764px_fadlagretmjod_en_front-1.jpg" alt="Dansk Mjød &amp;#8211; Fadlagret Mjød, &amp;#8211;" loading="lazy">
+        <div class="related-name">Dansk Mjød &amp;#8211; Fadlagret Mjød, &amp;#8211;</div>
+        <div class="related-price">180,00 kr</div>
+    </a></div></div>
+        
     </div>
 
     <div class="disclaimer">
         📢 Affiliate disclosure: BeerSniffer kan modtage provision når du køber via vores links.
-        Priser opdateret 03.07.2026. Tjek altid den endelige pris hos forhandleren før køb.
+        Priser opdateret 07.07.2026. Tjek altid den endelige pris hos forhandleren før køb.
     </div>
 </div>
 

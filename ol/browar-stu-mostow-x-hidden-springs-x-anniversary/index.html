@@ -66,6 +66,9 @@ body { background: var(--bg); color: var(--text); font-family: 'DM Sans', sans-s
 .related-card img, .related-img-placeholder { width: 100%; height: 70px; object-fit: contain; background: var(--surface2); border-radius: 6px; margin-bottom: 0.4rem; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; }
 .related-name { font-size: 0.72rem; line-height: 1.3; margin-bottom: 0.2rem; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; min-height: 1.9em; }
 .related-price { font-size: 0.78rem; font-weight: 700; color: var(--gold-light); }
+.related-hidden { display: none; }
+.related-toggle { display: block; margin: 0.8rem auto 0; background: var(--surface2); border: 1px solid var(--border-light); border-radius: 999px; padding: 0.45rem 1.2rem; color: var(--gold); font-family: 'DM Sans', sans-serif; font-size: 0.78rem; cursor: pointer; transition: border-color 0.15s; }
+.related-toggle:hover { border-color: var(--gold); color: var(--gold-light); }
 .disclaimer { font-size: 0.72rem; color: var(--text-muted); margin-top: 2rem; line-height: 1.6; border-top: 1px solid var(--border); padding-top: 1rem; }
 .chart-section { margin: 1.5rem 0; background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 1rem 1.1rem; }
 .chart-heading { font-size: 0.7rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 0.7rem; }
@@ -138,42 +141,78 @@ body { background: var(--bg); color: var(--text); font-family: 'DM Sans', sans-s
 
     <div class="related-section">
         <div class="related-heading">Flere øl fra Browar Stu Mostow x Hidden Springs</div>
-        <div class="related-grid">
+        <div class="related-grid"><div class="related-item">
     <a class="related-card" href="https://www.beersniffer.dk/ol/kuutobine-baltic-porter-andersons-brewery/">
         <img src="https://cdn.shopify.com/s/files/1/0600/9438/2263/files/IMG_1885.heic?v=1739974542" alt="Kuutobine - , , Baltic Porter - Anderson&#x27;s Brewery" loading="lazy">
         <div class="related-name">Kuutobine - , , Baltic Porter - Anderson&#x27;s Brewery</div>
         <div class="related-price">45,00 kr</div>
-    </a>
+    </a></div><div class="related-item">
     <a class="related-card" href="https://www.beersniffer.dk/ol/p-hjala-oo-imperial-baltic-porter-2/">
         <img src="https://www.bestofbeers.dk/wp-content/uploads/2025/11/PohjalaOo.jpg" alt="Põhjala – Öö – Imperial Baltic Porter – –" loading="lazy">
         <div class="related-name">Põhjala – Öö – Imperial Baltic Porter – –</div>
         <div class="related-price">45,75 kr</div>
-    </a>
+    </a></div><div class="related-item">
     <a class="related-card" href="https://www.beersniffer.dk/ol/p-hjala-baltic-porter-day-2026-imperial-baltic/">
         <img src="https://cdn.shopify.com/s/files/1/0551/6600/9423/files/IMG-5003.jpg?v=1767882394" alt="Pohjala - Baltic Porter Day 2026" loading="lazy">
         <div class="related-name">Pohjala - Baltic Porter Day 2026</div>
         <div class="related-price">45,75 kr</div>
-    </a>
+    </a></div><div class="related-item">
     <a class="related-card" href="https://www.beersniffer.dk/ol/porter-bay-baltic-porter-pinta/">
         <img src="https://cdn.shopify.com/s/files/1/0600/9438/2263/files/IMG_1501_0c81b093-8cad-483b-90e0-721541c7d852.jpg?v=1736416223" alt="Porter Bay - , , Baltic Porter - Pinta" loading="lazy">
         <div class="related-name">Porter Bay - , , Baltic Porter - Pinta</div>
         <div class="related-price">50,00 kr</div>
-    </a>
+    </a></div><div class="related-item">
     <a class="related-card" href="https://www.beersniffer.dk/ol/svaneke-bryghus-baltic-liqourice-porter-baltic-porter-3/">
         <img src="https://cdn.shopify.com/s/files/1/0600/9438/2263/files/IMG_20240801_125441.jpg?v=1722510076" alt="Svaneke Bryghus &quot;Baltic Liqourice Porter&quot; | | | Baltic Porter" loading="lazy">
         <div class="related-name">Svaneke Bryghus &quot;Baltic Liqourice Porter&quot; | | | Baltic Porter</div>
         <div class="related-price">58,00 kr</div>
-    </a>
-    <a class="related-card" href="https://www.beersniffer.dk/ol/browar-stu-mostow-baltic-porter-nitro-baltic-porter/">
-        <img src="https://cdn.shopify.com/s/files/1/0402/1239/8243/files/BrowarStuMostow_BalticPorter.png?v=1771887142" alt="Browar Stu Mostow - Baltic Porter Nitro - Baltic Porter" loading="lazy">
-        <div class="related-name">Browar Stu Mostow - Baltic Porter Nitro - Baltic Porter</div>
-        <div class="related-price">59,75 kr</div>
-    </a></div>
+    </a></div><div class="related-item">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/old-town-baltic-porter-fra-hopalaa/">
+        <img src="https://cdn-main.ideal.shop/images/by_hash/9b9156f8fc9949ec055a04ab87384a018083ceaae1a74adc894276bcf93c56be/500-0/oldtown.jpg" alt="Old Town - Baltic Porter fra Hopalaa" loading="lazy">
+        <div class="related-name">Old Town - Baltic Porter fra Hopalaa</div>
+        <div class="related-price">60,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/baltic-porter-baltic-porter-fra-nepo/">
+        <img src="https://cdn-main.ideal.shop/images/by_hash/7abb580b4681213f187a60fdde7008866808200e75d5da4ce7422c1fb87587f5/500-0/balticporter.jpg" alt="Baltic Porter - Baltic Porter fra Nepo" loading="lazy">
+        <div class="related-name">Baltic Porter - Baltic Porter fra Nepo</div>
+        <div class="related-price">60,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/blood-of-the-baltic-imperial-baltic-porter-fra/">
+        <img src="https://cdn-main.ideal.shop/images/by_hash/923e571e24dd24027c898a018563b65545e5786437ce87bd8fee7f82ca240e41/500-0/bloodofthebaltic.jpg" alt="Blood of the Baltic - Imperial Baltic Porter fra Beer Underground" loading="lazy">
+        <div class="related-name">Blood of the Baltic - Imperial Baltic Porter fra Beer Underground</div>
+        <div class="related-price">65,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/anatomy-of-hunger-imperial-baltic-porter-fra-beer/">
+        <img src="https://cdn-main.ideal.shop/images/by_hash/e525b42339c59f673f6e112b088e0efac38c804f07ef69faf52b0d6830605258/500-0/anatomyofhunger.jpg" alt="Anatomy of Hunger - Imperial Baltic Porter fra Beer Underground" loading="lazy">
+        <div class="related-name">Anatomy of Hunger - Imperial Baltic Porter fra Beer Underground</div>
+        <div class="related-price">65,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/echo-10th-edition-imperial-baltic-porter-fra-nepo/">
+        <img src="https://cdn-main.ideal.shop/images/by_hash/8154d4288a9a4da065647a73e9059c6f0856b3dc7b7b026cb32efdec63350a7c/500-0/echo2.jpg" alt="Echo 10th Edition - Imperial Baltic Porter fra Nepo" loading="lazy">
+        <div class="related-name">Echo 10th Edition - Imperial Baltic Porter fra Nepo</div>
+        <div class="related-price">65,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/kaerakataa-barbados-rum-ba-ba-imperial-baltic-porter/">
+        <img src="https://cdn-main.ideal.shop/images/by_hash/8fd11927520378558b600684e42c9fd6a52582f93520ba38a43fcc9565cc589c/500-0/Kaerakats.jpg" alt="KaerakatÅ¡ (Barbados Rum BA) - BA Imperial Baltic Porter fra Anderson&#x27;s" loading="lazy">
+        <div class="related-name">KaerakatÅ¡ (Barbados Rum BA) - BA Imperial Baltic Porter fra Anderson&#x27;s</div>
+        <div class="related-price">89,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/fanoe-bryghus-family-tradition-barrel-aged-imperial-baltic/">
+        <img src="https://www.bestofbeers.dk/wp-content/uploads/2025/02/FanoeBryghusFamilyTradition.jpg" alt="Fanø Bryghus – Family Tradition – Barrel Aged Imperial Baltic Porter – –" loading="lazy">
+        <div class="related-name">Fanø Bryghus – Family Tradition – Barrel Aged Imperial Baltic Porter – –</div>
+        <div class="related-price">91,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/a-roasted-development-ba-imperial-baltic-porter-fra/">
+        <img src="https://cdn-main.ideal.shop/images/by_hash/6c4405899b7149c48705f083ddf7286ca669351e6c52d942c696c3a9e21926c8/500-0/A-Roasted-Development.jpg" alt="A Roasted Development - BA Imperial Baltic Porter fra Anderson&#x27;s" loading="lazy">
+        <div class="related-name">A Roasted Development - BA Imperial Baltic Porter fra Anderson&#x27;s</div>
+        <div class="related-price">99,00 kr</div>
+    </a></div></div>
+        <button class="related-toggle" onclick="this.previousElementSibling.querySelectorAll(&quot;.related-hidden&quot;).forEach(e=>e.style.display=&quot;block&quot;);this.style.display=&quot;none&quot;">Vis alle (13)</button>
     </div>
 
     <div class="disclaimer">
         📢 Affiliate disclosure: BeerSniffer kan modtage provision når du køber via vores links.
-        Priser opdateret 03.07.2026. Tjek altid den endelige pris hos forhandleren før køb.
+        Priser opdateret 07.07.2026. Tjek altid den endelige pris hos forhandleren før køb.
     </div>
 </div>
 

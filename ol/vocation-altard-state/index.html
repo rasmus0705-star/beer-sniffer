@@ -66,6 +66,9 @@ body { background: var(--bg); color: var(--text); font-family: 'DM Sans', sans-s
 .related-card img, .related-img-placeholder { width: 100%; height: 70px; object-fit: contain; background: var(--surface2); border-radius: 6px; margin-bottom: 0.4rem; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; }
 .related-name { font-size: 0.72rem; line-height: 1.3; margin-bottom: 0.2rem; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; min-height: 1.9em; }
 .related-price { font-size: 0.78rem; font-weight: 700; color: var(--gold-light); }
+.related-hidden { display: none; }
+.related-toggle { display: block; margin: 0.8rem auto 0; background: var(--surface2); border: 1px solid var(--border-light); border-radius: 999px; padding: 0.45rem 1.2rem; color: var(--gold); font-family: 'DM Sans', sans-serif; font-size: 0.78rem; cursor: pointer; transition: border-color 0.15s; }
+.related-toggle:hover { border-color: var(--gold); color: var(--gold-light); }
 .disclaimer { font-size: 0.72rem; color: var(--text-muted); margin-top: 2rem; line-height: 1.6; border-top: 1px solid var(--border); padding-top: 1rem; }
 .chart-section { margin: 1.5rem 0; background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 1rem 1.1rem; }
 .chart-heading { font-size: 0.7rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 0.7rem; }
@@ -138,42 +141,343 @@ body { background: var(--bg); color: var(--text); font-family: 'DM Sans', sans-s
 
     <div class="related-section">
         <div class="related-heading">Flere øl fra Altard State</div>
-        <div class="related-grid">
-    <a class="related-card" href="https://www.beersniffer.dk/ol/brewdog-jack-hammer/">
-        <img src="https://www.vildmedvin.dk/img/1000/1000/resize/b/r/brewdog_jack-hammer_ipa.jpg" alt="Brewdog, Jack Hammer" loading="lazy">
-        <div class="related-name">Brewdog, Jack Hammer</div>
-        <div class="related-price">21,50 kr</div>
-    </a>
+        <div class="related-grid"><div class="related-item">
     <a class="related-card" href="https://www.beersniffer.dk/ol/funky-fluid-fluid-free-california-love-alkoholfri/">
         <img src="https://www.vildmedvin.dk/img/1000/1000/resize/f/r/free-california-love.jpg" alt="Funky Fluid, Fluid Free California Love Alkoholfri" loading="lazy">
         <div class="related-name">Funky Fluid, Fluid Free California Love Alkoholfri</div>
         <div class="related-price">23,00 kr</div>
-    </a>
+    </a></div><div class="related-item">
     <a class="related-card" href="https://www.beersniffer.dk/ol/thisted-bryghus-cold-hawaii-groen/">
         <img src="https://www.vildmedvin.dk/img/1000/1000/resize/4/4/444444444333.jpg" alt="Thisted Bryghus, Cold Hawaii, Grøn" loading="lazy">
         <div class="related-name">Thisted Bryghus, Cold Hawaii, Grøn</div>
         <div class="related-price">23,00 kr</div>
-    </a>
+    </a></div><div class="related-item">
     <a class="related-card" href="https://www.beersniffer.dk/ol/brewdog-hazy-jane-2/">
         <img src="https://www.vildmedvin.dk/img/1000/1000/resize/5/4/54327654.jpg" alt="Brewdog, Hazy Jane" loading="lazy">
         <div class="related-name">Brewdog, Hazy Jane</div>
         <div class="related-price">26,00 kr</div>
-    </a>
+    </a></div><div class="related-item">
     <a class="related-card" href="https://www.beersniffer.dk/ol/lervig-perler-for-svin-grapefruit/">
         <img src="https://www.vildmedvin.dk/img/1000/1000/resize/l/e/lervig_perler_for_svin_grapefruit.jpg" alt="Lervig, Perler For Svin Grapefruit" loading="lazy">
         <div class="related-name">Lervig, Perler For Svin Grapefruit</div>
         <div class="related-price">27,00 kr</div>
-    </a>
+    </a></div><div class="related-item">
     <a class="related-card" href="https://www.beersniffer.dk/ol/sierra-nevada-springfest/">
         <img src="https://www.vildmedvin.dk/img/1000/1000/resize/s/i/sierra_nevada_springfest.jpg" alt="Sierra Nevada, Springfest" loading="lazy">
         <div class="related-name">Sierra Nevada, Springfest</div>
         <div class="related-price">27,00 kr</div>
-    </a></div>
+    </a></div><div class="related-item">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/sierra-nevada-citra-little-thing/">
+        <img src="https://www.vildmedvin.dk/img/1000/1000/resize/s/i/sierra_nevada_springfest_ipa.jpg" alt="Sierra Nevada, Citra Little Thing" loading="lazy">
+        <div class="related-name">Sierra Nevada, Citra Little Thing</div>
+        <div class="related-price">27,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/thornbridge-jaipur-2/">
+        <img src="https://www.vildmedvin.dk/img/1000/1000/resize/t/h/thornbridge_jaipur.jpg" alt="Thornbridge, Jaipur" loading="lazy">
+        <div class="related-name">Thornbridge, Jaipur</div>
+        <div class="related-price">27,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/brewdog-hazy-jane/">
+        <img src="https://www.vildmedvin.dk/img/1000/1000/resize/h/a/hazy_jane_33_cl..jpg" alt="Brewdog, Hazy Jane" loading="lazy">
+        <div class="related-name">Brewdog, Hazy Jane</div>
+        <div class="related-price">28,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/ebeltoft-gaardbryggeri-lust-for-life-2/">
+        <img src="https://www.vildmedvin.dk/img/1000/1000/resize/l/u/ludt_for_life.jpg" alt="Ebeltoft Gårdbryggeri, Lust for Life" loading="lazy">
+        <div class="related-name">Ebeltoft Gårdbryggeri, Lust for Life</div>
+        <div class="related-price">29,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/sierra-nevada-hazy-little-thing/">
+        <img src="https://www.vildmedvin.dk/img/1000/1000/resize/h/a/hazy_little_thing.jpg" alt="Sierra Nevada, Hazy Little Thing" loading="lazy">
+        <div class="related-name">Sierra Nevada, Hazy Little Thing</div>
+        <div class="related-price">29,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/brewdog-elvis-juice/">
+        <img src="https://www.vildmedvin.dk/img/1000/1000/resize/e/l/elvis_juiice_44_cl..jpg" alt="Brewdog, Elvis Juice" loading="lazy">
+        <div class="related-name">Brewdog, Elvis Juice</div>
+        <div class="related-price">29,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/sudden-death-speed-freak/">
+        <img src="https://www.vildmedvin.dk/img/1000/1000/resize/s/u/sudden-death-speedfreak-2025-ddh-new-england-ipa.jpg" alt="Sudden Death Speed Freak" loading="lazy">
+        <div class="related-name">Sudden Death Speed Freak</div>
+        <div class="related-price">29,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/ebeltoft-gaardbryggeri-skunk-jam-cryo-fresh-1-citra/">
+        <img src="https://www.vildmedvin.dk/img/1000/1000/resize/e/b/ebeltoft_skunk_jam.jpg" alt="Ebeltoft Gårdbryggeri, Skunk Jam Cryo Fresh #1 Citra" loading="lazy">
+        <div class="related-name">Ebeltoft Gårdbryggeri, Skunk Jam Cryo Fresh #1 Citra</div>
+        <div class="related-price">31,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/thornbridge-green-moutain/">
+        <img src="https://www.vildmedvin.dk/img/1000/1000/resize/g/r/green-mounain.jpg" alt="Thornbridge, Green Moutain" loading="lazy">
+        <div class="related-name">Thornbridge, Green Moutain</div>
+        <div class="related-price">31,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/sierra-nevada-torpedo/">
+        <img src="https://www.vildmedvin.dk/img/1000/1000/resize/4/4/444_2_2.jpg" alt="Sierra Nevada, Torpedo" loading="lazy">
+        <div class="related-name">Sierra Nevada, Torpedo</div>
+        <div class="related-price">32,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/brewdog-hazy-jane-3/">
+        <img src="https://www.vildmedvin.dk/img/1000/1000/resize/h/a/hazy_jane_44_cl..jpg" alt="Brewdog, Hazy Jane" loading="lazy">
+        <div class="related-name">Brewdog, Hazy Jane</div>
+        <div class="related-price">32,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/hornbeer-grisk/">
+        <img src="https://www.vildmedvin.dk/img/1000/1000/resize/g/r/grisk-flaske_2305.jpg" alt="Hornbeer, Grisk" loading="lazy">
+        <div class="related-name">Hornbeer, Grisk</div>
+        <div class="related-price">33,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/brewdog-wingman/">
+        <img src="https://www.vildmedvin.dk/img/1000/1000/resize/1/0/103320.jpg" alt="Brewdog, Wingman" loading="lazy">
+        <div class="related-name">Brewdog, Wingman</div>
+        <div class="related-price">34,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/to-oel-sipa/">
+        <img src="https://www.vildmedvin.dk/img/1000/1000/resize/t/o/to-_l-sipa.jpg" alt="To Øl, #SIPA" loading="lazy">
+        <div class="related-name">To Øl, #SIPA</div>
+        <div class="related-price">34,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/thisted-bryghus-oeko-sunset-haze/">
+        <img src="https://www.vildmedvin.dk/img/1000/1000/resize/s/u/sunset_haze_thisted.jpg" alt="Thisted Bryghus, ØKO Sunset Haze" loading="lazy">
+        <div class="related-name">Thisted Bryghus, ØKO Sunset Haze</div>
+        <div class="related-price">34,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/dry-bitter-dog-in-a-basket/">
+        <img src="https://www.vildmedvin.dk/img/1000/1000/resize/d/r/dry_bitter_dog_in_a_basket.jpg" alt="Dry &amp; Bitter, Dog In A Basket" loading="lazy">
+        <div class="related-name">Dry &amp; Bitter, Dog In A Basket</div>
+        <div class="related-price">34,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/tiny-rebel-clwb-tropica/">
+        <img src="https://www.vildmedvin.dk/img/1000/1000/resize/t/i/tiny_rebel_clwb_tropica.jpg" alt="Tiny Rebel, Clwb Tropica" loading="lazy">
+        <div class="related-name">Tiny Rebel, Clwb Tropica</div>
+        <div class="related-price">35,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/thornbridge-west-side-glory/">
+        <img src="https://www.vildmedvin.dk/img/1000/1000/resize/t/h/thornbridge_west_side_glory.jpg" alt="Thornbridge, West Side Glory" loading="lazy">
+        <div class="related-name">Thornbridge, West Side Glory</div>
+        <div class="related-price">35,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/tiny-rebel-hop-hut-summer-slam/">
+        <img src="https://www.vildmedvin.dk/img/1000/1000/resize/t/i/tiny_rebel_hop_hut_summer_slam.jpg" alt="Tiny Rebel, Hop Hut Summer Slam" loading="lazy">
+        <div class="related-name">Tiny Rebel, Hop Hut Summer Slam</div>
+        <div class="related-price">35,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/amager-bryghus-pink-farts-unicorns/">
+        <img src="https://www.vildmedvin.dk/img/1000/1000/resize/5/5/55555.jpg" alt="Amager Bryghus, Pink Farts &amp; Unicorns" loading="lazy">
+        <div class="related-name">Amager Bryghus, Pink Farts &amp; Unicorns</div>
+        <div class="related-price">36,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/hornbeer-orion/">
+        <img src="https://www.vildmedvin.dk/img/1000/1000/resize/o/r/orion_hornbeer.jpg" alt="Hornbeer, Orion" loading="lazy">
+        <div class="related-name">Hornbeer, Orion</div>
+        <div class="related-price">37,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/to-oel-snublejuice/">
+        <img src="https://www.vildmedvin.dk/img/1000/1000/resize/s/n/snublejuice.jpg" alt="To Øl, Snublejuice" loading="lazy">
+        <div class="related-name">To Øl, Snublejuice</div>
+        <div class="related-price">37,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/insel-brauerei-east-coast/">
+        <img src="https://www.vildmedvin.dk/img/1000/1000/resize/i/n/insel-east-coast-ip.jpg" alt="Insel Brauerei, East Coast" loading="lazy">
+        <div class="related-name">Insel Brauerei, East Coast</div>
+        <div class="related-price">37,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/st-austell-proper-job/">
+        <img src="https://www.vildmedvin.dk/img/1000/1000/resize/s/t/st_austell_proper_job.jpg" alt="St. Austell, Proper Job" loading="lazy">
+        <div class="related-name">St. Austell, Proper Job</div>
+        <div class="related-price">38,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/brewski-pango/">
+        <img src="https://www.vildmedvin.dk/img/1000/1000/resize/b/r/brewski_pango_1.jpg" alt="Brewski, Pango" loading="lazy">
+        <div class="related-name">Brewski, Pango</div>
+        <div class="related-price">38,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/amager-bryghus-lardy-dardy/">
+        <img src="https://www.vildmedvin.dk/img/1000/1000/resize/5/5/55_1_1.jpg" alt="Amager Bryghus, Lardy-dardy" loading="lazy">
+        <div class="related-name">Amager Bryghus, Lardy-dardy</div>
+        <div class="related-price">39,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/wicklow-wolf-still-far-away/">
+        <img src="https://www.vildmedvin.dk/img/1000/1000/resize/w/i/wicklow_wolf_still_far_away.jpg" alt="Wicklow Wolf, Still Far Away" loading="lazy">
+        <div class="related-name">Wicklow Wolf, Still Far Away</div>
+        <div class="related-price">39,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/ossett-king-rat/">
+        <img src="https://www.vildmedvin.dk/img/1000/1000/resize/o/s/ossett_king_rat.jpg" alt="Ossett King Rat" loading="lazy">
+        <div class="related-name">Ossett King Rat</div>
+        <div class="related-price">39,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/brewdog-wingman-tropical-storm/">
+        <img src="https://www.vildmedvin.dk/img/1000/1000/resize/b/r/brewdog__tropical_storm.jpg" alt="Brewdog, Wingman Tropical Storm" loading="lazy">
+        <div class="related-name">Brewdog, Wingman Tropical Storm</div>
+        <div class="related-price">41,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/hornbeer-pegasus/">
+        <img src="https://www.vildmedvin.dk/img/1000/1000/resize/p/e/pegasus_hornbeer.jpg" alt="Hornbeer, Pegasus" loading="lazy">
+        <div class="related-name">Hornbeer, Pegasus</div>
+        <div class="related-price">41,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/ossett-smog-rat/">
+        <img src="https://www.vildmedvin.dk/img/1000/1000/resize/o/s/ossett_smog_rat.jpg" alt="Ossett Smog Rat" loading="lazy">
+        <div class="related-name">Ossett Smog Rat</div>
+        <div class="related-price">41,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/alefarm-on-dry-land-alkoholfri/">
+        <img src="https://www.vildmedvin.dk/img/1000/1000/resize/o/n/ondryland.jpg" alt="Alefarm, On Dry Land Alkoholfri" loading="lazy">
+        <div class="related-name">Alefarm, On Dry Land Alkoholfri</div>
+        <div class="related-price">42,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/brewdog-emerald-daze/">
+        <img src="https://www.vildmedvin.dk/img/1000/1000/resize/j/e/jemogfix_fliser.jpg" alt="Brewdog, Emerald Daze" loading="lazy">
+        <div class="related-name">Brewdog, Emerald Daze</div>
+        <div class="related-price">42,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/to-oel-whirl-domination/">
+        <img src="https://www.vildmedvin.dk/img/1000/1000/resize/5/5/5555_2..jpg" alt="To Øl, Whirl Domination" loading="lazy">
+        <div class="related-name">To Øl, Whirl Domination</div>
+        <div class="related-price">43,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/brewdog-lucky-break/">
+        <img src="https://www.vildmedvin.dk/img/1000/1000/resize/b/r/brewdog_lucky_break_1.jpg" alt="Brewdog, Lucky Break" loading="lazy">
+        <div class="related-name">Brewdog, Lucky Break</div>
+        <div class="related-price">44,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/sudden-death-shes-a-beaut-clark/">
+        <img src="https://www.vildmedvin.dk/img/1000/1000/resize/s/u/sudden-death-shes-a-beaut-clark.jpg" alt="Sudden Death She&#x27;s a Beaut, Clark" loading="lazy">
+        <div class="related-name">Sudden Death She&#x27;s a Beaut, Clark</div>
+        <div class="related-price">44,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/reset-froggy/">
+        <img src="https://www.vildmedvin.dk/img/1000/1000/resize/r/e/reset_froggy.jpg" alt="Reset Froggy" loading="lazy">
+        <div class="related-name">Reset Froggy</div>
+        <div class="related-price">44,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/reset-nook/">
+        <img src="https://www.vildmedvin.dk/img/1000/1000/resize/r/e/reset_nook.jpg" alt="Reset Nook" loading="lazy">
+        <div class="related-name">Reset Nook</div>
+        <div class="related-price">44,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/thornbridge-jaipur/">
+        <img src="https://www.vildmedvin.dk/img/1000/1000/resize/t/h/thornbridge_hazy_jaipur.jpg" alt="Thornbridge, Jaipur" loading="lazy">
+        <div class="related-name">Thornbridge, Jaipur</div>
+        <div class="related-price">44,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/warpigs-frank-the-tank/">
+        <img src="https://www.vildmedvin.dk/img/1000/1000/resize/w/a/warpigs_frank_the_tank.jpg" alt="Warpigs, Frank The Tank" loading="lazy">
+        <div class="related-name">Warpigs, Frank The Tank</div>
+        <div class="related-price">45,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/galway-bay-x-alder-symmetry/">
+        <img src="https://www.vildmedvin.dk/img/1000/1000/resize/g/a/galway_bay_x_alder_symmetry.jpg" alt="Galway Bay x Alder Symmetry" loading="lazy">
+        <div class="related-name">Galway Bay x Alder Symmetry</div>
+        <div class="related-price">45,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/warpigs-lazurite-3/">
+        <img src="https://www.vildmedvin.dk/img/1000/1000/resize/w/a/warpigs_lazurite.jpg" alt="Warpigs, Lazurite" loading="lazy">
+        <div class="related-name">Warpigs, Lazurite</div>
+        <div class="related-price">45,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/warpigs-elite-human/">
+        <img src="https://www.vildmedvin.dk/img/1000/1000/resize/w/a/warpigs_elite_human.jpg" alt="Warpigs, Elite Human" loading="lazy">
+        <div class="related-name">Warpigs, Elite Human</div>
+        <div class="related-price">45,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/funky-fluid-oranje-netherland/">
+        <img src="https://www.vildmedvin.dk/img/1000/1000/resize/f/u/funky_fluid_oranje_netherland.jpg" alt="Funky Fluid, Oranje Netherland" loading="lazy">
+        <div class="related-name">Funky Fluid, Oranje Netherland</div>
+        <div class="related-price">46,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/amager-bryghus-demon-juice-can/">
+        <img src="https://www.vildmedvin.dk/img/1000/1000/resize/i/s/iskold.jpg" alt="Amager Bryghus, Demon Juice (Can)" loading="lazy">
+        <div class="related-name">Amager Bryghus, Demon Juice (Can)</div>
+        <div class="related-price">46,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/amager-bryghus-todd-the-axe-man-can/">
+        <img src="https://www.vildmedvin.dk/img/1000/1000/resize/5/5/555_2.jpg" alt="Amager Bryghus, Todd The Axe Man (Can)" loading="lazy">
+        <div class="related-name">Amager Bryghus, Todd The Axe Man (Can)</div>
+        <div class="related-price">47,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/hornbeer-scorpius/">
+        <img src="https://www.vildmedvin.dk/img/1000/1000/resize/s/c/scorpius_hornbeer.jpg" alt="Hornbeer, Scorpius" loading="lazy">
+        <div class="related-name">Hornbeer, Scorpius</div>
+        <div class="related-price">47,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/amager-bryghus-wookie/">
+        <img src="https://www.vildmedvin.dk/img/1000/1000/resize/w/o/wookie-ipa-2021.jpg" alt="Amager Bryghus, Wookie" loading="lazy">
+        <div class="related-name">Amager Bryghus, Wookie</div>
+        <div class="related-price">49,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/sierra-nevada-atomic-torpedo/">
+        <img src="https://www.vildmedvin.dk/img/1000/1000/resize/5/y/5y7.jpg" alt="Sierra Nevada, Atomic Torpedo" loading="lazy">
+        <div class="related-name">Sierra Nevada, Atomic Torpedo</div>
+        <div class="related-price">49,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/brewdog-analogue-dream/">
+        <img src="https://www.vildmedvin.dk/img/1000/1000/resize/b/r/brewdog_analogue_dream.jpg" alt="Brewdog, Analogue Dream" loading="lazy">
+        <div class="related-name">Brewdog, Analogue Dream</div>
+        <div class="related-price">49,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/bryg-365-roed-alarm/">
+        <img src="https://www.vildmedvin.dk/img/1000/1000/resize/b/r/bryg365_-_r_d_alarm.jpg" alt="Bryg 365, Rød Alarm" loading="lazy">
+        <div class="related-name">Bryg 365, Rød Alarm</div>
+        <div class="related-price">51,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/fanoe-vestkyst/">
+        <img src="https://www.vildmedvin.dk/img/1000/1000/resize/5/4/54_1_2.jpg" alt="Fanø, Vestkyst" loading="lazy">
+        <div class="related-name">Fanø, Vestkyst</div>
+        <div class="related-price">52,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/fanoe-havgus/">
+        <img src="https://www.vildmedvin.dk/img/1000/1000/resize/5/4/543_1_2.jpg" alt="Fanø, Havgus" loading="lazy">
+        <div class="related-name">Fanø, Havgus</div>
+        <div class="related-price">52,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/galway-bay-foam-and-fury/">
+        <img src="https://www.vildmedvin.dk/img/1000/1000/resize/g/a/galway_bay_foam_and_fury.jpg" alt="Galway Bay Foam and Fury" loading="lazy">
+        <div class="related-name">Galway Bay Foam and Fury</div>
+        <div class="related-price">54,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/dry-bitter-freestyler/">
+        <img src="https://www.vildmedvin.dk/img/1000/1000/resize/d/r/dry_bitter_freestyler.jpg" alt="Dry &amp; Bitter, Freestyler" loading="lazy">
+        <div class="related-name">Dry &amp; Bitter, Freestyler</div>
+        <div class="related-price">55,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/funky-fluid-hand-of-god-argentina/">
+        <img src="https://www.vildmedvin.dk/img/1000/1000/resize/f/u/funky_fluid_hand_of_god_argentina.jpg" alt="Funky Fluid, Hand of God Argentina" loading="lazy">
+        <div class="related-name">Funky Fluid, Hand of God Argentina</div>
+        <div class="related-price">56,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/amager-bryghus-samurai/">
+        <img src="https://www.vildmedvin.dk/img/1000/1000/resize/a/m/amager_bryghus_samurai.jpg" alt="Amager Bryghus, Samurai" loading="lazy">
+        <div class="related-name">Amager Bryghus, Samurai</div>
+        <div class="related-price">57,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/amager-bryghus-gluttony/">
+        <img src="https://www.vildmedvin.dk/img/1000/1000/resize/a/m/amagerbryghus_gluttony.jpg" alt="Amager Bryghus, Gluttony" loading="lazy">
+        <div class="related-name">Amager Bryghus, Gluttony</div>
+        <div class="related-price">57,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/dry-bitter-peach-bums/">
+        <img src="https://www.vildmedvin.dk/img/1000/1000/resize/d/r/dry_bitter_peach_bums.jpg" alt="Dry &amp; Bitter, Peach Bums" loading="lazy">
+        <div class="related-name">Dry &amp; Bitter, Peach Bums</div>
+        <div class="related-price">57,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/dry-bitter-simcosis/">
+        <img src="https://www.vildmedvin.dk/img/1000/1000/resize/d/r/dry_bitter_simcosis.jpg" alt="Dry &amp; Bitter, Simcosis" loading="lazy">
+        <div class="related-name">Dry &amp; Bitter, Simcosis</div>
+        <div class="related-price">57,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/dry-bitter-flowers-go-to-die/">
+        <img src="https://www.vildmedvin.dk/img/1000/1000/resize/d/r/dry_bitter_flowers_go_to_die.jpg" alt="Dry &amp; Bitter, Flowers Go To Die" loading="lazy">
+        <div class="related-name">Dry &amp; Bitter, Flowers Go To Die</div>
+        <div class="related-price">59,00 kr</div>
+    </a></div></div>
+        <button class="related-toggle" onclick="this.previousElementSibling.querySelectorAll(&quot;.related-hidden&quot;).forEach(e=>e.style.display=&quot;block&quot;);this.style.display=&quot;none&quot;">Vis alle (66)</button>
     </div>
 
     <div class="disclaimer">
         📢 Affiliate disclosure: BeerSniffer kan modtage provision når du køber via vores links.
-        Priser opdateret 03.07.2026. Tjek altid den endelige pris hos forhandleren før køb.
+        Priser opdateret 07.07.2026. Tjek altid den endelige pris hos forhandleren før køb.
     </div>
 </div>
 

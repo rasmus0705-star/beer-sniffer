@@ -66,6 +66,9 @@ body { background: var(--bg); color: var(--text); font-family: 'DM Sans', sans-s
 .related-card img, .related-img-placeholder { width: 100%; height: 70px; object-fit: contain; background: var(--surface2); border-radius: 6px; margin-bottom: 0.4rem; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; }
 .related-name { font-size: 0.72rem; line-height: 1.3; margin-bottom: 0.2rem; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; min-height: 1.9em; }
 .related-price { font-size: 0.78rem; font-weight: 700; color: var(--gold-light); }
+.related-hidden { display: none; }
+.related-toggle { display: block; margin: 0.8rem auto 0; background: var(--surface2); border: 1px solid var(--border-light); border-radius: 999px; padding: 0.45rem 1.2rem; color: var(--gold); font-family: 'DM Sans', sans-serif; font-size: 0.78rem; cursor: pointer; transition: border-color 0.15s; }
+.related-toggle:hover { border-color: var(--gold); color: var(--gold-light); }
 .disclaimer { font-size: 0.72rem; color: var(--text-muted); margin-top: 2rem; line-height: 1.6; border-top: 1px solid var(--border); padding-top: 1rem; }
 .chart-section { margin: 1.5rem 0; background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 1rem 1.1rem; }
 .chart-heading { font-size: 0.7rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 0.7rem; }
@@ -149,37 +152,38 @@ body { background: var(--bg); color: var(--text); font-family: 'DM Sans', sans-s
 
     <div class="related-section">
         <div class="related-heading">Flere øl fra Hanssens Artisanaal</div>
-        <div class="related-grid">
+        <div class="related-grid"><div class="related-item">
     <a class="related-card" href="https://www.beersniffer.dk/ol/hanssens-oude-kriek/">
         <img src="https://cdn.shopify.com/s/files/1/0509/8477/9975/files/hanssens-oude-kriek-6-5-37-5cl_e060993c-8a1a-4f18-b4d3-1c38cd7469c1.png?v=1737805699" alt="Hanssens Oude Kriek" loading="lazy">
         <div class="related-name">Hanssens Oude Kriek</div>
         <div class="related-price">60,00 kr</div>
-    </a>
+    </a></div><div class="related-item">
     <a class="related-card" href="https://www.beersniffer.dk/ol/hanssens-artisanaal-oude-geuze-kavo-noevo/">
         <img src="https://cdn.shopify.com/s/files/1/0509/8477/9975/files/hanssens-oude-geuze-5-5-37-5cl-2025.png?v=1765012954" alt="Oude Geuze Kavo Noevo" loading="lazy">
         <div class="related-name">Oude Geuze Kavo Noevo</div>
         <div class="related-price">65,00 kr</div>
-    </a>
+    </a></div><div class="related-item">
     <a class="related-card" href="https://www.beersniffer.dk/ol/hanssens-oude-geuze-extra/">
         <img src="https://cdn.shopify.com/s/files/1/0509/8477/9975/files/oude-geuze-extra-6-37-5cl.png?v=1774549472" alt="Hanssens Oude Geuze Extra" loading="lazy">
         <div class="related-name">Hanssens Oude Geuze Extra</div>
         <div class="related-price">65,00 kr</div>
-    </a>
+    </a></div><div class="related-item">
     <a class="related-card" href="https://www.beersniffer.dk/ol/hanssens-oudbeitje-37-5/">
         <img src="https://cdn.shopify.com/s/files/1/0509/8477/9975/files/hanssens-oudbeitje-6-37-5.png?v=1749984074" alt="Hanssens Oudbeitje 37,5" loading="lazy">
         <div class="related-name">Hanssens Oudbeitje 37,5</div>
         <div class="related-price">65,00 kr</div>
-    </a>
+    </a></div><div class="related-item">
     <a class="related-card" href="https://www.beersniffer.dk/ol/hanssens-artisanaal-cassis-lambic/">
         <img src="https://www.bestofbeers.dk/wp-content/uploads/2025/09/HanssensArtisianCassis.jpg" alt="Hanssens Artisanaal – Cassis Lambic – –" loading="lazy">
         <div class="related-name">Hanssens Artisanaal – Cassis Lambic – –</div>
         <div class="related-price">111,00 kr</div>
-    </a></div>
+    </a></div></div>
+        
     </div>
 
     <div class="disclaimer">
         📢 Affiliate disclosure: BeerSniffer kan modtage provision når du køber via vores links.
-        Priser opdateret 03.07.2026. Tjek altid den endelige pris hos forhandleren før køb.
+        Priser opdateret 07.07.2026. Tjek altid den endelige pris hos forhandleren før køb.
     </div>
 </div>
 

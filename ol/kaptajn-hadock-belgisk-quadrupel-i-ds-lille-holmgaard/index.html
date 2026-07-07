@@ -66,6 +66,9 @@ body { background: var(--bg); color: var(--text); font-family: 'DM Sans', sans-s
 .related-card img, .related-img-placeholder { width: 100%; height: 70px; object-fit: contain; background: var(--surface2); border-radius: 6px; margin-bottom: 0.4rem; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; }
 .related-name { font-size: 0.72rem; line-height: 1.3; margin-bottom: 0.2rem; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; min-height: 1.9em; }
 .related-price { font-size: 0.78rem; font-weight: 700; color: var(--gold-light); }
+.related-hidden { display: none; }
+.related-toggle { display: block; margin: 0.8rem auto 0; background: var(--surface2); border: 1px solid var(--border-light); border-radius: 999px; padding: 0.45rem 1.2rem; color: var(--gold); font-family: 'DM Sans', sans-serif; font-size: 0.78rem; cursor: pointer; transition: border-color 0.15s; }
+.related-toggle:hover { border-color: var(--gold); color: var(--gold-light); }
 .disclaimer { font-size: 0.72rem; color: var(--text-muted); margin-top: 2rem; line-height: 1.6; border-top: 1px solid var(--border); padding-top: 1rem; }
 .chart-section { margin: 1.5rem 0; background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 1rem 1.1rem; }
 .chart-heading { font-size: 0.7rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 0.7rem; }
@@ -138,42 +141,218 @@ body { background: var(--bg); color: var(--text); font-family: 'DM Sans', sans-s
 
     <div class="related-section">
         <div class="related-heading">Flere øl fra 33 cl, 11%, Belgisk Quadrupel i ds</div>
-        <div class="related-grid">
+        <div class="related-grid"><div class="related-item">
     <a class="related-card" href="https://www.beersniffer.dk/ol/st-feuillien-quadruple/">
         <img src="https://www.vildmedvin.dk/img/1000/1000/resize/f/e/feuillien_quadruple-removebg.jpg" alt="St. Feuillien Quadruple" loading="lazy">
         <div class="related-name">St. Feuillien Quadruple</div>
         <div class="related-price">29,00 kr</div>
-    </a>
+    </a></div><div class="related-item">
     <a class="related-card" href="https://www.beersniffer.dk/ol/dragonfly-girl-with-balloon-quadrupel/">
         <img src="https://cdn.shopify.com/s/files/1/0402/1239/8243/files/Braunstein_GirlWithBalloon.png?v=1698227166" alt="Dragonfly - Girl With Balloon - Quadrupel" loading="lazy">
         <div class="related-name">Dragonfly - Girl With Balloon - Quadrupel</div>
         <div class="related-price">29,75 kr</div>
-    </a>
+    </a></div><div class="related-item">
     <a class="related-card" href="https://www.beersniffer.dk/ol/syndikatet-overhovedet/">
         <img src="https://cdn.shopify.com/s/files/1/0509/8477/9975/files/overhovedet-10-2-33cl.png?v=1773484463" alt="Overhovedet" loading="lazy">
         <div class="related-name">Overhovedet</div>
         <div class="related-price">30,00 kr</div>
-    </a>
+    </a></div><div class="related-item">
     <a class="related-card" href="https://www.beersniffer.dk/ol/bierbrouwerij-de-koningshoeven-la-trappe-quadrupel/">
         <img src="https://cdn.shopify.com/s/files/1/0600/9438/2263/files/latrappe.jpg?v=1776179545" alt="Quadrupel - La Trappe - Trappist - -" loading="lazy">
         <div class="related-name">Quadrupel - La Trappe - Trappist - -</div>
         <div class="related-price">34,00 kr</div>
-    </a>
+    </a></div><div class="related-item">
     <a class="related-card" href="https://www.beersniffer.dk/ol/brewery-de-meester-maitre-quad/">
         <img src="https://cdn.shopify.com/s/files/1/0509/8477/9975/files/maitre-quad-9-5-33cl.png?v=1742488169" alt="Maitre Quad" loading="lazy">
         <div class="related-name">Maitre Quad</div>
         <div class="related-price">34,00 kr</div>
-    </a>
+    </a></div><div class="related-item">
     <a class="related-card" href="https://www.beersniffer.dk/ol/in-the-studio-cruisin-the-cold/">
         <img src="https://cdn.shopify.com/s/files/1/0509/8477/9975/files/in-the-studio-cruisin-the-cold-9-9-33cl.png?v=1731081116" alt="In the Studio: Cruisin&#x27; The Cold" loading="lazy">
         <div class="related-name">In the Studio: Cruisin&#x27; The Cold</div>
         <div class="related-price">35,00 kr</div>
-    </a></div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/brouwerij-van-steenberge-gulden-draak-fire/">
+        <img src="https://cdn.shopify.com/s/files/1/0509/8477/9975/files/gulden-draak-fire-10-5-33cl.png?v=1760276233" alt="Gulden Draak Fire" loading="lazy">
+        <div class="related-name">Gulden Draak Fire</div>
+        <div class="related-price">36,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/brouwerij-st-bernardus-st-bernardus-abt-12/">
+        <img src="https://cdn.shopify.com/s/files/1/0509/8477/9975/files/st-bernardus-abt-12-33cl_3cbdd9f7-434b-4699-a06c-bcdf84ccb952.png?v=1767449280" alt="St. Bernardus Abt. 12" loading="lazy">
+        <div class="related-name">St. Bernardus Abt. 12</div>
+        <div class="related-price">36,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/brewery-de-meester-douze/">
+        <img src="https://cdn.shopify.com/s/files/1/0509/8477/9975/files/douze-11-5-33cl.png?v=1750590783" alt="Douze" loading="lazy">
+        <div class="related-name">Douze</div>
+        <div class="related-price">36,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/kasteel-brouwerij-vanhonsebrouck-kasteel-rouge/">
+        <img src="https://cdn.shopify.com/s/files/1/0509/8477/9975/files/kasteel-rouge-8-33cl.png?v=1745591491" alt="Kasteel Rouge" loading="lazy">
+        <div class="related-name">Kasteel Rouge</div>
+        <div class="related-price">36,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/kasteel-brouwerij-vanhonsebrouck-kasteel-donker-2/">
+        <img src="https://cdn.shopify.com/s/files/1/0509/8477/9975/files/kasteel-donker-33cl.png?v=1773481081" alt="Kasteel Donker" loading="lazy">
+        <div class="related-name">Kasteel Donker</div>
+        <div class="related-price">38,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/brewery-de-meester-winter-meesterke-speculaas-quadrupel/">
+        <img src="https://cdn.shopify.com/s/files/1/0509/8477/9975/files/winter-meesterke-speculaas-quadrupel-10-5-33cl.png?v=1760361239" alt="Winter Meesterke - Speculaas Quadrupel" loading="lazy">
+        <div class="related-name">Winter Meesterke - Speculaas Quadrupel</div>
+        <div class="related-price">40,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/enjoy-the-silence/">
+        <img src="https://cdn.shopify.com/s/files/1/0509/8477/9975/files/enjoy-the-silence-11-5-33cl_ead27871-67c8-43f6-8dbc-e6de74584890.png?v=1773472538" alt="Enjoy the Silence" loading="lazy">
+        <div class="related-name">Enjoy the Silence</div>
+        <div class="related-price">40,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/kasteel-brouwerij-vanhonsebrouck-kasteel-cuvee-du-chateau-2/">
+        <img src="https://cdn.shopify.com/s/files/1/0509/8477/9975/files/kasteel-cuvee-de-chateau-11-33cl.png?v=1773478992" alt="Kasteel Cuvée du Château" loading="lazy">
+        <div class="related-name">Kasteel Cuvée du Château</div>
+        <div class="related-price">40,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/abbaye-notre-dame-de-saint-remy-rochefort-10/">
+        <img src="https://cdn.shopify.com/s/files/1/0509/8477/9975/files/rochefort-10-33cl_fbe1f293-677e-4354-8fcd-3dc74604829c.png?v=1767452322" alt="Rochefort 10" loading="lazy">
+        <div class="related-name">Rochefort 10</div>
+        <div class="related-price">44,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/brouwerij-de-halve-maan-straffe-hendrik-quadrupel/">
+        <img src="https://cdn.shopify.com/s/files/1/0509/8477/9975/files/straffe-hendrik-quadrupel-33cl.png?v=1739273435" alt="Straffe Hendrik Quadrupel" loading="lazy">
+        <div class="related-name">Straffe Hendrik Quadrupel</div>
+        <div class="related-price">45,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/trappistenbrouwerij-de-kievit-b-v-zundert-10/">
+        <img src="https://cdn.shopify.com/s/files/1/0509/8477/9975/files/zundert-10-10-33cl.png?v=1767966753" alt="Zundert 10" loading="lazy">
+        <div class="related-name">Zundert 10</div>
+        <div class="related-price">47,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/brouwerij-kees-barrel-project-quadrupel-2024-bourbon-barrel/">
+        <img src="https://cdn.shopify.com/s/files/1/0509/8477/9975/files/barrel-project-quadrupel-2024-bourbon-barrel-aged-9-9-33cl.png?v=1710269663" alt="Barrel Project Quadrupel 2024 Bourbon Barrel Aged" loading="lazy">
+        <div class="related-name">Barrel Project Quadrupel 2024 Bourbon Barrel Aged</div>
+        <div class="related-price">50,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/brouwerij-kees-dream-heavy/">
+        <img src="https://cdn.shopify.com/s/files/1/0509/8477/9975/files/dream-heavy-8-33cl.png?v=1772642484" alt="Dream Heavy" loading="lazy">
+        <div class="related-name">Dream Heavy</div>
+        <div class="related-price">50,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/de-struise-brouwers-sint-amatus-oostvleteren-12/">
+        <img src="https://cdn.shopify.com/s/files/1/0509/8477/9975/files/sint-amatus-oostvleteren-12-10-5-33cl.png?v=1734103948" alt="Sint Amatus - Oostvleteren 12" loading="lazy">
+        <div class="related-name">Sint Amatus - Oostvleteren 12</div>
+        <div class="related-price">50,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/stift-engelszell-gregorius/">
+        <img src="https://cdn.shopify.com/s/files/1/0509/8477/9975/files/stift-engelszell-gregorius-10-5_9e52114a-0794-4a86-8031-816b43a14d99.png?v=1773484809" alt="Stift Engelszell Gregorius" loading="lazy">
+        <div class="related-name">Stift Engelszell Gregorius</div>
+        <div class="related-price">50,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/amager-bryghus-secret-santa/">
+        <img src="https://cdn.shopify.com/s/files/1/0509/8477/9975/files/secret-santa-10-5-44cl_2dd0a61e-6451-4a79-9640-fa373ffea519.png?v=1767964623" alt="Secret Santa" loading="lazy">
+        <div class="related-name">Secret Santa</div>
+        <div class="related-price">50,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/barista-chocolade-quad-kasteel-3/">
+        <img src="https://cdn.shopify.com/s/files/1/0600/9438/2263/files/barista.jpg?v=1776167696" alt="Barista chocolade Quad Kasteel - -" loading="lazy">
+        <div class="related-name">Barista chocolade Quad Kasteel - -</div>
+        <div class="related-price">50,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/brouwerij-kees-timberline-brew/">
+        <img src="https://cdn.shopify.com/s/files/1/0509/8477/9975/files/timberline-brew-9-33cl.png?v=1772638805" alt="Timberline Brew" loading="lazy">
+        <div class="related-name">Timberline Brew</div>
+        <div class="related-price">55,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/brewery-de-meester-douzepot/">
+        <img src="https://cdn.shopify.com/s/files/1/0509/8477/9975/files/douzepot-10-5-33cl.png?v=1776091859" alt="Douzepot" loading="lazy">
+        <div class="related-name">Douzepot</div>
+        <div class="related-price">65,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/val-dieu-grand-cru/">
+        <img src="https://cdn.shopify.com/s/files/1/0509/8477/9975/files/val-dieu-grand-cru-10-5-75cl.png?v=1719330332" alt="Val-Dieu Grand Cru" loading="lazy">
+        <div class="related-name">Val-Dieu Grand Cru</div>
+        <div class="related-price">69,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/bierbrouwerij-de-koningshoeven-la-trappe-quadrupel-2/">
+        <img src="https://cdn.shopify.com/s/files/1/0509/8477/9975/files/a-trappe-quadrupel-75cl.png?v=1774594875" alt="La Trappe Quadrupel" loading="lazy">
+        <div class="related-name">La Trappe Quadrupel</div>
+        <div class="related-price">70,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/insel-brauerei-quadriga-champagne-oel/">
+        <img src="https://www.vildmedvin.dk/img/1000/1000/resize/i/n/insel_kreide_biere_brut.jpg" alt="Insel Brauerei, Quadriga (Champagne øl)" loading="lazy">
+        <div class="related-name">Insel Brauerei, Quadriga (Champagne øl)</div>
+        <div class="related-price">74,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/brouwerij-st-bernardus-st-bernardus-abt-12-2/">
+        <img src="https://www.bestofbeers.dk/wp-content/uploads/2026/02/StBernadudABT12.jpg" alt="St. Bernardus Abt 12 – –" loading="lazy">
+        <div class="related-name">St. Bernardus Abt 12 – –</div>
+        <div class="related-price">75,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/kasteel-brouwerij-vanhonsebrouck-kasteel-donker/">
+        <img src="https://cdn.shopify.com/s/files/1/0509/8477/9975/files/kasteel-donker-11-75cl.png?v=1773489446" alt="Kasteel Donker" loading="lazy">
+        <div class="related-name">Kasteel Donker</div>
+        <div class="related-price">77,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/brasserie-st-feuillien-quadruple/">
+        <img src="https://cdn.shopify.com/s/files/1/0509/8477/9975/files/quadruple-11-75cl.png?v=1775211411" alt="Quadruple" loading="lazy">
+        <div class="related-name">Quadruple</div>
+        <div class="related-price">78,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/kasteel-brouwerij-vanhonsebrouck-kasteel-rouge-2/">
+        <img src="https://cdn.shopify.com/s/files/1/0509/8477/9975/products/kasteel-rouge-75cl.png?v=1645718933" alt="Kasteel Rouge" loading="lazy">
+        <div class="related-name">Kasteel Rouge</div>
+        <div class="related-price">80,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/kasteel-brouwerij-vanhonsebrouck-kasteel-cuvee-du-chateau/">
+        <img src="https://cdn.shopify.com/s/files/1/0509/8477/9975/products/kasteel-cuvee-de-chateau-75cl.png?v=1607873448" alt="Kasteel Cuvée du Château" loading="lazy">
+        <div class="related-name">Kasteel Cuvée du Château</div>
+        <div class="related-price">85,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/moersleutel-craft-brewery-9-years-celebration-return-to/">
+        <img src="https://www.bestofbeers.dk/wp-content/uploads/2025/06/MoersleutelReturn.jpg" alt="Moersleutel Craft Brewery – 9 Years Celebration Return to Ithaca – Oaked Quadrupel – –" loading="lazy">
+        <div class="related-name">Moersleutel Craft Brewery – 9 Years Celebration Return to Ithaca – Oaked Quadrupel – –</div>
+        <div class="related-price">86,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/amager-bryghus-american-outlaws-kid-curry-golden-edition/">
+        <img src="https://www.bestofbeers.dk/wp-content/uploads/2026/05/AmagerBryghusKidCurry.jpg" alt="Amager Bryghus – American Outlaws Kid Curry Golden Edition – Bourbon Barrel Aged Double Mash Quadrupel – –" loading="lazy">
+        <div class="related-name">Amager Bryghus – American Outlaws Kid Curry Golden Edition – Bourbon Barrel Aged Double Mash Quadrupel – –</div>
+        <div class="related-price">91,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/pinta-barrel-brewing-riddle-2025-ba-quadruple/">
+        <img src="https://cdn.shopify.com/s/files/1/0776/5209/9400/files/84774A57-80DC-49BF-9B70-2493303202D5.jpg?v=1757443014" alt="Pinta Barrel Brewing - Riddle 2025 BA Quadruple" loading="lazy">
+        <div class="related-name">Pinta Barrel Brewing - Riddle 2025 BA Quadruple</div>
+        <div class="related-price">92,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/vliegende-paard-brouwers-prearis-grand-cru-2021-laphroaig/">
+        <img src="https://cdn.shopify.com/s/files/1/0509/8477/9975/files/prearis-grand-cru-2021-laphrioag-10-37-5cl.png?v=1705503614" alt="Prearis Grand Cru 2021 - Laphroaig" loading="lazy">
+        <div class="related-name">Prearis Grand Cru 2021 - Laphroaig</div>
+        <div class="related-price">116,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/vliegende-paard-brouwers-prearis-grand-cru-2022-jamaican/">
+        <img src="https://cdn.shopify.com/s/files/1/0509/8477/9975/files/prearis-grand-cru-jamaican-rum-barrel-aged-2022-10-37-5cl.png?v=1705503473" alt="Préaris Grand Cru 2022 Jamaican Rum Barrel Aged" loading="lazy">
+        <div class="related-name">Préaris Grand Cru 2022 Jamaican Rum Barrel Aged</div>
+        <div class="related-price">116,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/trappist-westvleteren-12/">
+        <img src="https://cdn.shopify.com/s/files/1/0509/8477/9975/files/westvleteren-12-33cl.png?v=1773471529" alt="Trappist Westvleteren 12" loading="lazy">
+        <div class="related-name">Trappist Westvleteren 12</div>
+        <div class="related-price">130,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/chimay-grande-reserve-fermentee-en-barriques-rhum-02/">
+        <img src="https://cdn.shopify.com/s/files/1/0509/8477/9975/files/chimay-grande-reserve-fermentee-en-barriques-02-2024-10-5-37-5cl.png?v=1720192958" alt="Chimay Grande Réserve Fermentée en Barriques Rhum (02/2025)" loading="lazy">
+        <div class="related-name">Chimay Grande Réserve Fermentée en Barriques Rhum (02/2025)</div>
+        <div class="related-price">149,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/the-lost-abbey-brewing-judgment-day-abbey-quad/">
+        <img src="https://www.bestofbeers.dk/wp-content/uploads/2026/02/TheLostAbbeyJudgmentDay.jpg" alt="The Lost Abbey Brewing – Judgment Day – Abbey Quad with Raisins – –" loading="lazy">
+        <div class="related-name">The Lost Abbey Brewing – Judgment Day – Abbey Quad with Raisins – –</div>
+        <div class="related-price">166,00 kr</div>
+    </a></div></div>
+        <button class="related-toggle" onclick="this.previousElementSibling.querySelectorAll(&quot;.related-hidden&quot;).forEach(e=>e.style.display=&quot;block&quot;);this.style.display=&quot;none&quot;">Vis alle (41)</button>
     </div>
 
     <div class="disclaimer">
         📢 Affiliate disclosure: BeerSniffer kan modtage provision når du køber via vores links.
-        Priser opdateret 03.07.2026. Tjek altid den endelige pris hos forhandleren før køb.
+        Priser opdateret 07.07.2026. Tjek altid den endelige pris hos forhandleren før køb.
     </div>
 </div>
 

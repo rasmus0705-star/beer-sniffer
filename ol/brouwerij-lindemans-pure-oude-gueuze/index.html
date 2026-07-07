@@ -66,6 +66,9 @@ body { background: var(--bg); color: var(--text); font-family: 'DM Sans', sans-s
 .related-card img, .related-img-placeholder { width: 100%; height: 70px; object-fit: contain; background: var(--surface2); border-radius: 6px; margin-bottom: 0.4rem; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; }
 .related-name { font-size: 0.72rem; line-height: 1.3; margin-bottom: 0.2rem; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; min-height: 1.9em; }
 .related-price { font-size: 0.78rem; font-weight: 700; color: var(--gold-light); }
+.related-hidden { display: none; }
+.related-toggle { display: block; margin: 0.8rem auto 0; background: var(--surface2); border: 1px solid var(--border-light); border-radius: 999px; padding: 0.45rem 1.2rem; color: var(--gold); font-family: 'DM Sans', sans-serif; font-size: 0.78rem; cursor: pointer; transition: border-color 0.15s; }
+.related-toggle:hover { border-color: var(--gold); color: var(--gold-light); }
 .disclaimer { font-size: 0.72rem; color: var(--text-muted); margin-top: 2rem; line-height: 1.6; border-top: 1px solid var(--border); padding-top: 1rem; }
 .chart-section { margin: 1.5rem 0; background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 1rem 1.1rem; }
 .chart-heading { font-size: 0.7rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 0.7rem; }
@@ -149,42 +152,58 @@ body { background: var(--bg); color: var(--text); font-family: 'DM Sans', sans-s
 
     <div class="related-section">
         <div class="related-heading">Flere øl fra Brouwerij Lindemans</div>
-        <div class="related-grid">
+        <div class="related-grid"><div class="related-item">
     <a class="related-card" href="https://www.beersniffer.dk/ol/brouwerij-lindemans-tarot-noir/">
         <img src="https://cdn.shopify.com/s/files/1/0509/8477/9975/files/tarot-noir-8-25cl_7bf9e8a0-4dd8-4a02-b46d-5e45d72f2018.png?v=1739268000" alt="Tarot Noir" loading="lazy">
         <div class="related-name">Tarot Noir</div>
         <div class="related-price">33,00 kr</div>
-    </a>
+    </a></div><div class="related-item">
     <a class="related-card" href="https://www.beersniffer.dk/ol/lindemans-apple/">
         <img src="https://cdn.shopify.com/s/files/1/0509/8477/9975/files/lindemans-apple-3-5-35-5cl_7159f7b2-9fbf-4a54-b0b3-bdf9728f0386.png?v=1739263957" alt="Lindemans Apple" loading="lazy">
         <div class="related-name">Lindemans Apple</div>
-        <div class="related-price">38,00 kr</div>
-    </a>
+        <div class="related-price">45,00 kr</div>
+    </a></div><div class="related-item">
     <a class="related-card" href="https://www.beersniffer.dk/ol/lindemans-oude-gueuze-cuvee-rene/">
         <img src="https://cdn.shopify.com/s/files/1/0509/8477/9975/files/lindemans-cuvee-rene-2023-37cl.png?v=1739264742" alt="Lindemans Oude Gueuze Cuvée René" loading="lazy">
         <div class="related-name">Lindemans Oude Gueuze Cuvée René</div>
         <div class="related-price">49,00 kr</div>
-    </a>
+    </a></div><div class="related-item">
     <a class="related-card" href="https://www.beersniffer.dk/ol/lindemans-framboise-2/">
         <img src="https://cdn.shopify.com/s/files/1/0509/8477/9975/files/lindemans-framboise-35cl_a2e240bc-dc5e-4332-ba4d-58dcfca53068.png?v=1739264078" alt="Lindemans Framboise" loading="lazy">
         <div class="related-name">Lindemans Framboise</div>
         <div class="related-price">49,00 kr</div>
-    </a>
-    <a class="related-card" href="https://www.beersniffer.dk/ol/lindemans-pecheresse/">
-        <img src="https://cdn.shopify.com/s/files/1/0509/8477/9975/files/lindemans-pecheresse-35cl_56afa7c0-b934-4e0f-b945-12fc9f03206f.png?v=1739264598" alt="Lindemans Pecheresse" loading="lazy">
-        <div class="related-name">Lindemans Pecheresse</div>
-        <div class="related-price">49,00 kr</div>
-    </a>
+    </a></div><div class="related-item">
     <a class="related-card" href="https://www.beersniffer.dk/ol/lindemans-framboise/">
         <img src="https://cdn.shopify.com/s/files/1/0509/8477/9975/files/lindemans-framboise-75cl.png?v=1739264333" alt="Lindemans Framboise" loading="lazy">
         <div class="related-name">Lindemans Framboise</div>
         <div class="related-price">55,00 kr</div>
-    </a></div>
+    </a></div><div class="related-item">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/lindemans-oude-kriek-cuvee-rene/">
+        <img src="https://cdn.shopify.com/s/files/1/0509/8477/9975/files/lindemans-oude-kriek-cuvee-rene-7-37-5cl.png?v=1739265734" alt="Lindemans Oude Kriek Cuvée René" loading="lazy">
+        <div class="related-name">Lindemans Oude Kriek Cuvée René</div>
+        <div class="related-price">60,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/lindemans-kriek/">
+        <img src="https://cdn.shopify.com/s/files/1/0509/8477/9975/files/lindemans-kriek-75cl.png?v=1739263793" alt="Lindemans Kriek" loading="lazy">
+        <div class="related-name">Lindemans Kriek</div>
+        <div class="related-price">65,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/brouwerij-lindemans-spontanbasil/">
+        <img src="https://cdn.shopify.com/s/files/1/0509/8477/9975/files/spontanbasil-6-75cl.png?v=1731074779" alt="SpontanBasil" loading="lazy">
+        <div class="related-name">SpontanBasil</div>
+        <div class="related-price">185,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/brouwerij-lindemans-gueuze-dark-cuvee-rene-cognac-ba/">
+        <img src="https://cdn.shopify.com/s/files/1/0509/8477/9975/files/gueuze-dark-cuvee-rene-cognac-ba-8-75cl.png?v=1774958048" alt="Gueuze Dark Cuvée René Cognac BA" loading="lazy">
+        <div class="related-name">Gueuze Dark Cuvée René Cognac BA</div>
+        <div class="related-price">199,00 kr</div>
+    </a></div></div>
+        <button class="related-toggle" onclick="this.previousElementSibling.querySelectorAll(&quot;.related-hidden&quot;).forEach(e=>e.style.display=&quot;block&quot;);this.style.display=&quot;none&quot;">Vis alle (9)</button>
     </div>
 
     <div class="disclaimer">
         📢 Affiliate disclosure: BeerSniffer kan modtage provision når du køber via vores links.
-        Priser opdateret 03.07.2026. Tjek altid den endelige pris hos forhandleren før køb.
+        Priser opdateret 07.07.2026. Tjek altid den endelige pris hos forhandleren før køb.
     </div>
 </div>
 

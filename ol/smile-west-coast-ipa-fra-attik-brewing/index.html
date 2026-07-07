@@ -66,6 +66,9 @@ body { background: var(--bg); color: var(--text); font-family: 'DM Sans', sans-s
 .related-card img, .related-img-placeholder { width: 100%; height: 70px; object-fit: contain; background: var(--surface2); border-radius: 6px; margin-bottom: 0.4rem; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; }
 .related-name { font-size: 0.72rem; line-height: 1.3; margin-bottom: 0.2rem; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; min-height: 1.9em; }
 .related-price { font-size: 0.78rem; font-weight: 700; color: var(--gold-light); }
+.related-hidden { display: none; }
+.related-toggle { display: block; margin: 0.8rem auto 0; background: var(--surface2); border: 1px solid var(--border-light); border-radius: 999px; padding: 0.45rem 1.2rem; color: var(--gold); font-family: 'DM Sans', sans-serif; font-size: 0.78rem; cursor: pointer; transition: border-color 0.15s; }
+.related-toggle:hover { border-color: var(--gold); color: var(--gold-light); }
 .disclaimer { font-size: 0.72rem; color: var(--text-muted); margin-top: 2rem; line-height: 1.6; border-top: 1px solid var(--border); padding-top: 1rem; }
 .chart-section { margin: 1.5rem 0; background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 1rem 1.1rem; }
 .chart-heading { font-size: 0.7rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 0.7rem; }
@@ -146,42 +149,43 @@ body { background: var(--bg); color: var(--text); font-family: 'DM Sans', sans-s
 
     <div class="related-section">
         <div class="related-heading">Flere øl fra Attik Brewing</div>
-        <div class="related-grid">
+        <div class="related-grid"><div class="related-item">
     <a class="related-card" href="https://www.beersniffer.dk/ol/magic-helles-lager-fra-attik-brewing/">
         <img src="https://cdn-main.ideal.shop/images/by_hash/4efef25faf1d02d16432a203394a585c7ef70e50e8bbca3077cf0f97dd26de92/500-0/magic.jpg" alt="Magic - Helles Lager fra Attik Brewing" loading="lazy">
         <div class="related-name">Magic - Helles Lager fra Attik Brewing</div>
         <div class="related-price">45,00 kr</div>
-    </a>
+    </a></div><div class="related-item">
     <a class="related-card" href="https://www.beersniffer.dk/ol/pecan-bliss-imperial-pastry-stout-fra-attik-brewing/">
         <img src="https://cdn-main.ideal.shop/images/by_hash/ee3c264e7029017cbafe9636136b70eb2a857b35df7ca787cc1ecad56e8fbb0a/500-0/pecanbliss.jpg" alt="Pecan Bliss - Imperial Pastry Stout fra Attik Brewing" loading="lazy">
         <div class="related-name">Pecan Bliss - Imperial Pastry Stout fra Attik Brewing</div>
         <div class="related-price">65,00 kr</div>
-    </a>
+    </a></div><div class="related-item">
     <a class="related-card" href="https://www.beersniffer.dk/ol/blossom-fadlagret-wild-ale-fra-attik-brewing/">
         <img src="https://cdn-main.ideal.shop/images/by_hash/094690edf468658f0165988be60dda193559079969676e409ce681e93f6c6555/500-0/blossom.jpg" alt="Blossom · Fadlagret Wild Ale fra Attik Brewing" loading="lazy">
         <div class="related-name">Blossom · Fadlagret Wild Ale fra Attik Brewing</div>
         <div class="related-price">66,50 kr</div>
-    </a>
+    </a></div><div class="related-item">
     <a class="related-card" href="https://www.beersniffer.dk/ol/salvatik-fadlagret-wild-ale-fra-attik-brewing/">
         <img src="https://cdn-main.ideal.shop/images/by_hash/781f1b94816c340fbd20dee70264d337ef6f1c1b58c2e2774fc34dbf5b023e4d/500-0/salvatik.jpg" alt="Salvatik · Fadlagret Wild Ale fra Attik Brewing" loading="lazy">
         <div class="related-name">Salvatik · Fadlagret Wild Ale fra Attik Brewing</div>
         <div class="related-price">66,50 kr</div>
-    </a>
+    </a></div><div class="related-item">
     <a class="related-card" href="https://www.beersniffer.dk/ol/down-by-law-fadlagret-sour-fra-attik-brewing/">
         <img src="https://cdn-main.ideal.shop/images/by_hash/87ccc9cc4ba2f347cd2eec31d0a2cc4e92a7b48713681a6c69f427328e4c1859/500-0/DownbyLaw.jpg" alt="Down by Law · Fadlagret Sour fra Attik Brewing" loading="lazy">
         <div class="related-name">Down by Law · Fadlagret Sour fra Attik Brewing</div>
         <div class="related-price">75,00 kr</div>
-    </a>
+    </a></div><div class="related-item">
     <a class="related-card" href="https://www.beersniffer.dk/ol/midnight-madagascar-ba-imperial-stout-fra-attik-brewing/">
         <img src="https://cdn-main.ideal.shop/images/by_hash/36dedb042ecaed08b13d2b22bfca8ff3c01f40b0cc5d8d32a27074fe3c0bff62/500-0/midnightmadagascar.jpg" alt="Midnight Madagascar - BA Imperial Stout fra Attik Brewing" loading="lazy">
         <div class="related-name">Midnight Madagascar - BA Imperial Stout fra Attik Brewing</div>
         <div class="related-price">75,00 kr</div>
-    </a></div>
+    </a></div></div>
+        
     </div>
 
     <div class="disclaimer">
         📢 Affiliate disclosure: BeerSniffer kan modtage provision når du køber via vores links.
-        Priser opdateret 03.07.2026. Tjek altid den endelige pris hos forhandleren før køb.
+        Priser opdateret 07.07.2026. Tjek altid den endelige pris hos forhandleren før køb.
     </div>
 </div>
 

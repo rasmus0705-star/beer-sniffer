@@ -66,6 +66,9 @@ body { background: var(--bg); color: var(--text); font-family: 'DM Sans', sans-s
 .related-card img, .related-img-placeholder { width: 100%; height: 70px; object-fit: contain; background: var(--surface2); border-radius: 6px; margin-bottom: 0.4rem; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; }
 .related-name { font-size: 0.72rem; line-height: 1.3; margin-bottom: 0.2rem; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; min-height: 1.9em; }
 .related-price { font-size: 0.78rem; font-weight: 700; color: var(--gold-light); }
+.related-hidden { display: none; }
+.related-toggle { display: block; margin: 0.8rem auto 0; background: var(--surface2); border: 1px solid var(--border-light); border-radius: 999px; padding: 0.45rem 1.2rem; color: var(--gold); font-family: 'DM Sans', sans-serif; font-size: 0.78rem; cursor: pointer; transition: border-color 0.15s; }
+.related-toggle:hover { border-color: var(--gold); color: var(--gold-light); }
 .disclaimer { font-size: 0.72rem; color: var(--text-muted); margin-top: 2rem; line-height: 1.6; border-top: 1px solid var(--border); padding-top: 1rem; }
 .chart-section { margin: 1.5rem 0; background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 1rem 1.1rem; }
 .chart-heading { font-size: 0.7rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 0.7rem; }
@@ -138,42 +141,53 @@ body { background: var(--bg); color: var(--text); font-family: 'DM Sans', sans-s
 
     <div class="related-section">
         <div class="related-heading">Flere øl fra Pipeworks</div>
-        <div class="related-grid">
+        <div class="related-grid"><div class="related-item">
     <a class="related-card" href="https://www.beersniffer.dk/ol/pipeworks-devil-firefish/">
         <img src="https://cdn.shopify.com/s/files/1/0551/6600/9423/files/80258523-0ECF-4AEC-97B2-6D1E4040DF73.jpg?v=1772190077" alt="Pipeworks - Devil Firefish" loading="lazy">
         <div class="related-name">Pipeworks - Devil Firefish</div>
         <div class="related-price">49,00 kr</div>
-    </a>
+    </a></div><div class="related-item">
     <a class="related-card" href="https://www.beersniffer.dk/ol/pipeworks-cold-crispy-lime/">
         <img src="https://cdn.shopify.com/s/files/1/0368/1628/9924/files/cold_crispy_lime_e2d0cd61-248c-4dcf-931f-04b61fbe1a19.png?v=1744798349" alt="Pipeworks - Cold Crispy Lime" loading="lazy">
         <div class="related-name">Pipeworks - Cold Crispy Lime</div>
         <div class="related-price">59,00 kr</div>
-    </a>
+    </a></div><div class="related-item">
     <a class="related-card" href="https://www.beersniffer.dk/ol/pipeworks-blood-of-the-unicorn/">
         <img src="https://cdn.shopify.com/s/files/1/0368/1628/9924/files/blood_of_the_unicorn_859ea18a-6684-4d29-94b0-b4c935a775db.png?v=1744798324" alt="Pipeworks - Blood of the Unicorn" loading="lazy">
         <div class="related-name">Pipeworks - Blood of the Unicorn</div>
         <div class="related-price">65,00 kr</div>
-    </a>
+    </a></div><div class="related-item">
     <a class="related-card" href="https://www.beersniffer.dk/ol/pipeworks-south-paw-peach-6-pack/">
         <img src="https://cdn.shopify.com/s/files/1/0368/1628/9924/files/south_paw_peach_d956cd32-882c-495e-95b3-80070c45519c.png?v=1777628848" alt="Pipeworks - South Paw Peach (6-pack)" loading="lazy">
         <div class="related-name">Pipeworks - South Paw Peach (6-pack)</div>
         <div class="related-price">68,00 kr</div>
-    </a>
+    </a></div><div class="related-item">
     <a class="related-card" href="https://www.beersniffer.dk/ol/pipeworks-el-unicornio/">
         <img src="https://cdn.shopify.com/s/files/1/0368/1628/9924/files/el_unicornioa.png?v=1764269438" alt="Pipeworks - El Unicornio" loading="lazy">
         <div class="related-name">Pipeworks - El Unicornio</div>
         <div class="related-price">69,00 kr</div>
-    </a>
+    </a></div><div class="related-item">
     <a class="related-card" href="https://www.beersniffer.dk/ol/pipeworks-barrel-aged-end-of-days/">
         <img src="https://cdn.shopify.com/s/files/1/0368/1628/9924/files/pipeworks-barrel-aged-end-of-days.png?v=1777455391" alt="Pipeworks - Barrel Aged End of Days" loading="lazy">
         <div class="related-name">Pipeworks - Barrel Aged End of Days</div>
         <div class="related-price">109,00 kr</div>
-    </a></div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/pipeworks-as-you-wish/">
+        <img src="https://cdn.shopify.com/s/files/1/0368/1628/9924/files/as_you_wish.png?v=1764269542" alt="Pipeworks - As You Wish" loading="lazy">
+        <div class="related-name">Pipeworks - As You Wish</div>
+        <div class="related-price">109,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/pipeworks-barrel-aged-jones-dog/">
+        <img src="https://cdn.shopify.com/s/files/1/0368/1628/9924/files/barrel_aged_jones_dog_3c5c536b-0ce4-4f43-b6bd-3b6fab494547.png?v=1744798313" alt="Pipeworks - Barrel Aged Jones Dog" loading="lazy">
+        <div class="related-name">Pipeworks - Barrel Aged Jones Dog</div>
+        <div class="related-price">119,00 kr</div>
+    </a></div></div>
+        <button class="related-toggle" onclick="this.previousElementSibling.querySelectorAll(&quot;.related-hidden&quot;).forEach(e=>e.style.display=&quot;block&quot;);this.style.display=&quot;none&quot;">Vis alle (8)</button>
     </div>
 
     <div class="disclaimer">
         📢 Affiliate disclosure: BeerSniffer kan modtage provision når du køber via vores links.
-        Priser opdateret 03.07.2026. Tjek altid den endelige pris hos forhandleren før køb.
+        Priser opdateret 07.07.2026. Tjek altid den endelige pris hos forhandleren før køb.
     </div>
 </div>
 

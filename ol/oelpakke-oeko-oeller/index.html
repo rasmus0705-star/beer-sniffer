@@ -66,6 +66,9 @@ body { background: var(--bg); color: var(--text); font-family: 'DM Sans', sans-s
 .related-card img, .related-img-placeholder { width: 100%; height: 70px; object-fit: contain; background: var(--surface2); border-radius: 6px; margin-bottom: 0.4rem; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; }
 .related-name { font-size: 0.72rem; line-height: 1.3; margin-bottom: 0.2rem; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; min-height: 1.9em; }
 .related-price { font-size: 0.78rem; font-weight: 700; color: var(--gold-light); }
+.related-hidden { display: none; }
+.related-toggle { display: block; margin: 0.8rem auto 0; background: var(--surface2); border: 1px solid var(--border-light); border-radius: 999px; padding: 0.45rem 1.2rem; color: var(--gold); font-family: 'DM Sans', sans-serif; font-size: 0.78rem; cursor: pointer; transition: border-color 0.15s; }
+.related-toggle:hover { border-color: var(--gold); color: var(--gold-light); }
 .disclaimer { font-size: 0.72rem; color: var(--text-muted); margin-top: 2rem; line-height: 1.6; border-top: 1px solid var(--border); padding-top: 1rem; }
 .chart-section { margin: 1.5rem 0; background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 1rem 1.1rem; }
 .chart-heading { font-size: 0.7rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 0.7rem; }
@@ -138,42 +141,83 @@ body { background: var(--bg); color: var(--text); font-family: 'DM Sans', sans-s
 
     <div class="related-section">
         <div class="related-heading">Andre Ølpakker-øl</div>
-        <div class="related-grid">
+        <div class="related-grid"><div class="related-item">
     <a class="related-card" href="https://www.beersniffer.dk/ol/oelpakke-to-oel-2/">
         <img src="https://www.vildmedvin.dk/img/1000/1000/resize/3/0/30328-bundle_1_22.jpg" alt="Ølpakke - To øl" loading="lazy">
         <div class="related-name">Ølpakke - To øl</div>
         <div class="related-price">193,00 kr</div>
-    </a>
+    </a></div><div class="related-item">
     <a class="related-card" href="https://www.beersniffer.dk/ol/oelpakke-thisted-bryghus/">
         <img src="https://www.vildmedvin.dk/img/1000/1000/resize/2/8/28925-bundle_1_20.jpg" alt="Ølpakke - Thisted Bryghus" loading="lazy">
         <div class="related-name">Ølpakke - Thisted Bryghus</div>
         <div class="related-price">203,00 kr</div>
-    </a>
+    </a></div><div class="related-item">
     <a class="related-card" href="https://www.beersniffer.dk/ol/oelpakke-ebeltoft-gaardbryggeri/">
         <img src="https://www.vildmedvin.dk/img/1000/1000/resize/2/9/29037-bundle_1_22.jpg" alt="Ølpakke - Ebeltoft Gårdbryggeri" loading="lazy">
         <div class="related-name">Ølpakke - Ebeltoft Gårdbryggeri</div>
         <div class="related-price">231,00 kr</div>
-    </a>
+    </a></div><div class="related-item">
     <a class="related-card" href="https://www.beersniffer.dk/ol/oelpakke-hornbeer/">
         <img src="https://www.vildmedvin.dk/img/1000/1000/resize/2/9/29040-bundle_1_14.jpg" alt="Ølpakke - Hornbeer" loading="lazy">
         <div class="related-name">Ølpakke - Hornbeer</div>
         <div class="related-price">251,00 kr</div>
-    </a>
+    </a></div><div class="related-item">
     <a class="related-card" href="https://www.beersniffer.dk/ol/oelpakke-fanoe-bryghus/">
         <img src="https://www.vildmedvin.dk/img/1000/1000/resize/3/1/31357-bundle_1_20.jpg" alt="Ølpakke - Fanø Bryghus" loading="lazy">
         <div class="related-name">Ølpakke - Fanø Bryghus</div>
         <div class="related-price">255,00 kr</div>
-    </a>
+    </a></div><div class="related-item">
     <a class="related-card" href="https://www.beersniffer.dk/ol/insel-brauerei-vm-aeske-gruppe-a/">
         <img src="https://www.vildmedvin.dk/img/1000/1000/resize/i/n/insel_vm_a.jpg" alt="Insel Brauerei, VM Æske Gruppe A" loading="lazy">
         <div class="related-name">Insel Brauerei, VM Æske Gruppe A</div>
         <div class="related-price">268,10 kr</div>
-    </a></div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/oelpakke-de-mest-populaere/">
+        <img src="https://www.vildmedvin.dk/img/1000/1000/resize/3/0/30545-bundle_1_19.jpg" alt="Ølpakke - De mest populære" loading="lazy">
+        <div class="related-name">Ølpakke - De mest populære</div>
+        <div class="related-price">269,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/oelpakke-aaben-bryghus-pakken/">
+        <img src="https://www.vildmedvin.dk/img/1000/1000/resize/3/1/31389-bundle_1.jpg" alt="Ølpakke - Åben Bryghus Pakken" loading="lazy">
+        <div class="related-name">Ølpakke - Åben Bryghus Pakken</div>
+        <div class="related-price">274,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/oelpakke-amager-bryghus/">
+        <img src="https://www.vildmedvin.dk/img/1000/1000/resize/2/9/29517-bundle_1_7.jpg" alt="Ølpakke - Amager Bryghus" loading="lazy">
+        <div class="related-name">Ølpakke - Amager Bryghus</div>
+        <div class="related-price">293,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/oelpakke-udenlandsk-oelsmagning/">
+        <img src="https://www.vildmedvin.dk/img/1000/1000/resize/2/8/28804-bundle_1_20.jpg" alt="Ølpakke - Udenlandsk ølsmagning" loading="lazy">
+        <div class="related-name">Ølpakke - Udenlandsk ølsmagning</div>
+        <div class="related-price">299,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/oelpakke-trappist/">
+        <img src="https://www.vildmedvin.dk/img/1000/1000/resize/2/8/28802-bundle_1_16.jpg" alt="Ølpakke - Trappist" loading="lazy">
+        <div class="related-name">Ølpakke - Trappist</div>
+        <div class="related-price">304,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/oelpakke-blandet-smagning/">
+        <img src="https://www.vildmedvin.dk/img/1000/1000/resize/2/9/29036-bundle_1_23.jpg" alt="Ølpakke - Blandet smagning" loading="lazy">
+        <div class="related-name">Ølpakke - Blandet smagning</div>
+        <div class="related-price">417,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/gouden-carolus-aargangsoel-imperial-serien-2025/">
+        <img src="https://www.vildmedvin.dk/img/1000/1000/resize/g/o/gouden_carolus_imperial_gave_ske.jpg" alt="Gouden Carolus, Årgangsøl Imperial Serien 2025" loading="lazy">
+        <div class="related-name">Gouden Carolus, Årgangsøl Imperial Serien 2025</div>
+        <div class="related-price">424,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/oelpakke-jorden-rundt/">
+        <img src="https://www.vildmedvin.dk/img/1000/1000/resize/3/1/31806-bundle_1_17.jpg" alt="Ølpakke - Jorden rundt" loading="lazy">
+        <div class="related-name">Ølpakke - Jorden rundt</div>
+        <div class="related-price">585,00 kr</div>
+    </a></div></div>
+        <button class="related-toggle" onclick="this.previousElementSibling.querySelectorAll(&quot;.related-hidden&quot;).forEach(e=>e.style.display=&quot;block&quot;);this.style.display=&quot;none&quot;">Vis alle (14)</button>
     </div>
 
     <div class="disclaimer">
         📢 Affiliate disclosure: BeerSniffer kan modtage provision når du køber via vores links.
-        Priser opdateret 03.07.2026. Tjek altid den endelige pris hos forhandleren før køb.
+        Priser opdateret 07.07.2026. Tjek altid den endelige pris hos forhandleren før køb.
     </div>
 </div>
 

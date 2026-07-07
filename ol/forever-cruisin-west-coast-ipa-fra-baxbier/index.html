@@ -66,6 +66,9 @@ body { background: var(--bg); color: var(--text); font-family: 'DM Sans', sans-s
 .related-card img, .related-img-placeholder { width: 100%; height: 70px; object-fit: contain; background: var(--surface2); border-radius: 6px; margin-bottom: 0.4rem; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; }
 .related-name { font-size: 0.72rem; line-height: 1.3; margin-bottom: 0.2rem; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; min-height: 1.9em; }
 .related-price { font-size: 0.78rem; font-weight: 700; color: var(--gold-light); }
+.related-hidden { display: none; }
+.related-toggle { display: block; margin: 0.8rem auto 0; background: var(--surface2); border: 1px solid var(--border-light); border-radius: 999px; padding: 0.45rem 1.2rem; color: var(--gold); font-family: 'DM Sans', sans-serif; font-size: 0.78rem; cursor: pointer; transition: border-color 0.15s; }
+.related-toggle:hover { border-color: var(--gold); color: var(--gold-light); }
 .disclaimer { font-size: 0.72rem; color: var(--text-muted); margin-top: 2rem; line-height: 1.6; border-top: 1px solid var(--border); padding-top: 1rem; }
 .chart-section { margin: 1.5rem 0; background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 1rem 1.1rem; }
 .chart-heading { font-size: 0.7rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 0.7rem; }
@@ -146,42 +149,218 @@ body { background: var(--bg); color: var(--text); font-family: 'DM Sans', sans-s
 
     <div class="related-section">
         <div class="related-heading">Flere øl fra Baxbier</div>
-        <div class="related-grid">
-    <a class="related-card" href="https://www.beersniffer.dk/ol/rygr-brygghus-tyr/">
-        <img src="https://cdn.shopify.com/s/files/1/0551/6600/9423/files/6603EF27-0A55-4656-ABA3-1B930A8FDADA.jpg?v=1774440110" alt="RYGR Brygghus - Tyr" loading="lazy">
-        <div class="related-name">RYGR Brygghus - Tyr</div>
-        <div class="related-price">22,00 kr</div>
-    </a>
+        <div class="related-grid"><div class="related-item">
     <a class="related-card" href="https://www.beersniffer.dk/ol/xv-west-coast-ipa-fra-nepo/">
         <img src="https://cdn-main.ideal.shop/images/by_hash/c43c3217cd2a6b5440358eccc17b0f827bda7889c4a20eb321dc10898bdd8edc/500-0/xv.jpg" alt="XV - West Coast IPA fra Nepo" loading="lazy">
         <div class="related-name">XV - West Coast IPA fra Nepo</div>
         <div class="related-price">27,50 kr</div>
-    </a>
+    </a></div><div class="related-item">
     <a class="related-card" href="https://www.beersniffer.dk/ol/hornbeer-godt-oel-oekologisk-ipa-west-coast-ipa/">
         <img src="https://cdn.shopify.com/s/files/1/0402/1239/8243/files/Hornbeer_OkologiskIPA.png?v=1776666861" alt="Hornbeer - Godt Øl: Økologisk IPA - West Coast IPA" loading="lazy">
         <div class="related-name">Hornbeer - Godt Øl: Økologisk IPA - West Coast IPA</div>
         <div class="related-price">31,00 kr</div>
-    </a>
+    </a></div><div class="related-item">
     <a class="related-card" href="https://www.beersniffer.dk/ol/ebeltoft-gaardbryggeri-petroleum-i-p-a-cryo-fresh/">
         <img src="https://cdn.shopify.com/s/files/1/0776/5209/9400/files/90F27CBB-C08B-4068-B14E-7A532A054534.jpg?v=1781717476" alt="Ebeltoft Gaardbryggeri - Petroleum I.P.A. Cryo Fresh #2 Simcoe" loading="lazy">
         <div class="related-name">Ebeltoft Gaardbryggeri - Petroleum I.P.A. Cryo Fresh #2 Simcoe</div>
         <div class="related-price">31,00 kr</div>
-    </a>
-    <a class="related-card" href="https://www.beersniffer.dk/ol/cigar-city-jai-alai/">
-        <img src="https://cdn.shopify.com/s/files/1/0551/6600/9423/files/7DB66563-EA67-4701-8916-27296CB234DE.jpg?v=1770049549" alt="Cigar City - Jai Alai" loading="lazy">
-        <div class="related-name">Cigar City - Jai Alai</div>
-        <div class="related-price">39,00 kr</div>
-    </a>
+    </a></div><div class="related-item">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/rygr-brygghus-tyr/">
+        <img src="https://cdn.shopify.com/s/files/1/0551/6600/9423/files/6603EF27-0A55-4656-ABA3-1B930A8FDADA.jpg?v=1774440110" alt="RYGR Brygghus - Tyr" loading="lazy">
+        <div class="related-name">RYGR Brygghus - Tyr</div>
+        <div class="related-price">38,00 kr</div>
+    </a></div><div class="related-item">
     <a class="related-card" href="https://www.beersniffer.dk/ol/jopen-mooie-nel-guava-passion-fruit-west-coast/">
         <img src="https://cdn.shopify.com/s/files/1/0402/1239/8243/files/Jopen_MooieNelTrop.png?v=1776215513" alt="Jopen - Mooie Nel Guava &amp; Passion Fruit - West Coast IPA" loading="lazy">
         <div class="related-name">Jopen - Mooie Nel Guava &amp; Passion Fruit - West Coast IPA</div>
         <div class="related-price">39,75 kr</div>
-    </a></div>
+    </a></div><div class="related-item">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/skoel-faldera-west-coast-ipa-6-stk/">
+        <img src="https://cdn.shopify.com/s/files/1/0402/1239/8243/files/skol_faldera.png?v=1772434146" alt="Skøl - Faldera - West Coast IPA (6 stk.)" loading="lazy">
+        <div class="related-name">Skøl - Faldera - West Coast IPA (6 stk.)</div>
+        <div class="related-price">39,75 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/westworld-west-coast-ipa-fra-andersons/">
+        <img src="https://cdn-main.ideal.shop/images/by_hash/c2ad288c2ec93e919b90b4ad998baf4426a21e3422a66a6d48a196d7c1d7117e/500-0/westworld.jpg" alt="Westworld - West Coast IPA fra Anderson&#x27;s" loading="lazy">
+        <div class="related-name">Westworld - West Coast IPA fra Anderson&#x27;s</div>
+        <div class="related-price">40,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/birrificio-italiano-asteroid/">
+        <img src="https://cdn.shopify.com/s/files/1/0776/5209/9400/files/81E4F370-5D5A-4E28-A718-C7DEE086E152.jpg?v=1782289879" alt="Birrificio Italiano - Asteroid" loading="lazy">
+        <div class="related-name">Birrificio Italiano - Asteroid</div>
+        <div class="related-price">41,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/sudden-death-endless-afterhours-west-coast-ipa/">
+        <img src="https://cdn.shopify.com/s/files/1/0402/1239/8243/files/SuddenDeath_EndlessAfterhours.png?v=1758555085" alt="Sudden Death - Endless Afterhours - West Coast IPA" loading="lazy">
+        <div class="related-name">Sudden Death - Endless Afterhours - West Coast IPA</div>
+        <div class="related-price">49,75 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/burnt-mill-green-path-west-coast-ipa/">
+        <img src="https://cdn.shopify.com/s/files/1/0402/1239/8243/files/burntmill_GreenPath.png?v=1775377993" alt="Burnt Mill - Green Path - West Coast IPA" loading="lazy">
+        <div class="related-name">Burnt Mill - Green Path - West Coast IPA</div>
+        <div class="related-price">49,75 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/mad-scientist-matrix-blue-pill-8211-tea-infused/">
+        <img src="https://www.bestofbeers.dk/wp-content/uploads/2025/12/MadScientistMatrixBluePill.jpg" alt="Mad Scientist – Matrix – Blue Pill &amp;#8211; Tea Infused West Coast IPA – –" loading="lazy">
+        <div class="related-name">Mad Scientist – Matrix – Blue Pill &amp;#8211; Tea Infused West Coast IPA – –</div>
+        <div class="related-price">51,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/funky-fluid-brewery-final-eight-portugal-selecao-west/">
+        <img src="https://www.bestofbeers.dk/wp-content/uploads/2026/05/FunkyFluidPortugal.jpg" alt="Funky Fluid Brewery – Final Eight Portugal Selecao – West Coast IPA – –" loading="lazy">
+        <div class="related-name">Funky Fluid Brewery – Final Eight Portugal Selecao – West Coast IPA – –</div>
+        <div class="related-price">52,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/smile-west-coast-ipa-fra-attik-brewing/">
+        <img src="https://cdn-main.ideal.shop/images/by_hash/a5c85eff76efa675941e14a28084b23cc49750513e63226bdb30551c2e54f8f6/500-0/smile-can.jpg" alt="Smile - West Coast IPA fra Attik Brewing" loading="lazy">
+        <div class="related-name">Smile - West Coast IPA fra Attik Brewing</div>
+        <div class="related-price">55,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/two-liberties-west-coast-ipa-fra-genys/">
+        <img src="https://cdn-main.ideal.shop/images/by_hash/3b049c217922bf8d363fbf5fd46462d3974463888e68ed25d0d5f31970678546/500-0/Two-Liberties.jpg" alt="Two Liberties - West Coast IPA fra Genys" loading="lazy">
+        <div class="related-name">Two Liberties - West Coast IPA fra Genys</div>
+        <div class="related-price">55,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/california-banger-west-coast-ipa-fra-beer-underground/">
+        <img src="https://cdn-main.ideal.shop/images/by_hash/8e8365c8ce1fe2fd85db045b3e625ceb159ec2a7d5f46d0434c37a94abd24ba8/500-0/californiabanger.jpg" alt="California Banger - West Coast IPA fra Beer Underground" loading="lazy">
+        <div class="related-name">California Banger - West Coast IPA fra Beer Underground</div>
+        <div class="related-price">55,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/ibuprophet-west-coast-ipa-fra-beer-underground/">
+        <img src="https://cdn-main.ideal.shop/images/by_hash/62cd88f30446f7387c2df7d9bac8685b367bcd75cf1465c55cda7c8d08e792b5/500-0/ibuprophet.jpg" alt="IBUprophet - West Coast IPA fra Beer Underground" loading="lazy">
+        <div class="related-name">IBUprophet - West Coast IPA fra Beer Underground</div>
+        <div class="related-price">55,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/fermenterarna-blue-angel-west-coast-ipa/">
+        <img src="https://cdn.shopify.com/s/files/1/0402/1239/8243/files/Fermenterarna_BlueAngel.png?v=1781420949" alt="Fermenterarna - Blue Angel - West Coast IPA" loading="lazy">
+        <div class="related-name">Fermenterarna - Blue Angel - West Coast IPA</div>
+        <div class="related-price">55,75 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/fraugruber-west-coast-buster-west-coast-ipa/">
+        <img src="https://cdn.shopify.com/s/files/1/0402/1239/8243/files/FrauGruber_WestCoastBuster.png?v=1773651412" alt="FrauGruber - West Coast Buster - West Coast IPA" loading="lazy">
+        <div class="related-name">FrauGruber - West Coast Buster - West Coast IPA</div>
+        <div class="related-price">55,75 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/apex-death-grip-ipa-west-coast-ipa/">
+        <img src="https://cdn.shopify.com/s/files/1/0402/1239/8243/files/Apex_DeathGrip_6d4fb4b1-e0ee-418f-9d34-ba27cc1348e2.png?v=1773602226" alt="Apex - Death Grip IPA - West Coast IPA" loading="lazy">
+        <div class="related-name">Apex - Death Grip IPA - West Coast IPA</div>
+        <div class="related-price">55,75 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/apex-blank-generation-ipa-west-coast-ipa/">
+        <img src="https://cdn.shopify.com/s/files/1/0402/1239/8243/files/Apex_BlankGeneration.png?v=1773601948" alt="Apex - Blank Generation IPA - West Coast IPA" loading="lazy">
+        <div class="related-name">Apex - Blank Generation IPA - West Coast IPA</div>
+        <div class="related-price">55,75 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/salikatt-green-belt/">
+        <img src="https://cdn.shopify.com/s/files/1/0776/5209/9400/files/99360D4D-5180-4528-9410-58638D4E7AD4.jpg?v=1781717476" alt="Salikatt - Green Belt" loading="lazy">
+        <div class="related-name">Salikatt - Green Belt</div>
+        <div class="related-price">56,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/burnt-mill-pacific-rise-west-coast-ipa/">
+        <img src="https://cdn.shopify.com/s/files/1/0402/1239/8243/files/BurntMill_PacificRise.png?v=1765825894" alt="Burnt Mill - Pacific Rise - West Coast IPA" loading="lazy">
+        <div class="related-name">Burnt Mill - Pacific Rise - West Coast IPA</div>
+        <div class="related-price">56,50 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/stigbergets-alpha-boss/">
+        <img src="https://cdn.shopify.com/s/files/1/0551/6600/9423/files/E78B06CD-23E2-48DE-A307-4707203922BB.jpg?v=1772190078" alt="Stigbergets - Alpha Boss" loading="lazy">
+        <div class="related-name">Stigbergets - Alpha Boss</div>
+        <div class="related-price">59,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/2085-19-west-coast-ipa/">
+        <img src="https://cdn.shopify.com/s/files/1/0368/1628/9924/files/2085-19-west-coast-ipa.png?v=1781245641" alt="2085 - 19 West Coast IPA" loading="lazy">
+        <div class="related-name">2085 - 19 West Coast IPA</div>
+        <div class="related-price">59,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/defibrillator-modern-west-coast-ipa-fra-bad-seed/">
+        <img src="https://cdn-main.ideal.shop/images/by_hash/83b9b902c28b0cbbc305877120555142e37ced33be66f95f54c2a62b76c9233d/500-0/Defibrillator.jpg" alt="Defibrillator - Modern West Coast IPA fra Bad Seed &amp; Vinohradsky" loading="lazy">
+        <div class="related-name">Defibrillator - Modern West Coast IPA fra Bad Seed &amp; Vinohradsky</div>
+        <div class="related-price">59,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/gamma-brewing-devolve-wcipa/">
+        <img src="https://www.vildmedvin.dk/img/1000/1000/resize/g/a/gamma_-_devolve_the_real_one-removebg.jpg" alt="Gamma Brewing, Devolve WCIPA" loading="lazy">
+        <div class="related-name">Gamma Brewing, Devolve WCIPA</div>
+        <div class="related-price">59,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/pollys-x-brew-york-selection-criteria-west-coast/">
+        <img src="https://cdn.shopify.com/s/files/1/0402/1239/8243/files/Pollys_SelectionCriteria.png?v=1781420336" alt="Polly’s x Brew York - Selection Criteria - West Coast IPA" loading="lazy">
+        <div class="related-name">Polly’s x Brew York - Selection Criteria - West Coast IPA</div>
+        <div class="related-price">59,75 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/track-newhouse-west-coast-ipa/">
+        <img src="https://cdn.shopify.com/s/files/1/0402/1239/8243/files/Track_Newhouse.png?v=1781471412" alt="Track - Newhouse - West Coast IPA" loading="lazy">
+        <div class="related-name">Track - Newhouse - West Coast IPA</div>
+        <div class="related-price">59,75 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/track-brewing-co-x-thornbridge-brewery-headstone/">
+        <img src="https://cdn.shopify.com/s/files/1/0402/1239/8243/files/Track_Headstone.png?v=1781471557" alt="Track x Thornbridge - Headstone - West Coast IPA" loading="lazy">
+        <div class="related-name">Track x Thornbridge - Headstone - West Coast IPA</div>
+        <div class="related-price">59,75 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/beak-quack-west-coast-ipa/">
+        <img src="https://cdn.shopify.com/s/files/1/0402/1239/8243/files/Beak_Quack.png?v=1779782312" alt="BEAK - Quack - West Coast IPA" loading="lazy">
+        <div class="related-name">BEAK - Quack - West Coast IPA</div>
+        <div class="related-price">59,75 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/queer-brewing-synth-west-coast-ipa/">
+        <img src="https://cdn.shopify.com/s/files/1/0402/1239/8243/files/QueerBrewing_Synth.png?v=1776672280" alt="Queer Brewing - Synth - West Coast IPA" loading="lazy">
+        <div class="related-name">Queer Brewing - Synth - West Coast IPA</div>
+        <div class="related-price">59,75 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/pollys-morning-in-la-west-coast-ipa/">
+        <img src="https://cdn.shopify.com/s/files/1/0402/1239/8243/files/Pollys_MorninginLA.png?v=1771584811" alt="Polly&#x27;s - Morning In LA - West Coast IPA" loading="lazy">
+        <div class="related-name">Polly&#x27;s - Morning In LA - West Coast IPA</div>
+        <div class="related-price">59,75 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/red-wood-west-coast-ipa-fra-nepo/">
+        <img src="https://cdn-main.ideal.shop/images/by_hash/a2072aae7c05ae4ba177deacc05abda4f1e767b2550242c16f7674f48c0625fb/500-0/red-wood.jpg" alt="Red Wood - West Coast IPA fra Nepo" loading="lazy">
+        <div class="related-name">Red Wood - West Coast IPA fra Nepo</div>
+        <div class="related-price">60,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/ignis-west-coast-ipa-fra-nurme/">
+        <img src="https://cdn-main.ideal.shop/images/by_hash/b78cc5728647f9062693f5cee9c4bca1c6738a2fddd3f4b87217cb9d8d3a262e/500-0/ignis.jpg" alt="Ignis - West Coast IPA fra Nurme" loading="lazy">
+        <div class="related-name">Ignis - West Coast IPA fra Nurme</div>
+        <div class="related-price">60,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/bad-seed-slice-of-sunshine-modern-west-coast/">
+        <img src="https://www.bestofbeers.dk/wp-content/uploads/2024/02/slice-of-sunshine_1024x1024.jpg" alt="Bad Seed, Slice Of Sunshine, Modern West Coast IPA, &amp;#8211; &amp;#8211;" loading="lazy">
+        <div class="related-name">Bad Seed, Slice Of Sunshine, Modern West Coast IPA, &amp;#8211; &amp;#8211;</div>
+        <div class="related-price">61,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/bad-seed-brewing-x-yakima-chief-hops-la/">
+        <img src="https://www.bestofbeers.dk/wp-content/uploads/2026/05/BadSeedDolceVita.jpg" alt="Bad Seed Brewing x Yakima Chief Hops – La Dolce Vita – DDH Modern West Coast IPA – –" loading="lazy">
+        <div class="related-name">Bad Seed Brewing x Yakima Chief Hops – La Dolce Vita – DDH Modern West Coast IPA – –</div>
+        <div class="related-price">61,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/stigbergets-bryggeri-double-headed-ddh-west-coast-ipa/">
+        <img src="https://www.bestofbeers.dk/wp-content/uploads/2026/05/StigbergetsDoubleHeadedDDH.jpg" alt="Stigbergets Bryggeri – Double Headed DDH – West Coast IPA – –" loading="lazy">
+        <div class="related-name">Stigbergets Bryggeri – Double Headed DDH – West Coast IPA – –</div>
+        <div class="related-price">66,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/stigbergets-bryggeri-lily-of-the-west-west-coast/">
+        <img src="https://www.bestofbeers.dk/wp-content/uploads/2026/05/StigbergetsLilyOfTheWest.jpg" alt="Stigbergets Bryggeri – Lily Of The West – West Coast IPA – –" loading="lazy">
+        <div class="related-name">Stigbergets Bryggeri – Lily Of The West – West Coast IPA – –</div>
+        <div class="related-price">66,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/finback-brewery-no-one-else-can-take-your/">
+        <img src="https://cdn.shopify.com/s/files/1/0776/5209/9400/files/3A248F09-5B74-4F6E-9527-528C24E9824B.jpg?v=1779365828" alt="Finback Brewery - No One Else Can Take Your Place" loading="lazy">
+        <div class="related-name">Finback Brewery - No One Else Can Take Your Place</div>
+        <div class="related-price">74,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/track-brewing-co-newhouse-2/">
+        <img src="https://cdn.shopify.com/s/files/1/0776/5209/9400/files/85C23A76-985A-421D-A839-EBFC2594488A.jpg?v=1780437453" alt="Track Brewing Co.- Newhouse" loading="lazy">
+        <div class="related-name">Track Brewing Co.- Newhouse</div>
+        <div class="related-price">75,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/pure-project-brewing-sun-peak/">
+        <img src="https://cdn.shopify.com/s/files/1/0776/5209/9400/files/0F721653-8233-497B-874E-8252BF52CB69.jpg?v=1779401729" alt="Pure Project Brewing - Sun Peak" loading="lazy">
+        <div class="related-name">Pure Project Brewing - Sun Peak</div>
+        <div class="related-price">79,00 kr</div>
+    </a></div></div>
+        <button class="related-toggle" onclick="this.previousElementSibling.querySelectorAll(&quot;.related-hidden&quot;).forEach(e=>e.style.display=&quot;block&quot;);this.style.display=&quot;none&quot;">Vis alle (41)</button>
     </div>
 
     <div class="disclaimer">
         📢 Affiliate disclosure: BeerSniffer kan modtage provision når du køber via vores links.
-        Priser opdateret 03.07.2026. Tjek altid den endelige pris hos forhandleren før køb.
+        Priser opdateret 07.07.2026. Tjek altid den endelige pris hos forhandleren før køb.
     </div>
 </div>
 

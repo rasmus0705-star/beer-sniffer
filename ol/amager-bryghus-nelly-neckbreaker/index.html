@@ -66,6 +66,9 @@ body { background: var(--bg); color: var(--text); font-family: 'DM Sans', sans-s
 .related-card img, .related-img-placeholder { width: 100%; height: 70px; object-fit: contain; background: var(--surface2); border-radius: 6px; margin-bottom: 0.4rem; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; }
 .related-name { font-size: 0.72rem; line-height: 1.3; margin-bottom: 0.2rem; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; min-height: 1.9em; }
 .related-price { font-size: 0.78rem; font-weight: 700; color: var(--gold-light); }
+.related-hidden { display: none; }
+.related-toggle { display: block; margin: 0.8rem auto 0; background: var(--surface2); border: 1px solid var(--border-light); border-radius: 999px; padding: 0.45rem 1.2rem; color: var(--gold); font-family: 'DM Sans', sans-serif; font-size: 0.78rem; cursor: pointer; transition: border-color 0.15s; }
+.related-toggle:hover { border-color: var(--gold); color: var(--gold-light); }
 .disclaimer { font-size: 0.72rem; color: var(--text-muted); margin-top: 2rem; line-height: 1.6; border-top: 1px solid var(--border); padding-top: 1rem; }
 .chart-section { margin: 1.5rem 0; background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 1rem 1.1rem; }
 .chart-heading { font-size: 0.7rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 0.7rem; }
@@ -138,42 +141,183 @@ body { background: var(--bg); color: var(--text); font-family: 'DM Sans', sans-s
 
     <div class="related-section">
         <div class="related-heading">Flere øl fra Amager Bryghus</div>
-        <div class="related-grid">
+        <div class="related-grid"><div class="related-item">
     <a class="related-card" href="https://www.beersniffer.dk/ol/amager-bryghus-pink-farts-unicorns/">
         <img src="https://www.vildmedvin.dk/img/1000/1000/resize/5/5/55555.jpg" alt="Amager Bryghus, Pink Farts &amp; Unicorns" loading="lazy">
         <div class="related-name">Amager Bryghus, Pink Farts &amp; Unicorns</div>
         <div class="related-price">36,00 kr</div>
-    </a>
+    </a></div><div class="related-item">
     <a class="related-card" href="https://www.beersniffer.dk/ol/amager-bryghus-lil-demon-non-alcoholic-ipa/">
         <img src="https://www.bestofbeers.dk/wp-content/uploads/2026/05/AmagerLilDemonAlkoholfri.jpg" alt="Amager Bryghus – Lil´Demon – Non Alcoholic IPA – –" loading="lazy">
         <div class="related-name">Amager Bryghus – Lil´Demon – Non Alcoholic IPA – –</div>
         <div class="related-price">38,00 kr</div>
-    </a>
+    </a></div><div class="related-item">
     <a class="related-card" href="https://www.beersniffer.dk/ol/amager-bryghus-amager-julebryg-2025/">
         <img src="https://www.vildmedvin.dk/img/1000/1000/resize/j/u/julebry.jpg" alt="Amager Bryghus, Amager Julebryg 2025" loading="lazy">
         <div class="related-name">Amager Bryghus, Amager Julebryg 2025</div>
         <div class="related-price">38,00 kr</div>
-    </a>
+    </a></div><div class="related-item">
     <a class="related-card" href="https://www.beersniffer.dk/ol/amager-bryghus-lil-demon-alkoholfri/">
         <img src="https://www.vildmedvin.dk/img/1000/1000/resize/a/m/amager_bryghus_lil_demon.jpg" alt="Amager Bryghus, Lil&#x27; Demon Alkoholfri" loading="lazy">
         <div class="related-name">Amager Bryghus, Lil&#x27; Demon Alkoholfri</div>
         <div class="related-price">38,00 kr</div>
-    </a>
+    </a></div><div class="related-item">
     <a class="related-card" href="https://www.beersniffer.dk/ol/amager-bryghus-lardy-dardy/">
         <img src="https://www.vildmedvin.dk/img/1000/1000/resize/5/5/55_1_1.jpg" alt="Amager Bryghus, Lardy-dardy" loading="lazy">
         <div class="related-name">Amager Bryghus, Lardy-dardy</div>
         <div class="related-price">39,00 kr</div>
-    </a>
+    </a></div><div class="related-item">
     <a class="related-card" href="https://www.beersniffer.dk/ol/amager-bryghus-siesta/">
         <img src="https://www.vildmedvin.dk/img/1000/1000/resize/a/m/amager_siesta.jpg" alt="Amager Bryghus, Siesta" loading="lazy">
         <div class="related-name">Amager Bryghus, Siesta</div>
         <div class="related-price">39,00 kr</div>
-    </a></div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/amager-bryghus-planet-of-the-pink-ponies/">
+        <img src="https://www.vildmedvin.dk/img/1000/1000/resize/a/m/amager_bryghus_planets_of_the_pink_ponies.jpg" alt="Amager Bryghus, Planet of The Pink Ponies" loading="lazy">
+        <div class="related-name">Amager Bryghus, Planet of The Pink Ponies</div>
+        <div class="related-price">39,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/amager-bryghus-kilo-the-rainbow-bridge/">
+        <img src="https://www.vildmedvin.dk/img/1000/1000/resize/a/m/amager_bryghus_kilo_the_rainbow_bridge.jpg" alt="Amager Bryghus, Kilo &amp; The Rainbow Bridge" loading="lazy">
+        <div class="related-name">Amager Bryghus, Kilo &amp; The Rainbow Bridge</div>
+        <div class="related-price">39,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/amager-bryghus-baby-wombat-from-hell/">
+        <img src="https://www.vildmedvin.dk/img/1000/1000/resize/a/m/amager_bryghus_baby_wombat.jpg" alt="Amager Bryghus, Baby Wombat From Hell" loading="lazy">
+        <div class="related-name">Amager Bryghus, Baby Wombat From Hell</div>
+        <div class="related-price">44,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/amager-bryghus-demon-juice-can/">
+        <img src="https://www.vildmedvin.dk/img/1000/1000/resize/i/s/iskold.jpg" alt="Amager Bryghus, Demon Juice (Can)" loading="lazy">
+        <div class="related-name">Amager Bryghus, Demon Juice (Can)</div>
+        <div class="related-price">46,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/amager-bryghus-todd-the-axe-man-can/">
+        <img src="https://www.vildmedvin.dk/img/1000/1000/resize/5/5/555_2.jpg" alt="Amager Bryghus, Todd The Axe Man (Can)" loading="lazy">
+        <div class="related-name">Amager Bryghus, Todd The Axe Man (Can)</div>
+        <div class="related-price">47,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/hr-frederiksen-imperial-stout-amager-bryghus-2/">
+        <img src="https://cdn.shopify.com/s/files/1/0600/9438/2263/products/Hr.Frederiksen.jpg?v=1680599385" alt="Hr. Frederiksen- , , Imperial Stout - Amager Bryghus" loading="lazy">
+        <div class="related-name">Hr. Frederiksen- , , Imperial Stout - Amager Bryghus</div>
+        <div class="related-price">49,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/amager-bryghus-wookie/">
+        <img src="https://www.vildmedvin.dk/img/1000/1000/resize/w/o/wookie-ipa-2021.jpg" alt="Amager Bryghus, Wookie" loading="lazy">
+        <div class="related-name">Amager Bryghus, Wookie</div>
+        <div class="related-price">49,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/amager-bryghus-secret-santa/">
+        <img src="https://cdn.shopify.com/s/files/1/0509/8477/9975/files/secret-santa-10-5-44cl_2dd0a61e-6451-4a79-9640-fa373ffea519.png?v=1767964623" alt="Secret Santa" loading="lazy">
+        <div class="related-name">Secret Santa</div>
+        <div class="related-price">50,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/amager-bryghus-cardamom-for-christmas/">
+        <img src="https://cdn.shopify.com/s/files/1/0509/8477/9975/files/cardamom-for-christmas-8-5-44cl.png?v=1764320606" alt="Cardamom For Christmas" loading="lazy">
+        <div class="related-name">Cardamom For Christmas</div>
+        <div class="related-price">54,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/amager-bryghus-rye-king/">
+        <img src="https://cdn.shopify.com/s/files/1/0509/8477/9975/files/rye-king-7-7-44cl.png?v=1764942984" alt="Rye King" loading="lazy">
+        <div class="related-name">Rye King</div>
+        <div class="related-price">55,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/amager-bryghus-reindeer-fuel/">
+        <img src="https://www.vildmedvin.dk/img/1000/1000/resize/r/e/reindeer_fuel_2022_44cl.jpg" alt="Amager Bryghus, Reindeer Fuel" loading="lazy">
+        <div class="related-name">Amager Bryghus, Reindeer Fuel</div>
+        <div class="related-price">55,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/amager-bryghus-samurai/">
+        <img src="https://www.vildmedvin.dk/img/1000/1000/resize/a/m/amager_bryghus_samurai.jpg" alt="Amager Bryghus, Samurai" loading="lazy">
+        <div class="related-name">Amager Bryghus, Samurai</div>
+        <div class="related-price">57,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/amager-bryghus-gluttony/">
+        <img src="https://www.vildmedvin.dk/img/1000/1000/resize/a/m/amagerbryghus_gluttony.jpg" alt="Amager Bryghus, Gluttony" loading="lazy">
+        <div class="related-name">Amager Bryghus, Gluttony</div>
+        <div class="related-price">57,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/amager-bryghus-stormbringer/">
+        <img src="https://www.vildmedvin.dk/img/1000/1000/resize/a/m/amager_bryghus_stormbringer.jpg" alt="Amager Bryghus, Stormbringer" loading="lazy">
+        <div class="related-name">Amager Bryghus, Stormbringer</div>
+        <div class="related-price">59,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/amager-bryghus-black-nordic-skies/">
+        <img src="https://cdn.shopify.com/s/files/1/0509/8477/9975/files/black-nordic-skies-10-44cl_fc898f06-9548-4f53-8f07-b13b891d9853.png?v=1773488031" alt="Black Nordic Skies" loading="lazy">
+        <div class="related-name">Black Nordic Skies</div>
+        <div class="related-price">62,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/amager-bryghus-worlds-best/">
+        <img src="https://cdn.shopify.com/s/files/1/0509/8477/9975/files/worlds-best-11-44cl_dffee0e2-b53d-4753-8743-e143a9ac6e09.png?v=1773473310" alt="World&#x27;s Best" loading="lazy">
+        <div class="related-name">World&#x27;s Best</div>
+        <div class="related-price">64,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/amager-bryghus-macabre-2/">
+        <img src="https://www.vildmedvin.dk/img/1000/1000/resize/a/m/amager_bryghus_macabre.jpg" alt="Amager Bryghus, Macabre" loading="lazy">
+        <div class="related-name">Amager Bryghus, Macabre</div>
+        <div class="related-price">64,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/amager-bryghus-dubstep-in-dubai/">
+        <img src="https://cdn.shopify.com/s/files/1/0509/8477/9975/files/dubstep-in-dubai-11-44cl.png?v=1778844384" alt="Dubstep In Dubai" loading="lazy">
+        <div class="related-name">Dubstep In Dubai</div>
+        <div class="related-price">65,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/amager-bryghus-macabre/">
+        <img src="https://cdn.shopify.com/s/files/1/0509/8477/9975/files/macabre-14-2-44cl.png?v=1728645789" alt="Macabre" loading="lazy">
+        <div class="related-name">Macabre</div>
+        <div class="related-price">70,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/amager-bryghus-flatout-fuckery-dryhopped-double-mash-octuple/">
+        <img src="https://www.bestofbeers.dk/wp-content/uploads/2026/05/AmagerFlatoutFuckery.jpg" alt="Amager Bryghus – Flatout Fuckery – Dryhopped Double Mash Octuple IPA – –" loading="lazy">
+        <div class="related-name">Amager Bryghus – Flatout Fuckery – Dryhopped Double Mash Octuple IPA – –</div>
+        <div class="related-price">81,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/amager-bryghus-double-black-mash/">
+        <img src="https://cdn.shopify.com/s/files/1/0509/8477/9975/files/double-black-mash-2025-10-44cl.png?v=1766669986" alt="Double Black Mash" loading="lazy">
+        <div class="related-name">Double Black Mash</div>
+        <div class="related-price">88,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/amager-bryghus-american-outlaws-kid-curry-golden-edition/">
+        <img src="https://www.bestofbeers.dk/wp-content/uploads/2026/05/AmagerBryghusKidCurry.jpg" alt="Amager Bryghus – American Outlaws Kid Curry Golden Edition – Bourbon Barrel Aged Double Mash Quadrupel – –" loading="lazy">
+        <div class="related-name">Amager Bryghus – American Outlaws Kid Curry Golden Edition – Bourbon Barrel Aged Double Mash Quadrupel – –</div>
+        <div class="related-price">91,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/amager-bryghus-double-black-mash-2025-bourbon/">
+        <img src="https://www.vildmedvin.dk/img/1000/1000/resize/a/m/amager_bryghus_double_black_mash_2025_bourbon.jpg" alt="Amager Bryghus, Double Black Mash 2025 Bourbon" loading="lazy">
+        <div class="related-name">Amager Bryghus, Double Black Mash 2025 Bourbon</div>
+        <div class="related-price">134,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/amager-bryghus-double-black-mash-maple-syrup-barrel/">
+        <img src="https://cdn.shopify.com/s/files/1/0509/8477/9975/files/double-black-mash-maple-syrup-barrel-aged-edition-12-5-44cl.png?v=1778842216" alt="Double Black Mash Maple Syrup Barrel Aged Edition" loading="lazy">
+        <div class="related-name">Double Black Mash Maple Syrup Barrel Aged Edition</div>
+        <div class="related-price">135,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/amager-bryghus-double-black-mash-wheated-bourbon-ba/">
+        <img src="https://cdn.shopify.com/s/files/1/0509/8477/9975/files/double-black-mash-2024-wheated-bourbon-ba-version-13-2-75cl_86e1dd1c-e99a-41df-b6ad-43391e75abc2.png?v=1777923242" alt="Double Black Mash Wheated Bourbon BA Version" loading="lazy">
+        <div class="related-name">Double Black Mash Wheated Bourbon BA Version</div>
+        <div class="related-price">220,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/amager-bryghus-double-black-mash-rye-whiskey-ba/">
+        <img src="https://cdn.shopify.com/s/files/1/0509/8477/9975/files/double-black-mash-2023-rye-whiskey-ba-version-14-9-75cl_67f3a7d5-e5e5-4041-b911-61217ad57a81.png?v=1777923363" alt="Double Black Mash Rye Whiskey BA Version" loading="lazy">
+        <div class="related-name">Double Black Mash Rye Whiskey BA Version</div>
+        <div class="related-price">250,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/oelpakke-amager-bryghus/">
+        <img src="https://www.vildmedvin.dk/img/1000/1000/resize/2/9/29517-bundle_1_7.jpg" alt="Ølpakke - Amager Bryghus" loading="lazy">
+        <div class="related-name">Ølpakke - Amager Bryghus</div>
+        <div class="related-price">293,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/amager-bryghus-double-black-mash-coconut-version/">
+        <img src="https://cdn.shopify.com/s/files/1/0509/8477/9975/files/double-black-mash-2021-coconut-version-12-75cl.png?v=1777923136" alt="Double Black Mash Coconut Version" loading="lazy">
+        <div class="related-name">Double Black Mash Coconut Version</div>
+        <div class="related-price">295,00 kr</div>
+    </a></div></div>
+        <button class="related-toggle" onclick="this.previousElementSibling.querySelectorAll(&quot;.related-hidden&quot;).forEach(e=>e.style.display=&quot;block&quot;);this.style.display=&quot;none&quot;">Vis alle (34)</button>
     </div>
 
     <div class="disclaimer">
         📢 Affiliate disclosure: BeerSniffer kan modtage provision når du køber via vores links.
-        Priser opdateret 03.07.2026. Tjek altid den endelige pris hos forhandleren før køb.
+        Priser opdateret 07.07.2026. Tjek altid den endelige pris hos forhandleren før køb.
     </div>
 </div>
 

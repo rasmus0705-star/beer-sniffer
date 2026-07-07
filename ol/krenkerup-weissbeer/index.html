@@ -66,6 +66,9 @@ body { background: var(--bg); color: var(--text); font-family: 'DM Sans', sans-s
 .related-card img, .related-img-placeholder { width: 100%; height: 70px; object-fit: contain; background: var(--surface2); border-radius: 6px; margin-bottom: 0.4rem; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; }
 .related-name { font-size: 0.72rem; line-height: 1.3; margin-bottom: 0.2rem; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; min-height: 1.9em; }
 .related-price { font-size: 0.78rem; font-weight: 700; color: var(--gold-light); }
+.related-hidden { display: none; }
+.related-toggle { display: block; margin: 0.8rem auto 0; background: var(--surface2); border: 1px solid var(--border-light); border-radius: 999px; padding: 0.45rem 1.2rem; color: var(--gold); font-family: 'DM Sans', sans-serif; font-size: 0.78rem; cursor: pointer; transition: border-color 0.15s; }
+.related-toggle:hover { border-color: var(--gold); color: var(--gold-light); }
 .disclaimer { font-size: 0.72rem; color: var(--text-muted); margin-top: 2rem; line-height: 1.6; border-top: 1px solid var(--border); padding-top: 1rem; }
 .chart-section { margin: 1.5rem 0; background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 1rem 1.1rem; }
 .chart-heading { font-size: 0.7rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 0.7rem; }
@@ -138,42 +141,83 @@ body { background: var(--bg); color: var(--text); font-family: 'DM Sans', sans-s
 
     <div class="related-section">
         <div class="related-heading">Flere øl fra Krenkerup</div>
-        <div class="related-grid">
+        <div class="related-grid"><div class="related-item">
     <a class="related-card" href="https://www.beersniffer.dk/ol/krenkerup-1367-premium-2/">
         <img src="https://www.vildmedvin.dk/img/1000/1000/resize/1/3/1367_33.jpg" alt="Krenkerup, 1367 Premium" loading="lazy">
         <div class="related-name">Krenkerup, 1367 Premium</div>
         <div class="related-price">31,00 kr</div>
-    </a>
+    </a></div><div class="related-item">
     <a class="related-card" href="https://www.beersniffer.dk/ol/krenkerup-pilsner-alkoholfri-2/">
         <img src="https://www.vildmedvin.dk/img/1000/1000/resize/k/r/krenkerup_pilsner_alkoholfri33cl.jpg" alt="Krenkerup, Pilsner Alkoholfri" loading="lazy">
         <div class="related-name">Krenkerup, Pilsner Alkoholfri</div>
         <div class="related-price">33,00 kr</div>
-    </a>
+    </a></div><div class="related-item">
     <a class="related-card" href="https://www.beersniffer.dk/ol/krenkerup-lolland-falster-guld/">
         <img src="https://www.vildmedvin.dk/img/1000/1000/resize/g/u/guld_33.jpg" alt="Krenkerup, Lolland Falster Guld" loading="lazy">
         <div class="related-name">Krenkerup, Lolland Falster Guld</div>
         <div class="related-price">33,00 kr</div>
-    </a>
+    </a></div><div class="related-item">
     <a class="related-card" href="https://www.beersniffer.dk/ol/krenkerup-indian-pale-ale/">
         <img src="https://www.vildmedvin.dk/img/1000/1000/resize/i/n/india_33.jpg" alt="Krenkerup, Indian Pale Ale" loading="lazy">
         <div class="related-name">Krenkerup, Indian Pale Ale</div>
         <div class="related-price">33,00 kr</div>
-    </a>
+    </a></div><div class="related-item">
     <a class="related-card" href="https://www.beersniffer.dk/ol/krenkerup-brown-ale-2/">
         <img src="https://www.vildmedvin.dk/img/1000/1000/resize/b/r/brown_33_1.jpg" alt="Krenkerup, Brown Ale" loading="lazy">
         <div class="related-name">Krenkerup, Brown Ale</div>
         <div class="related-price">33,00 kr</div>
-    </a>
+    </a></div><div class="related-item">
     <a class="related-card" href="https://www.beersniffer.dk/ol/krenkerup-stout-2/">
         <img src="https://www.vildmedvin.dk/img/1000/1000/resize/s/t/stout_33.jpg" alt="Krenkerup, Stout" loading="lazy">
         <div class="related-name">Krenkerup, Stout</div>
         <div class="related-price">33,00 kr</div>
-    </a></div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/krenkerup-weissbeer-2/">
+        <img src="https://www.vildmedvin.dk/img/1000/1000/resize/w/e/weiiss_33.jpg" alt="Krenkerup, Weissbeer" loading="lazy">
+        <div class="related-name">Krenkerup, Weissbeer</div>
+        <div class="related-price">33,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/krenkerup-doppel-bock/">
+        <img src="https://www.vildmedvin.dk/img/1000/1000/resize/d/o/doppel_33.jpg" alt="Krenkerup, Doppel Bock" loading="lazy">
+        <div class="related-name">Krenkerup, Doppel Bock</div>
+        <div class="related-price">34,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/krenkerup-pilsner-alkoholfri/">
+        <img src="https://www.vildmedvin.dk/img/1000/1000/resize/k/r/krenkerup_pilsner_alkoholfri_50cl.jpg" alt="Krenkerup, Pilsner Alkoholfri" loading="lazy">
+        <div class="related-name">Krenkerup, Pilsner Alkoholfri</div>
+        <div class="related-price">43,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/krenkerup-rauch-beer/">
+        <img src="https://www.vildmedvin.dk/img/1000/1000/resize/r/a/rauch.jpg" alt="Krenkerup, Rauch Beer" loading="lazy">
+        <div class="related-name">Krenkerup, Rauch Beer</div>
+        <div class="related-price">44,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/krenkerup-brown-ale/">
+        <img src="https://www.vildmedvin.dk/img/1000/1000/resize/b/r/brown_50.jpg" alt="Krenkerup, Brown Ale" loading="lazy">
+        <div class="related-name">Krenkerup, Brown Ale</div>
+        <div class="related-price">44,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/krenkerup-lolland-falster-guld-2/">
+        <img src="https://www.vildmedvin.dk/img/1000/1000/resize/g/u/guld_50.jpg" alt="Krenkerup, Lolland Falster Guld" loading="lazy">
+        <div class="related-name">Krenkerup, Lolland Falster Guld</div>
+        <div class="related-price">44,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/krenkerup-session-ipa/">
+        <img src="https://www.vildmedvin.dk/img/1000/1000/resize/k/r/krenkerup_ipa_01.jpg" alt="Krenkerup, Session IPA" loading="lazy">
+        <div class="related-name">Krenkerup, Session IPA</div>
+        <div class="related-price">45,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/doppel-bock-krenkerup/">
+        <img src="https://cdn.shopify.com/s/files/1/0600/9438/2263/files/doppelbock.jpg?v=1757584060" alt="Doppel Bock - Krenkerup - -" loading="lazy">
+        <div class="related-name">Doppel Bock - Krenkerup - -</div>
+        <div class="related-price">51,00 kr</div>
+    </a></div></div>
+        <button class="related-toggle" onclick="this.previousElementSibling.querySelectorAll(&quot;.related-hidden&quot;).forEach(e=>e.style.display=&quot;block&quot;);this.style.display=&quot;none&quot;">Vis alle (14)</button>
     </div>
 
     <div class="disclaimer">
         📢 Affiliate disclosure: BeerSniffer kan modtage provision når du køber via vores links.
-        Priser opdateret 03.07.2026. Tjek altid den endelige pris hos forhandleren før køb.
+        Priser opdateret 07.07.2026. Tjek altid den endelige pris hos forhandleren før køb.
     </div>
 </div>
 

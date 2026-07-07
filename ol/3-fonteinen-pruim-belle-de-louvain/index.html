@@ -66,6 +66,9 @@ body { background: var(--bg); color: var(--text); font-family: 'DM Sans', sans-s
 .related-card img, .related-img-placeholder { width: 100%; height: 70px; object-fit: contain; background: var(--surface2); border-radius: 6px; margin-bottom: 0.4rem; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; }
 .related-name { font-size: 0.72rem; line-height: 1.3; margin-bottom: 0.2rem; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; min-height: 1.9em; }
 .related-price { font-size: 0.78rem; font-weight: 700; color: var(--gold-light); }
+.related-hidden { display: none; }
+.related-toggle { display: block; margin: 0.8rem auto 0; background: var(--surface2); border: 1px solid var(--border-light); border-radius: 999px; padding: 0.45rem 1.2rem; color: var(--gold); font-family: 'DM Sans', sans-serif; font-size: 0.78rem; cursor: pointer; transition: border-color 0.15s; }
+.related-toggle:hover { border-color: var(--gold); color: var(--gold-light); }
 .disclaimer { font-size: 0.72rem; color: var(--text-muted); margin-top: 2rem; line-height: 1.6; border-top: 1px solid var(--border); padding-top: 1rem; }
 .chart-section { margin: 1.5rem 0; background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 1rem 1.1rem; }
 .chart-heading { font-size: 0.7rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 0.7rem; }
@@ -138,42 +141,208 @@ body { background: var(--bg); color: var(--text); font-family: 'DM Sans', sans-s
 
     <div class="related-section">
         <div class="related-heading">Flere øl fra 3 Fonteinen</div>
-        <div class="related-grid">
+        <div class="related-grid"><div class="related-item">
     <a class="related-card" href="https://www.beersniffer.dk/ol/3-fonteinen-oude-geuze/">
         <img src="https://www.vildmedvin.dk/img/1000/1000/resize/3/_/3_fonteinen_oude_geuze.jpg" alt="3 Fonteinen Oude Geuze" loading="lazy">
         <div class="related-name">3 Fonteinen Oude Geuze</div>
         <div class="related-price">74,00 kr</div>
-    </a>
+    </a></div><div class="related-item">
     <a class="related-card" href="https://www.beersniffer.dk/ol/3-fonteinen-pruim-belle-de-louvain-n-27/">
         <img src="https://cdn.shopify.com/s/files/1/0368/1628/9924/files/pruim.png?v=1774607909" alt="3 Fonteinen - Pruim Belle de Louvain nº27 22/23 (BD 17/01/23)" loading="lazy">
         <div class="related-name">3 Fonteinen - Pruim Belle de Louvain nº27 22/23 (BD 17/01/23)</div>
         <div class="related-price">87,00 kr</div>
-    </a>
+    </a></div><div class="related-item">
     <a class="related-card" href="https://www.beersniffer.dk/ol/3-fonteinen-platinum-blend-n-57-21-22/">
         <img src="https://cdn.shopify.com/s/files/1/0368/1628/9924/files/platinum_blend_375.png?v=1774607938" alt="3 Fonteinen - Platinum Blend nº57 21/22 (BD 31/03/22)" loading="lazy">
         <div class="related-name">3 Fonteinen - Platinum Blend nº57 21/22 (BD 31/03/22)</div>
         <div class="related-price">99,00 kr</div>
-    </a>
+    </a></div><div class="related-item">
     <a class="related-card" href="https://www.beersniffer.dk/ol/3-fonteinen-tuverbol-2022/">
         <img src="https://www.vildmedvin.dk/img/1000/1000/resize/3/-/3-fonteinen-tuverbol.jpg" alt="3 Fonteinen Tuverbol 2022" loading="lazy">
         <div class="related-name">3 Fonteinen Tuverbol 2022</div>
         <div class="related-price">99,00 kr</div>
-    </a>
+    </a></div><div class="related-item">
     <a class="related-card" href="https://www.beersniffer.dk/ol/3-fonteinen-cuvee-armand-gaston-n-29-23/">
         <img src="https://cdn.shopify.com/s/files/1/0368/1628/9924/files/armand_gaston.png?v=1774607970" alt="3 Fonteinen - Cuvée Armand &amp; Gaston nº29 23/24 (BD 14/02/24)" loading="lazy">
         <div class="related-name">3 Fonteinen - Cuvée Armand &amp; Gaston nº29 23/24 (BD 14/02/24)</div>
         <div class="related-price">109,00 kr</div>
-    </a>
+    </a></div><div class="related-item">
     <a class="related-card" href="https://www.beersniffer.dk/ol/3-fonteinen-armand-gaston-19-20-8/">
         <img src="https://cdn.shopify.com/s/files/1/0368/1628/9924/products/375ml_A_G_2016_f4cc28eb-0a49-4c07-962c-a3308bf68cc4.jpg?v=1773826764" alt="3 Fonteinen - Armand &amp; Gaston 19/20 #8" loading="lazy">
         <div class="related-name">3 Fonteinen - Armand &amp; Gaston 19/20 #8</div>
         <div class="related-price">109,00 kr</div>
-    </a></div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/pruim-mirabelle-no-23-3-fonteinen-2/">
+        <img src="https://cdn.shopify.com/s/files/1/0600/9438/2263/files/3fontainenmirabelle.jpg?v=1750780935" alt="Pruim Mirabelle No 23 - 3 Fonteinen - -" loading="lazy">
+        <div class="related-name">Pruim Mirabelle No 23 - 3 Fonteinen - -</div>
+        <div class="related-price">114,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/3-fonteinen-kweepeer/">
+        <img src="https://www.bestofbeers.dk/wp-content/uploads/2025/02/3fonteinenKweepeer.jpg" alt="3 Fonteinen &amp;#8211; Kweepeer &amp;#8211; 2022/2023 No. 76 &amp;#8211; Lambic – –" loading="lazy">
+        <div class="related-name">3 Fonteinen &amp;#8211; Kweepeer &amp;#8211; 2022/2023 No. 76 &amp;#8211; Lambic – –</div>
+        <div class="related-price">115,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/3-fonteinen-oude-geuze-platinum-blend-21-22/">
+        <img src="https://cdn.shopify.com/s/files/1/0776/5209/9400/files/795DB9DA-7BB3-47F8-9C71-06BD9C19E533.jpg?v=1777754353" alt="3 fonteinen - Oude Geuze Platinum Blend 21/22" loading="lazy">
+        <div class="related-name">3 fonteinen - Oude Geuze Platinum Blend 21/22</div>
+        <div class="related-price">135,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/3-fonteinen-framboos-bio/">
+        <img src="https://www.vildmedvin.dk/img/1000/1000/resize/f/r/framboos_bio.jpg" alt="3 Fonteinen Framboos Bio" loading="lazy">
+        <div class="related-name">3 Fonteinen Framboos Bio</div>
+        <div class="related-price">164,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/3-fonteinen-oude-kirsebaer/">
+        <img src="https://www.vildmedvin.dk/img/1000/1000/resize/o/u/oude_kirsebaer.jpg" alt="3 Fonteinen Oude Kirsebaer" loading="lazy">
+        <div class="related-name">3 Fonteinen Oude Kirsebaer</div>
+        <div class="related-price">178,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/3-fonteinen-oude-lambik-2017-22-23-lambic/">
+        <img src="https://www.bestofbeers.dk/wp-content/uploads/2026/03/3FonteinenOudeLambik2017.jpg" alt="3 Fonteinen – Oude Lambik 2017 22/23 – Lambic – –" loading="lazy">
+        <div class="related-name">3 Fonteinen – Oude Lambik 2017 22/23 – Lambic – –</div>
+        <div class="related-price">199,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/3-fonteinen-oude-kriek-no-104-8211-22/">
+        <img src="https://www.bestofbeers.dk/wp-content/uploads/2026/03/3FonteinenOudeKriek22_23.jpg" alt="3 Fonteinen – Oude Kriek no 104 &amp;#8211; 22/23 – Økologisk Lambic – –" loading="lazy">
+        <div class="related-name">3 Fonteinen – Oude Kriek no 104 &amp;#8211; 22/23 – Økologisk Lambic – –</div>
+        <div class="related-price">199,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/3-fonteinen-oude-kriek-23-24/">
+        <img src="https://cdn.shopify.com/s/files/1/0776/5209/9400/files/02FEC72C-2FAC-415D-AA3C-A9A94C2C9E46.jpg?v=1777754353" alt="3 Fonteinen - Oude Kriek 23/24" loading="lazy">
+        <div class="related-name">3 Fonteinen - Oude Kriek 23/24</div>
+        <div class="related-price">199,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/3-fonteinen-wilde-terf-blend-105-bottle-date/">
+        <img src="https://www.bestofbeers.dk/wp-content/uploads/2025/05/3FonteinenWildeTerf.jpg" alt="3 Fonteinen – Wilde Terf blend 105 Bottle date 03/11-23 – Lambic – –" loading="lazy">
+        <div class="related-name">3 Fonteinen – Wilde Terf blend 105 Bottle date 03/11-23 – Lambic – –</div>
+        <div class="related-price">201,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/3-fonteinen-druif-muscaris/">
+        <img src="https://www.vildmedvin.dk/img/1000/1000/resize/d/r/druif_muscaris.jpg" alt="3 Fonteinen Druif Muscaris" loading="lazy">
+        <div class="related-name">3 Fonteinen Druif Muscaris</div>
+        <div class="related-price">218,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/3-fonteinen-druif-gewurztraminer/">
+        <img src="https://www.vildmedvin.dk/img/1000/1000/resize/g/e/gewurz_2048x2048.jpg" alt="3 Fonteinen Druif Gewurztraminer" loading="lazy">
+        <div class="related-name">3 Fonteinen Druif Gewurztraminer</div>
+        <div class="related-price">218,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/3-fonteinen-cuvee-armand-no-15/">
+        <img src="https://www.vildmedvin.dk/img/1000/1000/resize/c/u/cuv_e_armand_no._15.jpg" alt="3 Fonteinen Cuvee Armand no. 15" loading="lazy">
+        <div class="related-name">3 Fonteinen Cuvee Armand no. 15</div>
+        <div class="related-price">218,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/3-fonteinen-golden-blend/">
+        <img src="https://www.vildmedvin.dk/img/1000/1000/resize/3/_/3_fonteinen_golden_blend.jpg" alt="3 Fonteinen Golden Blend" loading="lazy">
+        <div class="related-name">3 Fonteinen Golden Blend</div>
+        <div class="related-price">218,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/3-fonteinen-gele-belgishe-perzik/">
+        <img src="https://www.vildmedvin.dk/img/1000/1000/resize/b/e/belgischegeleperzik_2048x2048.jpg" alt="3 Fonteinen Gele Belgishe Perzik" loading="lazy">
+        <div class="related-name">3 Fonteinen Gele Belgishe Perzik</div>
+        <div class="related-price">218,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/3-fonteinen-pruim-dubbele-altesse/">
+        <img src="https://www.vildmedvin.dk/img/1000/1000/resize/p/r/pruim_belle_de_louvain_1.jpg" alt="3 Fonteinen Pruim Dubbele Altesse" loading="lazy">
+        <div class="related-name">3 Fonteinen Pruim Dubbele Altesse</div>
+        <div class="related-price">218,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/3-fonteinen-druif-dornfelder-kriek/">
+        <img src="https://www.vildmedvin.dk/img/1000/1000/resize/d/r/druif_kriek_dornfelder_2048x2048.jpg" alt="3 Fonteinen Druif Dornfelder Kriek" loading="lazy">
+        <div class="related-name">3 Fonteinen Druif Dornfelder Kriek</div>
+        <div class="related-price">218,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/3-fonteinen-rabarber/">
+        <img src="https://www.vildmedvin.dk/img/1000/1000/resize/3/-/3-fonteinen-rabarber-season-20-21-.jpg" alt="3 Fonteinen Rabarber" loading="lazy">
+        <div class="related-name">3 Fonteinen Rabarber</div>
+        <div class="related-price">218,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/3-fonteinen-braambes-no-49-8211-21-22/">
+        <img src="https://www.bestofbeers.dk/wp-content/uploads/2026/03/3FonteinenBraambes2021.jpg" alt="3 Fonteinen – Braambes no 49 &amp;#8211; 21/22 – Lambic – –" loading="lazy">
+        <div class="related-name">3 Fonteinen – Braambes no 49 &amp;#8211; 21/22 – Lambic – –</div>
+        <div class="related-price">228,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/3-fonteinen-oude-geuze-platinum/">
+        <img src="https://www.vildmedvin.dk/img/1000/1000/resize/p/l/platinum_blend_2048x2048.jpg" alt="3 Fonteinen Oude Geuze Platinum" loading="lazy">
+        <div class="related-name">3 Fonteinen Oude Geuze Platinum</div>
+        <div class="related-price">228,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/3-fonteinen-cuvee-miel-no-34-8211-24/">
+        <img src="https://www.bestofbeers.dk/wp-content/uploads/2026/03/3FonteinenCuveeMiel24_25.jpg" alt="3 Fonteinen – Cuvée Miel no 34 &amp;#8211; 24/25 – Lambic – –" loading="lazy">
+        <div class="related-name">3 Fonteinen – Cuvée Miel no 34 &amp;#8211; 24/25 – Lambic – –</div>
+        <div class="related-price">249,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/3-fonteinen-vlierbloesem-no-72-8211-2022-2023/">
+        <img src="https://www.bestofbeers.dk/wp-content/uploads/2025/05/3FonteinenVlierbloesem.jpg" alt="3 Fonteinen – Vlierbloesem no. 72 &amp;#8211; 2022/2023 Bottle date 01/06-2023 – Lambic – –" loading="lazy">
+        <div class="related-name">3 Fonteinen – Vlierbloesem no. 72 &amp;#8211; 2022/2023 Bottle date 01/06-2023 – Lambic – –</div>
+        <div class="related-price">251,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/3-fonteinen-platinum-blend-n-59-21-22/">
+        <img src="https://cdn.shopify.com/s/files/1/0368/1628/9924/files/platinum_blend_750.png?v=1774608066" alt="3 Fonteinen - Platinum Blend nº59 21/22 (BD 08/04/22)" loading="lazy">
+        <div class="related-name">3 Fonteinen - Platinum Blend nº59 21/22 (BD 08/04/22)</div>
+        <div class="related-price">259,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/3-fonteinen-schaarbeekse-kriek/">
+        <img src="https://www.vildmedvin.dk/img/1000/1000/resize/s/c/schaarbeekse_kriek_2048x2048.jpg" alt="3 Fonteinen Schaarbeekse Kriek" loading="lazy">
+        <div class="related-name">3 Fonteinen Schaarbeekse Kriek</div>
+        <div class="related-price">264,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/3-fonteinen-pruim-no-18-8211-22-23/">
+        <img src="https://www.bestofbeers.dk/wp-content/uploads/2026/03/3FonteinenPruim22_23.jpg" alt="3 Fonteinen – Pruim no 18 &amp;#8211; 22/23 – Lambic – –" loading="lazy">
+        <div class="related-name">3 Fonteinen – Pruim no 18 &amp;#8211; 22/23 – Lambic – –</div>
+        <div class="related-price">271,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/3-fonteinen-druif-kriek-dornfelder-26-2021/">
+        <img src="https://cdn.shopify.com/s/files/1/0368/1628/9924/products/dornfelder_kriek.jpg?v=1646921583" alt="3 Fonteinen - Druif/Kriek Dornfelder #26 2021" loading="lazy">
+        <div class="related-name">3 Fonteinen - Druif/Kriek Dornfelder #26 2021</div>
+        <div class="related-price">280,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/3-fonteinen-druif-dornfelder-27-2021/">
+        <img src="https://cdn.shopify.com/s/files/1/0368/1628/9924/products/druif_dornfelder.jpg?v=1646921581" alt="3 Fonteinen - Druif Dornfelder #27 2021" loading="lazy">
+        <div class="related-name">3 Fonteinen - Druif Dornfelder #27 2021</div>
+        <div class="related-price">313,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/3-fonteinen-druif-muscaris-16-2021/">
+        <img src="https://cdn.shopify.com/s/files/1/0368/1628/9924/products/druif_muscaris.jpg?v=1646921580" alt="3 Fonteinen - Druif Muscaris #16 2021" loading="lazy">
+        <div class="related-name">3 Fonteinen - Druif Muscaris #16 2021</div>
+        <div class="related-price">314,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/3-fonteinen-hommage-blend-9-2018-vintage/">
+        <img src="https://cdn.shopify.com/s/files/1/0368/1628/9924/files/hommage9.png?v=1724401750" alt="3 Fonteinen - Hommage Blend #9 (2018 vintage)" loading="lazy">
+        <div class="related-name">3 Fonteinen - Hommage Blend #9 (2018 vintage)</div>
+        <div class="related-price">349,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/3-fonteinen-hommage-blend-36-2017-vintage/">
+        <img src="https://cdn.shopify.com/s/files/1/0368/1628/9924/files/hommage36.png?v=1724401713" alt="3 Fonteinen - Hommage Blend #36 (2017 vintage)" loading="lazy">
+        <div class="related-name">3 Fonteinen - Hommage Blend #36 (2017 vintage)</div>
+        <div class="related-price">359,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/3-fonteinen-hommage-blend-10-2016-vintage/">
+        <img src="https://cdn.shopify.com/s/files/1/0368/1628/9924/files/hommage10.png?v=1724401649" alt="3 Fonteinen - Hommage Blend #10 (2016 vintage)" loading="lazy">
+        <div class="related-name">3 Fonteinen - Hommage Blend #10 (2016 vintage)</div>
+        <div class="related-price">359,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/3-fonteinen-zenne-y-frontera-blend-no-94/">
+        <img src="https://cdn.shopify.com/s/files/1/0368/1628/9924/files/zenne94.png?v=1716901672" alt="3 Fonteinen - Zenne y Frontera blend no.94 (2019 vintage) (Subscriber Only)" loading="lazy">
+        <div class="related-name">3 Fonteinen - Zenne y Frontera blend no.94 (2019 vintage) (Subscriber Only)</div>
+        <div class="related-price">495,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/zenne-y-frontera-subscriber-only-vintage-bundle/">
+        <img src="https://cdn.shopify.com/s/files/1/0368/1628/9924/files/zennesubbun.png?v=1716968301" alt="Zenne y Frontera Subscriber Only Vintage Bundle" loading="lazy">
+        <div class="related-name">Zenne y Frontera Subscriber Only Vintage Bundle</div>
+        <div class="related-price">889,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
+    <a class="related-card" href="https://www.beersniffer.dk/ol/3-fonteinen-brewery-bundle/">
+        <img src="https://cdn.shopify.com/s/files/1/0368/1628/9924/files/3_fonteinen_bundle.png?v=1774608098" alt="3 Fonteinen - Brewery Bundle" loading="lazy">
+        <div class="related-name">3 Fonteinen - Brewery Bundle</div>
+        <div class="related-price">949,00 kr</div>
+    </a></div></div>
+        <button class="related-toggle" onclick="this.previousElementSibling.querySelectorAll(&quot;.related-hidden&quot;).forEach(e=>e.style.display=&quot;block&quot;);this.style.display=&quot;none&quot;">Vis alle (39)</button>
     </div>
 
     <div class="disclaimer">
         📢 Affiliate disclosure: BeerSniffer kan modtage provision når du køber via vores links.
-        Priser opdateret 03.07.2026. Tjek altid den endelige pris hos forhandleren før køb.
+        Priser opdateret 07.07.2026. Tjek altid den endelige pris hos forhandleren før køb.
     </div>
 </div>
 
