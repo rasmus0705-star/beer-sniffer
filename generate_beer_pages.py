@@ -21,6 +21,7 @@ from datetime import datetime
 from html import escape
 from urllib.parse import quote
 from app.utils.slugify import clean_name, is_valid_brewery, strip_accents
+from app.services.matching import _norm_brewery
 
 SITE_URL = "https://www.beersniffer.dk"
 OUTPUT_DIR = "ol"
@@ -139,7 +140,7 @@ def render_page(beer, updated_at, brewery_index, type_index, history_map):
     # ── Relaterede øl: samme bryggeri først, ellers samme stilart ──
     related = []
     if is_valid_brewery(beer.get("brewery")):
-        key = strip_accents(clean_name(beer.get("brewery")).lower())
+        key = _norm_brewery(beer.get("brewery"))
         related = [b for b in brewery_index.get(key, []) if b.get("slug") != slug][:24]
     if not related and beer.get("type"):
         related = [b for b in type_index.get(beer["type"], []) if b.get("slug") != slug][:24]
@@ -438,7 +439,7 @@ def main():
     type_index = {}
     for b in beers:
         if is_valid_brewery(b.get("brewery")):
-            key = strip_accents(clean_name(b["brewery"]).lower())
+            key = _norm_brewery(b["brewery"])
             brewery_index.setdefault(key, []).append(b)
         if b.get("type"):
             type_index.setdefault(b["type"], []).append(b)
