@@ -173,6 +173,9 @@ def _is_smagekasse(item):
     return any(s in n for s in [
         "smagekasse", "smagesæt", "smagskasse", "smagspakke",
         "mix smagekasse", "blandet", "bland selv",
+        "ølpakke", "bundle", "pakken", "abonnement", "abonnoment",
+        "discovery box", "firmaaftaler", "forsendelse",
+        "drikkehorn", "(bog)",
     ])
 
 
@@ -220,6 +223,55 @@ def _volume_hint(item):
     return f"~{int(g)}g → 75cl?"
 
 
+import re as _flag_re
+
+_FLAG_MARKER = "\u26a0 RET BRYGGERI"
+_FLAG_SHOP_NAMES = {
+    "brygshoppen", "beermatch", "drikbeer", "a good case", "agoodcase",
+    "beershoppen", "best of beers", "bestofbeers", "oeltanken", "oltanken",
+    "\u00f8ltanken", "beer me", "beerme", "vild med vin", "vildmedvin",
+}
+_FLAG_YEAR = _flag_re.compile(r"\b20(1[5-9]|2[0-9])\b")
+_FLAG_STYLE = _flag_re.compile(
+    r"\b(ale|stout|porter|ipa|neipa|lager|pilsner|pils|tripel|dubbel|quad|"
+    r"quadrupel|saison|sour|gueuze|geuze|lambic|lambik|bock|weissbier|"
+    r"weizen|blond|blonde|kriek|cider|trappist)\b", _flag_re.IGNORECASE)
+_FLAG_VOLABV = _flag_re.compile(
+    r"\d+\s*(?:x\s*\d+\s*)?(cl|ml|l)\b\.?|\d+[.,]?\d*\s*%", _flag_re.IGNORECASE)
+
+
+def _is_polluted_brewery(brew, shop=""):
+    """True hvis bryggeri-vaerdien er butiksnavn eller produktnavns-stoej."""
+    if not brew:
+        return False
+    b = str(brew).strip()
+    if b.lower() in _FLAG_SHOP_NAMES:
+        return True
+    if shop and b.lower() == str(shop).strip().lower():
+        return True
+    if "," in b and (_FLAG_YEAR.search(b) or _FLAG_STYLE.search(b)):
+        return True
+    if b.endswith((",", "-", "\u2013", "\u2014")):
+        return True
+    if _FLAG_VOLABV.search(b):
+        return True
+    return False
+
+
+def _sync_brewery_flag(noter, brewery, shop=""):
+    """Fjern '\u26a0 RET BRYGGERI ...'-flaget hvis bryggeriet er rent;
+    tilfoej det hvis forurenet. Bevarer alle oevrige noter."""
+    noter = (noter or "").strip()
+    # fjern et evt. eksisterende flag-segment (op til | eller linjeslut)
+    cleaned = _flag_re.sub(
+        r"\s*" + _flag_re.escape(_FLAG_MARKER) + r"[^|]*\|?\s*", "", noter
+    ).strip(" |").strip()
+    if _is_polluted_brewery(brewery, shop):
+        flag = f"{_FLAG_MARKER} (butiksnavn/stoej): {str(brewery).strip()!r}"
+        return f"{flag} | {cleaned}" if cleaned else flag
+    return cleaned or None
+
+
 def write_fejlliste(items, existing, path):
     """Skriv/opdater fejlliste.xlsx. Bevarer brugerens rettelser og noter."""
     today = date.today().strftime("%d-%m-%Y")
@@ -241,10 +293,10 @@ def write_fejlliste(items, existing, path):
             "pack_count": _clean(item.get("pack_count")),
             "brewery": _clean(item.get("brewery")),
             "abv": _clean(item.get("abv")),
-            "noter": rec.get("noter"),
+            "noter": _sync_brewery_flag(rec.get("noter"), _clean(item.get("brewery")), item.get("shop_name")),
             "_ignorer": rec.get("_ignorer", False),
             "_mangler": "" if rec.get("_ignorer") else ", ".join(miss),
-            "_status": "IGNORERET" if rec.get("_ignorer") else ("MANGLER" if miss else "OK"),
+            "_status": "IGNORERET" if rec.get("_ignorer") else ("SMAGEKASSE" if _is_smagekasse(item) else ("MANGLER" if miss else "OK")),
             "_sidst_set": today,
             "_stale": False,
         }
@@ -261,7 +313,7 @@ def write_fejlliste(items, existing, path):
             "pack_count": rec.get("pack_count"),
             "brewery": rec.get("brewery"),
             "abv": rec.get("abv"),
-            "noter": rec.get("noter"),
+            "noter": _sync_brewery_flag(rec.get("noter"), rec.get("brewery"), rec.get("shop_name")),
             "_ignorer": rec.get("_ignorer", False),
             "_mangler": "",
             "_status": "IGNORERET" if rec.get("_ignorer") else "IKKE SET",
