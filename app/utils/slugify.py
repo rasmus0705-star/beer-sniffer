@@ -183,6 +183,21 @@ def is_valid_brewery(brewery) -> bool:
         return False
     if re.search(r"best\s*before|bedst\s*f[øo]r", brewery, re.IGNORECASE):
         return False
+    # --- Produktnavn-/stoej-tjek (volumen, %, komma+aarstal/stilord, haengende tegn) ---
+    if re.search(r"\d+\s?(cl|ml|l)\b|\d+\s?%", brewery, re.IGNORECASE):
+        return False
+    if brewery.rstrip().endswith((",", "-", "\u2013", "\u2014")):
+        return False
+    _style = (r"\b(ale|ipa|neipa|stout|porter|lager|pilsner|pils|tripel|dubbel|"
+              r"quad|quadrupel|saison|sour|gueuze|geuze|lambic|lambik|weizen|"
+              r"hvede|blond|blonde|kriek|bock|trappist|barleywine|gose|maltoel|"
+              r"malt\u00f8l|alkoholfri)\b")
+    if "," in brewery and (re.search(r"\b(19|20)\d{2}\b", brewery)
+                           or re.search(_style, brewery, re.IGNORECASE)):
+        return False
+    # "<stilord/produktnavn> fra <bryggeri>" er produktnavn-stoej, ikke et bryggeri
+    if re.search(r"\bfra\s+\S", brewery, re.IGNORECASE):
+        return False
     cleaned = clean_name(brewery)
     if not cleaned:
         return False
