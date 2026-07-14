@@ -139,13 +139,16 @@ def render_page(beer, updated_at, brewery_index, type_index, history_map):
 
     # ── Relaterede øl: samme bryggeri først, ellers samme stilart ──
     related = []
+    related_from_brewery = False
     if is_valid_brewery(beer.get("brewery")):
         key = _norm_brewery(beer.get("brewery"))
         related = [b for b in brewery_index.get(key, []) if b.get("slug") != slug][:24]
+        if related:
+            related_from_brewery = True
     if not related and beer.get("type"):
         related = [b for b in type_index.get(beer["type"], []) if b.get("slug") != slug][:24]
     related_heading = (
-        f"Flere øl fra {brewery}" if related and is_valid_brewery(beer.get("brewery"))
+        f"Flere øl fra {brewery}" if related and related_from_brewery
         else f"Andre {beer_type}-øl" if related else ""
     )
 
