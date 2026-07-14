@@ -154,20 +154,19 @@ def render_page(beer, updated_at, brewery_index, type_index, history_map):
 
     page_title = f"{name} – {format_price(min_price)} kr | BeerSniffer"
     real_description = beer.get("description")
-    if real_description:
+    _pris = format_price(min_price)
+    _butik = beer.get("shop") or ""
+    if shop_count > 1:
         description_text = (
-            real_description[:155].rsplit(" ", 1)[0] + "…"
-            if len(real_description) > 155 else real_description
+            f"Sammenlign priser på {name} hos {shop_count} butikker. "
+            f"Billigst lige nu: {_pris} kr" + (f" hos {_butik}" if _butik else "")
+            + ". Opdateret dagligt på BeerSniffer."
         )
     else:
-        meta_desc_parts = [name]
-        if brewery:
-            meta_desc_parts.append(f"fra {brewery}")
-        meta_desc_parts.append(
-            f"– sammenlign priser hos {shop_count} butik{'ker' if shop_count != 1 else ''}. "
-            f"Billigste pris: {format_price(min_price)} kr."
+        description_text = (
+            f"{name} til {_pris} kr" + (f" hos {_butik}" if _butik else "")
+            + ". Se pris og prishistorik – opdateret dagligt på BeerSniffer."
         )
-        description_text = " ".join(meta_desc_parts)
     meta_description = escape(description_text)
 
     canonical = f"{SITE_URL}/ol/{slug}/"
