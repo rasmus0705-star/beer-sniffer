@@ -176,6 +176,7 @@ def _is_smagekasse(item):
         "ølpakke", "bundle", "pakken", "abonnement", "abonnoment",
         "discovery box", "firmaaftaler", "forsendelse",
         "drikkehorn", "(bog)",
+        "kasse", "gift box", "luxury box", "beer box", "gavekasse",
     ])
 
 
