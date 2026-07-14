@@ -177,6 +177,7 @@ def _is_smagekasse(item):
         "discovery box", "firmaaftaler", "forsendelse",
         "drikkehorn", "(bog)",
         "kasse", "gift box", "luxury box", "beer box", "gavekasse",
+        "julekalender", "advent calender", "advent calendar", "adventskalender",
     ])
 
 
