@@ -36,3 +36,13 @@ fejlliste_foer_rens.xlsx
 
 *.bak*
 *.log
+# Engangs-vaerktoejer (diagnose/patch) - hoerer ikke paa sitet
+diag_*.py
+patch_*.py
+foreslaa_*.py
+inspect_*.py
+ret_*.py
+bryggeri_forslag.csv
+
+# Backups fra patch-scripts
+*.bak
