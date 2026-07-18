@@ -23,7 +23,7 @@ from urllib.parse import quote
 from app.utils.slugify import clean_name, is_valid_brewery, strip_accents
 from app.services.matching import _norm_brewery
 
-SITE_URL = "https://www.beersniffer.dk"
+SITE_URL = "https://beersniffer.dk"
 OUTPUT_DIR = "ol"
 
 
@@ -267,6 +267,9 @@ body {{ background: var(--bg); color: var(--text); font-family: 'DM Sans', sans-
 .wrap {{ max-width: 720px; margin: 0 auto; padding: 1.5rem; }}
 .back-link {{ display: inline-block; color: var(--gold); text-decoration: none; font-size: 0.85rem; margin-bottom: 1.2rem; }}
 .back-link:hover {{ color: var(--gold-light); }}
+.site-logo-link {{ display: inline-flex; align-items: center; gap: 0.8rem; text-decoration: none; margin-bottom: 1.2rem; }}
+.site-logo {{ height: 68px; width: auto; filter: drop-shadow(0 3px 14px rgba(200,146,14,0.45)); }}
+.site-logo-link .back-link {{ margin-bottom: 0; }}
 .beer-header {{ display: flex; gap: 1.2rem; margin-bottom: 1.5rem; }}
 .beer-image-col, .beer-image-placeholder {{
     width: 140px; flex-shrink: 0; display: flex; flex-direction: column; gap: 0.4rem;
@@ -341,7 +344,10 @@ body {{ background: var(--bg); color: var(--text); font-family: 'DM Sans', sans-
 </head>
 <body>
 <div class="wrap">
-    <a class="back-link" href="{SITE_URL}/">← Alle øltilbud</a>
+    <a class="site-logo-link" href="{SITE_URL}/">
+        <img src="{SITE_URL}/logo.png" alt="BeerSniffer" class="site-logo">
+        <span class="back-link">← Alle øltilbud</span>
+    </a>
     <div class="beer-header">
         {image_html}
         <div class="beer-info">
