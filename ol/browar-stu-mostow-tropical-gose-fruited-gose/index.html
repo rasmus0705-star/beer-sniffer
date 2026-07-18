@@ -50,6 +50,8 @@ body { background: var(--bg); color: var(--text); font-family: 'DM Sans', sans-s
 .beer-info h1 { font-size: 1.3rem; line-height: 1.35; margin-bottom: 0.4rem; }
 .beer-meta { font-size: 0.82rem; color: var(--text-muted); margin-bottom: 0.6rem; }
 .beer-brewery { font-size: 0.85rem; color: var(--gold-light); }
+.beer-brewery a { color: var(--gold-light); text-decoration: none; }
+.beer-brewery a:hover { color: var(--gold); text-decoration: underline; }
 .about-section { margin: 1.2rem 0 1.5rem; font-size: 0.86rem; line-height: 1.6; color: var(--text); background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 1rem 1.1rem; }
 .about-heading { font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 0.5rem; }
 .price-rows { display: flex; flex-direction: column; gap: 0.6rem; margin: 1.5rem 0; }
@@ -116,7 +118,7 @@ body { background: var(--bg); color: var(--text); font-family: 'DM Sans', sans-s
         <div class="beer-image-col"><div class="beer-image-wrap" onclick="openLightbox('https://cdn.shopify.com/s/files/1/0402/1239/8243/files/BrowarStuMostow_TropicalGose.png?v=1771886875', 'Browar Stu Mostów - Tropical Gose - Fruited Gose')"><img class="beer-image" src="https://cdn.shopify.com/s/files/1/0402/1239/8243/files/BrowarStuMostow_TropicalGose.png?v=1771886875" alt="Browar Stu Mostów - Tropical Gose - Fruited Gose" loading="eager"></div><button class="zoom-link" onclick="openLightbox('https://cdn.shopify.com/s/files/1/0402/1239/8243/files/BrowarStuMostow_TropicalGose.png?v=1771886875', 'Browar Stu Mostów - Tropical Gose - Fruited Gose')">🔍 Se i fuld størrelse</button></div>
         <div class="beer-info">
             <h1>Browar Stu Mostów - Tropical Gose - Fruited Gose</h1>
-            <div class="beer-brewery">Browar Stu Mostów</div>
+            <div class="beer-brewery"><a href="https://beersniffer.dk/bryggeri/browar-stu-mostow/">Browar Stu Mostów</a></div>
             <div class="beer-meta">Gose · 50 cl · 3.5% ABV</div>
         </div>
     </div>
@@ -147,74 +149,24 @@ body { background: var(--bg); color: var(--text); font-family: 'DM Sans', sans-s
     </p>
 
     <div class="related-section">
-        <div class="related-heading">Andre Gose-øl</div>
+        <div class="related-heading">Flere øl fra Browar Stu Mostów</div>
         <div class="related-grid"><div class="related-item">
-    <a class="related-card" href="https://beersniffer.dk/ol/insel-brauerei-gose/">
-        <img src="https://www.vildmedvin.dk/img/1000/1000/resize/b/a/baltic_gose.jpg" alt="Insel Brauerei, Gose" loading="lazy">
-        <div class="related-name">Insel Brauerei, Gose</div>
-        <div class="related-price">37,00 kr</div>
+    <a class="related-card" href="https://beersniffer.dk/ol/browar-stu-mostow-new-england-dipa-alkoholfri-double/">
+        <img src="https://cdn.shopify.com/s/files/1/0402/1239/8243/files/BrowarStuMostow_NewDIPA.png?v=1771886541" alt="Browar Stu Mostow - New England DIPA - Alkoholfri Double IPA" loading="lazy">
+        <div class="related-name">Browar Stu Mostow - New England DIPA - Alkoholfri Double IPA</div>
+        <div class="related-price">45,75 kr</div>
     </a></div><div class="related-item">
-    <a class="related-card" href="https://beersniffer.dk/ol/2085-25-2-italian-spicy-gose/">
-        <img src="https://cdn.shopify.com/s/files/1/0368/1628/9924/files/2085-25-2-italian-spicy-gose.png?v=1781245641" alt="2085 - 25.2 Italian Spicy Gose" loading="lazy">
-        <div class="related-name">2085 - 25.2 Italian Spicy Gose</div>
-        <div class="related-price">49,00 kr</div>
+    <a class="related-card" href="https://beersniffer.dk/ol/browar-stu-mostow-baltic-porter-nitro-baltic-porter/">
+        <img src="https://cdn.shopify.com/s/files/1/0402/1239/8243/files/BrowarStuMostow_BalticPorter.png?v=1771887142" alt="Browar Stu Mostow - Baltic Porter Nitro - Baltic Porter" loading="lazy">
+        <div class="related-name">Browar Stu Mostow - Baltic Porter Nitro - Baltic Porter</div>
+        <div class="related-price">59,75 kr</div>
     </a></div><div class="related-item">
-    <a class="related-card" href="https://beersniffer.dk/ol/vibrant-forest-x-affinity-brew-grizzly-pear-fruited/">
-        <img src="https://cdn.shopify.com/s/files/1/0402/1239/8243/files/VibrantForest_GrizzlyPear.png?v=1777885959" alt="Vibrant Forest x Affinity Brew - Grizzly Pear - Fruited Gose" loading="lazy">
-        <div class="related-name">Vibrant Forest x Affinity Brew - Grizzly Pear - Fruited Gose</div>
-        <div class="related-price">49,75 kr</div>
-    </a></div><div class="related-item">
-    <a class="related-card" href="https://beersniffer.dk/ol/underwood-brewery-ukrainian-tomato-gose/">
-        <img src="https://cdn.shopify.com/s/files/1/0776/5209/9400/files/9A7427C2-5D41-4E2E-A536-02F21B0916C0.jpg?v=1782940027" alt="Underwood Brewery - Ukrainian Tomato Gose" loading="lazy">
-        <div class="related-name">Underwood Brewery - Ukrainian Tomato Gose</div>
-        <div class="related-price">51,00 kr</div>
-    </a></div><div class="related-item">
-    <a class="related-card" href="https://beersniffer.dk/ol/underwood-brewery-gaijin-tomato-gose/">
-        <img src="https://www.bestofbeers.dk/wp-content/uploads/2026/05/UnderwoodbreweryGaijin.jpg" alt="Underwood Brewery – Gaijin – Tomato Gose – –" loading="lazy">
-        <div class="related-name">Underwood Brewery – Gaijin – Tomato Gose – –</div>
-        <div class="related-price">54,00 kr</div>
-    </a></div><div class="related-item">
-    <a class="related-card" href="https://beersniffer.dk/ol/darkwing-gose-duckpond-brewing/">
-        <img src="https://cdn.shopify.com/s/files/1/0600/9438/2263/files/IMG_1587.jpg?v=1737034110" alt="Darkwing - , , Gose - Duckpond Brewing" loading="lazy">
-        <div class="related-name">Darkwing - , , Gose - Duckpond Brewing</div>
-        <div class="related-price">55,00 kr</div>
-    </a></div><div class="related-item  related-hidden">
-    <a class="related-card" href="https://beersniffer.dk/ol/pollys-a-passion-for-fashion-fruited-gose/">
-        <img src="https://cdn.shopify.com/s/files/1/0402/1239/8243/files/Pollys_APassionForFashion.png?v=1781419894" alt="Polly’s - A Passion For Fashion - Fruited Gose" loading="lazy">
-        <div class="related-name">Polly’s - A Passion For Fashion - Fruited Gose</div>
-        <div class="related-price">55,75 kr</div>
-    </a></div><div class="related-item  related-hidden">
-    <a class="related-card" href="https://beersniffer.dk/ol/iiio-cosaco-mexicano/">
-        <img src="https://cdn.shopify.com/s/files/1/0368/1628/9924/files/iiio-cosaco-mexicano.png?v=1781245641" alt="IIIO - Cosaco Mexicano" loading="lazy">
-        <div class="related-name">IIIO - Cosaco Mexicano</div>
-        <div class="related-price">59,00 kr</div>
-    </a></div><div class="related-item  related-hidden">
-    <a class="related-card" href="https://beersniffer.dk/ol/mumbo-jumbo-7-pineapple-coconut-lime-gose-aaben/">
-        <img src="https://cdn.shopify.com/s/files/1/0600/9438/2263/files/mumbo_7.jpg?v=1779981952" alt="Mumbo Jumbo #7 - pineapple, coconut Lime Gose- Åben - -" loading="lazy">
-        <div class="related-name">Mumbo Jumbo #7 - pineapple, coconut Lime Gose- Åben - -</div>
-        <div class="related-price">59,00 kr</div>
-    </a></div><div class="related-item  related-hidden">
-    <a class="related-card" href="https://beersniffer.dk/ol/iiio-brewery-est-2017-8211-cosaco-mexicano-8211/">
-        <img src="https://www.bestofbeers.dk/wp-content/uploads/2026/05/IIIOCosaco.jpg" alt="IIIO Brewery est. 2017 &amp;#8211; Cosaco Mexicano &amp;#8211; Sour-Gose &amp;#8211; &amp;#8211;" loading="lazy">
-        <div class="related-name">IIIO Brewery est. 2017 &amp;#8211; Cosaco Mexicano &amp;#8211; Sour-Gose &amp;#8211; &amp;#8211;</div>
-        <div class="related-price">66,00 kr</div>
-    </a></div><div class="related-item  related-hidden">
-    <a class="related-card" href="https://beersniffer.dk/ol/stepping-stone-brewing-co-ambivalent-gose-sour-raspberry/">
-        <img src="https://www.bestofbeers.dk/wp-content/uploads/2025/09/SteppingStoneBreingCoAmbivalent.jpg" alt="Stepping Stone Brewing Co. – Ambivalent – Gose Sour Raspberry Lemon – –" loading="lazy">
-        <div class="related-name">Stepping Stone Brewing Co. – Ambivalent – Gose Sour Raspberry Lemon – –</div>
-        <div class="related-price">71,00 kr</div>
-    </a></div><div class="related-item  related-hidden">
-    <a class="related-card" href="https://beersniffer.dk/ol/alesong-gose-anejo/">
-        <img src="https://cdn.shopify.com/s/files/1/0368/1628/9924/files/gose_anejo_40b01bdf-f464-4093-8dde-a29bce8fbb3a.png?v=1753434241" alt="Alesong - Gose Añejo" loading="lazy">
-        <div class="related-name">Alesong - Gose Añejo</div>
-        <div class="related-price">94,00 kr</div>
-    </a></div><div class="related-item  related-hidden">
-    <a class="related-card" href="https://beersniffer.dk/ol/bianca-blueberry-marshmallow-pancake-lassi-gose-fruited-gose/">
-        <img src="https://cdn-main.ideal.shop/images/by_hash/886cf5e8f825c3cfa677498d9fb3ba0faee04e2c342fbbf0d003bb5b8f75a317/500-0/Bianca-Blueberry-Marshmallow.jpg" alt="Bianca Blueberry Marshmallow Pancake Lassi Gose - Fruited Gose fra Omnipollo" loading="lazy">
-        <div class="related-name">Bianca Blueberry Marshmallow Pancake Lassi Gose - Fruited Gose fra Omnipollo</div>
-        <div class="related-price">129,00 kr</div>
+    <a class="related-card" href="https://beersniffer.dk/ol/browar-stu-mostow-black-ipa-black-ipa/">
+        <img src="https://cdn.shopify.com/s/files/1/0402/1239/8243/files/Browarstumostow_BlackIPA.png?v=1761434289" alt="Browar Stu Mostow - Black IPA - Black IPA" loading="lazy">
+        <div class="related-name">Browar Stu Mostow - Black IPA - Black IPA</div>
+        <div class="related-price">59,75 kr</div>
     </a></div></div>
-        <button class="related-toggle" onclick="this.previousElementSibling.querySelectorAll(&quot;.related-hidden&quot;).forEach(e=>e.style.display=&quot;contents&quot;);this.style.display=&quot;none&quot;">Vis alle (13)</button>
+        
     </div>
 
     <div class="disclaimer">

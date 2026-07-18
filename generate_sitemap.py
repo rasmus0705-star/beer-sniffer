@@ -12,12 +12,15 @@ Kør fra roden af dit projekt:
 import json
 from datetime import datetime, timezone
 
-SITE_URL = "https://www.beersniffer.dk"
+SITE_URL = "https://beersniffer.dk"
 
 
 def main():
+    import glob, os
     with open("data.json", encoding="utf-8") as f:
         data = json.load(f)
+    brewery_slugs = [os.path.basename(os.path.dirname(p))
+                     for p in glob.glob("bryggeri/*/index.html")]
 
     beers = [b for b in data.get("beers", []) if b.get("slug")]
     skipped = len(data.get("beers", [])) - len(beers)
@@ -48,6 +51,13 @@ def main():
     <lastmod>{today}</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
+  </url>""")
+    for bslug in brewery_slugs:
+        urls.append(f"""  <url>
+    <loc>{SITE_URL}/bryggeri/{bslug}/</loc>
+    <lastmod>{today}</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
   </url>""")
 
     sitemap = (

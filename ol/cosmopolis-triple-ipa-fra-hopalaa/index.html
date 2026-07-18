@@ -50,6 +50,8 @@ body { background: var(--bg); color: var(--text); font-family: 'DM Sans', sans-s
 .beer-info h1 { font-size: 1.3rem; line-height: 1.35; margin-bottom: 0.4rem; }
 .beer-meta { font-size: 0.82rem; color: var(--text-muted); margin-bottom: 0.6rem; }
 .beer-brewery { font-size: 0.85rem; color: var(--gold-light); }
+.beer-brewery a { color: var(--gold-light); text-decoration: none; }
+.beer-brewery a:hover { color: var(--gold); text-decoration: underline; }
 .about-section { margin: 1.2rem 0 1.5rem; font-size: 0.86rem; line-height: 1.6; color: var(--text); background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 1rem 1.1rem; }
 .about-heading { font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 0.5rem; }
 .price-rows { display: flex; flex-direction: column; gap: 0.6rem; margin: 1.5rem 0; }
@@ -116,7 +118,7 @@ body { background: var(--bg); color: var(--text); font-family: 'DM Sans', sans-s
         <div class="beer-image-col"><div class="beer-image-wrap" onclick="openLightbox('https://cdn-main.ideal.shop/images/by_hash/b42a131a720e10fbc06ba809812d7ed29ed1868156b0787461b73ef687585e28/500-0/cosmopolis.jpg', 'Cosmopolis - Triple IPA fra Hopalaa')"><img class="beer-image" src="https://cdn-main.ideal.shop/images/by_hash/b42a131a720e10fbc06ba809812d7ed29ed1868156b0787461b73ef687585e28/500-0/cosmopolis.jpg" alt="Cosmopolis - Triple IPA fra Hopalaa" loading="eager"></div><button class="zoom-link" onclick="openLightbox('https://cdn-main.ideal.shop/images/by_hash/b42a131a720e10fbc06ba809812d7ed29ed1868156b0787461b73ef687585e28/500-0/cosmopolis.jpg', 'Cosmopolis - Triple IPA fra Hopalaa')">🔍 Se i fuld størrelse</button></div>
         <div class="beer-info">
             <h1>Cosmopolis - Triple IPA fra Hopalaa</h1>
-            <div class="beer-brewery">Hopalaa</div>
+            <div class="beer-brewery"><a href="https://beersniffer.dk/bryggeri/hopalaa/">Hopalaa</a></div>
             <div class="beer-meta">India Pale Ale (IPA) · 44 cl · 10.0% ABV</div>
         </div>
     </div>

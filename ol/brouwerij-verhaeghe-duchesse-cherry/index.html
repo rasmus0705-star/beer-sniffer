@@ -50,6 +50,8 @@ body { background: var(--bg); color: var(--text); font-family: 'DM Sans', sans-s
 .beer-info h1 { font-size: 1.3rem; line-height: 1.35; margin-bottom: 0.4rem; }
 .beer-meta { font-size: 0.82rem; color: var(--text-muted); margin-bottom: 0.6rem; }
 .beer-brewery { font-size: 0.85rem; color: var(--gold-light); }
+.beer-brewery a { color: var(--gold-light); text-decoration: none; }
+.beer-brewery a:hover { color: var(--gold); text-decoration: underline; }
 .about-section { margin: 1.2rem 0 1.5rem; font-size: 0.86rem; line-height: 1.6; color: var(--text); background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 1rem 1.1rem; }
 .about-heading { font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 0.5rem; }
 .price-rows { display: flex; flex-direction: column; gap: 0.6rem; margin: 1.5rem 0; }
@@ -116,7 +118,7 @@ body { background: var(--bg); color: var(--text); font-family: 'DM Sans', sans-s
         <div class="beer-image-col"><div class="beer-image-wrap" onclick="openLightbox('https://cdn.shopify.com/s/files/1/0509/8477/9975/files/duchesse-de-bourgogne-cherry-33cl.png?v=1739274939', 'Duchesse Cherry')"><img class="beer-image" src="https://cdn.shopify.com/s/files/1/0509/8477/9975/files/duchesse-de-bourgogne-cherry-33cl.png?v=1739274939" alt="Duchesse Cherry" loading="eager"></div><button class="zoom-link" onclick="openLightbox('https://cdn.shopify.com/s/files/1/0509/8477/9975/files/duchesse-de-bourgogne-cherry-33cl.png?v=1739274939', 'Duchesse Cherry')">🔍 Se i fuld størrelse</button></div>
         <div class="beer-info">
             <h1>Duchesse Cherry</h1>
-            <div class="beer-brewery">Brouwerij Verhaeghe</div>
+            <div class="beer-brewery"><a href="https://beersniffer.dk/bryggeri/brouwerij-verhaeghe/">Brouwerij Verhaeghe</a></div>
             <div class="beer-meta">Sour · 33 cl · 6.8% ABV</div>
         </div>
     </div>

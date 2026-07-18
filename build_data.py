@@ -508,6 +508,7 @@ def main():
     print(f"\n🌐 Genererer øl-sider og sitemap...")
     try:
         subprocess.run([sys.executable, "generate_beer_pages.py", "--all"], check=True)
+        subprocess.run([sys.executable, "generate_brewery_pages.py", "--all"], check=True)
         subprocess.run([sys.executable, "generate_sitemap.py"], check=True)
     except subprocess.CalledProcessError as e:
         print(f"⚠️ Fejl under generering af øl-sider/sitemap: {e}")

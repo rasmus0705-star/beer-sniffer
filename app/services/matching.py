@@ -89,8 +89,13 @@ _VARIANT_WORDS = {
 def strip_accents(s: str) -> str:
     return (s.replace("æ", "ae").replace("ø", "oe").replace("å", "aa")
              .replace("Æ", "ae").replace("Ø", "oe").replace("Å", "aa")
-             .replace("é", "e").replace("è", "e").replace("ê", "e")
+             .replace("é", "e").replace("è", "e").replace("ê", "e").replace("ë", "e")
              .replace("á", "a").replace("à", "a").replace("â", "a")
+             .replace("ó", "o").replace("ò", "o").replace("ô", "o")
+             .replace("í", "i").replace("ì", "i").replace("î", "i")
+             .replace("ú", "u").replace("ù", "u").replace("û", "u")
+             .replace("ý", "y").replace("ð", "d").replace("þ", "th")
+             .replace("ñ", "n").replace("ç", "c")
              .replace("ü", "u").replace("ö", "o").replace("ä", "a"))
 
 
@@ -183,6 +188,8 @@ def _norm_brewery(b):
     for prefix in _BREWERY_PREFIXES:
         if s.startswith(prefix):
             s = s[len(prefix):].strip()
+    s = s.replace("\u2019", "'").replace("\u02bc", "'")  # kroellet apostrof -> lige
+    s = s.replace("'", "")                                 # fjern apostrof helt
     s = re.sub(r"[-–—_/|*,.()\[\]]", " ", s)
     s = re.sub(r"\s+", " ", s).strip()
     return s

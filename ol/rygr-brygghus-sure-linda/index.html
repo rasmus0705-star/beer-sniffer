@@ -50,6 +50,8 @@ body { background: var(--bg); color: var(--text); font-family: 'DM Sans', sans-s
 .beer-info h1 { font-size: 1.3rem; line-height: 1.35; margin-bottom: 0.4rem; }
 .beer-meta { font-size: 0.82rem; color: var(--text-muted); margin-bottom: 0.6rem; }
 .beer-brewery { font-size: 0.85rem; color: var(--gold-light); }
+.beer-brewery a { color: var(--gold-light); text-decoration: none; }
+.beer-brewery a:hover { color: var(--gold); text-decoration: underline; }
 .about-section { margin: 1.2rem 0 1.5rem; font-size: 0.86rem; line-height: 1.6; color: var(--text); background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 1rem 1.1rem; }
 .about-heading { font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 0.5rem; }
 .price-rows { display: flex; flex-direction: column; gap: 0.6rem; margin: 1.5rem 0; }
@@ -116,7 +118,7 @@ body { background: var(--bg); color: var(--text); font-family: 'DM Sans', sans-s
         <div class="beer-image-col"><div class="beer-image-wrap" onclick="openLightbox('https://cdn.shopify.com/s/files/1/0776/5209/9400/files/819CBEE1-0121-4AA5-AF7C-C9B96F14286A.jpg?v=1780000261', 'RYGR Brygghús - Sure Linda')"><img class="beer-image" src="https://cdn.shopify.com/s/files/1/0776/5209/9400/files/819CBEE1-0121-4AA5-AF7C-C9B96F14286A.jpg?v=1780000261" alt="RYGR Brygghús - Sure Linda" loading="eager"></div><button class="zoom-link" onclick="openLightbox('https://cdn.shopify.com/s/files/1/0776/5209/9400/files/819CBEE1-0121-4AA5-AF7C-C9B96F14286A.jpg?v=1780000261', 'RYGR Brygghús - Sure Linda')">🔍 Se i fuld størrelse</button></div>
         <div class="beer-info">
             <h1>RYGR Brygghús - Sure Linda</h1>
-            <div class="beer-brewery">RYGR Brygghús</div>
+            <div class="beer-brewery"><a href="https://beersniffer.dk/bryggeri/rygr-brygghus/">RYGR Brygghús</a></div>
             <div class="beer-meta">Hvedeøl · 33 cl · 5.5% ABV</div>
         </div>
     </div>
@@ -154,17 +156,37 @@ body { background: var(--bg); color: var(--text); font-family: 'DM Sans', sans-s
         <div class="related-name">RYGR Brygghús - Sure Paloma</div>
         <div class="related-price">37,00 kr</div>
     </a></div><div class="related-item">
+    <a class="related-card" href="https://beersniffer.dk/ol/rygr-brygghus-tyr/">
+        <img src="https://cdn.shopify.com/s/files/1/0551/6600/9423/files/6603EF27-0A55-4656-ABA3-1B930A8FDADA.jpg?v=1774440110" alt="RYGR Brygghus - Tyr" loading="lazy">
+        <div class="related-name">RYGR Brygghus - Tyr</div>
+        <div class="related-price">38,00 kr</div>
+    </a></div><div class="related-item">
     <a class="related-card" href="https://beersniffer.dk/ol/rygr-brygghus-arv-havbris-farmhouse-ale/">
         <img src="https://cdn.shopify.com/s/files/1/0776/5209/9400/files/15DEA65E-D092-4023-AC16-4EE6B92679B9.jpg?v=1780000261" alt="RYGR Brygghús - ARV Havbris Farmhouse Ale" loading="lazy">
         <div class="related-name">RYGR Brygghús - ARV Havbris Farmhouse Ale</div>
         <div class="related-price">119,00 kr</div>
     </a></div><div class="related-item">
+    <a class="related-card" href="https://beersniffer.dk/ol/rygr-brygghus-hugin-wild-mint-chocolate/">
+        <img src="https://cdn.shopify.com/s/files/1/0551/6600/9423/files/F989EE56-3BAE-4360-AD4E-F19F356041CC.jpg?v=1774440109" alt="RYGR Brygghus - Hugin: Wild Mint &amp; Chocolate" loading="lazy">
+        <div class="related-name">RYGR Brygghus - Hugin: Wild Mint &amp; Chocolate</div>
+        <div class="related-price">125,00 kr</div>
+    </a></div><div class="related-item">
+    <a class="related-card" href="https://beersniffer.dk/ol/rygr-brygghus-valhall-hiernagla-peated-whisky-cask/">
+        <img src="https://cdn.shopify.com/s/files/1/0551/6600/9423/files/3E4141F6-65D6-4DA3-9360-DE5BEBC2012C.jpg?v=1774440110" alt="RYGR Brygghus - Valhall: Hiernagla Peated Whisky Cask" loading="lazy">
+        <div class="related-name">RYGR Brygghus - Valhall: Hiernagla Peated Whisky Cask</div>
+        <div class="related-price">139,00 kr</div>
+    </a></div><div class="related-item">
+    <a class="related-card" href="https://beersniffer.dk/ol/rygr-brygghus-munin-marshmallow-038-cocoa-bourbon-barrel/">
+        <img src="https://www.bestofbeers.dk/wp-content/uploads/2026/06/RygrBrygghusMunin.jpg" alt="RYGR brygghus – Munin – Marshmallow &amp;#038; Cocoa Bourbon Barrel Aged Imperial Stout – –" loading="lazy">
+        <div class="related-name">RYGR brygghus – Munin – Marshmallow &amp;#038; Cocoa Bourbon Barrel Aged Imperial Stout – –</div>
+        <div class="related-price">141,00 kr</div>
+    </a></div><div class="related-item  related-hidden">
     <a class="related-card" href="https://beersniffer.dk/ol/rygr-brygghus-bundle-spar-60-2/">
         <img src="https://cdn.shopify.com/s/files/1/0776/5209/9400/files/CAAEA51E-6D57-486B-83EA-67EFDB86651C.jpg?v=1780483589" alt="RYGR Brygghús Bundle SPAR 60" loading="lazy">
         <div class="related-name">RYGR Brygghús Bundle SPAR 60</div>
         <div class="related-price">294,00 kr</div>
     </a></div></div>
-        
+        <button class="related-toggle" onclick="this.previousElementSibling.querySelectorAll(&quot;.related-hidden&quot;).forEach(e=>e.style.display=&quot;contents&quot;);this.style.display=&quot;none&quot;">Vis alle (7)</button>
     </div>
 
     <div class="disclaimer">
