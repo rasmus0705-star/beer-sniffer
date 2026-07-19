@@ -117,7 +117,7 @@ def main():
 
     display = {}
     for key, grp in idx.items():
-        display[key] = max((x.get("brewery") for x in grp), key=len)
+        display[key] = min((x.get("brewery") for x in grp), key=len)
 
     if ALL:
         targets = {k: v for k, v in idx.items() if len(v) >= 2}

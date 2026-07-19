@@ -181,6 +181,12 @@ def variants_compatible(name_a, name_b) -> bool:
     return _variant_markers(name_a) == _variant_markers(name_b)
 
 
+_BREWERY_SUFFIXES = {
+    "brewing", "brewery", "brewers", "brew",
+    "co", "company", "craft",
+}
+
+
 def _norm_brewery(b):
     if not b:
         return ""
@@ -192,6 +198,10 @@ def _norm_brewery(b):
     s = s.replace("'", "")                                 # fjern apostrof helt
     s = re.sub(r"[-–—_/|*,.()\[\]]", " ", s)
     s = re.sub(r"\s+", " ", s).strip()
+    toks = s.split()
+    while len(toks) > 1 and toks[-1] in _BREWERY_SUFFIXES:
+        toks.pop()
+    s = " ".join(toks)
     return s
 
 

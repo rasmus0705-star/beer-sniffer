@@ -26,7 +26,11 @@ def strip_accents(s: str) -> str:
              .replace("ú", "u").replace("ù", "u").replace("û", "u")
              .replace("ý", "y").replace("ð", "d").replace("þ", "th")
              .replace("ñ", "n").replace("ç", "c")
-             .replace("ü", "u").replace("ö", "o").replace("ä", "a"))
+             .replace("ü", "u").replace("ö", "o").replace("ä", "a")
+             .replace("ā", "a").replace("ē", "e").replace("ī", "i")
+             .replace("ō", "o").replace("ū", "u")
+             .replace("Ā", "a").replace("Ē", "e").replace("Ī", "i")
+             .replace("Ō", "o").replace("Ū", "u"))
 
 
 # ── Kendt navne-støj, fjernes FØR alt andet ──────────────────────────
