@@ -46,7 +46,8 @@ REM ol/            = individuelle oel-sider med dagens priser
 REM sitemap.xml    = regenereres hvert build
 echo.
 echo [2/4] Tilfoejer build-outputs til git...
-git add data.json price_history.json fejlliste.xlsx index.html ol/ sitemap.xml
+git add data.json price_history.json fejlliste.xlsx index.html ol/ bryggeri/ sitemap.xml
+git add -A bryggeri/
 REM ---- Commit (kun hvis der er aendringer) ----
 echo.
 echo [3/4] Committer...
