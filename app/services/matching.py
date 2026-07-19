@@ -181,6 +181,16 @@ def variants_compatible(name_a, name_b) -> bool:
     return _variant_markers(name_a) == _variant_markers(name_b)
 
 
+# Bryggeri-aliaser: {normaliseret_fra: normaliseret_til}. Tom indtil build_data/
+# generatoren injicerer via set_brewery_aliases(). Undgaar cirkulaer import.
+_BREWERY_ALIASES = {}
+
+def set_brewery_aliases(mapping):
+    """Injicer alias-map (allerede normaliserede noegler). Kaldes ved opstart."""
+    global _BREWERY_ALIASES
+    _BREWERY_ALIASES = dict(mapping or {})
+
+
 _BREWERY_SUFFIXES = {
     "brewing", "brewery", "brewers", "brew",
     "co", "company", "craft",
@@ -202,6 +212,7 @@ def _norm_brewery(b):
     while len(toks) > 1 and toks[-1] in _BREWERY_SUFFIXES:
         toks.pop()
     s = " ".join(toks)
+    s = _BREWERY_ALIASES.get(s, s)   # manuel alias vinder til sidst
     return s
 
 

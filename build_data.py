@@ -35,7 +35,8 @@ from app.scrapers.beerme import scrape_beerme
 from app.scrapers.vildmedvin import scrape_vildmedvin
 
 from app.services.ingest import ingest_batch
-from app.utils.overrides import load_fejlliste, apply_overrides, write_fejlliste
+from app.utils.overrides import load_fejlliste, apply_overrides, write_fejlliste, load_brewery_aliases
+from app.services.matching import set_brewery_aliases
 from app.services.matching import (
     normalize_for_matching,
     style_fingerprint,
@@ -438,6 +439,9 @@ def main():
     # 1b. Facitliste: anvend manuelle overrides FOER matchning (facit vinder)
     print(f"\n\U0001F4D8 Anvender facitliste (fejlliste.xlsx)...")
     _facit = load_fejlliste("fejlliste.xlsx")
+    _aliaser = load_brewery_aliases("fejlliste.xlsx")
+    set_brewery_aliases(_aliaser)
+    print(f"   {len(_aliaser)} bryggeri-aliaser aktive")
     for _it in items:
         apply_overrides(_it, _facit)
     print(f"   {len(_facit)} kendte rettelser i facit")

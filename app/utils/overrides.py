@@ -332,6 +332,16 @@ def write_fejlliste(items, existing, path):
 
     wb = Workbook()
     _write_data_sheet(wb, ordered, today)
+    _alias_rows = _read_raw_alias_rows(path)
+    _ws = wb.create_sheet(_ALIAS_SHEET)
+    _ws.append(["Fra", "Til"])
+    if _alias_rows:
+        for _fra, _til in _alias_rows:
+            _ws.append([_fra, _til])
+    else:
+        _ws.append(["Duvel Moortgat", "Duvel"])
+    _ws.column_dimensions["A"].width = 32
+    _ws.column_dimensions["B"].width = 32
     _write_help_sheet(wb)
     wb.save(path)
 
@@ -411,3 +421,44 @@ def _write_help_sheet(wb):
         c.font = Font(name="Arial", bold=bold, size=12 if bold else 10,
                       color="2E5E4E" if bold else "000000")
         c.alignment = Alignment(wrap_text=True, vertical="top")
+
+# ---- Bryggeri-aliaser (manuelt vedligeholdt ark i fejlliste.xlsx) ----
+_ALIAS_SHEET = "bryggeri_alias"
+
+def _read_raw_alias_rows(path):
+    """Laes eksisterende {_ALIAS_SHEET}-raekker som raa (Fra, Til)-par. Tom liste hvis intet."""
+    if not os.path.exists(path):
+        return []
+    try:
+        wb = load_workbook(path, read_only=True, data_only=True)
+    except Exception:
+        return []
+    if _ALIAS_SHEET not in wb.sheetnames:
+        return []
+    ws = wb[_ALIAS_SHEET]
+    out = []
+    for row in ws.iter_rows(min_row=2, values_only=True):
+        if row and row[0] and row[1]:
+            out.append((str(row[0]), str(row[1])))
+    return out
+
+
+def load_brewery_aliases(path):
+    """Laes arket 'bryggeri_alias' (kolonner: Fra, Til) -> {norm(fra): norm(til)}.
+    Tom dict hvis fil eller ark mangler. norm via matching._norm_brewery."""
+    from app.services.matching import _norm_brewery
+    if not os.path.exists(path):
+        return {}
+    wb = load_workbook(path, read_only=True, data_only=True)
+    if _ALIAS_SHEET not in wb.sheetnames:
+        return {}
+    ws = wb[_ALIAS_SHEET]
+    out = {}
+    for row in ws.iter_rows(min_row=2, values_only=True):
+        if not row or not row[0] or not row[1]:
+            continue
+        fra = _norm_brewery(str(row[0]))
+        til = _norm_brewery(str(row[1]))
+        if fra and til and fra != til:
+            out[fra] = til
+    return out

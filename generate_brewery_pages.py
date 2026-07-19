@@ -9,7 +9,8 @@ from html import escape
 from generate_beer_pages import (
     SITE_URL, load_data, format_price, render_related_card
 )
-from app.services.matching import _norm_brewery
+from app.services.matching import _norm_brewery, set_brewery_aliases
+from app.utils.overrides import load_brewery_aliases
 from app.utils.slugify import is_valid_brewery, slugify
 
 ALL = "--all" in sys.argv
@@ -107,6 +108,7 @@ body {{ background:var(--bg); color:var(--text); font-family:'DM Sans',sans-seri
 
 
 def main():
+    set_brewery_aliases(load_brewery_aliases("fejlliste.xlsx"))
     data = load_data()
     beers = data.get("beers", data)
 
