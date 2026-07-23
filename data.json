@@ -1,8 +1,8 @@
 {
-  "updated_at": "2026-07-22T07:02:26.262183",
+  "updated_at": "2026-07-23T07:09:36.258550",
   "stats": {
-    "total": 2363,
-    "deals": 397,
+    "total": 2358,
+    "deals": 394,
     "shops": 9,
     "shop_names": [
       "A Good Case",
@@ -586,32 +586,6 @@
       "max_discount_pct": 21.2
     },
     {
-      "id": 13465,
-      "slug": "reeper-b-exotisches-ipa-india-pale-ale",
-      "description": "(Untappd rating: 2,9) Mød den nye favorit i køleskabet: Reeper B. India Pale Ale. Det er en moderne \"session\" craft-øl, der mestrer balancen mellem det vilde og det afdæmpede. Du får den karakteristiske, intense aroma af frugtig humle, som man kender fra en klassisk IPA, men med en moderat bitterhed og en alkoholprocent på 5,0 %, der gør den utrolig læskende. Da øllen er ufiltreret, bevares alle smagsnuancer og den fulde humle-duft i hver eneste tår. En absolut nødvendighed for ølentusiasten, der søger en velafbalanceret og moderne smagsoplevelse.",
-      "name": "Reeper B. - Exotisches IPA - 5% India Pale Ale",
-      "image": "https://cdn.shopify.com/s/files/1/0402/1239/8243/files/Reepbana_B_IPA.png?v=1771926198",
-      "type": "India Pale Ale (IPA)",
-      "abv": 5.0,
-      "volume_cl": 50.0,
-      "brewery": "Reeper B.",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "A Good Case",
-          "price": 16.62,
-          "url": "https://agoodcase.dk/products/reeper-b-exotisches-ipa-5-india-pale-ale-24-stk",
-          "discount_pct": 52.5,
-          "old_price": 35.0
-        }
-      ],
-      "cheapest_price": 16.62,
-      "min_price": 16.62,
-      "shop": "A Good Case",
-      "discount_pct": 52.5,
-      "max_discount_pct": 52.5
-    },
-    {
       "id": 15425,
       "slug": "la-bella-lola",
       "description": "La Bella Lola er en skøn Blonde Ale fra Barcelona Beer Company, der indfanger essensen af Middelhavets afslappede stemning. Brygget med nøje udvalgte malte og hvede fra Bayern og Bøhmen samt humler fra USA og Tyskland, tilbyder denne øl en let og balanceret smagsoplevelse. De subtile citrusnoter og den blomstrede aroma gør La Bella Lola til en frisk og elegant øl, der er nem at nyde. Med en lav bitterhed på blot 12 IBU og en alkoholprocent på 4 % er denne Blonde Ale ideel for dem, der foretrækker milde, drikkevenlige øl.",
@@ -896,6 +870,39 @@
       "shop": "Vild med Vin",
       "discount_pct": 0,
       "max_discount_pct": 0
+    },
+    {
+      "id": 15329,
+      "slug": "brewdog-lost-lager",
+      "description": "Dyk ned i \"Lost Lager\" fra Brewdog - en banebrydende tysk-indspireret Pilsner med et tvist. Med en alkoholprocent på 4.5% er denne lager brygget ved hjælp af vindkraft, bruger en tredjedel mindre vand og inkluderer overskudsbrød i maltblandingen. Denne øl er en hyldest til vores planet og bæredygtig brygning. Men det er ikke kun dens grønne profil, der gør den bemærkelsesværdig. \"Lost Lager\" er krydret med Select, Spalter og Saphir humle, der sammen skaber en levende symfoni af citrus og urteagtige noter.",
+      "name": "Brewdog, Lost Lager 44 cl",
+      "image": "https://www.vildmedvin.dk/img/1000/1000/resize/l/o/lost_lager_44_cl..jpg",
+      "type": "Lager",
+      "abv": 4.5,
+      "volume_cl": 44.0,
+      "brewery": "Brewdog",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "A Good Case",
+          "price": 19.75,
+          "url": "https://agoodcase.dk/products/brewdog-lost-lager-4-5-pilsner",
+          "discount_pct": 24.0,
+          "old_price": 26.0
+        },
+        {
+          "shop_name": "Vild med Vin",
+          "price": 29.0,
+          "url": "https://www.vildmedvin.dk/brewdog-lost-lager-44-cl",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 19.75,
+      "min_price": 19.75,
+      "shop": "A Good Case",
+      "discount_pct": 24.0,
+      "max_discount_pct": 24.0
     },
     {
       "id": 16632,
@@ -1366,8 +1373,8 @@
       "max_discount_pct": 0
     },
     {
-      "id": 18205,
-      "slug": "leo-beer-85",
+      "id": 18222,
+      "slug": "leo-beer-86",
       "description": "Leo Beer er en forfriskende lagerøl fra Thailand, kendt for sin bløde smag og let bitre afslutning. Brygget med malt, ris og humle, leverer den en afbalanceret og letdrikkelig profil, som gør den velegnet til både krydret mad og afslappede øjeblikke. Den gyldne farve og moderate alkoholprocent på 5 % gør den til en klassiker i både Thailand og blandt ølentusiaster verden over. Perfekt til grillmad, thaimad eller som en tropisk ledsager på varme dage. Hvis du er på jagt efter en velsmagende øl med international karakter og god balance, er Leo Beer et oplagt valg.",
       "name": "Leo Beer",
       "image": "https://www.vildmedvin.dk/img/1000/1000/resize/l/e/leo-beer-33-cl_large.jpg",
@@ -1735,6 +1742,32 @@
       "shop": "Vild med Vin",
       "discount_pct": 51.0,
       "max_discount_pct": 51.0
+    },
+    {
+      "id": 13396,
+      "slug": "aaben-birch-glutenfri-pilsner-2",
+      "description": "(Untappd Rating: 3,3) Birch står rank som et birketræ i forårssolen – enkel, elegant og naturlig. En glutenfri pilsner, der ikke går på kompromis med hverken smag eller renhed. Sprød og klar med klassiske noter af frisk brød, blomster og urter, og en blid bitterhed, der forsvinder som dug for solen. Et ærligt bryg, brygget med respekt for tysk tradition og med en friskhed, der gør den til et sikkert valg for enhver pilsnerelsker. INFORMATION Stil: Glutenfri Pilsner Størrelse: 33 cl Alkoholprocent: 4,8 % Best before datoen er 30/09-2026. NB: Fri fragt ved køb over 499 kr.",
+      "name": "ÅBEN – Birch - 4,8% Glutenfri Pilsner (33cl.)",
+      "image": "https://cdn.shopify.com/s/files/1/0402/1239/8243/files/Aben_Birch_33cl.png?v=1759694562",
+      "type": "Pilsner",
+      "abv": 4.8,
+      "volume_cl": 33.0,
+      "brewery": "ÅBEN – Birch",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "A Good Case",
+          "price": 24.83,
+          "url": "https://agoodcase.dk/products/aben-birch-4-8-german-pilsner",
+          "discount_pct": 29.1,
+          "old_price": 35.0
+        }
+      ],
+      "cheapest_price": 24.83,
+      "min_price": 24.83,
+      "shop": "A Good Case",
+      "discount_pct": 29.1,
+      "max_discount_pct": 29.1
     },
     {
       "id": 15341,
@@ -2122,8 +2155,8 @@
       "max_discount_pct": 24.2
     },
     {
-      "id": 18194,
-      "slug": "ebeltoft-gaardbryggeri-belgian-brown-126",
+      "id": 18213,
+      "slug": "ebeltoft-gaardbryggeri-belgian-brown-127",
       "description": "Belgian Brown fra Ebeltoft Gårdbryggeri er af typen Dubbel og er på 6,8% Denne belgiske brown ale er brygget med ristede malt og hvedemalt, der giver den en fyldig og aromatisk smag. Øllen har en dyb, brun farve med en let rødlig tone. Øllen har en fyldig og rund smag med en god balance mellem sødme og bitterhed. Øllen har noter af mørk malt, chokolade, karamel og kaffe. Kroppen er fyldig og rund. Belgian Brown fra Ebeltoft Gårdbryggeri er en velsmagende og fyldig øl, der er perfekt til en hyggelig aften. Øllen er velegnet til både erfarne og nybegyndere.",
       "name": "Belgian Brown 6,8% 33cl",
       "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/belgien-brown-33cl.png?v=1753443086",
@@ -2382,6 +2415,32 @@
       "max_discount_pct": 14.2
     },
     {
+      "id": 13465,
+      "slug": "reeper-b-exotisches-ipa-india-pale-ale",
+      "description": "(Untappd rating: 2,9) Mød den nye favorit i køleskabet: Reeper B. India Pale Ale. Det er en moderne \"session\" craft-øl, der mestrer balancen mellem det vilde og det afdæmpede. Du får den karakteristiske, intense aroma af frugtig humle, som man kender fra en klassisk IPA, men med en moderat bitterhed og en alkoholprocent på 5,0 %, der gør den utrolig læskende. Da øllen er ufiltreret, bevares alle smagsnuancer og den fulde humle-duft i hver eneste tår. En absolut nødvendighed for ølentusiasten, der søger en velafbalanceret og moderne smagsoplevelse.",
+      "name": "Reeper B. - Exotisches IPA - 5% India Pale Ale",
+      "image": "https://cdn.shopify.com/s/files/1/0402/1239/8243/files/Reepbana_B_IPA.png?v=1771926198",
+      "type": "India Pale Ale (IPA)",
+      "abv": 5.0,
+      "volume_cl": 50.0,
+      "brewery": "Reeper B.",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "A Good Case",
+          "price": 25.75,
+          "url": "https://agoodcase.dk/products/reeper-b-exotisches-ipa_",
+          "discount_pct": 26.4,
+          "old_price": 35.0
+        }
+      ],
+      "cheapest_price": 25.75,
+      "min_price": 25.75,
+      "shop": "A Good Case",
+      "discount_pct": 26.4,
+      "max_discount_pct": 26.4
+    },
+    {
       "id": 13512,
       "slug": "braunstein-julebryg-oekologisk-amber-lager",
       "description": "Når vinteren nærmer sig, og lyset falmer, tændes der et varmt skær i glasset. Braunsteins Julebryg er en klassisk amber lager med et glimt i øjet – rund, maltfyldt og med antydninger af karamel og krydret varme. Det er øllet, der hører hjemme ved siden af julegløden, i selskab med latter, stearinlys og snefnug på ruden. En ægte dansk juletradition i flydende form. INFORMATION Stil: Amber Ale Størrelse: 50 cl Alkoholprocent: 5,6% Best before datoen er 06/05-2027. NB: Fri fragt ved køb over 499 kr. ellers pålægges der 59 kr. i fragt.",
@@ -2500,12 +2559,12 @@
       "max_discount_pct": 0
     },
     {
-      "id": 18202,
-      "slug": "westbrook-ipa-3",
+      "id": 17069,
+      "slug": "westbrook-ipa",
       "description": "Westbrook's flagship IPA from Mount Pleasant, South Carolina. Bold citrus and tropical hop character rides a balanced malt backbone with a clean bitter finish — the Southern classic that helped define the brewery. 6.8%.",
-      "name": "IPA",
+      "name": "Westbrook - IPA",
       "image": "https://cdn.shopify.com/s/files/1/0368/1628/9924/files/westbrook_ipa_48965e81-8ed9-493d-869c-390fea2c65e9.png?v=1738923848",
-      "type": null,
+      "type": "India Pale Ale (IPA)",
       "abv": 6.8,
       "volume_cl": 35.5,
       "brewery": "Westbrook",
@@ -4323,32 +4382,6 @@
       "max_discount_pct": 0
     },
     {
-      "id": 15329,
-      "slug": "brewdog-lost-lager",
-      "description": "Lost Lager er en tørhumlet pilsner brygget med den klassiske tyske saphir humle, der giver noter af citrus og stenfrugt. Den er brygget på bayersk gær, der giver en skarp, ren smag. Denne Brewdog, Lost Lager 44 cl - Øl øl, er Konventionel dyrket, og har en alkoholprocent på 4,50. Øllen er en Lager Øl fra Brewdog",
-      "name": "Brewdog, Lost Lager 44 cl",
-      "image": "https://www.vildmedvin.dk/img/1000/1000/resize/l/o/lost_lager_44_cl..jpg",
-      "type": "Lager",
-      "abv": 4.5,
-      "volume_cl": 44.0,
-      "brewery": "Brewdog",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Vild med Vin",
-          "price": 29.0,
-          "url": "https://www.vildmedvin.dk/brewdog-lost-lager-44-cl",
-          "discount_pct": 0,
-          "old_price": null
-        }
-      ],
-      "cheapest_price": 29.0,
-      "min_price": 29.0,
-      "shop": "Vild med Vin",
-      "discount_pct": 0,
-      "max_discount_pct": 0
-    },
-    {
       "id": 15330,
       "slug": "thisted-bryghus-limfjords-baltic-ipa",
       "description": "Dette mørke bryg er en stærk udfordrer til favoritterne i Limfjorsserien. Den er kompleks og unik i både smag og udseende. De mørke malte giver den fyldighed og stilmæssigt ligger den i stilarten Black IPA. Som navnet hentyder til, er det friskheden fra humlen der bidrager til både smag og aroma. Humlerne giver noter af frugt og bær, som man normalt forbinder med en traditionel IPA. Denne Thisted Bryghus, Limfjords Baltic IPA 50 cl. - Øl øl, er Konventionel dyrket, og har en alkoholprocent på 6,50. Øllen er en Black IPA,IPA fra Thisted Bryghus",
@@ -4709,58 +4742,6 @@
           "shop_name": "A Good Case",
           "price": 29.75,
           "url": "https://agoodcase.dk/products/dragonfly-feather-light-wheat-5-6-hvedeol",
-          "discount_pct": 0,
-          "old_price": null
-        }
-      ],
-      "cheapest_price": 29.75,
-      "min_price": 29.75,
-      "shop": "A Good Case",
-      "discount_pct": 0,
-      "max_discount_pct": 0
-    },
-    {
-      "id": 13396,
-      "slug": "aaben-birch-glutenfri-pilsner-2",
-      "description": "(Untappd Rating: 3,3) Birch står rank som et birketræ i forårssolen – enkel, elegant og naturlig. En glutenfri pilsner, der ikke går på kompromis med hverken smag eller renhed. Sprød og klar med klassiske noter af frisk brød, blomster og urter, og en blid bitterhed, der forsvinder som dug for solen. Et ærligt bryg, brygget med respekt for tysk tradition og med en friskhed, der gør den til et sikkert valg for enhver pilsnerelsker. INFORMATION Stil: Glutenfri Pilsner Størrelse: 33 cl Alkoholprocent: 4,8 % Best before datoen er 30/09-2026. NB: Fri fragt ved køb over 499 kr.",
-      "name": "ÅBEN – Birch - 4,8% Glutenfri Pilsner (33cl.)",
-      "image": "https://cdn.shopify.com/s/files/1/0402/1239/8243/files/Aben_Birch_33cl.png?v=1759694562",
-      "type": "Pilsner",
-      "abv": 4.8,
-      "volume_cl": 33.0,
-      "brewery": "ÅBEN – Birch",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "A Good Case",
-          "price": 29.75,
-          "url": "https://agoodcase.dk/products/aben-birch-4-8-german-pilsner",
-          "discount_pct": 15.0,
-          "old_price": 35.0
-        }
-      ],
-      "cheapest_price": 29.75,
-      "min_price": 29.75,
-      "shop": "A Good Case",
-      "discount_pct": 15.0,
-      "max_discount_pct": 15.0
-    },
-    {
-      "id": 13471,
-      "slug": "dragonfly-black-bean-beer-coffee-stout",
-      "description": "Med denne øl forener bryggeriet de bedste ting fra to verdener - øl og kaffe. Øllen her er brygget i et stærkt begrænset antal, så det er bare med at få smagt den, mens den stadig er her. Den bløde og behagelige øl er skabt med Økologiske kaffebønner fra Sidamodistriktet, der i det sydlige Etiopien grænser op til Kenya. Kaffen har en intensiv duft af citrusfrugter. Smagen er fyldig uden bitterhed, med en kompleks krydret og frisk syrlighed i eftersmagen.",
-      "name": "Dragonfly - Black Bean Beer - 9% Coffee Stout",
-      "image": "https://cdn.shopify.com/s/files/1/0402/1239/8243/files/Braunstein_BlackBeerBean.png?v=1712394525",
-      "type": "Stout",
-      "abv": 9.0,
-      "volume_cl": 44.0,
-      "brewery": "Dragonfly",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "A Good Case",
-          "price": 29.75,
-          "url": "https://agoodcase.dk/products/dragonfly-black-bean-beer-coffee-stout-1",
           "discount_pct": 0,
           "old_price": null
         }
@@ -6826,8 +6807,8 @@
       "max_discount_pct": 0
     },
     {
-      "id": 18193,
-      "slug": "brouwerij-kees-its-a-blond-128",
+      "id": 18212,
+      "slug": "brouwerij-kees-its-a-blond-129",
       "description": "It's A Blond fra Brouwerij Kees er af typen Blond og er på 5,9% Denne klassiske belgiske ale har en lys gylden farve og en indbydende duft af friske citrusfrugter og fersken med et strejf af krydderi fra gæren. Smagen er en dejlig balance mellem sød malt og frisk humlebitterhed med tydelige noter af banan, citrus og et hint af rosenvand fra den belgiske gær. Øllen har en medium krop med en behagelig karbonering der løfter de frugtige aromaer. Afslutningen er ren og tør med en velmålt bitterhed der gør den utrolig let at drikke.",
       "name": "It's A Blond 5,9% 33cl",
       "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/its-a-blond-33cl_27db0da2-5945-4111-8396-339312eae8d3.png?v=1773482918",
@@ -8473,32 +8454,6 @@
       "max_discount_pct": 0
     },
     {
-      "id": 15300,
-      "slug": "krenkerup-doppel-bock",
-      "description": "Denne øl er kåret til Europas bedste doppel bock ved European Beer Star 2012. Krenkerup har givet deres tyske brygmester frie hænder til at skabe en specialøl af høj kvalitet. Bock-øllens oprindelse kædes sammen med bayerske munke, der bryggede og nød de fyldige øl under fasten. Man behøver nu ikke gå i kloster for at nyde en Krenkerup Doppel Bock. Krenkerup Doppel Bock er en kraftig øl, som giver varme i kinderne gennem årets køligere måneder. Ædle tyske traditioner er nøje efterlevet, og harmonien i denne bock-øl er i særklasse. Smagen er harmonisk med fyldige, silkebløde toner af karamel.",
-      "name": "Krenkerup, Doppel Bock 33 cl.",
-      "image": "https://www.vildmedvin.dk/img/1000/1000/resize/d/o/doppel_33.jpg",
-      "type": "Bock",
-      "abv": 8.3,
-      "volume_cl": 33.0,
-      "brewery": "Krenkerup",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Vild med Vin",
-          "price": 34.0,
-          "url": "https://www.vildmedvin.dk/krenkerup-doppel-bock-33-cl",
-          "discount_pct": 0,
-          "old_price": null
-        }
-      ],
-      "cheapest_price": 34.0,
-      "min_price": 34.0,
-      "shop": "Vild med Vin",
-      "discount_pct": 0,
-      "max_discount_pct": 0
-    },
-    {
       "id": 15313,
       "slug": "primator-ipa",
       "description": "Primator har lavet en perfekt brygget IPA på 6,5% Alk, med ikke mindre end 6 forskellige humletyper. To af disse humletyper er de meget populære og aromatiske Citra- og Cascadehumle. En øl der starter med en intens bitterhed, men som stille og roligt åbner op for toner af tropisk frugt, aromatisk harpiks og citrus. En meget intens øl oplevelse hvor man skal give sig tid til at nyde øllen, som den åbner sig. Denne Primator IPA - Øl øl, er dyrket, og har en alkoholprocent på 6,50. Øllen er en IPA fra",
@@ -9971,8 +9926,8 @@
       "max_discount_pct": 22.2
     },
     {
-      "id": 18191,
-      "slug": "ebeltoft-gaardbryggeri-imperial-stout-131",
+      "id": 18210,
+      "slug": "ebeltoft-gaardbryggeri-imperial-stout-132",
       "description": "Imperial Stout fra Ebeltoft Gårdbryggeri er af typen Imperial Stout og er på 9,3% Denne kraftfulde stout har en dyb, næsten sort farve med et tæt, brunligt skum. Den er brygget med omhu og byder på en rig og kompleks karakter, der viser det bedste af den klassiske imperial stout-stil. Smagen er fyldig og sødmefuld med tydelige noter af mørk chokolade, ristet kaffe og karamel. Den kraftige maltbase giver en dejlig rundhed, mens den høje alkoholprocent tilføjer varme og dybde.",
       "name": "Imperial Stout 9,3% 33cl",
       "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/imperial-stout-9-3-33cl_e5717b14-1296-4555-8e23-bc8da32992e9.png?v=1753446200",
@@ -13463,6 +13418,32 @@
       "max_discount_pct": 0
     },
     {
+      "id": 16984,
+      "slug": "2085-ua-lager-light",
+      "description": "A Ukrainian dark lager from Kyiv's 2085 Brewery crafted from local Ukrainian raw materials in the traditional tmavé style. This sessionable dark lager delivers roasted malt character with hints of chocolate and coffee, clean lager finish, and gentle sweetness.",
+      "name": "2085 - UA Lager Light",
+      "image": "https://cdn.shopify.com/s/files/1/0368/1628/9924/files/2085-ua-lager-light.png?v=1781245641",
+      "type": "Lager",
+      "abv": 4.8,
+      "volume_cl": 33.0,
+      "brewery": "2085",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Drikbeer",
+          "price": 39.0,
+          "url": "https://drikbeer.com/products/2085-ua-lager-light",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 39.0,
+      "min_price": 39.0,
+      "shop": "Drikbeer",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
       "id": 15485,
       "slug": "bryg-365-fars-gamle-glaede",
       "description": "Fars Gamle Glæde fra Bryg 365 er en klassisk old ale brygget som en hyldest til far – ham der finder ro i skuret, hvor duften af træ og lyden af værktøj fylder rummet. Det er her, der bygges, fixes og formes, og hvor kærlighed ofte vises gennem handlinger. Denne old ale er rig på maltkarakter med noter af mørk frugt, karamel og en let ristet sødme, der balancerer flot med en mild bitterhed. Øllet har en mørk ravfarve og en afrundet fylde, som gør den ideel til langsomme aftener og dybe samtaler. En øl skabt til at nydes i eftertænksomhed – som tak for alt det, far gør, uden at sige et ord.",
@@ -13593,62 +13574,10 @@
       "max_discount_pct": 0
     },
     {
-      "id": 18196,
-      "slug": "ua-lager-light-2",
-      "description": "A golden Ukrainian lager from Kyiv's 2085 Brewery brewed with local Ukrainian ingredients in the refreshing světlé style. This crisp, clean lager showcases bready malt sweetness with subtle hop bitterness and exceptional drinkability.",
-      "name": "UA Lager Light",
-      "image": "https://cdn.shopify.com/s/files/1/0368/1628/9924/files/2085-ua-lager-light.png?v=1781245641",
-      "type": "Lager",
-      "abv": 4.8,
-      "volume_cl": 33.0,
-      "brewery": "2085",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Drikbeer",
-          "price": 39.0,
-          "url": "https://drikbeer.com/products/2085-ua-lager-light",
-          "discount_pct": 0,
-          "old_price": null
-        }
-      ],
-      "cheapest_price": 39.0,
-      "min_price": 39.0,
-      "shop": "Drikbeer",
-      "discount_pct": 0,
-      "max_discount_pct": 0
-    },
-    {
-      "id": 18197,
-      "slug": "ua-lager-dark-2",
-      "description": "A Ukrainian dark lager from Kyiv's 2085 Brewery crafted from local Ukrainian raw materials in the traditional tmavé style. This sessionable dark lager delivers roasted malt character with hints of chocolate and coffee, clean lager finish, and gentle sweetness.",
-      "name": "UA Lager Dark",
-      "image": "https://cdn.shopify.com/s/files/1/0368/1628/9924/files/2085-ua-lager-dark.png?v=1781245641",
-      "type": "Lager",
-      "abv": 4.8,
-      "volume_cl": 33.0,
-      "brewery": "2085",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Drikbeer",
-          "price": 39.0,
-          "url": "https://drikbeer.com/products/2085-ua-lager-dark",
-          "discount_pct": 0,
-          "old_price": null
-        }
-      ],
-      "cheapest_price": 39.0,
-      "min_price": 39.0,
-      "shop": "Drikbeer",
-      "discount_pct": 0,
-      "max_discount_pct": 0
-    },
-    {
-      "id": 18183,
-      "slug": "creature-comforts-fall-2",
+      "id": 17077,
+      "slug": "creature-comforts-fall",
       "description": "A traditional Märzen-style Oktoberfest with toasty malt character and light hop expression. This golden lager is smooth from the lagering process, malt-accented, medium-strong, and perfect for autumn celebrations.",
-      "name": "Fall",
+      "name": "Creature Comforts - Fall",
       "image": "https://cdn.shopify.com/s/files/1/0368/1628/9924/files/Creature_Comforts_-_Fall_-_Traditional_Oktoberfest.png?v=1761311822",
       "type": null,
       "abv": 6.0,
@@ -13816,6 +13745,32 @@
           "shop_name": "Vild med Vin",
           "price": 39.0,
           "url": "https://www.vildmedvin.dk/hornbeer-raven",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 39.0,
+      "min_price": 39.0,
+      "shop": "Vild med Vin",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
+      "id": 17242,
+      "slug": "svaneke-bryghus-baltic-liqourice-porter-baltic-porter-3",
+      "description": "Vores Baltic Liquorice er en mørk mahognifarvet lakridsporter med tykt skum. En kraftig aroma af rå lakrids og lakridsrod hviler over denne øl, mens smagen præges af ristet malt og sød lakrids. Noter af citrus stammer fra humlen og balancerer denne solide porter. Skål i lakrids! Går godt til simremad, ost og desserter. Denne Svaneke bryghus, Baltic Liquorice - Øl øl, er Økologisk dyrket, og har en alkoholprocent på 6,50. Øllen er en Porter fra Svaneke Bryghus",
+      "name": "Svaneke Bryghus \"Baltic Liqourice Porter\" | 6,5% | 50cl | Baltic Porter",
+      "image": "https://cdn.shopify.com/s/files/1/0600/9438/2263/files/IMG_20240801_125441.jpg?v=1722510076",
+      "type": "Baltic Porter",
+      "abv": 6.5,
+      "volume_cl": 50.0,
+      "brewery": "Svaneke Bryghus",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Vild med Vin",
+          "price": 39.0,
+          "url": "https://www.vildmedvin.dk/svaneke-bryghys-baltic-liquorice",
           "discount_pct": 0,
           "old_price": null
         }
@@ -14558,32 +14513,6 @@
           "shop_name": "A Good Case",
           "price": 39.75,
           "url": "https://agoodcase.dk/products/etko-west-coast-pilsner-3-4-5-west-coast-pilsner",
-          "discount_pct": 20.5,
-          "old_price": 50.0
-        }
-      ],
-      "cheapest_price": 39.75,
-      "min_price": 39.75,
-      "shop": "A Good Case",
-      "discount_pct": 20.5,
-      "max_discount_pct": 20.5
-    },
-    {
-      "id": 13370,
-      "slug": "jopen-mooie-nel-guava-passion-fruit-west-coast",
-      "description": "Mooie Nel Guava & Passion Fruit er en frugtig American IPA med ekstra fokus på eksotiske frugter. Smagen byder på noter af guava og passionsfrugt, ledsaget af klassiske citrus- og humlenuancer. En frisk og aromatisk IPA med fyldig frugtprofil. INFORMATION Stil: IPA - West Coast Størrelse: 33 cl Alkoholprocent: 6,5% Allergener: BYGMALT Best before datoen er 28/02-2028. NB: Fri fragt ved køb over 499 kr. ellers pålægges der 59 kr. i fragt.",
-      "name": "Jopen - Mooie Nel Guava & Passion Fruit - 6,5% West Coast IPA",
-      "image": "https://cdn.shopify.com/s/files/1/0402/1239/8243/files/Jopen_MooieNelTrop.png?v=1776215513",
-      "type": "West Coast IPA",
-      "abv": 6.5,
-      "volume_cl": 33.0,
-      "brewery": "Jopen",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "A Good Case",
-          "price": 39.75,
-          "url": "https://agoodcase.dk/products/jopen-mooie-nel-guava-passion-fruit-6-5-west-coast-ipa",
           "discount_pct": 20.5,
           "old_price": 50.0
         }
@@ -19083,8 +19012,8 @@
       "max_discount_pct": 0
     },
     {
-      "id": 18192,
-      "slug": "rybryg-ry-pilsner-128",
+      "id": 18211,
+      "slug": "rybryg-ry-pilsner-129",
       "description": "Ry Pilsner er af typen Pilsner og er på 5,6% Ry Pilsner er en tysk inspireret øl, brygget med tre typer moderne amerikansk humle, og er en forfriskende øl med ekstra karakter og fylde. Øllet har en flot strågul farve med klassisk hvid skumkrone. Med sin fine balance er Ry Pilsner egnet som ledsager til lyse og lette retter.",
       "name": "Ry Pilsner 5,6% 50cl",
       "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/ry-pilsner.png?v=1747399627",
@@ -20201,8 +20130,8 @@
       "max_discount_pct": 0
     },
     {
-      "id": 18204,
-      "slug": "to-oel-dipa-121",
+      "id": 18221,
+      "slug": "to-oel-dipa-122",
       "description": "To Øl #DIPA er en imponerende Double IPA fra det danske bryggeri To Øl. Med en alkoholprocent på 8,7% leverer denne øl en intens smagsoplevelse, hvor frugtige noter af citrus og tropiske frugter møder en behagelig bitterhed. Øllen er medium bitter og kommer i en 440 ml dåse, hvilket gør den ideel til at dele med venner eller nyde alene ved særlige lejligheder. Den er perfekt til humleelskere og dem, der sætter pris på en kompleks og fyldig øl. To Øl #DIPA er en kraftig og velsmagende Double IPA med en alkoholprocent på 8,7%.",
       "name": "To Øl, #DIPA",
       "image": "https://www.vildmedvin.dk/img/1000/1000/resize/7/7/7777_1..jpg",
@@ -21801,6 +21730,32 @@
       "max_discount_pct": 0
     },
     {
+      "id": 18220,
+      "slug": "svendborgsund-classic",
+      "description": "En dejlig Vienna lager, kobberfarvet og maltet, med lette karamel noter",
+      "name": "Svendborgsund Classic - 50 cl. - 4,6%",
+      "image": "https://cdn.shopify.com/s/files/1/0600/9438/2263/files/rn-image_picker_lib_temp_94ff36cc-543a-400b-8dbe-a4aa64f1379d.jpg?v=1784710294",
+      "type": "Beer",
+      "abv": 4.6,
+      "volume_cl": 50.0,
+      "brewery": "50 cl.",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Beershoppen",
+          "price": 48.0,
+          "url": "https://beershoppen.dk/products/svendborgsund-classic-50-cl-4-6",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 48.0,
+      "min_price": 48.0,
+      "shop": "Beershoppen",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
       "id": 17225,
       "slug": "honey-dew-fullers-london",
       "description": "Denne golden ale fra Fullers er brygget med lette honning noter. Er virkelig dejlig om sommeren, kold på terrassen",
@@ -22401,10 +22356,10 @@
       "max_discount_pct": 0
     },
     {
-      "id": 18165,
-      "slug": "3-hoppy-mexican-lager",
+      "id": 16992,
+      "slug": "2085-3-hoppy-mexical-lager",
       "description": "An extra-crisp hoppy Mexican-style lager from 2085. Light corn-grain snap and a gentle hop lift over a bone-dry 5.7% body — built for crushing.",
-      "name": "3 Hoppy Mexican Lager",
+      "name": "2085 - 3 Hoppy Mexical Lager",
       "image": "https://cdn.shopify.com/s/files/1/0368/1628/9924/files/2085-3-hoppy-mexical-lager.png?v=1781245641",
       "type": "Lager",
       "abv": 5.7,
@@ -22531,10 +22486,10 @@
       "max_discount_pct": 0
     },
     {
-      "id": 18200,
-      "slug": "jolly-pumpkin-io-saison-3",
+      "id": 17026,
+      "slug": "jolly-pumpkin-io-saison",
       "description": "An open-fermented, oak-aged wild saison. Bright lemon zest and white pepper play against the brewery's signature funky, dry character, with a soft wheat body and a long, mineral finish.",
-      "name": "iO Saison",
+      "name": "Jolly Pumpkin - iO Saison",
       "image": "https://cdn.shopify.com/s/files/1/0368/1628/9924/files/jolly-pumpkin-io-saison.png?v=1777455391",
       "type": "Saison",
       "abv": 6.8,
@@ -24273,6 +24228,39 @@
       "shop": "Beermatch",
       "discount_pct": 24.2,
       "max_discount_pct": 24.2
+    },
+    {
+      "id": 15023,
+      "slug": "sudden-death-my-first-and-last-dip-double",
+      "description": "My First And Last Dip er blød, tæt og tungt humlet. Citra og Rakau skaber noter af citrus, stenfrugt og modne tropiske frugter, mens den hazy krop gør den ekstra cremet i mundfølelsen. En DIPA der læner sig mere mod juicy end bitter. INFORMATION Stil: Double IPA Størrelse: 44 cl Alkoholprocent 8,4% Allergener: BYGMALT, HVEDE, HAVRE Best before datoen er 26/11-2026. NB: Fri fragt ved køb over 499 kr. ellers pålægges der 59 kr. i fragt.",
+      "name": "Sudden Death - My First And Last Dip - 8,4% Double IPA",
+      "image": "https://cdn.shopify.com/s/files/1/0402/1239/8243/files/SuddenDeath_FirstLastDip.png?v=1778477617",
+      "type": "Double IPA",
+      "abv": 8.4,
+      "volume_cl": 44.0,
+      "brewery": "Sudden Death",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Beershoppen",
+          "price": 50.0,
+          "url": "https://beershoppen.dk/products/my-first-and-last-dip-sudden-death-44-cl-8-4",
+          "discount_pct": 23.1,
+          "old_price": 65.0
+        },
+        {
+          "shop_name": "A Good Case",
+          "price": 53.17,
+          "url": "https://agoodcase.dk/products/sudden-death-my-first-and-last-dip-8-4-double-ipa",
+          "discount_pct": 24.0,
+          "old_price": 70.0
+        }
+      ],
+      "cheapest_price": 50.0,
+      "min_price": 50.0,
+      "shop": "Beershoppen",
+      "discount_pct": 23.1,
+      "max_discount_pct": 24.0
     },
     {
       "id": 13782,
@@ -27016,32 +27004,6 @@
       "max_discount_pct": 24.0
     },
     {
-      "id": 15023,
-      "slug": "sudden-death-my-first-and-last-dip-double",
-      "description": "My First And Last Dip er blød, tæt og tungt humlet. Citra og Rakau skaber noter af citrus, stenfrugt og modne tropiske frugter, mens den hazy krop gør den ekstra cremet i mundfølelsen. En DIPA der læner sig mere mod juicy end bitter. INFORMATION Stil: Double IPA Størrelse: 44 cl Alkoholprocent 8,4% Allergener: BYGMALT, HVEDE, HAVRE Best before datoen er 26/11-2026. NB: Fri fragt ved køb over 499 kr. ellers pålægges der 59 kr. i fragt.",
-      "name": "Sudden Death - My First And Last Dip - 8,4% Double IPA",
-      "image": "https://cdn.shopify.com/s/files/1/0402/1239/8243/files/SuddenDeath_FirstLastDip.png?v=1778477617",
-      "type": "Double IPA",
-      "abv": 8.4,
-      "volume_cl": 44.0,
-      "brewery": "Sudden Death",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "A Good Case",
-          "price": 53.17,
-          "url": "https://agoodcase.dk/products/sudden-death-my-first-and-last-dip-8-4-double-ipa",
-          "discount_pct": 24.0,
-          "old_price": 70.0
-        }
-      ],
-      "cheapest_price": 53.17,
-      "min_price": 53.17,
-      "shop": "A Good Case",
-      "discount_pct": 24.0,
-      "max_discount_pct": 24.0
-    },
-    {
       "id": 17506,
       "slug": "blood-orange-limonata-vault-city",
       "description": "Vault City Blood Orange Limonata er en moderne sour ale, der henter inspiration fra de solmodne citrusfrugter og den friske stil, man kender fra italiensk limonade. Resultatet er en letdrikkelig og intens frugtøl med masser af friskhed og en flot balance mellem sødme og syre. Blodappelsin giver øllen en fyldig citruskarakter med noter af røde appelsiner og let bæragtige nuancer, mens Citron tilfører en frisk og sprød syrlighed, der løfter smagsoplevelsen. Den bløde mundfylde og den velafstemte syre gør øllen særligt forfriskende, uden at citrusfrugterne mister deres naturlige sødme.",
@@ -28669,6 +28631,32 @@
       "max_discount_pct": 6.8
     },
     {
+      "id": 16541,
+      "slug": "amager-bryghus-demon-juice-can",
+      "description": "Demon Juice fra Amager Bryghus er en Hazy IPA, der lever op til sit navn: frugtig, saftig og farligt let at drikke. Øllen er tørhumlet generøst med Columbus, Citra, Mosaic og Idaho 7, hvilket giver en intens aromatisk profil med noter af tropisk frugt, citrus og fyrnåle, samt en blød, rund mundfylde. Den uklare gyldne farve og cremede skumkrone afslører en moderne IPA, hvor bitterhed og frugtighed er i perfekt balance. Den lave karbonering og saftige krop gør Demon Juice til en forførende øl, der både tilfredsstiller humleelskeren og dem, der søger en fyldigere IPA med karakter.",
+      "name": "Amager Bryghus, Demon Juice (Can)",
+      "image": "https://www.vildmedvin.dk/img/1000/1000/resize/i/s/iskold.jpg",
+      "type": "IPA",
+      "abv": 7.0,
+      "volume_cl": 44.0,
+      "brewery": "Amager Bryghus",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Beershoppen",
+          "price": 55.0,
+          "url": "https://beershoppen.dk/products/bye-bye-merica-amager-bryghus-44-cl-7-0",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 55.0,
+      "min_price": 55.0,
+      "shop": "Beershoppen",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
       "id": 18068,
       "slug": "dalmatian-grape-sea-salt-sour-the-garden-brewery",
       "description": "En frugtet Gose fra Garden Brewery i Kroatien. Let syrlig, med grape og salt noter",
@@ -29969,32 +29957,6 @@
       "max_discount_pct": 0
     },
     {
-      "id": 15964,
-      "slug": "vault-city-kjoebenhavnerstang",
-      "description": "Vault City Kjøbenhavnerstang er en modern sour ale, der hylder en ægte dansk klassiker – ispinden med vanilje og appelsin. Øllen kombinerer syrligheden fra Vault Citys base med naturlige frugtaromaer af sød appelsin og cremet vanilje, som giver en unik dessertlignende oplevelse. Den har en flot gylden farve, blød krop og en balanceret syre, som gør den både forfriskende og rund. Det skotske bryggeri er kendt for at eksperimentere med både smag og nostalgi – og her rammer de plet for enhver, der elsker noget sødt, syrligt og anderledes.",
-      "name": "Vault City, Kjøbenhavnerstang",
-      "image": "https://www.vildmedvin.dk/img/1000/1000/resize/v/a/vault_city_kj_benhavnerstang.jpg",
-      "type": "Sour Beer",
-      "abv": 6.0,
-      "volume_cl": 44.0,
-      "brewery": "Vault City",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Vild med Vin",
-          "price": 55.0,
-          "url": "https://www.vildmedvin.dk/vault-city-kjobenhavnerstang",
-          "discount_pct": 0,
-          "old_price": null
-        }
-      ],
-      "cheapest_price": 55.0,
-      "min_price": 55.0,
-      "shop": "Vild med Vin",
-      "discount_pct": 0,
-      "max_discount_pct": 0
-    },
-    {
       "id": 15625,
       "slug": "dry-bitter-freestyler",
       "description": "Dry & Bitter Freestyler er en moderne New England IPA fra det danske craftbryggeri Dry & Bitter Brewing Company. Øllen er brygget i den populære NEIPA-stil, som er kendt for sin uklare fremtoning, bløde mundfølelse og aromatiske humleprofil. I glasset fremstår øllen gylden og let diset med et cremet skum. Aromaen er præget af saftige humlenoter med nuancer af tropisk frugt, mango, ananas og citrus. Smagen følger trop med en frugtig og fyldig karakter, hvor humlen bidrager med intense aromaer, mens maltbasen giver en let sødme og en blød mundfølelse.",
@@ -31016,12 +30978,12 @@
       "max_discount_pct": 0
     },
     {
-      "id": 18201,
-      "slug": "blackout-vi-ce-3",
+      "id": 17067,
+      "slug": "blackout-vi-ce",
       "description": "Blackout's 6th anniversary imperial stout built on tiramisu — coffee, cocoa and mascarpone sweetness — and aged in Barton 1792 and Weller wheated bourbon barrels. Dessert-rich layers of espresso, chocolate and vanilla wrapped in soft bourbon warmth at 13%.",
-      "name": "VI-CE",
+      "name": "Blackout - VI-CE",
       "image": "https://cdn.shopify.com/s/files/1/0368/1628/9924/files/vice_d52b61e6-5929-460f-a5c5-be1f9ade436f.png?v=1746118252",
-      "type": null,
+      "type": "Imperial Stout",
       "abv": 13.0,
       "volume_cl": 33.0,
       "brewery": "Blackout",
@@ -31224,8 +31186,8 @@
       "max_discount_pct": 0
     },
     {
-      "id": 18189,
-      "slug": "p-hjala-oo-129",
+      "id": 18208,
+      "slug": "p-hjala-oo-130",
       "description": "Öö fra Põhjala er af typen Imperial Stout og er på 10,5% Öö, en stærk estisk porter, er sort som natten. Først opdager man en fyldig fylde, espressoens syrlighed afbalanceret af sødmen af karamelliseret sukker, og når glasset varmes op, smager man røde ribs blandet med varm chokolade ledsaget af en let alkoholisk varme. Den er stærk nok til at varme dig op på en kold vinteraften på terrassen.",
       "name": "Öö 10,5% 33cl",
       "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/oo-10-5-33cl.png?v=1750597033",
@@ -31369,32 +31331,6 @@
           "shop_name": "Beershoppen",
           "price": 58.0,
           "url": "https://beershoppen.dk/products/boskeun-2025-paasbier-de-dolle-33-cl-9-0",
-          "discount_pct": 0,
-          "old_price": null
-        }
-      ],
-      "cheapest_price": 58.0,
-      "min_price": 58.0,
-      "shop": "Beershoppen",
-      "discount_pct": 0,
-      "max_discount_pct": 0
-    },
-    {
-      "id": 17242,
-      "slug": "svaneke-bryghus-baltic-liqourice-porter-baltic-porter-3",
-      "description": "Svaneke Bryghus har lavet en økologisk Baltic Porter, med duft af engelsk lakrids, hvoraf smagen er af sød lakrids.",
-      "name": "Svaneke Bryghus \"Baltic Liqourice Porter\" | 6,5% | 50cl | Baltic Porter",
-      "image": "https://cdn.shopify.com/s/files/1/0600/9438/2263/files/IMG_20240801_125441.jpg?v=1722510076",
-      "type": "Baltic Porter",
-      "abv": 6.5,
-      "volume_cl": 50.0,
-      "brewery": "Svaneke Bryghus",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Beershoppen",
-          "price": 58.0,
-          "url": "https://beershoppen.dk/products/svaneke-bryghus-baltic-liqourice-porter-6-5-50cl-baltic-porter",
           "discount_pct": 0,
           "old_price": null
         }
@@ -31701,6 +31637,32 @@
       "max_discount_pct": 0
     },
     {
+      "id": 17039,
+      "slug": "superstition-meadery-crystal-sail",
+      "description": "*might be included in the May monthly box Inspired by the classic Bellini cocktail, BeeLini is a sparkling session mead from Arizona's award-winning Superstition Meadery. Crafted with honey and white peaches, it delivers nectarous stone fruit aromas, blossoming honeysuckle and peach nuances, with hints of prosecco and a refreshing effervescent finish.",
+      "name": "Superstition Meadery - Crystal Sail",
+      "image": "https://cdn.shopify.com/s/files/1/0368/1628/9924/files/crystal_sail.png?v=1775759954",
+      "type": "Mjød",
+      "abv": 6.0,
+      "volume_cl": 35.5,
+      "brewery": "Superstition Meadery",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Drikbeer",
+          "price": 59.0,
+          "url": "https://drikbeer.com/products/superstition-meadery-crystal-sail",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 59.0,
+      "min_price": 59.0,
+      "shop": "Drikbeer",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
       "id": 15940,
       "slug": "vault-city-brewing-berry-strudel-pastry-sour",
       "description": "Vault City Berry Strudel er en moderne pastry sour fra Edinburgh-bryggeriet Vault City, kendt for frugtige og intense sour beers. Øllen er brygget med en dessertinspireret profil, hvor pære, brombær og jordbær møder varme noter af kanel og sød bagværkskarakter. Med sin moderate syrlighed og fyldige frugtsmag rammer Berry Strudel balancen mellem frisk, saftig og cremet. Laktose bidrager med rundhed, mens maltbyg giver struktur, og resultatet er en øl med tydelig dessertfornemmelse uden at miste sin friske sour-identitet.",
@@ -31878,10 +31840,10 @@
       "max_discount_pct": 0
     },
     {
-      "id": 18198,
-      "slug": "19-west-coast-ipa-2",
+      "id": 16985,
+      "slug": "2085-19-west-coast-ipa",
       "description": "A crisp, dry West Coast IPA from Kyiv's 2085 Brewery featuring bold hop bitterness and clean finish. This classic West Coast style delivers pine, citrus, and resinous hop character with firm bitterness and lean malt backbone.",
-      "name": "19 West Coast IPA",
+      "name": "2085 - 19 West Coast IPA",
       "image": "https://cdn.shopify.com/s/files/1/0368/1628/9924/files/2085-19-west-coast-ipa.png?v=1781245641",
       "type": "West Coast IPA",
       "abv": 6.3,
@@ -31930,10 +31892,10 @@
       "max_discount_pct": 0
     },
     {
-      "id": 18199,
-      "slug": "light-of-day-2",
+      "id": 16994,
+      "slug": "van-ewing-light-of-day",
       "description": "Van Ewing's Czech-style pilsner. Soft bready malt, spicy noble hop character and a crisp, clean finish at 5.3%.",
-      "name": "Light of Day",
+      "name": "Van Ewing - Light of Day",
       "image": "https://cdn.shopify.com/s/files/1/0368/1628/9924/files/van-ewing-light-of-day_695f0a9b-9194-4fc7-ac02-727296b1574b.png?v=1781253464",
       "type": "Pilsner",
       "abv": 5.3,
@@ -32283,58 +32245,6 @@
           "shop_name": "Drikbeer",
           "price": 59.0,
           "url": "https://drikbeer.com/products/didko-swamp",
-          "discount_pct": 0,
-          "old_price": null
-        }
-      ],
-      "cheapest_price": 59.0,
-      "min_price": 59.0,
-      "shop": "Drikbeer",
-      "discount_pct": 0,
-      "max_discount_pct": 0
-    },
-    {
-      "id": 17039,
-      "slug": "superstition-meadery-crystal-sail",
-      "description": "*might be included in the May monthly box Inspired by the classic Bellini cocktail, BeeLini is a sparkling session mead from Arizona's award-winning Superstition Meadery. Crafted with honey and white peaches, it delivers nectarous stone fruit aromas, blossoming honeysuckle and peach nuances, with hints of prosecco and a refreshing effervescent finish.",
-      "name": "Superstition Meadery - Crystal Sail",
-      "image": "https://cdn.shopify.com/s/files/1/0368/1628/9924/files/crystal_sail.png?v=1775759954",
-      "type": "Mjød",
-      "abv": 6.0,
-      "volume_cl": 35.5,
-      "brewery": "Superstition Meadery",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Drikbeer",
-          "price": 59.0,
-          "url": "https://drikbeer.com/products/superstition-meadery-crystal-sail",
-          "discount_pct": 0,
-          "old_price": null
-        }
-      ],
-      "cheapest_price": 59.0,
-      "min_price": 59.0,
-      "shop": "Drikbeer",
-      "discount_pct": 0,
-      "max_discount_pct": 0
-    },
-    {
-      "id": 18174,
-      "slug": "superstition-meadery-beelini",
-      "description": "*might be included in the May monthly box Inspired by the classic Bellini cocktail, BeeLini is a sparkling session mead from Arizona's award-winning Superstition Meadery. Crafted with honey and white peaches, it delivers nectarous stone fruit aromas, blossoming honeysuckle and peach nuances, with hints of prosecco and a refreshing effervescent finish.",
-      "name": "BeeLini",
-      "image": "https://cdn.shopify.com/s/files/1/0368/1628/9924/files/beelini.png?v=1775759847",
-      "type": "Mjød",
-      "abv": 6.0,
-      "volume_cl": 35.5,
-      "brewery": "Superstition Meadery",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Drikbeer",
-          "price": 59.0,
-          "url": "https://drikbeer.com/products/superstition-meadery-beelini",
           "discount_pct": 0,
           "old_price": null
         }
@@ -32791,32 +32701,6 @@
           "shop_name": "Vild med Vin",
           "price": 59.0,
           "url": "https://www.vildmedvin.dk/kingfisher-lager-65-cl",
-          "discount_pct": 0,
-          "old_price": null
-        }
-      ],
-      "cheapest_price": 59.0,
-      "min_price": 59.0,
-      "shop": "Vild med Vin",
-      "discount_pct": 0,
-      "max_discount_pct": 0
-    },
-    {
-      "id": 15549,
-      "slug": "gamma-brewing-devolve-wcipa",
-      "description": "Chiral IPA fra Gamma Brewing er en moderne New England IPA, der kombinerer intens humlearoma med den bløde og saftige karakter, som har gjort stilen populær blandt IPA-entusiaster verden over. Brygget med Azacca, Cashmere og Mosaic skaber øllen en kompleks og frugtig profil med masser af friskhed og dybde. I aroma og smag mødes noter af tropisk frugt, moden citrus og saftige stenfrugter, mens subtile nuancer af ananas tilfører ekstra kompleksitet. Den tågede fremtoning og den fyldige mundfornemmelse understøtter øllens frugtige karakter og giver en blød, rund og harmonisk oplevelse.",
-      "name": "Gamma Brewing, Devolve WCIPA",
-      "image": "https://www.vildmedvin.dk/img/1000/1000/resize/g/a/gamma_-_devolve_the_real_one-removebg.jpg",
-      "type": "West Coast IPA",
-      "abv": 6.7,
-      "volume_cl": 44.0,
-      "brewery": "Gamma Brewing",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Vild med Vin",
-          "price": 59.0,
-          "url": "https://www.vildmedvin.dk/gamma-brewing-chiral-ipa",
           "discount_pct": 0,
           "old_price": null
         }
@@ -33303,32 +33187,6 @@
       "max_discount_pct": 20.3
     },
     {
-      "id": 16523,
-      "slug": "track-dreaming-of-ddh-nelson-new-england-ipa",
-      "description": "Dreaming Of Nelson er som hvidvin møder IPA i slow motion. Gooseberry, citrus og stenfrugt udvikler sig elegant i en blød, aromatisk krop. Den er let, men kompleks i sin frugtprofil. En NEIPA med vinøs finesse. INFORMATION Stil: IPA - New England Størrelse: 44 cl Alkoholprocent: 7% Best before datoen er 29/09-2026. NB: Fri fragt ved køb over 499 kr. ellers pålægges der 59 kr. i fragt.",
-      "name": "Track - Dreaming Of... DDH Nelson - 7% New England IPA",
-      "image": "https://cdn.shopify.com/s/files/1/0402/1239/8243/files/Track_DreamingOf.png?v=1781471220",
-      "type": "New England IPA",
-      "abv": 7.0,
-      "volume_cl": 44.0,
-      "brewery": "Track",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "A Good Case",
-          "price": 59.75,
-          "url": "https://agoodcase.dk/products/track-dreaming-of-ddh-nelson-7-new-england-ipa",
-          "discount_pct": 14.6,
-          "old_price": 70.0
-        }
-      ],
-      "cheapest_price": 59.75,
-      "min_price": 59.75,
-      "shop": "A Good Case",
-      "discount_pct": 14.6,
-      "max_discount_pct": 14.6
-    },
-    {
       "id": 16524,
       "slug": "track-newhouse-west-coast-ipa",
       "description": "✳️ Centennial Denne single-hop IPA er brygget for at fremhæve den særlige karakter fra håndudvalgt Centennial-humle dyrket på Newhouse Farms i Yakima Valley. Humlen leverer intense aromaer af frisk lime, fyrretræ og let dank humlekarakter, med mindre jordede og krydrede noter end klassisk Centennial ofte byder på. Resultatet er en ren, humledrevet IPA med masser af friskhed, citrus og resinøse nuancer. En hyldest til både humlen og familien Newhouse, der har dyrket jorden i Yakima Valley gennem generationer. 🍋🌲🍺",
@@ -33403,32 +33261,6 @@
           "shop_name": "A Good Case",
           "price": 59.75,
           "url": "https://agoodcase.dk/products/beak-quack-6-5-west-coast-ipa",
-          "discount_pct": 20.3,
-          "old_price": 75.0
-        }
-      ],
-      "cheapest_price": 59.75,
-      "min_price": 59.75,
-      "shop": "A Good Case",
-      "discount_pct": 20.3,
-      "max_discount_pct": 20.3
-    },
-    {
-      "id": 16002,
-      "slug": "rpus-tdh-hand-selected-riwaka-dipa-double-ipa",
-      "description": "Når én humle får lov at tage hele scenen, bliver detaljerne tydelige. Denne triple dry-hoppede DIPA er bygget op omkring håndudvalgt Riwaka-humle, der leverer eksplosive noter af lime, passionsfrugt, grapefrugt og et let urtepræget bid. Mundfølelsen er silkeblød og fyldig, mens frugtigheden folder sig ud lag for lag med en saftig, næsten vinøs friskhed. INFORMATION Stil: IPA - Double Størrelse: 44 cl Alkoholprocent: 8 % Allergener: BYGMALT, HAVRE, HVEDE Best before datoen er 31/03-2027. NB: Fri fragt ved køb over 499 kr. ellers pålægges der 59 kr. i fragt.",
-      "name": "Ārpus - TDH Hand-Selected Riwaka DIPA - 8% Double IPA",
-      "image": "https://cdn.shopify.com/s/files/1/0402/1239/8243/files/Arpus_TDHHandSelectedRiwaka.png?v=1779780716",
-      "type": "Double IPA",
-      "abv": 8.0,
-      "volume_cl": 44.0,
-      "brewery": "Ārpus",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "A Good Case",
-          "price": 59.75,
-          "url": "https://agoodcase.dk/products/arpus-tdh-hand-selected-riwaka-dipa-8-double-ipa",
           "discount_pct": 20.3,
           "old_price": 75.0
         }
@@ -36689,6 +36521,39 @@
       "max_discount_pct": 23.5
     },
     {
+      "id": 12872,
+      "slug": "hanssens-artisanaal-oude-geuze-kavo-noevo",
+      "description": "Hanssens Oude Geuze Kavo Noevo fra Hanssens Artisanaal er af typen Lambic/Geuze og er på 6% Hanssens Artisanaal er en af de ældste lambic-blendere i Belgien med rødder tilbage til 1871. Kavo Noevo er deres Oude Geuze, hvor lambics fra flere årgange er blendet og derefter går igennem en sekundær gæring på flaske, inden de hviler på kælder i minimum seks måneder. I glasset møder du en intens, syrlig aroma med noter af jordagtigt træ, skåret hø, citron, surt æble og et strejf af vanilje. Smagen er frisk og syrlig med toner af rabarber og citrus, understøttet af jordagtige og nøddeagtige nuancer.",
+      "name": "Oude Geuze Kavo Noevo 6% 37,5cl",
+      "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/hanssens-oude-geuze-5-5-37-5cl-2025.png?v=1765012954",
+      "type": "Lambic",
+      "abv": 6.0,
+      "volume_cl": 37.5,
+      "brewery": "Hanssens Artisanaal",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Brygshoppen",
+          "price": 65.0,
+          "url": "https://brygshoppen.dk/products/oude-geuze-kavo-noevo-6-37-5cl",
+          "discount_pct": 0,
+          "old_price": 0.0
+        },
+        {
+          "shop_name": "Beershoppen",
+          "price": 98.0,
+          "url": "https://beershoppen.dk/products/kavo-noevo-oude-gueuze-hanssens-artisanaal-37-5-cl-6-0",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 65.0,
+      "min_price": 65.0,
+      "shop": "Brygshoppen",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
       "id": 15076,
       "slug": "vault-city-brewing-mega-roedgroed-med-floede",
       "description": "Vault City MEGA Rødgrød med Fløde fra Vault City Brewing er en kraftfuld imperial sour inspireret af den traditionelle danske dessert rødgrød med fløde. Brygget kombinerer intense bærnoter med silkeblød sødme og en fyldig, næsten dessertagtig karakter. Smagen domineres af syrlige røde bær som jordbær, hindbær og kirsebær, der giver friskhed og frugtintensitet. Laktose tilfører en rund og cremet mundfølelse, som balancerer syren og understøtter øllens bløde dessertprofil. Den høje alkoholprocent på 9% giver ekstra fylde og dybde.",
@@ -36932,32 +36797,6 @@
       "max_discount_pct": 0
     },
     {
-      "id": 12872,
-      "slug": "hanssens-artisanaal-oude-geuze-kavo-noevo",
-      "description": "Hanssens Oude Geuze Kavo Noevo fra Hanssens Artisanaal er af typen Lambic/Geuze og er på 6% Hanssens Artisanaal er en af de ældste lambic-blendere i Belgien med rødder tilbage til 1871. Kavo Noevo er deres Oude Geuze, hvor lambics fra flere årgange er blendet og derefter går igennem en sekundær gæring på flaske, inden de hviler på kælder i minimum seks måneder. I glasset møder du en intens, syrlig aroma med noter af jordagtigt træ, skåret hø, citron, surt æble og et strejf af vanilje. Smagen er frisk og syrlig med toner af rabarber og citrus, understøttet af jordagtige og nøddeagtige nuancer.",
-      "name": "Oude Geuze Kavo Noevo 6% 37,5cl",
-      "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/hanssens-oude-geuze-5-5-37-5cl-2025.png?v=1765012954",
-      "type": "Lambic",
-      "abv": 6.0,
-      "volume_cl": 37.5,
-      "brewery": "Hanssens Artisanaal",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Brygshoppen",
-          "price": 65.0,
-          "url": "https://brygshoppen.dk/products/oude-geuze-kavo-noevo-6-37-5cl",
-          "discount_pct": 0,
-          "old_price": 0.0
-        }
-      ],
-      "cheapest_price": 65.0,
-      "min_price": 65.0,
-      "shop": "Brygshoppen",
-      "discount_pct": 0,
-      "max_discount_pct": 0
-    },
-    {
       "id": 12874,
       "slug": "hanssens-oude-geuze-extra",
       "description": "Oude Geuze Extra fra Hanssens Artisanaal er af typen Geuze og er på 6% Denne Geuze er resultatet af en omhyggelig blending af de fineste spontangærede Lambics fra forskellige årgange – alle 100% lagret på egetræsfade og eftergæret på flasken. Det giver en øl med en bemærkelsesværdig dybde og en karakter, der udvikler sig i glasset. Smagen er blødere og mindre syrlig end en klassisk Geuze, men stadig kompleks: friske, let frugtagtige toner møder en diskret egetræskarakter og en fin, naturlig brusning. Eftersmagen er lang og behagelig med en ren, tør afslutning.",
@@ -37162,6 +37001,84 @@
       "cheapest_price": 65.0,
       "min_price": 65.0,
       "shop": "Drikbeer",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
+      "id": 18214,
+      "slug": "narco-polo-flying-couch",
+      "description": "En hazy double ipa brygget af Flying Couch og Metalhead i Burgas i Bulgarien En hazy double ipa med tropiske frugt noter",
+      "name": "Narco Polo - Flying Couch - 44 cl. - 8,0%",
+      "image": null,
+      "type": "Beer",
+      "abv": 8.0,
+      "volume_cl": 44.0,
+      "brewery": "Flying Couch",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Beershoppen",
+          "price": 65.0,
+          "url": "https://beershoppen.dk/products/narco-polo-flying-couch-44-cl-8-0",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 65.0,
+      "min_price": 65.0,
+      "shop": "Beershoppen",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
+      "id": 18215,
+      "slug": "taxi-driver-clandestin-rumaenien",
+      "description": "Taxi Driver er en lækker humlet med grapefrugt noter",
+      "name": "Taxi driver - Clandestin Rumænien - 50 cl. - 8,0%",
+      "image": null,
+      "type": "Beer",
+      "abv": 8.0,
+      "volume_cl": 50.0,
+      "brewery": "Clandestin Rumænien",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Beershoppen",
+          "price": 65.0,
+          "url": "https://beershoppen.dk/products/taxi-driver-clandestin-rumaenien-50-cl-8-0",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 65.0,
+      "min_price": 65.0,
+      "shop": "Beershoppen",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
+      "id": 18216,
+      "slug": "double-m-rs-vault-city-brew",
+      "description": "Et collab mellem Vault city og Neonraptor i Nottingham. Masser af chokolade og karamel. Untappd rating 4,10 Pastry stout",
+      "name": "Double M*rs - Vault city Brew - 44 cl. - 8,0%",
+      "image": "https://cdn.shopify.com/s/files/1/0600/9438/2263/files/rn-image_picker_lib_temp_2b955e0c-1616-4575-99ae-7eb386b4d54e.jpg?v=1784732213",
+      "type": "Dubbel",
+      "abv": 8.0,
+      "volume_cl": 44.0,
+      "brewery": "Vault city Brew",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Beershoppen",
+          "price": 65.0,
+          "url": "https://beershoppen.dk/products/double-m-rs-vault-city-brew-44-cl-8-0",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 65.0,
+      "min_price": 65.0,
+      "shop": "Beershoppen",
       "discount_pct": 0,
       "max_discount_pct": 0
     },
@@ -37396,39 +37313,6 @@
       "cheapest_price": 65.0,
       "min_price": 65.0,
       "shop": "Beershoppen",
-      "discount_pct": 0,
-      "max_discount_pct": 0
-    },
-    {
-      "id": 15825,
-      "slug": "vault-city-brewing-dripping-in-berries-berry-milkshake",
-      "description": "Vault City Dripping in Berries fra Vault City Brewing er en moderne sour ale, hvor fokus er lagt på intense bærnoter og en silkeblød drikkeoplevelse. Øllen er brygget med inspiration fra de populære smoothie- og pastry sour-stilarter, som bryggeriet er kendt for. Smagen domineres af modne røde og mørke bær, der giver en saftig og fyldig karakter med både sødme og frisk syrlighed. Den cremede mundfølelse understøtter frugtprofilen og skaber en afrundet oplevelse, hvor kompleks gæring og frugt spiller tæt sammen.",
-      "name": "Vault City Brewing – Dripping In Berries – Berry Milkshake Ale – 0,44 l. – 5,5%",
-      "image": "https://www.bestofbeers.dk/wp-content/uploads/2026/04/VaultCityDrippingInBerries.jpg",
-      "type": "Sour Beer",
-      "abv": 5.5,
-      "volume_cl": 44.0,
-      "brewery": "Vault City Brewing",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Vild med Vin",
-          "price": 65.0,
-          "url": "https://www.vildmedvin.dk/vault-city-dripping-in-berries",
-          "discount_pct": 0,
-          "old_price": null
-        },
-        {
-          "shop_name": "Best of Beers",
-          "price": 66.0,
-          "url": "https://www.bestofbeers.dk/shop/vault-city-brewing-dripping-in-berries-berry-milkshake-ale-044-l-55/",
-          "discount_pct": 0,
-          "old_price": null
-        }
-      ],
-      "cheapest_price": 65.0,
-      "min_price": 65.0,
-      "shop": "Vild med Vin",
       "discount_pct": 0,
       "max_discount_pct": 0
     },
@@ -38395,6 +38279,32 @@
       "max_discount_pct": 0
     },
     {
+      "id": 15825,
+      "slug": "vault-city-brewing-dripping-in-berries-berry-milkshake",
+      "description": null,
+      "name": "Vault City Brewing – Dripping In Berries – Berry Milkshake Ale – 0,44 l. – 5,5%",
+      "image": "https://www.bestofbeers.dk/wp-content/uploads/2026/04/VaultCityDrippingInBerries.jpg",
+      "type": null,
+      "abv": 5.5,
+      "volume_cl": 44.0,
+      "brewery": "Vault City Brewing",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Best of Beers",
+          "price": 66.0,
+          "url": "https://www.bestofbeers.dk/shop/vault-city-brewing-dripping-in-berries-berry-milkshake-ale-044-l-55/",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 66.0,
+      "min_price": 66.0,
+      "shop": "Best of Beers",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
       "id": 13630,
       "slug": "sudden-death-brewing-can-of-whoop-ass-8211",
       "description": null,
@@ -39092,6 +39002,32 @@
       "max_discount_pct": 0
     },
     {
+      "id": 17023,
+      "slug": "root-branch-oude-greg-6-pack",
+      "description": "WAREHOUSE MOVING SALE Root + Branch's playful tribute to a Greg Maisch-style cream ale: brewed with flaked corn for soft sweetness, finished with wildflower honey for a gentle floral character, and balanced by German noble hops. Crisp, golden and easy at 5%, with a finish that's drier than the honey suggests.",
+      "name": "Root + Branch - Oude Greg (6-pack)",
+      "image": "https://cdn.shopify.com/s/files/1/0368/1628/9924/files/oude_greg_26c9550a-5b60-4324-8e44-f216686a402c.png?v=1777628509",
+      "type": "Lager",
+      "abv": 5.0,
+      "volume_cl": 35.5,
+      "brewery": "Root + Branch",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Drikbeer",
+          "price": 69.0,
+          "url": "https://drikbeer.com/products/root-branch-oude-greg",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 69.0,
+      "min_price": 69.0,
+      "shop": "Drikbeer",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
       "id": 14576,
       "slug": "omnipollo-noa-pecan",
       "description": "Et collab mellem Omnipollo og Great Divide i Denver. En imperial stout med noter af cacao, nødder og chokolade Untappd rating 4,03",
@@ -39418,32 +39354,6 @@
       "max_discount_pct": 0
     },
     {
-      "id": 18172,
-      "slug": "root-branch-oude-greg",
-      "description": "Root + Branch's playful tribute to a Greg Maisch-style cream ale: brewed with flaked corn for soft sweetness, finished with wildflower honey for a gentle floral character, and balanced by German noble hops. Crisp, golden and easy at 5%, with a finish that's drier than the honey suggests.",
-      "name": "Oude Greg",
-      "image": "https://cdn.shopify.com/s/files/1/0368/1628/9924/files/root-branch-oude-greg.png?v=1777538740",
-      "type": null,
-      "abv": 5.0,
-      "volume_cl": 35.5,
-      "brewery": "Root + Branch",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Drikbeer",
-          "price": 69.0,
-          "url": "https://drikbeer.com/products/root-branch-oude-greg",
-          "discount_pct": 0,
-          "old_price": null
-        }
-      ],
-      "cheapest_price": 69.0,
-      "min_price": 69.0,
-      "shop": "Drikbeer",
-      "discount_pct": 0,
-      "max_discount_pct": 0
-    },
-    {
       "id": 17072,
       "slug": "pipeworks-el-unicornio",
       "description": "Style: Imperial Stout Blended with Bourbon Barrel Aged Imperial Stout, Rice, Lactose, Vanilla & Cinnamon An indulgent imperial stout from Chicago's Pipeworks Brewing blending fresh imperial stout with bourbon barrel aged beer and horchata-inspired ingredients. This rich, complex beer features rice, lactose, vanilla, and cinnamon creating a dessert-like experience that evokes the creamy sweetness of Mexican horchata with the depth of bourbon barrel aging, chocolate malt character, and warming alcohol.",
@@ -39667,32 +39577,6 @@
           "shop_name": "Vild med Vin",
           "price": 69.0,
           "url": "https://www.vildmedvin.dk/bryg-365-murky-mischief",
-          "discount_pct": 0,
-          "old_price": null
-        }
-      ],
-      "cheapest_price": 69.0,
-      "min_price": 69.0,
-      "shop": "Vild med Vin",
-      "discount_pct": 0,
-      "max_discount_pct": 0
-    },
-    {
-      "id": 15562,
-      "slug": "vault-city-gingerbread-latte",
-      "description": "Gingerbread Latte fra Vault City er en Imperial Stout, der kombinerer dyb maltfylde med varme krydderier og aromatisk kaffe – inspireret af den klassiske vinterdrik. Øllen har en fyldig, næsten sirupsagtig mundfornemmelse, og balancerer sødme fra laktose og mørk malt med krydrede noter af ingefær, kanel og nelliker. Kaffeindslaget tilføjer kompleksitet og giver en let bitter kant, der spiller godt sammen med dessertpræget. Med sin høje alkoholprocent og cremede struktur er det en øl, der gør sig godt som afslutning på et måltid eller som en hyggelig vinterforkælelse.",
-      "name": "Vault City, Gingerbread Latte",
-      "image": "https://www.vildmedvin.dk/img/1000/1000/resize/v/a/vault_city_gingerbread_latte.jpg",
-      "type": null,
-      "abv": 11.0,
-      "volume_cl": 33.0,
-      "brewery": "Vault City",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Vild med Vin",
-          "price": 69.0,
-          "url": "https://www.vildmedvin.dk/vault-city-gingerbread-latte",
           "discount_pct": 0,
           "old_price": null
         }
@@ -40111,6 +39995,58 @@
       "cheapest_price": 70.0,
       "min_price": 70.0,
       "shop": "Brygshoppen",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
+      "id": 18218,
+      "slug": "the-lord-of-the-horde-sudden-death",
+      "description": "En dejlig hazy double Ipa fra Sudden Death i Lübeck. Tørhumlet med Mosaic, Ekuanot og Simcoe humle. Juicy, lette grapefrugt og citrus noter . Untappd rating på 4,26",
+      "name": "The Lord of The Horde - Sudden Death - 44 cl. - 8,0%",
+      "image": "https://cdn.shopify.com/s/files/1/0600/9438/2263/files/rn-image_picker_lib_temp_7fb42688-7cc5-4068-bff8-792bff21be3a.jpg?v=1784717996",
+      "type": "Beer",
+      "abv": 8.0,
+      "volume_cl": 44.0,
+      "brewery": "Sudden Death",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Beershoppen",
+          "price": 70.0,
+          "url": "https://beershoppen.dk/products/the-lord-of-the-horde-sudden-death-44-cl-8-0",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 70.0,
+      "min_price": 70.0,
+      "shop": "Beershoppen",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
+      "id": 18219,
+      "slug": "the-big-ketch-sudden-death-le-ketch",
+      "description": "En double ipa brygget i Collab med Canadiske Le Ketch fra Quebec. Tørhumlet med Nelson, Rakau, southern cross og Peacharine humle. Untappd rating på 4,14",
+      "name": "The Big Ketch - Sudden Death/Le Ketch - 44 cl. - 8,0%",
+      "image": "https://cdn.shopify.com/s/files/1/0600/9438/2263/files/rn-image_picker_lib_temp_37665224-a756-43e0-ab0f-3c4da6a03577.jpg?v=1784715423",
+      "type": "Beer",
+      "abv": 8.0,
+      "volume_cl": 44.0,
+      "brewery": "Sudden Death/Le Ketch",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Beershoppen",
+          "price": 70.0,
+          "url": "https://beershoppen.dk/products/the-big-ketch-sudden-death-le-ketch-44-cl-8-0",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 70.0,
+      "min_price": 70.0,
+      "shop": "Beershoppen",
       "discount_pct": 0,
       "max_discount_pct": 0
     },
@@ -41582,8 +41518,8 @@
       "max_discount_pct": 0
     },
     {
-      "id": 18187,
-      "slug": "omnipollo-raw-beer-76",
+      "id": 18206,
+      "slug": "omnipollo-raw-beer-77",
       "description": "Raw Beer fra Omnipollo er af typen Double New England IPA og er på 8% En eksperimentel double IPA, der aldrig gennemgår den traditionelle kogning. Det betyder, at kornenes og humlets naturlige karakter bevares fuldt ud, og resultatet er en tæt, uklar og gul øl med et blødt og cremet skum. Duften er eksplosiv og frisk med lyse noter af citrus og tropiske frugter, der springer ud af glasset fra første øjeblik. Smagen er saftig og frugtig med en delikat kornsødme fra havre, hvede og pilsnermalt som fundament.",
       "name": "Raw Beer 8% 44cl",
       "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/raw-beer-8.png?v=1782404785",
@@ -42922,32 +42858,6 @@
       "max_discount_pct": 0
     },
     {
-      "id": 18203,
-      "slug": "root-branch-american-original-3",
-      "description": "Root + Branch goes back to basics with a clean American lager, lightly hopped with Cascade for subtle citrus and floral lift. Crisp, balanced and quietly precise at 5% — the way a great lager should be.",
-      "name": "American Original",
-      "image": "https://cdn.shopify.com/s/files/1/0368/1628/9924/files/american_original_2b17b928-695e-4ce1-8eab-f04eb3d6801c.png?v=1784280790",
-      "type": null,
-      "abv": 5.0,
-      "volume_cl": 35.5,
-      "brewery": "Root + Branch",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Drikbeer",
-          "price": 78.0,
-          "url": "https://drikbeer.com/products/root-branch-american-original",
-          "discount_pct": 0,
-          "old_price": null
-        }
-      ],
-      "cheapest_price": 78.0,
-      "min_price": 78.0,
-      "shop": "Drikbeer",
-      "discount_pct": 0,
-      "max_discount_pct": 0
-    },
-    {
       "id": 18041,
       "slug": "ca-plane-pour-moi-hoppy-people-prizm",
       "description": "\"Det Kører for mig\" betyder øllets navn. En lækker hazy ipa brygget med franske Prizm, og tørhumlet med strata simcoe og citra humle. Blød og lækker. Untappd rating på 4,04",
@@ -43170,32 +43080,6 @@
       "max_discount_pct": 0
     },
     {
-      "id": 18168,
-      "slug": "alesmith-speedway-stout-toasted-coconut-edition",
-      "description": "The fan-voted winner of AleSmith's 2024 Speedway Grand Prix, this 12% imperial Speedway Stout is layered with tons of toasted coconut and the brewery's signature Vietnamese coffee. The coconut is worked in across multiple stages for both aroma and taste, balancing rich chocolate malt against the deep roast of the coffee. Smooth, slightly sweet and decadent.",
-      "name": "Speedway Stout: Toasted Coconut Edition",
-      "image": "https://cdn.shopify.com/s/files/1/0368/1628/9924/files/alesmith-speedway-stout-toasted-coconut-edition.png?v=1780651416",
-      "type": "Stout",
-      "abv": 12.0,
-      "volume_cl": 47.3,
-      "brewery": "AleSmith",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Drikbeer",
-          "price": 79.0,
-          "url": "https://drikbeer.com/products/alesmith-speedway-stout-salted-caramel-edition",
-          "discount_pct": 0,
-          "old_price": null
-        }
-      ],
-      "cheapest_price": 79.0,
-      "min_price": 79.0,
-      "shop": "Drikbeer",
-      "discount_pct": 0,
-      "max_discount_pct": 0
-    },
-    {
       "id": 17543,
       "slug": "gouden-carolus-christmas-traekasse",
       "description": "Denne eksklusive gaveæske indeholder 3 flasker af den populære Gouden Carolus Christmas, smukt præsenteret i en solid trækasse. Øllen er en kraftfuld belgisk julebryg med en alkoholprocent på 10,5 %, brygget med tre slags humle og seks forskellige krydderier. Resultatet er en mørk og fyldig øl med dybe noter af karamel, tørret frugt og varme krydderier – perfekt til kolde vinteraftener og julehygge. Trækassen gør pakken til en oplagt gaveidé til ølkendere og samlere, der sætter pris på håndværk, tradition og karakterfuld smag. En flot og velsmagende julehilsen, der både pynter og begejstrer.",
@@ -43367,6 +43251,32 @@
           "shop_name": "Drikbeer",
           "price": 79.0,
           "url": "https://drikbeer.com/products/false-hope-fading-hours",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 79.0,
+      "min_price": 79.0,
+      "shop": "Drikbeer",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
+      "id": 18168,
+      "slug": "alesmith-speedway-stout-toasted-coconut-edition",
+      "description": "The fan-voted winner of AleSmith's 2024 Speedway Grand Prix, this 12% imperial Speedway Stout is layered with tons of toasted coconut and the brewery's signature Vietnamese coffee. The coconut is worked in across multiple stages for both aroma and taste, balancing rich chocolate malt against the deep roast of the coffee. Smooth, slightly sweet and decadent.",
+      "name": "Speedway Stout: Toasted Coconut Edition",
+      "image": "https://cdn.shopify.com/s/files/1/0368/1628/9924/files/alesmith-speedway-stout-toasted-coconut-edition.png?v=1780651416",
+      "type": "Stout",
+      "abv": 12.0,
+      "volume_cl": 47.3,
+      "brewery": "AleSmith",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Drikbeer",
+          "price": 79.0,
+          "url": "https://drikbeer.com/products/alesmith-speedway-stout-toasted-coconut-edition",
           "discount_pct": 0,
           "old_price": null
         }
@@ -44123,6 +44033,32 @@
       "cheapest_price": 80.0,
       "min_price": 80.0,
       "shop": "Brygshoppen",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
+      "id": 18217,
+      "slug": "quadruple-scoop-mint-choc-chip-vault-city",
+      "description": "En kraftig quad stout med mint og chokolade . Ren dessert i sig selv ! Untappd rating på 4,14",
+      "name": "Quadruple SCOOP mint choc chip - Vault City - 33 cl. - 11,0%",
+      "image": "https://cdn.shopify.com/s/files/1/0600/9438/2263/files/rn-image_picker_lib_temp_1f238695-aac2-4bf4-aeee-90a7860d84ed.jpg?v=1784723417",
+      "type": "Quadrupel",
+      "abv": 11.0,
+      "volume_cl": 33.0,
+      "brewery": "Vault City",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Beershoppen",
+          "price": 80.0,
+          "url": "https://beershoppen.dk/products/quadruple-scoop-mint-choc-chip-vault-city-33-cl-11-0",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 80.0,
+      "min_price": 80.0,
+      "shop": "Beershoppen",
       "discount_pct": 0,
       "max_discount_pct": 0
     },
@@ -45649,8 +45585,8 @@
       "max_discount_pct": 0
     },
     {
-      "id": 18190,
-      "slug": "frontaal-brewing-co-no-way-out-b-a-6",
+      "id": 18209,
+      "slug": "frontaal-brewing-co-no-way-out-b-a-7",
       "description": "No Way Out B. A. fra Frontaal Brewing Co. i samarbejde med Pohjala er af typen Fadlageret Barley Wine og er på 10,5% Til denne variant har de lagret den originale No Way Out på en kombination af Madeira- og Ruby Porto-fade. Den har en meget behagelig tyk karakter med cremet karamel og toffee som base med en let salt kant. Suppleret med subtile toner af tørrede frugter og lækre egetræsnoter. Afsluttet af en blød, varmende eftersmag.",
       "name": "No Way Out B.A. 10,5% 33cl",
       "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/no-way-out-b-a-10-5-33cl.png?v=1750592682",
@@ -48995,8 +48931,8 @@
       "max_discount_pct": 0
     },
     {
-      "id": 18188,
-      "slug": "frontaal-brewing-co-10-imperial-stout-6",
+      "id": 18207,
+      "slug": "frontaal-brewing-co-10-imperial-stout-7",
       "description": "10 fra Frontaal Brewing Co. er af typen Fadlageret Imperial Stout og er på 10% Denne mørke og kraftfulde Imperial Stout har modnet på Cognac-, Mirabella Whiskey- og Barbados Romfade, hvilket giver den en dyb og kompleks karakter. Øllen er brygget for at fejre Frontaals 10-års jubilæum, og det mærkes i hver tår. Smagen er rig og fyldig med tydelige noter af karamel, varme krydderier og mørke frugter som rosiner og blommer. Fadlagringen tilføjer lag af vanille, egetræ og en let sødme fra spiritussen, mens den kraftige alkoholprocent giver en varmende fornæmmelse.",
       "name": "10 - Imperial Stout 10% 44cl",
       "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/10-imperial-stout-10-44cl_9645d1f7-914c-43d6-b687-b07453f1aaf2.png?v=1761637026",
@@ -49255,12 +49191,12 @@
       "max_discount_pct": 0
     },
     {
-      "id": 18195,
-      "slug": "root-branch-d-e-a-t-h-p-3",
+      "id": 18060,
+      "slug": "root-branch-d-e-a-t-h-p",
       "description": "Double dry hopped edition of Root + Branch's multi-oat/wheat American pale ale. A louder, hop-saturated take on their signature soft pale ale template. Juicy, pillowy and drinkable well beyond its 6.5% ABV.",
-      "name": "D>E>A>T>H>P>A>R>T>Y",
+      "name": "Root + Branch - D>E>A>T>H>P>A>R>T>Y",
       "image": "https://cdn.shopify.com/s/files/1/0368/1628/9924/files/root-branch-death-party.png?v=1784212685",
-      "type": null,
+      "type": "American Pale Ale",
       "abv": 6.5,
       "volume_cl": 35.5,
       "brewery": "Root + Branch",
@@ -56744,32 +56680,6 @@
       "max_discount_pct": 0
     },
     {
-      "id": 18170,
-      "slug": "root-branch-oude-greg-6-pack-2",
-      "description": "WAREHOUSE MOVING SALE Root + Branch's playful tribute to a Greg Maisch-style cream ale: brewed with flaked corn for soft sweetness, finished with wildflower honey for a gentle floral character, and balanced by German noble hops. Crisp, golden and easy at 5%, with a finish that's drier than the honey suggests.",
-      "name": "Oude Greg (6-pack)",
-      "image": "https://cdn.shopify.com/s/files/1/0368/1628/9924/files/oude_greg_26c9550a-5b60-4324-8e44-f216686a402c.png?v=1777628509",
-      "type": null,
-      "abv": null,
-      "volume_cl": null,
-      "brewery": "Root + Branch",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Drikbeer",
-          "price": 199.0,
-          "url": "https://drikbeer.com/products/root-branch-oude-greg-6-pack",
-          "discount_pct": 51.9,
-          "old_price": 414.0
-        }
-      ],
-      "cheapest_price": 199.0,
-      "min_price": 199.0,
-      "shop": "Drikbeer",
-      "discount_pct": 51.9,
-      "max_discount_pct": 51.9
-    },
-    {
       "id": 16620,
       "slug": "lager-pils-smagekasse-12-stk-gns-16-5",
       "description": "Vi har sammensat en smagekasse fyldt med lækre special lager- og pilsner øl fra danske mikrobryggerier og udenlandske bryghuse, der passer til enhver lejlighed når man vil byde enten sig selv eller sine gæster på god kvalitetsøl. INFORMATION Denne smagekasse indeholder 6x2 øl af forskellig størrelse. 2 x Brewdog - Lost Lager - 4,5% Pilsner - 33cl. - BB: 16/09-2026 2 x Warsteiner - Premium Pilsner - 4,8% Pilsner - 33cl. - BB: 29/08-2026 2 x Tyskie Gronie – 5,2% Lager - 50cl. - BB: 30/04-2027 2 x S tangen - Lager - 5,4% Lager - 50cl. - BB: 18/01-2027 2 x Lech Premium – 5% Lager - 50cl.",
@@ -60405,6 +60315,32 @@
       "max_discount_pct": 16.9
     },
     {
+      "id": 17041,
+      "slug": "jarnit-family-wines-grenache-2023",
+      "description": "New venture from the founder of Evil Twin Brewing. Lifted red berry, dried rose & savory spice from Zaca Mesa Vineyard in Santa Ynez Valley. 20% whole cluster adds grip & perfume, while 25% new French oak lends subtle polish. Fresh, layered & expressive. Organic & sustainably farmed, fermented with wild yeast, aged 19 months on 50% new French oak, unfiltered. Only 123 cases produced.",
+      "name": "Jarnit Family Wines - Grenache 2023",
+      "image": "https://cdn.shopify.com/s/files/1/0368/1628/9924/files/grenache.png?v=1775047021",
+      "type": null,
+      "abv": 14.7,
+      "volume_cl": 75.0,
+      "brewery": "Jarnit Family Wines",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Drikbeer",
+          "price": 295.0,
+          "url": "https://drikbeer.com/products/jarnit-family-wines-grenache-2023",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 295.0,
+      "min_price": 295.0,
+      "shop": "Drikbeer",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
       "id": 17594,
       "slug": "embrasse-peated-oak-aged",
       "description": "Embrasse Peated Oak Aged fra Brouwerij De Dochter van de Korenaar er af typen Belgian Strong Dark Ale og er på 10% I glasset fremstår denne belgiske specialøl som en sortbrun og næsten uigennemtrængelig øl, der slår bro mellem en tung klosterøl og en kompleks imperial stout. Den er lagret i seks til otte måneder på egetræsfade fra ekstremt tørverøget Islay-whisky, og det sætter sit tydelige præg på den færdige øl, der leveres på en stor 66 cl champagneflaske med eftergæring på flasken.",
@@ -60446,58 +60382,6 @@
           "shop_name": "Drikbeer",
           "price": 295.0,
           "url": "https://drikbeer.com/products/drifter-waves",
-          "discount_pct": 0,
-          "old_price": null
-        }
-      ],
-      "cheapest_price": 295.0,
-      "min_price": 295.0,
-      "shop": "Drikbeer",
-      "discount_pct": 0,
-      "max_discount_pct": 0
-    },
-    {
-      "id": 17041,
-      "slug": "jarnit-family-wines-grenache-2023",
-      "description": "New venture from the founder of Evil Twin Brewing. Lifted red berry, dried rose & savory spice from Zaca Mesa Vineyard in Santa Ynez Valley. 20% whole cluster adds grip & perfume, while 25% new French oak lends subtle polish. Fresh, layered & expressive. Organic & sustainably farmed, fermented with wild yeast, aged 19 months on 50% new French oak, unfiltered. Only 123 cases produced.",
-      "name": "Jarnit Family Wines - Grenache 2023",
-      "image": "https://cdn.shopify.com/s/files/1/0368/1628/9924/files/grenache.png?v=1775047021",
-      "type": null,
-      "abv": 14.7,
-      "volume_cl": 75.0,
-      "brewery": "Jarnit Family Wines",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Drikbeer",
-          "price": 295.0,
-          "url": "https://drikbeer.com/products/jarnit-family-wines-grenache-2023",
-          "discount_pct": 0,
-          "old_price": null
-        }
-      ],
-      "cheapest_price": 295.0,
-      "min_price": 295.0,
-      "shop": "Drikbeer",
-      "discount_pct": 0,
-      "max_discount_pct": 0
-    },
-    {
-      "id": 18175,
-      "slug": "jarnit-family-wines-syrah-2023",
-      "description": "New venture from the founder of Evil Twin Brewing. Dark fruit, cracked pepper & a touch of violet from Alondra de Los Prados Vineyard in Santa Ynez Valley. 50% new French oak brings finesse to its spice & grip. Bold yet refined. Organic & sustainably farmed, fermented with wild yeast, aged 20 months on 50% new French oak, unfiltered. Only 95 cases produced.",
-      "name": "Syrah 2023",
-      "image": "https://cdn.shopify.com/s/files/1/0368/1628/9924/files/syrah.png?v=1775047064",
-      "type": null,
-      "abv": 14.8,
-      "volume_cl": 75.0,
-      "brewery": "Jarnit Family Wines",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Drikbeer",
-          "price": 295.0,
-          "url": "https://drikbeer.com/products/jarnit-family-wines-syrah-2023",
           "discount_pct": 0,
           "old_price": null
         }
