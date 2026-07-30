@@ -1,8 +1,8 @@
 {
-  "updated_at": "2026-07-29T22:14:50.482035",
+  "updated_at": "2026-07-30T07:04:42.151020",
   "stats": {
-    "total": 2327,
-    "deals": 372,
+    "total": 2324,
+    "deals": 371,
     "shops": 9,
     "shop_names": [
       "A Good Case",
@@ -1347,8 +1347,8 @@
       "max_discount_pct": 0
     },
     {
-      "id": 18340,
-      "slug": "leo-beer-94",
+      "id": 18352,
+      "slug": "leo-beer-95",
       "description": "Leo Beer er en forfriskende lagerøl fra Thailand, kendt for sin bløde smag og let bitre afslutning. Brygget med malt, ris og humle, leverer den en afbalanceret og letdrikkelig profil, som gør den velegnet til både krydret mad og afslappede øjeblikke. Den gyldne farve og moderate alkoholprocent på 5 % gør den til en klassiker i både Thailand og blandt ølentusiaster verden over. Perfekt til grillmad, thaimad eller som en tropisk ledsager på varme dage. Hvis du er på jagt efter en velsmagende øl med international karakter og god balance, er Leo Beer et oplagt valg.",
       "name": "Leo Beer",
       "image": "https://www.vildmedvin.dk/img/1000/1000/resize/l/e/leo-beer-33-cl_large.jpg",
@@ -2018,8 +2018,8 @@
       "max_discount_pct": 37.5
     },
     {
-      "id": 18337,
-      "slug": "ebeltoft-gaardbryggeri-belgian-brown-135",
+      "id": 18348,
+      "slug": "ebeltoft-gaardbryggeri-belgian-brown-136",
       "description": "Belgian Brown fra Ebeltoft Gårdbryggeri er af typen Dubbel og er på 6,8% Denne belgiske brown ale er brygget med ristede malt og hvedemalt, der giver den en fyldig og aromatisk smag. Øllen har en dyb, brun farve med en let rødlig tone. Øllen har en fyldig og rund smag med en god balance mellem sødme og bitterhed. Øllen har noter af mørk malt, chokolade, karamel og kaffe. Kroppen er fyldig og rund. Belgian Brown fra Ebeltoft Gårdbryggeri er en velsmagende og fyldig øl, der er perfekt til en hyggelig aften. Øllen er velegnet til både erfarne og nybegyndere.",
       "name": "Belgian Brown 6,8% 33cl",
       "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/belgien-brown-33cl.png?v=1753443086",
@@ -3845,32 +3845,6 @@
       "cheapest_price": 29.0,
       "min_price": 29.0,
       "shop": "Øltanken",
-      "discount_pct": 0,
-      "max_discount_pct": 0
-    },
-    {
-      "id": 15233,
-      "slug": "sierra-nevada-hazy-little-thing",
-      "description": "Sierra Nevada Hazy Little Thing IPA (IBU 35) En humle-tung, ufiltreret, uklar lille ”ting” kaldet IPA. Som bryggerier får vi det privilegium at prøve vores øl lige fra tankene i al deres rå ære. Nogle øl har brug for en lille polering, for at gøre sig klar til at gå ud i verden, mens andre kan stå alene. Vi ønsker at dele denne med dig, så vi præsenterer denne Hazy Little Thing, vores ufiltrerede og ubehandlede IPA. Velegnet til grillet spareribs med farin og bourbon BBQ sauce. Denne Sierra Nevada, Hazy Little Thing - Øl øl, er Konventionel dyrket, og har en alkoholprocent på 6,70.",
-      "name": "Sierra Nevada, Hazy Little Thing",
-      "image": "https://www.vildmedvin.dk/img/1000/1000/resize/h/a/hazy_little_thing.jpg",
-      "type": "IPA",
-      "abv": 6.7,
-      "volume_cl": 35.5,
-      "brewery": "Sierra Nevada",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Vild med Vin",
-          "price": 29.0,
-          "url": "https://www.vildmedvin.dk/sierra-nevada-juicy-little-thing",
-          "discount_pct": 0,
-          "old_price": null
-        }
-      ],
-      "cheapest_price": 29.0,
-      "min_price": 29.0,
-      "shop": "Vild med Vin",
       "discount_pct": 0,
       "max_discount_pct": 0
     },
@@ -5836,6 +5810,32 @@
       "max_discount_pct": 0
     },
     {
+      "id": 13339,
+      "slug": "hornbeer-godt-oel-oekologisk-ipa-west-coast-ipa",
+      "description": "Hornbeer Økologisk Godt Øl IPA er en læskende IPA med en let alkoholprocent på 5%, der gør den ideel til alle lejligheder. Den byder på en velafbalanceret smag, hvor den karakteristiske humlebitterhed mødes med friske citrusnoter og en let frugtsødme. Brygget med økologiske råvarer, leverer denne IPA en ren smagsoplevelse, hvor både miljøet og smagsløgene tilgodeses. Den milde styrke gør den perfekt til både nye IPA-drikkere og dem, der søger en lettere variant. Hornbeer sikrer med denne øl en autentisk smag af kvalitet og håndværk, som er ideel til at nyde til hverdag eller fest.",
+      "name": "Hornbeer - Godt Øl: Økologisk IPA - 5% West Coast IPA",
+      "image": "https://cdn.shopify.com/s/files/1/0402/1239/8243/files/Hornbeer_OkologiskIPA.png?v=1776666861",
+      "type": "West Coast IPA",
+      "abv": 5.0,
+      "volume_cl": 33.0,
+      "brewery": "Hornbeer",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Vild med Vin",
+          "price": 31.0,
+          "url": "https://www.vildmedvin.dk/hornbeer-okologisk-kong-hans",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 31.0,
+      "min_price": 31.0,
+      "shop": "Vild med Vin",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
       "id": 13194,
       "slug": "ter-dolen-winter",
       "description": "Ter Dolen Winter er en klassisk belgisk vinterale med et varmt og indbydende udtryk. Den ravbrune farve med dybt rødligt skær afslører en øl brygget med tre forskellige malttyper og to humlevarianter, hvilket giver en rig og balanceret smagsprofil. Øllen er nænsomt krydret med kanel og tilsat lokal honning, hvilket tilfører både dybde og rund sødme. I smagen møder man karamel, lette kryddernoter og en behagelig varme fra den alkoholiske styrke på 9,1 %. Den dessertagtige karakter gør den oplagt som ledsager til faste oste, nødder eller søde julesnacks.",
@@ -5943,32 +5943,6 @@
           "shop_name": "Vild med Vin",
           "price": 31.0,
           "url": "https://www.vildmedvin.dk/samuel-smith-taddy-porter",
-          "discount_pct": 0,
-          "old_price": null
-        }
-      ],
-      "cheapest_price": 31.0,
-      "min_price": 31.0,
-      "shop": "Vild med Vin",
-      "discount_pct": 0,
-      "max_discount_pct": 0
-    },
-    {
-      "id": 13339,
-      "slug": "hornbeer-godt-oel-oekologisk-ipa-west-coast-ipa",
-      "description": "Hornbeer Økologisk Godt Øl IPA er en læskende IPA med en let alkoholprocent på 5%, der gør den ideel til alle lejligheder. Den byder på en velafbalanceret smag, hvor den karakteristiske humlebitterhed mødes med friske citrusnoter og en let frugtsødme. Brygget med økologiske råvarer, leverer denne IPA en ren smagsoplevelse, hvor både miljøet og smagsløgene tilgodeses. Den milde styrke gør den perfekt til både nye IPA-drikkere og dem, der søger en lettere variant. Hornbeer sikrer med denne øl en autentisk smag af kvalitet og håndværk, som er ideel til at nyde til hverdag eller fest.",
-      "name": "Hornbeer - Godt Øl: Økologisk IPA - 5% West Coast IPA",
-      "image": "https://cdn.shopify.com/s/files/1/0402/1239/8243/files/Hornbeer_OkologiskIPA.png?v=1776666861",
-      "type": "West Coast IPA",
-      "abv": 5.0,
-      "volume_cl": 33.0,
-      "brewery": "Hornbeer",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Vild med Vin",
-          "price": 31.0,
-          "url": "https://www.vildmedvin.dk/hornbeer-okologisk-kong-hans",
           "discount_pct": 0,
           "old_price": null
         }
@@ -6696,8 +6670,8 @@
       "max_discount_pct": 0
     },
     {
-      "id": 18336,
-      "slug": "brouwerij-kees-its-a-blond-137",
+      "id": 18347,
+      "slug": "brouwerij-kees-its-a-blond-138",
       "description": "It's A Blond fra Brouwerij Kees er af typen Blond og er på 5,9% Denne klassiske belgiske ale har en lys gylden farve og en indbydende duft af friske citrusfrugter og fersken med et strejf af krydderi fra gæren. Smagen er en dejlig balance mellem sød malt og frisk humlebitterhed med tydelige noter af banan, citrus og et hint af rosenvand fra den belgiske gær. Øllen har en medium krop med en behagelig karbonering der løfter de frugtige aromaer. Afslutningen er ren og tør med en velmålt bitterhed der gør den utrolig let at drikke.",
       "name": "It's A Blond 5,9% 33cl",
       "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/its-a-blond-33cl_27db0da2-5945-4111-8396-339312eae8d3.png?v=1773482918",
@@ -6852,6 +6826,33 @@
       "max_discount_pct": 0
     },
     {
+      "id": 15233,
+      "slug": "sierra-nevada-hazy-little-thing",
+      "description": "Sierra Nevada Hazy Little Thing IPA (IBU 35) En humle-tung, ufiltreret, uklar lille ”ting” kaldet IPA. Som bryggerier får vi det privilegium at prøve vores øl lige fra tankene i al deres rå ære. Nogle øl har brug for en lille polering, for at gøre sig klar til at gå ud i verden, mens andre kan stå alene. Vi ønsker at dele denne med dig, så vi præsenterer denne Hazy Little Thing, vores ufiltrerede og ubehandlede IPA. Velegnet til grillet spareribs med farin og bourbon BBQ sauce. Denne Sierra Nevada, Hazy Little Thing - Øl øl, er Konventionel dyrket, og har en alkoholprocent på 6,70.",
+      "name": "Sierra Nevada, Hazy Little Thing",
+      "image": "https://www.vildmedvin.dk/img/1000/1000/resize/h/a/hazy_little_thing.jpg",
+      "type": "IPA",
+      "abv": 6.7,
+      "volume_cl": 35.5,
+      "brewery": "Sierra Nevada",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Vild med Vin",
+          "price": 32.0,
+          "url": "https://www.vildmedvin.dk/sierra-nevada-hazy-little-thing",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 32.0,
+      "min_price": 32.0,
+      "shop": "Vild med Vin",
+      "discount_pct": 0,
+      "max_discount_pct": 0,
+      "price_change_7d": 3.0
+    },
+    {
       "id": 15234,
       "slug": "sierra-nevada-torpedo",
       "description": "Sierra Nevada Torpedo Extra IPA er en stor amerikansk Double IPA. Kraftig, selvsikker og fuld af smag. Den har en aroma, der stammer fra amerikansk humle. Humlen fremhæver øllets komplekse citrus-, fyr- og urteagtige karakterer. Denne Sierra Nevada, Torpedo - Øl øl, er Konventionel dyrket, og har en alkoholprocent på 7,20. Øllen er en IPA fra Sierra Nevada",
@@ -6867,32 +6868,6 @@
           "shop_name": "Vild med Vin",
           "price": 32.0,
           "url": "https://www.vildmedvin.dk/sierra-nevada-torpedo",
-          "discount_pct": 0,
-          "old_price": null
-        }
-      ],
-      "cheapest_price": 32.0,
-      "min_price": 32.0,
-      "shop": "Vild med Vin",
-      "discount_pct": 0,
-      "max_discount_pct": 0
-    },
-    {
-      "id": 15253,
-      "slug": "sierra-nevada-pale-ale",
-      "description": "Sierra Nevada Pale Ale er Sierra Nevadas mest populære øl og den første, der blev brygget på bryggeriet. Den har en dyb gylden farve og en aroma af humle. Smagen er en god blanding af citrus og humle. Pale Ale er særdeles velegnet til stærkt krydrede retter, da det er en meget forfriskende øl. Denne Sierra Nevada, Pale Ale - Øl øl, er Konventionel dyrket, og har en alkoholprocent på 5,60. Øllen er en Pale Ale fra Sierra Nevada",
-      "name": "Sierra Nevada, Pale Ale",
-      "image": "https://www.vildmedvin.dk/img/1000/1000/resize/p/a/pale_ale.jpg",
-      "type": "Pale Ale",
-      "abv": 5.6,
-      "volume_cl": 35.5,
-      "brewery": "Sierra Nevada",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Vild med Vin",
-          "price": 32.0,
-          "url": "https://www.vildmedvin.dk/sierra-nevada-pale-ale",
           "discount_pct": 0,
           "old_price": null
         }
@@ -7516,6 +7491,32 @@
       "max_discount_pct": 0
     },
     {
+      "id": 17418,
+      "slug": "krenkerup-weissbeer-2",
+      "description": "Krenkerup Weissbier er overgæret på traditionel vis, hvilket giver let bundfald og et kraftigt, flot hvidt skum. Med denne øl er der ægte weissbier kærlighed i luften. Denne Weissbier er ufiltreret og er en frisk og frugtig smagsoplevelser med en cremet fylde og bananduft. De strågyldne dråber er brygget med passion og 50 % egen bygmalt dyrket og høstet på Krenkerups jord. Denne Krenkerup, Weissbeer 33 cl. - Øl øl, er Konventionel dyrket, og har en alkoholprocent på 5,10. Øllen er en Hvedeøl fra Krenkerup",
+      "name": "Krenkerup, Weissbeer 33 cl.",
+      "image": "https://www.vildmedvin.dk/img/1000/1000/resize/w/e/weiiss_33.jpg",
+      "type": "Hvedeøl",
+      "abv": 5.1,
+      "volume_cl": 33.0,
+      "brewery": "Krenkerup",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Vild med Vin",
+          "price": 33.0,
+          "url": "https://www.vildmedvin.dk/krenkerup-weissbeer-33-cl",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 33.0,
+      "min_price": 33.0,
+      "shop": "Vild med Vin",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
       "id": 15165,
       "slug": "gouden-carolus-classic",
       "description": "Sagnet fortæller, at kejser Carl V gav sine krigere og jægere ”sort øl” for at de kunne få mere ”courage” i deres gøremål. Det er denne øl, der med små modifikationer er brygget siden 1369. En mørkebrun ale med en stor krop og bouquet, tilpas krydret og fyldig smag. Velegnet til kraftige kødretter og ost. Denne Gouden Carolus, Classic 33 cl. - Øl øl, er Konventionel dyrket, og har en alkoholprocent på 8,50. Øllen er en Ale fra Het Anker",
@@ -7687,32 +7688,6 @@
           "shop_name": "Vild med Vin",
           "price": 33.0,
           "url": "https://www.vildmedvin.dk/krenkerup-stout-33-cl",
-          "discount_pct": 0,
-          "old_price": null
-        }
-      ],
-      "cheapest_price": 33.0,
-      "min_price": 33.0,
-      "shop": "Vild med Vin",
-      "discount_pct": 0,
-      "max_discount_pct": 0
-    },
-    {
-      "id": 17418,
-      "slug": "krenkerup-weissbeer-2",
-      "description": "Krenkerup Weissbier er overgæret på traditionel vis, hvilket giver let bundfald og et kraftigt, flot hvidt skum. Med denne øl er der ægte weissbier kærlighed i luften. Denne Weissbier er ufiltreret og er en frisk og frugtig smagsoplevelser med en cremet fylde og bananduft. De strågyldne dråber er brygget med passion og 50 % egen bygmalt dyrket og høstet på Krenkerups jord. Denne Krenkerup, Weissbeer 33 cl. - Øl øl, er Konventionel dyrket, og har en alkoholprocent på 5,10. Øllen er en Hvedeøl fra Krenkerup",
-      "name": "Krenkerup, Weissbeer 33 cl.",
-      "image": "https://www.vildmedvin.dk/img/1000/1000/resize/w/e/weiiss_33.jpg",
-      "type": "Hvedeøl",
-      "abv": 5.1,
-      "volume_cl": 33.0,
-      "brewery": "Krenkerup",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Vild med Vin",
-          "price": 33.0,
-          "url": "https://www.vildmedvin.dk/krenkerup-weissbeer-33-cl",
           "discount_pct": 0,
           "old_price": null
         }
@@ -9718,8 +9693,8 @@
       "max_discount_pct": 22.2
     },
     {
-      "id": 18334,
-      "slug": "ebeltoft-gaardbryggeri-imperial-stout-140",
+      "id": 18345,
+      "slug": "ebeltoft-gaardbryggeri-imperial-stout-141",
       "description": "Imperial Stout fra Ebeltoft Gårdbryggeri er af typen Imperial Stout og er på 9,3% Denne kraftfulde stout har en dyb, næsten sort farve med et tæt, brunligt skum. Den er brygget med omhu og byder på en rig og kompleks karakter, der viser det bedste af den klassiske imperial stout-stil. Smagen er fyldig og sødmefuld med tydelige noter af mørk chokolade, ristet kaffe og karamel. Den kraftige maltbase giver en dejlig rundhed, mens den høje alkoholprocent tilføjer varme og dybde.",
       "name": "Imperial Stout 9,3% 33cl",
       "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/imperial-stout-9-3-33cl_e5717b14-1296-4555-8e23-bc8da32992e9.png?v=1753446200",
@@ -14331,32 +14306,6 @@
       "max_discount_pct": 0
     },
     {
-      "id": 17589,
-      "slug": "ossett-lab-rat-abc",
-      "description": "Ossett Lab Rat ABC er en kreativ sour ale fra Ossett Brewerys eksperimenterende Lab Rat-serie. Inspireret af den klassiske dessert Apple Blackberry Crumble forener øllen friske frugter, søde bagværksnoter og en livlig syrlighed i en harmonisk helhed. Smagen åbner med saftige Æbler, som tilfører en frisk og let syrlig frugtkarakter. Modne Brombær bidrager med dybde og sødme, mens noter af sprød crumble, smør og et strejf af Vanilje leder tankerne hen på en nybagt frugttærte. Den friske syrlige base giver balance og gør øllen let at nyde trods den fyldige dessertprofil.",
-      "name": "Ossett Lab Rat ABC",
-      "image": "https://www.vildmedvin.dk/img/1000/1000/resize/o/s/ossett_lab_rat_abc.jpg",
-      "type": "Sour Beer",
-      "abv": 4.5,
-      "volume_cl": 44.0,
-      "brewery": "Ossett Lab Rat ABC",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Vild med Vin",
-          "price": 39.0,
-          "url": "https://www.vildmedvin.dk/ossett-lab-rat-abc",
-          "discount_pct": 0,
-          "old_price": null
-        }
-      ],
-      "cheapest_price": 39.0,
-      "min_price": 39.0,
-      "shop": "Vild med Vin",
-      "discount_pct": 0,
-      "max_discount_pct": 0
-    },
-    {
       "id": 17591,
       "slug": "ossett-white-rat-nitro",
       "description": "Ossett White Rat Nitro er en ny fortolkning af Ossett Brewerys ikoniske White Rat. Ved at tilsætte nitrogen i stedet for traditionel kulsyre opnår øllen en silkeblød tekstur og et tæt, cremet skum, som giver en helt særlig serveringsoplevelse. Øllen har en klar gylden farve med et flot, hvidt skum. Aromaen byder på friske noter af Citrus, Grapefrugt og blomster fra de amerikanske humlesorter, mens den lyse maltbase tilfører en let brødagtig sødme. Smagen er frisk og velafbalanceret med sprøde citrusnoter, et strejf af tropisk frugt og en behagelig, tør bitterhed.",
@@ -18837,8 +18786,8 @@
       "max_discount_pct": 0
     },
     {
-      "id": 18335,
-      "slug": "rybryg-ry-pilsner-137",
+      "id": 18346,
+      "slug": "rybryg-ry-pilsner-138",
       "description": "Ry Pilsner er af typen Pilsner og er på 5,6% Ry Pilsner er en tysk inspireret øl, brygget med tre typer moderne amerikansk humle, og er en forfriskende øl med ekstra karakter og fylde. Øllet har en flot strågul farve med klassisk hvid skumkrone. Med sin fine balance er Ry Pilsner egnet som ledsager til lyse og lette retter.",
       "name": "Ry Pilsner 5,6% 50cl",
       "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/ry-pilsner.png?v=1747399627",
@@ -19513,32 +19462,6 @@
       "max_discount_pct": 0
     },
     {
-      "id": 14328,
-      "slug": "vault-city-triple-fruited-mango",
-      "description": "Triple Fruited Mango på 4,8 % slår stadig hårdt. Deres bedst sælgende sour siden lanceringen i 2022 har fået en opdatering, og den nye, letdrikkelige alkoholprocent bringer mango-souren på linje med resten af kernesortimentet som Strawberry Sundae og Cloudy Lemonade. Saftig, frisk og fyldig – dette tropiske eventyr leverer en tredobbelt portion alphonso-mango på en mundvandsfremkaldende base af blandet gæring.",
-      "name": "Vault City - Triple Fruited Mango",
-      "image": "https://cdn.shopify.com/s/files/1/0776/5209/9400/files/95485F77-9595-4E21-8FC5-2842A6B61E99.jpg?v=1769892537",
-      "type": "Tripel",
-      "abv": 4.8,
-      "volume_cl": 44.0,
-      "brewery": "Vault City",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Øltanken",
-          "price": 45.0,
-          "url": "https://oltanken.dk/products/vault-city-triple-fruited-mango",
-          "discount_pct": 0,
-          "old_price": null
-        }
-      ],
-      "cheapest_price": 45.0,
-      "min_price": 45.0,
-      "shop": "Øltanken",
-      "discount_pct": 0,
-      "max_discount_pct": 0
-    },
-    {
       "id": 13959,
       "slug": "nemesis-brown-ale-fra-bad-seed",
       "description": null,
@@ -20007,8 +19930,8 @@
       "max_discount_pct": 0
     },
     {
-      "id": 18339,
-      "slug": "to-oel-dipa-130",
+      "id": 18351,
+      "slug": "to-oel-dipa-131",
       "description": "To Øl #DIPA er en imponerende Double IPA fra det danske bryggeri To Øl. Med en alkoholprocent på 8,7% leverer denne øl en intens smagsoplevelse, hvor frugtige noter af citrus og tropiske frugter møder en behagelig bitterhed. Øllen er medium bitter og kommer i en 440 ml dåse, hvilket gør den ideel til at dele med venner eller nyde alene ved særlige lejligheder. Den er perfekt til humleelskere og dem, der sætter pris på en kompleks og fyldig øl. To Øl #DIPA er en kraftig og velsmagende Double IPA med en alkoholprocent på 8,7%.",
       "name": "To Øl, #DIPA",
       "image": "https://www.vildmedvin.dk/img/1000/1000/resize/7/7/7777_1..jpg",
@@ -22240,6 +22163,32 @@
       "max_discount_pct": 29.0
     },
     {
+      "id": 15306,
+      "slug": "midtfyns-double-ipa",
+      "description": "Midtfyns Double IPA er en amerikansk inspireret mørk ravfarvet øl med et flot lyst skum. Bryggeren har valgt at tørhumle denne ekstreme Double IPA under gæringsprocessen for at opnå en kraftig og kompleks humleprofil af Cascade, Chinook og Centennial humle. Resultatet er en øl med en meget fyldig krop. Den har både en blød og en kraftig smag. Den meget markante eftersmag udfordrer smagsløgene - en øl der skal opleves. Denne øl står allerbedst alene, men er også velegnet til kraftigt krydrede eller grillede retter. Serveringstemperatur 8-12 grader.",
+      "name": "Midtfyns, Double IPA",
+      "image": "https://www.vildmedvin.dk/img/1000/1000/resize/t/e/tegnebr_t-3clasic.jpg",
+      "type": "Double IPA",
+      "abv": 9.2,
+      "volume_cl": 50.0,
+      "brewery": "Midtfyns",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Vild med Vin",
+          "price": 49.0,
+          "url": "https://www.vildmedvin.dk/midtfyns-double-ipa",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 49.0,
+      "min_price": 49.0,
+      "shop": "Vild med Vin",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
       "id": 16982,
       "slug": "2085-1-bohemian-pilsner",
       "description": "A classic Czech-style pilsner from Kyiv's futuristic 2085 Brewery featuring Dutch Swaen malt and traditional brewing methods. This crisp, golden lager delivers clean hop bitterness with bready malt character and refreshing finish.",
@@ -22619,32 +22568,6 @@
           "shop_name": "Vild med Vin",
           "price": 49.0,
           "url": "https://www.vildmedvin.dk/midtfyns-moonshine",
-          "discount_pct": 0,
-          "old_price": null
-        }
-      ],
-      "cheapest_price": 49.0,
-      "min_price": 49.0,
-      "shop": "Vild med Vin",
-      "discount_pct": 0,
-      "max_discount_pct": 0
-    },
-    {
-      "id": 15306,
-      "slug": "midtfyns-double-ipa",
-      "description": "Midtfyns Double IPA er en amerikansk inspireret mørk ravfarvet øl med et flot lyst skum. Bryggeren har valgt at tørhumle denne ekstreme Double IPA under gæringsprocessen for at opnå en kraftig og kompleks humleprofil af Cascade, Chinook og Centennial humle. Resultatet er en øl med en meget fyldig krop. Den har både en blød og en kraftig smag. Den meget markante eftersmag udfordrer smagsløgene - en øl der skal opleves. Denne øl står allerbedst alene, men er også velegnet til kraftigt krydrede eller grillede retter. Serveringstemperatur 8-12 grader.",
-      "name": "Midtfyns, Double IPA",
-      "image": "https://www.vildmedvin.dk/img/1000/1000/resize/t/e/tegnebr_t-3clasic.jpg",
-      "type": "Double IPA",
-      "abv": 9.2,
-      "volume_cl": 50.0,
-      "brewery": "Midtfyns",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Vild med Vin",
-          "price": 49.0,
-          "url": "https://www.vildmedvin.dk/midtfyns-double-ipa",
           "discount_pct": 0,
           "old_price": null
         }
@@ -26471,32 +26394,6 @@
       "max_discount_pct": 0
     },
     {
-      "id": 15226,
-      "slug": "fanoe-rav",
-      "description": "Fanø Folk Pilsner er en ukompliceret og velsmagende pilsner, der hylder det enkle og det folkelige. Brygget efter tysk forbillede med noble humletyper og klassisk pilsnermalt, fremstår øllen lys, let og sprød med en behagelig bitterhed og ren afslutning. Det er en øl, der passer til enhver lejlighed – fra grill og frokostbord til fejringer og fyraften. Navnet Folk Pilsner er ingen tilfældighed: det er øl til alle, der sætter pris på godt håndværk uden unødvendige dikkedarer. Brygget på Fanø med kærlighed til tradition og tilgængelighed – en ægte hverdagsklassiker i moderne dansk øl.",
-      "name": "Fanø, Rav",
-      "image": "https://www.vildmedvin.dk/img/1000/1000/resize/5/4/543_3.jpg",
-      "type": "Pilsner",
-      "abv": 4.6,
-      "volume_cl": 50.0,
-      "brewery": "Fanø",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Vild med Vin",
-          "price": 52.0,
-          "url": "https://www.vildmedvin.dk/fano-rav",
-          "discount_pct": 0,
-          "old_price": null
-        }
-      ],
-      "cheapest_price": 52.0,
-      "min_price": 52.0,
-      "shop": "Vild med Vin",
-      "discount_pct": 0,
-      "max_discount_pct": 0
-    },
-    {
       "id": 16877,
       "slug": "thyras-bryg-det-var-bockers",
       "description": "Country: Danmark Untappd Rating: 3,31 Brewery Notes: Det var Bockers! er en tysk inspireret doppelbock med en dejlig læskende maltkrop. Den er særdeles velegnet som madøl, både til at braisere med, til at drikke under madlavning og selvfølgelig som ledsager til måltidet. Bør nydes ved 6-8 grader og i godt selskab. .",
@@ -26879,8 +26776,7 @@
       "min_price": 53.17,
       "shop": "A Good Case",
       "discount_pct": 24.0,
-      "max_discount_pct": 24.0,
-      "price_change_7d": -2.58
+      "max_discount_pct": 24.0
     },
     {
       "id": 17506,
@@ -27537,6 +27433,32 @@
       "max_discount_pct": 0
     },
     {
+      "id": 15226,
+      "slug": "fanoe-rav",
+      "description": "Fanø Folk Pilsner er en ukompliceret og velsmagende pilsner, der hylder det enkle og det folkelige. Brygget efter tysk forbillede med noble humletyper og klassisk pilsnermalt, fremstår øllen lys, let og sprød med en behagelig bitterhed og ren afslutning. Det er en øl, der passer til enhver lejlighed – fra grill og frokostbord til fejringer og fyraften. Navnet Folk Pilsner er ingen tilfældighed: det er øl til alle, der sætter pris på godt håndværk uden unødvendige dikkedarer. Brygget på Fanø med kærlighed til tradition og tilgængelighed – en ægte hverdagsklassiker i moderne dansk øl.",
+      "name": "Fanø, Folk Pilsner",
+      "image": "https://www.vildmedvin.dk/img/1000/1000/resize/f/a/fan_folk_pilsner.jpg",
+      "type": "Pilsner",
+      "abv": 4.6,
+      "volume_cl": 50.0,
+      "brewery": "Fanø",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Vild med Vin",
+          "price": 54.0,
+          "url": "https://www.vildmedvin.dk/fano-folk-pilsner",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 54.0,
+      "min_price": 54.0,
+      "shop": "Vild med Vin",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
       "id": 15657,
       "slug": "vault-city-iron-brew",
       "description": "Vault City Fiery Brew (Fiery Ginger Iron Brew) er en af de mest kreative og grænsesøgende øl fra det skotske bryggeri Vault City. Inspireret af den ikoniske skotske sodavand Iron Brew kombinerer denne øl sødme, syrlighed og krydret varme i en helt særlig smagsoplevelse. Her møder du en livlig sour beer, hvor frisk ingefær tilfører en markant krydret karakter, mens et strejf af chili giver en varmende afslutning. Den velkendte syrlige base fra Vault City balancerer smagsbilledet og binder de mange nuancer sammen.",
@@ -27663,39 +27585,6 @@
       "cheapest_price": 54.0,
       "min_price": 54.0,
       "shop": "Vild med Vin",
-      "discount_pct": 0,
-      "max_discount_pct": 0
-    },
-    {
-      "id": 17515,
-      "slug": "tankbusters-co-the-beekeeper-vol-14",
-      "description": "The BeeKeeper Vol. 14 er en intens pastry sour fra TankBusters, brygget med et tropisk og citrusdrevet frugtbillede. Øllen kombinerer pink guava, mandarin, passionsfrugt, calamansi og lime, afrundet med akaciahonning, som giver en naturlig sødme og dybde. Resultatet er en frisk, syrlig og samtidig blød smoothie-lignende sour med lag af tropisk frugt, citrus og let floral honning. En levende og kompleks version i BeeKeeper-serien med fokus på balance mellem syre og sødme.",
-      "name": "TankBusters.Co - The BeeKeeper Vol. 14",
-      "image": "https://cdn.shopify.com/s/files/1/0776/5209/9400/files/0C9B3E48-AC07-4AD2-8ABE-8607FD4778AE.jpg?v=1783063112",
-      "type": "Sour",
-      "abv": 5.0,
-      "volume_cl": 50.0,
-      "brewery": "TankBusters.Co",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Øltanken",
-          "price": 55.0,
-          "url": "https://oltanken.dk/products/tankbusters-co-the-beekeeper-vol-14",
-          "discount_pct": 0,
-          "old_price": null
-        },
-        {
-          "shop_name": "Beershoppen",
-          "price": 60.0,
-          "url": "https://beershoppen.dk/products/the-bee-keeper-tankbusters-50-cl-5-0",
-          "discount_pct": 0,
-          "old_price": null
-        }
-      ],
-      "cheapest_price": 55.0,
-      "min_price": 55.0,
-      "shop": "Øltanken",
       "discount_pct": 0,
       "max_discount_pct": 0
     },
@@ -27854,6 +27743,39 @@
       "cheapest_price": 55.0,
       "min_price": 55.0,
       "shop": "Beershoppen",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
+      "id": 17515,
+      "slug": "tankbusters-co-the-beekeeper-vol-14",
+      "description": "The BeeKeeper Vol. 14 er en intens pastry sour fra TankBusters, brygget med et tropisk og citrusdrevet frugtbillede. Øllen kombinerer pink guava, mandarin, passionsfrugt, calamansi og lime, afrundet med akaciahonning, som giver en naturlig sødme og dybde. Resultatet er en frisk, syrlig og samtidig blød smoothie-lignende sour med lag af tropisk frugt, citrus og let floral honning. En levende og kompleks version i BeeKeeper-serien med fokus på balance mellem syre og sødme.",
+      "name": "TankBusters.Co - The BeeKeeper Vol. 14",
+      "image": "https://cdn.shopify.com/s/files/1/0776/5209/9400/files/0C9B3E48-AC07-4AD2-8ABE-8607FD4778AE.jpg?v=1783063112",
+      "type": "Sour",
+      "abv": 5.0,
+      "volume_cl": 50.0,
+      "brewery": "TankBusters.Co",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Øltanken",
+          "price": 55.0,
+          "url": "https://oltanken.dk/products/tankbusters-co-the-beekeeper-vol-14",
+          "discount_pct": 0,
+          "old_price": null
+        },
+        {
+          "shop_name": "Beershoppen",
+          "price": 60.0,
+          "url": "https://beershoppen.dk/products/the-bee-keeper-tankbusters-50-cl-5-0",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 55.0,
+      "min_price": 55.0,
+      "shop": "Øltanken",
       "discount_pct": 0,
       "max_discount_pct": 0
     },
@@ -30987,8 +30909,8 @@
       "max_discount_pct": 0
     },
     {
-      "id": 18332,
-      "slug": "p-hjala-oo-138",
+      "id": 18343,
+      "slug": "p-hjala-oo-139",
       "description": "Öö fra Põhjala er af typen Imperial Stout og er på 10,5% Öö, en stærk estisk porter, er sort som natten. Først opdager man en fyldig fylde, espressoens syrlighed afbalanceret af sødmen af karamelliseret sukker, og når glasset varmes op, smager man røde ribs blandet med varm chokolade ledsaget af en let alkoholisk varme. Den er stærk nok til at varme dig op på en kold vinteraften på terrassen.",
       "name": "Öö 10,5% 33cl",
       "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/oo-10-5-33cl.png?v=1750597033",
@@ -35935,32 +35857,6 @@
           "shop_name": "Beershoppen",
           "price": 120.0,
           "url": "https://beershoppen.dk/products/alesmith-speedway-stout-fadlagret2023-47-3cl-14-2",
-          "discount_pct": 0,
-          "old_price": null
-        }
-      ],
-      "cheapest_price": 63.0,
-      "min_price": 63.0,
-      "shop": "Øltanken",
-      "discount_pct": 0,
-      "max_discount_pct": 0
-    },
-    {
-      "id": 16668,
-      "slug": "prizm-brewing-co-ophiussa-brewing-co-heavy-crown-2",
-      "description": "En fyldig Smoothie Sour brygget med mere end 30 % frugtpuré. Heavy Crown kombinerer gule ferskner, hvide ferskner, vinferskner og abrikos med laktose og iscremebase, hvilket giver en cremet, næsten dessertagtig mundfylde. Et strejf af vild Voatsiperifery-peber fra Madagaskar tilfører florale og let citrusagtige nuancer, som løfter frugtsødmen og skaber ekstra kompleksitet. Resultatet er en tyk, smoothie-lignende sour med masser af moden stenfrugt og en blød syrlighed.",
-      "name": "Prizm Brewing Co. × Ophiussa Brewing Co. - Heavy Crown",
-      "image": "https://cdn.shopify.com/s/files/1/0776/5209/9400/files/08C722C5-CBA7-4897-A4B8-6944326DDBE7.jpg?v=1782391549",
-      "type": "Sour",
-      "abv": 4.5,
-      "volume_cl": 44.0,
-      "brewery": "Prizm Brewing Co. × Ophiussa Brewing Co.",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Øltanken",
-          "price": 63.0,
-          "url": "https://oltanken.dk/products/prizm-brewing-co-ophiussa-brewing-co-heavy-crown",
           "discount_pct": 0,
           "old_price": null
         }
@@ -41225,8 +41121,8 @@
       "max_discount_pct": 0
     },
     {
-      "id": 18330,
-      "slug": "omnipollo-raw-beer-85",
+      "id": 18341,
+      "slug": "omnipollo-raw-beer-86",
       "description": "Raw Beer fra Omnipollo er af typen Double New England IPA og er på 8% En eksperimentel double IPA, der aldrig gennemgår den traditionelle kogning. Det betyder, at kornenes og humlets naturlige karakter bevares fuldt ud, og resultatet er en tæt, uklar og gul øl med et blødt og cremet skum. Duften er eksplosiv og frisk med lyse noter af citrus og tropiske frugter, der springer ud af glasset fra første øjeblik. Smagen er saftig og frugtig med en delikat kornsødme fra havre, hvede og pilsnermalt som fundament.",
       "name": "Raw Beer 8% 44cl",
       "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/raw-beer-8.png?v=1782404785",
@@ -45286,8 +45182,8 @@
       "max_discount_pct": 0
     },
     {
-      "id": 18333,
-      "slug": "frontaal-brewing-co-no-way-out-b-a-15",
+      "id": 18344,
+      "slug": "frontaal-brewing-co-no-way-out-b-a-16",
       "description": "No Way Out B. A. fra Frontaal Brewing Co. i samarbejde med Pohjala er af typen Fadlageret Barley Wine og er på 10,5% Til denne variant har de lagret den originale No Way Out på en kombination af Madeira- og Ruby Porto-fade. Den har en meget behagelig tyk karakter med cremet karamel og toffee som base med en let salt kant. Suppleret med subtile toner af tørrede frugter og lækre egetræsnoter. Afsluttet af en blød, varmende eftersmag.",
       "name": "No Way Out B.A. 10,5% 33cl",
       "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/no-way-out-b-a-10-5-33cl.png?v=1750592682",
@@ -46503,32 +46399,6 @@
       "max_discount_pct": 0
     },
     {
-      "id": 16723,
-      "slug": "prizm-brewing-co-sour-bundle-spar-20-kr",
-      "description": "Sour bundle fra Prizm Brewing Co. Prizm Brewing Co. - Narita Prizm Brewing Co. × Ophiussa Brewing Co. - Heavy Crown",
-      "name": "Prizm Brewing Co. sour Bundle spar 20 kr.",
-      "image": "https://cdn.shopify.com/s/files/1/0776/5209/9400/files/73BD1E01-BF6B-45A6-8BD5-BD5C06B83F2A.jpg?v=1782682133",
-      "type": "Sour",
-      "abv": null,
-      "volume_cl": null,
-      "brewery": null,
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Øltanken",
-          "price": 89.0,
-          "url": "https://oltanken.dk/products/prizm-brewing-co-sour-bundle",
-          "discount_pct": 29.9,
-          "old_price": 127.0
-        }
-      ],
-      "cheapest_price": 89.0,
-      "min_price": 89.0,
-      "shop": "Øltanken",
-      "discount_pct": 29.9,
-      "max_discount_pct": 29.9
-    },
-    {
       "id": 14450,
       "slug": "hoppin-frog-brewing-qoris-the-quasher-quad-oatmeal",
       "description": "Super ekstreme Quadruple Oatmeal Russian Style Imperial Stout der vil friste, opsluge og knuse dine smagsløg som ingen anden! Q.O.R.I.S. er endnu mørkere og humlefyldt end D.O.R.I.S. Double Stout og stærkere end T.O.R.I.S. Triple Stout. Tørhumlet og først humlet med aromatiske amerikanske humle for at skabe en fantastisk og mindeværdig Imperial Stout !",
@@ -46778,32 +46648,6 @@
           "shop_name": "Vild med Vin",
           "price": 89.0,
           "url": "https://www.vildmedvin.dk/de-molen-calvados-edition-2024",
-          "discount_pct": 0,
-          "old_price": null
-        }
-      ],
-      "cheapest_price": 89.0,
-      "min_price": 89.0,
-      "shop": "Vild med Vin",
-      "discount_pct": 0,
-      "max_discount_pct": 0
-    },
-    {
-      "id": 15528,
-      "slug": "fanoe-hold-balancen",
-      "description": "Fanø – Hold Balancen er en Imperial Brown Ale, der har fået ekstra karakter gennem fadlagring. Øllen fremstår mørk og fyldig med en kompleks smagsprofil, hvor karamel, kaffe, mørk chokolade og ristede noter møder et strejf af vanilje og egetræ fra fadene. Med sin høje alkoholprocent og cremede krop er den skabt til fordybelse og nydelse i rolige omgivelser. Hold Balancen er et eksempel på Fanø Bryghus’ passion for håndværksøl, hvor både råvarer, lagring og detaljer er tænkt ind for at skabe en øl med dybde og balance.",
-      "name": "Fanø, Hold Balancen",
-      "image": "https://www.vildmedvin.dk/img/1000/1000/resize/f/a/fan_holdbalancen.jpg",
-      "type": "Brown Ale",
-      "abv": 8.6,
-      "volume_cl": 50.0,
-      "brewery": "Fanø",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Vild med Vin",
-          "price": 89.0,
-          "url": "https://www.vildmedvin.dk/fano-hold-balancen",
           "discount_pct": 0,
           "old_price": null
         }
@@ -48148,6 +47992,58 @@
       "max_discount_pct": 0
     },
     {
+      "id": 18349,
+      "slug": "lolev-beer-hyena",
+      "description": "Hyena er en saftig Hazy DIPA brygget med Riwaka, Nelson Sauvin og NZ Cascade. Silkeblød mundfylde og intense noter af passionsfrugt, hvid drue, fersken og citrus giver en moderne New England DIPA med masser af tropisk frugt, lav bitterhed og en lang, juicy afslutning.",
+      "name": "Lolev Beer - Hyena",
+      "image": "https://cdn.shopify.com/s/files/1/0776/5209/9400/files/A701B65B-2D18-499C-9E56-295CD12C2400.jpg?v=1785363256",
+      "type": "Double IPA",
+      "abv": 8.8,
+      "volume_cl": 47.3,
+      "brewery": "Lolev Beer",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Øltanken",
+          "price": 97.0,
+          "url": "https://oltanken.dk/products/lolev-beer-hyena",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 97.0,
+      "min_price": 97.0,
+      "shop": "Øltanken",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
+      "id": 18350,
+      "slug": "lolev-beer-autodidact-beer-eagle",
+      "description": "Eagle er en samarbejdsbryg mellem Lolev Beer og Autodidact Beer. Denne kraftige Hazy DIPA er humlet med Freestyle Waimea , NZ Cascade , Kohia Nelson , Super Sauvin og Nelson Bliss Hop Keif , som skaber en eksplosiv aroma af passionsfrugt, hvid drue, stikkelsbær, moden fersken og citrus. Den silkebløde mundfylde og den lave bitterhed lader de newzealandske humler skinne igennem med masser af saftighed og en lang, tropisk afslutning.",
+      "name": "Lolev Beer × Autodidact Beer - Eagle",
+      "image": "https://cdn.shopify.com/s/files/1/0776/5209/9400/files/5D15125A-897D-4E99-80EB-C50A95438DDB.jpg?v=1785363256",
+      "type": "Double IPA",
+      "abv": 8.7,
+      "volume_cl": 47.3,
+      "brewery": "Lolev Beer × Autodidact Beer",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Øltanken",
+          "price": 97.0,
+          "url": "https://oltanken.dk/products/lolev-beer-autodidact-beer-eagle",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 97.0,
+      "min_price": 97.0,
+      "shop": "Øltanken",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
       "id": 14226,
       "slug": "red-wedding-2026-fanoe-bryghus",
       "description": "Fanø Red Wedding 2026 er en intens og fyldig barley wine fra Fanø Bryghus, brygget til dem, der sætter pris på kraftige og komplekse øl. Denne øl er en del af bryggeriets populære Wedding-serie, hvor fokus er på store, smagsrige øl med dybde og karakter. Smagsprofilen er domineret af rige malttoner med nuancer af karamel, tørret frugt og let ristede noter. Den høje maltfylde giver en blød og rund mundfølelse, mens en balancerende humlekarakter tilfører struktur og dybde til øllet.",
@@ -48502,8 +48398,8 @@
       "max_discount_pct": 0
     },
     {
-      "id": 18331,
-      "slug": "frontaal-brewing-co-10-imperial-stout-15",
+      "id": 18342,
+      "slug": "frontaal-brewing-co-10-imperial-stout-16",
       "description": "10 fra Frontaal Brewing Co. er af typen Fadlageret Imperial Stout og er på 10% Denne mørke og kraftfulde Imperial Stout har modnet på Cognac-, Mirabella Whiskey- og Barbados Romfade, hvilket giver den en dyb og kompleks karakter. Øllen er brygget for at fejre Frontaals 10-års jubilæum, og det mærkes i hver tår. Smagen er rig og fyldig med tydelige noter af karamel, varme krydderier og mørke frugter som rosiner og blommer. Fadlagringen tilføjer lag af vanille, egetræ og en let sødme fra spiritussen, mens den kraftige alkoholprocent giver en varmende fornæmmelse.",
       "name": "10 - Imperial Stout 10% 44cl",
       "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/10-imperial-stout-10-44cl_9645d1f7-914c-43d6-b687-b07453f1aaf2.png?v=1761637026",
@@ -56472,6 +56368,32 @@
       "cheapest_price": 203.0,
       "min_price": 203.0,
       "shop": "Øltanken",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
+      "id": 15171,
+      "slug": "oelpakke-thisted-bryghus",
+      "description": "Thisted Bryghus er grundlagt i 1902. I starten var bryghuset primært leverandør til lokalområdet, men i de senere år har bryggeriets produkter også bevæget sig uden for lokalområderne. I dag er bryggeriet landsdækkende. Thisted Bryghus er i dag én af landets største leverandør af special øl. Thisted Bryghus er ejet af ca. 2,200 aktionærer. Omkring 1300 af disse, mødes hvert år den sidste lørdag i januar måned til den årlige generalforsamling, lokalt kaldet ” den 4. højtid i Thy ”, og der er ingen tvivl om, det er en ganske særlig begivenhed.",
+      "name": "Ølpakke - Thisted Bryghus",
+      "image": "https://www.vildmedvin.dk/img/1000/1000/resize/2/8/28925-bundle_1_20.jpg",
+      "type": "Ølpakker",
+      "abv": null,
+      "volume_cl": null,
+      "brewery": "Thisted Bryghus",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Vild med Vin",
+          "price": 203.0,
+          "url": "https://www.vildmedvin.dk/ol-pakken-fra-thisted-bryghus",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 203.0,
+      "min_price": 203.0,
+      "shop": "Vild med Vin",
       "discount_pct": 0,
       "max_discount_pct": 0
     },
