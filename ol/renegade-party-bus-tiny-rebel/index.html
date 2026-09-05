@@ -12,12 +12,12 @@
 <meta property="og:description" content="Renegade Party Bus - Tiny Rebel - - til 50,00 kr hos Beershoppen. Se pris og prishistorik – opdateret dagligt på BeerSniffer.">
 <meta property="og:type" content="product">
 <meta property="og:url" content="https://beersniffer.dk/ol/renegade-party-bus-tiny-rebel/">
-
+<meta property="og:image" content="https://cdn.shopify.com/s/files/1/0600/9438/2263/files/images_4.jpg?v=1788258287">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Renegade Party Bus - Tiny Rebel - - – 50,00 kr | BeerSniffer">
 <meta name="twitter:description" content="Renegade Party Bus - Tiny Rebel - - til 50,00 kr hos Beershoppen. Se pris og prishistorik – opdateret dagligt på BeerSniffer.">
-
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Product", "name": "Renegade Party Bus - Tiny Rebel - -", "image": null, "description": "Renegade Party Bus - Tiny Rebel - - til 50,00 kr hos Beershoppen. Se pris og prishistorik – opdateret dagligt på BeerSniffer.", "brand": {"@type": "Brand", "name": "Tiny Rebel"}, "offers": {"@type": "AggregateOffer", "lowPrice": 50.0, "priceCurrency": "DKK", "offerCount": 1, "offers": [{"@type": "Offer", "price": 50.0, "priceCurrency": "DKK", "url": "https://beershoppen.dk/products/renegade-party-bus-tiny-rebel-44-cl-8-0", "seller": {"@type": "Organization", "name": "Beershoppen"}, "availability": "https://schema.org/InStock"}]}}</script>
+<meta name="twitter:image" content="https://cdn.shopify.com/s/files/1/0600/9438/2263/files/images_4.jpg?v=1788258287">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Product", "name": "Renegade Party Bus - Tiny Rebel - -", "image": "https://cdn.shopify.com/s/files/1/0600/9438/2263/files/images_4.jpg?v=1788258287", "description": "Renegade Party Bus - Tiny Rebel - - til 50,00 kr hos Beershoppen. Se pris og prishistorik – opdateret dagligt på BeerSniffer.", "brand": {"@type": "Brand", "name": "Tiny Rebel"}, "offers": {"@type": "AggregateOffer", "lowPrice": 50.0, "priceCurrency": "DKK", "offerCount": 1, "offers": [{"@type": "Offer", "price": 50.0, "priceCurrency": "DKK", "url": "https://beershoppen.dk/products/renegade-party-bus-tiny-rebel-44-cl-8-0", "seller": {"@type": "Organization", "name": "Beershoppen"}, "availability": "https://schema.org/InStock"}]}}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "BeerSniffer", "item": "https://beersniffer.dk/"}, {"@type": "ListItem", "position": 2, "name": "Renegade Party Bus - Tiny Rebel - -", "item": "https://beersniffer.dk/ol/renegade-party-bus-tiny-rebel/"}]}</script>
 <style>
 :root {
@@ -115,7 +115,7 @@ body { background: var(--bg); color: var(--text); font-family: 'DM Sans', sans-s
         <span class="back-link">← Alle øltilbud</span>
     </a>
     <div class="beer-header">
-        <div class="beer-image-placeholder">🍺</div>
+        <div class="beer-image-col"><div class="beer-image-wrap" onclick="openLightbox('https://cdn.shopify.com/s/files/1/0600/9438/2263/files/images_4.jpg?v=1788258287', 'Renegade Party Bus - Tiny Rebel - -')"><img class="beer-image" src="https://cdn.shopify.com/s/files/1/0600/9438/2263/files/images_4.jpg?v=1788258287" alt="Renegade Party Bus - Tiny Rebel - -" loading="eager"></div><button class="zoom-link" onclick="openLightbox('https://cdn.shopify.com/s/files/1/0600/9438/2263/files/images_4.jpg?v=1788258287', 'Renegade Party Bus - Tiny Rebel - -')">🔍 Se i fuld størrelse</button></div>
         <div class="beer-info">
             <h1>Renegade Party Bus - Tiny Rebel - -</h1>
             <div class="beer-brewery"><a href="https://beersniffer.dk/bryggeri/tiny-rebel/">Tiny Rebel</a></div>
@@ -125,7 +125,7 @@ body { background: var(--bg); color: var(--text); font-family: 'DM Sans', sans-s
 
     <div class="about-section">
         <div class="about-heading">Om øllet</div>
-        Tiny Rebel fra Wales brygger denne DIPA med 6 forsk, humle typer. En let bitter citrus præget ipa
+        Tiny Rebel - Renegade Party Bus 8,0% | DIPA En humlerig DIPA fra Tiny Rebel i Wales, brygget med seks forskellige humletyper. Den let bitre og citrusprægede profil giver en frisk og intens øloplevelse.
     </div>
 
     <div class="price-rows">
@@ -176,10 +176,27 @@ body { background: var(--bg); color: var(--text); font-family: 'DM Sans', sans-s
 
     <div class="disclaimer">
         📢 Affiliate disclosure: BeerSniffer kan modtage provision når du køber via vores links.
-        Priser opdateret 28.08.2026. Tjek altid den endelige pris hos forhandleren før køb.
+        Priser opdateret 05.09.2026. Tjek altid den endelige pris hos forhandleren før køb.
     </div>
 </div>
 
-
+<div class="lightbox" id="lightbox" onclick="closeLightbox()">
+    <button class="lightbox-close" onclick="event.stopPropagation();closeLightbox()" aria-label="Luk">✕</button>
+    <img id="lightbox-img" src="" alt="">
+</div>
+<script>
+function openLightbox(src, alt) {
+    const lb = document.getElementById('lightbox');
+    document.getElementById('lightbox-img').src = src;
+    document.getElementById('lightbox-img').alt = alt;
+    lb.classList.add('open');
+    document.body.style.overflow = 'hidden';
+}
+function closeLightbox() {
+    document.getElementById('lightbox').classList.remove('open');
+    document.body.style.overflow = '';
+}
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLightbox(); });
+</script>
 </body>
 </html>
