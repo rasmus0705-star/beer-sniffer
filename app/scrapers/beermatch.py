@@ -5,6 +5,11 @@ import html
 from app.utils.detect_type import detect_type
 from app.utils.description import clean_description
 
+SHOP_NAME = "Beermatch"
+SHOP_URL = "https://www.beermatch.dk"
+SHOP_SHIPPING = {'price': 69, 'freeOver': 599, 'note': 'Levering med GLS eller PostNord til pakkeshop'}
+
+
 # Beermatch.dk er en Shopify-shop. Vol + ABV ligger i body_html paa hvert
 # produkt ("Alcohol: 8 %", "Size: 440 ml."), saa vi behoever INGEN
 # sidehentning og INGEN pagecache (modsat oeltanken.py).

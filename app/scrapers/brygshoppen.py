@@ -6,6 +6,11 @@ from app.utils.slugify import is_valid_brewery
 from app.utils.slugify import is_valid_brewery
 from app.utils.description import clean_description
 
+SHOP_NAME = "Brygshoppen"
+SHOP_URL = "https://brygshoppen.dk"
+SHOP_SHIPPING = None
+
+
 
 HEADERS = {
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",

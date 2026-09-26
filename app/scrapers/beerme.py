@@ -8,6 +8,11 @@ from app.utils.detect_type import detect_type
 
 # --- PERF: persistent volumen/ABV-cache (vol/abv aendrer sig aldrig pr. produkt) ---
 import json as _json, os as _os
+
+SHOP_NAME = "Beer Me"
+SHOP_URL = "https://beerme.dk"
+SHOP_SHIPPING = None
+
 _CACHE_PATH = _os.path.join(_os.path.dirname(__file__), "_pagecache_beerme.json")
 _page_cache = {}
 _cache_hits = 0

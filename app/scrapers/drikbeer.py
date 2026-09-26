@@ -7,6 +7,11 @@ from app.utils.slugify import is_valid_brewery
 from app.utils.slugify import is_valid_brewery
 from app.utils.description import clean_description
 
+SHOP_NAME = "Drikbeer"
+SHOP_URL = "https://drikbeer.com"
+SHOP_SHIPPING = {'price': 49, 'freeOver': 750, 'note': 'Levering til pakkeshop eller hjemmeadresse'}
+
+
 # Drikbeer.com er en Shopify-shop (niche US/belgisk import). Vol + ABV ligger i
 # body_html ("ABV: 13.0%", "Size: 330ML"), saa ingen sidehentning/cache noedvendig.
 # Forskelle fra beermatch.py:

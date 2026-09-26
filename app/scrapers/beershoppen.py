@@ -5,6 +5,11 @@ from app.utils.detect_type import detect_type
 from app.utils.slugify import is_valid_brewery
 from app.utils.description import clean_description
 
+SHOP_NAME = "Beershoppen"
+SHOP_URL = "https://beershoppen.dk"
+SHOP_SHIPPING = {'price': 68, 'freeOver': 899, 'note': 'Levering med GLS eller PostNord'}
+
+
 
 HEADERS = {
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",

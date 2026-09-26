@@ -5,6 +5,11 @@ import html
 from app.utils.detect_type import detect_type
 from app.utils.description import clean_description
 
+SHOP_NAME = "A Good Case"
+SHOP_URL = "https://agoodcase.dk"
+SHOP_SHIPPING = {'price': 59, 'freeOver': 499, 'note': 'Levering med Burd eller PostNord'}
+
+
 
 HEADERS = {
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",

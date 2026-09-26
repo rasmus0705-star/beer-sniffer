@@ -9,6 +9,11 @@ from app.utils.description import clean_description
 
 # --- PERF: persistent volumen/ABV-cache (vol/abv aendrer sig aldrig pr. produkt) ---
 import json as _json, os as _os
+
+SHOP_NAME = "Øltanken"
+SHOP_URL = "https://oltanken.dk"
+SHOP_SHIPPING = {'price': 49, 'freeOver': 899, 'note': 'Levering til pakkeshop, 2-3 hverdage'}
+
 _CACHE_PATH = _os.path.join(_os.path.dirname(__file__), "_pagecache_oeltanken.json")
 _page_cache = {}
 _cache_hits = 0

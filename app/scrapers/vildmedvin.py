@@ -1,8 +1,14 @@
 import requests
 import xml.etree.ElementTree as ET
 import re
+from concurrent.futures import ThreadPoolExecutor, as_completed
 from app.utils.detect_type import detect_type
 from app.utils.description import clean_description
+
+SHOP_NAME = "Vild med Vin"
+SHOP_URL = "https://vildmedvin.dk"
+SHOP_SHIPPING = {'price': 29, 'freeOver': 399, 'note': 'Levering til pakkeshop'}
+
 
 
 # --- Brewery-fallback: udled bryggeri fra titel naar g:brand er tom ---
@@ -114,6 +120,29 @@ def parse_abv(description):
             return val
 
     return None
+
+
+def _check_url(url):
+    """Tjek om en enkelt produkt-URL eksisterer (ikke redirecter til /error)."""
+    try:
+        resp = requests.get(url, headers=HEADERS, timeout=3, allow_redirects=True, stream=True)
+        valid = resp.status_code == 200 and "/error" not in resp.url
+        resp.close()
+        return url, valid
+    except:
+        return url, False
+
+
+def validate_urls(urls, workers=10):
+    """Batch-valider en liste af URL'er parallelt. Returnerer set af gyldige URL'er."""
+    valid = set()
+    with ThreadPoolExecutor(max_workers=workers) as pool:
+        futures = {pool.submit(_check_url, u): u for u in urls}
+        for f in as_completed(futures):
+            url, ok = f.result()
+            if ok:
+                valid.add(url)
+    return valid
 
 
 def scrape_vildmedvin():
@@ -231,7 +260,15 @@ def scrape_vildmedvin():
 
         items.append(item_dict)
 
-    print(f"📦 Vild med Vin: {len(items)} produkter hentet")
+    # Batch-valider alle URL'er parallelt
+    all_urls = [it["url"] for it in items]
+    print(f"🔗 Validerer {len(all_urls)} URL'er...")
+    valid_urls = validate_urls(all_urls)
+    before = len(items)
+    items = [it for it in items if it["url"] in valid_urls]
+    skipped = before - len(items)
+
+    print(f"📦 Vild med Vin: {len(items)} produkter hentet ({skipped} døde URL'er filtreret)")
     return items
 
 
