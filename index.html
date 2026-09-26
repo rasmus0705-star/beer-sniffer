@@ -1326,7 +1326,7 @@
 
 <section class="seo-section">
     <h2>Find de bedste øltilbud online</h2>
-    <p>BeerSniffer hjælper dig med at finde de billigste priser på specialøl fra danske webshops. Vi sammenligner IPA, stout, pilsner, sour og meget mere på tværs af butikker som Brygshoppen, A Good Case, Beershoppen, Best of Beers, Øltanken, Beer Me, Vild med Vin, Beermatch, Drikbeer og ØL2GO – så du altid får den bedste pris uden at bruge timer på at søge selv.</p>
+    <p>BeerSniffer hjælper dig med at finde de billigste priser på specialøl fra danske webshops. Vi sammenligner IPA, stout, pilsner, sour og meget mere på tværs af butikker som A Good Case, BeerBarrel, Beermatch, Beer Me, Beershoppen, Best of Beers, Brygshoppen, Drikbeer, Humledrik, Øltanken, ØL2GO og Vild med Vin – så du altid får den bedste pris uden at bruge timer på at søge selv.</p>
 </section>
 
 <footer>
@@ -1345,16 +1345,18 @@
         </div>
         <div class="footer-col">
             <span class="footer-col-title">Butikker</span>
-            <a href="https://brygshoppen.dk" target="_blank" rel="noopener">Brygshoppen</a>
             <a href="https://agoodcase.dk" target="_blank" rel="noopener">A Good Case</a>
+            <a href="https://www.beerbarrel.dk" target="_blank" rel="noopener">BeerBarrel</a>
+            <a href="https://www.beermatch.dk" target="_blank" rel="noopener">Beermatch</a>
+            <a href="https://beerme.dk" target="_blank" rel="noopener">Beer Me</a>
             <a href="https://beershoppen.dk" target="_blank" rel="noopener">Beershoppen</a>
             <a href="https://bestofbeers.dk" target="_blank" rel="noopener">Best of Beers</a>
-            <a href="https://oltanken.dk" target="_blank" rel="noopener">Øltanken</a>
-            <a href="https://beerme.dk" target="_blank" rel="noopener">Beer Me</a>
-            <a href="https://vildmedvin.dk" target="_blank" rel="noopener">Vild med Vin</a>
-            <a href="https://www.beermatch.dk" target="_blank" rel="noopener">Beermatch</a>
+            <a href="https://brygshoppen.dk" target="_blank" rel="noopener">Brygshoppen</a>
             <a href="https://drikbeer.com" target="_blank" rel="noopener">Drikbeer</a>
+            <a href="https://humledrik.dk" target="_blank" rel="noopener">Humledrik</a>
+            <a href="https://oltanken.dk" target="_blank" rel="noopener">Øltanken</a>
             <a href="https://ol2go.dk" target="_blank" rel="noopener">ØL2GO</a>
+            <a href="https://vildmedvin.dk" target="_blank" rel="noopener">Vild med Vin</a>
         </div>
         <div class="footer-col">
             <span class="footer-col-title">Kontakt</span>
@@ -1367,22 +1369,23 @@
 
 <script>
     // AUTO-STEMPLES af stamp_data_version.py ved hvert build — rediger ikke manuelt
-    const DATA_VERSION = '20260926-0751';
+    const DATA_VERSION = '20260926-0913';
 
     const PAGE_SIZE = 50;
 
     const SHIPPING = {
-        'A Good Case':   { price: 59,  freeOver: 499, note: 'Levering med Burd eller PostNord' },
-        'Beershoppen':   { price: 68,  freeOver: 899, note: 'Levering med GLS eller PostNord' },
-        'Best of Beers': { price: 39,  freeOver: 499, note: 'Levering 1-3 hverdage' },
-        'Øltanken':      { price: 49,  freeOver: 899, note: 'Levering til pakkeshop, 2-3 hverdage' },
-        'Vild med Vin':  { price: 29,  freeOver: 399, note: 'Levering til pakkeshop' },
-        'Beermatch':     { price: 69,  freeOver: 599, note: 'Levering med GLS eller PostNord til pakkeshop' },
-        'Drikbeer':      { price: 49,  freeOver: 750, note: 'Levering til pakkeshop eller hjemmeadresse' },
-        'ØL2GO':         { price: 49,  freeOver: 599, note: 'Levering med GLS' },
-        // Brygshoppen og Beer Me udeladt bevidst — begge beregner nu
-        // fragt ved checkout uden et fast offentligt beløb. Knappen
-        // falder automatisk tilbage til "ikke tilgængelig"-visningen.
+        'A Good Case': { price: 59, freeOver: 499, note: 'Levering med Burd eller PostNord' },
+        'BeerBarrel': { price: 60, freeOver: 599, note: 'Gratis til pakkeshop ved køb over 599 kr.' },
+        'Beermatch': { price: 69, freeOver: 599, note: 'Levering med GLS eller PostNord til pakkeshop' },
+        'Beershoppen': { price: 68, freeOver: 899, note: 'Levering med GLS eller PostNord' },
+        'Best of Beers': { price: 39, freeOver: 499, note: 'Levering 1-3 hverdage' },
+        'Drikbeer': { price: 49, freeOver: 750, note: 'Levering til pakkeshop eller hjemmeadresse' },
+        'Humledrik': { price: 59, freeOver: 699, note: 'PostNord. Gratis levering på Fyn ved køb over 299 kr.' },
+        'Øltanken': { price: 49, freeOver: 899, note: 'Levering til pakkeshop, 2-3 hverdage' },
+        'ØL2GO': { price: 49, freeOver: 599, note: 'Levering med GLS' },
+        'Vild med Vin': { price: 29, freeOver: 399, note: 'Levering til pakkeshop' },
+        // Butikker uden shipping-info beregner fragt ved checkout
+        // og falder automatisk tilbage til 'ikke tilgængelig'-visningen.
     };
 
     let allBeers = [];
