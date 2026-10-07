@@ -38,6 +38,7 @@ HEADERS = {
 
 SIDE_PAUSE = 0.2
 SIDE_TIMEOUT = 12
+RECHECK_DAYS = 14  # sider uden vol/abv tjekkes igen efter så mange dage
 
 # Produktsider hentes som HTML (Beer Me's feed-HEADERS er ikke til HTML-sider).
 SIDE_HEADERS = {
@@ -98,18 +99,23 @@ def _page_abv(text):
     return None
 
 
+_SIDE_SESSION = requests.Session()
+_SIDE_SESSION.headers.update(SIDE_HEADERS)
+
+
 def _fetch_from_page(vareurl):
-    """Hent (volume_cl, abv) fra Beer Me produktside. Hver kan være None."""
+    """Hent (volume_cl, abv, ok) fra Beer Me produktside.
+    ok=False ved netværksfejl/ikke-200 — så markeres siden ikke som tjekket."""
     url = _real_url(vareurl)
     if not url:
-        return None, None
+        return None, None, True
     try:
-        r = requests.get(url, headers=SIDE_HEADERS, timeout=SIDE_TIMEOUT)
+        r = _SIDE_SESSION.get(url, timeout=SIDE_TIMEOUT)
         if r.status_code != 200:
-            return None, None
+            return None, None, False
     except Exception:
-        return None, None
-    return _page_volume(r.text), _page_abv(r.text)
+        return None, None, False
+    return _page_volume(r.text), _page_abv(r.text), True
 
 MOJIBAKE_FIXES = [
     ('Â·', '·'),
@@ -280,6 +286,7 @@ def scrape_beerme():
         # SIDEHENTNING — kun for enkeltøl der mangler volumen/abv.
         # Henter faktiske værdier fra produktsiden (format: 'ABV: 11,3% · Flaske: 50 cl').
         # SIDEHENTNING med cache: spring over hvis vi allerede har begge vaerdier
+        global _cache_hits, _cache_fetches
         _key = url
         _cached = _page_cache.get(_key)
         _need_fetch = (not is_smagekasse and not _is_glas(name)) and (volume is None or abv is None)
@@ -289,12 +296,12 @@ def scrape_beerme():
             if abv is None and _cached.get("abv") is not None:
                 abv = _cached["abv"]
             _need_fetch = (volume is None or abv is None)
-        if _need_fetch and _cached:
-            global _cache_hits
-            _cache_hits += 1
+            # Siden er tjekket for nylig og havde ikke de manglende værdier
+            # -> spring over indtil RECHECK_DAYS er gået.
+            if _need_fetch and _cached.get("checked", 0) > time.time() - RECHECK_DAYS * 86400:
+                _need_fetch = False
         if _need_fetch:
-            p_vol, p_abv = _fetch_from_page(url)
-            global _cache_fetches
+            p_vol, p_abv, p_ok = _fetch_from_page(url)
             _cache_fetches += 1
             if volume is None and p_vol is not None:
                 volume = p_vol
@@ -305,6 +312,8 @@ def scrape_beerme():
                 _merged["vol"] = volume
             if abv is not None:
                 _merged["abv"] = abv
+            if p_ok:
+                _merged["checked"] = time.time()
             if _merged:
                 _page_cache[_key] = _merged
             time.sleep(SIDE_PAUSE)

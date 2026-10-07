@@ -1,6 +1,10 @@
 import requests
 import xml.etree.ElementTree as ET
 import re
+import json
+import os
+import time
+from requests.adapters import HTTPAdapter
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from app.utils.detect_type import detect_type
 from app.utils.description import clean_description
@@ -54,6 +58,11 @@ HEADERS = {
 
 # Google Shopping namespace
 NS = {"g": "http://base.google.com/ns/1.0"}
+
+# --- URL-validering: session, HEAD-requests og cache ---
+URL_WORKERS = 25
+URL_CACHE_FILE = os.path.join(os.path.dirname(__file__), "vildmedvin_url_cache.json")
+URL_CACHE_TTL = 3 * 24 * 3600  # gyldige URL'er gentjekkes hver 3. dag
 
 
 def parse_price(price_str):
@@ -122,26 +131,67 @@ def parse_abv(description):
     return None
 
 
-def _check_url(url):
-    """Tjek om en enkelt produkt-URL eksisterer (ikke redirecter til /error)."""
+def _make_session(workers):
+    """Session med connection pooling, så vi ikke laver nyt TCP/TLS-handshake per URL."""
+    s = requests.Session()
+    s.headers.update(HEADERS)
+    adapter = HTTPAdapter(pool_connections=workers, pool_maxsize=workers, max_retries=1)
+    s.mount("https://", adapter)
+    s.mount("http://", adapter)
+    return s
+
+
+def _check_url(session, url):
+    """Tjek om en enkelt produkt-URL eksisterer (ikke redirecter til /error).
+    Returnerer (url, True) = OK, (url, False) = død, (url, None) = kunne ikke afgøres."""
     try:
-        resp = requests.get(url, headers=HEADERS, timeout=3, allow_redirects=True, stream=True)
-        valid = resp.status_code == 200 and "/error" not in resp.url
-        resp.close()
-        return url, valid
-    except:
-        return url, False
+        resp = session.head(url, timeout=5, allow_redirects=True)
+        if resp.status_code in (403, 405):  # server understøtter ikke HEAD
+            resp = session.get(url, timeout=5, allow_redirects=True, stream=True)
+            resp.close()
+        return url, resp.status_code == 200 and "/error" not in resp.url
+    except requests.RequestException:
+        return url, None
 
 
-def validate_urls(urls, workers=10):
-    """Batch-valider en liste af URL'er parallelt. Returnerer set af gyldige URL'er."""
-    valid = set()
+def _load_cache():
+    try:
+        with open(URL_CACHE_FILE, encoding="utf-8") as f:
+            return json.load(f)
+    except (FileNotFoundError, json.JSONDecodeError):
+        return {}
+
+
+def _save_cache(cache):
+    with open(URL_CACHE_FILE, "w", encoding="utf-8") as f:
+        json.dump(cache, f)
+
+
+def validate_urls(urls, workers=URL_WORKERS):
+    """Batch-valider en liste af URL'er parallelt. Returnerer set af gyldige URL'er.
+    Bruger en lokal cache, så URL'er der var OK for nylig springes over."""
+    now = time.time()
+    cache = _load_cache()
+    valid = {u for u in urls if now - cache.get(u, 0) < URL_CACHE_TTL}
+    to_check = [u for u in urls if u not in valid]
+    print(f"   {len(valid)} fra cache, tjekker {len(to_check)}...")
+
+    session = _make_session(workers)
     with ThreadPoolExecutor(max_workers=workers) as pool:
-        futures = {pool.submit(_check_url, u): u for u in urls}
+        futures = [pool.submit(_check_url, session, u) for u in to_check]
         for f in as_completed(futures):
             url, ok = f.result()
             if ok:
                 valid.add(url)
+                cache[url] = now
+            elif ok is None:
+                valid.add(url)  # kunne ikke afgøres: behold produktet, men cache ikke
+            else:
+                cache.pop(url, None)
+
+    # ryd gamle URL'er ud af cachen
+    cache = {u: t for u, t in cache.items() if now - t < URL_CACHE_TTL}
+    _save_cache(cache)
     return valid
 
 
@@ -260,7 +310,7 @@ def scrape_vildmedvin():
 
         items.append(item_dict)
 
-    # Batch-valider alle URL'er parallelt
+    # Batch-valider alle URL'er parallelt (med cache)
     all_urls = [it["url"] for it in items]
     print(f"🔗 Validerer {len(all_urls)} URL'er...")
     valid_urls = validate_urls(all_urls)
