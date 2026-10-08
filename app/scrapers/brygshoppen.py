@@ -5,6 +5,7 @@ from app.utils.detect_type import detect_type
 from app.utils.slugify import is_valid_brewery
 from app.utils.slugify import is_valid_brewery
 from app.utils.description import clean_description
+from app.utils.shopify import shopify_pages
 
 SHOP_NAME = "Brygshoppen"
 SHOP_URL = "https://brygshoppen.dk"
@@ -45,19 +46,7 @@ def scrape_brygshoppen():
         "tasting box", "gift box", "bundle",
     ]
 
-    while True:
-        url = f"https://brygshoppen.dk/products.json?limit=250&page={page}"
-        try:
-            response = requests.get(url, headers=HEADERS, timeout=30)
-            data = response.json()
-        except Exception as e:
-            print(f"❌ Brygshoppen fejl på side {page}: {e}")
-            break
-
-        products = data.get("products", [])
-        if not products:
-            break
-
+    for page, products in shopify_pages("https://brygshoppen.dk", "Brygshoppen", HEADERS):
         for product in products:
             name = product.get("title")
             if not name:
@@ -159,9 +148,6 @@ def scrape_brygshoppen():
             items.append(item)
 
         print(f"📦 Brygshoppen side {page}: {len(products)} produkter hentet")
-        page += 1
-
-        time.sleep(1.0)
     return items
 
 

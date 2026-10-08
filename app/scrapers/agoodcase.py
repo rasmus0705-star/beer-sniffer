@@ -4,6 +4,7 @@ import re
 import html
 from app.utils.detect_type import detect_type
 from app.utils.description import clean_description
+from app.utils.shopify import shopify_pages
 
 SHOP_NAME = "A Good Case"
 SHOP_URL = "https://agoodcase.dk"
@@ -106,19 +107,7 @@ def scrape_agoodcase():
                 return vol
         return None
 
-    while True:
-        url = f"https://agoodcase.dk/products.json?limit=250&page={page}"
-        try:
-            response = requests.get(url, headers=HEADERS, timeout=30)
-            data = response.json()
-        except Exception as e:
-            print(f"❌ A Good Case fejl på side {page}: {e}")
-            break
-
-        products = data.get("products", [])
-        if not products:
-            break
-
+    for page, products in shopify_pages("https://agoodcase.dk", SHOP_NAME, HEADERS):
         for product in products:
             name = product.get("title")
             if not name:
@@ -275,9 +264,6 @@ def scrape_agoodcase():
             items.append(item)
 
         print(f"📦 A Good Case side {page}: {len(products)} produkter hentet")
-        page += 1
-
-        time.sleep(1.0)
     return items
 
 

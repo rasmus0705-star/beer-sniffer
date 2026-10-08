@@ -4,6 +4,7 @@ import re
 import html
 from app.utils.detect_type import detect_type
 from app.utils.description import clean_description
+from app.utils.shopify import shopify_pages
 
 SHOP_NAME = "Beermatch"
 SHOP_URL = "https://www.beermatch.dk"
@@ -102,19 +103,7 @@ def scrape_beermatch():
         "super bowl", "v\u00e6lg",
     ]
 
-    while True:
-        url = f"{BASE}/products.json?limit=250&page={page}"
-        try:
-            response = requests.get(url, headers=HEADERS, timeout=30)
-            data = response.json()
-        except Exception as e:
-            print(f"\u274c Beermatch fejl paa side {page}: {e}")
-            break
-
-        products = data.get("products", [])
-        if not products:
-            break
-
+    for page, products in shopify_pages(BASE, SHOP_NAME, HEADERS):
         for product in products:
             name = product.get("title")
             if not name:
@@ -213,9 +202,6 @@ def scrape_beermatch():
             items.append(item)
 
         print(f"\U0001f4e6 Beermatch side {page}: {len(products)} produkter hentet")
-        page += 1
-
-        time.sleep(1.0)
     return items
 
 

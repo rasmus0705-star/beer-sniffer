@@ -6,6 +6,7 @@ from app.utils.detect_type import detect_type
 from app.utils.slugify import is_valid_brewery
 from app.utils.slugify import is_valid_brewery
 from app.utils.description import clean_description
+from app.utils.shopify import shopify_pages
 
 SHOP_NAME = "Drikbeer"
 SHOP_URL = "https://drikbeer.com"
@@ -116,19 +117,7 @@ def scrape_drikbeer():
         "pakke", "pakken",
     ]
 
-    while True:
-        url = f"{BASE}/products.json?limit=250&page={page}"
-        try:
-            response = requests.get(url, headers=HEADERS, timeout=30)
-            data = response.json()
-        except Exception as e:
-            print(f"\u274c Drikbeer fejl paa side {page}: {e}")
-            break
-
-        products = data.get("products", [])
-        if not products:
-            break
-
+    for page, products in shopify_pages(BASE, SHOP_NAME, HEADERS):
         for product in products:
             name = product.get("title")
             if not name:
@@ -234,9 +223,6 @@ def scrape_drikbeer():
             items.append(item)
 
         print(f"\U0001f4e6 Drikbeer side {page}: {len(products)} produkter hentet")
-        page += 1
-
-        time.sleep(1.0)
     return items
 
 
