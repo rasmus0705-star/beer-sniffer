@@ -13,9 +13,13 @@
     <meta property="og:url" content="https://beersniffer.dk/">
     <meta property="og:type" content="website">
     <link rel="canonical" href="https://beersniffer.dk/">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Selvhostede fonts (ingen data til Google) -->
+    <link rel="preload" href="/fonts/bebas-neue-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/fonts/dm-sans-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+    <!-- PWA -->
+    <link rel="manifest" href="/manifest.webmanifest">
+    <meta name="theme-color" content="#0a0805">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
     <!-- SEO: WebSite schema -->
     <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"BeerSniffer","url":"https://beersniffer.dk","potentialAction":{"@type":"SearchAction","target":"https://beersniffer.dk/?q={search_term_string}","query-input":"required name=search_term_string"}}</script>
     <!-- SEO: Product/ItemList schema — injected dynamically after data load -->
@@ -28,6 +32,20 @@
         gtag('config', 'G-WLVKNJ5DS2');
     </script>
     <style>
+        @font-face {
+            font-family: 'Bebas Neue';
+            font-style: normal;
+            font-weight: 400;
+            font-display: swap;
+            src: url('/fonts/bebas-neue-latin-400-normal.woff2') format('woff2');
+        }
+        @font-face {
+            font-family: 'DM Sans';
+            font-style: normal;
+            font-weight: 100 1000;
+            font-display: swap;
+            src: url('/fonts/dm-sans-latin-wght-normal.woff2') format('woff2');
+        }
         :root {
             --bg: #0a0805;
             --surface: #141009;
@@ -38,8 +56,8 @@
             --gold-dim: #7a5a08;
             --amber: #d4620a;
             --text: #f0e6d0;
-            --text-muted: #7a6e5a;
-            --text-dim: #4a4238;
+            --text-muted: #a09580;
+            --text-dim: #8a7f6b;
             --border: #28200e;
             --border-light: #3a3020;
             --discount: #3dba6f;
@@ -317,7 +335,7 @@
         }
         .stat.clickable:hover::after { opacity: 1; }
         .stat-number { font-family: 'Bebas Neue', sans-serif; font-size: 1.25rem; color: var(--gold-light); line-height: 1; }
-        .stat-label { font-size: 0.58rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--text-muted); }
+        .stat-label { font-size: 0.66rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--text-muted); }
 
         .top-deals-section {
             padding: 1.2rem 1.5rem;
@@ -435,6 +453,7 @@
             position: sticky;
             top: 0;
             height: 100vh;
+            height: 100dvh;
             overflow-y: auto;
             align-self: flex-start;
             scrollbar-width: thin;
@@ -1038,6 +1057,7 @@
                 width: 88%;
                 max-width: 380px;
                 height: 100vh;
+                height: 100dvh;
                 z-index: 9998;
                 transition: left 0.3s ease;
                 box-shadow: 4px 0 30px rgba(0,0,0,0.8);
@@ -1102,7 +1122,7 @@
             .mini-header .mini-tagline { display: none; }
             .stat { padding: 0.6rem 0.7rem; max-width: none; }
             .stat-number { font-size: 1.5rem; }
-            .stat-label { font-size: 0.52rem; }
+            .stat-label { font-size: 0.6rem; }
             .grid { grid-template-columns: repeat(2, 1fr); gap: 0.5rem; }
             .grid-wrap { padding: 0.6rem; }
             .card-img, .card-img-placeholder { height: 120px; }
@@ -1140,6 +1160,92 @@
                 text-align: center;
             }
         }
+
+        /* ══════════ Tilgængelighed, bevægelse, nye elementer ══════════ */
+        .stat.clickable:focus-visible,
+        .more-shops-toggle:focus-visible,
+        .shipping-btn:focus-visible,
+        .fav-btn:focus-visible,
+        .top-card:focus-visible,
+        .top-deals-see-all:focus-visible,
+        .sidebar-checkbox:focus-visible,
+        .sidebar-chip:focus-visible,
+        .filter-chip .x:focus-visible,
+        .untappd-btn:focus-visible,
+        .mobile-filter-btn:focus-visible,
+        .sidebar-mobile-close:focus-visible {
+            outline: 2px solid var(--gold);
+            outline-offset: 2px;
+        }
+        /* knapper der tidligere var span/div */
+        button.shipping-btn { font-family: inherit; padding: 0; appearance: none; -webkit-appearance: none; }
+        button.more-shops-toggle { font-family: inherit; width: 100%; appearance: none; -webkit-appearance: none; }
+        .top-deals-see-all { display: inline-block; min-height: 32px; line-height: 32px; }
+
+        /* Billigst / udsolgt */
+        .best-badge {
+            font-size: 0.54rem; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase;
+            color: #000; background: linear-gradient(135deg, #ffd54a, #ffb300);
+            padding: 0.12rem 0.4rem; border-radius: 4px; white-space: nowrap; flex-shrink: 0;
+        }
+        .oos-badge {
+            font-size: 0.58rem; font-weight: 800; color: #ff8a80; border: 1px solid rgba(255,138,128,0.4);
+            padding: 0.1rem 0.35rem; border-radius: 4px; white-space: nowrap; flex-shrink: 0;
+        }
+        .tag-oos { background: rgba(255,138,128,0.1); color: #ff8a80; border-color: rgba(255,138,128,0.3); }
+        .price-row-oos .price-row-amount { color: #8a7e6a; text-shadow: none; }
+        .price-row-oos .price-row-link { background: var(--surface3); color: var(--text-muted); box-shadow: none; }
+
+        /* Skeleton-loading i stedet for spinner */
+        #loading { padding: 0; }
+        .skeleton-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 210px), 1fr)); gap: clamp(0.6rem, 1vw, 1rem); }
+        .skeleton-card { background: var(--surface); border: 1px solid var(--border); border-radius: 16px; padding: 1rem; display: flex; flex-direction: column; gap: 0.7rem; }
+        .sk-img, .sk-line {
+            background: linear-gradient(90deg, var(--surface2) 25%, var(--surface3) 50%, var(--surface2) 75%);
+            background-size: 200% 100%;
+            animation: shimmer 1.4s linear infinite;
+            border-radius: 8px;
+        }
+        .sk-img { height: 135px; }
+        .sk-line { height: 12px; }
+        .sk-line.short { width: 55%; }
+        .sk-line.price { height: 34px; margin-top: 0.3rem; }
+        @keyframes shimmer { to { background-position: -200% 0; } }
+        .sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; }
+
+        /* Hurtigere rendering af lange lister */
+        .card { content-visibility: auto; contain-intrinsic-size: auto 520px; }
+
+        /* Respekter systemets "reducer bevægelse" */
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+                scroll-behavior: auto !important;
+            }
+            .mascot-wrap::before { animation: none; }
+        }
+
+        /* Kompakt hero på mobil: første øl kommer tidligere op */
+        @media (max-width: 640px) {
+            .logo-img { width: 110px; }
+            .brand-sub, .hero-search-sub { display: none; }
+            .stats-bar { flex-wrap: nowrap; overflow-x: auto; justify-content: flex-start; scrollbar-width: none; padding: 0.15rem 0.75rem 0.75rem; }
+            .stats-bar::-webkit-scrollbar { display: none; }
+            .stat { flex: 0 0 auto; padding: 0.45rem 0.8rem; }
+            .stat-number { font-size: 1.3rem; }
+        }
+
+        /* Laveste-pris-mærke */
+        .tag-low { background: rgba(61,186,111,0.12); color: #3dba6f; border-color: rgba(61,186,111,0.35); font-weight: 700; }
+
+        /* Fragt-ikon sidder ved butiksnavnet: prisen får hele bredden */
+        .price-row-header .shipping-btn { width: 26px; height: 26px; margin: -5px 0; font-size: 0.72rem; }
+        /* Hvis pris + Køb ikke kan stå ved siden af hinanden, falder Køb ned under prisen */
+        .price-row-main { flex-wrap: wrap; }
+        .price-row-left { flex: 1 1 auto; min-width: 0; }
+        .price-row-actions { margin-left: auto; }
     </style>
 </head>
 <body>
@@ -1181,35 +1287,35 @@
                 aria-label="Søg efter øl, bryggeri eller stilart">
         </div>
         <div class="category-bar" id="category-bar" role="navigation" aria-label="Hurtigt filter efter kategori">
-            <button class="cat-btn" data-cat="deals"      onclick="quickCat('deals')">🔥 Tilbud</button>
-            <button class="cat-btn" data-cat="IPA"         onclick="quickCat('IPA')">🍺 IPA</button>
-            <button class="cat-btn" data-cat="Stout"       onclick="quickCat('Stout')">🖤 Stout</button>
-            <button class="cat-btn" data-cat="Sour"        onclick="quickCat('Sour')">🍋 Sour</button>
-            <button class="cat-btn" data-cat="Pilsner"     onclick="quickCat('Pilsner')">🍻 Pilsner</button>
-            <button class="cat-btn" data-cat="Pale Ale"    onclick="quickCat('Pale Ale')">🌾 Pale Ale</button>
-            <button class="cat-btn" data-cat="Porter"      onclick="quickCat('Porter')">☕ Porter</button>
-            <button class="cat-btn" data-cat="Hvedeøl"     onclick="quickCat('Hvedeøl')">🌾 Hvedeøl</button>
-            <button class="cat-btn" data-cat="Barley Wine" onclick="quickCat('Barley Wine')">🍷 Barley Wine</button>
-            <button class="cat-btn" data-cat="Saison"      onclick="quickCat('Saison')">🌿 Saison</button>
-            <button class="cat-btn" data-cat="Lager"       onclick="quickCat('Lager')">🥂 Lager</button>
-            <button class="cat-btn" data-cat="smagekasse"  onclick="quickCat('smagekasse')">📦 Smagekasser</button>
+            <button class="cat-btn" data-cat="deals"      onclick="quickCat('deals')">Tilbud</button>
+            <button class="cat-btn" data-cat="IPA"         onclick="quickCat('IPA')">IPA</button>
+            <button class="cat-btn" data-cat="Stout"       onclick="quickCat('Stout')">Stout</button>
+            <button class="cat-btn" data-cat="Sour"        onclick="quickCat('Sour')">Sour</button>
+            <button class="cat-btn" data-cat="Pilsner"     onclick="quickCat('Pilsner')">Pilsner</button>
+            <button class="cat-btn" data-cat="Pale Ale"    onclick="quickCat('Pale Ale')">Pale Ale</button>
+            <button class="cat-btn" data-cat="Porter"      onclick="quickCat('Porter')">Porter</button>
+            <button class="cat-btn" data-cat="Hvedeøl"     onclick="quickCat('Hvedeøl')">Hvedeøl</button>
+            <button class="cat-btn" data-cat="Barley Wine" onclick="quickCat('Barley Wine')">Barley Wine</button>
+            <button class="cat-btn" data-cat="Saison"      onclick="quickCat('Saison')">Saison</button>
+            <button class="cat-btn" data-cat="Lager"       onclick="quickCat('Lager')">Lager</button>
+            <button class="cat-btn" data-cat="smagekasse"  onclick="quickCat('smagekasse')">Smagekasser</button>
         </div>
     </div>
 </div>
 
 <!-- STATS BAR -->
 <div class="stats-bar" role="region" aria-label="Statistik">
-    <div class="stat"><div class="stat-number" id="stat-total">–</div><div class="stat-label">Øl i alt</div></div>
+    <div class="stat clickable" onclick="resetAllFilters()" role="button" tabindex="0" aria-label="Nulstil alle filtre"><div class="stat-number" id="stat-total">–</div><div class="stat-label">Øl i alt</div></div>
     <div class="stat clickable" onclick="quickCat('deals')" role="button" tabindex="0" aria-label="Filtrer til aktive tilbud"><div class="stat-number" id="stat-deals">–</div><div class="stat-label">Aktive tilbud</div></div>
-    <div class="stat"><div class="stat-number" id="stat-max-discount">–</div><div class="stat-label">Største rabat</div></div>
-    <div class="stat"><div class="stat-number" id="stat-cheapest">–</div><div class="stat-label">Billigste øl (kr)</div></div>
+    <div class="stat clickable" onclick="quickSort('discount')" role="button" tabindex="0" aria-label="Sorter efter størst rabat"><div class="stat-number" id="stat-max-discount">–</div><div class="stat-label">Største rabat</div></div>
+    <div class="stat clickable" onclick="quickSort('price-asc')" role="button" tabindex="0" aria-label="Sorter efter laveste pris"><div class="stat-number" id="stat-cheapest">–</div><div class="stat-label">Billigste øl (kr)</div></div>
 </div>
 
 <!-- TOP DEALS CAROUSEL -->
 <div class="top-deals-section" id="top-deals-section" style="display:none" role="region" aria-label="Bedste tilbud lige nu">
     <div class="top-deals-header">
         <span class="top-deals-title">Bedste tilbud lige nu</span>
-        <a class="top-deals-see-all" onclick="quickCat('deals')">Se alle tilbud →</a>
+        <a class="top-deals-see-all" href="#tilbud" role="button" onclick="quickCat('deals');return false;">Se alle tilbud →</a>
     </div>
     <div class="top-deals-scroll" id="top-deals-scroll"></div>
 </div>
@@ -1246,6 +1352,7 @@
                 <button class="sidebar-filter-btn active" data-filter="all">Alle øl</button>
                 <button class="sidebar-filter-btn" data-filter="deals">🔥 Tilbud</button>
                 <button class="sidebar-filter-btn" data-filter="favs">❤️ Favoritter <span id="fav-count-badge"></span></button>
+                <button class="sidebar-filter-btn" data-filter="in-stock">✅ Kun på lager</button>
                 <button class="sidebar-filter-btn" data-filter="alcohol-free">🚫 Alkoholfri</button>
                 <button class="sidebar-filter-btn" data-filter="smagekasse">📦 Smagekasser</button>
             </div>
@@ -1255,6 +1362,7 @@
             <div class="sidebar-title">🔢 Sortér efter</div>
             <select class="sidebar-sort" id="sort-select" aria-label="Vælg sortering">
                 <option value="price-asc">Pris: Lav → Høj</option>
+                <option value="total-asc">Pris inkl. fragt</option>
                 <option value="price-desc">Pris: Høj → Lav</option>
                 <option value="discount">Størst rabat</option>
                 <option value="price-per-liter">Pris pr. liter</option>
@@ -1312,7 +1420,7 @@
     <div class="main-content">
         <div class="active-filters" id="active-filters" aria-live="polite"></div>
         <div class="grid-wrap">
-            <div id="loading"><div class="spinner"></div><p>Henter øl...</p></div>
+            <div id="loading" role="status"><span class="sr-only">Henter øl...</span><div class="skeleton-grid" aria-hidden="true"><div class="skeleton-card"><div class="sk-img"></div><div class="sk-line"></div><div class="sk-line short"></div><div class="sk-line price"></div></div><div class="skeleton-card"><div class="sk-img"></div><div class="sk-line"></div><div class="sk-line short"></div><div class="sk-line price"></div></div><div class="skeleton-card"><div class="sk-img"></div><div class="sk-line"></div><div class="sk-line short"></div><div class="sk-line price"></div></div><div class="skeleton-card"><div class="sk-img"></div><div class="sk-line"></div><div class="sk-line short"></div><div class="sk-line price"></div></div><div class="skeleton-card"><div class="sk-img"></div><div class="sk-line"></div><div class="sk-line short"></div><div class="sk-line price"></div></div><div class="skeleton-card"><div class="sk-img"></div><div class="sk-line"></div><div class="sk-line short"></div><div class="sk-line price"></div></div><div class="skeleton-card"><div class="sk-img"></div><div class="sk-line"></div><div class="sk-line short"></div><div class="sk-line price"></div></div><div class="skeleton-card"><div class="sk-img"></div><div class="sk-line"></div><div class="sk-line short"></div><div class="sk-line price"></div></div></div></div>
             <p class="result-count" id="result-count" style="display:none" aria-live="polite"></p>
             <div class="grid" id="grid" role="list"></div>
             <div style="text-align:center;margin:1.5rem 0;">
@@ -1397,11 +1505,21 @@
 
     const isMobile = () => window.innerWidth <= 1100;
 
+    function escapeHtml(s) {
+        return String(s ?? '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, '&#39;');
+    }
+    // Søge-normalisering: små bogstaver, æ/ø/å og accenter ignoreres ("ol" finder "Øl")
+    function norm(s) {
+        return String(s || '').toLowerCase().replace(/æ/g, 'ae').replace(/ø/g, 'o').replace(/å/g, 'a')
+            .normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+    }
+
     // Analytics
     (function () {
         const fired = new Set();
         window.addEventListener('scroll', function () {
-            const pct = Math.round((window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100);
+            const max = document.body.scrollHeight - window.innerHeight; if (max <= 0) return;
+            const pct = Math.round((window.scrollY / max) * 100);
             [25, 50, 75, 100].forEach(p => {
                 if (pct >= p && !fired.has(p)) { fired.add(p); gtag('event', 'scroll_dybde', { procent: p }); }
             });
@@ -1412,8 +1530,65 @@
     })();
 
     // Preferences
-    function savePrefs() {
-        localStorage.setItem('bs_prefs', JSON.stringify({ sort: currentSort, types: [...selectedTypes], shops: [...selectedShops], flags: [...activeFlags], abvMin, abvMax }));
+    function savePrefs(replace) {
+        try { localStorage.setItem('bs_prefs', JSON.stringify({ sort: currentSort, types: [...selectedTypes], shops: [...selectedShops], flags: [...activeFlags], abvMin, abvMax })); } catch (e) {}
+        syncUrl(replace);
+    }
+
+    // ── Filtre i URL'en: delbare links, tilbage-knap og ?q= (SearchAction i schema) ──
+    const VALID_FLAGS = ['deals', 'favs', 'alcohol-free', 'smagekasse', 'in-stock'];
+    const VALID_SORTS = ['price-asc', 'total-asc', 'price-desc', 'discount', 'price-per-liter', 'price-per-cl', 'name', 'shops'];
+    const URL_KEYS = ['q', 'butik', 'type', 'filter', 'sort', 'pmin', 'pmax', 'amin', 'amax'];
+    let _urlReady = false;
+
+    function buildQuery() {
+        const p = new URLSearchParams(location.search);
+        URL_KEYS.forEach(k => p.delete(k));
+        const q = document.getElementById('search').value.trim();
+        if (q) p.set('q', q);
+        if (selectedShops.size) p.set('butik', [...selectedShops].join('|'));
+        if (selectedTypes.size) p.set('type', [...selectedTypes].join('|'));
+        if (activeFlags.size) p.set('filter', [...activeFlags].join(','));
+        if (currentSort !== 'price-asc') p.set('sort', currentSort);
+        const pmx = parseInt(document.getElementById('price-max').max || 500);
+        if (priceMin > 0) p.set('pmin', Math.round(priceMin));
+        if (priceMax < pmx) p.set('pmax', Math.round(priceMax));
+        if (abvMin > 0) p.set('amin', abvMin);
+        if (abvMax < 15) p.set('amax', abvMax);
+        return p.toString();
+    }
+    function syncUrl(replace) {
+        if (!_urlReady) return;
+        const qs = buildQuery();
+        const url = location.pathname + (qs ? '?' + qs : '') + location.hash;
+        if (url === location.pathname + location.search + location.hash) return;
+        try { history[replace ? 'replaceState' : 'pushState'](null, '', url); } catch (e) {}
+    }
+    function applyUrlState(force) {
+        const p = new URLSearchParams(location.search);
+        if (!force && !URL_KEYS.some(k => p.has(k))) return false;
+        const split = (k, sep) => (p.get(k) || '').split(sep).filter(Boolean);
+        const num = (v, d) => { const n = parseFloat(v); return Number.isFinite(n) ? n : d; };
+        document.getElementById('search').value = p.get('q') || '';
+        selectedShops = new Set(split('butik', '|'));
+        selectedTypes = new Set(split('type', '|'));
+        activeFlags = new Set(split('filter', ',').filter(f => VALID_FLAGS.includes(f)));
+        currentSort = VALID_SORTS.includes(p.get('sort')) ? p.get('sort') : 'price-asc';
+        const pMin = document.getElementById('price-min'), pMax = document.getElementById('price-max');
+        const aMin = document.getElementById('abv-min'), aMax = document.getElementById('abv-max');
+        pMin.value = num(p.get('pmin'), 0);
+        pMax.value = num(p.get('pmax'), parseFloat(pMax.max));
+        aMin.value = num(p.get('amin'), 0);
+        aMax.value = num(p.get('amax'), 15);
+        updateDualRange('price'); updateDualRange('abv');
+        updateSortBtn(); updateShopBtn(); updateTypeBtn(); syncFlagButtons(); syncCatPills();
+        return true;
+    }
+    function syncCatPills() {
+        document.querySelectorAll('.cat-btn[data-cat]').forEach(b => {
+            const c = b.dataset.cat;
+            b.classList.toggle('active', FLAG_CATS[c] ? activeFlags.has(FLAG_CATS[c]) : selectedTypes.has(c));
+        });
     }
     function loadPrefs() {
         const p = JSON.parse(localStorage.getItem('bs_prefs') || '{}');
@@ -1432,14 +1607,53 @@
     }
 
     // Favorites
+    let favPrices = {};
+    try { favPrices = JSON.parse(localStorage.getItem('bs_fav_prices') || '{}') || {}; } catch (e) { favPrices = {}; }
+    let beerByKey = new Map();
+    let favDropCount = 0;
+    function saveFavPrices() { try { localStorage.setItem('bs_fav_prices', JSON.stringify(favPrices)); } catch (e) {} }
+    function updateFavBadge() {
+        const el = document.getElementById('fav-count-badge');
+        if (!el) return;
+        el.textContent = favorites.size > 0 ? `(${favorites.size}${favDropCount ? ' · ' + favDropCount + ' ↓' : ''})` : '';
+    }
     function saveFavorites() {
-        localStorage.setItem('bs_favorites', JSON.stringify([...favorites]));
-        document.getElementById('fav-count-badge').textContent = favorites.size > 0 ? `(${favorites.size})` : '';
+        try { localStorage.setItem('bs_favorites', JSON.stringify([...favorites])); } catch (e) {}
+        updateFavBadge();
+    }
+    // Favoritter hvis pris er faldet siden dit sidste besøg (gemmes kun lokalt i browseren)
+    function detectFavDrops() {
+        favDropCount = 0;
+        favorites.forEach(key => {
+            const b = beerByKey.get(key);
+            if (!b || !b.prices.length) return;
+            const now = b.prices[0].price, prev = favPrices[key];
+            if (typeof prev === 'number' && now < prev - 0.49) { b._fav_drop = Math.round(prev - now); favDropCount++; }
+            favPrices[key] = now;
+        });
+        saveFavPrices();
+        updateFavBadge();
     }
     function toggleFav(key, beerName, shopName) {
-        if (favorites.has(key)) favorites.delete(key); else favorites.add(key);
+        const on = !favorites.has(key);
+        const b = beerByKey.get(key);
+        if (on) {
+            favorites.add(key);
+            if (b && b.prices.length) favPrices[key] = b.prices[0].price;
+        } else {
+            favorites.delete(key); delete favPrices[key];
+            if (b) delete b._fav_drop;
+        }
         gtag('event', 'favorit', { beer_name: beerName, shop: shopName });
-        saveFavorites(); renderGrid();
+        saveFavorites(); saveFavPrices();
+        if (activeFlags.has('favs')) { renderGrid(); return; }
+        document.querySelectorAll('.fav-btn').forEach(btn => {
+            if (btn.dataset.key !== key) return;
+            btn.classList.toggle('active', on);
+            btn.setAttribute('aria-pressed', String(on));
+            btn.setAttribute('aria-label', (on ? 'Fjern fra favoritter' : 'Tilføj til favoritter') + ': ' + btn.dataset.name);
+            btn.textContent = on ? '❤️' : '🤍';
+        });
     }
 
     // Shipping
@@ -1455,16 +1669,18 @@
     }
     function closeShippingTooltip() {
         if (_ttEl) _ttEl.classList.remove('open');
+        if (_ttOwner) _ttOwner.setAttribute('aria-expanded', 'false');
         _ttOwner = null;
     }
     function toggleShippingTooltip(ev, btn) {
-        ev.stopPropagation(); ev.preventDefault();
         const tt = _ensureTT();
         // Klik paa samme knap igen = luk. Klik paa en ANDEN knap =
         // indholdet skiftes og tooltippen flytter derhen (loeser at
         // den gamle blev haengende).
         if (_ttOwner === btn && tt.classList.contains('open')) { closeShippingTooltip(); return; }
+        if (_ttOwner && _ttOwner !== btn) _ttOwner.setAttribute('aria-expanded', 'false');
         _ttOwner = btn;
+        btn.setAttribute('aria-expanded', 'true');
         const tpl = btn.querySelector('template.shipping-tooltip-content');
         tt.innerHTML = tpl ? tpl.innerHTML : '';
         const r = btn.getBoundingClientRect();
@@ -1490,10 +1706,10 @@
     }
     function shippingTooltipHTML(shopName, itemPrice) {
         const s = SHIPPING[shopName];
-        if (!s) return `<div class="tt-title">🚚 Fragt — ${shopName}</div><div class="tt-divider"></div><div class="tt-no-info">Fragtoplysninger ikke tilgængelige.<br>Tjek prisen hos butikken.</div>`;
+        if (!s) return `<div class="tt-title">🚚 Fragt — ${escapeHtml(shopName)}</div><div class="tt-divider"></div><div class="tt-no-info">Fragtoplysninger ikke tilgængelige.<br>Tjek prisen hos butikken.</div>`;
         const isFree = itemPrice >= s.freeOver;
         const total = isFree ? itemPrice : itemPrice + s.price;
-        return `<div class="tt-title">🚚 Fragt — ${shopName}</div>
+        return `<div class="tt-title">🚚 Fragt — ${escapeHtml(shopName)}</div>
                 <div class="tt-row"><span class="tt-label">Fragtpris</span><span class="tt-value">${isFree ? '<span class="tt-free">GRATIS 🎉</span>' : '<strong>' + s.price + ' kr</strong>'}</span></div>
                 ${!isFree ? `<div class="tt-row"><span class="tt-label">Fri fragt over</span><span class="tt-value">${s.freeOver} kr</span></div>` : ''}
                 <div class="tt-divider"></div>
@@ -1505,11 +1721,57 @@
         const isFree = s && itemPrice >= s.freeOver;
         const cls = !s ? ' no-info' : isFree ? ' free-shipping' : '';
         const label = !s ? 'Fragtinfo ikke tilgængelig' : isFree ? 'Gratis fragt' : `Fragt: ${s.price} kr`;
-        return `<span class="shipping-btn${cls}" aria-label="${label}"
-                    onclick="toggleShippingTooltip(event, this)">
-                    🚚<template class="shipping-tooltip-content">${shippingTooltipHTML(shopName, itemPrice)}</template></span>`;
+        return `<button type="button" class="shipping-btn${cls}" data-act="ship" aria-label="${escapeHtml(label)}" aria-haspopup="true" aria-expanded="false">🚚<template class="shipping-tooltip-content">${shippingTooltipHTML(shopName, itemPrice)}</template></button>`;
     }
-    document.addEventListener('click', closeShippingTooltip);
+    // ── Delegerede handlers (erstatter inline onclick på kort, chips og top-deals) ──
+    document.addEventListener('click', e => {
+        const t = e.target;
+        if (!t || !t.closest) return;
+        if (!t.closest('.shipping-btn')) closeShippingTooltip();
+        const act = t.closest('[data-act]');
+        if (act) {
+            const a = act.dataset.act;
+            if (a === 'fav') { e.preventDefault(); toggleFav(act.dataset.key, act.dataset.name, act.dataset.shop); return; }
+            if (a === 'ship') { toggleShippingTooltip(e, act); return; }
+            if (a === 'reset') { resetAllFilters(); return; }
+            if (a === 'more') {
+                const ms = act.nextElementSibling, n = Number(act.dataset.n), open = ms.style.display === 'flex';
+                ms.style.display = open ? 'none' : 'flex';
+                act.setAttribute('aria-expanded', String(!open));
+                act.textContent = open ? `+ ${n} butik${n > 1 ? 'ker' : ''} mere` : '▲ Skjul andre butikker';
+                return;
+            }
+        }
+        const clr = t.closest('[data-clear]');
+        if (clr) { clearFilter(clr.dataset.clear, clr.dataset.value); return; }
+        const tr = t.closest('[data-track]');
+        if (tr) {
+            const d = tr.dataset;
+            if (d.track === 'koeb_klik') gtag('event', 'koeb_klik', { beer_name: d.name, shop: d.shop, price: Number(d.price), placering: d.place, rabat: Number(d.rabat) || 0 });
+            else if (d.track === 'produkt_klik') gtag('event', 'produkt_klik', { beer_name: d.name, shop: d.shop, price: Number(d.price) });
+            else gtag('event', d.track, { beer_name: d.name });
+        }
+        const tc = t.closest('.top-card[data-href]');
+        if (tc && !t.closest('a')) location.href = tc.dataset.href;
+    });
+    // Tastatur: Escape lukker tooltip/menu; Enter/Space aktiverer role="button"-elementer
+    document.addEventListener('keydown', e => {
+        if (e.key === 'Escape') {
+            closeShippingTooltip();
+            if (document.getElementById('sidebar').classList.contains('mobile-open')) closeSidebar();
+            return;
+        }
+        if (e.key !== 'Enter' && e.key !== ' ') return;
+        const el = e.target && e.target.closest ? e.target.closest('[role="button"][tabindex], .top-card[data-href]') : null;
+        if (!el || el.tagName === 'BUTTON' || el.tagName === 'A') return;
+        e.preventDefault();
+        el.click();
+    });
+    // Skjul billeder der ikke kan hentes (erstatter inline onerror)
+    document.addEventListener('error', e => {
+        const t = e.target;
+        if (t && t.tagName === 'IMG' && t.hasAttribute('data-hide-err')) t.style.display = 'none';
+    }, true);
     // Luk evt. åben fragt-tooltip ved scroll — forhindrer at den bliver
     // "hængende" og overlapper andre ølkort paa mobil.
     window.addEventListener('scroll', closeShippingTooltip, { passive: true });
@@ -1534,17 +1796,31 @@
     // Normalize
     function normalizeBeer(b) {
         const seen = new Set();
+        const toBool = v => (v === undefined || v === null) ? undefined : !(v === false || v === 0 || v === '0' || v === 'false');
         const prices = (b.prices || []).map(p => ({
             shop_name: p.shop_name || p.shop || '',
             price: p.price_dkk || p.price || 0,
             url: p.url || '',
             discount_pct: p.discount_pct || 0,
             old_price: p.old_price || null,
+            available: toBool(p.available ?? p.in_stock),
         })).filter(p => {
             const k = p.shop_name + '|' + p.price;
             if (seen.has(k)) return false; seen.add(k); return true;
-        }).sort((a, c) => a.price - c.price);
-        return { ...b, min_price: b.cheapest_price || b.min_price || (prices[0] ? prices[0].price : 0), max_discount_pct: b.max_discount_pct || b.discount_pct || 0, normalized_name: b.normalized_name || b.name, prices };
+        }).sort((a, c) => ((a.available === false) - (c.available === false)) || (a.price - c.price));
+        const anyOos = prices.some(p => p.available === false);
+        const min_price = (anyOos && prices[0]) ? prices[0].price : (b.cheapest_price || b.min_price || (prices[0] ? prices[0].price : 0));
+        const live = prices.filter(p => p.available !== false);
+        const pool = live.length ? live : prices;
+        const tot = p => { const t = totalWithShipping(p.shop_name, p.price); return t === null ? p.price : t; };
+        const min_total = pool.length ? Math.min(...pool.map(tot)) : 0;
+        return {
+            ...b, min_price, min_total, prices,
+            max_discount_pct: b.max_discount_pct || b.discount_pct || 0,
+            normalized_name: b.normalized_name || b.name,
+            in_stock: prices.length ? live.length > 0 : true,
+            _search: norm([b.name, b.brewery, b.type].filter(Boolean).join(' ')),
+        };
     }
 
     // Detection
@@ -1598,6 +1874,28 @@
         window.scrollTo({ top: document.querySelector('.grid-wrap').offsetTop - 60, behavior: 'smooth' });
     }
 
+    function resetAllFilters() {
+        activeFlags.clear(); selectedShops.clear(); currentSort='price-asc'; currentPage=1;
+        selectedTypes.clear(); priceMin=0; abvMin=0; abvMax=15;
+        document.getElementById('search').value='';
+        document.getElementById('price-min').value=0;
+        document.getElementById('price-max').value=parseInt(document.getElementById('price-max').max);
+        document.getElementById('abv-min').value=0; document.getElementById('abv-max').value=15;
+        updateDualRange('price'); updateDualRange('abv'); updateSortBtn(); updateShopBtn(); updateTypeBtn();
+        document.querySelectorAll('.cat-btn').forEach(b=>b.classList.remove('active'));
+        syncFlagButtons();
+        savePrefs(); renderGrid(); renderActiveFilters(); gtag('event','nulstil_filter');
+    }
+
+    function quickSort(sort) {
+        currentSort = sort;
+        currentPage = 1;
+        document.getElementById('sort-select').value = sort;
+        savePrefs(); renderGrid(); renderActiveFilters();
+        gtag('event', 'sortering', { sort: sort, kilde: 'stat_pill' });
+        window.scrollTo({ top: document.querySelector('.grid-wrap').offsetTop - 60, behavior: 'smooth' });
+    }
+
     // Holder pills og sidebar-knapper synkroniserede med activeFlags
     function syncFlagButtons() {
         document.querySelectorAll('.cat-btn[data-cat]').forEach(b => {
@@ -1611,110 +1909,131 @@
         });
     }
 
-    function esc(s) { return (s || '').replace(/'/g, ' ').replace(/"/g, ' '); }
+    // ── Prishistorik (price_history.json: {slug: [{date, price}]}, billigste pris pr. dag) ──
+    let priceHistory = null;
+    let beerBySlug = new Map();
+    function histInfo(b, price) {
+        const h = priceHistory && b.slug ? priceHistory[b.slug] : null;
+        if (!h || h.length < 3) return null;
+        const days = Math.round((Date.parse(h[h.length - 1].date) - Date.parse(h[0].date)) / 86400000);
+        if (!(days >= 7)) return null;
+        const prices = h.map(p => p.price);
+        const min = Math.min(...prices), max = Math.max(...prices);
+        if (max - min < 0.5) return null;                    // uændret pris er uinteressant
+        return { days, min, max, low: price <= min + 0.005 };
+    }
+    function lowTagHTML(h) {
+        return `<span class="tag tag-low" title="Laveste pris de seneste ${h.days} dage">📉 Laveste pris på ${h.days} dage</span>`;
+    }
+    // Historikken hentes efter første visning; allerede viste kort får grafen indsat bagefter
+    function applyHistoryToDom() {
+        document.querySelectorAll('.card[data-slug]').forEach(card => {
+            if (card.querySelector('.tag-low')) return;
+            const b = beerBySlug.get(card.dataset.slug), meta = card.querySelector('.card-meta');
+            if (!b || !meta) return;
+            const h = histInfo(b, b.min_price);
+            if (h && h.low) meta.insertAdjacentHTML('beforeend', lowTagHTML(h));
+        });
+    }
+    async function loadHistory() {
+        try {
+            const r = await fetch('price_history.json?v=' + DATA_VERSION);
+            if (!r.ok) return;
+            priceHistory = await r.json();
+            applyHistoryToDom();
+        } catch (e) { /* grafer er en bonus — siden virker uden */ }
+    }
+
+    // Rækkefølge af butikker på kortet (ved "inkl. fragt"-sortering vinder laveste totalpris)
+    function sortedPrices(b) {
+        const prices = b.prices || [];
+        if (currentSort !== 'total-asc' || prices.length < 2) return prices;
+        const tot = p => { const t = totalWithShipping(p.shop_name, p.price); return t === null ? p.price : t; };
+        return [...prices].sort((a, c) => ((a.available === false) - (c.available === false)) || (tot(a) - tot(c)));
+    }
+
+    function priceRowHTML(b, p, best, multi) {
+        const nameH = escapeHtml(b.name), shopH = escapeHtml(p.shop_name);
+        const oos = p.available === false;
+        const tot = totalWithShipping(p.shop_name, p.price);
+        const cls = 'price-row' + (best ? ' price-row-cheapest' : '') + (best && p.discount_pct ? ' has-discount' : '') + (oos ? ' price-row-oos' : '');
+        return `<div class="${cls}">
+            <div class="price-row-header">
+                <span class="price-row-shop">${shopH}</span>
+                ${best && multi && !oos ? '<span class="best-badge">Billigst</span>' : ''}
+                ${oos ? '<span class="oos-badge">Udsolgt</span>' : ''}
+                ${p.discount_pct ? `<span class="price-row-discount">−${p.discount_pct}%</span>` : ''}
+                ${shippingBtnHTML(p.shop_name, p.price)}
+            </div>
+            <div class="price-row-main">
+                <div class="price-row-left">
+                    <div class="price-row-prices">
+                        <span class="price-row-amount">${p.price.toFixed(2)} kr</span>
+                        ${p.old_price ? `<span class="price-row-old">${p.old_price.toFixed(2)} kr</span>` : ''}
+                    </div>
+                    ${p.old_price ? `<span class="price-row-save">💰 Spar ${(p.old_price - p.price).toFixed(0)} kr</span>` : ''}
+                    ${tot !== null ? `<span class="price-row-total">Inkl. fragt: ${tot.toFixed(0)} kr</span>` : ''}
+                </div>
+                <div class="price-row-actions">
+                    ${p.url ? `<a class="price-row-link" href="${escapeHtml(p.url)}" target="_blank" rel="sponsored noopener"
+                        aria-label="Køb ${nameH} hos ${shopH} for ${p.price.toFixed(2)} kr"
+                        data-track="koeb_klik" data-name="${nameH}" data-shop="${shopH}" data-price="${p.price}" data-place="${best ? 'billigste' : 'anden_butik'}" data-rabat="${p.discount_pct || 0}">Køb →</a>` : ''}
+                </div>
+            </div>
+        </div>`;
+    }
 
     // Beer card
     function makeBeerCard(b, delay) {
         const key = b.normalized_name || b.name;
         const isFav = favorites.has(key);
-        const prices = b.prices || [];
-        const best = prices[0] || {};
+        const prices = sortedPrices(b);
+        const best = prices[0] || { shop_name: '', price: 0, discount_pct: 0, old_price: null, url: '' };
         const minPrice = best.price || 0;
         const maxDiscount = b.max_discount_pct || 0;
-        const bName = esc(b.name);
-        const bShop = esc(best.shop_name || '');
-        const totalInclShipping = totalWithShipping(best.shop_name, minPrice);
-        const totalLabel = totalInclShipping !== null ? `<span class="price-row-total">Inkl. fragt: ${totalInclShipping.toFixed(0)} kr</span>` : '';
+        const nameH = escapeHtml(b.name), shopH = escapeHtml(best.shop_name || '');
         const pplTag = b.volume_cl && b.volume_cl > 0 ? `<span class="tag tag-ppl" title="Pris pr. liter">${((minPrice / b.volume_cl) * 100).toFixed(0)} kr/L</span>` : '';
         const untappdQuery = encodeURIComponent((() => { const n = b.name.replace(/\d+[.,]?\d*\s?%/g,'').replace(/\d+\s?(cl|ml)/gi,'').trim(); return n.split(/\s+/).slice(0,4).join(' ').trim(); })());
-        const detailUrl = b.slug ? `ol/${b.slug}/` : (best.url || '#');
-        const detailTarget = b.slug ? '' : ' target="_blank"';
+        const detailUrl = escapeHtml(b.slug ? `ol/${b.slug}/` : (best.url || '#'));
+        const detailTarget = b.slug ? '' : ' target="_blank" rel="sponsored noopener"';
 
-        let html = `<div class="card${maxDiscount > 0 ? ' has-deal' : ''}" style="animation-delay:${delay}s" role="listitem">`;
+        let html = `<div class="card${maxDiscount > 0 ? ' has-deal' : ''}"${b.slug ? ` data-slug="${escapeHtml(b.slug)}"` : ''} style="animation-delay:${delay}s" role="listitem">`;
         if (maxDiscount > 0) html += `<div class="ribbon">−${maxDiscount}%</div>`;
 
-        html += `<a class="card-img-wrap" href="${detailUrl}"${detailTarget} onclick="gtag('event','produkt_klik',{beer_name:'${bName}',shop:'${bShop}',price:${minPrice}})" aria-label="Se ${b.name} hos BeerSniffer">`;
-        if (b.image) {
-            html += `<img class="card-img" src="${b.image}" alt="${b.name}" loading="lazy" decoding="async" onerror="this.style.display='none'">`;
-        } else {
-            html += `<div class="card-img-placeholder" aria-hidden="true">🍺</div>`;
-        }
-        html += `<div class="card-price-overlay" aria-hidden="true">
-                    <span class="price-big">${minPrice.toFixed(2)} kr</span>
-                    ${best.old_price ? `<span class="price-old">${best.old_price.toFixed(2)} kr</span>` : ''}
-                 </div>`;
-        html += `<button class="fav-btn ${isFav ? 'active' : ''}"
-                    aria-label="${isFav ? 'Fjern fra favoritter' : 'Tilføj til favoritter'}: ${b.name}"
-                    onclick="toggleFav('${key.replace(/'/g,"\\'")}','${bName}','${bShop}');event.preventDefault();event.stopPropagation()">
-                    ${isFav ? '❤️' : '🤍'}</button>`;
+        html += `<a class="card-img-wrap" href="${detailUrl}"${detailTarget} data-track="produkt_klik" data-name="${nameH}" data-shop="${shopH}" data-price="${minPrice}" aria-label="Se ${nameH} hos BeerSniffer">`;
+        html += b.image
+            ? `<img class="card-img" width="300" height="155" src="${escapeHtml(b.image)}" alt="${nameH}" loading="lazy" decoding="async" data-hide-err>`
+            : `<div class="card-img-placeholder" aria-hidden="true">🍺</div>`;
         html += `</a>`;
+        // Favorit-knap ligger nu uden for linket (gyldig HTML, ingen preventDefault-tricks)
+        html += `<button type="button" class="fav-btn${isFav ? ' active' : ''}" data-act="fav" data-key="${escapeHtml(key)}" data-name="${nameH}" data-shop="${shopH}"
+                    aria-pressed="${isFav}" aria-label="${isFav ? 'Fjern fra favoritter' : 'Tilføj til favoritter'}: ${nameH}">${isFav ? '❤️' : '🤍'}</button>`;
 
-        html += `<div class="card-body"><a class="card-name" href="${detailUrl}"${detailTarget}>${b.name}</a>`;
+        html += `<div class="card-body"><a class="card-name" href="${detailUrl}"${detailTarget}>${nameH}</a>`;
         html += `<div class="card-meta">`;
-        if (b.volume_cl) html += `<span class="tag">${b.volume_cl} cl</span>`;
-        if (b.abv) html += `<span class="tag">${b.abv}%</span>`;
-        if (b.type) html += `<span class="tag tag-type">${b.type}</span>`;
+        if (b.volume_cl) html += `<span class="tag">${escapeHtml(b.volume_cl)} cl</span>`;
+        if (b.abv) html += `<span class="tag">${escapeHtml(b.abv)}%</span>`;
+        if (b.type) html += `<span class="tag tag-type">${escapeHtml(b.type)}</span>`;
         if (prices.length > 1) html += `<span class="tag tag-shops">🏪 ${prices.length} butikker</span>`;
+        if (b.in_stock === false) html += `<span class="tag tag-oos">Udsolgt</span>`;
+        if (isFav && b._fav_drop) html += `<span class="tag tag-drop" title="Prisen er faldet siden dit sidste besøg">⭐ Faldet ${b._fav_drop} kr siden sidst</span>`;
         if (b.price_change_7d && b.price_change_7d <= -1) html += `<span class="tag tag-drop" title="Prisen er faldet de seneste 7 dage">📉 Faldet ${Math.abs(b.price_change_7d).toFixed(0)} kr</span>`;
+        const hi = histInfo(b, b.min_price);
+        if (hi && hi.low) html += lowTagHTML(hi);
         html += pplTag;
         html += `</div>`;
 
         html += `<div class="price-rows">`;
-        html += `<div class="price-row price-row-cheapest${best.discount_pct ? ' has-discount' : ''}">
-                    <div class="price-row-header">
-                        <span class="price-row-shop">🔥 ${best.shop_name || ''}</span>
-                        ${best.discount_pct ? `<span class="price-row-discount">−${best.discount_pct}%</span>` : ''}
-                    </div>
-                    <div class="price-row-main">
-                        <div class="price-row-left">
-                            <div class="price-row-prices">
-                                <span class="price-row-amount">${minPrice.toFixed(2)} kr</span>
-                                ${best.old_price ? `<span class="price-row-old">${best.old_price.toFixed(2)} kr</span>` : ''}
-                            </div>
-                            ${best.old_price ? `<span class="price-row-save">💰 Spar ${(best.old_price - minPrice).toFixed(0)} kr</span>` : ''}
-                            ${totalLabel}
-                        </div>
-                        <div class="price-row-actions">
-                            ${shippingBtnHTML(best.shop_name, minPrice)}
-                            ${best.url ? `<a class="price-row-link" href="${best.url}" target="_blank"
-                                aria-label="Køb ${b.name} hos ${best.shop_name} for ${minPrice.toFixed(2)} kr"
-                                onclick="gtag('event','koeb_klik',{beer_name:'${bName}',shop:'${bShop}',price:${minPrice},placering:'billigste',rabat:${best.discount_pct||0}})">Køb →</a>` : ''}
-                        </div>
-                    </div>
-                 </div>`;
-
+        html += priceRowHTML(b, best, true, prices.length > 1);
         if (prices.length > 1) {
-            html += `<div class="more-shops-toggle" onclick="const ms=this.nextElementSibling;const open=ms.style.display==='flex';ms.style.display=open?'none':'flex';this.textContent=open?'▲ Skjul andre butikker':'+ ${prices.length-1} butik${prices.length>2?'ker':''} mere'">
-                        + ${prices.length-1} butik${prices.length>2?'ker':''} mere
-                     </div><div class="more-shops" style="display:none">`;
-            prices.slice(1).forEach(p => {
-                html += `<div class="price-row">
-                            <div class="price-row-header">
-                                <span class="price-row-shop">${p.shop_name}</span>
-                                ${p.discount_pct ? `<span class="price-row-discount">−${p.discount_pct}%</span>` : ''}
-                            </div>
-                            <div class="price-row-main">
-                                <div class="price-row-left">
-                                    <div class="price-row-prices">
-                                        <span class="price-row-amount">${p.price.toFixed(2)} kr</span>
-                                        ${p.old_price ? `<span class="price-row-old">${p.old_price.toFixed(2)} kr</span>` : ''}
-                                    </div>
-                                </div>
-                                <div class="price-row-actions">
-                                    ${shippingBtnHTML(p.shop_name, p.price)}
-                                    ${p.url ? `<a class="price-row-link" href="${p.url}" target="_blank"
-                                        aria-label="Køb ${b.name} hos ${p.shop_name} for ${p.price.toFixed(2)} kr"
-                                        onclick="gtag('event','koeb_klik',{beer_name:'${bName}',shop:'${esc(p.shop_name)}',price:${p.price},placering:'anden_butik',rabat:${p.discount_pct||0}})">Køb →</a>` : ''}
-                                </div>
-                            </div>
-                         </div>`;
-            });
+            const n = prices.length - 1;
+            html += `<button type="button" class="more-shops-toggle" data-act="more" data-n="${n}" aria-expanded="false">+ ${n} butik${n > 1 ? 'ker' : ''} mere</button><div class="more-shops" style="display:none">`;
+            prices.slice(1).forEach(p => { html += priceRowHTML(b, p, false, true); });
             html += `</div>`;
         }
         html += `</div>`;
         html += `<div class="card-actions"><a class="untappd-btn" href="https://untappd.com/search?q=${untappdQuery}" target="_blank" rel="noopener"
-                    aria-label="Se ${b.name} på Untappd"
-                    onclick="gtag('event','untappd_klik',{beer_name:'${bName}'})">🍺 Se på Untappd</a></div>`;
+                    aria-label="Se ${nameH} på Untappd" data-track="untappd_klik" data-name="${nameH}">🍺 Se på Untappd</a></div>`;
         html += `</div></div>`;
         return html;
     }
@@ -1722,8 +2041,8 @@
     // Filter + sort
     function filterAndSortBeers(beers) {
         let filtered = beers;
-        const q = document.getElementById('search').value.toLowerCase().trim();
-        if (q) filtered = filtered.filter(b => b.name.toLowerCase().includes(q) || (b.brewery && b.brewery.toLowerCase().includes(q)) || (b.type && b.type.toLowerCase().includes(q)));
+        const q = norm(document.getElementById('search').value.trim());
+        if (q) { const toks = q.split(/\s+/); filtered = filtered.filter(b => toks.every(t => b._search.includes(t))); }
         if (selectedShops.size > 0) filtered = filtered.filter(b => b.prices && b.prices.some(p => selectedShops.has(p.shop_name)));
         if (selectedTypes.size > 0) filtered = filtered.filter(b => b.type && selectedTypes.has(b.type));
         filtered = filtered.filter(b => {
@@ -1732,6 +2051,7 @@
             if (activeFlags.has('alcohol-free') && !isAlcoholFree(b)) return false;
             if (activeFlags.has('smagekasse') && !isSmagekasse(b)) return false;
             if (activeFlags.has('favs') && !favorites.has(b.normalized_name || b.name)) return false;
+            if (activeFlags.has('in-stock') && b.in_stock === false) return false;
             return true;
         });
         filtered = filtered.filter(b => { const p = b.min_price || 0; return p >= priceMin && p <= priceMax; });
@@ -1739,6 +2059,7 @@
         const sorted = [...filtered];
         switch (currentSort) {
             case 'price-asc':       sorted.sort((a,b) => (a.min_price||0)-(b.min_price||0)); break;
+            case 'total-asc':       sorted.sort((a,b) => (a.min_total||0)-(b.min_total||0)); break;
             case 'price-desc':      sorted.sort((a,b) => (b.min_price||0)-(a.min_price||0)); break;
             case 'discount':        sorted.sort((a,b) => (b.max_discount_pct||0)-(a.max_discount_pct||0)); break;
             case 'price-per-liter': sorted.sort((a,b) => pricePerLiter(a)-pricePerLiter(b)); break;
@@ -1749,6 +2070,12 @@
         return sorted;
     }
 
+    // Infinite scroll: observér "Vis flere"-knappen (knappen er stadig der som fallback)
+    function reobserveLoadMore() {
+        const io = window._loadMoreIO, b = document.getElementById('load-more');
+        if (io && b) { io.unobserve(b); io.observe(b); }
+    }
+
     // Render grid
     function renderGrid(append) {
         const grid = document.getElementById('grid');
@@ -1757,7 +2084,7 @@
         rc.style.display = 'block';
         rc.textContent = `Viser ${Math.min(currentPage * PAGE_SIZE, beers.length)} af ${beers.length} øl`;
         if (!beers.length) {
-            grid.innerHTML = `<div class="empty"><div class="empty-icon">${activeFlags.has('favs')?'❤️':'🔍'}</div><p>${activeFlags.has('favs')?'Ingen favoritter endnu — klik 🤍 på et ølkort':'Ingen øl matcher din søgning'}</p></div>`;
+            grid.innerHTML = `<div class="empty"><div class="empty-icon">${activeFlags.has('favs')?'❤️':'🔍'}</div><p>${activeFlags.has('favs')?'Ingen favoritter endnu — klik 🤍 på et ølkort':'Ingen øl matcher din søgning'}</p>${activeFlags.has('favs') ? '' : '<button type="button" class="cat-btn" data-act="reset" style="margin:1rem auto 0">Nulstil filtre</button>'}</div>`;
             document.getElementById('load-more').style.display = 'none'; return;
         }
         totalPages = Math.ceil(beers.length / PAGE_SIZE); totalCount = beers.length;
@@ -1768,39 +2095,34 @@
             grid.innerHTML = beers.slice(0,currentPage*PAGE_SIZE).map((b,i) => makeBeerCard(b,Math.min(i*0.02,0.5))).join('');
         }
         document.getElementById('load-more').style.display = currentPage < totalPages ? 'block' : 'none';
+        reobserveLoadMore();
     }
 
     // Render top deals
     function renderTopDeals() {
-        const topDeals = allBeers.filter(b => b.max_discount_pct > 0 && !isSmagekasse(b)).sort((a,b) => b.max_discount_pct-a.max_discount_pct).slice(0,10);
+        const topDeals = allBeers.filter(b => b.max_discount_pct > 0 && !isSmagekasse(b) && b.in_stock !== false).sort((a,b) => b.max_discount_pct-a.max_discount_pct).slice(0,10);
         const section = document.getElementById('top-deals-section');
         if (!topDeals.length) { section.style.display = 'none'; return; }
         section.style.display = 'block';
         document.getElementById('top-deals-scroll').innerHTML = topDeals.map(deal => {
             const best = [...(deal.prices||[])].sort((a,c) => (c.discount_pct||0)-(a.discount_pct||0))[0] || {};
-            return `<div class="top-card">
+            const nameH = escapeHtml(deal.name), shopH = escapeHtml(best.shop_name || '');
+            const href = deal.slug ? escapeHtml('/ol/' + deal.slug + '/') : '';
+            return `<div class="top-card"${href ? ` data-href="${href}" tabindex="0" role="link" aria-label="${nameH}"` : ''}>
                 <div class="top-card-pct">−${deal.max_discount_pct}%</div>
-                ${deal.image ? `<img class="top-card-img" src="${deal.image}" alt="${deal.name}" loading="lazy" decoding="async" onerror="this.style.display='none'">` : '<div class="top-card-img-placeholder" aria-hidden="true">🍺</div>'}
+                ${deal.image ? `<img class="top-card-img" width="200" height="100" src="${escapeHtml(deal.image)}" alt="${nameH}" loading="lazy" decoding="async" data-hide-err>` : '<div class="top-card-img-placeholder" aria-hidden="true">🍺</div>'}
                 <div class="top-card-body">
-                    <div class="top-card-shop">${best.shop_name||''}</div>
-                    <div class="top-card-name">${deal.name}</div>
+                    <div class="top-card-shop">${shopH}</div>
+                    <div class="top-card-name">${nameH}</div>
                     <div class="top-card-prices">
                         <span class="top-card-price">${(best.price||0).toFixed(2)} kr</span>
                         ${best.old_price ? `<span class="top-card-old">${best.old_price.toFixed(2)} kr</span>` : ''}
                     </div>
-                    ${best.url ? `<a class="top-card-link" href="${best.url}" target="_blank" rel="noopener"
-                        aria-label="Køb ${deal.name} nu"
-                        onclick="gtag('event','koeb_klik',{beer_name:'${esc(deal.name)}',shop:'${esc(best.shop_name)}',price:${best.price||0},placering:'top_deals',rabat:${deal.max_discount_pct||0}})">Køb nu →</a>` : ''}
+                    ${best.url ? `<a class="top-card-link" href="${escapeHtml(best.url)}" target="_blank" rel="sponsored noopener"
+                        aria-label="Køb ${nameH} nu"
+                        data-track="koeb_klik" data-name="${nameH}" data-shop="${shopH}" data-price="${best.price||0}" data-place="top_deals" data-rabat="${deal.max_discount_pct||0}">Køb nu →</a>` : ''}
                 </div></div>`;
         }).join('');
-        // Klik paa kort -> oelside; 'Koeb nu' aabner stadig butikken
-        document.querySelectorAll('.top-card').forEach((card, i) => {
-            const deal = topDeals[i];
-            if (deal && deal.slug) {
-                card.addEventListener('click', () => { window.location = '/ol/' + deal.slug + '/'; });
-                card.querySelectorAll('a').forEach(a => a.addEventListener('click', e => e.stopPropagation()));
-            }
-        });
     }
 
     // ══════════════════════════════════════════
@@ -1840,7 +2162,7 @@
                             "price": best.price.toFixed(2),
                             "priceCurrency": "DKK",
                             "url": best.url,
-                            "availability": "https://schema.org/InStock",
+                            "availability": best.available === false ? "https://schema.org/OutOfStock" : "https://schema.org/InStock",
                             "seller": { "@type": "Organization", "name": best.shop_name },
                             "shippingDetails": s ? {
                                 "@type": "OfferShippingDetails",
@@ -1875,38 +2197,20 @@
         const sidebarChips = document.getElementById('sidebar-chips');
         const sidebarSection = document.getElementById('sidebar-active-filters');
         const chips = [], sc = [];
-        const flagLabels = { 'deals':'🔥 Tilbud','favs':'❤️ Favoritter','alcohol-free':'🚫 Alkoholfri','smagekasse':'📦 Smagekasser' };
-        activeFlags.forEach(f => {
-            const l = flagLabels[f] || f;
-            chips.push(`<span class="filter-chip">${l}<span class="x" onclick="clearFilter('flag','${f}')">✕</span></span>`);
-            sc.push(`<span class="sidebar-chip" onclick="clearFilter('flag','${f}')">${l}<span class="x">✕</span></span>`);
-        });
-        selectedShops.forEach(shop => {
-            const s = shop.replace(/'/g,"\\'");
-            chips.push(`<span class="filter-chip">🏪 ${shop}<span class="x" onclick="clearFilter('shop','${s}')">✕</span></span>`);
-            sc.push(`<span class="sidebar-chip" onclick="clearFilter('shop','${s}')">🏪 ${shop}<span class="x">✕</span></span>`);
-        });
-        selectedTypes.forEach(type => {
-            const s = type.replace(/'/g,"\\'");
-            chips.push(`<span class="filter-chip">🍺 ${type}<span class="x" onclick="clearFilter('type','${s}')">✕</span></span>`);
-            sc.push(`<span class="sidebar-chip" onclick="clearFilter('type','${s}')">🍺 ${type}<span class="x">✕</span></span>`);
-        });
+        const flagLabels = { 'deals':'🔥 Tilbud','favs':'❤️ Favoritter','alcohol-free':'🚫 Alkoholfri','smagekasse':'📦 Smagekasser','in-stock':'✅ På lager' };
+        const addChip = (label, type, value) => {
+            const l = escapeHtml(label), v = escapeHtml(value || '');
+            chips.push(`<span class="filter-chip">${l}<span class="x" role="button" tabindex="0" aria-label="Fjern filter: ${l}" data-clear="${type}" data-value="${v}">✕</span></span>`);
+            sc.push(`<span class="sidebar-chip" role="button" tabindex="0" aria-label="Fjern filter: ${l}" data-clear="${type}" data-value="${v}">${l}<span class="x" aria-hidden="true">✕</span></span>`);
+        };
+        activeFlags.forEach(f => addChip(flagLabels[f] || f, 'flag', f));
+        selectedShops.forEach(shop => addChip('🏪 ' + shop, 'shop', shop));
+        selectedTypes.forEach(type => addChip('🍺 ' + type, 'type', type));
         const sv = document.getElementById('search').value.trim();
-        if (sv) {
-            chips.push(`<span class="filter-chip">🔍 "${sv}"<span class="x" onclick="clearFilter('search')">✕</span></span>`);
-            sc.push(`<span class="sidebar-chip" onclick="clearFilter('search')">🔍 "${sv}"<span class="x">✕</span></span>`);
-        }
+        if (sv) addChip('🔍 "' + sv + '"', 'search');
         const pm = parseInt(document.getElementById('price-max').max||500);
-        if (priceMin>0||priceMax<pm) {
-            const l = `💰 ${Math.round(priceMin)}–${Math.round(priceMax)} kr`;
-            chips.push(`<span class="filter-chip">${l}<span class="x" onclick="clearFilter('price')">✕</span></span>`);
-            sc.push(`<span class="sidebar-chip" onclick="clearFilter('price')">${l}<span class="x">✕</span></span>`);
-        }
-        if (abvMin>0||abvMax<15) {
-            const l = `🍻 ${abvMin.toFixed(1)}–${abvMax.toFixed(1)}%`;
-            chips.push(`<span class="filter-chip">${l}<span class="x" onclick="clearFilter('abv')">✕</span></span>`);
-            sc.push(`<span class="sidebar-chip" onclick="clearFilter('abv')">${l}<span class="x">✕</span></span>`);
-        }
+        if (priceMin>0||priceMax<pm) addChip(`💰 ${Math.round(priceMin)}–${Math.round(priceMax)} kr`, 'price');
+        if (abvMin>0||abvMax<15) addChip(`🍻 ${abvMin.toFixed(1)}–${abvMax.toFixed(1)}%`, 'abv');
         container.innerHTML = chips.length ? '<span class="active-filters-label">Aktive filtre:</span>'+chips.join('') : '';
         if (sc.length) { sidebarSection.style.display='block'; sidebarChips.innerHTML=sc.join(''); }
         else { sidebarSection.style.display='none'; sidebarChips.innerHTML=''; }
@@ -1917,7 +2221,7 @@
     window.clearFilter = function(type, value) {
         if (type==='flag') { activeFlags.delete(value); syncFlagButtons(); }
         else if (type==='shop') { selectedShops.delete(value); updateShopBtn(); }
-        else if (type==='type') { selectedTypes.delete(value); updateTypeBtn(); const tb=document.querySelector('.cat-btn[data-cat="'+value+'"]'); if (tb) tb.classList.remove('active'); syncFlagButtons(); }
+        else if (type==='type') { selectedTypes.delete(value); updateTypeBtn(); syncCatPills(); syncFlagButtons(); }
         else if (type==='search') { document.getElementById('search').value=''; }
         else if (type==='price') { priceMin=0; priceMax=parseInt(document.getElementById('price-max').max||500); document.getElementById('price-min').value=0; document.getElementById('price-max').value=priceMax; updateDualRange('price'); }
         else if (type==='abv') { abvMin=0; abvMax=15; document.getElementById('abv-min').value=0; document.getElementById('abv-max').value=15; updateDualRange('abv'); }
@@ -1953,8 +2257,41 @@
     }
 
     // Mobile sidebar
-    function closeSidebar() { document.getElementById('sidebar').classList.remove('mobile-open'); document.getElementById('mobile-backdrop').classList.remove('visible'); document.body.classList.remove('sidebar-open'); document.getElementById('mobile-filter-open').setAttribute('aria-expanded','false'); }
-    function openSidebar() { document.getElementById('sidebar').classList.add('mobile-open'); document.getElementById('mobile-backdrop').classList.add('visible'); document.body.classList.add('sidebar-open'); document.getElementById('mobile-filter-open').setAttribute('aria-expanded','true'); }
+    let _sbReturnFocus = null;
+    const SB_BG = 'header, .hero-search, .stats-bar, .top-deals-section, .mobile-filter-toggle, .main-content, .seo-section, footer';
+    function setBgInert(v) { document.querySelectorAll(SB_BG).forEach(el => { el.inert = v; }); }
+    function setSidebarInert() {
+        const sb = document.getElementById('sidebar');
+        if (!sb) return;
+        const open = sb.classList.contains('mobile-open');
+        sb.inert = isMobile() && !open;   // lukket mobil-menu skal ikke kunne tabbes til
+        if (!isMobile() && open) closeSidebar();
+    }
+    function closeSidebar() {
+        const sb = document.getElementById('sidebar');
+        const wasOpen = sb.classList.contains('mobile-open');
+        sb.classList.remove('mobile-open');
+        document.getElementById('mobile-backdrop').classList.remove('visible');
+        document.body.classList.remove('sidebar-open');
+        document.getElementById('mobile-filter-open').setAttribute('aria-expanded', 'false');
+        sb.removeAttribute('role'); sb.removeAttribute('aria-modal');
+        setBgInert(false);
+        setSidebarInert();
+        if (wasOpen && _sbReturnFocus) { try { _sbReturnFocus.focus(); } catch (e) {} }
+        _sbReturnFocus = null;
+    }
+    function openSidebar() {
+        const sb = document.getElementById('sidebar');
+        _sbReturnFocus = document.activeElement;
+        sb.inert = false;
+        sb.classList.add('mobile-open');
+        document.getElementById('mobile-backdrop').classList.add('visible');
+        document.body.classList.add('sidebar-open');
+        document.getElementById('mobile-filter-open').setAttribute('aria-expanded', 'true');
+        sb.setAttribute('role', 'dialog'); sb.setAttribute('aria-modal', 'true');
+        setBgInert(true);
+        document.getElementById('mobile-filter-close').focus();
+    }
 
     // Load data
     async function loadData() {
@@ -1963,6 +2300,13 @@
             if (!res.ok) throw new Error('Kunne ikke hente data.json');
             const raw = await res.json();
             allBeers = (raw.beers||[]).map(normalizeBeer);
+            beerByKey = new Map(allBeers.map(b => [b.normalized_name || b.name, b]));
+            beerBySlug = new Map(allBeers.filter(b => b.slug).map(b => [b.slug, b]));
+            // "Kun på lager"-filteret giver kun mening hvis data indeholder lagerstatus
+            const hasAvail = allBeers.some(b => b.prices.some(p => p.available !== undefined));
+            const stockBtn = document.querySelector('.sidebar-filter-btn[data-filter="in-stock"]');
+            if (stockBtn && !hasAvail) stockBtn.style.display = 'none';
+            detectFavDrops();
             const stats = raw.stats||{};
 
             document.getElementById('stat-total').textContent = stats.total||allBeers.length;
@@ -1979,7 +2323,7 @@
             }
 
             const shopList = document.getElementById('shop-list');
-            shopList.innerHTML = (stats.shop_names||[]).map(sh => `<div class="sidebar-checkbox" data-shop="${sh}" role="checkbox" aria-checked="false" tabindex="0"><span class="cb"></span> ${sh}</div>`).join('');
+            shopList.innerHTML = (stats.shop_names||[]).map(sh => `<div class="sidebar-checkbox" data-shop="${escapeHtml(sh)}" role="checkbox" aria-checked="false" tabindex="0"><span class="cb"></span> ${escapeHtml(sh)}</div>`).join('');
             shopList.querySelectorAll('.sidebar-checkbox').forEach(item => {
                 const toggle = () => {
                     if (selectedShops.has(item.dataset.shop)) { selectedShops.delete(item.dataset.shop); item.setAttribute('aria-checked','false'); }
@@ -1992,7 +2336,7 @@
             });
 
             const typeList = document.getElementById('type-list');
-            typeList.innerHTML = (stats.types||[]).map(t => `<div class="sidebar-checkbox" data-type="${t}" role="checkbox" aria-checked="false" tabindex="0"><span class="cb"></span> ${t}</div>`).join('');
+            typeList.innerHTML = (stats.types||[]).map(t => `<div class="sidebar-checkbox" data-type="${escapeHtml(t)}" role="checkbox" aria-checked="false" tabindex="0"><span class="cb"></span> ${escapeHtml(t)}</div>`).join('');
             typeList.querySelectorAll('.sidebar-checkbox').forEach(item => {
                 const toggle = () => {
                     if (selectedTypes.has(item.dataset.type)) { selectedTypes.delete(item.dataset.type); item.setAttribute('aria-checked','false'); }
@@ -2012,17 +2356,30 @@
             const maxP = Math.ceil(Math.max(...allBeers.filter(b=>b.min_price).map(b=>b.min_price),500));
             document.getElementById('price-min').max=maxP; document.getElementById('price-max').max=maxP;
             document.getElementById('price-max').value=maxP; priceMax=maxP;
+            // Synk sliders med gemte værdier, derefter evt. URL-filtre (?q=, ?filter=deals …)
+            document.getElementById('abv-min').value=abvMin; document.getElementById('abv-max').value=abvMax;
+            updateDualRange('price'); updateDualRange('abv');
+            syncCatPills();
+            applyUrlState(false);
 
             document.getElementById('loading').style.display='none';
             currentPage=1; renderGrid(); renderTopDeals(); renderActiveFilters(); injectProductSchema();
+            _urlReady = true;
+            loadHistory();
         } catch (err) {
-            document.getElementById('loading').innerHTML='<div class="empty-icon">😢</div><p>Kunne ikke hente øl-data — tjek at data.json findes</p>';
+            document.getElementById('loading').innerHTML='<div class="empty-icon" style="padding-top:4rem">😢</div><p>Kunne ikke hente øl-data — tjek at data.json findes</p>';
             console.error(err);
         }
     }
 
     // Init
     async function init() {
+        setSidebarInert();
+        window.addEventListener('resize', setSidebarInert, { passive: true });
+        window.addEventListener('popstate', () => {
+            if (!_urlReady) return;
+            applyUrlState(true); currentPage = 1; renderGrid(); renderActiveFilters();
+        });
         document.getElementById('sort-select').addEventListener('change', function() { currentSort=this.value; currentPage=1; savePrefs(); renderGrid(); gtag('event','sortering',{sort:currentSort}); });
 
         document.querySelectorAll('.sidebar-filter-btn[data-filter]').forEach(btn => {
@@ -2047,36 +2404,33 @@
         document.getElementById('mobile-filter-close').addEventListener('click', closeSidebar);
         document.getElementById('mobile-backdrop').addEventListener('click', closeSidebar);
 
-        function resetAllFilters() {
-            activeFlags.clear(); selectedShops.clear(); currentSort='price-asc'; currentPage=1;
-            selectedTypes.clear(); priceMin=0; abvMin=0; abvMax=15;
-            document.getElementById('search').value='';
-            document.getElementById('price-min').value=0;
-            document.getElementById('price-max').value=parseInt(document.getElementById('price-max').max);
-            document.getElementById('abv-min').value=0; document.getElementById('abv-max').value=15;
-            updateDualRange('price'); updateDualRange('abv'); updateSortBtn(); updateShopBtn(); updateTypeBtn();
-            document.querySelectorAll('.cat-btn').forEach(b=>b.classList.remove('active'));
-            syncFlagButtons();
-            savePrefs(); renderGrid(); renderActiveFilters(); gtag('event','nulstil_filter');
-        }
         document.getElementById('reset-btn').addEventListener('click', resetAllFilters);
         document.getElementById('sidebar-clear-all').addEventListener('click', resetAllFilters);
 
         let searchTimer;
         document.getElementById('search').addEventListener('input', function() {
             clearTimeout(searchTimer);
-            searchTimer = setTimeout(() => { if (this.value.length>1) gtag('event','soegning',{search_term:this.value}); currentPage=1; renderGrid(); renderActiveFilters(); }, 350);
+            searchTimer = setTimeout(() => { if (this.value.length>1) gtag('event','soegning',{search_term:this.value}); currentPage=1; savePrefs(true); renderGrid(); renderActiveFilters(); }, 350);
         });
 
         let priceTimer;
-        document.getElementById('price-min').addEventListener('input', () => { updateDualRange('price'); clearTimeout(priceTimer); priceTimer=setTimeout(()=>{currentPage=1;savePrefs();renderGrid();renderActiveFilters();},500); });
-        document.getElementById('price-max').addEventListener('input', () => { updateDualRange('price'); clearTimeout(priceTimer); priceTimer=setTimeout(()=>{currentPage=1;savePrefs();renderGrid();renderActiveFilters();},500); });
+        document.getElementById('price-min').addEventListener('input', () => { updateDualRange('price'); clearTimeout(priceTimer); priceTimer=setTimeout(()=>{currentPage=1;savePrefs(true);renderGrid();renderActiveFilters();},500); });
+        document.getElementById('price-max').addEventListener('input', () => { updateDualRange('price'); clearTimeout(priceTimer); priceTimer=setTimeout(()=>{currentPage=1;savePrefs(true);renderGrid();renderActiveFilters();},500); });
 
         let abvTimer;
-        document.getElementById('abv-min').addEventListener('input', () => { updateDualRange('abv'); clearTimeout(abvTimer); abvTimer=setTimeout(()=>{currentPage=1;savePrefs();renderGrid();renderActiveFilters();},500); });
-        document.getElementById('abv-max').addEventListener('input', () => { updateDualRange('abv'); clearTimeout(abvTimer); abvTimer=setTimeout(()=>{currentPage=1;savePrefs();renderGrid();renderActiveFilters();},500); });
+        document.getElementById('abv-min').addEventListener('input', () => { updateDualRange('abv'); clearTimeout(abvTimer); abvTimer=setTimeout(()=>{currentPage=1;savePrefs(true);renderGrid();renderActiveFilters();},500); });
+        document.getElementById('abv-max').addEventListener('input', () => { updateDualRange('abv'); clearTimeout(abvTimer); abvTimer=setTimeout(()=>{currentPage=1;savePrefs(true);renderGrid();renderActiveFilters();},500); });
 
-        document.getElementById('load-more').addEventListener('click', () => { currentPage++; renderGrid(true); gtag('event','vis_flere',{side:currentPage}); });
+        function loadMore() {
+            if (currentPage >= totalPages) return;
+            currentPage++; renderGrid(true); gtag('event','vis_flere',{side:currentPage});
+        }
+        const loadMoreBtn = document.getElementById('load-more');
+        loadMoreBtn.addEventListener('click', loadMore);
+        if (typeof window.IntersectionObserver === 'function') {
+            window._loadMoreIO = new IntersectionObserver(es => { if (es.some(e => e.isIntersecting)) loadMore(); }, { rootMargin: '700px 0px' });
+            window._loadMoreIO.observe(loadMoreBtn);
+        }
 
         const stBtn = document.getElementById('scroll-top');
         const miniHeader = document.getElementById('mini-header');
@@ -2103,9 +2457,14 @@
         updateFilterStickyTop();
         stBtn.addEventListener('click', () => window.scrollTo({top:0,behavior:'smooth'}));
 
-        document.getElementById('fav-count-badge').textContent = favorites.size>0?`(${favorites.size})`:'';
+        updateFavBadge();
 
         await loadData();
+    }
+
+    // PWA: cacher shell + data.json så siden åbner hurtigt (og offline)
+    if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => { navigator.serviceWorker.register('/sw.js').catch(() => {}); });
     }
 
     init();
