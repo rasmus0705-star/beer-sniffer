@@ -2499,7 +2499,8 @@
 
             loadPrefs(); updateShopBtn(); updateTypeBtn(); updateSortBtn();
 
-            const maxP = Math.ceil(Math.max(...allBeers.filter(b=>b.min_price).map(b=>b.min_price),500));
+            // Rundes op til nærmeste 10 — skyderen har step=10 og ville ellers klikke ned og skjule de dyreste øl
+            const maxP = Math.ceil(Math.max(...allBeers.filter(b=>b.min_price).map(b=>b.min_price),500) / 10) * 10;
             document.getElementById('price-min').max=maxP; document.getElementById('price-max').max=maxP;
             document.getElementById('price-max').value=maxP; priceMax=maxP;
             // Synk sliders med gemte værdier, derefter evt. URL-filtre (?q=, ?filter=deals …)
