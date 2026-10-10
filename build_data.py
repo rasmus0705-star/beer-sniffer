@@ -10,6 +10,7 @@ Kør med: python build_data.py
 """
 
 import json
+import os
 import sys
 import subprocess
 import time
@@ -24,15 +25,7 @@ from app.models import Beer, Price, PriceHistory
 from sqlalchemy import func
 from sqlalchemy.orm import joinedload
 
-from app.scrapers.brygshoppen import scrape_brygshoppen
-from app.scrapers.beermatch import scrape_beermatch
-from app.scrapers.drikbeer import scrape_drikbeer
-from app.scrapers.agoodcase import scrape_agoodcase
-from app.scrapers.beershoppen import scrape_beershoppen
-from app.scrapers.bestofbeers import scrape_bestofbeers
-from app.scrapers.oeltanken import scrape_oeltanken
-from app.scrapers.beerme import scrape_beerme
-from app.scrapers.vildmedvin import scrape_vildmedvin
+from shops import get_scrapers
 
 from app.services.ingest import ingest_batch
 from app.utils.overrides import load_fejlliste, apply_overrides, write_fejlliste, load_brewery_aliases
@@ -53,32 +46,57 @@ from app.services.matching import (
 
 
 def run_all_scrapers():
-    """Kører alle 6 scrapers og samler items."""
+    """Kører alle scrapers parallelt. Hver scraper rammer sin egen butik,
+    så den enkelte butik belastes ikke mere end før. Resultaterne samles
+    i samme rækkefølge som get_scrapers(), så ingest/matching er uændret."""
+    from concurrent.futures import ThreadPoolExecutor
+
+    scrapers = get_scrapers()
+
+    def _koer(name, func):
+        t0 = time.time()
+        try:
+            items = list(func())
+            return name, items, None, time.time() - t0
+        except Exception as e:
+            return name, [], e, time.time() - t0
+
+    # Shopify deler rate limit pr. IP på tværs af butikker. Shopify-butikkerne
+    # køres derfor én ad gangen i én fælles tråd; resten kører parallelt.
+    SHOPIFY = {"A Good Case", "Beermatch", "Beershoppen", "Brygshoppen", "Drikbeer", "Øltanken"}
+    seriel = [(n, f) for n, f in scrapers if n in SHOPIFY]
+    parallel = [(n, f) for n, f in scrapers if n not in SHOPIFY]
+
+    def _koer_seriel():
+        ud = {}
+        for i, (name, func) in enumerate(seriel):
+            if i:
+                time.sleep(2)
+            ud[name] = _koer(name, func)
+        return ud
+
+    print(f"\n🍺 Kører {len(parallel)} scrapers parallelt + {len(seriel)} Shopify-butikker i rækkefølge...")
+    with ThreadPoolExecutor(max_workers=len(parallel) + 1) as pool:
+        f_seriel = pool.submit(_koer_seriel)
+        f_par = {name: pool.submit(_koer, name, func) for name, func in parallel}
+        seriel_res = f_seriel.result()
+        resultater = [
+            seriel_res[name] if name in seriel_res else f_par[name].result()
+            for name, _ in scrapers
+        ]
+
     all_items = []
     results = {}
-
-    scrapers = [
-        ("Brygshoppen", scrape_brygshoppen),
-        ("Beermatch", scrape_beermatch),
-        ("Drikbeer", scrape_drikbeer),
-        ("A Good Case", scrape_agoodcase),
-        ("Beershoppen", scrape_beershoppen),
-        ("Best of Beers", scrape_bestofbeers),
-        ("Øltanken", scrape_oeltanken),
-        ("Beer Me", scrape_beerme),
-        ("Vild med Vin", scrape_vildmedvin),
-    ]
-
-    for name, func in scrapers:
-        print(f"\n🍺 Kører {name}...")
-        try:
-            items = func()
+    print(f"\n⏱ Tid pr. scraper:")
+    for name, items, err, sek in resultater:
+        if err:
+            results[name] = f"FEJL: {err}"
+            print(f"   ❌ {name}: {err} ({sek:.1f}s)")
+        else:
             all_items.extend(items)
             results[name] = len(items)
-            print(f"   ✅ {len(items)} produkter")
-        except Exception as e:
-            results[name] = f"FEJL: {e}"
-            print(f"   ❌ Fejl: {e}")
+            _ikon = "✅" if items else "⚠️"
+            print(f"   {_ikon} {name}: {len(items)} produkter ({sek:.1f}s)")
 
     return all_items, results
 
@@ -425,6 +443,15 @@ def main():
         print("\n❌ Ingen items hentet — afbryder")
         return
 
+    # Stop FØR ingest/push, hvis en butik mangler — ellers forsvinder dens
+    # priser fra sitet. Overstyr med: python build_data.py --tillad-mangler
+    _mangler = [s for s, c in results.items() if not isinstance(c, int) or c == 0]
+    if _mangler and "--tillad-mangler" not in sys.argv:
+        print(f"\n❌ STOP: ingen produkter fra {', '.join(_mangler)}.")
+        print("   Intet er gemt eller pushet. Prøv igen senere (Shopify bremser")
+        print("   typisk kun midlertidigt), eller kør med --tillad-mangler.")
+        sys.exit(1)
+
     # 1a2. Rens navne-stoej fra kilderne (mojibake, BEDST FOER-datoer,
     #       dublerede pak-angivelser) — facit anvendes efter og vinder.
     _renset = 0
@@ -448,18 +475,24 @@ def main():
 
     # 2. Gem i Supabase (bevarer historik)
     print(f"\n💾 Gemmer i Supabase...")
+    _t = time.time()
     db = SessionLocal()
     try:
         ingest_batch(db, items)
     finally:
         pass  # holder db åben til næste step
+    print(f"   ⏱ ingest: {time.time() - _t:.1f}s")
 
     # 3. Byg grupperet liste fra database
     print(f"\n🔗 Bygger grupperet ølliste...")
+    _t = time.time()
     beer_list = build_beer_list_from_db(db)
+    print(f"   ⏱ gruppering: {time.time() - _t:.1f}s")
 
     print(f"\n📈 Bygger prishistorik...")
+    _t = time.time()
     build_price_history(db, beer_list)
+    print(f"   ⏱ prishistorik: {time.time() - _t:.1f}s")
     db.close()
 
     # Rens navne-stoej OGSAA paa output-siden: navnene her kommer fra
@@ -510,9 +543,13 @@ def main():
 
     # 7. Generér individuelle øl-sider og sitemap ud fra det nye data.json
     print(f"\n🌐 Genererer øl-sider og sitemap...")
+    _t = time.time()
     try:
         subprocess.run([sys.executable, "generate_beer_pages.py", "--all"], check=True)
+        print(f"   ⏱ øl-sider: {time.time() - _t:.1f}s")
+        _t = time.time()
         subprocess.run([sys.executable, "generate_brewery_pages.py", "--all"], check=True)
+        print(f"   ⏱ bryggeri-sider: {time.time() - _t:.1f}s")
         subprocess.run([sys.executable, "generate_sitemap.py"], check=True)
     except subprocess.CalledProcessError as e:
         print(f"⚠️ Fejl under generering af øl-sider/sitemap: {e}")
@@ -535,10 +572,20 @@ def main():
     print(f"   Skrev data.json med {total_beers} unikke øl fra {len(shop_names)} butikker")
     print(f"   Aktive tilbud: {deals_count}")
     print(f"   Billigste øl: {round(cheapest, 2)} kr")
-    print(f"\n📤 Næste skridt:")
-    print(f"   git add data.json ol/ sitemap.xml index.html")
-    print(f"   git commit -m \"Daglig opdatering {datetime.now().strftime('%Y-%m-%d')}\"")
-    print(f"   git push")
+    print(f"\n📤 Pusher til GitHub...")
+    subprocess.run(["git", "add", "data.json", "ol/", "bryggeri/", "sitemap.xml", "index.html"], check=True)
+    # Prishistorik + PWA-filer. Uden check=True: en .gitignore'd fil må ikke vælte kørslen.
+    _extra = [p for p in ("price_history.json", "manifest.webmanifest", "sw.js", "fonts",
+                          "icon-192.png", "icon-512.png", "icon-maskable-512.png", "apple-touch-icon.png", "logo-hero.png")
+              if os.path.exists(p)]
+    if _extra:
+        subprocess.run(["git", "add", *_extra])
+    result = subprocess.run(["git", "commit", "-m", f"Daglig opdatering {datetime.now().strftime('%Y-%m-%d')}"], capture_output=True, text=True)
+    if result.returncode == 0:
+        subprocess.run(["git", "push"], check=True)
+        print("✅ Pushet til GitHub")
+    else:
+        print("ℹ️ Ingen ændringer at committe")
 
 
 if __name__ == "__main__":

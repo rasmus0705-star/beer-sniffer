@@ -48,6 +48,8 @@
         }
         :root {
             --bg: #0a0805;
+            --photo-bg: #efe6d3;
+            color-scheme: dark;
             --surface: #141009;
             --surface2: #1e1810;
             --surface3: #252018;
@@ -352,7 +354,6 @@
             align-items: center;
             gap: 0.5rem;
         }
-        .top-deals-title::before { content: '🔥'; font-size: 1.1rem; }
         .top-deals-see-all { font-size: 0.75rem; color: var(--gold); cursor: pointer; text-decoration: none; transition: color 0.2s; }
         .top-deals-see-all:hover { color: var(--gold-light); }
         .top-deals-scroll {
@@ -700,7 +701,7 @@
 
         .grid-wrap { padding: clamp(0.75rem, 1.5vw, 1.5rem); max-width: 100%; margin: 0; position: relative; z-index: 1; }
         .result-count { font-size: 0.72rem; color: var(--text-dim); margin-bottom: 1rem; letter-spacing: 0.12em; text-transform: uppercase; }
-        .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 210px), 1fr)); gap: clamp(0.6rem, 1vw, 1rem); }
+        .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 250px), 1fr)); gap: clamp(0.6rem, 1vw, 1rem); }
 
         .card {
             background: linear-gradient(180deg, var(--surface) 0%, var(--surface2) 100%);
@@ -1240,15 +1241,158 @@
         /* Laveste-pris-mærke */
         .tag-low { background: rgba(61,186,111,0.12); color: #3dba6f; border-color: rgba(61,186,111,0.35); font-weight: 700; }
 
-        /* Fragt-ikon sidder ved butiksnavnet: prisen får hele bredden */
-        .price-row-header .shipping-btn { width: 26px; height: 26px; margin: -5px 0; font-size: 0.72rem; }
+        /* Fragt-ikon sidder ved "Inkl. fragt"-teksten; butiksnavnet må aldrig afkortes af badges */
+        .price-row-ship { display: flex; align-items: center; gap: 0.35rem; }
+        .price-row-ship .shipping-btn { width: 22px; height: 22px; margin: -3px 0; font-size: 0.62rem; }
+        .price-row-header { flex-wrap: wrap; row-gap: 0.25rem; }
+        .price-row-shop { flex: 1 1 auto; }
         /* Hvis pris + Køb ikke kan stå ved siden af hinanden, falder Køb ned under prisen */
         .price-row-main { flex-wrap: wrap; }
         .price-row-left { flex: 1 1 auto; min-width: 0; }
         .price-row-actions { margin-left: auto; }
+
+        /* ══════════ DESIGN-OPDATERING ══════════ */
+        /* Ikoner */
+        .ic { width: 1.1em; height: 1.1em; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; vertical-align: -0.17em; flex-shrink: 0; }
+        .sidebar-title .ic { margin-right: 0.35rem; vertical-align: -0.18em; }
+        .sfb-label { display: inline-flex; align-items: center; gap: 0.55rem; }
+        .sidebar-reset { display: flex; align-items: center; justify-content: center; gap: 0.5rem; }
+        .untappd-btn { gap: 0.45rem; }
+        .tag .ic { width: 1em; height: 1em; margin-right: 0.2rem; vertical-align: -0.14em; }
+        .price-row-save .ic { width: 0.95em; height: 0.95em; margin-right: 0.15rem; vertical-align: -0.15em; }
+        .top-deals-title .ic { width: 1.05em; height: 1.05em; margin-right: 0.15rem; }
+        .filter-chip .ic, .sidebar-chip .ic { width: 0.95em; height: 0.95em; }
+        .filter-chip .x .ic, .sidebar-chip .x .ic { width: 0.85em; height: 0.85em; vertical-align: -0.1em; }
+        .sidebar-chip .ic { margin-right: 0.3rem; }
+        .empty-icon .ic { width: 2.8rem; height: 2.8rem; color: var(--gold-dim); stroke-width: 1.5; }
+        .mobile-filter-btn .ic { width: 1.15em; height: 1.15em; }
+        .fav-btn { color: #fff; }
+        .fav-btn .ic { width: 1.1rem; height: 1.1rem; }
+        .fav-btn.active { color: #ff5a5f; }
+        .fav-btn.active .ic { fill: currentColor; }
+        .shipping-btn .ic { width: 0.95rem; height: 0.95rem; vertical-align: 0; }
+        .price-row-ship .shipping-btn .ic { width: 0.78rem; height: 0.78rem; }
+        .tt-title .ic { width: 1em; height: 1em; margin-right: 0.2rem; vertical-align: -0.15em; }
+
+        /* Foto-underlag: hvide pakkefotos bliver en bevidst creme-flade i stedet for hvide firkanter */
+        .card-img-wrap { background: var(--photo-bg); }
+        .card-img { mix-blend-mode: multiply; background: none; }
+        .card-img-placeholder { background: var(--photo-bg); }
+        .card-img-placeholder .ic { width: 2.6rem; height: 2.6rem; color: #b9a577; stroke-width: 1.5; }
+
+        /* Bryggeri-linje */
+        .card-brewery { font-size: 0.62rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gold); font-weight: 700; margin-bottom: 0.2rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+
+        /* Færre accentfarver: tags er neutrale, guld = type, grøn = alt der er billigere */
+        .tag-shops, .tag-ppl { background: var(--surface3); color: #c8b896; border-color: var(--border-light); }
+        .tag-drop { background: rgba(61,186,111,0.12); color: #3dba6f; border-color: rgba(61,186,111,0.35); font-weight: 700; }
+        .shipping-btn:hover { border-color: var(--gold); color: var(--gold-light); background: rgba(200,146,14,0.1); }
+
+        /* Små moderne detaljer */
+        .card-name, .top-card-name, .brand-tagline { text-wrap: balance; }
+        .price-row-amount, .price-row-old, .price-row-total, .top-card-price, .stat-number, .range-val { font-variant-numeric: tabular-nums; }
+        .mini-header { background: rgba(10,8,5,0.72); backdrop-filter: blur(14px) saturate(1.4); -webkit-backdrop-filter: blur(14px) saturate(1.4); }
+        .active-filters { background: rgba(10,8,5,0.78); backdrop-filter: blur(14px) saturate(1.4); -webkit-backdrop-filter: blur(14px) saturate(1.4); }
+        ::selection { background: var(--gold); color: #000; }
+
+        /* Kort tilpasser sig deres EGEN bredde (container query), ikke skærmens */
+        .card { container: card / inline-size; }
+        @container card (max-width: 280px) {
+            .price-row-main { flex-direction: column; align-items: stretch; gap: 0.3rem; }
+            .price-row-actions { width: 100%; margin-left: 0; }
+            .price-row-link { flex: 1; display: flex; align-items: center; justify-content: center; text-align: center; min-height: 40px; }
+            .card-body { padding: 0.65rem; }
+        }
+
+        /* Hero: logoet uden de gennemsigtige kanter (cropped) giver et meget lavere hero */
+        .logo-img { width: 130px; }
+        .brand { flex-direction: row; flex-wrap: wrap; align-items: baseline; column-gap: 0.5rem; }
+        .brand-tagline { flex: 0 0 100%; }
+        .header-updated br { display: none; }
+        .header-updated strong::after { content: ' '; }
+        .header-updated::before { content: '·'; margin-right: 0.5rem; }
+        .hero-search-sub { display: none; }
+        @media (min-width: 768px) {
+            .header-inner { padding: 0.7rem 1.5rem 0.6rem; gap: 1.6rem; }
+            .header-inner .logo-img { width: 150px; }
+            .header-inner .mascot-wrap::before { inset: -18px; }
+            .hero-search { padding-top: 0.7rem; padding-bottom: 0.4rem; }
+            .category-bar { margin-top: 0.8rem; max-width: 760px; }
+            .stats-bar { padding: 0.1rem 1rem 0.75rem; gap: 0.45rem; }
+            .stat { padding: 0.3rem 0.85rem; }
+            .stat-number { font-size: 1.05rem; }
+            .stat-label { font-size: 0.62rem; }
+        }
+        @media (max-width: 640px) {
+            .header-inner { flex-direction: row; align-items: center; justify-content: flex-start; gap: 0.9rem; padding: 0.7rem 1rem; }
+            .header-inner .mascot-wrap::before { inset: -12px; }
+            .logo-img { width: 88px; }
+            .brand { align-items: flex-start; text-align: left; }
+            .brand-tagline { font-size: 0.9rem; line-height: 1.3; }
+            .header-updated { text-align: left; font-size: 0.62rem; }
+            .header-updated::before { display: none; }
+            .hero-search { padding: 0.5rem 1rem 0.7rem; }
+            .stat { padding: 0.35rem 0.75rem; }
+            .stat-number { font-size: 1.1rem; }
+            .stat-label { font-size: 0.6rem; }
+            .card-brewery { font-size: 0.54rem; }
+        }
+
+        /* Tilbudsstrimmel: kompakte vandrette kort */
+        .top-deals-section { padding: 0.9rem 1.5rem 0.8rem; }
+        .top-deals-header { margin-bottom: 0.6rem; }
+        .top-deals-title { font-size: 1.1rem; }
+        .top-card { flex: 0 0 290px; min-width: 290px; display: grid; grid-template-columns: 76px 1fr; gap: 0.7rem; padding: 0.6rem; align-items: center; border-radius: 14px; }
+        .top-card-photo { width: 76px; height: 76px; border-radius: 10px; background: var(--photo-bg); display: flex; align-items: center; justify-content: center; overflow: hidden; }
+        .top-card-photo .top-card-img { width: 100%; height: 100%; padding: 0.3rem; background: none; mix-blend-mode: multiply; object-fit: contain; }
+        .top-card-photo .ic { width: 1.8rem; height: 1.8rem; color: #b9a577; stroke-width: 1.5; }
+        .top-card-body { padding: 0; min-width: 0; }
+        .top-card-shop { font-size: 0.58rem; }
+        .top-card-name { font-size: 0.8rem; }
+        .top-card-prices { padding-right: 3.2rem; }
+        .top-card-pct { top: 0.5rem; right: 0.5rem; border-radius: 6px; font-size: 0.85rem; padding: 0.05rem 0.4rem; }
+        .top-card-link { position: absolute; right: 0.5rem; bottom: 0.5rem; display: inline-block; margin: 0; padding: 0.24rem 0.6rem; font-size: 0.6rem; }
+        @media (max-width: 640px) {
+            .top-card { flex: 0 0 262px; min-width: 262px; }
+        }
+
+        /* Mobil: Filtrér er en lille flydende knap nederst i stedet for en tung bjælke */
+        @media (max-width: 1100px) {
+            .mobile-filter-toggle { position: fixed; top: auto; bottom: max(18px, env(safe-area-inset-bottom)); left: 50%; right: auto; transform: translateX(-50%); background: none; border: none; padding: 0; width: auto; z-index: 600; }
+            .mobile-filter-btn { flex: none; padding: 0.7rem 1.3rem; border-radius: 999px; min-height: 46px; box-shadow: 0 8px 24px rgba(0,0,0,0.55), 0 0 0 1px rgba(255,255,255,0.1) inset; }
+            body.sidebar-open .mobile-filter-toggle { display: none; }
+            .grid-wrap { padding-bottom: 5.5rem; }
+        }
+
+        /* Hero-tekst: samme venstrekant på tagline og undertekst */
+        .brand { text-align: center; justify-content: center; }
+        @media (min-width: 768px) { .brand { text-align: left; justify-content: flex-start; } }
+        @media (max-width: 640px) { .brand { text-align: left; justify-content: flex-start; } }
     </style>
 </head>
 <body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><defs>
+<symbol id="i-flame" viewBox="0 0 24 24"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"/></symbol>
+<symbol id="i-heart" viewBox="0 0 24 24"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></symbol>
+<symbol id="i-beer" viewBox="0 0 24 24"><path d="M17 11h1a3 3 0 0 1 0 6h-1"/><path d="M9 12v6"/><path d="M13 12v6"/><path d="M14 7.5c-1 0-1.44.5-3 .5s-2-.5-3-.5-1.72.5-2.5.5a2.5 2.5 0 0 1 0-5c.78 0 1.57.5 2.5.5S9.44 2 11 2s2 1.5 3 1.5 1.72-.5 2.5-.5a2.5 2.5 0 0 1 0 5c-.78 0-1.5-.5-2.5-.5Z"/><path d="M5 8v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V8"/></symbol>
+<symbol id="i-store" viewBox="0 0 24 24"><path d="M4 9l1.5-5h13L20 9"/><path d="M4 9a3 3 0 0 0 5.33 1.88 3 3 0 0 0 5.34 0A3 3 0 0 0 20 9"/><path d="M5 13v7h14v-7"/><path d="M10 20v-4h4v4"/></symbol>
+<symbol id="i-truck" viewBox="0 0 24 24"><path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2"/><path d="M15 18H9"/><path d="M19 18h2a1 1 0 0 0 1-1v-3.65a1 1 0 0 0-.22-.624l-3.48-4.35A1 1 0 0 0 17.52 8H14"/><circle cx="17" cy="18" r="2"/><circle cx="7" cy="18" r="2"/></symbol>
+<symbol id="i-sliders" viewBox="0 0 24 24"><path d="M21 4h-7"/><path d="M10 4H3"/><path d="M21 12h-9"/><path d="M8 12H3"/><path d="M21 20h-5"/><path d="M12 20H3"/><path d="M14 2v4"/><path d="M8 10v4"/><path d="M16 18v4"/></symbol>
+<symbol id="i-sort" viewBox="0 0 24 24"><path d="m21 16-4 4-4-4"/><path d="M17 20V4"/><path d="m3 8 4-4 4 4"/><path d="M7 4v16"/></symbol>
+<symbol id="i-ban" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="m4.9 4.9 14.2 14.2"/></symbol>
+<symbol id="i-package" viewBox="0 0 24 24"><path d="m7.5 4.27 9 5.15"/><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"/><path d="m3.3 7 8.7 5 8.7-5"/><path d="M12 22V12"/></symbol>
+<symbol id="i-check" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></symbol>
+<symbol id="i-trend-down" viewBox="0 0 24 24"><path d="M16 17h6v-6"/><path d="m22 17-8.5-8.5-5 5L2 7"/></symbol>
+<symbol id="i-tag" viewBox="0 0 24 24"><path d="M12.586 2.586A2 2 0 0 0 11.172 2H4a2 2 0 0 0-2 2v7.172a2 2 0 0 0 .586 1.414l8.704 8.704a2.426 2.426 0 0 0 3.42 0l6.58-6.58a2.426 2.426 0 0 0 0-3.42z"/><circle cx="7.5" cy="7.5" r=".5" fill="currentColor"/></symbol>
+<symbol id="i-banknote" viewBox="0 0 24 24"><rect width="20" height="12" x="2" y="6" rx="2"/><circle cx="12" cy="12" r="2"/><path d="M6 12h.01M18 12h.01"/></symbol>
+<symbol id="i-percent" viewBox="0 0 24 24"><line x1="19" x2="5" y1="5" y2="19"/><circle cx="6.5" cy="6.5" r="2.5"/><circle cx="17.5" cy="17.5" r="2.5"/></symbol>
+<symbol id="i-zap" viewBox="0 0 24 24"><path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"/></symbol>
+<symbol id="i-reset" viewBox="0 0 24 24"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/><path d="M3 3v5h5"/></symbol>
+<symbol id="i-star" viewBox="0 0 24 24"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"/></symbol>
+<symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></symbol>
+<symbol id="i-funnel" viewBox="0 0 24 24"><path d="M10 20a1 1 0 0 0 .553.895l2 1A1 1 0 0 0 14 21v-7a2 2 0 0 1 .517-1.341L21.74 4.67A1 1 0 0 0 21 3H3a1 1 0 0 0-.742 1.67l7.225 7.989A2 2 0 0 1 10 14z"/></symbol>
+<symbol id="i-x" viewBox="0 0 24 24"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></symbol>
+</defs></svg>
 
 <!-- SEO: H1 med primær søgeintention — skjult visuelt, synlig for Google -->
 <h1 style="position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0;">Find de bedste øltilbud i Danmark — BeerSniffer</h1>
@@ -1256,7 +1400,7 @@
 <!-- HEADER -->
 <!-- Sticky mini-header — vises ved scroll -->
 <div class="mini-header" id="mini-header">
-    <img src="logo.png" alt="BeerSniffer" decoding="async">
+    <img src="logo-hero.png" alt="BeerSniffer" width="38" height="32" decoding="async">
     <span class="mini-brand">BeerSniffer</span>
     <span class="mini-tagline">— snus dig frem til de bedste øltilbud</span>
 </div>
@@ -1264,7 +1408,7 @@
 <header>
     <div class="header-inner">
         <div class="mascot-wrap">
-            <img src="logo.png" alt="BeerSniffer — find de bedste øltilbud" class="logo-img" decoding="async">
+            <img src="logo-hero.png" alt="BeerSniffer — find de bedste øltilbud" class="logo-img" width="203" height="170" decoding="async">
         </div>
         <div class="brand">
             <p class="brand-tagline">Snus dig frem til de bedste <strong>øltilbud</strong> i Danmark</p>
@@ -1314,7 +1458,7 @@
 <!-- TOP DEALS CAROUSEL -->
 <div class="top-deals-section" id="top-deals-section" style="display:none" role="region" aria-label="Bedste tilbud lige nu">
     <div class="top-deals-header">
-        <span class="top-deals-title">Bedste tilbud lige nu</span>
+        <span class="top-deals-title"><svg class="ic" aria-hidden="true"><use href="#i-flame"/></svg>Bedste tilbud lige nu</span>
         <a class="top-deals-see-all" href="#tilbud" role="button" onclick="quickCat('deals');return false;">Se alle tilbud →</a>
     </div>
     <div class="top-deals-scroll" id="top-deals-scroll"></div>
@@ -1324,7 +1468,7 @@
 <div class="mobile-filter-toggle">
     <button class="mobile-filter-btn" id="mobile-filter-open"
         aria-label="Åbn filtre" aria-expanded="false" aria-controls="sidebar">
-        🎛️ Filtrér <span class="mobile-filter-count" id="mobile-filter-count" style="display:none">0</span>
+        <svg class="ic" aria-hidden="true"><use href="#i-sliders"/></svg> Filtrér <span class="mobile-filter-count" id="mobile-filter-count" style="display:none">0</span>
     </button>
 </div>
 
@@ -1340,26 +1484,26 @@
 
         <div class="sidebar-section sidebar-active-filters" id="sidebar-active-filters" style="display:none">
             <div class="sidebar-title">
-                <span>✨ Aktive filtre</span>
+                <span><svg class="ic" aria-hidden="true"><use href="#i-funnel"/></svg> Aktive filtre</span>
                 <button class="sidebar-clear-link" id="sidebar-clear-all">Ryd alle</button>
             </div>
             <div class="sidebar-chips" id="sidebar-chips"></div>
         </div>
 
         <div class="sidebar-section">
-            <div class="sidebar-title">⚡ Hurtige filtre</div>
+            <div class="sidebar-title"><span><svg class="ic" aria-hidden="true"><use href="#i-zap"/></svg> Hurtige filtre</span></div>
             <div class="sidebar-filter-btns">
                 <button class="sidebar-filter-btn active" data-filter="all">Alle øl</button>
-                <button class="sidebar-filter-btn" data-filter="deals">🔥 Tilbud</button>
-                <button class="sidebar-filter-btn" data-filter="favs">❤️ Favoritter <span id="fav-count-badge"></span></button>
-                <button class="sidebar-filter-btn" data-filter="in-stock">✅ Kun på lager</button>
-                <button class="sidebar-filter-btn" data-filter="alcohol-free">🚫 Alkoholfri</button>
-                <button class="sidebar-filter-btn" data-filter="smagekasse">📦 Smagekasser</button>
+                <button class="sidebar-filter-btn" data-filter="deals"><span class="sfb-label"><svg class="ic" aria-hidden="true"><use href="#i-flame"/></svg>Tilbud</span></button>
+                <button class="sidebar-filter-btn" data-filter="favs"><span class="sfb-label"><svg class="ic" aria-hidden="true"><use href="#i-heart"/></svg>Favoritter <span id="fav-count-badge"></span></span></button>
+                <button class="sidebar-filter-btn" data-filter="in-stock"><span class="sfb-label"><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg>Kun på lager</span></button>
+                <button class="sidebar-filter-btn" data-filter="alcohol-free"><span class="sfb-label"><svg class="ic" aria-hidden="true"><use href="#i-ban"/></svg>Alkoholfri</span></button>
+                <button class="sidebar-filter-btn" data-filter="smagekasse"><span class="sfb-label"><svg class="ic" aria-hidden="true"><use href="#i-package"/></svg>Smagekasser</span></button>
             </div>
         </div>
 
         <div class="sidebar-section">
-            <div class="sidebar-title">🔢 Sortér efter</div>
+            <div class="sidebar-title"><span><svg class="ic" aria-hidden="true"><use href="#i-sort"/></svg> Sortér efter</span></div>
             <select class="sidebar-sort" id="sort-select" aria-label="Vælg sortering">
                 <option value="price-asc">Pris: Lav → Høj</option>
                 <option value="total-asc">Pris inkl. fragt</option>
@@ -1374,7 +1518,7 @@
 
         <div class="sidebar-section">
             <div class="sidebar-title">
-                <span>🏪 Butikker <span class="count" id="shop-count-badge" style="display:none">0</span></span>
+                <span><svg class="ic" aria-hidden="true"><use href="#i-store"/></svg> Butikker <span class="count" id="shop-count-badge" style="display:none">0</span></span>
                 <button class="sidebar-clear-link" id="clear-shops" style="display:none">Ryd</button>
             </div>
             <div class="sidebar-checkbox-list" id="shop-list" role="group" aria-label="Filtrer efter butik"></div>
@@ -1382,14 +1526,14 @@
 
         <div class="sidebar-section">
             <div class="sidebar-title">
-                <span>🍺 Stilarter <span class="count" id="type-count-badge" style="display:none">0</span></span>
+                <span><svg class="ic" aria-hidden="true"><use href="#i-beer"/></svg> Stilarter <span class="count" id="type-count-badge" style="display:none">0</span></span>
                 <button class="sidebar-clear-link" id="clear-types" style="display:none">Ryd</button>
             </div>
             <div class="sidebar-checkbox-list" id="type-list" role="group" aria-label="Filtrer efter stilart"></div>
         </div>
 
         <div class="sidebar-section">
-            <div class="sidebar-title">💰 Pris</div>
+            <div class="sidebar-title"><span><svg class="ic" aria-hidden="true"><use href="#i-banknote"/></svg> Pris</span></div>
             <div class="range-wrap">
                 <div class="dual-range-wrap">
                     <input type="range" id="price-min" min="0" max="500" value="0" step="10" aria-label="Minimum pris">
@@ -1401,7 +1545,7 @@
         </div>
 
         <div class="sidebar-section">
-            <div class="sidebar-title">🍻 Alkoholprocent</div>
+            <div class="sidebar-title"><span><svg class="ic" aria-hidden="true"><use href="#i-percent"/></svg> Alkoholprocent</span></div>
             <div class="range-wrap">
                 <div class="dual-range-wrap">
                     <input type="range" id="abv-min" min="0" max="15" value="0" step="0.5" aria-label="Minimum alkoholprocent">
@@ -1413,7 +1557,7 @@
         </div>
 
         <div class="sidebar-section">
-            <button class="sidebar-reset" id="reset-btn">🔄 Nulstil alle filtre</button>
+            <button class="sidebar-reset" id="reset-btn"><svg class="ic" aria-hidden="true"><use href="#i-reset"/></svg> Nulstil alle filtre</button>
         </div>
     </aside>
 
@@ -1504,6 +1648,9 @@
     let favorites = new Set(JSON.parse(localStorage.getItem('bs_favorites') || '[]'));
 
     const isMobile = () => window.innerWidth <= 1100;
+
+    // Ikoner (SVG-sprite øverst i <body>)
+    const icon = (n, c) => `<svg class="ic${c ? ' ' + c : ''}" aria-hidden="true"><use href="#i-${n}"/></svg>`;
 
     function escapeHtml(s) {
         return String(s ?? '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, '&#39;');
@@ -1652,7 +1799,6 @@
             btn.classList.toggle('active', on);
             btn.setAttribute('aria-pressed', String(on));
             btn.setAttribute('aria-label', (on ? 'Fjern fra favoritter' : 'Tilføj til favoritter') + ': ' + btn.dataset.name);
-            btn.textContent = on ? '❤️' : '🤍';
         });
     }
 
@@ -1706,11 +1852,11 @@
     }
     function shippingTooltipHTML(shopName, itemPrice) {
         const s = SHIPPING[shopName];
-        if (!s) return `<div class="tt-title">🚚 Fragt — ${escapeHtml(shopName)}</div><div class="tt-divider"></div><div class="tt-no-info">Fragtoplysninger ikke tilgængelige.<br>Tjek prisen hos butikken.</div>`;
+        if (!s) return `<div class="tt-title">${icon('truck')} Fragt — ${escapeHtml(shopName)}</div><div class="tt-divider"></div><div class="tt-no-info">Fragtoplysninger ikke tilgængelige.<br>Tjek prisen hos butikken.</div>`;
         const isFree = itemPrice >= s.freeOver;
         const total = isFree ? itemPrice : itemPrice + s.price;
-        return `<div class="tt-title">🚚 Fragt — ${escapeHtml(shopName)}</div>
-                <div class="tt-row"><span class="tt-label">Fragtpris</span><span class="tt-value">${isFree ? '<span class="tt-free">GRATIS 🎉</span>' : '<strong>' + s.price + ' kr</strong>'}</span></div>
+        return `<div class="tt-title">${icon('truck')} Fragt — ${escapeHtml(shopName)}</div>
+                <div class="tt-row"><span class="tt-label">Fragtpris</span><span class="tt-value">${isFree ? '<span class="tt-free">GRATIS</span>' : '<strong>' + s.price + ' kr</strong>'}</span></div>
                 ${!isFree ? `<div class="tt-row"><span class="tt-label">Fri fragt over</span><span class="tt-value">${s.freeOver} kr</span></div>` : ''}
                 <div class="tt-divider"></div>
                 <div class="tt-row"><span class="tt-label">Total inkl. fragt</span><span class="tt-total">${total.toFixed(2)} kr</span></div>
@@ -1721,7 +1867,7 @@
         const isFree = s && itemPrice >= s.freeOver;
         const cls = !s ? ' no-info' : isFree ? ' free-shipping' : '';
         const label = !s ? 'Fragtinfo ikke tilgængelig' : isFree ? 'Gratis fragt' : `Fragt: ${s.price} kr`;
-        return `<button type="button" class="shipping-btn${cls}" data-act="ship" aria-label="${escapeHtml(label)}" aria-haspopup="true" aria-expanded="false">🚚<template class="shipping-tooltip-content">${shippingTooltipHTML(shopName, itemPrice)}</template></button>`;
+        return `<button type="button" class="shipping-btn${cls}" data-act="ship" aria-label="${escapeHtml(label)}" aria-haspopup="true" aria-expanded="false">${icon('truck')}<template class="shipping-tooltip-content">${shippingTooltipHTML(shopName, itemPrice)}</template></button>`;
     }
     // ── Delegerede handlers (erstatter inline onclick på kort, chips og top-deals) ──
     document.addEventListener('click', e => {
@@ -1923,7 +2069,7 @@
         return { days, min, max, low: price <= min + 0.005 };
     }
     function lowTagHTML(h) {
-        return `<span class="tag tag-low" title="Laveste pris de seneste ${h.days} dage">📉 Laveste pris på ${h.days} dage</span>`;
+        return `<span class="tag tag-low" title="Laveste pris de seneste ${h.days} dage">${icon('trend-down')} Laveste pris på ${h.days} dage</span>`;
     }
     // Historikken hentes efter første visning; allerede viste kort får grafen indsat bagefter
     function applyHistoryToDom() {
@@ -1963,7 +2109,6 @@
                 ${best && multi && !oos ? '<span class="best-badge">Billigst</span>' : ''}
                 ${oos ? '<span class="oos-badge">Udsolgt</span>' : ''}
                 ${p.discount_pct ? `<span class="price-row-discount">−${p.discount_pct}%</span>` : ''}
-                ${shippingBtnHTML(p.shop_name, p.price)}
             </div>
             <div class="price-row-main">
                 <div class="price-row-left">
@@ -1971,8 +2116,8 @@
                         <span class="price-row-amount">${p.price.toFixed(2)} kr</span>
                         ${p.old_price ? `<span class="price-row-old">${p.old_price.toFixed(2)} kr</span>` : ''}
                     </div>
-                    ${p.old_price ? `<span class="price-row-save">💰 Spar ${(p.old_price - p.price).toFixed(0)} kr</span>` : ''}
-                    ${tot !== null ? `<span class="price-row-total">Inkl. fragt: ${tot.toFixed(0)} kr</span>` : ''}
+                    ${p.old_price ? `<span class="price-row-save">${icon('tag')} Spar ${(p.old_price - p.price).toFixed(0)} kr</span>` : ''}
+                    <div class="price-row-ship">${tot !== null ? `<span class="price-row-total">Inkl. fragt: ${tot.toFixed(0)} kr</span>` : ''}${shippingBtnHTML(p.shop_name, p.price)}</div>
                 </div>
                 <div class="price-row-actions">
                     ${p.url ? `<a class="price-row-link" href="${escapeHtml(p.url)}" target="_blank" rel="sponsored noopener"
@@ -2003,21 +2148,21 @@
         html += `<a class="card-img-wrap" href="${detailUrl}"${detailTarget} data-track="produkt_klik" data-name="${nameH}" data-shop="${shopH}" data-price="${minPrice}" aria-label="Se ${nameH} hos BeerSniffer">`;
         html += b.image
             ? `<img class="card-img" width="300" height="155" src="${escapeHtml(b.image)}" alt="${nameH}" loading="lazy" decoding="async" data-hide-err>`
-            : `<div class="card-img-placeholder" aria-hidden="true">🍺</div>`;
+            : `<div class="card-img-placeholder" aria-hidden="true">${icon('beer')}</div>`;
         html += `</a>`;
         // Favorit-knap ligger nu uden for linket (gyldig HTML, ingen preventDefault-tricks)
         html += `<button type="button" class="fav-btn${isFav ? ' active' : ''}" data-act="fav" data-key="${escapeHtml(key)}" data-name="${nameH}" data-shop="${shopH}"
-                    aria-pressed="${isFav}" aria-label="${isFav ? 'Fjern fra favoritter' : 'Tilføj til favoritter'}: ${nameH}">${isFav ? '❤️' : '🤍'}</button>`;
+                    aria-pressed="${isFav}" aria-label="${isFav ? 'Fjern fra favoritter' : 'Tilføj til favoritter'}: ${nameH}">${icon('heart')}</button>`;
 
-        html += `<div class="card-body"><a class="card-name" href="${detailUrl}"${detailTarget}>${nameH}</a>`;
+        html += `<div class="card-body"><div class="card-brewery">${b.brewery ? escapeHtml(b.brewery) : '&nbsp;'}</div><a class="card-name" href="${detailUrl}"${detailTarget}>${nameH}</a>`;
         html += `<div class="card-meta">`;
         if (b.volume_cl) html += `<span class="tag">${escapeHtml(b.volume_cl)} cl</span>`;
         if (b.abv) html += `<span class="tag">${escapeHtml(b.abv)}%</span>`;
         if (b.type) html += `<span class="tag tag-type">${escapeHtml(b.type)}</span>`;
-        if (prices.length > 1) html += `<span class="tag tag-shops">🏪 ${prices.length} butikker</span>`;
+        if (prices.length > 1) html += `<span class="tag tag-shops">${icon('store')} ${prices.length} butikker</span>`;
         if (b.in_stock === false) html += `<span class="tag tag-oos">Udsolgt</span>`;
-        if (isFav && b._fav_drop) html += `<span class="tag tag-drop" title="Prisen er faldet siden dit sidste besøg">⭐ Faldet ${b._fav_drop} kr siden sidst</span>`;
-        if (b.price_change_7d && b.price_change_7d <= -1) html += `<span class="tag tag-drop" title="Prisen er faldet de seneste 7 dage">📉 Faldet ${Math.abs(b.price_change_7d).toFixed(0)} kr</span>`;
+        if (isFav && b._fav_drop) html += `<span class="tag tag-drop" title="Prisen er faldet siden dit sidste besøg">${icon('star')} Faldet ${b._fav_drop} kr siden sidst</span>`;
+        if (b.price_change_7d && b.price_change_7d <= -1) html += `<span class="tag tag-drop" title="Prisen er faldet de seneste 7 dage">${icon('trend-down')} Faldet ${Math.abs(b.price_change_7d).toFixed(0)} kr</span>`;
         const hi = histInfo(b, b.min_price);
         if (hi && hi.low) html += lowTagHTML(hi);
         html += pplTag;
@@ -2033,7 +2178,7 @@
         }
         html += `</div>`;
         html += `<div class="card-actions"><a class="untappd-btn" href="https://untappd.com/search?q=${untappdQuery}" target="_blank" rel="noopener"
-                    aria-label="Se ${nameH} på Untappd" data-track="untappd_klik" data-name="${nameH}">🍺 Se på Untappd</a></div>`;
+                    aria-label="Se ${nameH} på Untappd" data-track="untappd_klik" data-name="${nameH}">${icon('beer')} Se på Untappd</a></div>`;
         html += `</div></div>`;
         return html;
     }
@@ -2084,7 +2229,7 @@
         rc.style.display = 'block';
         rc.textContent = `Viser ${Math.min(currentPage * PAGE_SIZE, beers.length)} af ${beers.length} øl`;
         if (!beers.length) {
-            grid.innerHTML = `<div class="empty"><div class="empty-icon">${activeFlags.has('favs')?'❤️':'🔍'}</div><p>${activeFlags.has('favs')?'Ingen favoritter endnu — klik 🤍 på et ølkort':'Ingen øl matcher din søgning'}</p>${activeFlags.has('favs') ? '' : '<button type="button" class="cat-btn" data-act="reset" style="margin:1rem auto 0">Nulstil filtre</button>'}</div>`;
+            grid.innerHTML = `<div class="empty"><div class="empty-icon">${icon(activeFlags.has('favs')?'heart':'search')}</div><p>${activeFlags.has('favs')?'Ingen favoritter endnu — klik 🤍 på et ølkort':'Ingen øl matcher din søgning'}</p>${activeFlags.has('favs') ? '' : '<button type="button" class="cat-btn" data-act="reset" style="margin:1rem auto 0">Nulstil filtre</button>'}</div>`;
             document.getElementById('load-more').style.display = 'none'; return;
         }
         totalPages = Math.ceil(beers.length / PAGE_SIZE); totalCount = beers.length;
@@ -2109,8 +2254,7 @@
             const nameH = escapeHtml(deal.name), shopH = escapeHtml(best.shop_name || '');
             const href = deal.slug ? escapeHtml('/ol/' + deal.slug + '/') : '';
             return `<div class="top-card"${href ? ` data-href="${href}" tabindex="0" role="link" aria-label="${nameH}"` : ''}>
-                <div class="top-card-pct">−${deal.max_discount_pct}%</div>
-                ${deal.image ? `<img class="top-card-img" width="200" height="100" src="${escapeHtml(deal.image)}" alt="${nameH}" loading="lazy" decoding="async" data-hide-err>` : '<div class="top-card-img-placeholder" aria-hidden="true">🍺</div>'}
+                <div class="top-card-photo">${deal.image ? `<img class="top-card-img" width="76" height="76" src="${escapeHtml(deal.image)}" alt="" loading="lazy" decoding="async" data-hide-err>` : icon('beer')}</div>
                 <div class="top-card-body">
                     <div class="top-card-shop">${shopH}</div>
                     <div class="top-card-name">${nameH}</div>
@@ -2118,10 +2262,12 @@
                         <span class="top-card-price">${(best.price||0).toFixed(2)} kr</span>
                         ${best.old_price ? `<span class="top-card-old">${best.old_price.toFixed(2)} kr</span>` : ''}
                     </div>
-                    ${best.url ? `<a class="top-card-link" href="${escapeHtml(best.url)}" target="_blank" rel="sponsored noopener"
-                        aria-label="Køb ${nameH} nu"
-                        data-track="koeb_klik" data-name="${nameH}" data-shop="${shopH}" data-price="${best.price||0}" data-place="top_deals" data-rabat="${deal.max_discount_pct||0}">Køb nu →</a>` : ''}
-                </div></div>`;
+                </div>
+                <div class="top-card-pct">−${deal.max_discount_pct}%</div>
+                ${best.url ? `<a class="top-card-link" href="${escapeHtml(best.url)}" target="_blank" rel="sponsored noopener"
+                    aria-label="Køb ${nameH} hos ${shopH}"
+                    data-track="koeb_klik" data-name="${nameH}" data-shop="${shopH}" data-price="${best.price||0}" data-place="top_deals" data-rabat="${deal.max_discount_pct||0}">Køb →</a>` : ''}
+            </div>`;
         }).join('');
     }
 
@@ -2197,20 +2343,20 @@
         const sidebarChips = document.getElementById('sidebar-chips');
         const sidebarSection = document.getElementById('sidebar-active-filters');
         const chips = [], sc = [];
-        const flagLabels = { 'deals':'🔥 Tilbud','favs':'❤️ Favoritter','alcohol-free':'🚫 Alkoholfri','smagekasse':'📦 Smagekasser','in-stock':'✅ På lager' };
-        const addChip = (label, type, value) => {
-            const l = escapeHtml(label), v = escapeHtml(value || '');
-            chips.push(`<span class="filter-chip">${l}<span class="x" role="button" tabindex="0" aria-label="Fjern filter: ${l}" data-clear="${type}" data-value="${v}">✕</span></span>`);
-            sc.push(`<span class="sidebar-chip" role="button" tabindex="0" aria-label="Fjern filter: ${l}" data-clear="${type}" data-value="${v}">${l}<span class="x" aria-hidden="true">✕</span></span>`);
+        const flagMeta = { 'deals':['flame','Tilbud'], 'favs':['heart','Favoritter'], 'alcohol-free':['ban','Alkoholfri'], 'smagekasse':['package','Smagekasser'], 'in-stock':['check','På lager'] };
+        const addChip = (label, type, value, ic) => {
+            const l = escapeHtml(label), v = escapeHtml(value || ''), i = ic ? icon(ic) : '';
+            chips.push(`<span class="filter-chip">${i}${l}<span class="x" role="button" tabindex="0" aria-label="Fjern filter: ${l}" data-clear="${type}" data-value="${v}">${icon('x')}</span></span>`);
+            sc.push(`<span class="sidebar-chip" role="button" tabindex="0" aria-label="Fjern filter: ${l}" data-clear="${type}" data-value="${v}">${i}${l}<span class="x" aria-hidden="true">${icon('x')}</span></span>`);
         };
-        activeFlags.forEach(f => addChip(flagLabels[f] || f, 'flag', f));
-        selectedShops.forEach(shop => addChip('🏪 ' + shop, 'shop', shop));
-        selectedTypes.forEach(type => addChip('🍺 ' + type, 'type', type));
+        activeFlags.forEach(f => { const m = flagMeta[f] || ['', f]; addChip(m[1], 'flag', f, m[0]); });
+        selectedShops.forEach(shop => addChip(shop, 'shop', shop, 'store'));
+        selectedTypes.forEach(type => addChip(type, 'type', type, 'beer'));
         const sv = document.getElementById('search').value.trim();
-        if (sv) addChip('🔍 "' + sv + '"', 'search');
+        if (sv) addChip('"' + sv + '"', 'search', '', 'search');
         const pm = parseInt(document.getElementById('price-max').max||500);
-        if (priceMin>0||priceMax<pm) addChip(`💰 ${Math.round(priceMin)}–${Math.round(priceMax)} kr`, 'price');
-        if (abvMin>0||abvMax<15) addChip(`🍻 ${abvMin.toFixed(1)}–${abvMax.toFixed(1)}%`, 'abv');
+        if (priceMin>0||priceMax<pm) addChip(`${Math.round(priceMin)}–${Math.round(priceMax)} kr`, 'price', '', 'banknote');
+        if (abvMin>0||abvMax<15) addChip(`${abvMin.toFixed(1)}–${abvMax.toFixed(1)}%`, 'abv', '', 'percent');
         container.innerHTML = chips.length ? '<span class="active-filters-label">Aktive filtre:</span>'+chips.join('') : '';
         if (sc.length) { sidebarSection.style.display='block'; sidebarChips.innerHTML=sc.join(''); }
         else { sidebarSection.style.display='none'; sidebarChips.innerHTML=''; }
@@ -2367,7 +2513,7 @@
             _urlReady = true;
             loadHistory();
         } catch (err) {
-            document.getElementById('loading').innerHTML='<div class="empty-icon" style="padding-top:4rem">😢</div><p>Kunne ikke hente øl-data — tjek at data.json findes</p>';
+            document.getElementById('loading').innerHTML='<div class="empty-icon" style="padding-top:4rem"><svg class="ic" aria-hidden="true"><use href="#i-x"/></svg></div><p>Kunne ikke hente øl-data — tjek at data.json findes</p>';
             console.error(err);
         }
     }
@@ -2440,9 +2586,6 @@
         const mobileToggleEl = document.querySelector('.mobile-filter-toggle');
         function updateFilterStickyTop() {
             let top = 0;
-            if (mobileToggleEl && getComputedStyle(mobileToggleEl).display !== 'none') {
-                top = mobileToggleEl.offsetHeight;
-            }
             if (miniHeader && miniHeader.classList.contains('visible')) {
                 top = Math.max(top, miniHeader.offsetHeight);
             }
