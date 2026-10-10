@@ -1368,6 +1368,14 @@
         .brand { text-align: center; justify-content: center; }
         @media (min-width: 768px) { .brand { text-align: left; justify-content: flex-start; } }
         @media (max-width: 640px) { .brand { text-align: left; justify-content: flex-start; } }
+
+        /* Hurtig scroll: pladsholder bag billedet, ingen blur/animation pr. kort */
+        .card-img-wrap::before { content: ''; position: absolute; inset: 0; z-index: 0; pointer-events: none; opacity: 0.55;
+            background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23b9a577' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M17 11h1a3 3 0 0 1 0 6h-1'/%3E%3Cpath d='M9 12v6'/%3E%3Cpath d='M13 12v6'/%3E%3Cpath d='M14 7.5c-1 0-1.44.5-3 .5s-2-.5-3-.5-1.72.5-2.5.5a2.5 2.5 0 0 1 0-5c.78 0 1.57.5 2.5.5S9.44 2 11 2s2 1.5 3 1.5 1.72-.5 2.5-.5a2.5 2.5 0 0 1 0 5c-.78 0-1.5-.5-2.5-.5Z'/%3E%3Cpath d='M5 8v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V8'/%3E%3C/svg%3E") center / 2.4rem no-repeat; }
+        .card-img-wrap.ok::before { display: none; }
+        .card-img { position: relative; z-index: 1; }
+        .card[data-na] { animation: none; }
+        .fav-btn { backdrop-filter: none; -webkit-backdrop-filter: none; background: rgba(24,19,12,0.78); }
     </style>
 </head>
 <body>
@@ -1649,6 +1657,39 @@
 
     const isMobile = () => window.innerWidth <= 1100;
 
+    // Billeder: små thumbnails fra Shopify-CDN'et (bruger ?width=) — andre kilder er uændrede
+    function thumb(url, w) {
+        if (!url || !/(cdn\.shopify\.com|\/cdn\/shop\/)/.test(url) || /[?&]width=/.test(url)) return url;
+        return url + (url.includes('?') ? '&' : '?') + 'width=' + w;
+    }
+    // Billed-indlæser: henter kun billeder nær skærmen og AFBRYDER dem, du scroller forbi,
+    // så de billeder du kigger på nu ikke venter bag en kø af billeder, du har forladt.
+    const BLANK = 'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7';
+    const AUTO_PAGES = 6;           // auto-indlæs op til 300 øl; derefter "Vis flere"-knap (så bunden/footeren kan nås)
+    const imgIO = typeof window.IntersectionObserver === 'function' ? new IntersectionObserver(entries => {
+        for (const e of entries) {
+            const img = e.target.querySelector('img.card-img[data-src]');
+            if (!img || img.dataset.ok === '1') continue;
+            if (e.isIntersecting) {
+                if (img.getAttribute('src') !== img.dataset.src) {
+                    const r = e.boundingClientRect;
+                    try { img.fetchPriority = (r.bottom > 0 && r.top < innerHeight) ? 'high' : 'low'; } catch (_) {}
+                    img.src = img.dataset.src;
+                }
+            } else if (img.getAttribute('src') !== BLANK) {
+                img.setAttribute('src', BLANK);          // scrollet forbi før den nåede frem → afbryd
+            }
+        }
+    }, { rootMargin: '1200px 0px' }) : null;
+    // Observerer selve kortene (ikke billederne): kort uden for skærmen er "content-visibility: auto" og har ingen indre bokse
+    function watchImages(root) {
+        root.querySelectorAll('.card').forEach(card => {
+            const img = card.querySelector('img.card-img[data-src]');
+            if (!img) return;
+            if (imgIO) imgIO.observe(card); else img.src = img.dataset.src;
+        });
+    }
+
     // Ikoner (SVG-sprite øverst i <body>)
     const icon = (n, c) => `<svg class="ic${c ? ' ' + c : ''}" aria-hidden="true"><use href="#i-${n}"/></svg>`;
 
@@ -1827,8 +1868,7 @@
         if (_ttOwner && _ttOwner !== btn) _ttOwner.setAttribute('aria-expanded', 'false');
         _ttOwner = btn;
         btn.setAttribute('aria-expanded', 'true');
-        const tpl = btn.querySelector('template.shipping-tooltip-content');
-        tt.innerHTML = tpl ? tpl.innerHTML : '';
+        tt.innerHTML = shippingTooltipHTML(btn.dataset.shop, Number(btn.dataset.price));
         const r = btn.getBoundingClientRect();
         tt.style.top = (r.top - 8) + 'px'; tt.style.transform = 'translateY(-100%)';
         tt.style.left = 'auto'; tt.style.right = (window.innerWidth - r.right) + 'px';
@@ -1867,7 +1907,7 @@
         const isFree = s && itemPrice >= s.freeOver;
         const cls = !s ? ' no-info' : isFree ? ' free-shipping' : '';
         const label = !s ? 'Fragtinfo ikke tilgængelig' : isFree ? 'Gratis fragt' : `Fragt: ${s.price} kr`;
-        return `<button type="button" class="shipping-btn${cls}" data-act="ship" aria-label="${escapeHtml(label)}" aria-haspopup="true" aria-expanded="false">${icon('truck')}<template class="shipping-tooltip-content">${shippingTooltipHTML(shopName, itemPrice)}</template></button>`;
+        return `<button type="button" class="shipping-btn${cls}" data-act="ship" data-shop="${escapeHtml(shopName)}" data-price="${itemPrice}" aria-label="${escapeHtml(label)}" aria-haspopup="true" aria-expanded="false">${icon('truck')}</button>`;
     }
     // ── Delegerede handlers (erstatter inline onclick på kort, chips og top-deals) ──
     document.addEventListener('click', e => {
@@ -1882,6 +1922,11 @@
             if (a === 'reset') { resetAllFilters(); return; }
             if (a === 'more') {
                 const ms = act.nextElementSibling, n = Number(act.dataset.n), open = ms.style.display === 'flex';
+                if (!ms.dataset.ready) {
+                    const bb = beerByKey.get(act.dataset.key);
+                    if (bb) ms.innerHTML = sortedPrices(bb).slice(1).map(p => priceRowHTML(bb, p, false, true)).join('');
+                    ms.dataset.ready = '1';
+                }
                 ms.style.display = open ? 'none' : 'flex';
                 act.setAttribute('aria-expanded', String(!open));
                 act.textContent = open ? `+ ${n} butik${n > 1 ? 'ker' : ''} mere` : '▲ Skjul andre butikker';
@@ -1914,9 +1959,25 @@
         el.click();
     });
     // Skjul billeder der ikke kan hentes (erstatter inline onerror)
+    function imgDone(t) {
+        if (!t.dataset.src) return;
+        t.dataset.ok = '1';
+        const card = t.closest('.card');
+        if (card && imgIO) imgIO.unobserve(card);
+    }
+    document.addEventListener('load', e => {
+        const t = e.target;
+        if (t && t.tagName === 'IMG' && t.dataset && t.dataset.src && t.getAttribute('src') === t.dataset.src) {
+            imgDone(t);
+            if (t.parentElement) t.parentElement.classList.add('ok');
+        }
+    }, true);
     document.addEventListener('error', e => {
         const t = e.target;
-        if (t && t.tagName === 'IMG' && t.hasAttribute('data-hide-err')) t.style.display = 'none';
+        if (t && t.tagName === 'IMG' && t.hasAttribute('data-hide-err')) {
+            if (t.getAttribute('src') === BLANK) return;
+            t.style.display = 'none'; imgDone(t);
+        }
     }, true);
     // Luk evt. åben fragt-tooltip ved scroll — forhindrer at den bliver
     // "hængende" og overlapper andre ølkort paa mobil.
@@ -2142,12 +2203,12 @@
         const detailUrl = escapeHtml(b.slug ? `ol/${b.slug}/` : (best.url || '#'));
         const detailTarget = b.slug ? '' : ' target="_blank" rel="sponsored noopener"';
 
-        let html = `<div class="card${maxDiscount > 0 ? ' has-deal' : ''}"${b.slug ? ` data-slug="${escapeHtml(b.slug)}"` : ''} style="animation-delay:${delay}s" role="listitem">`;
+        let html = `<div class="card${maxDiscount > 0 ? ' has-deal' : ''}"${b.slug ? ` data-slug="${escapeHtml(b.slug)}"` : ''} ${delay >= 0 ? ` style="animation-delay:${delay}s"` : ' data-na'} role="listitem">`;
         if (maxDiscount > 0) html += `<div class="ribbon">−${maxDiscount}%</div>`;
 
         html += `<a class="card-img-wrap" href="${detailUrl}"${detailTarget} data-track="produkt_klik" data-name="${nameH}" data-shop="${shopH}" data-price="${minPrice}" aria-label="Se ${nameH} hos BeerSniffer">`;
         html += b.image
-            ? `<img class="card-img" width="300" height="155" src="${escapeHtml(b.image)}" alt="${nameH}" loading="lazy" decoding="async" data-hide-err>`
+            ? `<img class="card-img" width="300" height="155" src="${BLANK}" data-src="${escapeHtml(thumb(b.image, 420))}" alt="${nameH}" decoding="async" data-hide-err>`
             : `<div class="card-img-placeholder" aria-hidden="true">${icon('beer')}</div>`;
         html += `</a>`;
         // Favorit-knap ligger nu uden for linket (gyldig HTML, ingen preventDefault-tricks)
@@ -2172,9 +2233,8 @@
         html += priceRowHTML(b, best, true, prices.length > 1);
         if (prices.length > 1) {
             const n = prices.length - 1;
-            html += `<button type="button" class="more-shops-toggle" data-act="more" data-n="${n}" aria-expanded="false">+ ${n} butik${n > 1 ? 'ker' : ''} mere</button><div class="more-shops" style="display:none">`;
-            prices.slice(1).forEach(p => { html += priceRowHTML(b, p, false, true); });
-            html += `</div>`;
+            // De ekstra butiksrækker bygges først, når man klikker (halverer antallet af elementer pr. kort)
+            html += `<button type="button" class="more-shops-toggle" data-act="more" data-n="${n}" data-key="${escapeHtml(key)}" aria-expanded="false">+ ${n} butik${n > 1 ? 'ker' : ''} mere</button><div class="more-shops" style="display:none"></div>`;
         }
         html += `</div>`;
         html += `<div class="card-actions"><a class="untappd-btn" href="https://untappd.com/search?q=${untappdQuery}" target="_blank" rel="noopener"
@@ -2222,6 +2282,7 @@
     }
 
     // Render grid
+    let renderedCount = 0;
     function renderGrid(append) {
         const grid = document.getElementById('grid');
         const beers = filterAndSortBeers(allBeers);
@@ -2233,13 +2294,20 @@
             document.getElementById('load-more').style.display = 'none'; return;
         }
         totalPages = Math.ceil(beers.length / PAGE_SIZE); totalCount = beers.length;
+        const target = Math.min(currentPage * PAGE_SIZE, beers.length);
+        const tpl = document.createElement('template');
         if (append) {
-            const startIdx = (currentPage-1)*PAGE_SIZE, endIdx = startIdx+PAGE_SIZE;
-            grid.insertAdjacentHTML('beforeend', beers.slice(startIdx,endIdx).map((b,i) => makeBeerCard(b,Math.min(i*0.02,0.3))).join(''));
+            tpl.innerHTML = beers.slice(renderedCount, target).map(b => makeBeerCard(b, -1)).join('');
         } else {
-            grid.innerHTML = beers.slice(0,currentPage*PAGE_SIZE).map((b,i) => makeBeerCard(b,Math.min(i*0.02,0.5))).join('');
+            if (imgIO) imgIO.disconnect();
+            tpl.innerHTML = beers.slice(0, target).map((b,i) => makeBeerCard(b, Math.min(i*0.02,0.5))).join('');
         }
-        document.getElementById('load-more').style.display = currentPage < totalPages ? 'block' : 'none';
+        watchImages(tpl.content);
+        if (append) grid.appendChild(tpl.content); else grid.replaceChildren(tpl.content);
+        renderedCount = target;
+        const lm = document.getElementById('load-more');
+        lm.textContent = currentPage >= AUTO_PAGES ? 'Vis 100 flere øl ↓' : 'Vis flere øl ↓';
+        lm.style.display = currentPage < totalPages ? 'block' : 'none';
         reobserveLoadMore();
     }
 
@@ -2254,7 +2322,7 @@
             const nameH = escapeHtml(deal.name), shopH = escapeHtml(best.shop_name || '');
             const href = deal.slug ? escapeHtml('/ol/' + deal.slug + '/') : '';
             return `<div class="top-card"${href ? ` data-href="${href}" tabindex="0" role="link" aria-label="${nameH}"` : ''}>
-                <div class="top-card-photo">${deal.image ? `<img class="top-card-img" width="76" height="76" src="${escapeHtml(deal.image)}" alt="" loading="lazy" decoding="async" data-hide-err>` : icon('beer')}</div>
+                <div class="top-card-photo">${deal.image ? `<img class="top-card-img" width="76" height="76" src="${escapeHtml(thumb(deal.image, 200))}" alt="" loading="lazy" decoding="async" data-hide-err>` : icon('beer')}</div>
                 <div class="top-card-body">
                     <div class="top-card-shop">${shopH}</div>
                     <div class="top-card-name">${nameH}</div>
@@ -2570,12 +2638,13 @@
 
         function loadMore() {
             if (currentPage >= totalPages) return;
-            currentPage++; renderGrid(true); gtag('event','vis_flere',{side:currentPage});
+            currentPage += (currentPage >= AUTO_PAGES ? 2 : 1);
+            renderGrid(true); gtag('event','vis_flere',{side:currentPage});
         }
         const loadMoreBtn = document.getElementById('load-more');
         loadMoreBtn.addEventListener('click', loadMore);
         if (typeof window.IntersectionObserver === 'function') {
-            window._loadMoreIO = new IntersectionObserver(es => { if (es.some(e => e.isIntersecting)) loadMore(); }, { rootMargin: '700px 0px' });
+            window._loadMoreIO = new IntersectionObserver(es => { if (currentPage < AUTO_PAGES && es.some(e => e.isIntersecting)) loadMore(); }, { rootMargin: '900px 0px' });
             window._loadMoreIO.observe(loadMoreBtn);
         }
 
