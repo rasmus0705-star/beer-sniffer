@@ -1,3 +1,4 @@
+# Python / miljø
 venv/
 .venv/
 .env
@@ -8,41 +9,44 @@ __pycache__/
 # Logs og midlertidige outputs
 *.log
 *_output.txt
+_udklip.txt
+*.tmp
 
-# Debug- og testscripts (lokale engangsting)
+# Lokale scraper-caches (vol/abv ændrer sig ikke)
+_pagecache_*.json
+_cache_*.json
+
+# Backups - git er backup nok (dækker .bak, .bak2, .bak3, .bak5 ...)
+*.bak*
+
+# Facit-backups
+fejlliste_backup_*.xlsx
+fejlliste_foer_rens.xlsx
+
+# Debug-, test- og engangsværktøjer - hører ikke på sitet
 debug_*.py
 diag.py
+diag_*.py
 test_*.py
 verify_*.py
 tjek_*.py
-PATCH_INSTRUKTIONER.txt
-patch_mobile_*.py
-# Lokale scraper-caches (vol/abv aendrer sig ikke)
-_pagecache_*.json
-
-# Arbejds-backups - git er backup nok
-*.bak
-*.bak2
-
-# Midlertidige filer og facit-backups
-_udklip.txt
-fejlliste_backup_*.xlsx
-fejlliste_foer_rens.xlsx
-
-# Midlertidige filer og facit-backups
-_udklip.txt
-fejlliste_backup_*.xlsx
-fejlliste_foer_rens.xlsx
-
-*.bak*
-*.log
-# Engangs-vaerktoejer (diagnose/patch) - hoerer ikke paa sitet
-diag_*.py
-patch_*.py
-foreslaa_*.py
 inspect_*.py
+foreslaa_*.py
+patch_*.py
 ret_*.py
+PATCH_INSTRUKTIONER.txt
 bryggeri_forslag.csv
-
-# Backups fra patch-scripts
-*.bak
+# lokale vaerktoejer og private filer (maa ikke udgives)
+~$*
+_fejl_template.html
+fejl_oversigt.html
+start_Fejlrettelse.bat
+ryd_op.ps1
+ny_scraper.bat
+find_multipacks*.py
+ol2go_test.json
+tilfoej_shop_konstanter.py
+PROJECT_*.md
+beer_design*.zip
+beer_design_udpakket/
+.gitignore.bak*
