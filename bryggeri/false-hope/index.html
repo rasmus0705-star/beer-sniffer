@@ -4,59 +4,75 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>False Hope øl – priser og tilbud | BeerSniffer</title>
-<meta name="description" content="Se alle 2 øl fra False Hope og sammenlign priser på tværs af danske ølbutikker. Udvalget taeller bl.a. imperial stout. Billigste øl fra False Hope koster l">
+<meta name="description" content="Se alle 2 øl fra False Hope og sammenlign priser på tværs af danske ølbutikker. Udvalget tæller bl.a. imperial stout. Billigste øl fra False Hope koster li">
+<meta name="theme-color" content="#08070a">
 <link rel="canonical" href="https://beersniffer.dk/bryggeri/false-hope/">
 <link rel="icon" href="https://beersniffer.dk/favicon.ico">
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Fraunces:wght@600;700&display=swap" rel="stylesheet">
+<link rel="preload" href="/fonts/playfair-display-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
 <style>
-:root { --bg:#0f0d0a; --surface:#1a1613; --surface2:#241f1a; --border:#2e2822; --border-light:#3a332b; --text:#f0e9df; --gold:#c8920e; --gold-light:#e0b53a; --muted:#9a8f80; }
-* { box-sizing:border-box; margin:0; padding:0; }
-body { background:var(--bg); color:var(--text); font-family:'DM Sans',sans-serif; min-height:100vh; }
-.wrap { max-width:960px; margin:0 auto; padding:1.5rem; }
-.site-logo-link { display:inline-flex; align-items:center; gap:0.8rem; text-decoration:none; margin-bottom:1.4rem; }
-.site-logo { height:68px; width:auto; filter:drop-shadow(0 3px 14px rgba(200,146,14,0.45)); }
-.back-link { color:var(--gold); text-decoration:none; font-size:0.85rem; }
-.brewery-title { font-family:'Fraunces',serif; font-size:2.1rem; color:var(--gold-light); margin-bottom:0.6rem; }
-.brewery-intro { color:var(--text); font-size:1rem; line-height:1.6; max-width:700px; margin-bottom:1.4rem; }
-.stats { display:flex; flex-wrap:wrap; gap:0.8rem; margin-bottom:1.8rem; }
-.stat { background:var(--surface); border:1px solid var(--border); border-radius:10px; padding:0.7rem 1.1rem; }
-.stat-num { font-size:1.3rem; font-weight:700; color:var(--gold-light); }
-.stat-label { font-size:0.72rem; color:var(--muted); text-transform:uppercase; letter-spacing:0.03em; }
-.related-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(150px,1fr)); gap:0.8rem; align-items:stretch; }
-.related-item { display:flex; }
-.related-card { background:var(--surface); border:1px solid var(--border); border-radius:10px; padding:0.6rem; text-decoration:none; color:var(--text); transition:border-color 0.15s; overflow:hidden; display:flex; flex-direction:column; width:100%; }
-.related-card:hover { border-color:var(--gold); }
-.related-card img { width:100%; height:120px; object-fit:contain; background:var(--surface2); border-radius:6px; margin-bottom:0.4rem; display:block; }
-.related-img-placeholder { width:100%; height:120px; background:var(--surface2); border-radius:6px; margin-bottom:0.4rem; display:flex; align-items:center; justify-content:center; font-size:1.6rem; }
-.related-name { font-size:0.8rem; line-height:1.3; margin-bottom:0.3rem; min-height:2.1em; overflow:hidden; display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; }
-.related-price { font-size:0.9rem; font-weight:700; color:var(--gold-light); line-height:1.4; padding-bottom:0.2rem; margin-top:auto; }
+@font-face{font-family:'DM Sans';font-weight:100 1000;font-display:swap;src:url('/fonts/dm-sans-latin-wght-normal.woff2') format('woff2')}
+@font-face{font-family:'Playfair Display';font-weight:400 900;font-display:swap;src:url('/fonts/playfair-display-latin-wght-normal.woff2') format('woff2')}
+:root{--bg:#08070a;--surface:#100d11;--border:rgba(217,162,51,.16);--border-light:rgba(217,162,51,.32);--text:#f0e8d8;--muted:#a39887;--dim:#7a7064;--gold:#d9a233;--gold-light:#f0c35e;--accent:#e0a030;--photo:#efe6d3;--serif:'Playfair Display',Georgia,serif}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--text);font-family:'DM Sans',system-ui,sans-serif;min-height:100vh;-webkit-font-smoothing:antialiased}
+a:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+.bar{position:sticky;top:0;z-index:50;display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:.5rem 1.5rem;background:rgba(8,7,10,.88);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--border)}
+.brand{display:flex;align-items:center;gap:.7rem;text-decoration:none}
+.brand img{height:40px;width:auto;display:block}
+.brand span{font-family:var(--serif);font-weight:500;font-size:1rem;letter-spacing:.32em;text-transform:uppercase;color:var(--gold-light)}
+.back-link{font-size:.66rem;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);text-decoration:none;white-space:nowrap}
+.back-link:hover{color:var(--gold-light)}
+.wrap{max-width:1040px;margin:0 auto;padding:2.2rem 1.5rem 3rem}
+.eyebrow{font-size:.62rem;letter-spacing:.3em;text-transform:uppercase;color:var(--accent);margin-bottom:.6rem}
+.brewery-title{font-family:var(--serif);font-weight:500;font-size:clamp(2rem,4.5vw,3rem);line-height:1.1;letter-spacing:-.01em;margin-bottom:.8rem;text-wrap:balance}
+.brewery-intro{color:var(--muted);line-height:1.65;max-width:680px;margin-bottom:1.6rem}
+.stats{display:flex;flex-wrap:wrap;border-top:1px solid var(--border);border-bottom:1px solid var(--border);margin-bottom:2rem}
+.stat{padding:.9rem 2rem .9rem 0;margin-right:2rem;border-right:1px solid var(--border)}
+.stat:last-child{border-right:0;margin-right:0}
+.stat-num{font-family:var(--serif);font-size:1.7rem;font-weight:500;color:var(--gold-light);line-height:1.1;font-variant-numeric:tabular-nums}
+.stat-label{font-size:.58rem;letter-spacing:.24em;text-transform:uppercase;color:var(--muted);margin-top:.3rem}
+.related-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(170px,1fr));gap:1rem;align-items:stretch}
+.related-item{display:flex}
+.related-card{background:var(--surface);border:1px solid var(--border);border-radius:4px;text-decoration:none;color:var(--text);transition:border-color .15s;overflow:hidden;display:flex;flex-direction:column;width:100%}
+.related-card:hover{border-color:var(--gold)}
+.rc-photo{display:flex;align-items:center;justify-content:center;background:var(--photo);height:160px;padding:.6rem}
+.rc-photo img{max-width:100%;max-height:100%;width:auto;height:auto;object-fit:contain;mix-blend-mode:multiply;display:block;margin:0}
+.related-img-placeholder{font-size:1.8rem;opacity:.5}
+.related-name{font-family:var(--serif);font-weight:500;font-size:.92rem;line-height:1.3;padding:.75rem .85rem 0;min-height:3.6em;overflow:hidden;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical}
+.related-price{font-family:var(--serif);font-size:1.2rem;font-weight:500;color:var(--gold-light);line-height:1.3;padding:.3rem .85rem .85rem;margin-top:auto;font-variant-numeric:tabular-nums}
+footer{border-top:1px solid var(--border);padding:1.4rem 1.5rem;text-align:center;font-size:.64rem;letter-spacing:.14em;text-transform:uppercase;color:var(--dim)}
+footer a{color:var(--muted);text-decoration:none}
+footer a:hover{color:var(--gold-light)}
+@media(max-width:560px){.bar{padding:.45rem 1rem}.brand span{font-size:.82rem;letter-spacing:.22em}.back-link{font-size:.6rem;letter-spacing:.12em}.wrap{padding:1.5rem 1rem 2rem}.stat{padding-right:1.1rem;margin-right:1.1rem}.stat-num{font-size:1.35rem}.related-grid{grid-template-columns:repeat(2,1fr);gap:.7rem}}
 </style>
 </head>
 <body>
-<div class="wrap">
-    <a class="site-logo-link" href="https://beersniffer.dk/">
-        <img src="https://beersniffer.dk/logo.png" alt="BeerSniffer" class="site-logo">
-        <span class="back-link">← Alle øltilbud</span>
-    </a>
+<header class="bar">
+    <a class="brand" href="https://beersniffer.dk/"><img src="https://beersniffer.dk/logo-hero.png" alt="" width="48" height="40"><span>BeerSniffer</span></a>
+    <a class="back-link" href="https://beersniffer.dk/">&larr; Alle &oslash;ltilbud</a>
+</header>
+<main class="wrap">
+    <div class="eyebrow">Bryggeri</div>
     <h1 class="brewery-title">False Hope</h1>
-    <p class="brewery-intro">Se alle 2 øl fra False Hope og sammenlign priser på tværs af danske ølbutikker. Udvalget taeller bl.a. imperial stout. Billigste øl fra False Hope koster lige nu 79,00 kr — opdateret dagligt på BeerSniffer.</p>
+    <p class="brewery-intro">Se alle 2 øl fra False Hope og sammenlign priser på tværs af danske ølbutikker. Udvalget tæller bl.a. imperial stout. Billigste øl fra False Hope koster lige nu 79 kr — opdateret dagligt på BeerSniffer.</p>
     <div class="stats">
-        <div class="stat"><div class="stat-num">2</div><div class="stat-label">øl</div></div>
-        <div class="stat"><div class="stat-num">79,00 kr</div><div class="stat-label">billigst</div></div>
-        <div class="stat"><div class="stat-num">79,00 kr</div><div class="stat-label">gennemsnit</div></div>
-        <div class="stat"><div class="stat-num">-0%</div><div class="stat-label">stoerste rabat</div></div>
+        <div class="stat"><div class="stat-num">2</div><div class="stat-label">&oslash;l</div></div>
+        <div class="stat"><div class="stat-num">79 kr</div><div class="stat-label">billigst</div></div>
+        <div class="stat"><div class="stat-num">79 kr</div><div class="stat-label">gennemsnit</div></div>
+        <div class="stat"><div class="stat-num">-0%</div><div class="stat-label">st&oslash;rste rabat</div></div>
     </div>
     <div class="related-grid"><div class="related-item">
     <a class="related-card" href="https://beersniffer.dk/ol/false-hope-slammer/">
-        <img src="https://cdn.shopify.com/s/files/1/0368/1628/9924/files/false-hope-slammer_62241183-7ff0-4d98-8cf1-2dd1cec859ef.png?v=1781253465" alt="False Hope - Slammer" loading="lazy">
+        <span class="rc-photo"><img src="https://cdn.shopify.com/s/files/1/0368/1628/9924/files/false-hope-slammer_62241183-7ff0-4d98-8cf1-2dd1cec859ef.png?v=1781253465" alt="False Hope - Slammer" loading="lazy"></span>
         <div class="related-name">False Hope - Slammer</div>
-        <div class="related-price">79,00 kr</div>
+        <div class="related-price">79 kr</div>
     </a></div><div class="related-item">
     <a class="related-card" href="https://beersniffer.dk/ol/false-hope-fading-hours/">
-        <img src="https://cdn.shopify.com/s/files/1/0368/1628/9924/files/false-hope-fading-hours_213d7009-811f-43a1-8ccb-b46da1ae7339.png?v=1781253465" alt="False Hope - Fading Hours" loading="lazy">
+        <span class="rc-photo"><img src="https://cdn.shopify.com/s/files/1/0368/1628/9924/files/false-hope-fading-hours_213d7009-811f-43a1-8ccb-b46da1ae7339.png?v=1781253465" alt="False Hope - Fading Hours" loading="lazy"></span>
         <div class="related-name">False Hope - Fading Hours</div>
-        <div class="related-price">79,00 kr</div>
+        <div class="related-price">79 kr</div>
     </a></div></div>
-</div>
+</main>
+<footer><a href="https://beersniffer.dk/">BeerSniffer</a> &middot; Prissammenligning p&aring; tv&aelig;rs af danske &oslash;lbutikker</footer>
 </body>
 </html>

@@ -4,199 +4,215 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Blackout øl – priser og tilbud | BeerSniffer</title>
-<meta name="description" content="Se alle 30 øl fra Blackout og sammenlign priser på tværs af danske ølbutikker. Udvalget fra Blackout spaender over barley wine, double ipa, dubbel og flere">
+<meta name="description" content="Se alle 30 øl fra Blackout og sammenlign priser på tværs af danske ølbutikker. Udvalget fra Blackout spænder over barley wine, double ipa, dubbel og flere ">
+<meta name="theme-color" content="#08070a">
 <link rel="canonical" href="https://beersniffer.dk/bryggeri/blackout/">
 <link rel="icon" href="https://beersniffer.dk/favicon.ico">
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Fraunces:wght@600;700&display=swap" rel="stylesheet">
+<link rel="preload" href="/fonts/playfair-display-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
 <style>
-:root { --bg:#0f0d0a; --surface:#1a1613; --surface2:#241f1a; --border:#2e2822; --border-light:#3a332b; --text:#f0e9df; --gold:#c8920e; --gold-light:#e0b53a; --muted:#9a8f80; }
-* { box-sizing:border-box; margin:0; padding:0; }
-body { background:var(--bg); color:var(--text); font-family:'DM Sans',sans-serif; min-height:100vh; }
-.wrap { max-width:960px; margin:0 auto; padding:1.5rem; }
-.site-logo-link { display:inline-flex; align-items:center; gap:0.8rem; text-decoration:none; margin-bottom:1.4rem; }
-.site-logo { height:68px; width:auto; filter:drop-shadow(0 3px 14px rgba(200,146,14,0.45)); }
-.back-link { color:var(--gold); text-decoration:none; font-size:0.85rem; }
-.brewery-title { font-family:'Fraunces',serif; font-size:2.1rem; color:var(--gold-light); margin-bottom:0.6rem; }
-.brewery-intro { color:var(--text); font-size:1rem; line-height:1.6; max-width:700px; margin-bottom:1.4rem; }
-.stats { display:flex; flex-wrap:wrap; gap:0.8rem; margin-bottom:1.8rem; }
-.stat { background:var(--surface); border:1px solid var(--border); border-radius:10px; padding:0.7rem 1.1rem; }
-.stat-num { font-size:1.3rem; font-weight:700; color:var(--gold-light); }
-.stat-label { font-size:0.72rem; color:var(--muted); text-transform:uppercase; letter-spacing:0.03em; }
-.related-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(150px,1fr)); gap:0.8rem; align-items:stretch; }
-.related-item { display:flex; }
-.related-card { background:var(--surface); border:1px solid var(--border); border-radius:10px; padding:0.6rem; text-decoration:none; color:var(--text); transition:border-color 0.15s; overflow:hidden; display:flex; flex-direction:column; width:100%; }
-.related-card:hover { border-color:var(--gold); }
-.related-card img { width:100%; height:120px; object-fit:contain; background:var(--surface2); border-radius:6px; margin-bottom:0.4rem; display:block; }
-.related-img-placeholder { width:100%; height:120px; background:var(--surface2); border-radius:6px; margin-bottom:0.4rem; display:flex; align-items:center; justify-content:center; font-size:1.6rem; }
-.related-name { font-size:0.8rem; line-height:1.3; margin-bottom:0.3rem; min-height:2.1em; overflow:hidden; display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; }
-.related-price { font-size:0.9rem; font-weight:700; color:var(--gold-light); line-height:1.4; padding-bottom:0.2rem; margin-top:auto; }
+@font-face{font-family:'DM Sans';font-weight:100 1000;font-display:swap;src:url('/fonts/dm-sans-latin-wght-normal.woff2') format('woff2')}
+@font-face{font-family:'Playfair Display';font-weight:400 900;font-display:swap;src:url('/fonts/playfair-display-latin-wght-normal.woff2') format('woff2')}
+:root{--bg:#08070a;--surface:#100d11;--border:rgba(217,162,51,.16);--border-light:rgba(217,162,51,.32);--text:#f0e8d8;--muted:#a39887;--dim:#7a7064;--gold:#d9a233;--gold-light:#f0c35e;--accent:#e0a030;--photo:#efe6d3;--serif:'Playfair Display',Georgia,serif}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--text);font-family:'DM Sans',system-ui,sans-serif;min-height:100vh;-webkit-font-smoothing:antialiased}
+a:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+.bar{position:sticky;top:0;z-index:50;display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:.5rem 1.5rem;background:rgba(8,7,10,.88);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--border)}
+.brand{display:flex;align-items:center;gap:.7rem;text-decoration:none}
+.brand img{height:40px;width:auto;display:block}
+.brand span{font-family:var(--serif);font-weight:500;font-size:1rem;letter-spacing:.32em;text-transform:uppercase;color:var(--gold-light)}
+.back-link{font-size:.66rem;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);text-decoration:none;white-space:nowrap}
+.back-link:hover{color:var(--gold-light)}
+.wrap{max-width:1040px;margin:0 auto;padding:2.2rem 1.5rem 3rem}
+.eyebrow{font-size:.62rem;letter-spacing:.3em;text-transform:uppercase;color:var(--accent);margin-bottom:.6rem}
+.brewery-title{font-family:var(--serif);font-weight:500;font-size:clamp(2rem,4.5vw,3rem);line-height:1.1;letter-spacing:-.01em;margin-bottom:.8rem;text-wrap:balance}
+.brewery-intro{color:var(--muted);line-height:1.65;max-width:680px;margin-bottom:1.6rem}
+.stats{display:flex;flex-wrap:wrap;border-top:1px solid var(--border);border-bottom:1px solid var(--border);margin-bottom:2rem}
+.stat{padding:.9rem 2rem .9rem 0;margin-right:2rem;border-right:1px solid var(--border)}
+.stat:last-child{border-right:0;margin-right:0}
+.stat-num{font-family:var(--serif);font-size:1.7rem;font-weight:500;color:var(--gold-light);line-height:1.1;font-variant-numeric:tabular-nums}
+.stat-label{font-size:.58rem;letter-spacing:.24em;text-transform:uppercase;color:var(--muted);margin-top:.3rem}
+.related-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(170px,1fr));gap:1rem;align-items:stretch}
+.related-item{display:flex}
+.related-card{background:var(--surface);border:1px solid var(--border);border-radius:4px;text-decoration:none;color:var(--text);transition:border-color .15s;overflow:hidden;display:flex;flex-direction:column;width:100%}
+.related-card:hover{border-color:var(--gold)}
+.rc-photo{display:flex;align-items:center;justify-content:center;background:var(--photo);height:160px;padding:.6rem}
+.rc-photo img{max-width:100%;max-height:100%;width:auto;height:auto;object-fit:contain;mix-blend-mode:multiply;display:block;margin:0}
+.related-img-placeholder{font-size:1.8rem;opacity:.5}
+.related-name{font-family:var(--serif);font-weight:500;font-size:.92rem;line-height:1.3;padding:.75rem .85rem 0;min-height:3.6em;overflow:hidden;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical}
+.related-price{font-family:var(--serif);font-size:1.2rem;font-weight:500;color:var(--gold-light);line-height:1.3;padding:.3rem .85rem .85rem;margin-top:auto;font-variant-numeric:tabular-nums}
+footer{border-top:1px solid var(--border);padding:1.4rem 1.5rem;text-align:center;font-size:.64rem;letter-spacing:.14em;text-transform:uppercase;color:var(--dim)}
+footer a{color:var(--muted);text-decoration:none}
+footer a:hover{color:var(--gold-light)}
+@media(max-width:560px){.bar{padding:.45rem 1rem}.brand span{font-size:.82rem;letter-spacing:.22em}.back-link{font-size:.6rem;letter-spacing:.12em}.wrap{padding:1.5rem 1rem 2rem}.stat{padding-right:1.1rem;margin-right:1.1rem}.stat-num{font-size:1.35rem}.related-grid{grid-template-columns:repeat(2,1fr);gap:.7rem}}
 </style>
 </head>
 <body>
-<div class="wrap">
-    <a class="site-logo-link" href="https://beersniffer.dk/">
-        <img src="https://beersniffer.dk/logo.png" alt="BeerSniffer" class="site-logo">
-        <span class="back-link">← Alle øltilbud</span>
-    </a>
+<header class="bar">
+    <a class="brand" href="https://beersniffer.dk/"><img src="https://beersniffer.dk/logo-hero.png" alt="" width="48" height="40"><span>BeerSniffer</span></a>
+    <a class="back-link" href="https://beersniffer.dk/">&larr; Alle &oslash;ltilbud</a>
+</header>
+<main class="wrap">
+    <div class="eyebrow">Bryggeri</div>
     <h1 class="brewery-title">Blackout</h1>
-    <p class="brewery-intro">Se alle 30 øl fra Blackout og sammenlign priser på tværs af danske ølbutikker. Udvalget fra Blackout spaender over barley wine, double ipa, dubbel og flere stilarter. Billigste øl fra Blackout koster lige nu 33,75 kr — opdateret dagligt på BeerSniffer.</p>
+    <p class="brewery-intro">Se alle 30 øl fra Blackout og sammenlign priser på tværs af danske ølbutikker. Udvalget fra Blackout spænder over barley wine, double ipa, dubbel og flere stilarter. Billigste øl fra Blackout koster lige nu 33,75 kr — opdateret dagligt på BeerSniffer.</p>
     <div class="stats">
-        <div class="stat"><div class="stat-num">30</div><div class="stat-label">øl</div></div>
+        <div class="stat"><div class="stat-num">30</div><div class="stat-label">&oslash;l</div></div>
         <div class="stat"><div class="stat-num">33,75 kr</div><div class="stat-label">billigst</div></div>
-        <div class="stat"><div class="stat-num">84,00 kr</div><div class="stat-label">gennemsnit</div></div>
-        <div class="stat"><div class="stat-num">-41%</div><div class="stat-label">stoerste rabat</div></div>
+        <div class="stat"><div class="stat-num">84 kr</div><div class="stat-label">gennemsnit</div></div>
+        <div class="stat"><div class="stat-num">-41%</div><div class="stat-label">st&oslash;rste rabat</div></div>
     </div>
     <div class="related-grid"><div class="related-item">
     <a class="related-card" href="https://beersniffer.dk/ol/pilsdee-dry-hopped-pilsner-fra-blackout-brewing/">
-        <img src="https://cdn-main.ideal.shop/images/by_hash/b6f605f54b5b48e9aad4dce75c9466e123b1ec921c56b89d1a08c132af17b6ca/500-0/pilsdet.jpg" alt="PilsdeÈ - Dry Hopped Pilsner fra Blackout Brewing" loading="lazy">
+        <span class="rc-photo"><img src="https://cdn-main.ideal.shop/images/by_hash/b6f605f54b5b48e9aad4dce75c9466e123b1ec921c56b89d1a08c132af17b6ca/500-0/pilsdet.jpg" alt="PilsdeÈ - Dry Hopped Pilsner fra Blackout Brewing" loading="lazy"></span>
         <div class="related-name">PilsdeÈ - Dry Hopped Pilsner fra Blackout Brewing</div>
         <div class="related-price">33,75 kr</div>
     </a></div><div class="related-item">
     <a class="related-card" href="https://beersniffer.dk/ol/double-hyper-double-ipa-fra-blackout-brewing/">
-        <img src="https://cdn-main.ideal.shop/images/by_hash/e15e84619db5a34224b19022cc0d9dbb95cd06d65e738e80c7f5ab78cd40bea0/500-0/DoubleHyper.jpg" alt="Double Hyper - Double IPA fra Blackout Brewing" loading="lazy">
+        <span class="rc-photo"><img src="https://cdn-main.ideal.shop/images/by_hash/e15e84619db5a34224b19022cc0d9dbb95cd06d65e738e80c7f5ab78cd40bea0/500-0/DoubleHyper.jpg" alt="Double Hyper - Double IPA fra Blackout Brewing" loading="lazy"></span>
         <div class="related-name">Double Hyper - Double IPA fra Blackout Brewing</div>
-        <div class="related-price">45,00 kr</div>
+        <div class="related-price">45 kr</div>
     </a></div><div class="related-item">
     <a class="related-card" href="https://beersniffer.dk/ol/almost-famous-ddh-new-england-ipa-fra-blackout/">
-        <img src="https://cdn-main.ideal.shop/images/by_hash/4c163bec399e8a0aa8b4298685a6b166f5f6cf92bc5b8c7238904c6089ad44c9/500-0/almostfamous.jpg" alt="Almost Famous - DDH New England IPA fra Blackout Brewing" loading="lazy">
+        <span class="rc-photo"><img src="https://cdn-main.ideal.shop/images/by_hash/4c163bec399e8a0aa8b4298685a6b166f5f6cf92bc5b8c7238904c6089ad44c9/500-0/almostfamous.jpg" alt="Almost Famous - DDH New England IPA fra Blackout Brewing" loading="lazy"></span>
         <div class="related-name">Almost Famous - DDH New England IPA fra Blackout Brewing</div>
-        <div class="related-price">45,00 kr</div>
+        <div class="related-price">45 kr</div>
     </a></div><div class="related-item">
     <a class="related-card" href="https://beersniffer.dk/ol/blackout-vi-brance/">
-        <img src="https://cdn.shopify.com/s/files/1/0368/1628/9924/files/vibrance_7543a938-09af-432f-a143-d3b0153a0311.png?v=1746118245" alt="Blackout - VI-BRANCE" loading="lazy">
+        <span class="rc-photo"><img src="https://cdn.shopify.com/s/files/1/0368/1628/9924/files/vibrance_7543a938-09af-432f-a143-d3b0153a0311.png?v=1746118245" alt="Blackout - VI-BRANCE" loading="lazy"></span>
         <div class="related-name">Blackout - VI-BRANCE</div>
-        <div class="related-price">49,00 kr</div>
+        <div class="related-price">49 kr</div>
     </a></div><div class="related-item">
     <a class="related-card" href="https://beersniffer.dk/ol/blackout-vi-sion/">
-        <img src="https://cdn.shopify.com/s/files/1/0368/1628/9924/files/vision_df655d4b-2350-410f-930a-8cb858f5d4ff.png?v=1746118262" alt="Blackout - VI-SION" loading="lazy">
+        <span class="rc-photo"><img src="https://cdn.shopify.com/s/files/1/0368/1628/9924/files/vision_df655d4b-2350-410f-930a-8cb858f5d4ff.png?v=1746118262" alt="Blackout - VI-SION" loading="lazy"></span>
         <div class="related-name">Blackout - VI-SION</div>
-        <div class="related-price">49,00 kr</div>
+        <div class="related-price">49 kr</div>
     </a></div><div class="related-item">
     <a class="related-card" href="https://beersniffer.dk/ol/blackout-blood-of-the-transistor/">
-        <img src="https://cdn.shopify.com/s/files/1/0368/1628/9924/files/blood_of_the_transistor.png?v=1764272523" alt="Blackout - Blood of the transistor" loading="lazy">
+        <span class="rc-photo"><img src="https://cdn.shopify.com/s/files/1/0368/1628/9924/files/blood_of_the_transistor.png?v=1764272523" alt="Blackout - Blood of the transistor" loading="lazy"></span>
         <div class="related-name">Blackout - Blood of the transistor</div>
-        <div class="related-price">49,00 kr</div>
+        <div class="related-price">49 kr</div>
     </a></div><div class="related-item">
     <a class="related-card" href="https://beersniffer.dk/ol/blackout-too-much-bliss-bearface-whiskey-ba/">
-        <img src="https://cdn.shopify.com/s/files/1/0368/1628/9924/files/too_much_bliss_2355aa54-ff4e-4acd-86b7-a9f75f9d5790.png?v=1746180187" alt="Blackout - Too Much Bliss - Bearface Whiskey BA" loading="lazy">
+        <span class="rc-photo"><img src="https://cdn.shopify.com/s/files/1/0368/1628/9924/files/too_much_bliss_2355aa54-ff4e-4acd-86b7-a9f75f9d5790.png?v=1746180187" alt="Blackout - Too Much Bliss - Bearface Whiskey BA" loading="lazy"></span>
         <div class="related-name">Blackout - Too Much Bliss - Bearface Whiskey BA</div>
-        <div class="related-price">55,00 kr</div>
+        <div class="related-price">55 kr</div>
     </a></div><div class="related-item">
     <a class="related-card" href="https://beersniffer.dk/ol/blackout-double-vibrance/">
-        <img src="https://cdn.shopify.com/s/files/1/0368/1628/9924/files/double_vibrance_a6db5a80-4349-42e2-884f-aa7f9e97cda0.png?v=1746118249" alt="Blackout - Double Vibrance" loading="lazy">
+        <span class="rc-photo"><img src="https://cdn.shopify.com/s/files/1/0368/1628/9924/files/double_vibrance_a6db5a80-4349-42e2-884f-aa7f9e97cda0.png?v=1746118249" alt="Blackout - Double Vibrance" loading="lazy"></span>
         <div class="related-name">Blackout - Double Vibrance</div>
-        <div class="related-price">55,00 kr</div>
+        <div class="related-price">55 kr</div>
     </a></div><div class="related-item">
     <a class="related-card" href="https://beersniffer.dk/ol/blackout-vi-ce/">
-        <img src="https://cdn.shopify.com/s/files/1/0368/1628/9924/files/vice_d52b61e6-5929-460f-a5c5-be1f9ade436f.png?v=1746118252" alt="Blackout - VI-CE" loading="lazy">
+        <span class="rc-photo"><img src="https://cdn.shopify.com/s/files/1/0368/1628/9924/files/vice_d52b61e6-5929-460f-a5c5-be1f9ade436f.png?v=1746118252" alt="Blackout - VI-CE" loading="lazy"></span>
         <div class="related-name">Blackout - VI-CE</div>
-        <div class="related-price">57,00 kr</div>
+        <div class="related-price">57 kr</div>
     </a></div><div class="related-item">
     <a class="related-card" href="https://beersniffer.dk/ol/pierzanie-cognac-ba-imperial-dark-sour-ale-fra/">
-        <img src="https://cdn-main.ideal.shop/images/by_hash/44a43c983cf58bca6ce5c590f340f5a32ccd9e221dd769fb05bc59df98eafd6f/500-0/Pierzanie.jpg" alt="Pierzanie - Cognac BA Imperial Dark Sour Ale fra Blackout Brewing" loading="lazy">
+        <span class="rc-photo"><img src="https://cdn-main.ideal.shop/images/by_hash/44a43c983cf58bca6ce5c590f340f5a32ccd9e221dd769fb05bc59df98eafd6f/500-0/Pierzanie.jpg" alt="Pierzanie - Cognac BA Imperial Dark Sour Ale fra Blackout Brewing" loading="lazy"></span>
         <div class="related-name">Pierzanie - Cognac BA Imperial Dark Sour Ale fra Blackout Brewing</div>
-        <div class="related-price">79,00 kr</div>
+        <div class="related-price">79 kr</div>
     </a></div><div class="related-item">
     <a class="related-card" href="https://beersniffer.dk/ol/death-by-astonishment-barrel-aged-imperal-stout-fra/">
-        <img src="https://cdn-main.ideal.shop/images/by_hash/cec44639d4bcca6eb4e5b83c086d31f775c4425192b4d249e99f30dd96c1c290/500-0/Death-By-Astonishment.jpg" alt="Death By Astonishment - Barrel Aged Imperal Stout fra Blackout Brewing" loading="lazy">
+        <span class="rc-photo"><img src="https://cdn-main.ideal.shop/images/by_hash/cec44639d4bcca6eb4e5b83c086d31f775c4425192b4d249e99f30dd96c1c290/500-0/Death-By-Astonishment.jpg" alt="Death By Astonishment - Barrel Aged Imperal Stout fra Blackout Brewing" loading="lazy"></span>
         <div class="related-name">Death By Astonishment - Barrel Aged Imperal Stout fra Blackout Brewing</div>
-        <div class="related-price">79,00 kr</div>
+        <div class="related-price">79 kr</div>
     </a></div><div class="related-item">
     <a class="related-card" href="https://beersniffer.dk/ol/divination-cognac-ba-barley-wine-fra-blackout-brewing/">
-        <img src="https://cdn-main.ideal.shop/images/by_hash/e6a984a512ade42cfeaae2b12f9d63e8f95ff4bc7fc01082f4ff067818ba5ac2/500-0/divination.jpg" alt="Divination - Cognac BA Barley Wine fra Blackout Brewing" loading="lazy">
+        <span class="rc-photo"><img src="https://cdn-main.ideal.shop/images/by_hash/e6a984a512ade42cfeaae2b12f9d63e8f95ff4bc7fc01082f4ff067818ba5ac2/500-0/divination.jpg" alt="Divination - Cognac BA Barley Wine fra Blackout Brewing" loading="lazy"></span>
         <div class="related-name">Divination - Cognac BA Barley Wine fra Blackout Brewing</div>
-        <div class="related-price">79,00 kr</div>
+        <div class="related-price">79 kr</div>
     </a></div><div class="related-item">
     <a class="related-card" href="https://beersniffer.dk/ol/blackout-brewing-cubist-buffalo-trace-imperial-stout/">
-        <img src="https://humledrik.dk/cache/4/4/6/2/7/7/2/fit-370x370x75.webp" alt="Cubist - Buffalo Trace - Imperial Stout" loading="lazy">
+        <span class="rc-photo"><img src="https://humledrik.dk/cache/4/4/6/2/7/7/2/fit-370x370x75.webp" alt="Cubist - Buffalo Trace - Imperial Stout" loading="lazy"></span>
         <div class="related-name">Cubist - Buffalo Trace - Imperial Stout</div>
-        <div class="related-price">79,00 kr</div>
+        <div class="related-price">79 kr</div>
     </a></div><div class="related-item">
     <a class="related-card" href="https://beersniffer.dk/ol/coffee-series-indonesia-imperial-stout-fra-blackout-brewing/">
-        <img src="https://cdn-main.ideal.shop/images/by_hash/d2f94fdc394add058d223bea47efa1da850e2db83a6edc892cd5114e8dde1b4f/500-0/Coffee-Series---Indonesia.jpg" alt="Coffee Series - Indonesia - Imperial Stout fra Blackout Brewing" loading="lazy">
+        <span class="rc-photo"><img src="https://cdn-main.ideal.shop/images/by_hash/d2f94fdc394add058d223bea47efa1da850e2db83a6edc892cd5114e8dde1b4f/500-0/Coffee-Series---Indonesia.jpg" alt="Coffee Series - Indonesia - Imperial Stout fra Blackout Brewing" loading="lazy"></span>
         <div class="related-name">Coffee Series - Indonesia - Imperial Stout fra Blackout Brewing</div>
-        <div class="related-price">79,00 kr</div>
+        <div class="related-price">79 kr</div>
     </a></div><div class="related-item">
     <a class="related-card" href="https://beersniffer.dk/ol/blackout-brewing-v-blend-imperial-stout/">
-        <img src="https://humledrik.dk/cache/4/4/6/2/7/7/3/fit-370x370x75.webp" alt="V-Blend - Imperial Stout" loading="lazy">
+        <span class="rc-photo"><img src="https://humledrik.dk/cache/4/4/6/2/7/7/3/fit-370x370x75.webp" alt="V-Blend - Imperial Stout" loading="lazy"></span>
         <div class="related-name">V-Blend - Imperial Stout</div>
-        <div class="related-price">79,00 kr</div>
+        <div class="related-price">79 kr</div>
     </a></div><div class="related-item">
     <a class="related-card" href="https://beersniffer.dk/ol/vision-port-ba-dark-sour-fra-blackout-brewing/">
-        <img src="https://cdn-main.ideal.shop/images/by_hash/a39adfd16bbc8f2e61470af9cabe8eb455edddfdb29c096e382bad12547da18e/500-0/vision.jpg" alt="Vision - Port BA Dark Sour fra Blackout Brewing" loading="lazy">
+        <span class="rc-photo"><img src="https://cdn-main.ideal.shop/images/by_hash/a39adfd16bbc8f2e61470af9cabe8eb455edddfdb29c096e382bad12547da18e/500-0/vision.jpg" alt="Vision - Port BA Dark Sour fra Blackout Brewing" loading="lazy"></span>
         <div class="related-name">Vision - Port BA Dark Sour fra Blackout Brewing</div>
-        <div class="related-price">89,00 kr</div>
+        <div class="related-price">89 kr</div>
     </a></div><div class="related-item">
     <a class="related-card" href="https://beersniffer.dk/ol/memnu-ba-strong-ale-fra-blackout-brewing/">
-        <img src="https://cdn-main.ideal.shop/images/by_hash/ca7d531daecb7a662622539a87fd0533fab65c3507d5a350b5b51f7823070d14/500-0/vilify.jpg" alt="Vilify - BA Imperial Stout fra Blackout Brewing" loading="lazy">
+        <span class="rc-photo"><img src="https://cdn-main.ideal.shop/images/by_hash/ca7d531daecb7a662622539a87fd0533fab65c3507d5a350b5b51f7823070d14/500-0/vilify.jpg" alt="Vilify - BA Imperial Stout fra Blackout Brewing" loading="lazy"></span>
         <div class="related-name">Vilify - BA Imperial Stout fra Blackout Brewing</div>
-        <div class="related-price">99,00 kr</div>
+        <div class="related-price">99 kr</div>
     </a></div><div class="related-item">
     <a class="related-card" href="https://beersniffer.dk/ol/poke-the-hive-ba-barleywine-fra-blackout-brewing/">
-        <img src="https://cdn-main.ideal.shop/images/by_hash/133e640562b226b96946e78f0ae3c5e2b712fcda96d87183a97c8bc22f734554/500-0/pokethehive.jpg" alt="Poke the Hive - BA barleywine fra Blackout Brewing" loading="lazy">
+        <span class="rc-photo"><img src="https://cdn-main.ideal.shop/images/by_hash/133e640562b226b96946e78f0ae3c5e2b712fcda96d87183a97c8bc22f734554/500-0/pokethehive.jpg" alt="Poke the Hive - BA barleywine fra Blackout Brewing" loading="lazy"></span>
         <div class="related-name">Poke the Hive - BA barleywine fra Blackout Brewing</div>
-        <div class="related-price">99,00 kr</div>
+        <div class="related-price">99 kr</div>
     </a></div><div class="related-item">
     <a class="related-card" href="https://beersniffer.dk/ol/visceral-ba-barleywine-fra-blackout-brewing/">
-        <img src="https://cdn-main.ideal.shop/images/by_hash/08d05910e270a0e2df643a6dc3313e0f9888d083d1314af7c6ebc74b6b003489/500-0/Visceral.jpg" alt="Visceral - BA Barleywine fra Blackout Brewing" loading="lazy">
+        <span class="rc-photo"><img src="https://cdn-main.ideal.shop/images/by_hash/08d05910e270a0e2df643a6dc3313e0f9888d083d1314af7c6ebc74b6b003489/500-0/Visceral.jpg" alt="Visceral - BA Barleywine fra Blackout Brewing" loading="lazy"></span>
         <div class="related-name">Visceral - BA Barleywine fra Blackout Brewing</div>
-        <div class="related-price">99,00 kr</div>
+        <div class="related-price">99 kr</div>
     </a></div><div class="related-item">
     <a class="related-card" href="https://beersniffer.dk/ol/the-thin-crust-of-civilization-ba-strong-ale/">
-        <img src="https://cdn-main.ideal.shop/images/by_hash/e693f49bd29335f8f56f4371ccd5c065474ccac3d0825138997663201992c3a1/500-0/The-Thin-Crust-of-Civilization.jpg" alt="The Thin Crust of Civilization - BA Strong Ale fra Blackout Brewing" loading="lazy">
+        <span class="rc-photo"><img src="https://cdn-main.ideal.shop/images/by_hash/e693f49bd29335f8f56f4371ccd5c065474ccac3d0825138997663201992c3a1/500-0/The-Thin-Crust-of-Civilization.jpg" alt="The Thin Crust of Civilization - BA Strong Ale fra Blackout Brewing" loading="lazy"></span>
         <div class="related-name">The Thin Crust of Civilization - BA Strong Ale fra Blackout Brewing</div>
-        <div class="related-price">99,00 kr</div>
+        <div class="related-price">99 kr</div>
     </a></div><div class="related-item">
     <a class="related-card" href="https://beersniffer.dk/ol/a-trip-inside-a-separate-mind-ba-imperial/">
-        <img src="https://cdn-main.ideal.shop/images/by_hash/4aac35d20e4f12e036e5f4ceac7cb196108a7d9b77d6db4e39782a5ee60abe23/500-0/A-trip-inside-a-separate-mind-.jpg" alt="A trip inside a separate mind - BA Imperial Stout fra Blackout Brewing" loading="lazy">
+        <span class="rc-photo"><img src="https://cdn-main.ideal.shop/images/by_hash/4aac35d20e4f12e036e5f4ceac7cb196108a7d9b77d6db4e39782a5ee60abe23/500-0/A-trip-inside-a-separate-mind-.jpg" alt="A trip inside a separate mind - BA Imperial Stout fra Blackout Brewing" loading="lazy"></span>
         <div class="related-name">A trip inside a separate mind - BA Imperial Stout fra Blackout Brewing</div>
-        <div class="related-price">99,00 kr</div>
+        <div class="related-price">99 kr</div>
     </a></div><div class="related-item">
     <a class="related-card" href="https://beersniffer.dk/ol/junk-deluxe-bourbon-ba-imperial-stout-fra-blackout/">
-        <img src="https://cdn-main.ideal.shop/images/by_hash/49ede5e3405e3e9425222125d262f3b701d9538f67acac923a69ca4ea736fe21/500-0/junkdeluxe.jpg" alt="Junk Deluxe - Bourbon BA Imperial Stout fra Blackout Brewing" loading="lazy">
+        <span class="rc-photo"><img src="https://cdn-main.ideal.shop/images/by_hash/49ede5e3405e3e9425222125d262f3b701d9538f67acac923a69ca4ea736fe21/500-0/junkdeluxe.jpg" alt="Junk Deluxe - Bourbon BA Imperial Stout fra Blackout Brewing" loading="lazy"></span>
         <div class="related-name">Junk Deluxe - Bourbon BA Imperial Stout fra Blackout Brewing</div>
-        <div class="related-price">99,00 kr</div>
+        <div class="related-price">99 kr</div>
     </a></div><div class="related-item">
     <a class="related-card" href="https://beersniffer.dk/ol/extra-entropy-bourbon-ba-imperial-stout-fra-blackout/">
-        <img src="https://cdn-main.ideal.shop/images/by_hash/6bb412ad24e7d50d4669d332b5eb68c0ba5f282e21b73536127df0e1287f204a/500-0/extraentropy.jpg" alt="Extra Entropy - Bourbon BA Imperial Stout fra Blackout Brewing" loading="lazy">
+        <span class="rc-photo"><img src="https://cdn-main.ideal.shop/images/by_hash/6bb412ad24e7d50d4669d332b5eb68c0ba5f282e21b73536127df0e1287f204a/500-0/extraentropy.jpg" alt="Extra Entropy - Bourbon BA Imperial Stout fra Blackout Brewing" loading="lazy"></span>
         <div class="related-name">Extra Entropy - Bourbon BA Imperial Stout fra Blackout Brewing</div>
-        <div class="related-price">99,00 kr</div>
+        <div class="related-price">99 kr</div>
     </a></div><div class="related-item">
     <a class="related-card" href="https://beersniffer.dk/ol/twisted-cake-bourbon-ba-imperial-stout-fra-blackout/">
-        <img src="https://cdn-main.ideal.shop/images/by_hash/b32a52b80a67895617596b51183a07940aad090e6a9d172b197a27b825c33705/500-0/twistedcake.jpg" alt="Twisted Cake - Bourbon BA Imperial Stout fra Blackout Brewing" loading="lazy">
+        <span class="rc-photo"><img src="https://cdn-main.ideal.shop/images/by_hash/b32a52b80a67895617596b51183a07940aad090e6a9d172b197a27b825c33705/500-0/twistedcake.jpg" alt="Twisted Cake - Bourbon BA Imperial Stout fra Blackout Brewing" loading="lazy"></span>
         <div class="related-name">Twisted Cake - Bourbon BA Imperial Stout fra Blackout Brewing</div>
-        <div class="related-price">99,00 kr</div>
+        <div class="related-price">99 kr</div>
     </a></div><div class="related-item">
     <a class="related-card" href="https://beersniffer.dk/ol/sunset-damage-bourbon-port-ba-imperial-stout-fra/">
-        <img src="https://cdn-main.ideal.shop/images/by_hash/188fdf27e4368b1fd10fddee9ab9f8a044f8698eec57b7d1c29d23ceaa8bc4be/500-0/sunsetdamage.jpg" alt="Sunset Damage - Bourbon &amp; Port BA Imperial Stout fra Blackout Brewing" loading="lazy">
+        <span class="rc-photo"><img src="https://cdn-main.ideal.shop/images/by_hash/188fdf27e4368b1fd10fddee9ab9f8a044f8698eec57b7d1c29d23ceaa8bc4be/500-0/sunsetdamage.jpg" alt="Sunset Damage - Bourbon &amp; Port BA Imperial Stout fra Blackout Brewing" loading="lazy"></span>
         <div class="related-name">Sunset Damage - Bourbon &amp; Port BA Imperial Stout fra Blackout Brewing</div>
-        <div class="related-price">99,00 kr</div>
+        <div class="related-price">99 kr</div>
     </a></div><div class="related-item">
     <a class="related-card" href="https://beersniffer.dk/ol/profan-ba-imperial-stout-fra-blackout-brewing/">
-        <img src="https://cdn-main.ideal.shop/images/by_hash/bf4cdfd7b312f0aace4ba34bab94b7934071627ce34abb7d86540e439b19aee9/500-0/profan.jpg" alt="Profan - BA Imperial Stout fra Blackout Brewing" loading="lazy">
+        <span class="rc-photo"><img src="https://cdn-main.ideal.shop/images/by_hash/bf4cdfd7b312f0aace4ba34bab94b7934071627ce34abb7d86540e439b19aee9/500-0/profan.jpg" alt="Profan - BA Imperial Stout fra Blackout Brewing" loading="lazy"></span>
         <div class="related-name">Profan - BA Imperial Stout fra Blackout Brewing</div>
-        <div class="related-price">99,00 kr</div>
+        <div class="related-price">99 kr</div>
     </a></div><div class="related-item">
     <a class="related-card" href="https://beersniffer.dk/ol/blackout-brewing-the-brutality-of-plastic-existence-imperial/">
-        <img src="https://humledrik.dk/cache/4/4/6/2/6/2/3/fit-370x370x75.webp" alt="The Brutality Of Plastic Existence - Imperial Stout" loading="lazy">
+        <span class="rc-photo"><img src="https://humledrik.dk/cache/4/4/6/2/6/2/3/fit-370x370x75.webp" alt="The Brutality Of Plastic Existence - Imperial Stout" loading="lazy"></span>
         <div class="related-name">The Brutality Of Plastic Existence - Imperial Stout</div>
-        <div class="related-price">99,00 kr</div>
+        <div class="related-price">99 kr</div>
     </a></div><div class="related-item">
     <a class="related-card" href="https://beersniffer.dk/ol/blackout-brewing-twisted-metal-pedro-ximenez-ba/">
-        <img src="https://humledrik.dk/cache/4/4/6/2/6/1/2/fit-370x370x75.webp" alt="Twisted Metal - Pedro Ximenez BA" loading="lazy">
+        <span class="rc-photo"><img src="https://humledrik.dk/cache/4/4/6/2/6/1/2/fit-370x370x75.webp" alt="Twisted Metal - Pedro Ximenez BA" loading="lazy"></span>
         <div class="related-name">Twisted Metal - Pedro Ximenez BA</div>
-        <div class="related-price">99,00 kr</div>
+        <div class="related-price">99 kr</div>
     </a></div><div class="related-item">
     <a class="related-card" href="https://beersniffer.dk/ol/blackout-brewing-world-is-decay-imperial-stout/">
-        <img src="https://humledrik.dk/cache/4/4/6/2/6/2/1/fit-370x370x75.webp" alt="World is Decay - Imperial Stout" loading="lazy">
+        <span class="rc-photo"><img src="https://humledrik.dk/cache/4/4/6/2/6/2/1/fit-370x370x75.webp" alt="World is Decay - Imperial Stout" loading="lazy"></span>
         <div class="related-name">World is Decay - Imperial Stout</div>
-        <div class="related-price">99,00 kr</div>
+        <div class="related-price">99 kr</div>
     </a></div><div class="related-item">
     <a class="related-card" href="https://beersniffer.dk/ol/blackout-brewing-smagssaet/">
-        <img src="https://humledrik.dk/cache/4/6/5/8/2/1/2/fit-370x370x75.webp" alt="Smagssæt" loading="lazy">
+        <span class="rc-photo"><img src="https://humledrik.dk/cache/4/6/5/8/2/1/2/fit-370x370x75.webp" alt="Smagssæt" loading="lazy"></span>
         <div class="related-name">Smagssæt</div>
-        <div class="related-price">225,00 kr</div>
+        <div class="related-price">225 kr</div>
     </a></div></div>
-</div>
+</main>
+<footer><a href="https://beersniffer.dk/">BeerSniffer</a> &middot; Prissammenligning p&aring; tv&aelig;rs af danske &oslash;lbutikker</footer>
 </body>
 </html>
