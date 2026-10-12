@@ -46,6 +46,8 @@ import re as _re
 
 # Billedet lægges på en cremefarvet scene (som på forsiden); resten af kortet er uændret
 def _stage(card_html):
+    if 'rc-photo' in card_html:      # det opdaterede øl-kort har allerede scenen
+        return card_html
     return _re.sub(r'(<img\b[^>]*>|<div class="related-img-placeholder"[^>]*>.*?</div>)',
                    r'<span class="rc-photo">\1</span>', card_html, count=1, flags=_re.S)
 
