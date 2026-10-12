@@ -108,9 +108,11 @@ select,input[type=text],input[type=search]{border-radius:2px!important}
 .ribbon{background:rgba(8,7,10,.92)!important;color:var(--gold-light)!important;border:1px solid var(--border-light)!important;border-radius:2px!important;font-family:'DM Sans',sans-serif!important;font-weight:600!important;font-size:.68rem!important;letter-spacing:.06em;box-shadow:none!important;clip-path:none!important}
 .card-brewery{color:var(--accent)!important;letter-spacing:.16em!important;text-transform:uppercase;font-size:.6rem!important}
 .card-name{font-family:var(--serif)!important;font-weight:500!important;color:var(--text)!important;text-wrap:balance}
-.card-meta{gap:0!important;flex-wrap:wrap}
-.card-meta .tag{background:none!important;border:none!important;padding:0!important;color:var(--text-muted)!important;font-size:.72rem!important;border-radius:0!important;font-weight:400!important;display:inline-flex;align-items:center}
-.card-meta .tag+.tag::before{content:'·';margin:0 .45rem;opacity:.55}
+/* metalinje med prikker, der aldrig står først på en ombrudt linje: hver prik sidder i tagets venstre polstring, og linjens
+   yderste .9rem klippes væk, så den første prik på hver linje er skjult */
+.card-meta{gap:0!important;flex-wrap:wrap;margin-left:-.9rem!important;width:calc(100% + .9rem);clip-path:inset(0 0 0 .9rem)}
+.card-meta .tag{position:relative;background:none!important;border:none!important;padding:0 0 0 .9rem!important;color:var(--text-muted)!important;font-size:.72rem!important;border-radius:0!important;font-weight:400!important;display:inline-flex;align-items:center}
+.card-meta .tag::before{content:'·';position:absolute;left:.36rem;opacity:.55}
 .card-meta .tag-low,.card-meta .tag-drop{color:var(--discount)!important}
 .price-row{border-radius:2px!important;background:transparent!important;border:1px solid var(--border)!important;box-shadow:none!important}
 .price-row-cheapest,.price-row.has-discount,.card.has-deal .price-row-cheapest{border-color:var(--gold)!important;background:rgba(217,162,51,.045)!important;box-shadow:none!important}
