@@ -1,0 +1,144 @@
+/* ==========================================================================
+   BeerSniffer — fælles designlag (eksklusivt look, i familie med RomSniffer)
+   Indlæses SIDST og overstyrer de ældre regler i sidens egen <style>.
+   Gå tilbage: fjern <link rel="stylesheet" href="/theme.css"> (og scriptet theme.js).
+   Rabatfarven ændres ét sted: --discount.  Accentfarven (rav): --accent / --gold.
+   ========================================================================== */
+@font-face{font-family:'Playfair Display';font-style:normal;font-weight:400 900;font-display:swap;src:url('/fonts/playfair-display-latin-wght-normal.woff2') format('woff2')}
+@font-face{font-family:'Playfair Display';font-style:italic;font-weight:400 900;font-display:swap;src:url('/fonts/playfair-display-latin-wght-italic.woff2') format('woff2')}
+
+:root{
+  color-scheme:dark;
+  --bg:#08070a; --surface:#100d11; --surface2:#16121a; --surface3:#1c1722;
+  --border:rgba(217,162,51,.16); --border-light:rgba(217,162,51,.32);
+  --gold:#d9a233; --gold-light:#f0c35e; --gold-dim:#8a6a1e; --amber:#e0a030; --accent:#e0a030;
+  --text:#f0e8d8; --text-muted:#a39887; --text-dim:#7a7064;
+  --discount:#7cc79a; --discount-dark:#7cc79a;      /* rabat: dæmpet grøn (ændr her) */
+  --photo-bg:#efe6d3; --serif:'Playfair Display',Georgia,serif;
+}
+body{background:var(--bg)!important;color:var(--text)}
+::selection{background:var(--gold);color:#0a0806}
+a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+
+/* ── top: hunden beholder sin størrelse; teksten ved siden af bliver ordmærke + overskrift ── */
+header{background:radial-gradient(ellipse 55% 120% at 30% 0%,rgba(217,162,51,.10),transparent 70%),var(--bg)!important;border-bottom:1px solid var(--border)!important}
+.brand-tagline,.brand-sub,.hero-search-sub{display:none!important}
+.bm-eyebrow{font-family:var(--serif);font-weight:500;font-size:1rem;letter-spacing:.34em;text-transform:uppercase;color:var(--gold-light);margin-bottom:.55rem}
+.brand>.bm-eyebrow,.brand>.bm-title,.brand>.bm-sub{flex:0 0 100%;width:100%}   /* altid egne linjer, også i det kompakte layout */
+.header-updated::before{display:none!important}
+.bm-title .bm-br{display:none}
+.bm-title{font-family:var(--serif);font-weight:500;font-size:clamp(1.7rem,2.7vw,2.5rem);line-height:1.08;letter-spacing:-.01em;margin:0 0 .7rem;color:var(--text);text-wrap:balance}
+.bm-title em{font-style:italic;color:var(--gold-light)}
+.bm-sub{margin:0 0 .35rem;font-size:.86rem;letter-spacing:.04em;color:var(--text-muted)}
+.bm-sub strong{color:var(--text);font-weight:600}
+.header-updated{font-size:.66rem!important;color:var(--text-dim)!important;letter-spacing:.04em}
+.header-updated strong{color:var(--text-muted)!important}
+.mini-header{background:rgba(8,7,10,.88)!important;border-bottom:1px solid var(--border)!important}
+.mini-header .mini-brand{font-family:var(--serif)!important;font-weight:500;font-size:.95rem!important;letter-spacing:.3em!important;text-transform:uppercase;color:var(--gold-light)!important}
+.mini-header .mini-tagline{display:none!important}
+
+/* hero-søgning */
+.hero-search{background:var(--bg)!important;border-bottom:1px solid var(--border)}
+.hero-search-wrap{border-radius:2px!important}
+.hero-search-input{background:var(--surface)!important;border:1px solid var(--border-light)!important;border-radius:2px!important;color:var(--text);box-shadow:none!important}
+.cat-btn{border-radius:2px!important;background:transparent!important;border:1px solid var(--border-light)!important;color:var(--text-muted)!important;text-transform:uppercase;letter-spacing:.16em;font-size:.64rem!important;font-weight:500!important;padding:.55rem .85rem!important;box-shadow:none!important}
+.cat-btn:hover,.cat-btn.active{border-color:var(--gold)!important;color:var(--gold-light)!important;background:rgba(217,162,51,.07)!important}
+
+/* statistik: én række med tynde streger (ingen runde piller) */
+.stats-bar{background:transparent!important;border-bottom:1px solid var(--border)}
+@media(min-width:721px){.stats-bar{display:flex!important;justify-content:center;gap:0!important;padding:0!important}}
+.stat{background:none!important;border:0!important;border-left:1px solid var(--border)!important;border-radius:0!important;text-align:center;box-shadow:none!important}
+@media(min-width:721px){.stat{padding:.95rem 2.4rem!important}}
+.stat:first-child{border-left:0!important}
+.stat-number{font-family:var(--serif)!important;font-weight:500!important;color:var(--gold-light)!important;letter-spacing:0!important;font-variant-numeric:tabular-nums}
+@media(min-width:721px){.stat-number{font-size:1.7rem!important;display:block}}
+.stat-label{font-size:.58rem!important;letter-spacing:.24em!important;text-transform:uppercase;color:var(--text-muted)!important}
+.stat.clickable:hover{background:rgba(217,162,51,.05)!important}
+
+/* dagens fund */
+.bm-fund{padding:1.6rem 2rem;border-bottom:1px solid var(--border)}
+.bm-fund-inner{max-width:760px;margin:0 auto}
+.bm-fund-head{display:flex;align-items:baseline;gap:.8rem;margin-bottom:.9rem}
+.bm-fund-title{font-family:var(--serif);font-size:1.15rem;letter-spacing:.08em;color:var(--gold-light)}
+.bm-fund-sub{font-size:.7rem;color:var(--text-dim);margin-left:auto}
+.bm-fund-card{display:flex;gap:1.3rem;align-items:center;padding:1rem 1.2rem;background:var(--surface);border:1px solid var(--border-light);border-radius:4px}
+.bm-fund-photo{flex:none;width:96px;height:112px;background:var(--photo-bg);border-radius:3px;display:flex;align-items:center;justify-content:center;overflow:hidden}
+.bm-fund-photo img{width:100%;height:100%;object-fit:contain;padding:.35rem;mix-blend-mode:multiply}
+.bm-fund-info{flex:1;min-width:0}
+.bm-fund-brew{font-size:.6rem;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);margin-bottom:.25rem}
+.bm-fund-name{font-family:var(--serif);font-size:1.1rem;font-weight:500;color:var(--text);margin-bottom:.55rem}
+.bm-fund-prices{display:flex;align-items:baseline;gap:.8rem;flex-wrap:wrap}
+.bm-fund-price{font-family:var(--serif);font-size:1.7rem;color:var(--gold-light);line-height:1;font-variant-numeric:tabular-nums}
+.bm-fund-old{font-size:.76rem;color:var(--text-dim);text-decoration:line-through;text-decoration-color:rgba(163,152,135,.55)}
+.bm-fund-pct{font-size:.68rem;font-weight:600;letter-spacing:.05em;color:var(--discount);border:1px solid rgba(124,199,154,.4);border-radius:2px;padding:.22rem .55rem}
+.bm-fund-cta{flex:none;background:transparent;color:var(--gold-light);border:1px solid var(--gold);padding:.65rem 1.3rem;border-radius:2px;text-decoration:none;font-weight:600;font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;white-space:nowrap}
+.bm-fund-cta:hover{background:var(--gold);color:#0a0806}
+
+/* tilbudsstrimmel */
+.top-deals-section{border-color:var(--border)!important;background:transparent!important}
+.top-deals-title{font-family:var(--serif)!important;font-size:1.1rem!important;letter-spacing:.06em!important;color:var(--gold-light)!important;text-transform:none!important}
+.top-deals-title svg,.sidebar-title svg,.sfb-label svg,.card-meta .tag svg,.price-row-save svg,.untappd-btn svg,.mobile-filter-btn svg{display:none!important}
+.top-deals-see-all{color:var(--text-muted)!important;letter-spacing:.12em;text-transform:uppercase;font-size:.64rem!important}
+.top-card{border-radius:4px!important;background:var(--surface)!important;border:1px solid var(--border)!important;box-shadow:none!important}
+.top-card:hover{border-color:var(--gold)!important;transform:none!important}
+.top-card-photo{background:var(--photo-bg)!important;border-radius:3px!important}
+.top-card-photo img{mix-blend-mode:multiply}
+.top-card-shop{color:var(--accent)!important;letter-spacing:.14em;font-size:.58rem!important}
+.top-card-name{font-family:var(--serif)!important;color:var(--text)!important;font-weight:500}
+.top-card-price{font-family:var(--serif)!important;color:var(--gold-light)!important;font-weight:500!important;font-variant-numeric:tabular-nums}
+.top-card-old,.price-row-old{color:var(--text-dim)!important;text-decoration-color:rgba(163,152,135,.55)!important}
+.top-card-pct{background:rgba(8,7,10,.92)!important;color:var(--gold-light)!important;border:1px solid var(--border-light)!important;border-radius:2px!important;font-family:'DM Sans',sans-serif!important;font-weight:600!important;font-size:.66rem!important;letter-spacing:.05em}
+.top-card-link{background:transparent!important;border:1px solid var(--gold)!important;color:var(--gold-light)!important;border-radius:2px!important;letter-spacing:.16em;text-transform:uppercase;font-size:.58rem!important;box-shadow:none!important}
+.top-card-link:hover{background:var(--gold)!important;color:#0a0806!important}
+
+/* sidebar */
+.sidebar{background:transparent!important;border-right:1px solid var(--border)!important}
+.sidebar-title{font-family:'DM Sans',sans-serif!important;letter-spacing:.2em!important;text-transform:uppercase;font-size:.62rem!important;color:var(--gold)!important}
+.sidebar-filter-btn{border-radius:2px!important;background:transparent!important;border:1px solid var(--border)!important;color:var(--text-muted)!important;box-shadow:none!important}
+.sidebar-filter-btn.active,.sidebar-filter-btn:hover{background:rgba(217,162,51,.09)!important;border-color:var(--gold)!important;color:var(--gold-light)!important}
+.sidebar-chip,.filter-chip,.active-chip{border-radius:2px!important}
+select,input[type=text],input[type=search]{border-radius:2px!important}
+
+/* kort */
+.card{border-radius:4px!important;background:var(--surface)!important;border:1px solid var(--border)!important;box-shadow:none!important}
+.card:hover{border-color:var(--gold)!important;transform:none!important}
+.card.has-deal{border-color:var(--border)!important}
+.card-img-wrap{background:var(--photo-bg)!important}
+.card-img{mix-blend-mode:multiply}
+.ribbon{background:rgba(8,7,10,.92)!important;color:var(--gold-light)!important;border:1px solid var(--border-light)!important;border-radius:2px!important;font-family:'DM Sans',sans-serif!important;font-weight:600!important;font-size:.68rem!important;letter-spacing:.06em;box-shadow:none!important;clip-path:none!important}
+.card-brewery{color:var(--accent)!important;letter-spacing:.16em!important;text-transform:uppercase;font-size:.6rem!important}
+.card-name{font-family:var(--serif)!important;font-weight:500!important;color:var(--text)!important;text-wrap:balance}
+.card-meta{gap:0!important;flex-wrap:wrap}
+.card-meta .tag{background:none!important;border:none!important;padding:0!important;color:var(--text-muted)!important;font-size:.72rem!important;border-radius:0!important;font-weight:400!important;display:inline-flex;align-items:center}
+.card-meta .tag+.tag::before{content:'·';margin:0 .45rem;opacity:.55}
+.card-meta .tag-low,.card-meta .tag-drop{color:var(--discount)!important}
+.price-row{border-radius:2px!important;background:transparent!important;border:1px solid var(--border)!important;box-shadow:none!important}
+.price-row-cheapest,.price-row.has-discount,.card.has-deal .price-row-cheapest{border-color:var(--gold)!important;background:rgba(217,162,51,.045)!important;box-shadow:none!important}
+.price-row-shop{letter-spacing:.14em!important;font-size:.6rem!important;color:var(--text-muted)!important;text-transform:uppercase}
+.price-row-cheapest .price-row-shop{color:var(--gold-light)!important}
+.best-badge{background:transparent!important;color:var(--gold-light)!important;border:1px solid var(--border-light)!important;border-radius:2px!important;font-size:.52rem!important;letter-spacing:.1em;text-transform:uppercase}
+.price-row-discount{background:transparent!important;color:var(--discount)!important;border:1px solid rgba(124,199,154,.4)!important;border-radius:2px!important;font-family:'DM Sans',sans-serif!important;font-weight:600!important;font-size:.62rem!important}
+.price-row-amount{font-family:var(--serif)!important;font-size:1.5rem!important;color:var(--text)!important;font-weight:500!important;letter-spacing:0!important;font-variant-numeric:tabular-nums}
+.price-row-old{opacity:.7}
+.price-row-save{color:var(--discount)!important;background:none!important}
+.price-row-total,.price-row-ship{color:var(--text-dim)!important}
+.price-row-link{background:transparent!important;border:1px solid var(--gold)!important;color:var(--gold-light)!important;border-radius:2px!important;letter-spacing:.16em;text-transform:uppercase;font-size:.6rem!important;box-shadow:none!important}
+.price-row-link:hover{background:var(--gold)!important;color:#0a0806!important}
+.more-shops-toggle{border-radius:2px!important;background:transparent!important;border:1px solid var(--border)!important;letter-spacing:.1em;color:var(--text-muted)!important}
+.card-actions{border:0!important;background:none!important;padding-top:0!important}
+.untappd-btn{background:none!important;border:none!important;box-shadow:none!important;padding:0!important;color:var(--text-dim)!important;font-size:.6rem!important;letter-spacing:.16em;text-transform:uppercase;text-decoration:none;justify-content:flex-start!important;width:auto!important}
+.untappd-btn::after{content:' ↗'}
+.untappd-btn:hover{color:var(--gold-light)!important}
+.fav-btn{background:rgba(16,13,17,.88)!important;border:1px solid var(--border-light)!important}
+.shipping-btn,.ship-btn,.price-row-ship button{background:transparent!important;border-color:var(--border)!important;color:var(--text-dim)!important}
+
+/* mobil */
+.mobile-filter-btn{border-radius:999px!important;background:var(--gold)!important;color:#0a0806!important;font-weight:600;letter-spacing:.12em;text-transform:uppercase;font-size:.72rem}
+@media(max-width:720px){
+  .bm-eyebrow{font-size:.66rem;letter-spacing:.26em;margin-bottom:.3rem}
+  .bm-title{font-size:1.35rem;margin-bottom:.25rem}
+  .bm-title .bm-br{display:block}
+  .bm-sub{display:none}
+  .bm-fund{padding:1.1rem 1rem}.bm-fund-card{flex-direction:column;align-items:stretch;gap:.9rem}.bm-fund-photo{width:100%;height:150px}.bm-fund-cta{text-align:center}
+}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}

@@ -16,6 +16,7 @@
     <!-- Selvhostede fonts (ingen data til Google) -->
     <link rel="preload" href="/fonts/bebas-neue-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="/fonts/dm-sans-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/fonts/playfair-display-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
     <!-- PWA -->
     <link rel="manifest" href="/manifest.webmanifest">
     <meta name="theme-color" content="#0a0805">
@@ -1377,6 +1378,11 @@
         .card[data-na] { animation: none; }
         .fav-btn { backdrop-filter: none; -webkit-backdrop-filter: none; background: rgba(24,19,12,0.78); }
     </style>
+<script>
+/* Danske priser: 18 kr (hele tal), 10,95 kr (ellers), tusindtalsseparator: 1.350 kr */
+function fmtKr(v){var n=Number(v)||0;return Math.abs(n-Math.round(n))<0.005?Math.round(n).toLocaleString('da-DK'):n.toLocaleString('da-DK',{minimumFractionDigits:2,maximumFractionDigits:2});}
+</script>
+<link rel="stylesheet" href="/theme.css">
 </head>
 <body>
 <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><defs>
@@ -1899,7 +1905,7 @@
                 <div class="tt-row"><span class="tt-label">Fragtpris</span><span class="tt-value">${isFree ? '<span class="tt-free">GRATIS</span>' : '<strong>' + s.price + ' kr</strong>'}</span></div>
                 ${!isFree ? `<div class="tt-row"><span class="tt-label">Fri fragt over</span><span class="tt-value">${s.freeOver} kr</span></div>` : ''}
                 <div class="tt-divider"></div>
-                <div class="tt-row"><span class="tt-label">Total inkl. fragt</span><span class="tt-total">${total.toFixed(2)} kr</span></div>
+                <div class="tt-row"><span class="tt-label">Total inkl. fragt</span><span class="tt-total">${fmtKr(total)} kr</span></div>
                 <div class="tt-note">${s.note}</div>`;
     }
     function shippingBtnHTML(shopName, itemPrice) {
@@ -2174,15 +2180,15 @@
             <div class="price-row-main">
                 <div class="price-row-left">
                     <div class="price-row-prices">
-                        <span class="price-row-amount">${p.price.toFixed(2)} kr</span>
-                        ${p.old_price ? `<span class="price-row-old">${p.old_price.toFixed(2)} kr</span>` : ''}
+                        <span class="price-row-amount">${fmtKr(p.price)} kr</span>
+                        ${p.old_price ? `<span class="price-row-old">${fmtKr(p.old_price)} kr</span>` : ''}
                     </div>
                     ${p.old_price ? `<span class="price-row-save">${icon('tag')} Spar ${(p.old_price - p.price).toFixed(0)} kr</span>` : ''}
                     <div class="price-row-ship">${tot !== null ? `<span class="price-row-total">Inkl. fragt: ${tot.toFixed(0)} kr</span>` : ''}${shippingBtnHTML(p.shop_name, p.price)}</div>
                 </div>
                 <div class="price-row-actions">
                     ${p.url ? `<a class="price-row-link" href="${escapeHtml(p.url)}" target="_blank" rel="sponsored noopener"
-                        aria-label="Køb ${nameH} hos ${shopH} for ${p.price.toFixed(2)} kr"
+                        aria-label="Køb ${nameH} hos ${shopH} for ${fmtKr(p.price)} kr"
                         data-track="koeb_klik" data-name="${nameH}" data-shop="${shopH}" data-price="${p.price}" data-place="${best ? 'billigste' : 'anden_butik'}" data-rabat="${p.discount_pct || 0}">Køb →</a>` : ''}
                 </div>
             </div>
@@ -2327,8 +2333,8 @@
                     <div class="top-card-shop">${shopH}</div>
                     <div class="top-card-name">${nameH}</div>
                     <div class="top-card-prices">
-                        <span class="top-card-price">${(best.price||0).toFixed(2)} kr</span>
-                        ${best.old_price ? `<span class="top-card-old">${best.old_price.toFixed(2)} kr</span>` : ''}
+                        <span class="top-card-price">${fmtKr(best.price||0)} kr</span>
+                        ${best.old_price ? `<span class="top-card-old">${fmtKr(best.old_price)} kr</span>` : ''}
                     </div>
                 </div>
                 <div class="top-card-pct">−${deal.max_discount_pct}%</div>
@@ -2682,5 +2688,6 @@
 
     init();
 </script>
+<script src="/theme.js" defer></script>
 </body>
 </html>
