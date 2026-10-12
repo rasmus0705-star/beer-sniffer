@@ -1,0 +1,19 @@
+{
+  "name": "BeerSniffer – find de bedste øltilbud",
+  "short_name": "BeerSniffer",
+  "description": "Sammenlign priser på specialøl fra danske webshops. Opdateres dagligt.",
+  "lang": "da",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#0a0805",
+  "theme_color": "#0a0805",
+  "icons": [
+    { "src": "/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "/icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ],
+  "shortcuts": [
+    { "name": "Tilbud lige nu", "url": "/?filter=deals&sort=discount" }
+  ]
+}
