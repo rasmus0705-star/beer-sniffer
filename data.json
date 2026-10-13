@@ -1,8 +1,8 @@
 {
-  "updated_at": "2026-10-13T19:32:58.385047",
+  "updated_at": "2026-10-13T20:31:33.886051",
   "stats": {
-    "total": 3120,
-    "deals": 463,
+    "total": 3121,
+    "deals": 464,
     "shops": 12,
     "shop_names": [
       "A Good Case",
@@ -1500,8 +1500,8 @@
       "max_discount_pct": 0
     },
     {
-      "id": 20535,
-      "slug": "leo-beer-138",
+      "id": 20563,
+      "slug": "leo-beer-139",
       "description": "Leo Beer er en forfriskende lagerøl fra Thailand, kendt for sin bløde smag og let bitre afslutning. Brygget med malt, ris og humle, leverer den en afbalanceret og letdrikkelig profil, som gør den velegnet til både krydret mad og afslappede øjeblikke. Den gyldne farve og moderate alkoholprocent på 5 % gør den til en klassiker i både Thailand og blandt ølentusiaster verden over. Perfekt til grillmad, thaimad eller som en tropisk ledsager på varme dage. Hvis du er på jagt efter en velsmagende øl med international karakter og god balance, er Leo Beer et oplagt valg.",
       "name": "Leo Beer",
       "image": "https://www.vildmedvin.dk/img/1000/1000/resize/l/e/leo-beer-33-cl_large.jpg",
@@ -2181,32 +2181,6 @@
       "max_discount_pct": 0
     },
     {
-      "id": 12893,
-      "slug": "stadshaven-brouwerij-devils-fruit",
-      "description": "Devil's Fruit fra Stadshaven Brouwerij er af typen Frugtøl og er på 3,8% I glasset skinner denne Triple Fruitiness i en dyb rosa til rubinrød farve med et let, legende skum. Brygget i hjertet af Rotterdams havn, hvor der engang blev opbevaret tonsvis af frugt, er denne øl en hyldest til byens farverige historie. Den kombinerer saftig sødme fra kirsebær, frisk syre fra hindbær og dybe toner fra solbær i en harmonisk helhed, der er lige dele forlokkende og forfriskende. Smagen er en eksplosion af røde bær med intense aromaer af hindbærsyltetøj og et strejf af solbær.",
-      "name": "Devil’s Fruit 3,8% 33cl",
-      "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/devil-s-fruit-3-8-33cl.png?v=1772723132",
-      "type": "Frugtøl",
-      "abv": 3.8,
-      "volume_cl": 33.0,
-      "brewery": "Stadshaven Brouwerij",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Brygshoppen",
-          "price": 25.0,
-          "url": "https://brygshoppen.dk/products/devil-s-fruit-3-8-33cl",
-          "discount_pct": 16.7,
-          "old_price": 30.0
-        }
-      ],
-      "cheapest_price": 25.0,
-      "min_price": 25.0,
-      "shop": "Brygshoppen",
-      "discount_pct": 16.7,
-      "max_discount_pct": 16.7
-    },
-    {
       "id": 13008,
       "slug": "rodenbach-fruitage",
       "description": "Rodenbach Fruitage fra Brouwerij Rodenbach er af typen Fruit Beer og er på 3,4% Fruitage er en blanding af lagret og ung øl med 7% kirsebær, og den er lavet til at være let og frisk, ikke til at være en af de tunge sours. Smagen er sød og sur på samme tid med tydelig kirsebærfrugt, og med 3,4% kan den drikkes over en hel eftermiddag. Farven er rød, kroppen er let, og syren er blødere end i Classic og Grand Cru, fordi kirsebærene og den unge øl fylder mere i blandingen end det lagrede. Flasken er på 25cl.",
@@ -2725,6 +2699,32 @@
       "shop": "Brygshoppen",
       "discount_pct": 34.2,
       "max_discount_pct": 34.2
+    },
+    {
+      "id": 12893,
+      "slug": "stadshaven-brouwerij-devils-fruit",
+      "description": "Devil's Fruit fra Stadshaven Brouwerij er af typen Fruit Beer og er på 3,8% Stadshaven brygger i Rotterdams havn, og vores tidligere tekst fortæller, at der engang blev opbevaret tonsvis af frugt der. Untappd kalder den en forfriskende frugtøl med sød saftighed fra modne kirsebær, hindbær og solbær, og bitterheden er kun 5 IBU. Vores tidligere tekst nævner en dyb rosa til rubinrød farve, sødme fra kirsebær, syre fra hindbær og dybde fra solbær, og at øllen ender let og frisk. En smager på Untappd nøjes med at kalde sig djævlens frugt. Med 3,8% er den meget let at drikke. Øllen er på 33cl.",
+      "name": "Devil’s Fruit 3,8% 33cl",
+      "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/devil-s-fruit-3-8-33cl.png?v=1772723132",
+      "type": "Frugtøl",
+      "abv": 3.8,
+      "volume_cl": 33.0,
+      "brewery": "Stadshaven Brouwerij",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Brygshoppen",
+          "price": 25.0,
+          "url": "https://brygshoppen.dk/products/devil-s-fruit-3-8-33cl",
+          "discount_pct": 16.7,
+          "old_price": 30.0
+        }
+      ],
+      "cheapest_price": 25.0,
+      "min_price": 25.0,
+      "shop": "Brygshoppen",
+      "discount_pct": 16.7,
+      "max_discount_pct": 16.7
     },
     {
       "id": 15090,
@@ -5976,7 +5976,7 @@
     {
       "id": 12890,
       "slug": "stadshaven-brouwerij-octopus-kraken-blond",
-      "description": "Octopus Blond fra Stadshaven Brouwerij er af typen Belgisk Blond og er på 6% Denne rotterdamske blonde øl præsenterer sig med en indbydende gylden farve og et fint skum. Brygget af Stadshaven Brouwerij er dette en øl, der kombinerer klassisk belgisk brygtradition med moderne, friske smagsnoter. Aromaen er frugtig og livlig med toner af enebær, kiwibær og blodappelsin, der skaber en spændende og indbydende duft. Smagen er frisk og utrolig let at drikke med en behagelig balance mellem sødme og en let bitterhed.",
+      "description": "Octopus/Kraken Blond fra Stadshaven Brouwerij er af typen Blonde Ale og er på 6% Bryggeriet beder dig erobre blodappelsin og kiwibær i en frugtig blond øl, ifølge Untappd. Bitterheden er 12 IBU. Vores tidligere tekst nævner en gylden farve med fint skum, en frugtig og livlig duft med enebær, kiwibær og blodappelsin, en frisk smag med sødme og let bitterhed og en blød eftersmag med et strejf af enebær. En blond ale er en lys, rund øl, og her giver frugten og enebærret noget at tale om. De 6% giver en fin varme uden at tynge. Øllen er på 33cl.",
       "name": "Octopus/Kraken Blond 6% 33cl",
       "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/octopus-kraken-blond-6-33cl.png?v=1772724128",
       "type": "Blond",
@@ -6002,7 +6002,7 @@
     {
       "id": 12892,
       "slug": "stadshaven-brouwerij-piranha-tripel",
-      "description": "Piranha Tripel fra Stadshaven Brouwerij er af typen Tripel og er på 8% I glasset fremstår denne rotterdamske tripel i en smuk blondgylden farve, der lover en kompleks og spændende smagsoplevelse. Brygget med både mod og karakter af Stadshaven Brouwerij, er dette en øl der skiller sig ud fra mængden med sin unikke tilgang til den klassiske belgiske stil. Aromaen er frugtig og krydret med tydelige toner af mango, kumquat og koriander, der folder sig elegant ud.",
+      "description": "Piranha Tripel fra Stadshaven Brouwerij er af typen Belgian Tripel og er på 8% Bryggeriet beder dig smage kumquat og mango i en frisk, frugtig tripel med et strejf af chili, ifølge Untappd. Bitterheden er 20 IBU. Vores tidligere tekst nævner en blondgylden øl med mango, kumquat og koriander i duften, en start, der er sød og får en syrlig accent, og en pikant bid fra chili til sidst. Smagerne kalder den mild og blød med meget mango og lidt hede fra chilien til slut, og en finder, at frugten næsten bliver kemisk.",
       "name": "Piranha Tripel 8% 33cl",
       "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/piranha-tripel-8-33cl.png?v=1772723476",
       "type": "Tripel",
@@ -6015,32 +6015,6 @@
           "shop_name": "Brygshoppen",
           "price": 30.0,
           "url": "https://brygshoppen.dk/products/piranha-tripel-8-33cl",
-          "discount_pct": 0,
-          "old_price": null
-        }
-      ],
-      "cheapest_price": 30.0,
-      "min_price": 30.0,
-      "shop": "Brygshoppen",
-      "discount_pct": 0,
-      "max_discount_pct": 0
-    },
-    {
-      "id": 12894,
-      "slug": "stadshaven-brouwerij-limoncello-neipa",
-      "description": "Limoncello fra Stadshaven Brouwerij er af typen New England IPA og er på 5,8% I glasset møder du en troebel, gylden øl med et fint skum, der lover en saftig og aromatisk oplevelse. Denne sommerlige NEIPA kombinerer den cremede fylde og frugtighed fra en klassisk New England IPA med en forfriskende limoncello-twist. Det er en øl, der bringer det bedste fra to verdener sammen i en harmonisk helhed. Smagen er en eksplosion af citrus med tydelige noter af lime, citron og tropiske frugter, afrundet med et strejf af vanilje.",
-      "name": "Limoncello NEIPA 5,8% 33cl",
-      "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/limoncello-5-8-33cl.png?v=1772722330",
-      "type": "New England IPA",
-      "abv": 5.8,
-      "volume_cl": 33.0,
-      "brewery": "Stadshaven Brouwerij",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Brygshoppen",
-          "price": 30.0,
-          "url": "https://brygshoppen.dk/products/limoncello-5-8-33cl",
           "discount_pct": 0,
           "old_price": null
         }
@@ -6882,6 +6856,32 @@
       "shop": "Brygshoppen",
       "discount_pct": 9.1,
       "max_discount_pct": 9.1
+    },
+    {
+      "id": 12894,
+      "slug": "stadshaven-brouwerij-limoncello-neipa",
+      "description": "Limoncello NEIPA fra Stadshaven Brouwerij er af typen New England IPA og er på 5,8% Bryggeriet genbruger citronskaller fra limoncello-produktion og brygger med Lemon Spirit of The Hague, ifølge Untappd. Det er en New England IPA, altså en uklar og saftig IPA med frugt foran bitterheden, og Untappd viser kun 15 IBU. Vores tidligere tekst nævner en uklar, gylden øl med fint skum, smag af lime, citron og tropisk frugt med et strejf af vanilje, en blød tekstur og en mild bitterhed med en frisk eftersmag. De 5,8% gør den let at drikke på en sommerdag. Flasken er på 33cl.",
+      "name": "Limoncello NEIPA 5,8% 33cl",
+      "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/limoncello-5-8-33cl.png?v=1772722330",
+      "type": "New England IPA",
+      "abv": 5.8,
+      "volume_cl": 33.0,
+      "brewery": "Stadshaven Brouwerij",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Brygshoppen",
+          "price": 30.0,
+          "url": "https://brygshoppen.dk/products/limoncello-5-8-33cl",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 30.0,
+      "min_price": 30.0,
+      "shop": "Brygshoppen",
+      "discount_pct": 0,
+      "max_discount_pct": 0
     },
     {
       "id": 15159,
@@ -11269,32 +11269,6 @@
       "max_discount_pct": 0
     },
     {
-      "id": 12970,
-      "slug": "the-brew-society-martha-guilty-rouge",
-      "description": "Martha Guilty Rouge fra The Brew Society er af typen Frugtøl og er på 8% Denne forfriskende øl præsenterer sig med en eksplosion af kirsebær og aromaer af frisk marcipan, der skaber en indbydende og kompleks duft. Martha Guilty Rouge er en frugtøl, der kombinerer traditionel belgisk brygning med en moderne tilgang til frugtkarakter. Øllen har en indbydende farve med den karakteristiske frugtøl-elegance, der lover en charmerende og forfriskende smagsoplevelse. Smagsprofilen byder på et spil af søde og sure smage, der skaber en forfriskende og charmerende fornemmelse.",
-      "name": "Martha Guilty Rouge 8%",
-      "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/martha-guilty-rouge-8.png?v=1760359882",
-      "type": "Frugtøl",
-      "abv": 8.0,
-      "volume_cl": 33.0,
-      "brewery": "The Brew Society",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Brygshoppen",
-          "price": 35.0,
-          "url": "https://brygshoppen.dk/products/martha-guilty-rouge-8",
-          "discount_pct": 0,
-          "old_price": null
-        }
-      ],
-      "cheapest_price": 35.0,
-      "min_price": 35.0,
-      "shop": "Brygshoppen",
-      "discount_pct": 0,
-      "max_discount_pct": 0
-    },
-    {
       "id": 12987,
       "slug": "brasserie-de-labbaye-du-val-dieu-val-dieu-3",
       "description": "Val-Dieu Noël fra Brasserie de l'Abbaye du Val-Dieu er af typen Winter Ale og er på 7% Val-Dieu Noël hører til bryggeriets Hors-Série, og bryggeriet kalder farven mørk orange med varme reflekser. Bryggeriet beskriver en duft af ristet malt, karamel og krydderier og en smag af ristet malt, karamel og tørret frugt. Farven er 15 EBC og bitterheden kun 12 IBU, så øllen er blød og mere rav end brun. Den er brygget på bygmalt, humle, vand og gær i Aubel, hvor Val-Dieu-bryggeriet blev startet i 1997 i klosterets gamle gård.",
@@ -12557,32 +12531,6 @@
       "max_discount_pct": 0
     },
     {
-      "id": 20531,
-      "slug": "midtfyns-bryghus-session-neipa-ipa-12",
-      "description": null,
-      "name": "Session NEIPA - IPA",
-      "image": "https://humledrik.dk/cache/4/5/9/6/6/4/6/fit-370x370x75.webp",
-      "type": "New England IPA",
-      "abv": 4.5,
-      "volume_cl": 50.0,
-      "brewery": "Midtfyns Bryghus",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Humledrik",
-          "price": 35.0,
-          "url": "https://humledrik.dk/session-neipa-ipa",
-          "discount_pct": 0,
-          "old_price": null
-        }
-      ],
-      "cheapest_price": 35.0,
-      "min_price": 35.0,
-      "shop": "Humledrik",
-      "discount_pct": 0,
-      "max_discount_pct": 0
-    },
-    {
       "id": 13226,
       "slug": "bieres-de-chimay-chimay-cinq-cents-white-2",
       "description": "Chimay Cinq Cents (White) fra Bières de Chimay er af typen Belgian Tripel og er på 8% Chimay White blev første gang brygget i 1966. Den kom på flaske i 75cl i 1986 til 500-årsdagen for Fyrstendømmet Chimay, og derfor hedder den også Cinq Cents, som betyder 500. Farven er gylden med et tykt, hvidt skum, og øllen er let uklar. Duften er frugtig, blomstret og krydret med en svag røgnote og et strejf af vanilje. Smagen er rig frugt med blomster og krydderi, en blød krop og en moderat humlebitterhed. Afslutningen har appelsinskal og rødt æble. Servér den som aperitif eller til lette retter og fisk.",
@@ -12739,32 +12687,6 @@
       "max_discount_pct": 0
     },
     {
-      "id": 20518,
-      "slug": "ebeltoft-gaardbryggeri-imperial-stout-184",
-      "description": "Imperial Stout fra Ebeltoft Gårdbryggeri er af typen Imperial Stout og er på 9,3% Imperial Stout er bryggeriets kraftigste mørke øl, lavet til de kolde måneder. I glasset er den næsten sort, og skummet er tæt og brunligt. Den hører til de øl, man skal give tid, både i glasset og i kælderen. Smagen er fyldig og sødmefuld med mørk chokolade, ristet kaffe og karamel, og når øllen får lidt temperatur, dukker lakrids og brændt karamel op. Havremalten giver en cremet, blød tekstur.",
-      "name": "Imperial Stout 9,3% 33cl",
-      "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/imperial-stout-9-3-33cl_e5717b14-1296-4555-8e23-bc8da32992e9.png?v=1753446200",
-      "type": "Imperial Stout",
-      "abv": 9.3,
-      "volume_cl": 33.0,
-      "brewery": "Ebeltoft Gårdbryggeri",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Brygshoppen",
-          "price": 35.0,
-          "url": "https://brygshoppen.dk/products/imperial-stout-9-3-33cl",
-          "discount_pct": 0,
-          "old_price": null
-        }
-      ],
-      "cheapest_price": 35.0,
-      "min_price": 35.0,
-      "shop": "Brygshoppen",
-      "discount_pct": 0,
-      "max_discount_pct": 0
-    },
-    {
       "id": 13159,
       "slug": "dutch-bargain-zeeuws-blond",
       "description": "Zeeuws Blond fra Dutch Bargain er af typen Belgian Blonde Ale og er på 6,7% Bryggeriet siger, at Zeeuws Blond er mindet om en betagende sommer ved Zeelands kyst, med en romantisk summen og en bittersød afslutning, du altid vender tilbage til. Vores tidligere tekst beskriver en lys, gylden øl med fint hvidt skum, en bittersød smag med friske citrusnoter og blomster fra humlen og en medium-let krop med livlig kulsyre. Bitterheden er 36 IBU, og de 6,7% giver varme. Eftersmagen er ren, og den hører til dem, man bliver ved med at række ud efter. Dåsen er på 33cl.",
@@ -12869,8 +12791,60 @@
       "max_discount_pct": 0
     },
     {
-      "id": 20520,
-      "slug": "ebeltoft-gaardbryggeri-belgian-brown-171",
+      "id": 12970,
+      "slug": "the-brew-society-martha-guilty-rouge",
+      "description": "Martha Guilty Rouge fra The Brew Society er af typen Fruit Beer og er på 8% Untappd fører øllen som Martha Rouge og skriver, at den tidligere hed Martha Guilty Pleasure. Bitterheden er 10 IBU, så den er mild, og øllen er en frugtøl, altså en øl med frugt eller smag af frugt. Vores tidligere tekst nævner kirsebær og marcipan, en leg mellem sødt og surt og en medium krop med frugtig eftersmag. Smagere på Untappd skriver, at den har en kraftig kirsebærsmag og en sød duft, og at den er meget sød, men god. Med 8% er den stærkere end de fleste frugtøl, og varmen kommer frem bag sødmen.",
+      "name": "Martha Guilty Rouge 8%",
+      "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/martha-guilty-rouge-8.png?v=1760359882",
+      "type": "Frugtøl",
+      "abv": 8.0,
+      "volume_cl": 33.0,
+      "brewery": "The Brew Society",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Brygshoppen",
+          "price": 35.0,
+          "url": "https://brygshoppen.dk/products/martha-guilty-rouge-8",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 35.0,
+      "min_price": 35.0,
+      "shop": "Brygshoppen",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
+      "id": 20548,
+      "slug": "ebeltoft-gaardbryggeri-imperial-stout-185",
+      "description": "Imperial Stout fra Ebeltoft Gårdbryggeri er af typen Imperial Stout og er på 9,3% Imperial Stout er bryggeriets kraftigste mørke øl, lavet til de kolde måneder. I glasset er den næsten sort, og skummet er tæt og brunligt. Den hører til de øl, man skal give tid, både i glasset og i kælderen. Smagen er fyldig og sødmefuld med mørk chokolade, ristet kaffe og karamel, og når øllen får lidt temperatur, dukker lakrids og brændt karamel op. Havremalten giver en cremet, blød tekstur.",
+      "name": "Imperial Stout 9,3% 33cl",
+      "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/imperial-stout-9-3-33cl_e5717b14-1296-4555-8e23-bc8da32992e9.png?v=1753446200",
+      "type": "Imperial Stout",
+      "abv": 9.3,
+      "volume_cl": 33.0,
+      "brewery": "Ebeltoft Gårdbryggeri",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Brygshoppen",
+          "price": 35.0,
+          "url": "https://brygshoppen.dk/products/imperial-stout-9-3-33cl",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 35.0,
+      "min_price": 35.0,
+      "shop": "Brygshoppen",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
+      "id": 20550,
+      "slug": "ebeltoft-gaardbryggeri-belgian-brown-172",
       "description": "Belgian Brown fra Ebeltoft Gårdbryggeri er af typen Belgian Brown Ale og er på 6,8% Belgian Brown er Ebeltoft Gårdbryggeris bud på en belgisk brown ale, og Peder Zacho Hansen fra bryggeriet beskriver den selv som en let drikkelig øl med masser af smag og en let, frisk bitterhed. Ristet malt og hvedemalt giver en dyb brun farve med et rødligt skær og en fyldig smag, hvor mørk malt og karamel går hånd i hånd med et strejf af chokolade og kaffe. Bitterheden er frisk og holder sødmen i skak, og kroppen er rund og fyldig, så eftersmagen ender i mørk malt uden at blive tung ved 6,8%.",
       "name": "Belgian Brown 6,8% 33cl",
       "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/belgien-brown-33cl.png?v=1753443086",
@@ -12891,6 +12865,32 @@
       "cheapest_price": 35.0,
       "min_price": 35.0,
       "shop": "Brygshoppen",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
+      "id": 20558,
+      "slug": "midtfyns-bryghus-session-neipa-ipa-13",
+      "description": null,
+      "name": "Session NEIPA - IPA",
+      "image": "https://humledrik.dk/cache/4/5/9/6/6/4/6/fit-370x370x75.webp",
+      "type": "New England IPA",
+      "abv": 4.5,
+      "volume_cl": 50.0,
+      "brewery": "Midtfyns Bryghus",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Humledrik",
+          "price": 35.0,
+          "url": "https://humledrik.dk/session-neipa-ipa",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 35.0,
+      "min_price": 35.0,
+      "shop": "Humledrik",
       "discount_pct": 0,
       "max_discount_pct": 0
     },
@@ -13459,7 +13459,7 @@
     {
       "id": 12838,
       "slug": "mongozo-banana",
-      "description": "Mongozo Banana fra Mongozo er af typen Frugtøl og er på 3,6%. Mongozo Banana er en gylden øl med et cremet, let flygtigt skum og en duft, der straks minder om nybagt bananbrød. Det er en øl med en tydelig personlighed — frisk, frugtig og med en naturlig sødme, der aldrig føles kunstig. Smagen starter frisk og let syrlig med et hint af citronskal, inden bananens bløde sødme tager over og sætter sit præg. Balancen mellem frugtighed og en diskret syrlighed giver øllen en lethed, der gør den nem at drikke og svær at sætte fra sig.",
+      "description": "Mongozo Banana fra Mongozo er af typen Fruit Beer og er på 3,6% Mongozo beskriver Banana som frisk, sød og frugtig med en snert af øl i eftersmagen, ifølge Untappd. En smager kalder den sød, frugtig og lidt syrlig, og en anden skriver, at den er meget forfriskende. Det er en frugtøl, altså en øl med frugt eller smag af frugt, og med 3,6% er den let. Vores tidligere tekst nævner en gylden farve og en duft af nybagt bananbrød, og at bananens bløde sødme tager over efter en frisk og let syrlig start, så den kan drikkes som en kold forfriskning på en varm dag. Flasken er på 33cl.",
       "name": "Mongozo Banana 3,6% 33cl",
       "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/mongozo-mango-3-6-33cl_79d9c2eb-d759-48ec-b5a6-235adbbbf287.png?v=1777386794",
       "type": "Frugtøl",
@@ -13472,32 +13472,6 @@
           "shop_name": "Brygshoppen",
           "price": 36.0,
           "url": "https://brygshoppen.dk/products/mongozo-banana-3-6-33cl",
-          "discount_pct": 0,
-          "old_price": null
-        }
-      ],
-      "cheapest_price": 36.0,
-      "min_price": 36.0,
-      "shop": "Brygshoppen",
-      "discount_pct": 0,
-      "max_discount_pct": 0
-    },
-    {
-      "id": 12865,
-      "slug": "vandestreek-bier-grapefruit-non-alcoholic-ipa",
-      "description": "Grapefruit Non Alcoholic IPA fra vandeStreek bier er af typen IPA og er på 0,5% vandeStreek bier er hollænderne der har bevist, at alkoholfri øl sagtens kan smage af noget. I denne IPA forstærker de humlets naturlige frugtaromaer med ægte grapefrugt – og resultatet er en frisk, saftig og forfriskende øl der ikke går på kompromis med smagen. I glasset er den lys og gylden med et fint skum og en aroma der dufter af frisk grapefrugt og citrus. Smagen er frisk og let syrlig med en tydelig grapefrugttone der spiller perfekt op mod humlets bitterhed.",
-      "name": "Grapefruit Non Alcoholic IPA 0,5% 33cl",
-      "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/grapefruit-non-alcoholic-ipa-0-5-33cl.png?v=1774965317",
-      "type": "India Pale Ale (IPA)",
-      "abv": 0.5,
-      "volume_cl": 33.0,
-      "brewery": "vandeStreek bier",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Brygshoppen",
-          "price": 36.0,
-          "url": "https://brygshoppen.dk/products/playground-non-alcoholic-ipa-0-5-33cl",
           "discount_pct": 0,
           "old_price": null
         }
@@ -13535,32 +13509,6 @@
       "max_discount_pct": 0
     },
     {
-      "id": 12928,
-      "slug": "mongozo-coconut",
-      "description": "Mongozo Coconut fra Mongozo er af typen Frugtøl og er på 3,6% Denne eksotiske øl præsenterer sig med den forfriskende smag af kokosnød, der skaber en unik og tropisk smagsoplevelse. Mongozo Coconut er baseret på Mongozo Buckwheat White og kombinerer den lette hvede-base med naturlig kokosnødsmag. Øllen har en indbydende lys farve med den karakteristiske frugtøl-elegance, der lover en forfriskende og eksotisk oplevelse. Smagsprofilen byder på en harmonisk balance mellem den lette hvede-base og den forfriskende kokosnødsmag, der skaber en tropisk og tilgængelig smagsoplevelse.",
-      "name": "Mongozo Coconut 3,6% 33cl",
-      "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/mongozo-coconut-3-6-33cl.png?v=1760279059",
-      "type": "Frugtøl",
-      "abv": 3.6,
-      "volume_cl": 33.0,
-      "brewery": "Mongozo",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Brygshoppen",
-          "price": 36.0,
-          "url": "https://brygshoppen.dk/products/mongozo-coconut-3-6-33cl",
-          "discount_pct": 0,
-          "old_price": null
-        }
-      ],
-      "cheapest_price": 36.0,
-      "min_price": 36.0,
-      "shop": "Brygshoppen",
-      "discount_pct": 0,
-      "max_discount_pct": 0
-    },
-    {
       "id": 17414,
       "slug": "amager-bryghus-pink-farts-unicorns",
       "description": "Amager Bryghus’ Pink Farts & Unicorns er en dryhopped India Pale Lager. Øllen har en korngul farve, en sprød maltbund og friske citrusaromaer med en afdæmpet bitterhed. Denne Amager Bryghus, Pink Farts & Unicorns 44 cl. - Øl øl, er Konventionel dyrket, og har en alkoholprocent på 4,60. Øllen er en IPA fra Amager Bryghus",
@@ -13583,6 +13531,32 @@
       "cheapest_price": 36.0,
       "min_price": 36.0,
       "shop": "Vild med Vin",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
+      "id": 12928,
+      "slug": "mongozo-coconut",
+      "description": "Mongozo Coconut fra Mongozo er af typen Fruit Beer og er på 3,6% Mongozo kalder Coconut en eksotisk øl med frisk kokossmag, og Untappd viser kun 5 IBU. Smagere skriver, at det er frisk kokos, at den smager som kokosvand, at den er meget kokosagtig og at den minder mere om kokos end øl. Det er en frugtøl, altså en øl med frugt eller smag af frugt, og med 3,6% er den lys og let. Ingredienslisten har kokoskoncentrat, sukker, humle og gær, og vores tidligere tekst kalder den en tropisk øl for varme dage. Den er alkoholsvag, så den kan drikkes i længere tid uden at blive tung. Flasken er på 33cl.",
+      "name": "Mongozo Coconut 3,6% 33cl",
+      "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/mongozo-coconut-3-6-33cl.png?v=1760279059",
+      "type": "Frugtøl",
+      "abv": 3.6,
+      "volume_cl": 33.0,
+      "brewery": "Mongozo",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Brygshoppen",
+          "price": 36.0,
+          "url": "https://brygshoppen.dk/products/mongozo-coconut-3-6-33cl",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 36.0,
+      "min_price": 36.0,
+      "shop": "Brygshoppen",
       "discount_pct": 0,
       "max_discount_pct": 0
     },
@@ -13869,32 +13843,6 @@
       "cheapest_price": 36.0,
       "min_price": 36.0,
       "shop": "Vild med Vin",
-      "discount_pct": 0,
-      "max_discount_pct": 0
-    },
-    {
-      "id": 12927,
-      "slug": "mongozo-mango-3-6",
-      "description": "Mongozo Mango fra Mongozo er af typen Frugtøl og er på 3,6% Denne eksotiske øl præsenterer sig med en blond farve og et ret fyldigt og cremet hoved, der skaber en indbydende fremtoning. Mongozo Mango er en herlig håndværksøl med en smuk krop og en vidunderlig aroma, der er brygget med Fairtrade-certificerede mangoer. Øllen er både økologisk og fair trade certificeret og har en indbydende blond farve med den karakteristiske frugtøl-elegance, der lover en eksotisk og forfriskende oplevelse.",
-      "name": "Mongozo Mango 3,6 33cl",
-      "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/mongozo-mango-3-6-33cl.png?v=1760358451",
-      "type": "Frugtøl",
-      "abv": 3.6,
-      "volume_cl": 33.0,
-      "brewery": "Mongozo",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Brygshoppen",
-          "price": 36.0,
-          "url": "https://brygshoppen.dk/products/mongozo-mango-3-6-33cl",
-          "discount_pct": 0,
-          "old_price": null
-        }
-      ],
-      "cheapest_price": 36.0,
-      "min_price": 36.0,
-      "shop": "Brygshoppen",
       "discount_pct": 0,
       "max_discount_pct": 0
     },
@@ -14278,6 +14226,58 @@
           "shop_name": "Brygshoppen",
           "price": 36.0,
           "url": "https://brygshoppen.dk/products/floris-fraise-3-6-33cl",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 36.0,
+      "min_price": 36.0,
+      "shop": "Brygshoppen",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
+      "id": 12865,
+      "slug": "vandestreek-bier-grapefruit-non-alcoholic-ipa",
+      "description": "Playground Non Alcoholic IPA fra vandeStreek bier er af typen Non-Alcoholic IPA og er på 0,5% Untappd kalder Playground den første hollandske alkoholfri IPA og skriver, at du kan køre bil efter den. Bitterheden er 60 IBU. Vores tidligere tekst nævner, at øllen er brygget med fem amerikanske humlesorter, og at den er lys og gylden med et fint skum, en duft af citrus og tropisk frugt og en frisk smag med en behagelig humlebitterhed. En smager på Untappd synes, at den er ret frugtig og meget god til en alkoholfri, og en anden vender tilbage til den som en IPA, der aldrig skuffer.",
+      "name": "Grapefruit Non Alcoholic IPA 0,5% 33cl",
+      "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/grapefruit-non-alcoholic-ipa-0-5-33cl.png?v=1774965317",
+      "type": "India Pale Ale (IPA)",
+      "abv": 0.5,
+      "volume_cl": 33.0,
+      "brewery": "vandeStreek bier",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Brygshoppen",
+          "price": 36.0,
+          "url": "https://brygshoppen.dk/products/playground-non-alcoholic-ipa-0-5-33cl",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 36.0,
+      "min_price": 36.0,
+      "shop": "Brygshoppen",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
+      "id": 12927,
+      "slug": "mongozo-mango-3-6",
+      "description": "Mongozo Mango fra Mongozo er af typen Fruit Beer og er på 3,6% Mongozo kalder Mango for en let øl med sød og forfriskende smag af friske mangoer, ifølge Untappd. Flere smagere synes, at den smager mere som cider end som øl, en kalder den en god cider, og en synes, den lugter værre, end den smager. Det er en frugtøl, altså en øl med frugt eller smag af frugt, og med 3,6% er den let. Vores tidligere tekst nævner fairtrade-mangoer, økologi, en blond farve og et fyldigt, cremet skum, så den er lys i glasset og sød og frisk i smagen. Flasken er på 33cl.",
+      "name": "Mongozo Mango 3,6 33cl",
+      "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/mongozo-mango-3-6-33cl.png?v=1760358451",
+      "type": "Frugtøl",
+      "abv": 3.6,
+      "volume_cl": 33.0,
+      "brewery": "Mongozo",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Brygshoppen",
+          "price": 36.0,
+          "url": "https://brygshoppen.dk/products/mongozo-mango-3-6-33cl",
           "discount_pct": 0,
           "old_price": null
         }
@@ -17754,7 +17754,7 @@
     {
       "id": 12900,
       "slug": "tiny-hill-brewing-ganges",
-      "description": "Ganges fra Tiny Hill Brewing er af typen Hazy IPA og er på 6,5% Denne tågede IPA har en uklar, gylden farve med et flot skær. Ganges er dry-hopped med Azacca og Citra humle i både T90 og Spectrum form, hvilket giver en spændende kombination af dank og lette tropiske noter. Smagen byder på friske citrusagtige toner fra Citra-humlen, der mødes med mere jordnære, dank karaktertræk fra Azacca. De tropiske nuancer er subtile og lette, og øllen afsluttes med en behagelig bitterhed, der balancerer det hele perfekt.",
+      "description": "Ganges fra Tiny Hill Brewing er af typen New England IPA og er på 6,5% Ganges er tørhumlet med Azacca og Citra i både T90- og Spectrum-form, ifølge Untappd. Tørhumlet betyder, at humlen tilsættes efter gæringen for at give duft uden ekstra bitterhed, og T90 er almindelige humlepiller. Bryggeriet beskriver dank toner, lette tropiske noter og en fin bitterhed. En New England IPA er uklar og saftig, og en smager på Untappd finder tydelig Citra i den. En anden joker med, at den ikke er så klar som floden endnu. De 6,5% giver varme bag humlen. Øllen er på 44cl.",
       "name": "Ganges 6,5% 44cl",
       "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/ganges-6-5-44cl.png?v=1772204460",
       "type": "India Pale Ale (IPA)",
@@ -17858,7 +17858,7 @@
     {
       "id": 13017,
       "slug": "p-hjala-oo-cassis",
-      "description": "Öö Cassis fra Põhjala er af typen Imperial Stout og er på 10,5% En smagsgivende version af Öö porter med solbær. Aromaer af mørke malte, solbær og andre bær, lidt skumfiduser og en masse alkohol, især whisky. Smagen er ens, frugten balancerer næsten den mørkere malt. Den er mere syrlig i smagen med dybere brombærnoter. Den har også en ret blommekarakter, så den er sød overordnet med en bitter chokoladebitterhed i midten og til sidst. Den smager præcis, som du forestiller dig den, og det er godt.",
+      "description": "Öö Cassis fra Põhjala er af typen Imperial Baltic Porter og er på 10,5% Untappd skriver, at Öö Cassis er brygget med både solbær og solbærblade. Bitterheden er 34 IBU. Vores tidligere tekst nævner mørk malt, solbær og andre bær, en dybere brombærtone og en blommeagtig sødme med bitter chokolade i midten og til sidst. En smager på Untappd synes, at solbærrene trækker en tydeligere rosinsmag frem af den baltiske porter, og at 10,5% overraskende nok ikke føles tungt. En anden finder den kaffeagtig og ristet, lidt tynd, men rund i smagen. Det er en kraftig, mørk porter fra Østersøregionen.",
       "name": "Öö Cassis 10,5% 33cl",
       "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/cassis-10-5-33cl.png?v=1750597537",
       "type": "Imperial Stout",
@@ -19664,8 +19664,8 @@
       "max_discount_pct": 0
     },
     {
-      "id": 20523,
-      "slug": "midtfyns-bryghus-double-ipa-ipa-12",
+      "id": 20552,
+      "slug": "midtfyns-bryghus-double-ipa-ipa-13",
       "description": null,
       "name": "Double IPA - IPA",
       "image": "https://humledrik.dk/cache/4/6/0/8/6/2/1/fit-370x370x75.webp",
@@ -25297,84 +25297,6 @@
       "max_discount_pct": 0
     },
     {
-      "id": 20506,
-      "slug": "dry-and-bitter-brewing-company-brown-owl-12",
-      "description": "Brown Owl er et bevis på, at Dry & Bitter mestrer de klassiske stilarter ligeså godt som deres IPA’er. Her er der skruet ned for humleintensiteten til fordel for en rolig kompleksitet fra malten. Den nøddeagtige karakter og de lette chokoladenoter gør den utrolig nem at drikke. Et solidt valg til dem, der vil have en ukompliceret kvalitetsøl med dybde.",
-      "name": "Brown Owl",
-      "image": "https://mlnyqjrpbd75.i.optimole.com/cb:xzKT.fcd/w:auto/h:auto/q:mauto/f:best/https://www.beerbarrel.dk/wp-content/uploads/2026/03/19.png",
-      "type": null,
-      "abv": 5.2,
-      "volume_cl": 44.0,
-      "brewery": "Dry and Bitter Brewing Company",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "BeerBarrel",
-          "price": 45.0,
-          "url": "https://www.beerbarrel.dk/vare/brown-owl/",
-          "discount_pct": 0,
-          "old_price": null
-        }
-      ],
-      "cheapest_price": 45.0,
-      "min_price": 45.0,
-      "shop": "BeerBarrel",
-      "discount_pct": 0,
-      "max_discount_pct": 0
-    },
-    {
-      "id": 20507,
-      "slug": "p-hjala-oo-193",
-      "description": "Dette er definitionen på en moderne Baltisk Porter. Põhjala formår at gøre øllen ekstremt mørk og kraftfuld, men med den renhed i udtrykket, som lagergæringen ved lave temperaturer giver. Det er ikke bare en tung øl; den har en elegance og en bær-agtig syre, der løfter den over de fleste standardstouts. Öö er en uomgængelig klassiker for enhver, der elsker komplekse mørke øl.",
-      "name": "Öö",
-      "image": "https://mlnyqjrpbd75.i.optimole.com/cb:xzKT.fcd/w:auto/h:auto/q:mauto/f:best/https://www.beerbarrel.dk/wp-content/uploads/2026/03/81.png",
-      "type": "Porter",
-      "abv": 10.5,
-      "volume_cl": 33.0,
-      "brewery": "Põhjala",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "BeerBarrel",
-          "price": 45.0,
-          "url": "https://www.beerbarrel.dk/vare/oo/",
-          "discount_pct": 0,
-          "old_price": null
-        }
-      ],
-      "cheapest_price": 45.0,
-      "min_price": 45.0,
-      "shop": "BeerBarrel",
-      "discount_pct": 0,
-      "max_discount_pct": 0
-    },
-    {
-      "id": 20515,
-      "slug": "rybryg-ry-classic-39",
-      "description": "Ry Classic fra Rybryg er af typen Vienna Lager og er på 5,6% Ry Classic har fået ekstra lang lagringstid på tank, ifølge Untappd. En Vienna Lager er en rav til kobberfarvet lager med blød, ristet maltkarakter, og Untappd viser 25 IBU. Smagere nævner en klar, gylden farve, en let karamelduft, en let krop, karamelmalt og en svag blomsterhumle, og en enkelt smager finder en lidt ru rugkant i bunden. Vores tidligere tekst kalder farven varmt rav under hvidt skum, med noter af karamel og brød og en diskret bitterhed. De 5,6% gør den til en solid lager, der alligevel er nem at drikke.",
-      "name": "Ry Classic 5,6% 50cl",
-      "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/ry-classic-5-6-50cl.png?v=1764503652",
-      "type": "Lager",
-      "abv": 5.6,
-      "volume_cl": 50.0,
-      "brewery": "Rybryg",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Brygshoppen",
-          "price": 45.0,
-          "url": "https://brygshoppen.dk/products/ry-classic-5-6-50cl",
-          "discount_pct": 0,
-          "old_price": null
-        }
-      ],
-      "cheapest_price": 45.0,
-      "min_price": 45.0,
-      "shop": "Brygshoppen",
-      "discount_pct": 0,
-      "max_discount_pct": 0
-    },
-    {
       "id": 12937,
       "slug": "rybryg-gl-turisten-skibsoel",
       "description": "Gl. Turisten Skibsøl fra Rybryg er af typen Porter og er på 6% Gl. Turisten Skibsøl er Rybrygs hyldest til skibet Gl. Turisten, ifølge vores tidligere tekst. Untappd kalder den en klassisk mørk skibsøl med kaffe, mørk chokolade og lakrids fra ristede og røgede malte. En porter er en mørk ale med ristet maltkarakter, og her beskriver vores tidligere tekst også en fyldig krop med en let sødme, der holder bitterheden i skak, og en lang, varmende eftersmag. Farven er næsten sort under et cremet, beige skum, og de 6% gør den til en porter, man kan tage et par glas af. Øllen er på 50cl.",
@@ -25505,32 +25427,6 @@
       "max_discount_pct": 0
     },
     {
-      "id": 20519,
-      "slug": "rybryg-ry-pilsner-179",
-      "description": "Ry Pilsner fra Rybryg er af typen German Pilsner og er på 5,6% Rybryg brygger en tysk inspireret pilsner med fire typer moderne amerikansk humle, ifølge Untappd. Untappd beskriver en strågul øl med hvidt skum, der er forfriskende, men med mere krop end de fleste pilsnere, og bitterheden er 21 IBU. Smagere nævner, at den er mild, at den har mere smag end forventet, og at der er et strejf af frugt. En pilsner er en lys, bundgæret øl med tydelig humlebitterhed, og her giver den amerikanske humle en friskere duft end i en traditionel tysk udgave.",
-      "name": "Ry Pilsner 5,6% 50cl",
-      "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/ry-pilsner.png?v=1747399627",
-      "type": "Pilsner",
-      "abv": 5.6,
-      "volume_cl": 50.0,
-      "brewery": "Rybryg",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Brygshoppen",
-          "price": 45.0,
-          "url": "https://brygshoppen.dk/products/ry-pilsner",
-          "discount_pct": 0,
-          "old_price": null
-        }
-      ],
-      "cheapest_price": 45.0,
-      "min_price": 45.0,
-      "shop": "Brygshoppen",
-      "discount_pct": 0,
-      "max_discount_pct": 0
-    },
-    {
       "id": 13281,
       "slug": "trappistenbrouwerij-de-kievit-b-v-zundert-8",
       "description": "Zundert 8 fra Trappistenbrouwerij de Kievit B. V. er af typen Belgian Tripel og er på 8% Bryggeriet kalder selv Zundert 8 lidt genstridig og siger, at den kræver tid at lære at sætte pris på, ifølge Untappd. Øllen er kastanjefarvet, topgæret og flaskegæret, og duften har urter og krydderier. Smagen starter blomsteragtig og let sød, bevæger sig mod let karamel og slutter med tør humlebitterhed og mild krydrethed. Bitterheden er 34 IBU. En tripel er en gylden belgisk ale, stærk og tør, og Zundert 8 er brygget i trappistbryggeriet De Kievit i Zundert i Holland.",
@@ -25546,6 +25442,110 @@
           "shop_name": "Brygshoppen",
           "price": 45.0,
           "url": "https://brygshoppen.dk/products/zundert-8-33cl",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 45.0,
+      "min_price": 45.0,
+      "shop": "Brygshoppen",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
+      "id": 20538,
+      "slug": "dry-and-bitter-brewing-company-brown-owl-13",
+      "description": "Brown Owl er et bevis på, at Dry & Bitter mestrer de klassiske stilarter ligeså godt som deres IPA’er. Her er der skruet ned for humleintensiteten til fordel for en rolig kompleksitet fra malten. Den nøddeagtige karakter og de lette chokoladenoter gør den utrolig nem at drikke. Et solidt valg til dem, der vil have en ukompliceret kvalitetsøl med dybde.",
+      "name": "Brown Owl",
+      "image": "https://mlnyqjrpbd75.i.optimole.com/cb:xzKT.fcd/w:auto/h:auto/q:mauto/f:best/https://www.beerbarrel.dk/wp-content/uploads/2026/03/19.png",
+      "type": null,
+      "abv": 5.2,
+      "volume_cl": 44.0,
+      "brewery": "Dry and Bitter Brewing Company",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "BeerBarrel",
+          "price": 45.0,
+          "url": "https://www.beerbarrel.dk/vare/brown-owl/",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 45.0,
+      "min_price": 45.0,
+      "shop": "BeerBarrel",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
+      "id": 20539,
+      "slug": "p-hjala-oo-195",
+      "description": "Dette er definitionen på en moderne Baltisk Porter. Põhjala formår at gøre øllen ekstremt mørk og kraftfuld, men med den renhed i udtrykket, som lagergæringen ved lave temperaturer giver. Det er ikke bare en tung øl; den har en elegance og en bær-agtig syre, der løfter den over de fleste standardstouts. Öö er en uomgængelig klassiker for enhver, der elsker komplekse mørke øl.",
+      "name": "Öö",
+      "image": "https://mlnyqjrpbd75.i.optimole.com/cb:xzKT.fcd/w:auto/h:auto/q:mauto/f:best/https://www.beerbarrel.dk/wp-content/uploads/2026/03/81.png",
+      "type": "Porter",
+      "abv": 10.5,
+      "volume_cl": 33.0,
+      "brewery": "Põhjala",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "BeerBarrel",
+          "price": 45.0,
+          "url": "https://www.beerbarrel.dk/vare/oo/",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 45.0,
+      "min_price": 45.0,
+      "shop": "BeerBarrel",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
+      "id": 20545,
+      "slug": "rybryg-ry-classic-40",
+      "description": "Ry Classic fra Rybryg er af typen Vienna Lager og er på 5,6% Ry Classic har fået ekstra lang lagringstid på tank, ifølge Untappd. En Vienna Lager er en rav til kobberfarvet lager med blød, ristet maltkarakter, og Untappd viser 25 IBU. Smagere nævner en klar, gylden farve, en let karamelduft, en let krop, karamelmalt og en svag blomsterhumle, og en enkelt smager finder en lidt ru rugkant i bunden. Vores tidligere tekst kalder farven varmt rav under hvidt skum, med noter af karamel og brød og en diskret bitterhed. De 5,6% gør den til en solid lager, der alligevel er nem at drikke.",
+      "name": "Ry Classic 5,6% 50cl",
+      "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/ry-classic-5-6-50cl.png?v=1764503652",
+      "type": "Lager",
+      "abv": 5.6,
+      "volume_cl": 50.0,
+      "brewery": "Rybryg",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Brygshoppen",
+          "price": 45.0,
+          "url": "https://brygshoppen.dk/products/ry-classic-5-6-50cl",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 45.0,
+      "min_price": 45.0,
+      "shop": "Brygshoppen",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
+      "id": 20549,
+      "slug": "rybryg-ry-pilsner-180",
+      "description": "Ry Pilsner fra Rybryg er af typen German Pilsner og er på 5,6% Rybryg brygger en tysk inspireret pilsner med fire typer moderne amerikansk humle, ifølge Untappd. Untappd beskriver en strågul øl med hvidt skum, der er forfriskende, men med mere krop end de fleste pilsnere, og bitterheden er 21 IBU. Smagere nævner, at den er mild, at den har mere smag end forventet, og at der er et strejf af frugt. En pilsner er en lys, bundgæret øl med tydelig humlebitterhed, og her giver den amerikanske humle en friskere duft end i en traditionel tysk udgave.",
+      "name": "Ry Pilsner 5,6% 50cl",
+      "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/ry-pilsner.png?v=1747399627",
+      "type": "Pilsner",
+      "abv": 5.6,
+      "volume_cl": 50.0,
+      "brewery": "Rybryg",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Brygshoppen",
+          "price": 45.0,
+          "url": "https://brygshoppen.dk/products/ry-pilsner",
           "discount_pct": 0,
           "old_price": null
         }
@@ -27082,8 +27082,8 @@
       "max_discount_pct": 0
     },
     {
-      "id": 20534,
-      "slug": "to-oel-dipa-174",
+      "id": 20562,
+      "slug": "to-oel-dipa-175",
       "description": "To Øl #DIPA er en imponerende Double IPA fra det danske bryggeri To Øl. Med en alkoholprocent på 8,7% leverer denne øl en intens smagsoplevelse, hvor frugtige noter af citrus og tropiske frugter møder en behagelig bitterhed. Øllen er medium bitter og kommer i en 440 ml dåse, hvilket gør den ideel til at dele med venner eller nyde alene ved særlige lejligheder. Den er perfekt til humleelskere og dem, der sætter pris på en kompleks og fyldig øl. To Øl #DIPA er en kraftig og velsmagende Double IPA med en alkoholprocent på 8,7%.",
       "name": "To Øl, #DIPA",
       "image": "https://www.vildmedvin.dk/img/1000/1000/resize/7/7/7777_1..jpg",
@@ -28109,7 +28109,7 @@
     {
       "id": 18757,
       "slug": "pohjala-oo-raspberry",
-      "description": "Öö Raspberry fra Põhjala er af typen Imperial Baltic Porter og er på 10,5% Öö er Põhjalas flagskib og en af de mest respekterede baltiske portere i Nordeuropa, og her er den brygget med et bjerg af hindbær. Farven er dyb chokoladebrun med tydelige rødlige toner, når lyset rammer glasset, og skummet er solidt og lysebrunt med en let rosa anstrøg, et umiddelbart varsel om, hvor meget frugt der er i spil. Duften er levende og næsten nostalgisk: hindbær som hjemmelavet syltetøj, med chokoladekage og en mørk maltsødme bagved.",
+      "description": "Öö Raspberry fra Põhjala er af typen Imperial Baltic Porter og er på 10,5% Untappd beskriver en saftig, syltetøjsagtig baltisk porter brygget med en stor mængde hindbær. Bitterheden er 27 IBU. Vores tidligere tekst nævner en chokoladebrun farve med rødlige toner, en duft af hindbærsyltetøj og chokoladekage og en let syrlighed fra bærrene. Smagerne på Untappd er delte: en synes, at hindbærret er meget naturligt til at begynde med, men at en skarp syre derefter overvælder alt andet, mens en anden finder en blød øl med tydeligt hindbær.",
       "name": "Pohjala, Öö Raspberry",
       "image": "https://www.vildmedvin.dk/img/1000/1000/resize/p/o/pohjala_raspberry.jpg",
       "type": "Porter",
@@ -28267,7 +28267,7 @@
     {
       "id": 16691,
       "slug": "menno-olivier-brewing-crema-catalana",
-      "description": "Crema Catalana fra Menno Olivier Brewing i samarbejde med Wicked Barrel er af typen Barleywine og er på 10,37% Øllen har en mørk og rig farve, der afspejler den dessert, den er inspireret af. Det er en kærlig hyldest til den klassiske catalanske dessert crema catalana, og det mærker man tydeligt fra første smag. Smagsprofilen er blid og sødlig med tydelige noter af karamelliseret sukker, der giver en varm og indbydende karakter. Det er en Barleywine, der ikke går på kompromis med fylde og dybde, men som alligevel føles tilgængelig og behagelig at drikke.",
+      "description": "Crema Catalana fra Menno Olivier Brewing i samarbejde med Wicked Barrel er af typen Barleywine og er på 10,37% Bryggeriet kalder øllen en hjertelig hyldest til den berømte catalanske dessert crema catalana, og den er brygget med karamelliseret sukker, ifølge Untappd. En barleywine er en meget kraftig øl, brygget med så meget malt, at den bliver sød og fyldig som en vin. Bitterheden er 18 IBU. Smagere på Untappd beskriver en boozy og sød øl med varme og brændt malt, og en kalder den rosinsød. En ventede en mælkeagtig, cremet øl, men fandt en anden, usædvanlig øl, der er værd at prøve.",
       "name": "Crema Catalana 10,37% 33cl",
       "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/crema-catalana-10-37-33cl.png?v=1782647830",
       "type": "Barley Wine",
@@ -29695,32 +29695,6 @@
       "max_discount_pct": 0
     },
     {
-      "id": 20530,
-      "slug": "bad-seed-brewing-neu-pilsner-12",
-      "description": null,
-      "name": "Neu - Pilsner",
-      "image": "https://humledrik.dk/cache/4/4/7/4/0/8/8/fit-370x370x75.webp",
-      "type": "Pilsner",
-      "abv": 5.0,
-      "volume_cl": 44.0,
-      "brewery": "Bad Seed Brewing",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Humledrik",
-          "price": 49.0,
-          "url": "https://humledrik.dk/neu-pilsner",
-          "discount_pct": 0,
-          "old_price": null
-        }
-      ],
-      "cheapest_price": 49.0,
-      "min_price": 49.0,
-      "shop": "Humledrik",
-      "discount_pct": 0,
-      "max_discount_pct": 0
-    },
-    {
       "id": 13139,
       "slug": "brasserie-caulier-paix-dieu",
       "description": "Paix Dieu fra Brasserie Caulier er af typen Belgian Tripel og er på 10% Paix Dieu blev oprindeligt brygget ved fuldmåne efter en skik fra cistercienserinderne på Paix Dieu-klosteret. Untappd kalder den en cremet tripel og skriver, at bryggeriet vil bevare opskriftens oprindelige kvalitet fra råvarer til aftapning. Bitterheden er 24 IBU, og de 10% giver kraftig varme. Vores tidligere tekst beskriver en uklar gyldengul øl med fast, cremet skum og en duft af frugt og krydderier, og en lang, fyldig smag, hvor frugtsødmen holdes i skak af humlen.",
@@ -29743,6 +29717,32 @@
       "cheapest_price": 49.0,
       "min_price": 49.0,
       "shop": "Brygshoppen",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
+      "id": 20557,
+      "slug": "bad-seed-brewing-neu-pilsner-13",
+      "description": null,
+      "name": "Neu - Pilsner",
+      "image": "https://humledrik.dk/cache/4/4/7/4/0/8/8/fit-370x370x75.webp",
+      "type": "Pilsner",
+      "abv": 5.0,
+      "volume_cl": 44.0,
+      "brewery": "Bad Seed Brewing",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Humledrik",
+          "price": 49.0,
+          "url": "https://humledrik.dk/neu-pilsner",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 49.0,
+      "min_price": 49.0,
+      "shop": "Humledrik",
       "discount_pct": 0,
       "max_discount_pct": 0
     },
@@ -30667,39 +30667,6 @@
       "max_discount_pct": 0
     },
     {
-      "id": 12901,
-      "slug": "tiny-hill-brewing-the-hammer",
-      "description": "The Hammer fra Tiny Hill Brewing er af typen Porter og er på 7% Denne mørke porter har en dyb, næsten sort farve med et tæt, cremet skum. The Hammer byder på en kraftfuld krop med en dejlig maltsødme, der danner fundamentet for hele oplevelsen. Smagen er præget af lette røgtoner, der blander sig elegant med nuancer af lakrids. Maltsødheden giver en blød, rund mundfølelse, mens de diskrete røgnoter tilføjer dybde og kompleksitet. Lakridsen kommer subtilt frem i eftersmagen og skaber en behagelig balance.",
-      "name": "The Hammer 7% 44cl",
-      "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/the-hammer-7-44cl.png?v=1772204551",
-      "type": "Porter - Stout",
-      "abv": 7.0,
-      "volume_cl": 44.0,
-      "brewery": "Tiny Hill Brewing",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Brygshoppen",
-          "price": 50.0,
-          "url": "https://brygshoppen.dk/products/the-hammer-7-44cl",
-          "discount_pct": 0,
-          "old_price": null
-        },
-        {
-          "shop_name": "Beershoppen",
-          "price": 55.0,
-          "url": "https://beershoppen.dk/products/the-hammer-tiny-hill-44-cl-7-0",
-          "discount_pct": 0,
-          "old_price": null
-        }
-      ],
-      "cheapest_price": 50.0,
-      "min_price": 50.0,
-      "shop": "Brygshoppen",
-      "discount_pct": 0,
-      "max_discount_pct": 0
-    },
-    {
       "id": 12903,
       "slug": "amundsen-brewery-dessert-in-a-can-passionfruit-creamsicle",
       "description": "Dessert In A Can - Neapolitan Ice Cream fra Amundsen Brewery er af typen Pastry Stout og er på 10,5% Neapolitansk is i dåseform – det er præcis, hvad Amundsen har formlet her. Duften er frisk og indbydende med tydelige toner af jordbær og vanilje, der tilsammen minder om en kugle is på en varm sommerdag. En overraskende let og frugtig næse til en stout på 10,5%. Smagen starter blødt med mælkechokolade og cremet is, der gradvist giver plads til en sød vaniljekerne og til sidst en frisk, let bæragtig finish. Lagene skifter naturligt og elegant – ligesom de tre farver i en neapolitansk is.",
@@ -30788,6 +30755,39 @@
           "shop_name": "BeerBarrel",
           "price": 50.0,
           "url": "https://www.beerbarrel.dk/vare/dic-triple-berry-pavlova/",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 50.0,
+      "min_price": 50.0,
+      "shop": "Brygshoppen",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
+      "id": 12901,
+      "slug": "tiny-hill-brewing-the-hammer",
+      "description": "The Hammer fra Tiny Hill Brewing er af typen Smoked Porter og er på 7% Bryggeriet kalder The Hammer en porter med let røg og lakridssmag, god krop og maltsødme, ifølge Untappd. En porter er en mørk øl med ristet malt, og her giver røgen en tør skygge under sødmen. Vores tidligere tekst nævner en næsten sort farve med tæt, cremet skum, en kraftig krop og lakrids, der kommer frem i eftersmagen. Smagerne er ikke enige: en synes, at den er tynd og smager af mørkristet træ, og at den ikke er helt hans øl, så den passer bedst til dig, der kan lide røg. De 7% giver varme uden at tage over.",
+      "name": "The Hammer 7% 44cl",
+      "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/the-hammer-7-44cl.png?v=1772204551",
+      "type": "Porter - Stout",
+      "abv": 7.0,
+      "volume_cl": 44.0,
+      "brewery": "Tiny Hill Brewing",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Brygshoppen",
+          "price": 50.0,
+          "url": "https://brygshoppen.dk/products/the-hammer-7-44cl",
+          "discount_pct": 0,
+          "old_price": null
+        },
+        {
+          "shop_name": "Beershoppen",
+          "price": 55.0,
+          "url": "https://beershoppen.dk/products/the-hammer-tiny-hill-44-cl-7-0",
           "discount_pct": 0,
           "old_price": null
         }
@@ -30987,7 +30987,7 @@
     {
       "id": 19374,
       "slug": "p-hjala-pime-oo",
-      "description": "Pime Öö fra Põhjala er af typen Imperial Stout og er på 13,6% Navnet betyder \"mørk nat\" på estisk, og øllet er brygget til årets længste nat. Det er den store, kompromisløse storebror til Põhjalas Öö, og den ser præcis sådan ud i glasset: dybeste sort, fuldstændig lystæt, med et lysebrunt og olieagtigt skum, der lægger sig lavt og trækker sig hurtigt tilbage. Duften er rig og tæt med chokoladekage, sød lakrids, kenyansk kaffe og en klæbrig marmeladetone, der antyder, hvor meget koncentreret sødme der ligger i øllet.",
+      "description": "Pime Öö fra Põhjala er af typen Imperial Stout og er på 13,6% Untappd skriver, at Pime Öö er brygget til årets længste nat, og vores tidligere tekst oversætter navnet til mørk nat på estisk. Bitterheden er 60 IBU. Vores tidligere tekst kalder den den store storebror til Öö og nævner chokoladekage, sød lakrids, kenyansk kaffe, solbær og modne blommer i duft og smag og en krop, der er tung og sirupsagtig. En smager på Untappd skriver om kaffe, karamel, æblesirup og chokolade, kalder den blød, sød og olieagtig med en behagelig bitter afslutning og synes, at den kunne være fadlagret.",
       "name": "Pime Öö 13,6% 33cl",
       "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/pime-oo-13-6-33cl.png?v=1789063036",
       "type": "Imperial Stout",
@@ -31105,7 +31105,7 @@
     {
       "id": 12932,
       "slug": "p-hjala-tiramisu-banger",
-      "description": "Tiramisu Banger fra Põhjala er af typen Coffee Imperial Stout og er på 12,5% Denne kraftfulde imperial stout er inspireret af den klassiske italienske dessert tiramisu og har en dyb, sort farve med et tæt, brunligt skum. Øllen byder på en rig og kompleks karakter, der virkelig minder om desserten. Smagen er som at tage en bid af tiramisu - første tår er sød og dessertlignende med tydelige noter af kaffe, vanilje og kakao. Midt på tungen kommer en behagelig ristet bitterhed fra den mørke malt, der balancerer sødmen perfekt.",
+      "description": "Tiramisu Banger fra Põhjala er af typen Imperial Coffee Stout og er på 12,5% Untappd beskriver en imperial stout brygget med kaffe, kakao og vanilje. Bitterheden er 36 IBU. Vores tidligere tekst fortæller, at øllen er inspireret af tiramisu, og nævner en sød, dessertagtig åbning med kaffe, vanilje og kakao, en ristet bitterhed fra den mørke malt i midten og en lang eftersmag med chokolade og en let kaffebitterhed. Smagere på Untappd skriver, at den er meget sød og blød med tydelig kaffe, at den smager af kaffe med mælk, og at den er rigtig god til en øl uden fadlagring. De 12,5% giver varme.",
       "name": "Tiramisu Banger 12,5% 33cl",
       "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/tiramisu-banger-12-5-33cl.png?v=1764521652",
       "type": "Imperial Stout",
@@ -31170,32 +31170,6 @@
           "shop_name": "Brygshoppen",
           "price": 50.0,
           "url": "https://brygshoppen.dk/products/if-she-goes-banananana-10-33cl",
-          "discount_pct": 0,
-          "old_price": null
-        }
-      ],
-      "cheapest_price": 50.0,
-      "min_price": 50.0,
-      "shop": "Brygshoppen",
-      "discount_pct": 0,
-      "max_discount_pct": 0
-    },
-    {
-      "id": 13131,
-      "slug": "stift-engelszell-gregorius",
-      "description": "Gregorius fra Stift Engelszell er af typen Quadrupel og er på 10,5% Stift Engelszell Gregorius Trappistøl er en kompleks overgæret brunøl med 10,5 % alkohol. Det er en rigt duftende øl, sød på den ene side, men samtidig et stort bid og en dejlig bitterhed. Ved at bruge honning fra klosterets egen have får denne øl en særlig smag",
-      "name": "Stift Engelszell Gregorius 10,5 %",
-      "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/stift-engelszell-gregorius-10-5_9e52114a-0794-4a86-8031-816b43a14d99.png?v=1773484809",
-      "type": "Quadrupel",
-      "abv": 10.5,
-      "volume_cl": 33.0,
-      "brewery": "Stift Engelszell",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Brygshoppen",
-          "price": 50.0,
-          "url": "https://brygshoppen.dk/products/stift-engelszell-gregorius-10-5",
           "discount_pct": 0,
           "old_price": null
         }
@@ -33082,6 +33056,32 @@
           "shop_name": "Brygshoppen",
           "price": 50.0,
           "url": "https://brygshoppen.dk/products/lensemble-13-33cl",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 50.0,
+      "min_price": 50.0,
+      "shop": "Brygshoppen",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
+      "id": 13131,
+      "slug": "stift-engelszell-gregorius",
+      "description": "Gregorius fra Stift Engelszell er af typen Belgian Quadrupel og er på 10,5% Gregorius bruger honning fra klosterets region og en alsacisk vingær, ifølge bryggeriet på Untappd. Øllen er meget mørk kastanjebrun med duft af urter, lakrids og moden frugt, og malten giver kaffe og ristede noter. Honning og vingær lægger sød og syrlig kontrast, og bitterheden er 30 IBU med en let bitter chokoladetone og varm afslutning. Smagere nævner honning, karamel og tørret frugt, en finder bitterheden lidt uens og skummet hurtigt forsvindende, og en anden kalder den vellavet og let at drikke.",
+      "name": "Stift Engelszell Gregorius 10,5 %",
+      "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/stift-engelszell-gregorius-10-5_9e52114a-0794-4a86-8031-816b43a14d99.png?v=1773484809",
+      "type": "Quadrupel",
+      "abv": 10.5,
+      "volume_cl": 33.0,
+      "brewery": "Stift Engelszell",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Brygshoppen",
+          "price": 50.0,
+          "url": "https://brygshoppen.dk/products/stift-engelszell-gregorius-10-5",
           "discount_pct": 0,
           "old_price": null
         }
@@ -35913,7 +35913,7 @@
     {
       "id": 13016,
       "slug": "p-hjala-cocobanger",
-      "description": "Cocobänger fra Põhjala er af typen Imperial Stout og er på 12,5% Denne estiske imperial stout er brygget med kokosflager og costaricansk kaffe, og det kan mærkes fra første slurk. Farven er dyb og næsten uigennemsigtig sort med en cremet, brun skum, der lover noget særligt. Smagen er rig og rund — kokos og mørk chokolade mødes med en tydelig kaffebitterhed, der minder om friskbrygget espresso. Blommer og brombær sniger sig ind i baggrunden og giver en frugtig dybde, mens karamelliserede sukkertoner runder det hele af i en lang, varm eftersmag.",
+      "description": "Cocobänger fra Põhjala er af typen Imperial Coffee Stout og er på 12,5% Untappd beskriver en imperial stout brygget med kokos og Caturra-kaffe fra Costa Rica. Bitterheden er 60 IBU. Untappd nævner cremet kokos, kaffe i tyrkisk stil, blomme og brombær, og at chokoladen kommer frem, når øllen bliver varmere. Smagere skriver om mørk chokolade, kaffe og ristede nødder med en svag kokos til sidst, og en anden finder en fyldig krop med mælkechokolade, cremet kokossødme, læder og lakrids. En tredje kalder den tung. Vores tidligere tekst nævner kokosflager i brygget. De 12,5% giver varme.",
       "name": "Cocobänger 12,5% 33cl",
       "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/cocob-nger-12-5-33cl.png?v=1750598532",
       "type": "Imperial Stout",
@@ -36465,7 +36465,7 @@
     {
       "id": 13015,
       "slug": "p-hjala-truffle-stout",
-      "description": "Truffle Stout fra Põhjala er af typen Imperial Stout og er på 10% Denne ekstraordinære imperial stout er brygget med ægte trøfler, hvilket gør den til en virkelig luksuriøs oplevelse. Øllen har en dyb, næsten sort farve med et rigt, cremet skum og en kompleks aroma af mørk chokolade, kaffe, vanilje og den karakteristiske jordagtige duft af trøfler. Smagen er fyldig og dekadent med lag af ristede malttoner, bitter chokolade og espresso. Den subtile trøffelfinish tilføjer en unik, jordagtig dimension, der løfter øllen til nye højder.",
+      "description": "Truffle Stout fra Põhjala er af typen Imperial Stout og er på 10% Untappd skriver, at Põhjala bruger en generøs mængde trøfler i denne imperial stout. Trøfler er svampe, der vokser under jorden, og de giver øllen en dyb, jordagtig tone. Vores tidligere tekst nævner mørk chokolade, kaffe og vanilje i duften og en fyldig smag med ristet malt, bitter chokolade og espresso, og en lang, varm eftersmag. En smager på Untappd skriver om en mørk øl med lidt skum og en prikkende mundfølelse, der er bitter og fuld af smag med en svag portvinsduft, en tør afslutning og humlebitterhed. De 10% giver varme.",
       "name": "Truffle Stout 10% 33cl",
       "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/truffle-stout-10-33cl.png?v=1750599107",
       "type": "Stout",
@@ -38933,8 +38933,8 @@
       "max_discount_pct": 0
     },
     {
-      "id": 20524,
-      "slug": "fur-barley-wine-barley-wine-12",
+      "id": 20553,
+      "slug": "fur-barley-wine-barley-wine-13",
       "description": null,
       "name": "Fur Barley Wine - Barley Wine",
       "image": "https://humledrik.dk/cache/4/6/0/9/7/3/5/fit-370x370x75.webp",
@@ -38959,8 +38959,8 @@
       "max_discount_pct": 0
     },
     {
-      "id": 20536,
-      "slug": "to-oel-15-dipa-30",
+      "id": 20564,
+      "slug": "to-oel-15-dipa-31",
       "description": "To Øl #15 DIPA er nummer 15 i To Øls DIPA-serie, hvor bryggeriet udforsker forskellige humlekombinationer inden for den kraftige Double IPA-stil. Denne udgave lander på 9 % alkohol og er brygget som en juicy og hazy DIPA med et tydeligt fokus på aromatisk humle. Til #15 har To Øl fundet en humle frem, som bryggeriet ikke havde arbejdet med i et stykke tid. Den bidrager med citronprægede og urteagtige nuancer, der kombineres med Idaho 7 og El Dorado. Sidstnævnte duo sørger for et kraftigt tropisk modspil og giver øllen dens frugtdrevne profil.",
       "name": "To Øl, #15 DIPA",
       "image": "https://www.vildmedvin.dk/img/1000/1000/resize/s/k/sk_rmbillede_2026-08-19_104345-removebg.jpg",
@@ -39458,7 +39458,7 @@
     {
       "id": 14432,
       "slug": "emperors-brewery-interceptor",
-      "description": "Interceptor fra Emperor's Brewery er af typen Imperial Porter og er på 12% En dyb, sort porter med et tæt og cremet skum. Duften åbner med rige noter af mørk cacao og en blid sødme fra honning og ahornsirup, der tilsammen skaber en varm og indbydende aroma med en let antydning af vaniljæ. Smagen er fyldig og velafbalanceret — mørk chokolade og ristede malt går hånd i hånd med den bløde sødme fra ahornsirup og honning. Laktosen giver en silkeblød, cremet tekstur, og eftersmagen er lang og varm med et vedholdende præg af cacao og karamel.",
+      "description": "Interceptor fra Emperor's Brewery er af typen Imperial Porter og er på 12% Untappd beskriver Interceptor som en rig imperial porter med mørk chokolade, ahorn og pekannød, som er lavet til at nydes langsomt. Vores tidligere tekst nævner honning og ahornsirup i duften, ristet malt og mørk chokolade med laktose, der giver en silkeblød krop og en lang, varm eftersmag med kakao og karamel. Smagere på Untappd skriver om en klistret omgang chokolade, pekannød og ahornsirup, en tyk og sød øl, og at den åbner sig, når den bliver varmere, og en finder den lidt til den søde side.",
       "name": "Interceptor 12% 33cl",
       "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/interceptor-12-33cl.png?v=1782313026",
       "type": "Porter - Stout",
@@ -39491,7 +39491,7 @@
     {
       "id": 16559,
       "slug": "emperors-brewery-executor",
-      "description": "Executor fra Emperor's Brewery er af typen Imperial Pastry Stout og er på 12,6% Denne kraftfulde stout er sort som natten med en tæt, cremet skum. Duften er umiddelbart indbydende med rige noter af guatemalansk kaffe og sød kokos, der flettes smukt sammen med dybe toner af honning og mørkt moscovadosukker. Smagen er fyldig og rund med en intens kaffebitterhed, der balanceres af den bløde sødme fra kokos og karameliseret sukker. Honningen giver en silkeblød tekstur, og eftersmagen er lang og varm med et behageligt præg af mørk chokolade og ristede malt.",
+      "description": "Executor fra Emperor's Brewery er af typen Imperial Pastry Stout og er på 12,6% Executor er en Star Wars-inspireret stout med guatemalansk kaffe og sød kokos, ifølge Untappd. Det er en imperial pastry stout, altså en stærk stout med dessertpræg. Vores tidligere tekst nævner honning og mørkt moscovadosukker i duften og en intens kaffebitterhed, der mødes af sød kokos og karameliseret sukker. Smagere på Untappd skriver om chokolade, kaffe og kokos med sødme, lidt bitterhed til sidst, tonka og en eftersmag med rom, og en kalder den en dejlig lille mørk øl inden sengetid.",
       "name": "Executor 12,6% 33cl",
       "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/executor-12-6-33cl.png?v=1782310889",
       "type": "Pastry Stout",
@@ -40850,21 +40850,21 @@
       "max_discount_pct": 0
     },
     {
-      "id": 20512,
-      "slug": "flying-couch-brewing-stout-stout-stout-28",
-      "description": "Stout Stout Stout fra Flying Couch Brewing er af typen Imperial Stout og er på 11% Flying Couch har lagt alt krudtet i malten på denne her, og navnet siger egentlig alt om ambitionen. Der er ikke pyntet med hverken frugt, kage eller fadlagring, kun en massiv maltbygning hvor bøgerøget malt får lov at sætte et diskret aftryk, og hvor havren står for fylden. I glasset er den kulsort og uigennemtrængelig med et tæt, mørkebrunt skum, og duften er dyb og intens med mørk chokolade, brændt karamel og en anelse bål i baggrunden.",
-      "name": "Stout Stout Stout 11% 44cl",
-      "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/stout-stout-stout-11-44cl.png?v=1788506509",
-      "type": "Stout",
-      "abv": 11.0,
-      "volume_cl": 44.0,
-      "brewery": "Flying Couch Brewing",
+      "id": 20546,
+      "slug": "p-hjala-oo-196",
+      "description": "Öö fra Põhjala er af typen Imperial Baltic Porter og er på 10,5% Untappd kalder Öö en imperial baltic porter, der er så mørk som de estiske vinternætter. Untappd nævner karamel og toffee, røde ribs og mørk chokolade i smagen og mørk frugt og en let røget ristning i duften, og bitterheden er 60 IBU. Vores tidligere tekst beskriver en fyldig krop, hvor espressoens syrlighed mødes af karamelliseret sukker, og hvor røde ribs og varm chokolade kommer frem, når glasset bliver varmt.",
+      "name": "Öö 10,5% 33cl",
+      "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/oo-10-5-33cl.png?v=1750597033",
+      "type": "Imperial Stout",
+      "abv": 10.5,
+      "volume_cl": 33.0,
+      "brewery": "Põhjala",
       "category": null,
       "prices": [
         {
           "shop_name": "Brygshoppen",
           "price": 58.0,
-          "url": "https://brygshoppen.dk/products/stout-stout-stout-11-44cl",
+          "url": "https://brygshoppen.dk/products/oo-10-5-33cl",
           "discount_pct": 0,
           "old_price": null
         }
@@ -40928,32 +40928,6 @@
       "max_discount_pct": 0
     },
     {
-      "id": 20516,
-      "slug": "p-hjala-oo-194",
-      "description": "Öö fra Põhjala er af typen Imperial Stout og er på 10,5% Öö, en stærk estisk porter, er sort som natten. Først opdager man en fyldig fylde, espressoens syrlighed afbalanceret af sødmen af karamelliseret sukker, og når glasset varmes op, smager man røde ribs blandet med varm chokolade ledsaget af en let alkoholisk varme. Den er stærk nok til at varme dig op på en kold vinteraften på terrassen.",
-      "name": "Öö 10,5% 33cl",
-      "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/oo-10-5-33cl.png?v=1750597033",
-      "type": "Imperial Stout",
-      "abv": 10.5,
-      "volume_cl": 33.0,
-      "brewery": "Põhjala",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Brygshoppen",
-          "price": 58.0,
-          "url": "https://brygshoppen.dk/products/oo-10-5-33cl",
-          "discount_pct": 0,
-          "old_price": null
-        }
-      ],
-      "cheapest_price": 58.0,
-      "min_price": 58.0,
-      "shop": "Brygshoppen",
-      "discount_pct": 0,
-      "max_discount_pct": 0
-    },
-    {
       "id": 13209,
       "slug": "bierbrouwerij-de-koningshoeven-la-trappe-witte",
       "description": "La Trappe Witte fra Bierbrouwerij De Koningshoeven er af typen Witbier og er på 5,5% Bryggeriet kalder Witte verdens eneste hvide trappistøl, og på 75cl er den en flaske til at dele i sommerhaven. En witbier er en lys, uklar hvedeøl. Øllen har fast, vedholdende skum, og bryggeriet beskriver en let syrlig og frisk duft med blomster og frugtig humle, citrus, fersken og abrikos, og en blød, maltet og let sur smag med levende kulsyre. Afslutningen er bitter og tør, og bitterheden er kun 14 IBU, så den er nem at drikke.",
@@ -40980,9 +40954,35 @@
       "max_discount_pct": 0
     },
     {
+      "id": 20542,
+      "slug": "flying-couch-brewing-stout-stout-stout-29",
+      "description": "Stout Stout Stout fra Flying Couch Brewing er af typen Imperial Stout og er på 11% Flying Couch har lagt alt krudtet i malten på denne her, og navnet siger egentlig alt om ambitionen. Der er ikke pyntet med hverken frugt, kage eller fadlagring, kun en massiv maltbygning hvor bøgerøget malt får lov at sætte et diskret aftryk, og hvor havren står for fylden. I glasset er den kulsort og uigennemtrængelig med et tæt, mørkebrunt skum, og duften er dyb og intens med mørk chokolade, brændt karamel og en anelse bål i baggrunden.",
+      "name": "Stout Stout Stout 11% 44cl",
+      "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/stout-stout-stout-11-44cl.png?v=1788506509",
+      "type": "Stout",
+      "abv": 11.0,
+      "volume_cl": 44.0,
+      "brewery": "Flying Couch Brewing",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Brygshoppen",
+          "price": 58.0,
+          "url": "https://brygshoppen.dk/products/stout-stout-stout-11-44cl",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 58.0,
+      "min_price": 58.0,
+      "shop": "Brygshoppen",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
       "id": 17231,
       "slug": "solgt-til-stanglakrids-flying-couch-2",
-      "description": "Solgt Til Stanglakrids fra Flying Couch Brewing er af typen Imperial Stout og er på 10% Denne forførende Imperial Stout er brygget med stanglakrids, hvilket giver en øl med en unik og spændende smagsprofil. Den skinner i en dyb, kulsort farve med et tæt skum. Solgt Til Stanglakrids er fuldmundet og cremet med en karakter, der balancerer perfekt mellem de ristede maltes dybde og lakridssens karakteristiske sødme og krydrethed. Smagen er en fest af mørk chokolade, ristet kaffe og intens lakrids, der folder sig ud i lag.",
+      "description": "Solgt Til Stanglakrids fra Flying Couch Brewing er af typen Imperial Stout og er på 10% Flying Couch kalder øllen en mørk, intens og lidt skør stout inspireret af salte lakridsbolsjer, ifølge Untappd. Ud over lakrids er der brugt isotpeber, sort peber og habanero, og bryggeriet lover en fyldig krop. Smagere skriver, at den er ren lakrids, at den er intens og lidt hård at drikke alene, og at maltkroppen er god med en rund, glat mundfølelse. En finsk smager synes, at den smager af klassisk lakrids mere end af tyrkisk peber, men ser den som en af de bedste lakridsstouts.",
       "name": "Solgt til Stanglakrids- Flying Couch - 44 cl. - 10,0%",
       "image": "https://cdn.shopify.com/s/files/1/0600/9438/2263/files/solgt.jpg?v=1779983192",
       "type": "Beer",
@@ -41241,7 +41241,7 @@
     {
       "id": 14504,
       "slug": "emperors-brewery-hokey-religion",
-      "description": "Hokey Religion fra Emperor's Brewery er af typen Imperial Pastry Stout og er på 12,6% Denne mørke og fristende stout er sort som beg med et cremet, fyldigt skum. Duften er umiddelbart genkendelig — rig mørk chokolade og sød, ristet kokos, der tilsammen minder om en flydende Bounty-bar. Cacaobønnerne fra Colombia giver en dyb, intens chokoladearoma, mens den ristede kokos tilføjer en blød, eksotisk sødme. Smagen er overdådig og rund med bølger af mørk chokolade, der glider over i en klæbrig, sød kokossmag.",
+      "description": "Hokey Religion fra Emperor's Brewery er af typen Imperial Pastry Stout og er på 12,6% Bryggeriet kalder den en flydende Bounty-bar i et glas og bruger 300 kg colombianske kakaonibs og ristet kokos tre gange, i alt 600 kg kokos, ifølge Beer Gonzo. Untappd viser 85 IBU. Vores tidligere tekst nævner mørk chokolade og sød, ristet kokos i duften, muscovadosukker med let karamel og en klæbrig kokossmag, der kommer efter chokoladen. Smagere på Untappd skriver, at den er fænomenal eller slet ikke noget for dem, og en dansk smager havde håbet på en fyldigere krop, men kalder den en god, kraftig øl.",
       "name": "Hokey Religion 12,6% 33cl",
       "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/hokey-religion-12-6-33cl.png?v=1782312207",
       "type": "Pastry Stout",
@@ -42470,32 +42470,6 @@
       "shop": "Beermatch",
       "discount_pct": 0,
       "max_discount_pct": 0
-    },
-    {
-      "id": 18504,
-      "slug": "root-branch-brewing-d-e-a-t-h",
-      "description": "En hazy extra double dryhopped pale ale med Root + Branchs karakteristiske bløde maltbase og fokus på amerikansk humle. Saftig, aromatisk og letdrikkelig med masser af citrus og tropiske noter.",
-      "name": "Root + Branch Brewing – D>E>A>T>H>P>A>R>T>Y",
-      "image": "https://cdn.shopify.com/s/files/1/0776/5209/9400/files/AA59617B-4475-4819-9C7D-0334AD784DC8.jpg?v=1786446156",
-      "type": "India Pale Ale (IPA)",
-      "abv": 6.5,
-      "volume_cl": 37.5,
-      "brewery": "Root + Branch Brewing",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Øltanken",
-          "price": 59.0,
-          "url": "https://oltanken.dk/products/root-branch-brewing-d-e-a-t-h-p-a-r-t-y",
-          "discount_pct": 35.9,
-          "old_price": 92.0
-        }
-      ],
-      "cheapest_price": 59.0,
-      "min_price": 59.0,
-      "shop": "Øltanken",
-      "discount_pct": 35.9,
-      "max_discount_pct": 35.9
     },
     {
       "id": 18515,
@@ -44097,7 +44071,7 @@
     {
       "id": 13120,
       "slug": "hanssens-oude-kriek",
-      "description": "Hanssens Oude Kriek fra Hanssens Artisanaal er af typen Lambic/Kriek og er på 6,5% Hanssens Artisanaal er en af de ældste lambic blendere i Belgien, der går tilbage til 1871. Dette er deres Kriek, en blanding af Lambic, hvortil friske kirsebær blev tilsat. Efter halvandet års modning i tønden blandes de forskellige kirsebærlambikker til kirsebær. Typisk har denne Oude Kriek minimalt eller intet skum. En hvis surhed i kombination med en sødmefaktor. Det hele har en kirsebær-frugtagtig smag og en tør eftersmag.",
+      "description": "Hanssens Oude Kriek fra Hanssens Artisanaal er af typen Kriek og er på 6,5% Hanssens Oude Kriek er lambic med friske kirsebær, der modner halvandet år i tønden, ifølge vores tidligere tekst. Efter modningen blandes de forskellige kirsebærlambic, og vores tidligere tekst nævner minimalt skum, syrlighed med et strejf sødme, kirsebærfrugt og en tør eftersmag. Bitterheden er 14 IBU på Untappd. Smagerne skriver om tærte kirsebær, en tør afslutning, en farve som mursten og en kraftig syrlighed med eddike og surt æble i eftersmagen, og en med en flaske fra 2019 mærker hø og funk.",
       "name": "Hanssens Oude Kriek 6,5% 37,5cl",
       "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/hanssens-oude-kriek-6-5-37-5cl_e060993c-8a1a-4f18-b4d3-1c38cd7469c1.png?v=1737805699",
       "type": "Lambic",
@@ -45866,6 +45840,32 @@
       "cheapest_price": 60.0,
       "min_price": 60.0,
       "shop": "Brygshoppen",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
+      "id": 20561,
+      "slug": "humleland-godaw-stout-choco",
+      "description": "<p>Imperial Stout brygget med 7 malte og lagret på bourbon fade med kakaonibs</p>",
+      "name": "Humleland GoDaw Stout Choco",
+      "image": "https://ol2go.dk/wp-content/uploads/2025/09/Humleland-GoDaw-Stout-Choco.png",
+      "type": "Stout",
+      "abv": null,
+      "volume_cl": 33.0,
+      "brewery": null,
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "ØL2GO",
+          "price": 60.0,
+          "url": "https://ol2go.dk/vare/humleland-godaw-stout-choco/",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 60.0,
+      "min_price": 60.0,
+      "shop": "ØL2GO",
       "discount_pct": 0,
       "max_discount_pct": 0
     },
@@ -47751,7 +47751,7 @@
     {
       "id": 13001,
       "slug": "hanssens-oudbeitje-37-5",
-      "description": "Hanssens Oudbeitje fra Hanssens Artisanaal er af typen Jordbær Lambic og er på 6% Hanssens Oudbeitje er i nok den eneste kommercielt tilgængelige, ikke-eftersødede jordbærlambic på markedet. Den laves med en blanding af Boon og Girardin lambic. og 150 kg belgiske jordbær tilsat hver 600-liters tønde 2-årig lambic. Oudbeitje blev første gang tappet på flaske i marts 2001 og er fortsat en fast del af Hanssens sortiment.",
+      "description": "Hanssens Oudbeitje fra Hanssens Artisanaal er af typen Fruit Lambic og er på 6% Hanssens kalder Oudbeitje den eneste kommercielt tilgængelige jordbærlambic uden eftersødning, og lambic.info kalder den Belgiens eneste rigtige jordbærlambic. Vores tidligere tekst fortæller, at den laves af Boon- og Girardin-lambic med 150 kg belgiske jordbær i hver tønde på 600 liter med toårig lambic, og at den første gang blev tappet i marts 2001.",
       "name": "Hanssens Oudbeitje 6% 37,5",
       "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/hanssens-oudbeitje-6-37-5.png?v=1749984074",
       "type": "Lambic",
@@ -49628,32 +49628,6 @@
       "max_discount_pct": 0
     },
     {
-      "id": 20529,
-      "slug": "norm-brewing-kia-ora-ipa-12",
-      "description": null,
-      "name": "Kia Ora - IPA",
-      "image": "https://humledrik.dk/cache/4/6/3/8/6/3/0/fit-370x370x75.webp",
-      "type": "India Pale Ale (IPA)",
-      "abv": 7.0,
-      "volume_cl": 44.0,
-      "brewery": "Norm Brewing",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Humledrik",
-          "price": 65.0,
-          "url": "https://humledrik.dk/freestyle-hops-ipa",
-          "discount_pct": 0,
-          "old_price": null
-        }
-      ],
-      "cheapest_price": 65.0,
-      "min_price": 65.0,
-      "shop": "Humledrik",
-      "discount_pct": 0,
-      "max_discount_pct": 0
-    },
-    {
       "id": 20509,
       "slug": "year-8-8-years-sour",
       "description": "Year 8 - 8 Years Sour fra Vault City Brewing er af typen Smoothie Sour og er på 8% Ottende og sidste kapitel er selve fødselsdagsøllen, efterfølgeren til sidste års 7 Years Sour, og her har Vault City samlet otte af de tilsætninger, der har defineret bryggeriets første otte år, i én dåse. Kirsebær, brombær, banan og pære står for frugten, kanel og vanilje giver varme og blødhed, og vegansk hvid chokolade og lønnesirup runder det af, så smagen bliver en rig og festlig dessert.",
@@ -49702,6 +49676,58 @@
       "cheapest_price": 65.0,
       "min_price": 65.0,
       "shop": "Brygshoppen",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
+      "id": 20556,
+      "slug": "norm-brewing-kia-ora-ipa-13",
+      "description": null,
+      "name": "Kia Ora - IPA",
+      "image": "https://humledrik.dk/cache/4/6/3/8/6/3/0/fit-370x370x75.webp",
+      "type": "India Pale Ale (IPA)",
+      "abv": 7.0,
+      "volume_cl": 44.0,
+      "brewery": "Norm Brewing",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Humledrik",
+          "price": 65.0,
+          "url": "https://humledrik.dk/freestyle-hops-ipa",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 65.0,
+      "min_price": 65.0,
+      "shop": "Humledrik",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
+      "id": 20560,
+      "slug": "observatoriet-jutse-pijl",
+      "description": "<p>Observatoriet Jutse Pijl er bryggeriets fortolkning af den klassiske Gose, men med et tydeligt vildgæret twist. Hvor Gose traditionelt kombinerer en lys og syrlig ølbase med salt og koriander, er denne version fermenteret med vilde gærkulturer. Øllen er brygget med Bygmalt og Hvedemalt og tilsat salt, korianderfrø og limeskal. Saltet giver ekstra fylde og et let mineralsk præg, mens korianderfrø og limeskal tilfører krydrede, citrusprægede nuancer. Beershoppen beskriver tilsvarende øllen som en Gose Wild Ale med noter af koriander, salt og lime</p>",
+      "name": "Observatoriet Jutse Pijl",
+      "image": "https://ol2go.dk/wp-content/uploads/2026/10/Observatoriet-Jutse-Pijl.png",
+      "type": "Sour / Berliner Weisse",
+      "abv": null,
+      "volume_cl": 50.0,
+      "brewery": null,
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "ØL2GO",
+          "price": 65.0,
+          "url": "https://ol2go.dk/vare/observatoriet-jutse-pijl/",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 65.0,
+      "min_price": 65.0,
+      "shop": "ØL2GO",
       "discount_pct": 0,
       "max_discount_pct": 0
     },
@@ -51012,6 +51038,39 @@
       "max_discount_pct": 0
     },
     {
+      "id": 18061,
+      "slug": "root-branch-the-castle-galaxy",
+      "description": "The Castle is Root + Branch's multi-oat and wheat pale ale, and this edition is conditioned on coconut. The Castle rotates from batch to batch, this one stays light at 5% ABV with coconut layered over the soft oat-heavy body.",
+      "name": "Root + Branch - The Castle (Galaxy)",
+      "image": "https://cdn.shopify.com/s/files/1/0368/1628/9924/files/root-branch-the-castle-galaxy.png?v=1784212685",
+      "type": "American Pale Ale",
+      "abv": 5.0,
+      "volume_cl": 47.3,
+      "brewery": "Root + Branch",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Øltanken",
+          "price": 69.0,
+          "url": "https://oltanken.dk/products/root-branch-brewing-the-castle-galaxy",
+          "discount_pct": 36.7,
+          "old_price": 109.0
+        },
+        {
+          "shop_name": "Drikbeer",
+          "price": 119.0,
+          "url": "https://drikbeer.com/products/root-branch-the-castle-coconut",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 69.0,
+      "min_price": 69.0,
+      "shop": "Øltanken",
+      "discount_pct": 36.7,
+      "max_discount_pct": 36.7
+    },
+    {
       "id": 15273,
       "slug": "midtfyns-chili-klaus-ghost",
       "description": "Midtfyns Chili Klaus Ghost. Ghost chilien er en af de mest berømte og berygtede chilier i verdenen. Berømt for sin søde chili-smag, men også berygtet for sin intense styrke på over 1.000.000 SHU. Når du har smagt den første tår, så læg øret til togskinnen og lyt efter toget. Denne Midtfyns, Chili Klaus Ghost - Øl øl, er Konventionel dyrket, og har en alkoholprocent på 5,20. Øllen er en Ale fra Midtfyns Bryghus",
@@ -51955,32 +52014,6 @@
       "max_discount_pct": 0
     },
     {
-      "id": 20510,
-      "slug": "brewski-dan-7",
-      "description": "Dan fra Brewski er af typen Imperial Stout og er på 11,2% Dan har ligget på amerikanske whiskeyfade, og det kan man mærke fra første duft: vanilje, eg og en tydelig whiskeyvarme med mørk chokolade og ristet malt bagved. I glasset er den kulsort og lystæt med et lavt, mørkebrunt skum, der trækker sig tilbage til en tynd krans. I smagen kommer den ristede malt først med kakao og en anelse brændt sukker, hvorefter fadet overtager med vanillin, karamel og et strejf af whiskey. Bitterheden fra malten sørger for, at øllen ikke bliver rent sød.",
-      "name": "Dan 11,2% 33cl",
-      "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/dan-11-2-33cl.png?v=1788192295",
-      "type": "Imperial Stout",
-      "abv": 11.2,
-      "volume_cl": 33.0,
-      "brewery": "Brewski",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Brygshoppen",
-          "price": 69.0,
-          "url": "https://brygshoppen.dk/products/dan-11-2-33cl",
-          "discount_pct": 0,
-          "old_price": null
-        }
-      ],
-      "cheapest_price": 69.0,
-      "min_price": 69.0,
-      "shop": "Brygshoppen",
-      "discount_pct": 0,
-      "max_discount_pct": 0
-    },
-    {
       "id": 13108,
       "slug": "val-dieu-grand-cru",
       "description": "Val-Dieu Grand Cru fra Brasserie de l'Abbaye du Val-Dieu er af typen Belgian Quadrupel og er på 10,5% Grand Cru er den stærkeste øl i bryggeriets Tradition-serie, ved siden af Blonde, Triple og Brune. Bryggeriet kalder den Rich, Full-bodied & Powerful, og Untappd beskriver en dyb, mørk farve og en olieagtig, krydret krop med duft af ristet malt, chokolade og portvin. Eftersmagen er let tør, og bitterheden er 20 IBU. Vores tidligere tekst nævner mahognibrun farve, beige skum og kaffe og mørk chokolade i eftersmagen. De 10,5% giver varme, men alkoholen sidder godt i smagen.",
@@ -51996,6 +52029,32 @@
           "shop_name": "Brygshoppen",
           "price": 69.0,
           "url": "https://brygshoppen.dk/products/val-dieu-grand-cru-10-5-75cl",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 69.0,
+      "min_price": 69.0,
+      "shop": "Brygshoppen",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
+      "id": 20540,
+      "slug": "brewski-dan-8",
+      "description": "Dan fra Brewski er af typen Imperial Stout og er på 11,2% Dan har ligget på amerikanske whiskeyfade, og det kan man mærke fra første duft: vanilje, eg og en tydelig whiskeyvarme med mørk chokolade og ristet malt bagved. I glasset er den kulsort og lystæt med et lavt, mørkebrunt skum, der trækker sig tilbage til en tynd krans. I smagen kommer den ristede malt først med kakao og en anelse brændt sukker, hvorefter fadet overtager med vanillin, karamel og et strejf af whiskey. Bitterheden fra malten sørger for, at øllen ikke bliver rent sød.",
+      "name": "Dan 11,2% 33cl",
+      "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/dan-11-2-33cl.png?v=1788192295",
+      "type": "Imperial Stout",
+      "abv": 11.2,
+      "volume_cl": 33.0,
+      "brewery": "Brewski",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Brygshoppen",
+          "price": 69.0,
+          "url": "https://brygshoppen.dk/products/dan-11-2-33cl",
           "discount_pct": 0,
           "old_price": null
         }
@@ -52375,7 +52434,7 @@
     {
       "id": 13119,
       "slug": "hanssens-schaarbeekse-kriek",
-      "description": "Schaarbeekse Kriek fra Hanssens Artisanaal er af typen Lambic/Kriek og er på 6% Hanssens Artisanaal er en af de ældste lambic blendere i Belgien, der går tilbage til 1871. Dette er deres Schaarbeekse Kriek lavet med traditionelle schaarbeekse kirsebær. 75% ung lambic macereret med surkirsebær og blandet med 25% moden lambic, fermenteret på flaske.",
+      "description": "Hanssens Schaarbeekse Kriek fra Hanssens Artisanaal er af typen Kriek og er på 6% Schaarbeekse Kriek er lavet på surkirsebær af sorten Schaarbeek, og Untappd skriver, at Hanssens nu mest bruger Kelleris-kirsebær fra Tienen-området. Vores tidligere tekst fortæller, at 75% ung lambic er macereret med kirsebærene og blandet med 25% moden lambic, der gærer videre på flasken. Untappd kalder den en kriek med vilde belgiske kirsebær. Smagerne skriver kort: ren syre, men også flad, men med god smag. Lambic.info fører den under navnet Scarenbecca Kriek.",
       "name": "Hanssens Schaarbeekse Kriek 6,0% 37,5cl",
       "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/hanssens-schaarbeekse-kriek-6-0-37-5cl_cd46e84c-4303-4221-b90a-32c2b56416ed.png?v=1737805657",
       "type": "Lambic",
@@ -56451,8 +56510,34 @@
       "max_discount_pct": 0
     },
     {
-      "id": 20505,
-      "slug": "seven-island-brewery-12",
+      "id": 13055,
+      "slug": "brouwerij-roman-adriaen-brouwer-tripel-2",
+      "description": "Adriaen Brouwer Tripel fra Brouwerij Roman er af typen Belgian Tripel og er på 9% Adriaen Brouwer Tripel er økologisk, og bryggeriet kalder den en krydret premium-tripel. Den er brygget med koriander, Curaçao og økologisk belgisk humle. Brouwerij Roman har brygget i Oudenaarde-egnen siden 1545, og øllen er opkaldt efter byens maler Adriaen Brouwer, født i 1605. I glasset er den gylden og klar med et fyldigt, hvidt skum. Duften er æble og citrus med koriander, og estere fra gæren lægger sig ovenpå. Smagen er fyldig og krydret, med sødme fra malten og citrus i midten.",
+      "name": "Adriaen Brouwer Tripel 9% 75cl",
+      "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/adriaen-brouwer-tripel-9-75cl.png?v=1741964312",
+      "type": "Tripel",
+      "abv": 9.0,
+      "volume_cl": 75.0,
+      "brewery": "Brouwerij Roman",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Brygshoppen",
+          "price": 75.0,
+          "url": "https://brygshoppen.dk/products/adriaen-brouwer-tripel-9-75cl",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 75.0,
+      "min_price": 75.0,
+      "shop": "Brygshoppen",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
+      "id": 20537,
+      "slug": "seven-island-brewery-13",
       "description": "Navnet refererer til det oldgræske taltegn for 666, og øllen leverer præcis den dystre tyngde, man forventer. Seven Island har begået et mindre mesterværk ved at integrere mahleb-krydderiet, som trækker aromaen væk fra den klassiske kagedessert og over i noget langt mere mystisk og krydret. Alkoholen og den massive krop er tæmmet perfekt, så de mange smagslag folder sig ud i en langvarig, symfonisk eftersmag. ΧΞΣ er en kompromisløs og sjælden øloplevelse, der skal drikkes langsomt i",
       "name": "ΧΞΣ",
       "image": "https://mlnyqjrpbd75.i.optimole.com/cb:xzKT.fcd/w:auto/h:auto/q:mauto/f:best/https://www.beerbarrel.dk/wp-content/uploads/2026/09/produktbilleder_20260906_160606_0003.png",
@@ -56477,8 +56562,8 @@
       "max_discount_pct": 0
     },
     {
-      "id": 20513,
-      "slug": "omnipollo-raw-beer-129",
+      "id": 20543,
+      "slug": "omnipollo-raw-beer-130",
       "description": "Raw Beer fra Omnipollo er af typen Double New England IPA og er på 8% Raw Beer er en eksperimenterende dobbelt IPA, der aldrig bliver kogt, og bryggeriet kalder den dobbelt IPA'ernes sushi. Brygget uden kogning kaldes en raw ale, og det betyder, at ølurten ikke koges, som man ellers gør. Malten er pilsnermalt, hvede og havre, og øllen er kraftigt tørhumlet og ufiltreret, så den er uklar og fuld af humleduft. Bitterheden er 50 IBU, og de 8% giver en fyldig krop med kant. Havren og hveden gør den blød i munden. Dåsen er på 44cl.",
       "name": "Raw Beer 8% 44cl",
       "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/raw-beer-8.png?v=1782404785",
@@ -56492,32 +56577,6 @@
           "shop_name": "Brygshoppen",
           "price": 75.0,
           "url": "https://brygshoppen.dk/products/raw-beer-8-44cl",
-          "discount_pct": 0,
-          "old_price": null
-        }
-      ],
-      "cheapest_price": 75.0,
-      "min_price": 75.0,
-      "shop": "Brygshoppen",
-      "discount_pct": 0,
-      "max_discount_pct": 0
-    },
-    {
-      "id": 13055,
-      "slug": "brouwerij-roman-adriaen-brouwer-tripel-2",
-      "description": "Adriaen Brouwer Tripel fra Brouwerij Roman er af typen Belgian Tripel og er på 9% Adriaen Brouwer Tripel er økologisk, og bryggeriet kalder den en krydret premium-tripel. Den er brygget med koriander, Curaçao og økologisk belgisk humle. Brouwerij Roman har brygget i Oudenaarde-egnen siden 1545, og øllen er opkaldt efter byens maler Adriaen Brouwer, født i 1605. I glasset er den gylden og klar med et fyldigt, hvidt skum. Duften er æble og citrus med koriander, og estere fra gæren lægger sig ovenpå. Smagen er fyldig og krydret, med sødme fra malten og citrus i midten.",
-      "name": "Adriaen Brouwer Tripel 9% 75cl",
-      "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/adriaen-brouwer-tripel-9-75cl.png?v=1741964312",
-      "type": "Tripel",
-      "abv": 9.0,
-      "volume_cl": 75.0,
-      "brewery": "Brouwerij Roman",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Brygshoppen",
-          "price": 75.0,
-          "url": "https://brygshoppen.dk/products/adriaen-brouwer-tripel-9-75cl",
           "discount_pct": 0,
           "old_price": null
         }
@@ -57401,8 +57460,8 @@
       "max_discount_pct": 0
     },
     {
-      "id": 20533,
-      "slug": "flying-guru-brewery-urd-sour-12",
+      "id": 20559,
+      "slug": "flying-guru-brewery-urd-sour-13",
       "description": null,
       "name": "Urd - Sour",
       "image": "https://humledrik.dk/cache/4/6/5/8/2/0/8/fit-370x370x75.webp",
@@ -58192,6 +58251,33 @@
       "shop": "Beer Me",
       "discount_pct": 0,
       "max_discount_pct": 0
+    },
+    {
+      "id": 18058,
+      "slug": "root-branch-life-and-fate-xlv",
+      "description": "The 48th entry in Life and Fate, the double IPA series Root + Branch has been running since 2019, brewed on their signature multi-oat and wheat grist. Every numbered release is its own recipe, this one lands at 8% ABV with the soft, hazy body the series is known for.",
+      "name": "Root + Branch - Life and Fate XLV",
+      "image": "https://cdn.shopify.com/s/files/1/0368/1628/9924/files/root-branch-life-and-fate-xlv.png?v=1784212685",
+      "type": "Double IPA",
+      "abv": 8.0,
+      "volume_cl": 47.3,
+      "brewery": "Root + Branch",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Øltanken",
+          "price": 79.0,
+          "url": "https://oltanken.dk/products/root-branch-brewing-life-and-fate-xlv",
+          "discount_pct": 31.9,
+          "old_price": 116.0
+        }
+      ],
+      "cheapest_price": 79.0,
+      "min_price": 79.0,
+      "shop": "Øltanken",
+      "discount_pct": 31.9,
+      "max_discount_pct": 31.9,
+      "price_change_7d": -37.0
     },
     {
       "id": 14370,
@@ -61127,7 +61213,7 @@
     {
       "id": 12852,
       "slug": "boerenerf-oude-gueuze-37-5",
-      "description": "Boerenerf Oude Gueuze 2025-1 fra Het Boerenerf er af typen Lambic og er på 6% En traditionel blend af unge og gamle lambieker, der fremstår med en charmerenede uklar, lys gylden farve med et subtilt abrikosskær. Duften er en indbydende kombination af tørt træ, tørret æble og abrikoos — med et diskret hint af den karakteristiske Brett-funk, som kendetegner ægte gueuze. Smagen er livlig og brusende — næsten som champagne — med syrlige frugttoner af grønt æble og umoden pære, der hviler på en cremet, brødagtig kerne.",
+      "description": "Boerenerf Oude Gueuze fra Het Boerenerf er af typen Gueuze og er på 6% Oude Gueuze 2025-1 er en blanding af unge og gamle lambic, ifølge vores tidligere tekst. Der er tale om en uklar, lys gylden øl med et skær af abrikos, og duften er tørt træ, tørret æble og abrikos med et strejf af funk fra Brett, en vild gær. Smagen er livlig og brusende, næsten som champagne, med syrlige toner af grønt æble og umoden pære. Smagerne på Untappd er delt: nogle kalder den meget solid og rigtig god, med tør hø og et fint syrligt skær, og en synes, at den er for sur. Flasken er på 37,5cl.",
       "name": "Boerenerf Oude Gueuze 6% 37,5",
       "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/boerenerf-oude-gueuze-6-37-5.png?v=1775055294",
       "type": "Lambic",
@@ -61749,8 +61835,8 @@
       "max_discount_pct": 0
     },
     {
-      "id": 20517,
-      "slug": "frontaal-brewing-co-no-way-out-b-a-59",
+      "id": 20547,
+      "slug": "frontaal-brewing-co-no-way-out-b-a-60",
       "description": "No Way Out B. A. fra Frontaal Brewing Co. i samarbejde med Põhjala er af typen Barleywine og er på 10,5% B. står for fadlagret. Frontaal og Põhjala fra Estland lagrede deres fælles No Way Out på fade, og den fadlagrede udgave kom et år efter originalen. Barleywinen er brygget med saltet karamel og har ligget på Madeira- og Ruby Port-fade. Karamel og toffee danner bunden, med en let salt kant, og fadene har lagt tørret frugt og egetræ ovenpå. Kroppen er tyk og cremet, og eftersmagen er blød og varmende. De 10,5% giver en varme, der bliver hængende.",
       "name": "No Way Out B.A. 10,5% 33cl",
       "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/no-way-out-b-a-10-5-33cl.png?v=1750592682",
@@ -63351,8 +63437,8 @@
       "max_discount_pct": 0
     },
     {
-      "id": 20521,
-      "slug": "o-o-brewing-400-imperial-barley-wine-12",
+      "id": 20551,
+      "slug": "o-o-brewing-400-imperial-barley-wine-13",
       "description": null,
       "name": "#400 Imperial - Barley Wine",
       "image": "https://humledrik.dk/cache/4/4/7/4/0/5/5/fit-370x370x75.webp",
@@ -65008,7 +65094,7 @@
     {
       "id": 17749,
       "slug": "puhaste-brewery-noctis-bourbon-ba",
-      "description": "Noctis Bourbon BA fra Pühaste Brewery er af typen Imperial Stout og er på 14% Noctis er endnu en kraftfuld bourbon-fadlagret Imperial Stout fra det estiske bryggeri Pühaste og deres eksklusive Silver Series. Øllen er brygget med jordnøddesmør og tonkabønner, hvilket giver den en helt særlig karakter. I glasset er den dybsort og tæt med et mørkt skum. Duften byder på ristede jordnødder, sød tonka og bourbon fra fadene. Smagen er fyldig og rig med noter af karamelliseret jordnøddesmør, mørk chokolade og en varm, sødlig eftersmag fra bourbonfadene.",
+      "description": "Noctis Bourbon BA fra Pühaste Brewery er af typen Imperial Stout og er på 14% Noctis er en bourbon-fadlagret imperial stout med både jordnøddesmør og tonkabønner, ifølge Untappd. Smagere på Untappd skriver, at bourbonen slår hårdt, og at øllen er meget velsmagende. En ældre flaske gav mørk chokolade, og en hollandsk smager synes, at tonkabønnerne og bourbonfadet er godt, men at jordnøddesmørret ikke var nødvendigt. Vores tidligere tekst nævner ristede jordnødder, sød tonka, karamelliseret jordnøddesmør og mørk chokolade med en varm, sødlig eftersmag fra fadene.",
       "name": "Noctis Bourbon BA 14% 33cl",
       "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/noctis-bourbon-ba-14-33cl.png?v=1783441039",
       "type": "Imperial Stout",
@@ -65060,7 +65146,7 @@
     {
       "id": 18941,
       "slug": "puhaste-brewery-califer-bourbon-ba",
-      "description": "Califer Bourbon BA fra Pühaste Brewery er af typen Barleywine og er på 13% Califer er en kraftfuld bourbon-fadlagret barleywine fra det estiske bryggeri Pühaste, der har specialiseret sig i fadlagrede specialøl under navnet Silver Series. Øllen hviler i bourbonfade, hvor den udvikler et dybt og lagdelt karakter. I glasset er den mørk og tæt med et beige skum. Duften byder på karamel, chokolade og vanilje fra fadene med et strejf af egetræ. Smagen er fyldig og varm med lange, komplekse toner af karamelliseret sukker og blød vanilje.",
+      "description": "Califer Bourbon BA fra Pühaste Brewery er af typen Barleywine og er på 13% Untappd kalder Califer en sort barleywine, der er lagret på bourbonfade, og den er en del af Pühastes Silver Series. En barleywine er en meget kraftig øl, brygget med så meget malt, at den bliver sød og fyldig som en vin. Smagere på Untappd skriver om karamel, kaffe og chokolade med tydelig fadkarakter, lidt frugt, lav bitterhed og stærk alkohol, så de anbefaler at drikke den langsomt. En mærker tydelig bourbon og whisky, og en foreslår at blande den med en stout.",
       "name": "Califer Bourbon BA 13% 33cl",
       "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/califer-bourbon-ba-13-33cl.png?v=1783441256",
       "type": "Barley Wine",
@@ -66568,8 +66654,8 @@
       "max_discount_pct": 0
     },
     {
-      "id": 20514,
-      "slug": "frontaal-brewing-co-10-imperial-stout-59",
+      "id": 20544,
+      "slug": "frontaal-brewing-co-10-imperial-stout-60",
       "description": "10 - Imperial Stout fra Frontaal Brewing Co. er af typen Imperial Stout og er på 10% Øllen er brygget til Frontaals 10 års fødselsdag og har ligget på fade fra cognac, Mirabella-whisky og rom fra Barbados. Karamel, krydderi og mørk frugt går igen i smagen, og kroppen er fyldig og blød. Fadene giver en dybde, som en ung stout ikke har. De 10% mærkes som varme i eftersmagen, der er lang og rund. Størrelsen på 44 cl er stor nok til at dele. Skænk den i små glas ved kælderkold temperatur, og drik den langsomt efter maden.",
       "name": "10 - Imperial Stout 10% 44cl",
       "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/10-imperial-stout-10-44cl_9645d1f7-914c-43d6-b687-b07453f1aaf2.png?v=1761637026",
@@ -67272,7 +67358,7 @@
     {
       "id": 12859,
       "slug": "rpus-brewing-co-portuguese-brandy-barrel-aged-imperial",
-      "description": "Portuguese Brandy Barrel Aged Imperial Stout fra Ārpus Brewing Co. er af typen Imperial Stout og er på 12%. Denne lettiske imperial stout er mørk og tæt med en dyb mahognibrun farve og et cremet, beige skum. Den bærer tydeligt præg af de portugisiske brandyfade, den har hvilet i – der er en varm, vinøs dybde, der løfter stilen ud over det sædvanlige. Smagsmæssigt møder man rig mørk chokolade og karamel, der flettes sammen med bløde noter af tørret frugt og en diskret brandy-sødme. Eftersmagen er lang og varm med en let tørhed, der inviterer til endnu en slurk.",
+      "description": "Portuguese Brandy Barrel Aged Imperial Stout fra Ārpus Brewing Co. er af typen Imperial Stout og er på 12% Øllen har hvilet på portugisiske brandyfade, og smagerne på Untappd mærker brandyen tydeligt. De skriver, at den er sød og tyk, at den minder om rom og rosiner, og at brandyen er skarp først og cremet bagefter. En synes, at den er anderledes end andre stouts, men rigtig god. Vores tidligere tekst nævner en mørk mahognibrun farve med cremet, beige skum, en varm, vinøs dybde, mørk chokolade og karamel med tørret frugt og en lang, varm eftersmag med en let tørhed.",
       "name": "Portuguese Brandy Barrel Aged Imperial Stout 12% 44cl",
       "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/portuguese-brandy-barrel-aged-imperial-stout-12-44cl.png?v=1775034202",
       "type": "Imperial Stout",
@@ -67504,32 +67590,6 @@
       "max_discount_pct": 0
     },
     {
-      "id": 17750,
-      "slug": "puhaste-brewery-mardus-bourbon-ba",
-      "description": "Mardus Bourbon BA fra Pühaste Brewery er af typen Imperial Stout og er på 13,5% Mardus er en Imperial Stout fra det estiske bryggeri Pühaste, brygget med kaffe fra Finca Las Gardenias i Guatemala, kokos og pekannødder, og herefter lagret i 24 måneder på bourbonfade som en del af bryggeriets eksklusive Silver Series. I glasset er den dybsort og tæt med et mørkt skum. Duften byder på ristet kaffe, ristede kokosnødder og sød karamel. Smagen er fyldig med noter af mørk chokolade, toffee og en varm bourbonkarakter, der binder det hele sammen.",
-      "name": "Mardus Bourbon BA 13,5% 33cl",
-      "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/mardus-bourbon-ba-13-5-33cl.png?v=1783440548",
-      "type": "Imperial Stout",
-      "abv": 13.5,
-      "volume_cl": 33.0,
-      "brewery": "Pühaste Brewery",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Brygshoppen",
-          "price": 107.0,
-          "url": "https://brygshoppen.dk/products/mardus-bourbon-ba-13-5-33cl",
-          "discount_pct": 0,
-          "old_price": null
-        }
-      ],
-      "cheapest_price": 107.0,
-      "min_price": 107.0,
-      "shop": "Brygshoppen",
-      "discount_pct": 0,
-      "max_discount_pct": 0
-    },
-    {
       "id": 19896,
       "slug": "smagssaet-2-pastry-sour-magic-road",
       "description": null,
@@ -67554,6 +67614,32 @@
       "shop": "Humledrik",
       "discount_pct": 11.0,
       "max_discount_pct": 11.0
+    },
+    {
+      "id": 17750,
+      "slug": "puhaste-brewery-mardus-bourbon-ba",
+      "description": "Mardus Bourbon BA fra Pühaste Brewery er af typen Imperial Stout og er på 13,5% Mardus har ligget 24 måneder på bourbonfade og er brygget med guatemalansk kaffe fra Finca Las Gardenias, kokos og pekannødder, ifølge Untappd. En hollandsk smager var lidt skuffet, fordi kokosen fyldte for meget, men fandt sødme, stærk kaffe og et strejf af kanel, og bourbonen var godt gemt. En anden skriver, at Silver Series næsten er en garanti for noget velsmagende. Vores tidligere tekst nævner ristet kaffe, ristet kokos og sød karamel i duften og mørk chokolade, toffee og en varm bourbonkarakter i smagen.",
+      "name": "Mardus Bourbon BA 13,5% 33cl",
+      "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/mardus-bourbon-ba-13-5-33cl.png?v=1783440548",
+      "type": "Imperial Stout",
+      "abv": 13.5,
+      "volume_cl": 33.0,
+      "brewery": "Pühaste Brewery",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Brygshoppen",
+          "price": 107.0,
+          "url": "https://brygshoppen.dk/products/mardus-bourbon-ba-13-5-33cl",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 107.0,
+      "min_price": 107.0,
+      "shop": "Brygshoppen",
+      "discount_pct": 0,
+      "max_discount_pct": 0
     },
     {
       "id": 15294,
@@ -68957,32 +69043,6 @@
       "max_discount_pct": 0
     },
     {
-      "id": 18058,
-      "slug": "root-branch-life-and-fate-xlv",
-      "description": "The 48th entry in Life and Fate, the double IPA series Root + Branch has been running since 2019, brewed on their signature multi-oat and wheat grist. Every numbered release is its own recipe, this one lands at 8% ABV with the soft, hazy body the series is known for.",
-      "name": "Root + Branch - Life and Fate XLV",
-      "image": "https://cdn.shopify.com/s/files/1/0368/1628/9924/files/root-branch-life-and-fate-xlv.png?v=1784212685",
-      "type": "Double IPA",
-      "abv": 8.0,
-      "volume_cl": 47.3,
-      "brewery": "Root + Branch",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Øltanken",
-          "price": 116.0,
-          "url": "https://oltanken.dk/products/root-branch-brewing-life-and-fate-xlv",
-          "discount_pct": 0,
-          "old_price": null
-        }
-      ],
-      "cheapest_price": 116.0,
-      "min_price": 116.0,
-      "shop": "Øltanken",
-      "discount_pct": 0,
-      "max_discount_pct": 0
-    },
-    {
       "id": 16725,
       "slug": "brouwerij-3-fonteinen-oude-geuze-cuvee-armand-gaston",
       "description": "3 Fonteinen Oude Geuze Cuvée Armand & Gaston er bryggeriets signatur-geuze og en hyldest til den traditionelle lambickultur i Zenne-dalen. Denne Oude Geuze er et blend af ét-, to- og tre år gamle lambics, alle brygget hos 3 Fonteinen. Den spontane gæring, den tålmodige modning på egetræsfade og den fortsatte udvikling i flasken skaber en øl med enestående kompleksitet og dybde. Ingen aftapninger er helt ens, da hver cuvée påvirkes af forskellige fade, blandingsforhold og modningstider.",
@@ -69301,32 +69361,6 @@
       "discount_pct": 29.6,
       "max_discount_pct": 29.6,
       "price_change_7d": -20.0
-    },
-    {
-      "id": 18061,
-      "slug": "root-branch-the-castle-galaxy",
-      "description": "The Castle is Root + Branch's multi-oat and wheat pale ale, and this edition is conditioned on coconut. The Castle rotates from batch to batch, this one stays light at 5% ABV with coconut layered over the soft oat-heavy body.",
-      "name": "Root + Branch - The Castle (Galaxy)",
-      "image": "https://cdn.shopify.com/s/files/1/0368/1628/9924/files/root-branch-the-castle-galaxy.png?v=1784212685",
-      "type": "American Pale Ale",
-      "abv": 5.0,
-      "volume_cl": 47.3,
-      "brewery": "Root + Branch",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Drikbeer",
-          "price": 119.0,
-          "url": "https://drikbeer.com/products/root-branch-the-castle-coconut",
-          "discount_pct": 0,
-          "old_price": null
-        }
-      ],
-      "cheapest_price": 119.0,
-      "min_price": 119.0,
-      "shop": "Drikbeer",
-      "discount_pct": 0,
-      "max_discount_pct": 0
     },
     {
       "id": 20213,
@@ -75178,8 +75212,8 @@
       "max_discount_pct": 0
     },
     {
-      "id": 20526,
-      "slug": "frederikshavn-bryghus-imperial-stout-bb-2-aar-paa-12",
+      "id": 20554,
+      "slug": "frederikshavn-bryghus-imperial-stout-bb-2-aar-paa-13",
       "description": null,
       "name": "Imperial Stout BB 2 år på fad - Imperial stout",
       "image": "https://humledrik.dk/cache/4/6/2/8/7/7/3/fit-370x370x75.webp",
@@ -75746,32 +75780,6 @@
       "max_discount_pct": 0
     },
     {
-      "id": 20511,
-      "slug": "brewdog-dog-f-11",
-      "description": "Dog F fra BrewDog er af typen Imperial Stout og er på 17,5%. Den blev brygget i 2017 til bryggeriets tiårsjubilæum og er en del af den hyldede Dog-serie, hvis rødder går helt tilbage til eksperimentet Abstrakt AB:04 I glasset er den kulsort med et tyndt, mørkebrunt skum, der hurtigt lægger sig, og kulsyren er lav og næsten stille, som man kender det fra de helt store stouts. Som den første i serien er den lagret på cognacfade, og det giver en ekstra dybde, der mærkes allerede i duften med kakao, en anelse røg og et strejf af chili.",
-      "name": "Dog F 17,5% 33cl",
-      "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/dog-f-17-5-33cl.png?v=1790602087",
-      "type": "Imperial Stout",
-      "abv": 17.5,
-      "volume_cl": 33.0,
-      "brewery": "BrewDog",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Brygshoppen",
-          "price": 195.0,
-          "url": "https://brygshoppen.dk/products/dog-f-17-5-33cl",
-          "discount_pct": 0,
-          "old_price": null
-        }
-      ],
-      "cheapest_price": 195.0,
-      "min_price": 195.0,
-      "shop": "Brygshoppen",
-      "discount_pct": 0,
-      "max_discount_pct": 0
-    },
-    {
       "id": 18636,
       "slug": "aegir-bryggeri-ragnarok-jubileumsoel",
       "description": "Ragnarok Jubileumsøl fra Ægir Bryggeri er af typen Belgian Quadrupel og er på 15% Ægir Bryggeri markerede ti år i 2017 med den, og holder til i Flåm inderst i Aurlandsfjorden, ifølge vores tidligere tekst. Bryggeriet kalder den sin udgave af en belgisk quadrupel, brygget med appelsinskal og eksotiske sukkerarter, med toner af egetræ, æble og tørret frugt. Smagere finder den lidt alkoholvarm, men flot, og en nævner hø, honning og belgisk gær, mens en anden mener, at den ligner en engelsk barleywine mere end en quadrupel. Bedst før-datoen er august 2028, og de 15% giver sødme og varme.",
@@ -75787,6 +75795,32 @@
           "shop_name": "Brygshoppen",
           "price": 195.0,
           "url": "https://brygshoppen.dk/products/ragnarok-jubileumsol-15-33cl",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 195.0,
+      "min_price": 195.0,
+      "shop": "Brygshoppen",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
+      "id": 20541,
+      "slug": "brewdog-dog-f-12",
+      "description": "Dog F fra BrewDog er af typen Imperial Stout og er på 17,5%. Den blev brygget i 2017 til bryggeriets tiårsjubilæum og er en del af den hyldede Dog-serie, hvis rødder går helt tilbage til eksperimentet Abstrakt AB:04 I glasset er den kulsort med et tyndt, mørkebrunt skum, der hurtigt lægger sig, og kulsyren er lav og næsten stille, som man kender det fra de helt store stouts. Som den første i serien er den lagret på cognacfade, og det giver en ekstra dybde, der mærkes allerede i duften med kakao, en anelse røg og et strejf af chili.",
+      "name": "Dog F 17,5% 33cl",
+      "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/dog-f-17-5-33cl.png?v=1790602087",
+      "type": "Imperial Stout",
+      "abv": 17.5,
+      "volume_cl": 33.0,
+      "brewery": "BrewDog",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Brygshoppen",
+          "price": 195.0,
+          "url": "https://brygshoppen.dk/products/dog-f-17-5-33cl",
           "discount_pct": 0,
           "old_price": null
         }
@@ -75850,8 +75884,8 @@
       "max_discount_pct": 0
     },
     {
-      "id": 20527,
-      "slug": "frederikshavn-bryghus-imperial-stout-bb-3-aar-paa-12",
+      "id": 20555,
+      "slug": "frederikshavn-bryghus-imperial-stout-bb-3-aar-paa-13",
       "description": null,
       "name": "Imperial Stout BB 3 år på fad - Imperial stout",
       "image": "https://humledrik.dk/cache/4/6/2/8/7/7/2/fit-370x370x75.webp",
@@ -77298,32 +77332,6 @@
       "max_discount_pct": 0
     },
     {
-      "id": 13003,
-      "slug": "het-boerenerf-riesling",
-      "description": "Riesling fra Boerenerf er af typen Lambic/Geuze og er på 8,1% Riesling er en blanding af ung og gammel lambic og Rieslingvin lavet på alsatiske Riesling-druer hos Boerenerf.",
-      "name": "Riesling 8,1% 75cl",
-      "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/riesling-8-75cl.png?v=1749981116",
-      "type": "Lambic",
-      "abv": 8.1,
-      "volume_cl": 75.0,
-      "brewery": "Het Boerenerf",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Brygshoppen",
-          "price": 225.0,
-          "url": "https://brygshoppen.dk/products/riesling-8-75cl",
-          "discount_pct": 0,
-          "old_price": null
-        }
-      ],
-      "cheapest_price": 225.0,
-      "min_price": 225.0,
-      "shop": "Brygshoppen",
-      "discount_pct": 0,
-      "max_discount_pct": 0
-    },
-    {
       "id": 16958,
       "slug": "finback-bqe-double-banana-coconut",
       "description": "2022 Vintage Country: USA Untappd Ratings: 4,23 Brewery Notes: Imperial stout with cacao nibs, Invisible Force Brazil Yuki Minami Coffee, banana and coconut. Aged in bourbon barrels 2022.",
@@ -77452,6 +77460,32 @@
       "shop": "A Good Case",
       "discount_pct": 40.8,
       "max_discount_pct": 40.8
+    },
+    {
+      "id": 13003,
+      "slug": "het-boerenerf-riesling",
+      "description": "Riesling fra Het Boerenerf er af typen Fruit Lambic og er på 8,1% Riesling er en lambic blandet med vin af alsaciske Riesling-druer, og Untappd skriver, at bryggeriet ikke længere laver den. Vores tidligere tekst fortæller, at øllen er en blanding af ung og gammel lambic og rieslingvin lavet hos Boerenerf. Lambic er en spontangæret belgisk øl, der modner på træfade, og her bidrager druen med friskhed og frugt. En smager på Untappd kalder den en let drue-lambic, og en anden synes, at den smager af almindelig drue. Denne flaske er fra 2023, og med 8,1% er den stærkere end de fleste lambic.",
+      "name": "Riesling 8,1% 75cl",
+      "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/riesling-8-75cl.png?v=1749981116",
+      "type": "Lambic",
+      "abv": 8.1,
+      "volume_cl": 75.0,
+      "brewery": "Het Boerenerf",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Brygshoppen",
+          "price": 225.0,
+          "url": "https://brygshoppen.dk/products/riesling-8-75cl",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 225.0,
+      "min_price": 225.0,
+      "shop": "Brygshoppen",
+      "discount_pct": 0,
+      "max_discount_pct": 0
     },
     {
       "id": 15508,
