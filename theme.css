@@ -144,3 +144,6 @@ select,input[type=text],input[type=search]{border-radius:2px!important}
   .bm-fund{padding:1.1rem 1rem}.bm-fund-card{flex-direction:column;align-items:stretch;gap:.9rem}.bm-fund-photo{width:100%;height:150px}.bm-fund-cta{text-align:center}
 }
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}
+
+/* mobil: filter-skuffen skal vaere ugennemsigtig (den ligger oven paa indholdet) */
+@media (max-width:1100px){ .sidebar{background:var(--surface)!important} }
