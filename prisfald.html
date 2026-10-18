@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#08070a">
+<title>Prisfald – BeerSniffer (privat)</title>
+<style>
+@font-face{font-family:'DM Sans';font-weight:100 1000;font-display:swap;src:url('fonts/dm-sans-latin-wght-normal.woff2') format('woff2')}
+@font-face{font-family:'Playfair Display';font-weight:400 900;font-display:swap;src:url('fonts/playfair-display-latin-wght-normal.woff2') format('woff2')}
+:root{--bg:#08070a;--surface:#100d11;--surface2:#16121a;--border:rgba(217,162,51,.18);--border-l:rgba(217,162,51,.34);--text:#f0e8d8;--muted:#cfc6b6;--dim:#b3a898;--gold:#d9a233;--gold-l:#f0c35e;--green:#7cc79a;--serif:'Playfair Display',Georgia,serif}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--text);font-family:'DM Sans',system-ui,sans-serif;font-size:15px;line-height:1.45;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+.bar{display:flex;justify-content:space-between;align-items:center;gap:1rem;padding:.7rem 1.4rem;border-bottom:1px solid var(--border);background:rgba(8,7,10,.9);position:sticky;top:0;z-index:5;backdrop-filter:blur(10px)}
+.word{font-family:var(--serif);letter-spacing:.3em;text-transform:uppercase;color:var(--gold-l);font-size:.95rem;text-decoration:none}
+.priv{font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;color:var(--dim)}
+main{max-width:1000px;margin:0 auto;padding:1.6rem 1.2rem 3rem}
+h1{font-family:var(--serif);font-weight:500;font-size:clamp(1.8rem,4vw,2.6rem);margin-bottom:.3rem}
+.sub{color:var(--muted);font-size:.9rem;margin-bottom:1.1rem}
+.tabs{display:flex;gap:.5rem;flex-wrap:wrap;margin-bottom:1rem}
+.tab{background:transparent;border:1px solid var(--border-l);color:var(--muted);padding:.6rem 1rem;border-radius:2px;font:inherit;font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;cursor:pointer}
+.tab b{color:var(--gold-l);margin-left:.4rem}
+.tab.on{border-color:var(--gold);color:var(--gold-l);background:rgba(217,162,51,.08)}
+.ctrl{display:flex;flex-wrap:wrap;gap:.6rem;align-items:center;margin-bottom:.9rem}
+.ctrl input[type=search],.ctrl select{background:var(--surface);border:1px solid var(--border-l);color:var(--text);padding:.55rem .7rem;border-radius:2px;font:inherit;font-size:.85rem}
+.ctrl input[type=search]{flex:1 1 200px;min-width:160px}
+.ctrl label{display:flex;gap:.4rem;align-items:center;color:var(--muted);font-size:.85rem;cursor:pointer}
+.sum{color:var(--muted);font-size:.85rem;margin:.2rem 0 .8rem}
+.sum b{color:var(--gold-l);font-weight:600}
+.row{display:grid;grid-template-columns:1fr auto;gap:.5rem 1rem;padding:.85rem 1rem;background:var(--surface);border:1px solid var(--border);border-radius:3px;margin-bottom:.5rem}
+.row:hover{border-color:var(--gold)}
+.name{font-family:var(--serif);font-weight:500;font-size:1.05rem;text-decoration:none}
+.name:hover{color:var(--gold-l)}
+.meta{color:var(--dim);font-size:.8rem;margin-top:.1rem}
+.shop{font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold-l);margin-bottom:.15rem}
+.right{text-align:right}
+.price{white-space:nowrap}
+.price s{color:var(--dim);margin-right:.35rem;text-decoration-color:#d7cfc0}
+.price b{font-family:var(--serif);font-size:1.25rem;font-weight:500;color:var(--gold-l)}
+.delta{color:var(--green);font-weight:600;font-size:.85rem}
+.tags{display:flex;gap:.4rem;flex-wrap:wrap;align-items:center;margin-top:.35rem}
+.tag{font-size:.66rem;letter-spacing:.1em;text-transform:uppercase;padding:.15rem .45rem;border:1px solid var(--border-l);border-radius:2px;color:var(--gold-l)}
+.tag.g{border-color:rgba(124,199,154,.5);color:var(--green)}
+.buy{display:inline-block;margin-top:.45rem;font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;border:1px solid var(--gold);color:var(--gold-l);padding:.3rem .7rem;border-radius:2px;text-decoration:none}
+.buy:hover{background:var(--gold);color:#0a0806}
+.tom{padding:2rem 1rem;text-align:center;color:var(--muted);border:1px dashed var(--border-l);border-radius:3px}
+.foot{margin-top:2rem;color:var(--dim);font-size:.75rem;border-top:1px solid var(--border);padding-top:.9rem}
+@media(max-width:560px){main{padding:1.1rem .8rem 2.5rem}.row{grid-template-columns:1fr}.right{text-align:left}.tab{flex:1}}
+</style>
+</head>
+<body>
+<header class="bar"><a class="word" href="./">BeerSniffer</a><span class="priv">Prisfald · privat oversigt</span></header>
+<main>
+<h1>Prisfald</h1>
+<p class="sub" id="sub"></p>
+<div class="tabs" id="tabs"></div>
+<div class="ctrl">
+  <input type="search" id="q" placeholder="Søg øl, bryggeri eller butik …" aria-label="Søg">
+  <select id="shop" aria-label="Butik"><option value="">Alle butikker</option></select>
+  <select id="minpct" aria-label="Mindste fald"><option value="0">Alle fald</option><option value="10">Mindst 10 %</option><option value="20">Mindst 20 %</option><option value="30">Mindst 30 %</option></select>
+  <select id="sort" aria-label="Sortér"><option value="pc">Størst fald (%)</option><option value="d">Størst fald (kr)</option><option value="p">Laveste pris</option><option value="sh">Butik</option><option value="n">Navn</option></select>
+  <label><input type="checkbox" id="cheap"> Kun billigste pris</label>
+</div>
+<div class="sum" id="sum"></div>
+<div id="list"></div>
+<p class="foot" id="foot"></p>
+</main>
+<script>
+const DATA = {"sidste":[{"s":"ebeltoft-gaardbryggeri-petroleum-i-p-a-cryo-fresh","n":"Ebeltoft Gaardbryggeri - Petroleum I.P.A. Cryo Fresh #2 Simcoe","b":"Ebeltoft Gaardbryggeri","t":"West Coast IPA","c":33.0,"sh":"Øltanken","o":31.0,"p":20.0,"d":11.0,"pc":35.5,"u":"https://oltanken.dk/products/ebeltoft-gaardbryggeri-petroleum-i-p-a-cryo-fresh-2-simcoe","m":true,"nm":true},{"s":"ebeltoft-gaardbryggeri-wildflower-neipa","n":"Ebeltoft Gårdbryggeri - Wildflower NeIPA","b":"Ebeltoft Gårdbryggeri","t":"New England IPA","c":33.0,"sh":"Øltanken","o":29.0,"p":20.0,"d":9.0,"pc":31.0,"u":"https://oltanken.dk/products/ebeltoft-gardbryggeri-wildflower-0-33-l","m":true,"nm":true},{"s":"ebeltoft-gaardbryggeri-raw-power-2","n":"Ebeltoft Gårdbryggeri - Raw Power 0,33 L","b":"Ebeltoft Gårdbryggeri","t":"New England IPA","c":33.0,"sh":"Øltanken","o":29.0,"p":20.0,"d":9.0,"pc":31.0,"u":"https://oltanken.dk/products/ebeltoft-gardbryggeri-raw-power","m":true,"nm":true},{"s":"ebeltoft-gaardbryggeri-lust-for-life","n":"Ebeltoft Gårdbryggeri, Lust for Life","b":"Ebeltoft Gårdbryggeri","t":"IPA","c":33.0,"sh":"Øltanken","o":29.0,"p":20.0,"d":9.0,"pc":31.0,"u":"https://oltanken.dk/products/ebeltoft-gardbryggeri-lust-for-life","m":true,"nm":true},{"s":"ebeltoft-gaardbryggeri-weissbier","n":"Ebeltoft Gårdbryggeri, Weissbier","b":"Ebeltoft Gårdbryggeri","t":"Hvedeøl","c":33.0,"sh":"Øltanken","o":29.0,"p":20.0,"d":9.0,"pc":31.0,"u":"https://oltanken.dk/products/ebeltoft-gaarsbryggeri-wiessbier","m":true,"nm":true},{"s":"ebeltoft-gaardbryggeri-saison","n":"Ebeltoft Gårdbryggeri, Saison","b":"Ebeltoft Gårdbryggeri","t":"Saison","c":33.0,"sh":"Øltanken","o":29.0,"p":20.0,"d":9.0,"pc":31.0,"u":"https://oltanken.dk/products/ebeltoft-gaarbryggeri-saison","m":true,"nm":true},{"s":"vocation-baltic-porter-margaux-ba-stout","n":"Vocation - Baltic Porter Margaux BA Stout","b":"Vocation","t":"Stout","c":33.0,"sh":"Øltanken","o":55.0,"p":40.0,"d":15.0,"pc":27.3,"u":"https://oltanken.dk/products/vocation-baltic-porter-margaux-ba-stout","m":true,"nm":true},{"s":"timber-ales-lumberjack-style-tangerine-wax","n":"Timber Ales - Lumberjack Style (Tangerine wax)","b":"Timber Ales","t":"Imperial Stout","c":50.0,"sh":"Øltanken","o":430.0,"p":370.0,"d":60.0,"pc":14.0,"u":"https://oltanken.dk/products/timber-ales-lumberjack-style-tangerine-wax","m":true,"nm":true},{"s":"timber-ales-x-horusx-mindful-ales-ba-maris","n":"Timber Ales x Horusx Mindful Ales - BA Maris Blend Five (Pink wax)","b":"Timber Ales x Horusx Mindful Ales","t":"Stout","c":50.0,"sh":"Øltanken","o":430.0,"p":370.0,"d":60.0,"pc":14.0,"u":"https://oltanken.dk/products/timber-ales-x-horus-x-mindful-ales-barrel-aged-maris-blend-five-pink-wax","m":true,"nm":true}],"igaar":[{"s":"ebeltoft-gaardbryggeri-petroleum-i-p-a-cryo-fresh","n":"Ebeltoft Gaardbryggeri - Petroleum I.P.A. Cryo Fresh #2 Simcoe","b":"Ebeltoft Gaardbryggeri","t":"West Coast IPA","c":33.0,"sh":"Øltanken","o":31.0,"p":20.0,"d":11.0,"pc":35.5,"u":"https://oltanken.dk/products/ebeltoft-gaardbryggeri-petroleum-i-p-a-cryo-fresh-2-simcoe","m":true,"nm":true},{"s":"ebeltoft-gaardbryggeri-wildflower-neipa","n":"Ebeltoft Gårdbryggeri - Wildflower NeIPA","b":"Ebeltoft Gårdbryggeri","t":"New England IPA","c":33.0,"sh":"Øltanken","o":29.0,"p":20.0,"d":9.0,"pc":31.0,"u":"https://oltanken.dk/products/ebeltoft-gardbryggeri-wildflower-0-33-l","m":true,"nm":true},{"s":"ebeltoft-gaardbryggeri-raw-power-2","n":"Ebeltoft Gårdbryggeri - Raw Power 0,33 L","b":"Ebeltoft Gårdbryggeri","t":"New England IPA","c":33.0,"sh":"Øltanken","o":29.0,"p":20.0,"d":9.0,"pc":31.0,"u":"https://oltanken.dk/products/ebeltoft-gardbryggeri-raw-power","m":true,"nm":true},{"s":"ebeltoft-gaardbryggeri-lust-for-life","n":"Ebeltoft Gårdbryggeri, Lust for Life","b":"Ebeltoft Gårdbryggeri","t":"IPA","c":33.0,"sh":"Øltanken","o":29.0,"p":20.0,"d":9.0,"pc":31.0,"u":"https://oltanken.dk/products/ebeltoft-gardbryggeri-lust-for-life","m":true,"nm":true},{"s":"ebeltoft-gaardbryggeri-weissbier","n":"Ebeltoft Gårdbryggeri, Weissbier","b":"Ebeltoft Gårdbryggeri","t":"Hvedeøl","c":33.0,"sh":"Øltanken","o":29.0,"p":20.0,"d":9.0,"pc":31.0,"u":"https://oltanken.dk/products/ebeltoft-gaarsbryggeri-wiessbier","m":true,"nm":true},{"s":"ebeltoft-gaardbryggeri-saison","n":"Ebeltoft Gårdbryggeri, Saison","b":"Ebeltoft Gårdbryggeri","t":"Saison","c":33.0,"sh":"Øltanken","o":29.0,"p":20.0,"d":9.0,"pc":31.0,"u":"https://oltanken.dk/products/ebeltoft-gaarbryggeri-saison","m":true,"nm":true},{"s":"vocation-baltic-porter-margaux-ba-stout","n":"Vocation - Baltic Porter Margaux BA Stout","b":"Vocation","t":"Stout","c":33.0,"sh":"Øltanken","o":55.0,"p":40.0,"d":15.0,"pc":27.3,"u":"https://oltanken.dk/products/vocation-baltic-porter-margaux-ba-stout","m":true,"nm":true},{"s":"timber-ales-lumberjack-style-tangerine-wax","n":"Timber Ales - Lumberjack Style (Tangerine wax)","b":"Timber Ales","t":"Imperial Stout","c":50.0,"sh":"Øltanken","o":430.0,"p":370.0,"d":60.0,"pc":14.0,"u":"https://oltanken.dk/products/timber-ales-lumberjack-style-tangerine-wax","m":true,"nm":true},{"s":"timber-ales-x-horusx-mindful-ales-ba-maris","n":"Timber Ales x Horusx Mindful Ales - BA Maris Blend Five (Pink wax)","b":"Timber Ales x Horusx Mindful Ales","t":"Stout","c":50.0,"sh":"Øltanken","o":430.0,"p":370.0,"d":60.0,"pc":14.0,"u":"https://oltanken.dk/products/timber-ales-x-horus-x-mindful-ales-barrel-aged-maris-blend-five-pink-wax","m":true,"nm":true}],"info":{"nu":"18/10 kl. 16.20","sidste_ts":"18/10 kl. 12.31","igaar_ts":"18/10 kl. 12.31","start":"igaar","foerste":false,"antal_priser":3499}};
+const $ = id => document.getElementById(id);
+const fmt = x => (Math.abs(x - Math.round(x)) < 0.005 ? Math.round(x).toLocaleString('da-DK') : x.toLocaleString('da-DK', {minimumFractionDigits: 2, maximumFractionDigits: 2})) + ' kr';
+let tab = DATA.info.start;
+const lists = {sidste: DATA.sidste, igaar: DATA.igaar};
+function el(tag, cls, text) { const e = document.createElement(tag); if (cls) e.className = cls; if (text != null) e.textContent = text; return e; }
+function build() {
+  $('sub').textContent = DATA.info.foerste
+    ? 'Første kørsel er gemt. Prisfald vises fra næste kørsel.'
+    : 'Opdateret ' + DATA.info.nu + '. Sammenlignet med kørslen ' + (tab === 'igaar' ? DATA.info.igaar_ts + ' (seneste før i dag)' : DATA.info.sidste_ts + ' (forrige kørsel)') + '.';
+  const tabs = $('tabs'); tabs.textContent = '';
+  [['sidste', 'Siden sidste kørsel'], ['igaar', 'Siden i går']].forEach(([k, label]) => {
+    const b = el('button', 'tab' + (tab === k ? ' on' : ''), label); b.type = 'button';
+    b.appendChild(el('b', '', String(lists[k].length)));
+    b.onclick = () => { tab = k; build(); render(); };
+    tabs.appendChild(b);
+  });
+  const shops = [...new Set(lists.sidste.concat(lists.igaar).map(r => r.sh))].sort((a, b) => a.localeCompare(b, 'da'));
+  const sel = $('shop'), cur = sel.value; sel.length = 1;
+  shops.forEach(s => { const o = el('option', '', s); o.value = s; sel.appendChild(o); });
+  sel.value = shops.includes(cur) ? cur : '';
+  $('foot').textContent = 'Siden er ikke linket fra BeerSniffer, står ikke i sitemap og er markeret noindex. Et fald tæller fra mindst 2 % og 1 kr. Køb-knapper åbner butikkens egen side.';
+}
+function render() {
+  const q = $('q').value.trim().toLowerCase(), shop = $('shop').value, minpct = +$('minpct').value, cheap = $('cheap').checked, sort = $('sort').value;
+  let rows = lists[tab].filter(r => (!shop || r.sh === shop) && r.pc >= minpct && (!cheap || r.m) &&
+    (!q || (r.n + ' ' + r.b + ' ' + r.sh + ' ' + r.t).toLowerCase().includes(q)));
+  const cmp = {pc: (a, b) => b.pc - a.pc, d: (a, b) => b.d - a.d, p: (a, b) => a.p - b.p, sh: (a, b) => a.sh.localeCompare(b.sh, 'da') || b.pc - a.pc, n: (a, b) => a.n.localeCompare(b.n, 'da')}[sort];
+  rows.sort(cmp);
+  const list = $('list'); list.textContent = '';
+  const beers = new Set(rows.map(r => r.s)).size, nshops = new Set(rows.map(r => r.sh)).size;
+  const sum = $('sum'); sum.textContent = '';
+  if (rows.length) {
+    const top = rows.slice().sort((a, b) => b.pc - a.pc)[0];
+    sum.append(el('b', '', rows.length + ' prisfald'), ' på ' + beers + ' øl i ' + nshops + ' butikker. Største fald: ' + top.n + ' (' + top.sh + ', −' + top.pc.toString().replace('.', ',') + ' %).');
+  }
+  if (!rows.length) {
+    list.appendChild(el('div', 'tom', DATA.info.foerste ? 'Ingen sammenligning endnu. Kør opdateringen igen, så vises prisfald her.' : (lists[tab].length ? 'Ingen prisfald matcher dine filtre.' : 'Ingen øl er faldet i pris siden ' + (tab === 'igaar' ? 'i går' : 'sidste kørsel') + '.')));
+    return;
+  }
+  const frag = document.createDocumentFragment();
+  rows.forEach(r => {
+    const row = el('div', 'row'), left = el('div'), right = el('div', 'right');
+    const a = el('a', 'name', r.n); a.href = 'ol/' + encodeURIComponent(r.s) + '/'; left.appendChild(a);
+    left.appendChild(el('div', 'meta', [r.b, r.t, r.c ? r.c + ' cl' : ''].filter(Boolean).join(' · ')));
+    const tags = el('div', 'tags');
+    if (r.m) tags.appendChild(el('span', 'tag g', 'Billigst nu'));
+    if (r.nm) tags.appendChild(el('span', 'tag', 'Ny laveste pris'));
+    if (tags.childNodes.length) left.appendChild(tags);
+    right.appendChild(el('div', 'shop', r.sh));
+    const price = el('div', 'price'); price.appendChild(el('s', '', fmt(r.o))); price.appendChild(el('b', '', fmt(r.p))); right.appendChild(price);
+    right.appendChild(el('div', 'delta', '−' + fmt(r.d) + ' (−' + r.pc.toString().replace('.', ',') + ' %)'));
+    if (r.u) { const buy = el('a', 'buy', 'Køb →'); buy.href = r.u; buy.target = '_blank'; buy.rel = 'sponsored noopener nofollow'; right.appendChild(buy); }
+    row.appendChild(left); row.appendChild(right); frag.appendChild(row);
+  });
+  list.appendChild(frag);
+}
+['q', 'shop', 'minpct', 'sort', 'cheap'].forEach(id => $(id).addEventListener(id === 'q' ? 'input' : 'change', render));
+build(); render();
+</script>
+</body>
+</html>
