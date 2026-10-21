@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-10-21T09:25:48.031861",
+  "updated_at": "2026-10-21T09:36:34.755916",
   "stats": {
-    "total": 3170,
+    "total": 3171,
     "deals": 499,
     "shops": 14,
     "shop_names": [
@@ -247,8 +247,8 @@
       "max_discount_pct": 0
     },
     {
-      "id": 20965,
-      "slug": "hancock-bryggerierne-black-lager-3",
+      "id": 20998,
+      "slug": "hancock-bryggerierne-black-lager-4",
       "description": null,
       "name": "Black Lager",
       "image": "https://humledrik.dk/cache/4/8/8/3/6/0/1/fit-370x370x75.webp",
@@ -1531,8 +1531,8 @@
       "max_discount_pct": 0
     },
     {
-      "id": 20975,
-      "slug": "leo-beer-148",
+      "id": 21008,
+      "slug": "leo-beer-149",
       "description": "Leo Beer er en forfriskende lagerøl fra Thailand, kendt for sin bløde smag og let bitre afslutning. Brygget med malt, ris og humle, leverer den en afbalanceret og letdrikkelig profil, som gør den velegnet til både krydret mad og afslappede øjeblikke. Den gyldne farve og moderate alkoholprocent på 5 % gør den til en klassiker i både Thailand og blandt ølentusiaster verden over. Perfekt til grillmad, thaimad eller som en tropisk ledsager på varme dage. Hvis du er på jagt efter en velsmagende øl med international karakter og god balance, er Leo Beer et oplagt valg.",
       "name": "Leo Beer",
       "image": "https://www.vildmedvin.dk/img/1000/1000/resize/l/e/leo-beer-33-cl_large.jpg",
@@ -2157,16 +2157,16 @@
           "old_price": null
         },
         {
-          "shop_name": "Best of Beers",
+          "shop_name": "Vild med Vin",
           "price": 26.0,
-          "url": "https://www.bestofbeers.dk/shop/foroya-bjor-slupp-beer-de-luxe-amber-lager-033-l-58/",
+          "url": "https://www.vildmedvin.dk/foroya-bjor-slupp-ol",
           "discount_pct": 0,
           "old_price": null
         },
         {
-          "shop_name": "Vild med Vin",
+          "shop_name": "Best of Beers",
           "price": 26.0,
-          "url": "https://www.vildmedvin.dk/foroya-bjor-slupp-ol",
+          "url": "https://www.bestofbeers.dk/shop/foroya-bjor-slupp-beer-de-luxe-amber-lager-033-l-58/",
           "discount_pct": 0,
           "old_price": null
         }
@@ -4155,14 +4155,14 @@
       "category": null,
       "prices": [
         {
-          "shop_name": "Olle Glad",
+          "shop_name": "Ølleglad",
           "price": 29.0,
           "url": "https://olleglad.dk/ebeltoft-gaardbryggeri-baltazar",
           "discount_pct": 0,
           "old_price": null
         },
         {
-          "shop_name": "Ølleglad",
+          "shop_name": "Olle Glad",
           "price": 29.0,
           "url": "https://olleglad.dk/ebeltoft-gaardbryggeri-baltazar",
           "discount_pct": 0,
@@ -4171,7 +4171,7 @@
       ],
       "cheapest_price": 29.0,
       "min_price": 29.0,
-      "shop": "Olle Glad",
+      "shop": "Ølleglad",
       "discount_pct": 0,
       "max_discount_pct": 0
     },
@@ -4214,14 +4214,14 @@
       "category": null,
       "prices": [
         {
-          "shop_name": "Olle Glad",
+          "shop_name": "Ølleglad",
           "price": 29.0,
           "url": "https://olleglad.dk/roede-ord-ebeltoft",
           "discount_pct": 0,
           "old_price": null
         },
         {
-          "shop_name": "Ølleglad",
+          "shop_name": "Olle Glad",
           "price": 29.0,
           "url": "https://olleglad.dk/roede-ord-ebeltoft",
           "discount_pct": 0,
@@ -4237,7 +4237,7 @@
       ],
       "cheapest_price": 29.0,
       "min_price": 29.0,
-      "shop": "Olle Glad",
+      "shop": "Ølleglad",
       "discount_pct": 0,
       "max_discount_pct": 0
     },
@@ -8192,6 +8192,47 @@
       "max_discount_pct": 25.6
     },
     {
+      "id": 12988,
+      "slug": "corsendonk-christmas-ale",
+      "description": "Christmas Ale fra Brouwerij Corsendonk er af typen Winter Ale og er på 8,1% Denne festlige øl præsenterer sig med en smuk rødbrun farve og et rigt skum. Corsendonk Christmas Ale er en traditionel belgisk juleøl, der bringer varme og hygge til vintermånederne. Øllen har en indbydende og nostalgisk fremtoning, der vækker minder om juletraditioner og familiehygge omkring juletræet. Smagsprofilen byder på en fyldig og krydret karakter med aromaer af karamel, lakrids og koriander, der skaber en kompleks og indbydende duft. Den har også lette frugtige noter, der balancerer den rige maltbase.",
+      "name": "Corsendonk Christmas Ale 8,1% 33cl",
+      "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/corsendonk-christmas-33cl.png?v=1686771051",
+      "type": "Winter Ale",
+      "abv": 8.1,
+      "volume_cl": 33.0,
+      "brewery": "Brouwerij Corsendonk",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Humledrik",
+          "price": 33.0,
+          "url": "https://humledrik.dk/corsendonk-christmas-ale-33-cl",
+          "discount_pct": 0,
+          "old_price": null
+        },
+        {
+          "shop_name": "Beermatch",
+          "price": 34.0,
+          "url": "https://www.beermatch.dk/products/corsendonk-corsendonk-christmas-ale-2025",
+          "discount_pct": 0,
+          "old_price": null
+        },
+        {
+          "shop_name": "Best of Beers",
+          "price": 36.0,
+          "url": "https://www.bestofbeers.dk/shop/corsendonk-christmas-ale-brown-ale-033-l-81/",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 33.0,
+      "min_price": 33.0,
+      "shop": "Humledrik",
+      "discount_pct": 0,
+      "max_discount_pct": 0,
+      "price_change_7d": 3.0
+    },
+    {
       "id": 13265,
       "slug": "brouwerij-verhaeghe-duchesse-du-bourgogne",
       "description": "Duchesse Du Bourgogne fra Brouwerij Verhaeghe er af typen Flanders Red Ale og er på 6,2% Øllen er dyb mahognirød med et blødt, cremet skum — allerede i glasset signalerer den karakter. Duchesse Du Bourgogne er lagret på egetræsfade i op til to år, og det sætter sit tydelige præg på den færdige øl med en naturlig dybde og kompleksitet. Smagen åbner med mørke, modne frugter — blommer, kirsebær og et strejf af vanilje — efterfulgt af en frisk, vinagtig syrlighed der holder sødmen i skak. Bitterheden er næsten fraværende, og eftersmagen er lang, blød og let frugtagtig med en fin egetræsfinish.",
@@ -8228,39 +8269,6 @@
       "cheapest_price": 33.0,
       "min_price": 33.0,
       "shop": "Brygshoppen",
-      "discount_pct": 0,
-      "max_discount_pct": 0
-    },
-    {
-      "id": 12988,
-      "slug": "corsendonk-christmas-ale",
-      "description": "Christmas Ale fra Brouwerij Corsendonk er af typen Winter Ale og er på 8,1% Denne festlige øl præsenterer sig med en smuk rødbrun farve og et rigt skum. Corsendonk Christmas Ale er en traditionel belgisk juleøl, der bringer varme og hygge til vintermånederne. Øllen har en indbydende og nostalgisk fremtoning, der vækker minder om juletraditioner og familiehygge omkring juletræet. Smagsprofilen byder på en fyldig og krydret karakter med aromaer af karamel, lakrids og koriander, der skaber en kompleks og indbydende duft. Den har også lette frugtige noter, der balancerer den rige maltbase.",
-      "name": "Corsendonk Christmas Ale 8,1% 33cl",
-      "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/corsendonk-christmas-33cl.png?v=1686771051",
-      "type": "Winter Ale",
-      "abv": 8.1,
-      "volume_cl": 33.0,
-      "brewery": "Brouwerij Corsendonk",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Humledrik",
-          "price": 33.0,
-          "url": "https://humledrik.dk/corsendonk-christmas-ale-33-cl",
-          "discount_pct": 0,
-          "old_price": null
-        },
-        {
-          "shop_name": "Beermatch",
-          "price": 34.0,
-          "url": "https://www.beermatch.dk/products/corsendonk-corsendonk-christmas-ale-2025",
-          "discount_pct": 0,
-          "old_price": null
-        }
-      ],
-      "cheapest_price": 33.0,
-      "min_price": 33.0,
-      "shop": "Humledrik",
       "discount_pct": 0,
       "max_discount_pct": 0
     },
@@ -8331,7 +8339,7 @@
         {
           "shop_name": "Vild med Vin",
           "price": 33.0,
-          "url": "https://www.vildmedvin.dk/hornbeer-okologisk-czech-cat",
+          "url": "https://www.vildmedvin.dk/hornbeer-okologisk-red-cow",
           "discount_pct": 0,
           "old_price": null
         }
@@ -10073,16 +10081,16 @@
       "category": null,
       "prices": [
         {
-          "shop_name": "Brygshoppen",
+          "shop_name": "Humledrik",
           "price": 35.0,
-          "url": "https://brygshoppen.dk/products/karmeliet-tripel-33cl",
+          "url": "https://humledrik.dk/tripel-karmeliet-tripel",
           "discount_pct": 0,
           "old_price": null
         },
         {
-          "shop_name": "Humledrik",
+          "shop_name": "Brygshoppen",
           "price": 35.0,
-          "url": "https://humledrik.dk/tripel-karmeliet-tripel",
+          "url": "https://brygshoppen.dk/products/karmeliet-tripel-33cl",
           "discount_pct": 0,
           "old_price": null
         },
@@ -10096,7 +10104,7 @@
       ],
       "cheapest_price": 35.0,
       "min_price": 35.0,
-      "shop": "Brygshoppen",
+      "shop": "Humledrik",
       "discount_pct": 0,
       "max_discount_pct": 0
     },
@@ -10113,16 +10121,16 @@
       "category": null,
       "prices": [
         {
-          "shop_name": "Brygshoppen",
+          "shop_name": "Humledrik",
           "price": 35.0,
-          "url": "https://brygshoppen.dk/products/rodenbach-grand-cru-33cl",
+          "url": "https://humledrik.dk/rodenbach-grand-cru",
           "discount_pct": 0,
           "old_price": null
         },
         {
-          "shop_name": "Humledrik",
+          "shop_name": "Brygshoppen",
           "price": 35.0,
-          "url": "https://humledrik.dk/rodenbach-grand-cru",
+          "url": "https://brygshoppen.dk/products/rodenbach-grand-cru-33cl",
           "discount_pct": 0,
           "old_price": null
         },
@@ -10136,7 +10144,7 @@
       ],
       "cheapest_price": 35.0,
       "min_price": 35.0,
-      "shop": "Brygshoppen",
+      "shop": "Humledrik",
       "discount_pct": 0,
       "max_discount_pct": 0
     },
@@ -10240,16 +10248,16 @@
           "old_price": 49.0
         },
         {
-          "shop_name": "BeerBarrel",
+          "shop_name": "Vild med Vin",
           "price": 55.0,
-          "url": "https://www.beerbarrel.dk/vare/liquid-cocaine/",
+          "url": "https://www.vildmedvin.dk/mad-scientist-liquid-cocaine",
           "discount_pct": 0,
           "old_price": null
         },
         {
-          "shop_name": "Vild med Vin",
+          "shop_name": "BeerBarrel",
           "price": 55.0,
-          "url": "https://www.vildmedvin.dk/mad-scientist-liquid-cocaine",
+          "url": "https://www.beerbarrel.dk/vare/liquid-cocaine/",
           "discount_pct": 0,
           "old_price": null
         }
@@ -10273,23 +10281,23 @@
       "category": null,
       "prices": [
         {
-          "shop_name": "Brygshoppen",
+          "shop_name": "Humledrik",
           "price": 35.0,
-          "url": "https://brygshoppen.dk/products/i-am-triple-9-3-33cl",
+          "url": "https://humledrik.dk/i-am-triple-trippel",
           "discount_pct": 0,
           "old_price": null
         },
         {
-          "shop_name": "Humledrik",
+          "shop_name": "Brygshoppen",
           "price": 35.0,
-          "url": "https://humledrik.dk/i-am-triple-trippel",
+          "url": "https://brygshoppen.dk/products/i-am-triple-9-3-33cl",
           "discount_pct": 0,
           "old_price": null
         }
       ],
       "cheapest_price": 35.0,
       "min_price": 35.0,
-      "shop": "Brygshoppen",
+      "shop": "Humledrik",
       "discount_pct": 0,
       "max_discount_pct": 0
     },
@@ -10464,16 +10472,16 @@
       "category": null,
       "prices": [
         {
-          "shop_name": "Brygshoppen",
+          "shop_name": "Humledrik",
           "price": 35.0,
-          "url": "https://brygshoppen.dk/products/rodenbach-alexander-5-6-33cl",
+          "url": "https://humledrik.dk/rodenbach-alexander-sour",
           "discount_pct": 0,
           "old_price": null
         },
         {
-          "shop_name": "Humledrik",
+          "shop_name": "Brygshoppen",
           "price": 35.0,
-          "url": "https://humledrik.dk/rodenbach-alexander-sour",
+          "url": "https://brygshoppen.dk/products/rodenbach-alexander-5-6-33cl",
           "discount_pct": 0,
           "old_price": null
         },
@@ -10487,7 +10495,7 @@
       ],
       "cheapest_price": 35.0,
       "min_price": 35.0,
-      "shop": "Brygshoppen",
+      "shop": "Humledrik",
       "discount_pct": 0,
       "max_discount_pct": 0
     },
@@ -10763,7 +10771,7 @@
         {
           "shop_name": "Vild med Vin",
           "price": 35.0,
-          "url": "https://www.vildmedvin.dk/hornbeer-o-hops-oekologisk-ipa",
+          "url": "https://www.vildmedvin.dk/hornbeer-okologisk-godt-ol-ipa",
           "discount_pct": 0,
           "old_price": null
         }
@@ -11156,14 +11164,14 @@
       "category": null,
       "prices": [
         {
-          "shop_name": "Olle Glad",
+          "shop_name": "Ølleglad",
           "price": 35.0,
           "url": "https://olleglad.dk/aaben-sugar-plum-fairy",
           "discount_pct": 0,
           "old_price": null
         },
         {
-          "shop_name": "Ølleglad",
+          "shop_name": "Olle Glad",
           "price": 35.0,
           "url": "https://olleglad.dk/aaben-sugar-plum-fairy",
           "discount_pct": 0,
@@ -11172,7 +11180,7 @@
       ],
       "cheapest_price": 35.0,
       "min_price": 35.0,
-      "shop": "Olle Glad",
+      "shop": "Ølleglad",
       "discount_pct": 0,
       "max_discount_pct": 0
     },
@@ -11856,32 +11864,6 @@
           "shop_name": "Humledrik",
           "price": 35.0,
           "url": "https://humledrik.dk/panzer-pils-pilsner",
-          "discount_pct": 0,
-          "old_price": null
-        }
-      ],
-      "cheapest_price": 35.0,
-      "min_price": 35.0,
-      "shop": "Humledrik",
-      "discount_pct": 0,
-      "max_discount_pct": 0
-    },
-    {
-      "id": 20972,
-      "slug": "midtfyns-bryghus-session-neipa-ipa-22",
-      "description": null,
-      "name": "Session NEIPA - IPA",
-      "image": "https://humledrik.dk/cache/4/5/9/6/6/4/6/fit-370x370x75.webp",
-      "type": "New England IPA",
-      "abv": 4.5,
-      "volume_cl": 50.0,
-      "brewery": "Midtfyns Bryghus",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Humledrik",
-          "price": 35.0,
-          "url": "https://humledrik.dk/session-neipa-ipa",
           "discount_pct": 0,
           "old_price": null
         }
@@ -12699,8 +12681,8 @@
       "max_discount_pct": 0
     },
     {
-      "id": 20949,
-      "slug": "ebeltoft-gaardbryggeri-saison-4",
+      "id": 20982,
+      "slug": "ebeltoft-gaardbryggeri-saison-5",
       "description": "Saison fra Ebeltoft Gårdbryggeri er af typen Saison og er på 6% Saison er gårdens knastørre, læskende og aromatiske nordfranske gårdøl. Stilen stammer fra de franske og belgiske gårde, hvor øllen blev brygget til høstfolkene og skulle kunne slukke tørsten på varme dage. Den er humlet og tør. Smagen er frisk med peber og frugt fra gæren, og humlen giver citrus og lidt urter. Gæren sætter præg på hele øllen. Kulsyren er livlig og kroppen let, og eftersmagen er tør og krydret. Med 6% er den let at drikke og stadig karakterfuld, og den bliver ved med at være frisk.",
       "name": "Saison 6% 33cl",
       "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/saison-6-33cl.png?v=1792518177",
@@ -12725,8 +12707,8 @@
       "max_discount_pct": 0
     },
     {
-      "id": 20961,
-      "slug": "ebeltoft-gaardbryggeri-imperial-stout-194",
+      "id": 20994,
+      "slug": "ebeltoft-gaardbryggeri-imperial-stout-195",
       "description": "Imperial Stout fra Ebeltoft Gårdbryggeri er af typen Imperial Stout og er på 9,3% Imperial Stout er bryggeriets kraftigste mørke øl, lavet til de kolde måneder. I glasset er den næsten sort, og skummet er tæt og brunligt. Den hører til de øl, man skal give tid, både i glasset og i kælderen. Smagen er fyldig og sødmefuld med mørk chokolade, ristet kaffe og karamel, og når øllen får lidt temperatur, dukker lakrids og brændt karamel op. Havremalten giver en cremet, blød tekstur.",
       "name": "Imperial Stout 9,3% 33cl",
       "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/imperial-stout-9-3-33cl_e5717b14-1296-4555-8e23-bc8da32992e9.png?v=1753446200",
@@ -12751,8 +12733,8 @@
       "max_discount_pct": 0
     },
     {
-      "id": 20963,
-      "slug": "ebeltoft-gaardbryggeri-belgian-brown-181",
+      "id": 20996,
+      "slug": "ebeltoft-gaardbryggeri-belgian-brown-182",
       "description": "Belgian Brown fra Ebeltoft Gårdbryggeri er af typen Belgian Brown Ale og er på 6,8% Belgian Brown er Ebeltoft Gårdbryggeris bud på en belgisk brown ale, og Peder Zacho Hansen fra bryggeriet beskriver den selv som en let drikkelig øl med masser af smag og en let, frisk bitterhed. Ristet malt og hvedemalt giver en dyb brun farve med et rødligt skær og en fyldig smag, hvor mørk malt og karamel går hånd i hånd med et strejf af chokolade og kaffe. Bitterheden er frisk og holder sødmen i skak, og kroppen er rund og fyldig, så eftersmagen ender i mørk malt uden at blive tung ved 6,8%.",
       "name": "Belgian Brown 6,8% 33cl",
       "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/belgien-brown-33cl.png?v=1753443086",
@@ -12773,6 +12755,32 @@
       "cheapest_price": 35.0,
       "min_price": 35.0,
       "shop": "Brygshoppen",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
+      "id": 21005,
+      "slug": "midtfyns-bryghus-session-neipa-ipa-23",
+      "description": null,
+      "name": "Session NEIPA - IPA",
+      "image": "https://humledrik.dk/cache/4/5/9/6/6/4/6/fit-370x370x75.webp",
+      "type": "New England IPA",
+      "abv": 4.5,
+      "volume_cl": 50.0,
+      "brewery": "Midtfyns Bryghus",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Humledrik",
+          "price": 35.0,
+          "url": "https://humledrik.dk/session-neipa-ipa",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 35.0,
+      "min_price": 35.0,
+      "shop": "Humledrik",
       "discount_pct": 0,
       "max_discount_pct": 0
     },
@@ -12992,23 +13000,23 @@
       "category": null,
       "prices": [
         {
-          "shop_name": "Beershoppen",
+          "shop_name": "Brygshoppen",
           "price": 36.0,
-          "url": "https://beershoppen.dk/products/kwak-rouge-33-cl-8-0",
+          "url": "https://brygshoppen.dk/products/kwak-rouge-8-33cl",
           "discount_pct": 0,
           "old_price": null
         },
         {
-          "shop_name": "Brygshoppen",
+          "shop_name": "Beershoppen",
           "price": 36.0,
-          "url": "https://brygshoppen.dk/products/kwak-rouge-8-33cl",
+          "url": "https://beershoppen.dk/products/kwak-rouge-33-cl-8-0",
           "discount_pct": 0,
           "old_price": null
         }
       ],
       "cheapest_price": 36.0,
       "min_price": 36.0,
-      "shop": "Beershoppen",
+      "shop": "Brygshoppen",
       "discount_pct": 0,
       "max_discount_pct": 0
     },
@@ -15430,16 +15438,16 @@
           "old_price": null
         },
         {
-          "shop_name": "Beer Me",
+          "shop_name": "Beershoppen",
           "price": 40.0,
-          "url": "https://www.partner-ads.com/dk/klikbanner.php?bannerid=74625&partnerid=56605&htmlurl=https://www.beer-me.dk/vare/slice-town-new-england-ipa-fra-åben",
+          "url": "https://beershoppen.dk/products/slice-town-44cl-6-new-england-ipa-aben",
           "discount_pct": 0,
           "old_price": null
         },
         {
-          "shop_name": "Beershoppen",
+          "shop_name": "Beer Me",
           "price": 40.0,
-          "url": "https://beershoppen.dk/products/slice-town-44cl-6-new-england-ipa-aben",
+          "url": "https://www.partner-ads.com/dk/klikbanner.php?bannerid=74625&partnerid=56605&htmlurl=https://www.beer-me.dk/vare/slice-town-new-england-ipa-fra-åben",
           "discount_pct": 0,
           "old_price": null
         }
@@ -15707,14 +15715,14 @@
       "category": null,
       "prices": [
         {
-          "shop_name": "Olle Glad",
+          "shop_name": "Ølleglad",
           "price": 39.0,
           "url": "https://olleglad.dk/rygr-ginger-viking-papaya",
           "discount_pct": 0,
           "old_price": null
         },
         {
-          "shop_name": "Ølleglad",
+          "shop_name": "Olle Glad",
           "price": 39.0,
           "url": "https://olleglad.dk/rygr-ginger-viking-papaya",
           "discount_pct": 0,
@@ -15723,7 +15731,7 @@
       ],
       "cheapest_price": 39.0,
       "min_price": 39.0,
-      "shop": "Olle Glad",
+      "shop": "Ølleglad",
       "discount_pct": 0,
       "max_discount_pct": 0
     },
@@ -15740,14 +15748,14 @@
       "category": null,
       "prices": [
         {
-          "shop_name": "Olle Glad",
+          "shop_name": "Ølleglad",
           "price": 39.0,
           "url": "https://olleglad.dk/amager-bryghus-bye-bye-merica",
           "discount_pct": 0,
           "old_price": null
         },
         {
-          "shop_name": "Ølleglad",
+          "shop_name": "Olle Glad",
           "price": 39.0,
           "url": "https://olleglad.dk/amager-bryghus-bye-bye-merica",
           "discount_pct": 0,
@@ -15756,7 +15764,7 @@
       ],
       "cheapest_price": 39.0,
       "min_price": 39.0,
-      "shop": "Olle Glad",
+      "shop": "Ølleglad",
       "discount_pct": 0,
       "max_discount_pct": 0
     },
@@ -15773,14 +15781,14 @@
       "category": null,
       "prices": [
         {
-          "shop_name": "Olle Glad",
+          "shop_name": "Ølleglad",
           "price": 39.0,
           "url": "https://olleglad.dk/mikkeller-santa-s-little-helper-33-cl",
           "discount_pct": 0,
           "old_price": null
         },
         {
-          "shop_name": "Ølleglad",
+          "shop_name": "Olle Glad",
           "price": 39.0,
           "url": "https://olleglad.dk/mikkeller-santa-s-little-helper-33-cl",
           "discount_pct": 0,
@@ -15789,7 +15797,7 @@
       ],
       "cheapest_price": 39.0,
       "min_price": 39.0,
-      "shop": "Olle Glad",
+      "shop": "Ølleglad",
       "discount_pct": 0,
       "max_discount_pct": 0
     },
@@ -17779,23 +17787,23 @@
       "category": null,
       "prices": [
         {
-          "shop_name": "Beershoppen",
+          "shop_name": "Humledrik",
           "price": 40.0,
-          "url": "https://beershoppen.dk/products/wayan-33cl-5-8-saison-birrificio-agricolo-baladin",
+          "url": "https://humledrik.dk/wayan-saison-33-cl",
           "discount_pct": 0,
           "old_price": null
         },
         {
-          "shop_name": "Humledrik",
+          "shop_name": "Beershoppen",
           "price": 40.0,
-          "url": "https://humledrik.dk/wayan-saison-33-cl",
+          "url": "https://beershoppen.dk/products/wayan-33cl-5-8-saison-birrificio-agricolo-baladin",
           "discount_pct": 0,
           "old_price": null
         }
       ],
       "cheapest_price": 40.0,
       "min_price": 40.0,
-      "shop": "Beershoppen",
+      "shop": "Humledrik",
       "discount_pct": 0,
       "max_discount_pct": 0
     },
@@ -19719,8 +19727,8 @@
       "max_discount_pct": 0
     },
     {
-      "id": 20966,
-      "slug": "midtfyns-bryghus-double-ipa-ipa-22",
+      "id": 20999,
+      "slug": "midtfyns-bryghus-double-ipa-ipa-23",
       "description": null,
       "name": "Double IPA - IPA",
       "image": "https://humledrik.dk/cache/4/6/0/8/6/2/1/fit-370x370x75.webp",
@@ -19868,23 +19876,23 @@
       "category": null,
       "prices": [
         {
-          "shop_name": "Best of Beers",
+          "shop_name": "Vild med Vin",
           "price": 41.0,
-          "url": "https://www.bestofbeers.dk/shop/vault-city-brewing-table-sour-peach-lemon-modern-sour-beer-044-l-30/",
+          "url": "https://www.vildmedvin.dk/vault-city-peach-lemon-table-sour",
           "discount_pct": 0,
           "old_price": null
         },
         {
-          "shop_name": "Vild med Vin",
+          "shop_name": "Best of Beers",
           "price": 41.0,
-          "url": "https://www.vildmedvin.dk/vault-city-peach-lemon-table-sour",
+          "url": "https://www.bestofbeers.dk/shop/vault-city-brewing-table-sour-peach-lemon-modern-sour-beer-044-l-30/",
           "discount_pct": 0,
           "old_price": null
         }
       ],
       "cheapest_price": 41.0,
       "min_price": 41.0,
-      "shop": "Best of Beers",
+      "shop": "Vild med Vin",
       "discount_pct": 0,
       "max_discount_pct": 0
     },
@@ -20506,14 +20514,14 @@
       "category": null,
       "prices": [
         {
-          "shop_name": "Olle Glad",
+          "shop_name": "Ølleglad",
           "price": 42.0,
           "url": "https://olleglad.dk/blech.brut-bit-weaponized-stupidity",
           "discount_pct": 0,
           "old_price": null
         },
         {
-          "shop_name": "Ølleglad",
+          "shop_name": "Olle Glad",
           "price": 42.0,
           "url": "https://olleglad.dk/blech.brut-bit-weaponized-stupidity",
           "discount_pct": 0,
@@ -20522,7 +20530,7 @@
       ],
       "cheapest_price": 42.0,
       "min_price": 42.0,
-      "shop": "Olle Glad",
+      "shop": "Ølleglad",
       "discount_pct": 0,
       "max_discount_pct": 0
     },
@@ -22241,7 +22249,7 @@
         {
           "shop_name": "Best of Beers",
           "price": 51.0,
-          "url": "https://www.bestofbeers.dk/shop/hornbeer-bryggeri-dirty-danish-oil-russian-imperial-stout-033-l-120/",
+          "url": "https://www.bestofbeers.dk/shop/hornbeer-bryggeri-vladimir-p-triple-russian-xxl-imperial-stout-033-l-120/",
           "discount_pct": 0,
           "old_price": null
         }
@@ -22317,14 +22325,14 @@
       "category": null,
       "prices": [
         {
-          "shop_name": "Olle Glad",
+          "shop_name": "Ølleglad",
           "price": 45.0,
           "url": "https://olleglad.dk/storesoester-ser-sort-44-cl",
           "discount_pct": 0,
           "old_price": null
         },
         {
-          "shop_name": "Ølleglad",
+          "shop_name": "Olle Glad",
           "price": 45.0,
           "url": "https://olleglad.dk/storesoester-ser-sort-44-cl",
           "discount_pct": 0,
@@ -22340,7 +22348,7 @@
       ],
       "cheapest_price": 45.0,
       "min_price": 45.0,
-      "shop": "Olle Glad",
+      "shop": "Ølleglad",
       "discount_pct": 0,
       "max_discount_pct": 0
     },
@@ -22357,14 +22365,14 @@
       "category": null,
       "prices": [
         {
-          "shop_name": "Olle Glad",
+          "shop_name": "Ølleglad",
           "price": 45.0,
           "url": "https://olleglad.dk/ae-kaffekande-er-sprunget-i-luften-44-cl",
           "discount_pct": 0,
           "old_price": null
         },
         {
-          "shop_name": "Ølleglad",
+          "shop_name": "Olle Glad",
           "price": 45.0,
           "url": "https://olleglad.dk/ae-kaffekande-er-sprunget-i-luften-44-cl",
           "discount_pct": 0,
@@ -22380,7 +22388,7 @@
       ],
       "cheapest_price": 45.0,
       "min_price": 45.0,
-      "shop": "Olle Glad",
+      "shop": "Ølleglad",
       "discount_pct": 0,
       "max_discount_pct": 0
     },
@@ -22550,7 +22558,7 @@
         {
           "shop_name": "Vild med Vin",
           "price": 45.0,
-          "url": "https://www.vildmedvin.dk/krenkerup-juleol-50-cl",
+          "url": "https://www.vildmedvin.dk/krenkerup-session-ipa-50-cl",
           "discount_pct": 0,
           "old_price": null
         }
@@ -22843,14 +22851,14 @@
       "category": null,
       "prices": [
         {
-          "shop_name": "Olle Glad",
+          "shop_name": "Ølleglad",
           "price": 45.0,
           "url": "https://olleglad.dk/joennes-favorit-44-cl",
           "discount_pct": 0,
           "old_price": null
         },
         {
-          "shop_name": "Ølleglad",
+          "shop_name": "Olle Glad",
           "price": 45.0,
           "url": "https://olleglad.dk/joennes-favorit-44-cl",
           "discount_pct": 0,
@@ -22859,7 +22867,7 @@
       ],
       "cheapest_price": 45.0,
       "min_price": 45.0,
-      "shop": "Olle Glad",
+      "shop": "Ølleglad",
       "discount_pct": 0,
       "max_discount_pct": 0
     },
@@ -22876,14 +22884,14 @@
       "category": null,
       "prices": [
         {
-          "shop_name": "Olle Glad",
+          "shop_name": "Ølleglad",
           "price": 45.0,
           "url": "https://olleglad.dk/interstellar-overdrive-44-cl",
           "discount_pct": 0,
           "old_price": null
         },
         {
-          "shop_name": "Ølleglad",
+          "shop_name": "Olle Glad",
           "price": 45.0,
           "url": "https://olleglad.dk/interstellar-overdrive-44-cl",
           "discount_pct": 0,
@@ -22892,7 +22900,7 @@
       ],
       "cheapest_price": 45.0,
       "min_price": 45.0,
-      "shop": "Olle Glad",
+      "shop": "Ølleglad",
       "discount_pct": 0,
       "max_discount_pct": 0
     },
@@ -22909,14 +22917,14 @@
       "category": null,
       "prices": [
         {
-          "shop_name": "Olle Glad",
+          "shop_name": "Ølleglad",
           "price": 45.0,
           "url": "https://olleglad.dk/per-brosmand-44-cl",
           "discount_pct": 0,
           "old_price": null
         },
         {
-          "shop_name": "Ølleglad",
+          "shop_name": "Olle Glad",
           "price": 45.0,
           "url": "https://olleglad.dk/per-brosmand-44-cl",
           "discount_pct": 0,
@@ -22925,7 +22933,7 @@
       ],
       "cheapest_price": 45.0,
       "min_price": 45.0,
-      "shop": "Olle Glad",
+      "shop": "Ølleglad",
       "discount_pct": 0,
       "max_discount_pct": 0
     },
@@ -22942,14 +22950,14 @@
       "category": null,
       "prices": [
         {
-          "shop_name": "Olle Glad",
+          "shop_name": "Ølleglad",
           "price": 45.0,
           "url": "https://olleglad.dk/tournesoll-tripel-44-cl",
           "discount_pct": 0,
           "old_price": null
         },
         {
-          "shop_name": "Ølleglad",
+          "shop_name": "Olle Glad",
           "price": 45.0,
           "url": "https://olleglad.dk/tournesoll-tripel-44-cl",
           "discount_pct": 0,
@@ -22958,7 +22966,7 @@
       ],
       "cheapest_price": 45.0,
       "min_price": 45.0,
-      "shop": "Olle Glad",
+      "shop": "Ølleglad",
       "discount_pct": 0,
       "max_discount_pct": 0
     },
@@ -22975,14 +22983,14 @@
       "category": null,
       "prices": [
         {
-          "shop_name": "Olle Glad",
+          "shop_name": "Ølleglad",
           "price": 45.0,
           "url": "https://olleglad.dk/tournesoll-s-lillebror-44-cl",
           "discount_pct": 0,
           "old_price": null
         },
         {
-          "shop_name": "Ølleglad",
+          "shop_name": "Olle Glad",
           "price": 45.0,
           "url": "https://olleglad.dk/tournesoll-s-lillebror-44-cl",
           "discount_pct": 0,
@@ -22991,7 +22999,7 @@
       ],
       "cheapest_price": 45.0,
       "min_price": 45.0,
-      "shop": "Olle Glad",
+      "shop": "Ølleglad",
       "discount_pct": 0,
       "max_discount_pct": 0
     },
@@ -23008,14 +23016,14 @@
       "category": null,
       "prices": [
         {
-          "shop_name": "Olle Glad",
+          "shop_name": "Ølleglad",
           "price": 45.0,
           "url": "https://olleglad.dk/bryggerens-dubbel-trouble-44-cl",
           "discount_pct": 0,
           "old_price": null
         },
         {
-          "shop_name": "Ølleglad",
+          "shop_name": "Olle Glad",
           "price": 45.0,
           "url": "https://olleglad.dk/bryggerens-dubbel-trouble-44-cl",
           "discount_pct": 0,
@@ -23024,7 +23032,7 @@
       ],
       "cheapest_price": 45.0,
       "min_price": 45.0,
-      "shop": "Olle Glad",
+      "shop": "Ølleglad",
       "discount_pct": 0,
       "max_discount_pct": 0
     },
@@ -23041,14 +23049,14 @@
       "category": null,
       "prices": [
         {
-          "shop_name": "Olle Glad",
+          "shop_name": "Ølleglad",
           "price": 45.0,
           "url": "https://olleglad.dk/hoensedamens-roede-amerikaner-44-cl",
           "discount_pct": 0,
           "old_price": null
         },
         {
-          "shop_name": "Ølleglad",
+          "shop_name": "Olle Glad",
           "price": 45.0,
           "url": "https://olleglad.dk/hoensedamens-roede-amerikaner-44-cl",
           "discount_pct": 0,
@@ -23057,7 +23065,7 @@
       ],
       "cheapest_price": 45.0,
       "min_price": 45.0,
-      "shop": "Olle Glad",
+      "shop": "Ølleglad",
       "discount_pct": 0,
       "max_discount_pct": 0
     },
@@ -23074,14 +23082,14 @@
       "category": null,
       "prices": [
         {
-          "shop_name": "Olle Glad",
+          "shop_name": "Ølleglad",
           "price": 45.0,
           "url": "https://olleglad.dk/ib-birge-44-cl",
           "discount_pct": 0,
           "old_price": null
         },
         {
-          "shop_name": "Ølleglad",
+          "shop_name": "Olle Glad",
           "price": 45.0,
           "url": "https://olleglad.dk/ib-birge-44-cl",
           "discount_pct": 0,
@@ -23090,7 +23098,7 @@
       ],
       "cheapest_price": 45.0,
       "min_price": 45.0,
-      "shop": "Olle Glad",
+      "shop": "Ølleglad",
       "discount_pct": 0,
       "max_discount_pct": 0
     },
@@ -23107,14 +23115,14 @@
       "category": null,
       "prices": [
         {
-          "shop_name": "Olle Glad",
+          "shop_name": "Ølleglad",
           "price": 45.0,
           "url": "https://olleglad.dk/svigerinden-44-cl",
           "discount_pct": 0,
           "old_price": null
         },
         {
-          "shop_name": "Ølleglad",
+          "shop_name": "Olle Glad",
           "price": 45.0,
           "url": "https://olleglad.dk/svigerinden-44-cl",
           "discount_pct": 0,
@@ -23123,7 +23131,7 @@
       ],
       "cheapest_price": 45.0,
       "min_price": 45.0,
-      "shop": "Olle Glad",
+      "shop": "Ølleglad",
       "discount_pct": 0,
       "max_discount_pct": 0
     },
@@ -23140,14 +23148,14 @@
       "category": null,
       "prices": [
         {
-          "shop_name": "Olle Glad",
+          "shop_name": "Ølleglad",
           "price": 45.0,
           "url": "https://olleglad.dk/tanzt-das-brot",
           "discount_pct": 0,
           "old_price": null
         },
         {
-          "shop_name": "Ølleglad",
+          "shop_name": "Olle Glad",
           "price": 45.0,
           "url": "https://olleglad.dk/tanzt-das-brot",
           "discount_pct": 0,
@@ -23156,7 +23164,7 @@
       ],
       "cheapest_price": 45.0,
       "min_price": 45.0,
-      "shop": "Olle Glad",
+      "shop": "Ølleglad",
       "discount_pct": 0,
       "max_discount_pct": 0
     },
@@ -23173,14 +23181,14 @@
       "category": null,
       "prices": [
         {
-          "shop_name": "Olle Glad",
+          "shop_name": "Ølleglad",
           "price": 45.0,
           "url": "https://olleglad.dk/formandens-toerre-oejn-44-cl",
           "discount_pct": 0,
           "old_price": null
         },
         {
-          "shop_name": "Ølleglad",
+          "shop_name": "Olle Glad",
           "price": 45.0,
           "url": "https://olleglad.dk/formandens-toerre-oejn-44-cl",
           "discount_pct": 0,
@@ -23189,7 +23197,7 @@
       ],
       "cheapest_price": 45.0,
       "min_price": 45.0,
-      "shop": "Olle Glad",
+      "shop": "Ølleglad",
       "discount_pct": 0,
       "max_discount_pct": 0
     },
@@ -23206,14 +23214,14 @@
       "category": null,
       "prices": [
         {
-          "shop_name": "Olle Glad",
+          "shop_name": "Ølleglad",
           "price": 45.0,
           "url": "https://olleglad.dk/koelsh-med-oe-44-cl",
           "discount_pct": 0,
           "old_price": null
         },
         {
-          "shop_name": "Ølleglad",
+          "shop_name": "Olle Glad",
           "price": 45.0,
           "url": "https://olleglad.dk/koelsh-med-oe-44-cl",
           "discount_pct": 0,
@@ -23222,7 +23230,7 @@
       ],
       "cheapest_price": 45.0,
       "min_price": 45.0,
-      "shop": "Olle Glad",
+      "shop": "Ølleglad",
       "discount_pct": 0,
       "max_discount_pct": 0
     },
@@ -23239,14 +23247,14 @@
       "category": null,
       "prices": [
         {
-          "shop_name": "Olle Glad",
+          "shop_name": "Ølleglad",
           "price": 45.0,
           "url": "https://olleglad.dk/today-tomorrow-toyoda-33-cl",
           "discount_pct": 0,
           "old_price": null
         },
         {
-          "shop_name": "Ølleglad",
+          "shop_name": "Olle Glad",
           "price": 45.0,
           "url": "https://olleglad.dk/today-tomorrow-toyoda-33-cl",
           "discount_pct": 0,
@@ -23255,7 +23263,7 @@
       ],
       "cheapest_price": 45.0,
       "min_price": 45.0,
-      "shop": "Olle Glad",
+      "shop": "Ølleglad",
       "discount_pct": 0,
       "max_discount_pct": 0
     },
@@ -24513,32 +24521,6 @@
       "cheapest_price": 45.0,
       "min_price": 45.0,
       "shop": "Beershoppen",
-      "discount_pct": 0,
-      "max_discount_pct": 0
-    },
-    {
-      "id": 20974,
-      "slug": "lille-holmgaard-bryghus-opa-3",
-      "description": "OPA! PALE ALE – LILLE HOLMGÅRD BRYGHUS 🇭🇷 En øl fra kollegiet i Aarhus Historien om OPA! begynder faktisk længe før Lille Holmgård Bryghus blev til. Dengang Simon, brygmester hos Lille Holmgård, boede på kollegie i Aarhus, hvor han læste til maskinmester, blev der også brygget øl. Sammen med en kroatisk kollegiekammerat kastede Simon sig over hjemmebrygningen, og en dag stod de så med en friskbrygget øl, som skulle testes på kollegiets terrasse. Øllen blev åbnet. Der blev smagt. Og alt var godt.",
-      "name": "OPA!",
-      "image": "https://olleglad.dk/cache/4/7/6/1/5/0/7/opa-fit-800x800x100.webp",
-      "type": null,
-      "abv": 6.4,
-      "volume_cl": null,
-      "brewery": "Lille Holmgård Bryghus",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Ølleglad",
-          "price": 45.0,
-          "url": "https://olleglad.dk/opa-pale-ale-44-cl",
-          "discount_pct": 0,
-          "old_price": null
-        }
-      ],
-      "cheapest_price": 45.0,
-      "min_price": 45.0,
-      "shop": "Ølleglad",
       "discount_pct": 0,
       "max_discount_pct": 0
     },
@@ -26077,8 +26059,8 @@
       "max_discount_pct": 0
     },
     {
-      "id": 20946,
-      "slug": "dry-and-bitter-brewing-company-brown-owl-22",
+      "id": 20978,
+      "slug": "dry-and-bitter-brewing-company-brown-owl-23",
       "description": "Brown Owl er et bevis på, at Dry & Bitter mestrer de klassiske stilarter ligeså godt som deres IPA’er. Her er der skruet ned for humleintensiteten til fordel for en rolig kompleksitet fra malten. Den nøddeagtige karakter og de lette chokoladenoter gør den utrolig nem at drikke. Et solidt valg til dem, der vil have en ukompliceret kvalitetsøl med dybde.",
       "name": "Brown Owl",
       "image": "https://mlnyqjrpbd75.i.optimole.com/cb:xzKT.fcd/w:auto/h:auto/q:mauto/f:best/https://www.beerbarrel.dk/wp-content/uploads/2026/03/19.png",
@@ -26103,8 +26085,8 @@
       "max_discount_pct": 0
     },
     {
-      "id": 20947,
-      "slug": "p-hjala-oo-213",
+      "id": 20979,
+      "slug": "p-hjala-oo-215",
       "description": "Dette er definitionen på en moderne Baltisk Porter. Põhjala formår at gøre øllen ekstremt mørk og kraftfuld, men med den renhed i udtrykket, som lagergæringen ved lave temperaturer giver. Det er ikke bare en tung øl; den har en elegance og en bær-agtig syre, der løfter den over de fleste standardstouts. Öö er en uomgængelig klassiker for enhver, der elsker komplekse mørke øl.",
       "name": "Öö",
       "image": "https://mlnyqjrpbd75.i.optimole.com/cb:xzKT.fcd/w:auto/h:auto/q:mauto/f:best/https://www.beerbarrel.dk/wp-content/uploads/2026/03/81.png",
@@ -26129,8 +26111,8 @@
       "max_discount_pct": 0
     },
     {
-      "id": 20958,
-      "slug": "rybryg-ry-classic-49",
+      "id": 20991,
+      "slug": "rybryg-ry-classic-50",
       "description": "Ry Classic fra Rybryg er af typen Vienna Lager og er på 5,6% Ry Classic er brygget i klassisk wienerstil, og bryggeriet har givet den ekstra lang tid på tanken for at sikre en fyldig og afbalanceret smag. En wienerlager er en rav- til kobberfarvet lager med blød, ristet maltkarakter. Ry Classic har en let karamelduft og en blød krop, og i glasset er den varmt ravfarvet under hvidt skum med noter af karamel og brød og en diskret bitterhed. De 5,6% gør den til en solid lager, der alligevel er nem at drikke.",
       "name": "Ry Classic 5,6% 50cl",
       "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/ry-classic-5-6-50cl.png?v=1764503652",
@@ -26155,8 +26137,8 @@
       "max_discount_pct": 0
     },
     {
-      "id": 20962,
-      "slug": "rybryg-ry-pilsner-189",
+      "id": 20995,
+      "slug": "rybryg-ry-pilsner-190",
       "description": "Ry Pilsner fra Rybryg er af typen German Pilsner og er på 5,6% Rybryg brygger en tyskinspireret pilsner med fire typer moderne amerikansk humle, og bryggeriet kalder den forfriskende med ekstra karakter og fylde. Den er strågul med hvidt skum og har mere krop end de fleste pilsnere. Den er mild med et strejf af frugt. En pilsner er en lys, bundgæret øl med tydelig humlebitterhed, og her giver den amerikanske humle en friskere og mere frugtig duft end i en traditionel tysk udgave, hvor humlen typisk er blomsteragtig og krydret.",
       "name": "Ry Pilsner 5,6% 50cl",
       "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/ry-pilsner.png?v=1747399627",
@@ -26177,6 +26159,32 @@
       "cheapest_price": 45.0,
       "min_price": 45.0,
       "shop": "Brygshoppen",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
+      "id": 21007,
+      "slug": "lille-holmgaard-bryghus-opa-4",
+      "description": "OPA! PALE ALE – LILLE HOLMGÅRD BRYGHUS 🇭🇷 En øl fra kollegiet i Aarhus Historien om OPA! begynder faktisk længe før Lille Holmgård Bryghus blev til. Dengang Simon, brygmester hos Lille Holmgård, boede på kollegie i Aarhus, hvor han læste til maskinmester, blev der også brygget øl. Sammen med en kroatisk kollegiekammerat kastede Simon sig over hjemmebrygningen, og en dag stod de så med en friskbrygget øl, som skulle testes på kollegiets terrasse. Øllen blev åbnet. Der blev smagt. Og alt var godt.",
+      "name": "OPA!",
+      "image": "https://olleglad.dk/cache/4/7/6/1/5/0/7/opa-fit-800x800x100.webp",
+      "type": null,
+      "abv": 6.4,
+      "volume_cl": null,
+      "brewery": "Lille Holmgård Bryghus",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Ølleglad",
+          "price": 45.0,
+          "url": "https://olleglad.dk/opa-pale-ale-44-cl",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 45.0,
+      "min_price": 45.0,
+      "shop": "Ølleglad",
       "discount_pct": 0,
       "max_discount_pct": 0
     },
@@ -26268,7 +26276,7 @@
         {
           "shop_name": "A Good Case",
           "price": 45.75,
-          "url": "https://agoodcase.dk/products/pohjala-jouluporter-10-imperial-porter",
+          "url": "https://agoodcase.dk/products/pohjala-baltic-porter-day-2026-10-imperial-baltic-porter",
           "discount_pct": 16.8,
           "old_price": 55.0
         }
@@ -27379,14 +27387,14 @@
       "category": null,
       "prices": [
         {
-          "shop_name": "Olle Glad",
+          "shop_name": "Ølleglad",
           "price": 47.0,
           "url": "https://olleglad.dk/moersleutel-coconut-space-brownie-33-cl",
           "discount_pct": 0,
           "old_price": null
         },
         {
-          "shop_name": "Ølleglad",
+          "shop_name": "Olle Glad",
           "price": 47.0,
           "url": "https://olleglad.dk/moersleutel-coconut-space-brownie-33-cl",
           "discount_pct": 0,
@@ -27409,7 +27417,7 @@
       ],
       "cheapest_price": 47.0,
       "min_price": 47.0,
-      "shop": "Olle Glad",
+      "shop": "Ølleglad",
       "discount_pct": 0,
       "max_discount_pct": 0
     },
@@ -28687,14 +28695,14 @@
       "category": null,
       "prices": [
         {
-          "shop_name": "Olle Glad",
+          "shop_name": "Ølleglad",
           "price": 49.0,
           "url": "https://olleglad.dk/crak-brewery-giant-double-step-33-cl",
           "discount_pct": 0,
           "old_price": null
         },
         {
-          "shop_name": "Ølleglad",
+          "shop_name": "Olle Glad",
           "price": 49.0,
           "url": "https://olleglad.dk/crak-brewery-giant-double-step-33-cl",
           "discount_pct": 0,
@@ -28710,7 +28718,7 @@
       ],
       "cheapest_price": 49.0,
       "min_price": 49.0,
-      "shop": "Olle Glad",
+      "shop": "Ølleglad",
       "discount_pct": 0,
       "max_discount_pct": 0
     },
@@ -28814,7 +28822,7 @@
         {
           "shop_name": "Vild med Vin",
           "price": 49.0,
-          "url": "https://www.vildmedvin.dk/the-garden-brewery-hazy-citrus",
+          "url": "https://www.vildmedvin.dk/the-garden-brewery-hazy-citrus-1",
           "discount_pct": 0,
           "old_price": null
         }
@@ -29081,14 +29089,14 @@
       "category": null,
       "prices": [
         {
-          "shop_name": "Olle Glad",
+          "shop_name": "Ølleglad",
           "price": 49.0,
           "url": "https://olleglad.dk/coolhead-salted-licorice-raspberry-sour",
           "discount_pct": 0,
           "old_price": null
         },
         {
-          "shop_name": "Ølleglad",
+          "shop_name": "Olle Glad",
           "price": 49.0,
           "url": "https://olleglad.dk/coolhead-salted-licorice-raspberry-sour",
           "discount_pct": 0,
@@ -29097,7 +29105,7 @@
       ],
       "cheapest_price": 49.0,
       "min_price": 49.0,
-      "shop": "Olle Glad",
+      "shop": "Ølleglad",
       "discount_pct": 0,
       "max_discount_pct": 0
     },
@@ -29722,32 +29730,6 @@
       "cheapest_price": 49.0,
       "min_price": 49.0,
       "shop": "Vild med Vin",
-      "discount_pct": 0,
-      "max_discount_pct": 0
-    },
-    {
-      "id": 20971,
-      "slug": "bad-seed-brewing-neu-pilsner-22",
-      "description": null,
-      "name": "Neu - Pilsner",
-      "image": "https://humledrik.dk/cache/4/4/7/4/0/8/8/fit-370x370x75.webp",
-      "type": "Pilsner",
-      "abv": 5.0,
-      "volume_cl": 44.0,
-      "brewery": "Bad Seed Brewing",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Humledrik",
-          "price": 49.0,
-          "url": "https://humledrik.dk/neu-pilsner",
-          "discount_pct": 0,
-          "old_price": null
-        }
-      ],
-      "cheapest_price": 49.0,
-      "min_price": 49.0,
-      "shop": "Humledrik",
       "discount_pct": 0,
       "max_discount_pct": 0
     },
@@ -30610,6 +30592,32 @@
       "max_discount_pct": 0
     },
     {
+      "id": 21004,
+      "slug": "bad-seed-brewing-neu-pilsner-23",
+      "description": null,
+      "name": "Neu - Pilsner",
+      "image": "https://humledrik.dk/cache/4/4/7/4/0/8/8/fit-370x370x75.webp",
+      "type": "Pilsner",
+      "abv": 5.0,
+      "volume_cl": 44.0,
+      "brewery": "Bad Seed Brewing",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Humledrik",
+          "price": 49.0,
+          "url": "https://humledrik.dk/neu-pilsner",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 49.0,
+      "min_price": 49.0,
+      "shop": "Humledrik",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
       "id": 13413,
       "slug": "fuerst-wiacek-spells-new-england-ipa",
       "description": "Nogle frokostpauser kræver lidt mere end en sandwich. Hard Lunch er en saftig New England IPA, hvor Citra, Nelson Sauvin og Riwaka får lov til at vise, hvad de kan, når der ikke bliver sparet på humlen. Forvent frisk citrus, tropisk frugt og sprøde noter af lime og stikkelsbær, pakket ind i en blød og juicy mundfølelse. En humlet pause fra hverdagens små og store udfordringer. INFORMATION Stil: New England IPA Størrelse: 44 cl Alkoholprocent: 6,8 % Allergener: BYGMALT, HAVRE, HVEDE Best before datoen er 03/05-2027. NB: Fri fragt ved køb over 499 kr. ellers pålægges der min. 59 kr. i fragt.",
@@ -30669,16 +30677,16 @@
           "old_price": 60.0
         },
         {
-          "shop_name": "Beermatch",
+          "shop_name": "Vild med Vin",
           "price": 59.0,
-          "url": "https://www.beermatch.dk/products/gamma-big-doink-1",
+          "url": "https://www.vildmedvin.dk/gamma-brewing-big-doink-dipa",
           "discount_pct": 0,
           "old_price": null
         },
         {
-          "shop_name": "Vild med Vin",
+          "shop_name": "Beermatch",
           "price": 59.0,
-          "url": "https://www.vildmedvin.dk/gamma-brewing-big-doink-dipa",
+          "url": "https://www.beermatch.dk/products/gamma-big-doink-1",
           "discount_pct": 0,
           "old_price": null
         },
@@ -31640,23 +31648,23 @@
       "category": null,
       "prices": [
         {
-          "shop_name": "Brygshoppen",
+          "shop_name": "Vild med Vin",
           "price": 50.0,
-          "url": "https://brygshoppen.dk/products/vault-city-year-1-foundations-5-44cl",
+          "url": "https://www.vildmedvin.dk/vault-city-monsieur-froid",
           "discount_pct": 0,
           "old_price": null
         },
         {
-          "shop_name": "Vild med Vin",
+          "shop_name": "Brygshoppen",
           "price": 50.0,
-          "url": "https://www.vildmedvin.dk/vault-city-monsieur-froid",
+          "url": "https://brygshoppen.dk/products/vault-city-year-1-foundations-5-44cl",
           "discount_pct": 0,
           "old_price": null
         }
       ],
       "cheapest_price": 50.0,
       "min_price": 50.0,
-      "shop": "Brygshoppen",
+      "shop": "Vild med Vin",
       "discount_pct": 0,
       "max_discount_pct": 0
     },
@@ -31673,23 +31681,23 @@
       "category": null,
       "prices": [
         {
-          "shop_name": "BeerBarrel",
+          "shop_name": "Brygshoppen",
           "price": 50.0,
-          "url": "https://www.beerbarrel.dk/vare/dic-passionfruit-creamsicle/",
+          "url": "https://brygshoppen.dk/products/dessert-in-a-can-passionfruit-creamsicle-10-5-33cl",
           "discount_pct": 0,
           "old_price": null
         },
         {
-          "shop_name": "Brygshoppen",
+          "shop_name": "BeerBarrel",
           "price": 50.0,
-          "url": "https://brygshoppen.dk/products/dessert-in-a-can-passionfruit-creamsicle-10-5-33cl",
+          "url": "https://www.beerbarrel.dk/vare/dic-passionfruit-creamsicle/",
           "discount_pct": 0,
           "old_price": null
         }
       ],
       "cheapest_price": 50.0,
       "min_price": 50.0,
-      "shop": "BeerBarrel",
+      "shop": "Brygshoppen",
       "discount_pct": 0,
       "max_discount_pct": 0
     },
@@ -31883,14 +31891,14 @@
       "category": null,
       "prices": [
         {
-          "shop_name": "Olle Glad",
+          "shop_name": "Ølleglad",
           "price": 50.0,
           "url": "https://olleglad.dk/hoppy-people-fwd-hbc-1183-44-cl",
           "discount_pct": 0,
           "old_price": null
         },
         {
-          "shop_name": "Ølleglad",
+          "shop_name": "Olle Glad",
           "price": 50.0,
           "url": "https://olleglad.dk/hoppy-people-fwd-hbc-1183-44-cl",
           "discount_pct": 0,
@@ -31899,7 +31907,7 @@
       ],
       "cheapest_price": 50.0,
       "min_price": 50.0,
-      "shop": "Olle Glad",
+      "shop": "Ølleglad",
       "discount_pct": 0,
       "max_discount_pct": 0
     },
@@ -31916,14 +31924,14 @@
       "category": null,
       "prices": [
         {
-          "shop_name": "Olle Glad",
+          "shop_name": "Ølleglad",
           "price": 50.0,
           "url": "https://olleglad.dk/skovhuggerens-skumringsoel-33-cl",
           "discount_pct": 0,
           "old_price": null
         },
         {
-          "shop_name": "Ølleglad",
+          "shop_name": "Olle Glad",
           "price": 50.0,
           "url": "https://olleglad.dk/skovhuggerens-skumringsoel-33-cl",
           "discount_pct": 0,
@@ -31939,7 +31947,7 @@
       ],
       "cheapest_price": 50.0,
       "min_price": 50.0,
-      "shop": "Olle Glad",
+      "shop": "Ølleglad",
       "discount_pct": 0,
       "max_discount_pct": 0
     },
@@ -31956,14 +31964,14 @@
       "category": null,
       "prices": [
         {
-          "shop_name": "Olle Glad",
+          "shop_name": "Ølleglad",
           "price": 50.0,
           "url": "https://olleglad.dk/kaptajn-hadock-33-cl",
           "discount_pct": 0,
           "old_price": null
         },
         {
-          "shop_name": "Ølleglad",
+          "shop_name": "Olle Glad",
           "price": 50.0,
           "url": "https://olleglad.dk/kaptajn-hadock-33-cl",
           "discount_pct": 0,
@@ -31972,7 +31980,7 @@
       ],
       "cheapest_price": 50.0,
       "min_price": 50.0,
-      "shop": "Olle Glad",
+      "shop": "Ølleglad",
       "discount_pct": 0,
       "max_discount_pct": 0
     },
@@ -35734,7 +35742,7 @@
         {
           "shop_name": "Vild med Vin",
           "price": 54.0,
-          "url": "https://www.vildmedvin.dk/vault-city-fiery-brew",
+          "url": "https://www.vildmedvin.dk/vault-city-dark-stormy",
           "discount_pct": 0,
           "old_price": null
         }
@@ -35892,7 +35900,7 @@
         {
           "shop_name": "Vild med Vin",
           "price": 54.0,
-          "url": "https://www.vildmedvin.dk/sibeeria-blood-orange-gose",
+          "url": "https://www.vildmedvin.dk/sibeeria-umami-gose",
           "discount_pct": 0,
           "old_price": null
         }
@@ -36547,9 +36555,9 @@
       "category": null,
       "prices": [
         {
-          "shop_name": "BeerBarrel",
+          "shop_name": "Humledrik",
           "price": 55.0,
-          "url": "https://www.beerbarrel.dk/vare/kjoebenhavner-stang/",
+          "url": "https://humledrik.dk/kjoeberhavner-stang-pastry-sour",
           "discount_pct": 0,
           "old_price": null
         },
@@ -36561,16 +36569,56 @@
           "old_price": null
         },
         {
-          "shop_name": "Humledrik",
+          "shop_name": "BeerBarrel",
           "price": 55.0,
-          "url": "https://humledrik.dk/kjoeberhavner-stang-pastry-sour",
+          "url": "https://www.beerbarrel.dk/vare/kjoebenhavner-stang/",
           "discount_pct": 0,
           "old_price": null
         }
       ],
       "cheapest_price": 55.0,
       "min_price": 55.0,
-      "shop": "BeerBarrel",
+      "shop": "Humledrik",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
+      "id": 14249,
+      "slug": "winter-wizard-amager-bryghus",
+      "description": "Amager Bryghus Winter Wizard Imperial Stout er en overdådig og kraftfuld stout, der leverer en dyb smagoplevelse. Denne mørke øl byder på rige noter af bitter chokolade, ristede kaffebønner og en subtil hint af vanilje. Med sin cremede mundfølelse og høje alkoholprocent, er Winter Wizard en ideel øl til at nyde langsomt i vintermørket. Den komplekse smagsprofil og varme karakter gør den perfekt til hyggelige stunder foran pejsen eller som en speciel del af din ølsamling. Denne imperial stout er en fryd for dem, der elsker en intens og velafbalanceret øl.",
+      "name": "Winter Wizard - Amager Bryghus - 44 cl - 12%",
+      "image": "https://cdn.shopify.com/s/files/1/0600/9438/2263/files/winterwizard.jpg?v=1768318499",
+      "type": "Beer",
+      "abv": 12.0,
+      "volume_cl": 44.0,
+      "brewery": "Amager Bryghus",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Vild med Vin",
+          "price": 55.0,
+          "url": "https://www.vildmedvin.dk/amager-bryghus-winter-wizard",
+          "discount_pct": 0,
+          "old_price": null
+        },
+        {
+          "shop_name": "Beershoppen",
+          "price": 60.0,
+          "url": "https://beershoppen.dk/products/winter-wizard-amager-bryghus-44-cl-12",
+          "discount_pct": 0,
+          "old_price": null
+        },
+        {
+          "shop_name": "Best of Beers",
+          "price": 61.0,
+          "url": "https://www.bestofbeers.dk/shop/amager-bryghus-winter-wizard-imperial-winter-stout-044-l-120/",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 55.0,
+      "min_price": 55.0,
+      "shop": "Vild med Vin",
       "discount_pct": 0,
       "max_discount_pct": 0
     },
@@ -36587,23 +36635,23 @@
       "category": null,
       "prices": [
         {
-          "shop_name": "BeerBarrel",
+          "shop_name": "Humledrik",
           "price": 55.0,
-          "url": "https://www.beerbarrel.dk/vare/sjampanjebrus/",
+          "url": "https://humledrik.dk/sjampanjebrus-pastry-sour",
           "discount_pct": 0,
           "old_price": null
         },
         {
-          "shop_name": "Humledrik",
+          "shop_name": "BeerBarrel",
           "price": 55.0,
-          "url": "https://humledrik.dk/sjampanjebrus-pastry-sour",
+          "url": "https://www.beerbarrel.dk/vare/sjampanjebrus/",
           "discount_pct": 0,
           "old_price": null
         }
       ],
       "cheapest_price": 55.0,
       "min_price": 55.0,
-      "shop": "BeerBarrel",
+      "shop": "Humledrik",
       "discount_pct": 0,
       "max_discount_pct": 0
     },
@@ -36620,23 +36668,23 @@
       "category": null,
       "prices": [
         {
-          "shop_name": "Beershoppen",
+          "shop_name": "Humledrik",
           "price": 55.0,
-          "url": "https://beershoppen.dk/products/hoptimum-2026-sierra-nevada-35-5-cl-11",
+          "url": "https://humledrik.dk/hoptimum-2026-ipa-sierra-nevada-brewing",
           "discount_pct": 0,
           "old_price": null
         },
         {
-          "shop_name": "Humledrik",
+          "shop_name": "Beershoppen",
           "price": 55.0,
-          "url": "https://humledrik.dk/hoptimum-2026-ipa-sierra-nevada-brewing",
+          "url": "https://beershoppen.dk/products/hoptimum-2026-sierra-nevada-35-5-cl-11",
           "discount_pct": 0,
           "old_price": null
         }
       ],
       "cheapest_price": 55.0,
       "min_price": 55.0,
-      "shop": "Beershoppen",
+      "shop": "Humledrik",
       "discount_pct": 0,
       "max_discount_pct": 0
     },
@@ -37012,39 +37060,6 @@
           "shop_name": "Brygshoppen",
           "price": 60.0,
           "url": "https://brygshoppen.dk/products/cardamom-for-christmas-8-5-44cl",
-          "discount_pct": 0,
-          "old_price": null
-        }
-      ],
-      "cheapest_price": 55.0,
-      "min_price": 55.0,
-      "shop": "Vild med Vin",
-      "discount_pct": 0,
-      "max_discount_pct": 0
-    },
-    {
-      "id": 14249,
-      "slug": "winter-wizard-amager-bryghus",
-      "description": "Amager Bryghus Winter Wizard Imperial Stout er en overdådig og kraftfuld stout, der leverer en dyb smagoplevelse. Denne mørke øl byder på rige noter af bitter chokolade, ristede kaffebønner og en subtil hint af vanilje. Med sin cremede mundfølelse og høje alkoholprocent, er Winter Wizard en ideel øl til at nyde langsomt i vintermørket. Den komplekse smagsprofil og varme karakter gør den perfekt til hyggelige stunder foran pejsen eller som en speciel del af din ølsamling. Denne imperial stout er en fryd for dem, der elsker en intens og velafbalanceret øl.",
-      "name": "Winter Wizard - Amager Bryghus - 44 cl - 12%",
-      "image": "https://cdn.shopify.com/s/files/1/0600/9438/2263/files/winterwizard.jpg?v=1768318499",
-      "type": "Beer",
-      "abv": 12.0,
-      "volume_cl": 44.0,
-      "brewery": "Amager Bryghus",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Vild med Vin",
-          "price": 55.0,
-          "url": "https://www.vildmedvin.dk/amager-bryghus-winter-wizard",
-          "discount_pct": 0,
-          "old_price": null
-        },
-        {
-          "shop_name": "Beershoppen",
-          "price": 60.0,
-          "url": "https://beershoppen.dk/products/winter-wizard-amager-bryghus-44-cl-12",
           "discount_pct": 0,
           "old_price": null
         }
@@ -39708,8 +39723,8 @@
       "max_discount_pct": 0
     },
     {
-      "id": 20967,
-      "slug": "fur-barley-wine-barley-wine-22",
+      "id": 21000,
+      "slug": "fur-barley-wine-barley-wine-23",
       "description": null,
       "name": "Fur Barley Wine - Barley Wine",
       "image": "https://humledrik.dk/cache/4/6/0/9/7/3/5/fit-370x370x75.webp",
@@ -39734,8 +39749,8 @@
       "max_discount_pct": 0
     },
     {
-      "id": 20976,
-      "slug": "to-oel-15-dipa-40",
+      "id": 21009,
+      "slug": "to-oel-15-dipa-41",
       "description": "To Øl #15 DIPA er nummer 15 i To Øls DIPA-serie, hvor bryggeriet udforsker forskellige humlekombinationer inden for den kraftige Double IPA-stil. Denne udgave lander på 9 % alkohol og er brygget som en juicy og hazy DIPA med et tydeligt fokus på aromatisk humle. Til #15 har To Øl fundet en humle frem, som bryggeriet ikke havde arbejdet med i et stykke tid. Den bidrager med citronprægede og urteagtige nuancer, der kombineres med Idaho 7 og El Dorado. Sidstnævnte duo sørger for et kraftigt tropisk modspil og giver øllen dens frugtdrevne profil.",
       "name": "To Øl, #15 DIPA",
       "image": "https://www.vildmedvin.dk/img/1000/1000/resize/s/k/sk_rmbillede_2026-08-19_104345-removebg.jpg",
@@ -41423,6 +41438,46 @@
       "max_discount_pct": 0
     },
     {
+      "id": 20232,
+      "slug": "amager-bryghus-double-up-on-xmas-ipa",
+      "description": "Amager Bryghus Double Up on Xmas er en intens dobbelt juleøl, der byder på en fyldig og varm smagsoplevelse. Brygget med rige mængder af karamelmalt og vinterkrydderier som kanel og nellike, har øllen en dyb, sødmefuld smag, der balanceres med subtile noter af tørret frugt som figner og rosiner. Den høje alkoholprocent og de komplekse smagslag gør denne øl til en kraftfuld ledsager til julemåltider eller som en selvstændig oplevelse på kolde vinteraftener. Øllen har en smuk, mørk farve og en blød skumkrone, der fuldender helhedsindtrykket.",
+      "name": "Double Up on Xmas - IPA",
+      "image": "https://humledrik.dk/cache/4/8/3/6/8/8/8/double-up-on-xmas---ipa---amager-bryghus-fit-370x370x75.webp",
+      "type": "India Pale Ale (IPA)",
+      "abv": 9.0,
+      "volume_cl": 44.0,
+      "brewery": "Amager Bryghus",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Vild med Vin",
+          "price": 58.0,
+          "url": "https://www.vildmedvin.dk/amager-bryghus-double-up-on-xmas",
+          "discount_pct": 0,
+          "old_price": null
+        },
+        {
+          "shop_name": "Humledrik",
+          "price": 59.0,
+          "url": "https://humledrik.dk/double-up-on-xmas-ipa-amager-brughus",
+          "discount_pct": 0,
+          "old_price": null
+        },
+        {
+          "shop_name": "Best of Beers",
+          "price": 61.0,
+          "url": "https://www.bestofbeers.dk/shop/amager-bryghus-double-up-on-xmas-dryhopped-hazy-double-xmas-ipa-044-l-90/",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 58.0,
+      "min_price": 58.0,
+      "shop": "Vild med Vin",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
       "id": 15348,
       "slug": "amager-bryghus-reindeer-fuel",
       "description": "Amager Bryghus, Black Nordic Skies is a Collab with the American brewery Modern Times Beer-Black Nordic Skies is a double-mashed, powerful Imperial Stout with coffee. Denne Amager Bryghus, Black Nordic Skies (Can) - Øl øl, er Konventionel dyrket, og har en alkoholprocent på 10,00. Øllen er en Stout fra Amager Bryghus",
@@ -41497,39 +41552,6 @@
           "shop_name": "Vild med Vin",
           "price": 58.0,
           "url": "https://www.vildmedvin.dk/amundsen-the-summoning",
-          "discount_pct": 0,
-          "old_price": null
-        }
-      ],
-      "cheapest_price": 58.0,
-      "min_price": 58.0,
-      "shop": "Vild med Vin",
-      "discount_pct": 0,
-      "max_discount_pct": 0
-    },
-    {
-      "id": 20232,
-      "slug": "amager-bryghus-double-up-on-xmas-ipa",
-      "description": "Amager Bryghus Double Up on Xmas er en intens dobbelt juleøl, der byder på en fyldig og varm smagsoplevelse. Brygget med rige mængder af karamelmalt og vinterkrydderier som kanel og nellike, har øllen en dyb, sødmefuld smag, der balanceres med subtile noter af tørret frugt som figner og rosiner. Den høje alkoholprocent og de komplekse smagslag gør denne øl til en kraftfuld ledsager til julemåltider eller som en selvstændig oplevelse på kolde vinteraftener. Øllen har en smuk, mørk farve og en blød skumkrone, der fuldender helhedsindtrykket.",
-      "name": "Double Up on Xmas - IPA",
-      "image": "https://humledrik.dk/cache/4/8/3/6/8/8/8/double-up-on-xmas---ipa---amager-bryghus-fit-370x370x75.webp",
-      "type": "India Pale Ale (IPA)",
-      "abv": 9.0,
-      "volume_cl": 44.0,
-      "brewery": "Amager Bryghus",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Vild med Vin",
-          "price": 58.0,
-          "url": "https://www.vildmedvin.dk/amager-bryghus-double-up-on-xmas",
-          "discount_pct": 0,
-          "old_price": null
-        },
-        {
-          "shop_name": "Humledrik",
-          "price": 59.0,
-          "url": "https://humledrik.dk/double-up-on-xmas-ipa-amager-brughus",
           "discount_pct": 0,
           "old_price": null
         }
@@ -41879,8 +41901,8 @@
       "max_discount_pct": 0
     },
     {
-      "id": 20955,
-      "slug": "flying-couch-brewing-stout-stout-stout-38",
+      "id": 20988,
+      "slug": "flying-couch-brewing-stout-stout-stout-39",
       "description": "Stout Stout Stout fra Flying Couch Brewing er af typen Imperial Stout og er på 11% Flying Couch har lagt alt krudtet i malten på denne her, og navnet siger egentlig alt om ambitionen. Der er ikke pyntet med hverken frugt, kage eller fadlagring, kun en massiv maltbygning hvor bøgerøget malt får lov at sætte et diskret aftryk, og hvor havren står for fylden. I glasset er den kulsort og uigennemtrængelig med et tæt, mørkebrunt skum, og duften er dyb og intens med mørk chokolade, brændt karamel og en anelse bål i baggrunden.",
       "name": "Stout Stout Stout 11% 44cl",
       "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/stout-stout-stout-11-44cl.png?v=1788506509",
@@ -41905,8 +41927,8 @@
       "max_discount_pct": 0
     },
     {
-      "id": 20959,
-      "slug": "p-hjala-oo-214",
+      "id": 20992,
+      "slug": "p-hjala-oo-216",
       "description": "Öö fra Põhjala er af typen Imperial Baltic Porter og er på 10,5% Öö er en imperial baltisk porter, der er så mørk som de estiske vinternætter, og navnet betyder nat på estisk. Bryggeriet siger, at den er stærk nok til at holde dig varm de kolde aftener. Duften er brændt sukker, der hurtigt giver plads til mørk frugt som blommer, rosiner og friske tranebær, og til sidst en ristet røg som et fjernt bål. Kroppen er fyldig, og espressoens syrlighed mødes af karamelliseret toffee, mens røde ribs og mørk chokolade kommer frem, når glasset står lidt. De 10,5% giver en let varme.",
       "name": "Öö 10,5% 33cl",
       "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/oo-10-5-33cl.png?v=1750597033",
@@ -42011,6 +42033,60 @@
       "max_discount_pct": 20.0
     },
     {
+      "id": 13882,
+      "slug": "de-dolle-stille-nacht-2025-ale",
+      "description": "2025 Vintage Country: Belgium Untappd Rating: 4,08 Brewery Notes: Stille Nacht (Silent Night) is a prestige beer from De Dolle Brouwers, brewed for Christmas. It has a very potent beer (12% alc/vol). It has been boiling for many hours, brewed with pale malt with white candy sugar in the kettle. The Nugget hops gives an extra bitterness to balance the extreme sweetness due to the density. The taste triangle is completed with some acidity of the fermentation. It is a very interesting beer to age.",
+      "name": "De Dolle, Stille Nacht, 2025, Ale, – 0,33 l. – 12,0%",
+      "image": "https://www.bestofbeers.dk/wp-content/uploads/2023/11/PhotoRoom_001_20231101_111739.jpg",
+      "type": "Strong Ale",
+      "abv": 12.0,
+      "volume_cl": 33.0,
+      "brewery": "De Dolle",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Ølleglad",
+          "price": 59.0,
+          "url": "https://olleglad.dk/de-dolle-brouwers-stille-nacht-2023",
+          "discount_pct": 0,
+          "old_price": null
+        },
+        {
+          "shop_name": "Olle Glad",
+          "price": 59.0,
+          "url": "https://olleglad.dk/de-dolle-brouwers-stille-nacht-2023",
+          "discount_pct": 0,
+          "old_price": null
+        },
+        {
+          "shop_name": "Beershoppen",
+          "price": 65.0,
+          "url": "https://beershoppen.dk/products/de-dolle-browers-stille-nacht-2024-33-cl-12",
+          "discount_pct": 0,
+          "old_price": null
+        },
+        {
+          "shop_name": "Best of Beers",
+          "price": 66.0,
+          "url": "https://www.bestofbeers.dk/shop/de-dolle-stille-nacht-2025-ale-033-l-120/",
+          "discount_pct": 0,
+          "old_price": null
+        },
+        {
+          "shop_name": "Vild med Vin",
+          "price": 69.0,
+          "url": "https://www.vildmedvin.dk/de-dolle-brouwers-stille-nacht-2026",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 59.0,
+      "min_price": 59.0,
+      "shop": "Ølleglad",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
       "id": 13179,
       "slug": "brouwerij-boon-geuze-mariage-parfait",
       "description": "Geuze Mariage Parfait fra Brouwerij Boon er af typen Lambic/Geuze og er på 8% Boon Geuze Mariage Parfait er en øl lavet af 95% lambic på mindst 3 år og 5% ung lambic. Dette giver fermenterbare sukkerarter og levedygtig gær. Øllen har en blød, mildt syrlig bærsmag, egetræsfaden, som denne øl fik lov til at modne i, mærkes tydeligt på den lækre aroma. En lækker krop af vanilje efterfulgt af en syrlig finish med et strejf af nelliker. Lambicen har citrus, træ og whisky aromaer. Disse aromaer kan selvfølgelig smages i øllet. Drik denne øl i et tulipanglas uden at hælde gærsedimentet ud.",
@@ -42030,16 +42106,16 @@
           "old_price": null
         },
         {
-          "shop_name": "BeerBarrel",
+          "shop_name": "Brygshoppen",
           "price": 60.0,
-          "url": "https://www.beerbarrel.dk/vare/mariage-parfait/",
+          "url": "https://brygshoppen.dk/products/geuze-mariage-parfait-8-37-5cl",
           "discount_pct": 0,
           "old_price": null
         },
         {
-          "shop_name": "Brygshoppen",
+          "shop_name": "BeerBarrel",
           "price": 60.0,
-          "url": "https://brygshoppen.dk/products/geuze-mariage-parfait-8-37-5cl",
+          "url": "https://www.beerbarrel.dk/vare/mariage-parfait/",
           "discount_pct": 0,
           "old_price": null
         },
@@ -42096,14 +42172,14 @@
       "category": null,
       "prices": [
         {
-          "shop_name": "Olle Glad",
+          "shop_name": "Ølleglad",
           "price": 59.0,
           "url": "https://olleglad.dk/factory-brewing-common-factor-2026",
           "discount_pct": 0,
           "old_price": null
         },
         {
-          "shop_name": "Ølleglad",
+          "shop_name": "Olle Glad",
           "price": 59.0,
           "url": "https://olleglad.dk/factory-brewing-common-factor-2026",
           "discount_pct": 0,
@@ -42119,61 +42195,7 @@
       ],
       "cheapest_price": 59.0,
       "min_price": 59.0,
-      "shop": "Olle Glad",
-      "discount_pct": 0,
-      "max_discount_pct": 0
-    },
-    {
-      "id": 13882,
-      "slug": "de-dolle-stille-nacht-2025-ale",
-      "description": "2025 Vintage Country: Belgium Untappd Rating: 4,08 Brewery Notes: Stille Nacht (Silent Night) is a prestige beer from De Dolle Brouwers, brewed for Christmas. It has a very potent beer (12% alc/vol). It has been boiling for many hours, brewed with pale malt with white candy sugar in the kettle. The Nugget hops gives an extra bitterness to balance the extreme sweetness due to the density. The taste triangle is completed with some acidity of the fermentation. It is a very interesting beer to age.",
-      "name": "De Dolle Browers Stille Nacht 2025 - 33 cl - 12%",
-      "image": "https://cdn.shopify.com/s/files/1/0600/9438/2263/files/Stillenacht.jpg?v=1734032445",
-      "type": "Beer",
-      "abv": 12.0,
-      "volume_cl": 33.0,
-      "brewery": "De Dolle Brouwers",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Olle Glad",
-          "price": 59.0,
-          "url": "https://olleglad.dk/de-dolle-brouwers-stille-nacht-2023",
-          "discount_pct": 0,
-          "old_price": null
-        },
-        {
-          "shop_name": "Ølleglad",
-          "price": 59.0,
-          "url": "https://olleglad.dk/de-dolle-brouwers-stille-nacht-2023",
-          "discount_pct": 0,
-          "old_price": null
-        },
-        {
-          "shop_name": "Beershoppen",
-          "price": 65.0,
-          "url": "https://beershoppen.dk/products/de-dolle-browers-stille-nacht-2024-33-cl-12",
-          "discount_pct": 0,
-          "old_price": null
-        },
-        {
-          "shop_name": "Best of Beers",
-          "price": 66.0,
-          "url": "https://www.bestofbeers.dk/shop/de-dolle-stille-nacht-2025-ale-033-l-120/",
-          "discount_pct": 0,
-          "old_price": null
-        },
-        {
-          "shop_name": "Vild med Vin",
-          "price": 69.0,
-          "url": "https://www.vildmedvin.dk/de-dolle-brouwers-stille-nacht-2026",
-          "discount_pct": 0,
-          "old_price": null
-        }
-      ],
-      "cheapest_price": 59.0,
-      "min_price": 59.0,
-      "shop": "Olle Glad",
+      "shop": "Ølleglad",
       "discount_pct": 0,
       "max_discount_pct": 0
     },
@@ -42190,18 +42212,18 @@
       "category": null,
       "prices": [
         {
-          "shop_name": "Brygshoppen",
-          "price": 59.0,
-          "url": "https://brygshoppen.dk/products/hokey-religion-12-6-33cl",
-          "discount_pct": 21.3,
-          "old_price": 75.0
-        },
-        {
           "shop_name": "Humledrik",
           "price": 59.0,
           "url": "https://humledrik.dk/hokey-religion-imperial-stout",
           "discount_pct": 0,
           "old_price": null
+        },
+        {
+          "shop_name": "Brygshoppen",
+          "price": 59.0,
+          "url": "https://brygshoppen.dk/products/hokey-religion-12-6-33cl",
+          "discount_pct": 21.3,
+          "old_price": 75.0
         },
         {
           "shop_name": "Øltanken",
@@ -42213,8 +42235,8 @@
       ],
       "cheapest_price": 59.0,
       "min_price": 59.0,
-      "shop": "Brygshoppen",
-      "discount_pct": 21.3,
+      "shop": "Humledrik",
+      "discount_pct": 0,
       "max_discount_pct": 21.3
     },
     {
@@ -42256,23 +42278,23 @@
       "category": null,
       "prices": [
         {
-          "shop_name": "Beermatch",
-          "price": 59.0,
-          "url": "https://www.beermatch.dk/products/observatoriet-tableau-1",
-          "discount_pct": 0,
-          "old_price": 0.0
-        },
-        {
           "shop_name": "Vild med Vin",
           "price": 59.0,
           "url": "https://www.vildmedvin.dk/observatoriet-tableau",
           "discount_pct": 0,
           "old_price": null
+        },
+        {
+          "shop_name": "Beermatch",
+          "price": 59.0,
+          "url": "https://www.beermatch.dk/products/observatoriet-tableau-1",
+          "discount_pct": 0,
+          "old_price": 0.0
         }
       ],
       "cheapest_price": 59.0,
       "min_price": 59.0,
-      "shop": "Beermatch",
+      "shop": "Vild med Vin",
       "discount_pct": 0,
       "max_discount_pct": 0
     },
@@ -42513,14 +42535,14 @@
       "category": null,
       "prices": [
         {
-          "shop_name": "Olle Glad",
+          "shop_name": "Ølleglad",
           "price": 59.0,
           "url": "https://olleglad.dk/atelier-vrai-chuzpe",
           "discount_pct": 0,
           "old_price": null
         },
         {
-          "shop_name": "Ølleglad",
+          "shop_name": "Olle Glad",
           "price": 59.0,
           "url": "https://olleglad.dk/atelier-vrai-chuzpe",
           "discount_pct": 0,
@@ -42529,7 +42551,7 @@
       ],
       "cheapest_price": 59.0,
       "min_price": 59.0,
-      "shop": "Olle Glad",
+      "shop": "Ølleglad",
       "discount_pct": 0,
       "max_discount_pct": 0
     },
@@ -42546,14 +42568,14 @@
       "category": null,
       "prices": [
         {
-          "shop_name": "Olle Glad",
+          "shop_name": "Ølleglad",
           "price": 59.0,
           "url": "https://olleglad.dk/de-struise-brouwers-tsjeeses-2023-33-cl",
           "discount_pct": 0,
           "old_price": null
         },
         {
-          "shop_name": "Ølleglad",
+          "shop_name": "Olle Glad",
           "price": 59.0,
           "url": "https://olleglad.dk/de-struise-brouwers-tsjeeses-2023-33-cl",
           "discount_pct": 0,
@@ -42562,7 +42584,7 @@
       ],
       "cheapest_price": 59.0,
       "min_price": 59.0,
-      "shop": "Olle Glad",
+      "shop": "Ølleglad",
       "discount_pct": 0,
       "max_discount_pct": 0
     },
@@ -44484,23 +44506,23 @@
       "category": null,
       "prices": [
         {
-          "shop_name": "BeerBarrel",
+          "shop_name": "Beer Me",
           "price": 60.0,
-          "url": "https://www.beerbarrel.dk/vare/sourbit/",
+          "url": "https://www.partner-ads.com/dk/klikbanner.php?bannerid=74625&partnerid=56605&htmlurl=https://www.beer-me.dk/vare/sourbit-passion-fruit-orange-guava-fruited-sour-fra-hopalaa",
           "discount_pct": 0,
           "old_price": null
         },
         {
-          "shop_name": "Beer Me",
+          "shop_name": "BeerBarrel",
           "price": 60.0,
-          "url": "https://www.partner-ads.com/dk/klikbanner.php?bannerid=74625&partnerid=56605&htmlurl=https://www.beer-me.dk/vare/sourbit-cherry-raspberry-red-dragon-fruited-sour-fra-hopalaa",
+          "url": "https://www.beerbarrel.dk/vare/sourbit/",
           "discount_pct": 0,
           "old_price": null
         }
       ],
       "cheapest_price": 60.0,
       "min_price": 60.0,
-      "shop": "BeerBarrel",
+      "shop": "Beer Me",
       "discount_pct": 0,
       "max_discount_pct": 0
     },
@@ -44552,7 +44574,7 @@
         {
           "shop_name": "Beer Me",
           "price": 60.0,
-          "url": "https://www.partner-ads.com/dk/klikbanner.php?bannerid=74625&partnerid=56605&htmlurl=https://www.beer-me.dk/vare/fairy-dust-shinning-hazy-ipa-fra-nurme",
+          "url": "https://www.partner-ads.com/dk/klikbanner.php?bannerid=74625&partnerid=56605&htmlurl=https://www.beer-me.dk/vare/dawn-to-dusk-hazy-ipa-fra-nurme",
           "discount_pct": 0,
           "old_price": null
         }
@@ -44689,7 +44711,7 @@
         {
           "shop_name": "Beer Me",
           "price": 60.0,
-          "url": "https://www.partner-ads.com/dk/klikbanner.php?bannerid=74625&partnerid=56605&htmlurl=https://www.beer-me.dk/vare/manderina-bavaria-new-england-ipa-fra-beer-underground",
+          "url": "https://www.partner-ads.com/dk/klikbanner.php?bannerid=74625&partnerid=56605&htmlurl=https://www.beer-me.dk/vare/mind-reader-new-england-ipa-fra-beer-underground",
           "discount_pct": 0,
           "old_price": null
         }
@@ -44871,14 +44893,14 @@
       "category": null,
       "prices": [
         {
-          "shop_name": "Olle Glad",
+          "shop_name": "Ølleglad",
           "price": 60.0,
           "url": "https://olleglad.dk/atelier-vrai-selflove-was-my-first-romance",
           "discount_pct": 0,
           "old_price": null
         },
         {
-          "shop_name": "Ølleglad",
+          "shop_name": "Olle Glad",
           "price": 60.0,
           "url": "https://olleglad.dk/atelier-vrai-selflove-was-my-first-romance",
           "discount_pct": 0,
@@ -44887,7 +44909,7 @@
       ],
       "cheapest_price": 60.0,
       "min_price": 60.0,
-      "shop": "Olle Glad",
+      "shop": "Ølleglad",
       "discount_pct": 0,
       "max_discount_pct": 0
     },
@@ -47397,6 +47419,32 @@
       "max_discount_pct": 0
     },
     {
+      "id": 20980,
+      "slug": "amager-bryghus-secret-santa-christmas-quad",
+      "description": null,
+      "name": "Amager Bryghus, Secret Santa, Christmas Quad – 0,44 l. – 10,5%",
+      "image": "https://www.bestofbeers.dk/wp-content/uploads/2024/10/AmagerBryghusSecretSanta.jpg",
+      "type": "Quadrupel",
+      "abv": 10.5,
+      "volume_cl": 44.0,
+      "brewery": "Amager Bryghus, Secret Santa, Christmas Quad",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Best of Beers",
+          "price": 61.0,
+          "url": "https://www.bestofbeers.dk/shop/amager-bryghus-secret-santa-christmas-quad-044-l-105/",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 61.0,
+      "min_price": 61.0,
+      "shop": "Best of Beers",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
       "id": 13208,
       "slug": "amager-bryghus-black-nordic-skies",
       "description": "Black Nordic Skies fra Amager Bryghus er af typen Imperial Stout og er på 10% Black Nordic Skies blev kåret til Årets Ølnyhed 2018. Den er brygget i samarbejde med Modern Times Beer fra Californien. Navnet kommer fra Den Ensomme Rytter, en genfærdsridder fra nordisk folklore, der ifølge sagnet viser sig på mørke nætter under nordlyset og tilbyder de rejsende et lift. Ingen, der har sagt ja, er set igen. Øllen er sort og fyldig med smag af kaffe og chokolade. En drikker finder den stærk, mørk og tør, ikke sød, med meget kaffe. En anden kalder den en behagelig stout med diskrete chokoladenoter.",
@@ -47926,39 +47974,6 @@
       "max_discount_pct": 0
     },
     {
-      "id": 18218,
-      "slug": "the-lord-of-the-horde-sudden-death",
-      "description": "Sudden Death Panic In The Herd er en New England Double IPA, hvor bryggeriet bevæger sig ind i den kraftige og moderne ende af IPA-universet. Med 8 % alkohol og 18° Plato er der tale om en fyldig DIPA med en solid base til humlens aromatiske karakter. Maltbasen består af Byg, Hvede og Havre. Kombinationen af Hvede og Havre er velkendt fra New England-stilen, hvor den bidrager til øllens bløde tekstur og fyldige mundfornemmelse. Panic In The Herd er et must-have for dig, der foretrækker den blødere og mere fyldige New England-stil frem for en klassisk, skarp og bitter West Coast IPA.",
-      "name": "The Lord of The Horde - Sudden Death - 44 cl. - 8,0%",
-      "image": "https://cdn.shopify.com/s/files/1/0600/9438/2263/files/rn-image_picker_lib_temp_7fb42688-7cc5-4068-bff8-792bff21be3a.jpg?v=1784717996",
-      "type": "Beer",
-      "abv": 8.0,
-      "volume_cl": 44.0,
-      "brewery": "Sudden Death",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Vild med Vin",
-          "price": 64.0,
-          "url": "https://www.vildmedvin.dk/sudden-death-the-lord-of-the-horde",
-          "discount_pct": 0,
-          "old_price": null
-        },
-        {
-          "shop_name": "Beershoppen",
-          "price": 70.0,
-          "url": "https://beershoppen.dk/products/the-lord-of-the-horde-sudden-death-44-cl-8-0",
-          "discount_pct": 0,
-          "old_price": null
-        }
-      ],
-      "cheapest_price": 64.0,
-      "min_price": 64.0,
-      "shop": "Vild med Vin",
-      "discount_pct": 0,
-      "max_discount_pct": 0
-    },
-    {
       "id": 15401,
       "slug": "corsendonk-christmas-2",
       "description": "Corsendonk Rousse er en kraftfuld red ale, der imponerer med sin dybe, røde farve og komplekse smagsprofil. Med en alkoholprocent på 8% byder denne øl på en perfekt balance mellem sødme og den maltrige fylde. Noterne af karamel og ristet malt giver en varm og rund smag, mens et subtilt strejf af humle tilfører en let bitterhed. Denne øl er ideel til dem, der elsker dybe smagsoplevelser og kompleksitet. Perfekt til at nyde alene eller sammen med kødretter, især grillet kød og charcuteri. Corsendonk Rousse er en ægte smagsrejse for ølentusiaster.",
@@ -47981,6 +47996,46 @@
           "shop_name": "Humledrik",
           "price": 69.0,
           "url": "https://humledrik.dk/corsendonk-christmas-ale-75-cl",
+          "discount_pct": 0,
+          "old_price": null
+        },
+        {
+          "shop_name": "Best of Beers",
+          "price": 71.0,
+          "url": "https://www.bestofbeers.dk/shop/corsendonk-christmas-ale-brown-ale-075-l-81/",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 64.0,
+      "min_price": 64.0,
+      "shop": "Vild med Vin",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
+      "id": 18218,
+      "slug": "the-lord-of-the-horde-sudden-death",
+      "description": "Sudden Death Panic In The Herd er en New England Double IPA, hvor bryggeriet bevæger sig ind i den kraftige og moderne ende af IPA-universet. Med 8 % alkohol og 18° Plato er der tale om en fyldig DIPA med en solid base til humlens aromatiske karakter. Maltbasen består af Byg, Hvede og Havre. Kombinationen af Hvede og Havre er velkendt fra New England-stilen, hvor den bidrager til øllens bløde tekstur og fyldige mundfornemmelse. Panic In The Herd er et must-have for dig, der foretrækker den blødere og mere fyldige New England-stil frem for en klassisk, skarp og bitter West Coast IPA.",
+      "name": "The Lord of The Horde - Sudden Death - 44 cl. - 8,0%",
+      "image": "https://cdn.shopify.com/s/files/1/0600/9438/2263/files/rn-image_picker_lib_temp_7fb42688-7cc5-4068-bff8-792bff21be3a.jpg?v=1784717996",
+      "type": "Beer",
+      "abv": 8.0,
+      "volume_cl": 44.0,
+      "brewery": "Sudden Death",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Vild med Vin",
+          "price": 64.0,
+          "url": "https://www.vildmedvin.dk/sudden-death-the-lord-of-the-horde",
+          "discount_pct": 0,
+          "old_price": null
+        },
+        {
+          "shop_name": "Beershoppen",
+          "price": 70.0,
+          "url": "https://beershoppen.dk/products/the-lord-of-the-horde-sudden-death-44-cl-8-0",
           "discount_pct": 0,
           "old_price": null
         }
@@ -48278,14 +48333,14 @@
       "category": null,
       "prices": [
         {
-          "shop_name": "Olle Glad",
+          "shop_name": "Ølleglad",
           "price": 65.0,
           "url": "https://olleglad.dk/soma-chroma-44-cl",
           "discount_pct": 0,
           "old_price": null
         },
         {
-          "shop_name": "Ølleglad",
+          "shop_name": "Olle Glad",
           "price": 65.0,
           "url": "https://olleglad.dk/soma-chroma-44-cl",
           "discount_pct": 0,
@@ -48301,7 +48356,7 @@
       ],
       "cheapest_price": 65.0,
       "min_price": 65.0,
-      "shop": "Olle Glad",
+      "shop": "Ølleglad",
       "discount_pct": 0,
       "max_discount_pct": 0
     },
@@ -48608,23 +48663,23 @@
       "category": null,
       "prices": [
         {
-          "shop_name": "Beer Me",
+          "shop_name": "Humledrik",
           "price": 65.0,
-          "url": "https://www.partner-ads.com/dk/klikbanner.php?bannerid=74625&partnerid=56605&htmlurl=https://www.beer-me.dk/vare/haze-horizon-double-ipa-fra-hopalaa",
+          "url": "https://humledrik.dk/haze-horizon-ipa-hopalaa",
           "discount_pct": 0,
           "old_price": null
         },
         {
-          "shop_name": "Humledrik",
+          "shop_name": "Beer Me",
           "price": 65.0,
-          "url": "https://humledrik.dk/haze-horizon-ipa-hopalaa",
+          "url": "https://www.partner-ads.com/dk/klikbanner.php?bannerid=74625&partnerid=56605&htmlurl=https://www.beer-me.dk/vare/haze-horizon-double-ipa-fra-hopalaa",
           "discount_pct": 0,
           "old_price": null
         }
       ],
       "cheapest_price": 65.0,
       "min_price": 65.0,
-      "shop": "Beer Me",
+      "shop": "Humledrik",
       "discount_pct": 0,
       "max_discount_pct": 0
     },
@@ -48641,23 +48696,23 @@
       "category": null,
       "prices": [
         {
-          "shop_name": "Beer Me",
+          "shop_name": "Humledrik",
           "price": 65.0,
-          "url": "https://www.partner-ads.com/dk/klikbanner.php?bannerid=74625&partnerid=56605&htmlurl=https://www.beer-me.dk/vare/twilight-to-starlight-double-ipa-fra-nurme",
+          "url": "https://humledrik.dk/twilight-to-starlight-ipa-nurme",
           "discount_pct": 0,
           "old_price": null
         },
         {
-          "shop_name": "Humledrik",
+          "shop_name": "Beer Me",
           "price": 65.0,
-          "url": "https://humledrik.dk/twilight-to-starlight-ipa-nurme",
+          "url": "https://www.partner-ads.com/dk/klikbanner.php?bannerid=74625&partnerid=56605&htmlurl=https://www.beer-me.dk/vare/twilight-to-starlight-double-ipa-fra-nurme",
           "discount_pct": 0,
           "old_price": null
         }
       ],
       "cheapest_price": 65.0,
       "min_price": 65.0,
-      "shop": "Beer Me",
+      "shop": "Humledrik",
       "discount_pct": 0,
       "max_discount_pct": 0
     },
@@ -48740,23 +48795,23 @@
       "category": null,
       "prices": [
         {
-          "shop_name": "Brygshoppen",
+          "shop_name": "Humledrik",
           "price": 65.0,
-          "url": "https://brygshoppen.dk/products/dubstep-in-dubai-11-44cl",
+          "url": "https://humledrik.dk/dubstep-in-dubai-imperial-stout",
           "discount_pct": 0,
           "old_price": null
         },
         {
-          "shop_name": "Humledrik",
+          "shop_name": "Brygshoppen",
           "price": 65.0,
-          "url": "https://humledrik.dk/dubstep-in-dubai-imperial-stout",
+          "url": "https://brygshoppen.dk/products/dubstep-in-dubai-11-44cl",
           "discount_pct": 0,
           "old_price": null
         }
       ],
       "cheapest_price": 65.0,
       "min_price": 65.0,
-      "shop": "Brygshoppen",
+      "shop": "Humledrik",
       "discount_pct": 0,
       "max_discount_pct": 0
     },
@@ -48773,14 +48828,14 @@
       "category": null,
       "prices": [
         {
-          "shop_name": "Olle Glad",
+          "shop_name": "Ølleglad",
           "price": 65.0,
           "url": "https://olleglad.dk/hop-hooligans-kafkaesque",
           "discount_pct": 0,
           "old_price": null
         },
         {
-          "shop_name": "Ølleglad",
+          "shop_name": "Olle Glad",
           "price": 65.0,
           "url": "https://olleglad.dk/hop-hooligans-kafkaesque",
           "discount_pct": 0,
@@ -48789,7 +48844,7 @@
       ],
       "cheapest_price": 65.0,
       "min_price": 65.0,
-      "shop": "Olle Glad",
+      "shop": "Ølleglad",
       "discount_pct": 0,
       "max_discount_pct": 0
     },
@@ -48806,14 +48861,14 @@
       "category": null,
       "prices": [
         {
-          "shop_name": "Olle Glad",
+          "shop_name": "Ølleglad",
           "price": 65.0,
           "url": "https://olleglad.dk/factory-brewing-double-reveries-of-riwaka",
           "discount_pct": 0,
           "old_price": null
         },
         {
-          "shop_name": "Ølleglad",
+          "shop_name": "Olle Glad",
           "price": 65.0,
           "url": "https://olleglad.dk/factory-brewing-double-reveries-of-riwaka",
           "discount_pct": 0,
@@ -48822,7 +48877,7 @@
       ],
       "cheapest_price": 65.0,
       "min_price": 65.0,
-      "shop": "Olle Glad",
+      "shop": "Ølleglad",
       "discount_pct": 0,
       "max_discount_pct": 0
     },
@@ -48839,14 +48894,14 @@
       "category": null,
       "prices": [
         {
-          "shop_name": "Olle Glad",
+          "shop_name": "Ølleglad",
           "price": 65.0,
           "url": "https://olleglad.dk/sort-snak-33-cl",
           "discount_pct": 0,
           "old_price": null
         },
         {
-          "shop_name": "Ølleglad",
+          "shop_name": "Olle Glad",
           "price": 65.0,
           "url": "https://olleglad.dk/sort-snak-33-cl",
           "discount_pct": 0,
@@ -48855,7 +48910,7 @@
       ],
       "cheapest_price": 65.0,
       "min_price": 65.0,
-      "shop": "Olle Glad",
+      "shop": "Ølleglad",
       "discount_pct": 0,
       "max_discount_pct": 0
     },
@@ -49959,32 +50014,6 @@
       "max_discount_pct": 0
     },
     {
-      "id": 20970,
-      "slug": "norm-brewing-kia-ora-ipa-22",
-      "description": null,
-      "name": "Kia Ora - IPA",
-      "image": "https://humledrik.dk/cache/4/6/3/8/6/3/0/fit-370x370x75.webp",
-      "type": "India Pale Ale (IPA)",
-      "abv": 7.0,
-      "volume_cl": 44.0,
-      "brewery": "Norm Brewing",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Humledrik",
-          "price": 65.0,
-          "url": "https://humledrik.dk/freestyle-hops-ipa",
-          "discount_pct": 0,
-          "old_price": null
-        }
-      ],
-      "cheapest_price": 65.0,
-      "min_price": 65.0,
-      "shop": "Humledrik",
-      "discount_pct": 0,
-      "max_discount_pct": 0
-    },
-    {
       "id": 17902,
       "slug": "evergreen-burnt-mill-na",
       "description": "Burnt Mill fra Ipswich i England har brygget denne west coast pale ale alkoholfri på 0,5%. Lys gylden i farve og let bitter. Untappd rating er 3,68",
@@ -50921,6 +50950,32 @@
       "max_discount_pct": 0
     },
     {
+      "id": 21003,
+      "slug": "norm-brewing-kia-ora-ipa-23",
+      "description": null,
+      "name": "Kia Ora - IPA",
+      "image": "https://humledrik.dk/cache/4/6/3/8/6/3/0/fit-370x370x75.webp",
+      "type": "India Pale Ale (IPA)",
+      "abv": 7.0,
+      "volume_cl": 44.0,
+      "brewery": "Norm Brewing",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Humledrik",
+          "price": 65.0,
+          "url": "https://humledrik.dk/freestyle-hops-ipa",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 65.0,
+      "min_price": 65.0,
+      "shop": "Humledrik",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
       "id": 20635,
       "slug": "la-superbe-discofury-double-new-england-ipa",
       "description": "Icaro er en Imperial Oat Cream IPA, hvor Citra, Nelson og Anchovy står for humletrioen. Havrecremen giver en blød og fyldig mundfølelse, mens humlerne trækker øllen i retning af citrus, tropisk frugt og saftige grønne noter. 8% gør den til en seriøs Double IPA, men den bløde tekstur får den til at føles mere rund end voldsom. En flyvende humlebombe, der forhåbentlig ikke kommer for tæt på solen. INFORMATION Stil: IPA - Double Størrelse: 44 cl Alkoholprocent: 8% Allergener: BYGMALT, HAVRE, HVEDE, LAKTOSE Best before datoen er 30/06-2027. NB: Fri fragt ved køb over 499 kr.",
@@ -51018,14 +51073,14 @@
           "old_price": null
         },
         {
-          "shop_name": "Olle Glad",
+          "shop_name": "Ølleglad",
           "price": 69.0,
           "url": "https://olleglad.dk/westmalle-tripel",
           "discount_pct": 0,
           "old_price": null
         },
         {
-          "shop_name": "Ølleglad",
+          "shop_name": "Olle Glad",
           "price": 69.0,
           "url": "https://olleglad.dk/westmalle-tripel",
           "discount_pct": 0,
@@ -52036,14 +52091,14 @@
           "old_price": null
         },
         {
-          "shop_name": "Olle Glad",
+          "shop_name": "Ølleglad",
           "price": 79.0,
           "url": "https://olleglad.dk/observatoriet-glarbo-37-5-cl",
           "discount_pct": 0,
           "old_price": null
         },
         {
-          "shop_name": "Ølleglad",
+          "shop_name": "Olle Glad",
           "price": 79.0,
           "url": "https://olleglad.dk/observatoriet-glarbo-37-5-cl",
           "discount_pct": 0,
@@ -52071,7 +52126,7 @@
         {
           "shop_name": "Humledrik",
           "price": 69.0,
-          "url": "https://humledrik.dk/shield-2025-imperial-stout",
+          "url": "https://humledrik.dk/torc-imperial-stout",
           "discount_pct": 0,
           "old_price": null
         }
@@ -52163,7 +52218,7 @@
         {
           "shop_name": "Humledrik",
           "price": 69.0,
-          "url": "https://humledrik.dk/black-phillip-ipa",
+          "url": "https://humledrik.dk/slack-phillip-ipa",
           "discount_pct": 0,
           "old_price": null
         }
@@ -53210,8 +53265,8 @@
       "max_discount_pct": 0
     },
     {
-      "id": 20953,
-      "slug": "brewski-dan-17",
+      "id": 20986,
+      "slug": "brewski-dan-18",
       "description": "Dan fra Brewski er af typen Imperial Stout og er på 11,2% Dan har ligget på amerikanske whiskeyfade, og det kan man mærke fra første duft: vanilje, eg og en tydelig whiskeyvarme med mørk chokolade og ristet malt bagved. I glasset er den kulsort og lystæt med et lavt, mørkebrunt skum, der trækker sig tilbage til en tynd krans. I smagen kommer den ristede malt først med kakao og en anelse brændt sukker, hvorefter fadet overtager med vanillin, karamel og et strejf af whiskey. Bitterheden fra malten sørger for, at øllen ikke bliver rent sød.",
       "name": "Dan 11,2% 33cl",
       "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/dan-11-2-33cl.png?v=1788192295",
@@ -53637,23 +53692,23 @@
       "category": null,
       "prices": [
         {
-          "shop_name": "BeerBarrel",
+          "shop_name": "Brygshoppen",
           "price": 70.0,
-          "url": "https://www.beerbarrel.dk/vare/noa-pecan-mud-cake/",
+          "url": "https://brygshoppen.dk/products/noa-pecan-mud-cake-stout-11-33cl",
           "discount_pct": 0,
           "old_price": null
         },
         {
-          "shop_name": "Brygshoppen",
+          "shop_name": "BeerBarrel",
           "price": 70.0,
-          "url": "https://brygshoppen.dk/products/noa-pecan-mud-cake-stout-11-33cl",
+          "url": "https://www.beerbarrel.dk/vare/noa-pecan-mud-cake/",
           "discount_pct": 0,
           "old_price": null
         }
       ],
       "cheapest_price": 70.0,
       "min_price": 70.0,
-      "shop": "BeerBarrel",
+      "shop": "Brygshoppen",
       "discount_pct": 0,
       "max_discount_pct": 0
     },
@@ -56030,16 +56085,16 @@
           "old_price": null
         },
         {
-          "shop_name": "Beermatch",
+          "shop_name": "Humledrik",
           "price": 89.0,
-          "url": "https://www.beermatch.dk/products/st-bernardus-abt-12-kopi",
+          "url": "https://humledrik.dk/st.bernardus-abt-12-quadrupel-brouwerij-st.bernardus",
           "discount_pct": 0,
           "old_price": null
         },
         {
-          "shop_name": "Humledrik",
+          "shop_name": "Beermatch",
           "price": 89.0,
-          "url": "https://humledrik.dk/st.bernardus-abt-12-quadrupel-brouwerij-st.bernardus",
+          "url": "https://www.beermatch.dk/products/st-bernardus-abt-12-kopi",
           "discount_pct": 0,
           "old_price": null
         }
@@ -56233,14 +56288,14 @@
       "category": null,
       "prices": [
         {
-          "shop_name": "Olle Glad",
+          "shop_name": "Ølleglad",
           "price": 75.0,
           "url": "https://olleglad.dk/oude-bertel-37-5-cl",
           "discount_pct": 0,
           "old_price": null
         },
         {
-          "shop_name": "Ølleglad",
+          "shop_name": "Olle Glad",
           "price": 75.0,
           "url": "https://olleglad.dk/oude-bertel-37-5-cl",
           "discount_pct": 0,
@@ -56249,7 +56304,7 @@
       ],
       "cheapest_price": 75.0,
       "min_price": 75.0,
-      "shop": "Olle Glad",
+      "shop": "Ølleglad",
       "discount_pct": 0,
       "max_discount_pct": 0
     },
@@ -56266,14 +56321,14 @@
       "category": null,
       "prices": [
         {
-          "shop_name": "Olle Glad",
+          "shop_name": "Ølleglad",
           "price": 75.0,
           "url": "https://olleglad.dk/jens-33-cl",
           "discount_pct": 0,
           "old_price": null
         },
         {
-          "shop_name": "Ølleglad",
+          "shop_name": "Olle Glad",
           "price": 75.0,
           "url": "https://olleglad.dk/jens-33-cl",
           "discount_pct": 0,
@@ -56282,7 +56337,7 @@
       ],
       "cheapest_price": 75.0,
       "min_price": 75.0,
-      "shop": "Olle Glad",
+      "shop": "Ølleglad",
       "discount_pct": 0,
       "max_discount_pct": 0
     },
@@ -57925,8 +57980,8 @@
       "max_discount_pct": 0
     },
     {
-      "id": 20945,
-      "slug": "seven-island-brewery-22",
+      "id": 20977,
+      "slug": "seven-island-brewery-23",
       "description": "Navnet refererer til det oldgræske taltegn for 666, og øllen leverer præcis den dystre tyngde, man forventer. Seven Island har begået et mindre mesterværk ved at integrere mahleb-krydderiet, som trækker aromaen væk fra den klassiske kagedessert og over i noget langt mere mystisk og krydret. Alkoholen og den massive krop er tæmmet perfekt, så de mange smagslag folder sig ud i en langvarig, symfonisk eftersmag. ΧΞΣ er en kompromisløs og sjælden øloplevelse, der skal drikkes langsomt i",
       "name": "ΧΞΣ",
       "image": "https://mlnyqjrpbd75.i.optimole.com/cb:xzKT.fcd/w:auto/h:auto/q:mauto/f:best/https://www.beerbarrel.dk/wp-content/uploads/2026/09/produktbilleder_20260906_160606_0003.png",
@@ -57951,8 +58006,8 @@
       "max_discount_pct": 0
     },
     {
-      "id": 20956,
-      "slug": "omnipollo-raw-beer-139",
+      "id": 20989,
+      "slug": "omnipollo-raw-beer-140",
       "description": "Raw Beer fra Omnipollo er af typen Double New England IPA og er på 8% Raw Beer er en eksperimenterende dobbelt IPA, der aldrig bliver kogt, og bryggeriet kalder den dobbelt IPA'ernes sushi: rå, ufiltreret og ren. Ved en raw ale koges urten ikke, som man ellers gør, og det skal bevare den rå, naturlige karakter fra korn og humle. Pilsnermalt, hvede og havre bærer den, og øllen er kraftigt tørhumlet for at få mest mulig duft og mindst mulig bitterhed. Den er uklar og blød med friske citrus- og tropiske frugtnoter og en let kornsødme. De 8% giver en fyldig krop.",
       "name": "Raw Beer 8% 44cl",
       "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/raw-beer-8.png?v=1782404785",
@@ -58074,23 +58129,23 @@
       "category": null,
       "prices": [
         {
-          "shop_name": "Beermatch",
+          "shop_name": "Humledrik",
           "price": 76.0,
-          "url": "https://www.beermatch.dk/products/verdant-flux-phase-6-track-collab",
+          "url": "https://humledrik.dk/flux-phase-6-ipa-verdant-brewing-co",
           "discount_pct": 0,
           "old_price": null
         },
         {
-          "shop_name": "Humledrik",
+          "shop_name": "Beermatch",
           "price": 76.0,
-          "url": "https://humledrik.dk/flux-phase-6-ipa-verdant-brewing-co",
+          "url": "https://www.beermatch.dk/products/verdant-flux-phase-6-track-collab",
           "discount_pct": 0,
           "old_price": null
         }
       ],
       "cheapest_price": 76.0,
       "min_price": 76.0,
-      "shop": "Beermatch",
+      "shop": "Humledrik",
       "discount_pct": 0,
       "max_discount_pct": 0
     },
@@ -58752,32 +58807,6 @@
       "max_discount_pct": 0
     },
     {
-      "id": 20973,
-      "slug": "flying-guru-brewery-urd-sour-22",
-      "description": null,
-      "name": "Urd - Sour",
-      "image": "https://humledrik.dk/cache/4/6/5/8/2/0/8/fit-370x370x75.webp",
-      "type": "Sour",
-      "abv": 7.6,
-      "volume_cl": 37.5,
-      "brewery": "Flying Guru Brewery",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Humledrik",
-          "price": 78.0,
-          "url": "https://humledrik.dk/urd-sour-flying-guru-brewery",
-          "discount_pct": 0,
-          "old_price": null
-        }
-      ],
-      "cheapest_price": 78.0,
-      "min_price": 78.0,
-      "shop": "Humledrik",
-      "discount_pct": 0,
-      "max_discount_pct": 0
-    },
-    {
       "id": 19048,
       "slug": "observatoriet-avalon",
       "description": "<p>Avalon er en vildgæret øl lagret 12 måneder på egetræ, brygget fra samme batch som Wanderer. I en tredje fermenteringsfase blev der tilsat kvædesaft. Har vi ikke alle som børn prøvet at smage disse forbudte frugter? Den gode nyhed er, at de gør sig langt bedre i en wild ale end direkte fra træet!</p>",
@@ -58986,6 +59015,32 @@
       "max_discount_pct": 0
     },
     {
+      "id": 21006,
+      "slug": "flying-guru-brewery-urd-sour-23",
+      "description": null,
+      "name": "Urd - Sour",
+      "image": "https://humledrik.dk/cache/4/6/5/8/2/0/8/fit-370x370x75.webp",
+      "type": "Sour",
+      "abv": 7.6,
+      "volume_cl": 37.5,
+      "brewery": "Flying Guru Brewery",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Humledrik",
+          "price": 78.0,
+          "url": "https://humledrik.dk/urd-sour-flying-guru-brewery",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 78.0,
+      "min_price": 78.0,
+      "shop": "Humledrik",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
       "id": 20196,
       "slug": "wai-iti-wild-ale-observatoriet",
       "description": "WAI-ITI – OBSERVATORIET 🌿 Når vildgær møder newzealandsk humle Nogle øl går efter at være bitre. Andre går efter at være frugtige. Wai-iti fra Observatoriet bevæger sig lidt uden for den klassiske ølbane. Observatoriet fra Søhøjlandet har specialiseret sig i syrlige øl og Wild Ales, hvor fermenteringen får lov til at spille en central rolle. Her handler det ikke bare om malt og humle, men også om den karakter og kompleksitet, som gærkulturerne kan tilføre øllet.",
@@ -58998,14 +59053,14 @@
       "category": null,
       "prices": [
         {
-          "shop_name": "Olle Glad",
+          "shop_name": "Ølleglad",
           "price": 79.0,
           "url": "https://olleglad.dk/observatoriet-wai-iti-37-5-cl",
           "discount_pct": 0,
           "old_price": null
         },
         {
-          "shop_name": "Ølleglad",
+          "shop_name": "Olle Glad",
           "price": 79.0,
           "url": "https://olleglad.dk/observatoriet-wai-iti-37-5-cl",
           "discount_pct": 0,
@@ -59021,7 +59076,7 @@
       ],
       "cheapest_price": 79.0,
       "min_price": 79.0,
-      "shop": "Olle Glad",
+      "shop": "Ølleglad",
       "discount_pct": 0,
       "max_discount_pct": 0
     },
@@ -59085,23 +59140,23 @@
       "category": null,
       "prices": [
         {
-          "shop_name": "Beer Me",
+          "shop_name": "Humledrik",
           "price": 79.0,
-          "url": "https://www.partner-ads.com/dk/klikbanner.php?bannerid=74625&partnerid=56605&htmlurl=https://www.beer-me.dk/vare/tariss-wild-ale-med-nektarin-fra-attik-brewing",
+          "url": "https://humledrik.dk/tariss-wild-ale-attik-brewing",
           "discount_pct": 0,
           "old_price": null
         },
         {
-          "shop_name": "Humledrik",
+          "shop_name": "Beer Me",
           "price": 79.0,
-          "url": "https://humledrik.dk/tariss-wild-ale-attik-brewing",
+          "url": "https://www.partner-ads.com/dk/klikbanner.php?bannerid=74625&partnerid=56605&htmlurl=https://www.beer-me.dk/vare/tariss-wild-ale-med-nektarin-fra-attik-brewing",
           "discount_pct": 0,
           "old_price": null
         }
       ],
       "cheapest_price": 79.0,
       "min_price": 79.0,
-      "shop": "Beer Me",
+      "shop": "Humledrik",
       "discount_pct": 0,
       "max_discount_pct": 0
     },
@@ -59335,23 +59390,23 @@
       "category": null,
       "prices": [
         {
-          "shop_name": "Beer Me",
+          "shop_name": "Humledrik",
           "price": 79.0,
-          "url": "https://www.partner-ads.com/dk/klikbanner.php?bannerid=74625&partnerid=56605&htmlurl=https://www.beer-me.dk/vare/brissot-wild-ale-med-abrikos-fra-attik-brewing",
+          "url": "https://humledrik.dk/brissot-wild-ale-attik-brewing",
           "discount_pct": 0,
           "old_price": null
         },
         {
-          "shop_name": "Humledrik",
+          "shop_name": "Beer Me",
           "price": 79.0,
-          "url": "https://humledrik.dk/brissot-wild-ale-attik-brewing",
+          "url": "https://www.partner-ads.com/dk/klikbanner.php?bannerid=74625&partnerid=56605&htmlurl=https://www.beer-me.dk/vare/brissot-wild-ale-med-abrikos-fra-attik-brewing",
           "discount_pct": 0,
           "old_price": null
         }
       ],
       "cheapest_price": 79.0,
       "min_price": 79.0,
-      "shop": "Beer Me",
+      "shop": "Humledrik",
       "discount_pct": 0,
       "max_discount_pct": 0
     },
@@ -59460,14 +59515,14 @@
       "category": null,
       "prices": [
         {
-          "shop_name": "Olle Glad",
+          "shop_name": "Ølleglad",
           "price": 79.0,
           "url": "https://olleglad.dk/moersleutel-pastry-factory-drop-it-like-it-s-hot-44-cl",
           "discount_pct": 0,
           "old_price": null
         },
         {
-          "shop_name": "Ølleglad",
+          "shop_name": "Olle Glad",
           "price": 79.0,
           "url": "https://olleglad.dk/moersleutel-pastry-factory-drop-it-like-it-s-hot-44-cl",
           "discount_pct": 0,
@@ -59476,7 +59531,7 @@
       ],
       "cheapest_price": 79.0,
       "min_price": 79.0,
-      "shop": "Olle Glad",
+      "shop": "Ølleglad",
       "discount_pct": 0,
       "max_discount_pct": 0
     },
@@ -59493,14 +59548,14 @@
       "category": null,
       "prices": [
         {
-          "shop_name": "Olle Glad",
+          "shop_name": "Ølleglad",
           "price": 79.0,
           "url": "https://olleglad.dk/amager-bryghus-kid-curry",
           "discount_pct": 0,
           "old_price": null
         },
         {
-          "shop_name": "Ølleglad",
+          "shop_name": "Olle Glad",
           "price": 79.0,
           "url": "https://olleglad.dk/amager-bryghus-kid-curry",
           "discount_pct": 0,
@@ -59509,7 +59564,7 @@
       ],
       "cheapest_price": 79.0,
       "min_price": 79.0,
-      "shop": "Olle Glad",
+      "shop": "Ølleglad",
       "discount_pct": 0,
       "max_discount_pct": 0
     },
@@ -60580,14 +60635,14 @@
       "category": null,
       "prices": [
         {
-          "shop_name": "Olle Glad",
+          "shop_name": "Ølleglad",
           "price": 80.0,
           "url": "https://olleglad.dk/coolhead-freshly-squeezed-honey-cherry-crumble-44-cl",
           "discount_pct": 0,
           "old_price": null
         },
         {
-          "shop_name": "Ølleglad",
+          "shop_name": "Olle Glad",
           "price": 80.0,
           "url": "https://olleglad.dk/coolhead-freshly-squeezed-honey-cherry-crumble-44-cl",
           "discount_pct": 0,
@@ -60596,7 +60651,7 @@
       ],
       "cheapest_price": 80.0,
       "min_price": 80.0,
-      "shop": "Olle Glad",
+      "shop": "Ølleglad",
       "discount_pct": 0,
       "max_discount_pct": 0
     },
@@ -62534,6 +62589,39 @@
       "max_discount_pct": 0
     },
     {
+      "id": 18911,
+      "slug": "st-bernardus-christmas-ale-moerk-belgisk-ale",
+      "description": null,
+      "name": "St. Bernardus – Christmas Ale – Mørk Belgisk Ale – 0,75 l. – 10,0%",
+      "image": "https://www.bestofbeers.dk/wp-content/uploads/2024/10/StBernadusChristmasAle75.jpg",
+      "type": null,
+      "abv": 10.0,
+      "volume_cl": 75.0,
+      "brewery": "St. Bernardus",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Humledrik",
+          "price": 85.0,
+          "url": "https://humledrik.dk/st.bernardus-christmas-ale-75-cl.-brouwerij-st.-bernardus",
+          "discount_pct": 0,
+          "old_price": null
+        },
+        {
+          "shop_name": "Best of Beers",
+          "price": 86.0,
+          "url": "https://www.bestofbeers.dk/shop/st-bernardus-christmas-ale-moerk-belgisk-ale-075-l-100/",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 85.0,
+      "min_price": 85.0,
+      "shop": "Humledrik",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
       "id": 12858,
       "slug": "folkingebrew-whispers-in-the-dark",
       "description": "Whispers In the Dark fra Folkingebrew er af typen Imperial Stout og er på 12% Whispers In the Dark er en imperial stout med pekannødder, kakao og vanilje, og bunden er pilsmalt, havre og mørke maltsorter. Den er sort i glasset med en tæt, cremet krop. Pekannødderne giver en blød nøddetone, kakaoen mørk chokolade, og vaniljen binder det sammen med sødme. Eftersmagen er lang, blød og let bitter, og de 12% giver varme, der holder sig i glasset. Server den i et lille glas til en sen aften, til dessert med karamel eller nødder, eller til en moden ost, og del den gerne, for den er stærk.",
@@ -62842,32 +62930,6 @@
       "cheapest_price": 85.0,
       "min_price": 85.0,
       "shop": "Brygshoppen",
-      "discount_pct": 0,
-      "max_discount_pct": 0
-    },
-    {
-      "id": 18911,
-      "slug": "st-bernardus-christmas-ale-moerk-belgisk-ale",
-      "description": null,
-      "name": "St. Bernardus – Christmas Ale – Mørk Belgisk Ale – 0,75 l. – 10,0%",
-      "image": "https://www.bestofbeers.dk/wp-content/uploads/2024/10/StBernadusChristmasAle75.jpg",
-      "type": null,
-      "abv": 10.0,
-      "volume_cl": 75.0,
-      "brewery": "St. Bernardus",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Humledrik",
-          "price": 85.0,
-          "url": "https://humledrik.dk/st.bernardus-christmas-ale-75-cl.-brouwerij-st.-bernardus",
-          "discount_pct": 0,
-          "old_price": null
-        }
-      ],
-      "cheapest_price": 85.0,
-      "min_price": 85.0,
-      "shop": "Humledrik",
       "discount_pct": 0,
       "max_discount_pct": 0
     },
@@ -63210,8 +63272,8 @@
       "max_discount_pct": 0
     },
     {
-      "id": 20960,
-      "slug": "frontaal-brewing-co-no-way-out-b-a-69",
+      "id": 20993,
+      "slug": "frontaal-brewing-co-no-way-out-b-a-70",
       "description": "No Way Out B. A. fra Frontaal Brewing Co. i samarbejde med Põhjala er af typen Barleywine og er på 10,5% B. står for fadlagret. Frontaal og Põhjala fra Estland lagrede deres fælles No Way Out på fade, og den fadlagrede udgave kom et år efter originalen. Põhjala er et bryggeri fra Tallinn. Barleywinen er brygget med saltet karamel og har ligget på Madeira- og Ruby Port-fade. Karamel og toffee danner bunden, med en let salt kant, og fadene har lagt tørret frugt og egetræ ovenpå. Madeira er en portugisisk hedvin fra øen af samme navn.",
       "name": "No Way Out B.A. 10,5% 33cl",
       "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/no-way-out-b-a-10-5-33cl.png?v=1750592682",
@@ -63593,9 +63655,9 @@
           "old_price": null
         },
         {
-          "shop_name": "Humledrik",
+          "shop_name": "Ølleglad",
           "price": 89.0,
-          "url": "https://humledrik.dk/kid-curry-golden-edition-quadrupel",
+          "url": "https://olleglad.dk/amager-bryghus-kid-curry-golden-edition",
           "discount_pct": 0,
           "old_price": null
         },
@@ -63607,9 +63669,9 @@
           "old_price": null
         },
         {
-          "shop_name": "Ølleglad",
+          "shop_name": "Humledrik",
           "price": 89.0,
-          "url": "https://olleglad.dk/amager-bryghus-kid-curry-golden-edition",
+          "url": "https://humledrik.dk/kid-curry-golden-edition-quadrupel",
           "discount_pct": 0,
           "old_price": null
         }
@@ -63789,14 +63851,14 @@
       "category": null,
       "prices": [
         {
-          "shop_name": "Olle Glad",
+          "shop_name": "Ølleglad",
           "price": 89.0,
           "url": "https://olleglad.dk/het-anker-gouden-carolus-cuv-e-van-de-keizer-imperial-dark-2025",
           "discount_pct": 0,
           "old_price": null
         },
         {
-          "shop_name": "Ølleglad",
+          "shop_name": "Olle Glad",
           "price": 89.0,
           "url": "https://olleglad.dk/het-anker-gouden-carolus-cuv-e-van-de-keizer-imperial-dark-2025",
           "discount_pct": 0,
@@ -63819,7 +63881,7 @@
       ],
       "cheapest_price": 89.0,
       "min_price": 89.0,
-      "shop": "Olle Glad",
+      "shop": "Ølleglad",
       "discount_pct": 0,
       "max_discount_pct": 0
     },
@@ -63968,14 +64030,14 @@
       "category": null,
       "prices": [
         {
-          "shop_name": "Olle Glad",
+          "shop_name": "Ølleglad",
           "price": 89.0,
           "url": "https://olleglad.dk/duchesse-de-bourgogne-cherry-75-cl",
           "discount_pct": 0,
           "old_price": null
         },
         {
-          "shop_name": "Ølleglad",
+          "shop_name": "Olle Glad",
           "price": 89.0,
           "url": "https://olleglad.dk/duchesse-de-bourgogne-cherry-75-cl",
           "discount_pct": 0,
@@ -63984,7 +64046,7 @@
       ],
       "cheapest_price": 89.0,
       "min_price": 89.0,
-      "shop": "Olle Glad",
+      "shop": "Ølleglad",
       "discount_pct": 0,
       "max_discount_pct": 0
     },
@@ -64899,8 +64961,8 @@
       "max_discount_pct": 0
     },
     {
-      "id": 20964,
-      "slug": "o-o-brewing-400-imperial-barley-wine-22",
+      "id": 20997,
+      "slug": "o-o-brewing-400-imperial-barley-wine-23",
       "description": null,
       "name": "#400 Imperial - Barley Wine",
       "image": "https://humledrik.dk/cache/4/4/7/4/0/5/5/fit-370x370x75.webp",
@@ -65029,14 +65091,14 @@
           "old_price": 115.0
         },
         {
-          "shop_name": "Olle Glad",
+          "shop_name": "Ølleglad",
           "price": 125.0,
           "url": "https://olleglad.dk/moersleutel-barcode-silver-aquamarine-44-cl",
           "discount_pct": 0,
           "old_price": null
         },
         {
-          "shop_name": "Ølleglad",
+          "shop_name": "Olle Glad",
           "price": 125.0,
           "url": "https://olleglad.dk/moersleutel-barcode-silver-aquamarine-44-cl",
           "discount_pct": 0,
@@ -65149,14 +65211,14 @@
       "category": null,
       "prices": [
         {
-          "shop_name": "Olle Glad",
+          "shop_name": "Ølleglad",
           "price": 90.0,
           "url": "https://olleglad.dk/factory-brewing-eye-opener-44-cl",
           "discount_pct": 0,
           "old_price": null
         },
         {
-          "shop_name": "Ølleglad",
+          "shop_name": "Olle Glad",
           "price": 90.0,
           "url": "https://olleglad.dk/factory-brewing-eye-opener-44-cl",
           "discount_pct": 0,
@@ -65165,7 +65227,7 @@
       ],
       "cheapest_price": 90.0,
       "min_price": 90.0,
-      "shop": "Olle Glad",
+      "shop": "Ølleglad",
       "discount_pct": 0,
       "max_discount_pct": 0
     },
@@ -66768,14 +66830,14 @@
       "category": null,
       "prices": [
         {
-          "shop_name": "Olle Glad",
+          "shop_name": "Ølleglad",
           "price": 99.0,
           "url": "https://olleglad.dk/de-cam-oude-lambiek-2023-75-cl",
           "discount_pct": 0,
           "old_price": null
         },
         {
-          "shop_name": "Ølleglad",
+          "shop_name": "Olle Glad",
           "price": 99.0,
           "url": "https://olleglad.dk/de-cam-oude-lambiek-2023-75-cl",
           "discount_pct": 0,
@@ -66791,7 +66853,7 @@
       ],
       "cheapest_price": 99.0,
       "min_price": 99.0,
-      "shop": "Olle Glad",
+      "shop": "Ølleglad",
       "discount_pct": 0,
       "max_discount_pct": 0
     },
@@ -66952,14 +67014,14 @@
       "category": null,
       "prices": [
         {
-          "shop_name": "Olle Glad",
+          "shop_name": "Ølleglad",
           "price": 99.0,
           "url": "https://olleglad.dk/baghaven-havnesaeson-75-cl",
           "discount_pct": 0,
           "old_price": null
         },
         {
-          "shop_name": "Ølleglad",
+          "shop_name": "Olle Glad",
           "price": 99.0,
           "url": "https://olleglad.dk/baghaven-havnesaeson-75-cl",
           "discount_pct": 0,
@@ -66968,7 +67030,7 @@
       ],
       "cheapest_price": 99.0,
       "min_price": 99.0,
-      "shop": "Olle Glad",
+      "shop": "Ølleglad",
       "discount_pct": 0,
       "max_discount_pct": 0
     },
@@ -68150,8 +68212,8 @@
       "max_discount_pct": 0
     },
     {
-      "id": 20957,
-      "slug": "frontaal-brewing-co-10-imperial-stout-69",
+      "id": 20990,
+      "slug": "frontaal-brewing-co-10-imperial-stout-70",
       "description": "10 - Imperial Stout fra Frontaal Brewing Co. er af typen Imperial Stout og er på 10% Øllen er brygget til Frontaals 10 års fødselsdag og har ligget på fade fra cognac, Mirabella-whisky og rom fra Barbados. Bryggeriet kalder den rig og blød, og karamel, krydderi og mørk frugt går igen i smagen. Kroppen er fyldig, og fadene giver en dybde, som en ung stout ikke har. Bryggeriet beskriver den som en modig øl til en særlig milepæl. Frontaal Brewing Co. ligger i Breda i det sydlige Holland.",
       "name": "10 - Imperial Stout 10% 44cl",
       "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/10-imperial-stout-10-44cl_9645d1f7-914c-43d6-b687-b07453f1aaf2.png?v=1761637026",
@@ -68188,14 +68250,14 @@
       "category": null,
       "prices": [
         {
-          "shop_name": "Olle Glad",
+          "shop_name": "Ølleglad",
           "price": 100.0,
           "url": "https://olleglad.dk/coolhead-900-days",
           "discount_pct": 0,
           "old_price": null
         },
         {
-          "shop_name": "Ølleglad",
+          "shop_name": "Olle Glad",
           "price": 100.0,
           "url": "https://olleglad.dk/coolhead-900-days",
           "discount_pct": 0,
@@ -68204,7 +68266,7 @@
       ],
       "cheapest_price": 100.0,
       "min_price": 100.0,
-      "shop": "Olle Glad",
+      "shop": "Ølleglad",
       "discount_pct": 0,
       "max_discount_pct": 0
     },
@@ -69346,14 +69408,14 @@
       "category": null,
       "prices": [
         {
-          "shop_name": "Olle Glad",
+          "shop_name": "Ølleglad",
           "price": 109.0,
           "url": "https://olleglad.dk/rodenbach-vintage-2022-75-cl",
           "discount_pct": 0,
           "old_price": null
         },
         {
-          "shop_name": "Ølleglad",
+          "shop_name": "Olle Glad",
           "price": 109.0,
           "url": "https://olleglad.dk/rodenbach-vintage-2022-75-cl",
           "discount_pct": 0,
@@ -69362,7 +69424,7 @@
       ],
       "cheapest_price": 109.0,
       "min_price": 109.0,
-      "shop": "Olle Glad",
+      "shop": "Ølleglad",
       "discount_pct": 0,
       "max_discount_pct": 0
     },
@@ -69876,23 +69938,23 @@
       "category": null,
       "prices": [
         {
-          "shop_name": "Beershoppen",
+          "shop_name": "Brygshoppen",
           "price": 110.0,
-          "url": "https://beershoppen.dk/products/gueuze-cantillon-37-5-cl-5-5",
+          "url": "https://brygshoppen.dk/products/cantillion-kriek-100-lambic-bio-6-37-5cl",
           "discount_pct": 0,
           "old_price": null
         },
         {
-          "shop_name": "Brygshoppen",
+          "shop_name": "Beershoppen",
           "price": 110.0,
-          "url": "https://brygshoppen.dk/products/cantillion-kriek-100-lambic-bio-6-37-5cl",
+          "url": "https://beershoppen.dk/products/gueuze-cantillon-37-5-cl-5-5",
           "discount_pct": 0,
           "old_price": null
         }
       ],
       "cheapest_price": 110.0,
       "min_price": 110.0,
-      "shop": "Beershoppen",
+      "shop": "Brygshoppen",
       "discount_pct": 0,
       "max_discount_pct": 0
     },
@@ -70769,14 +70831,14 @@
       "category": null,
       "prices": [
         {
-          "shop_name": "Olle Glad",
+          "shop_name": "Ølleglad",
           "price": 119.0,
           "url": "https://olleglad.dk/de-cam-geuze-2024-75-cl",
           "discount_pct": 0,
           "old_price": null
         },
         {
-          "shop_name": "Ølleglad",
+          "shop_name": "Olle Glad",
           "price": 119.0,
           "url": "https://olleglad.dk/de-cam-geuze-2024-75-cl",
           "discount_pct": 0,
@@ -70785,7 +70847,7 @@
       ],
       "cheapest_price": 119.0,
       "min_price": 119.0,
-      "shop": "Olle Glad",
+      "shop": "Ølleglad",
       "discount_pct": 0,
       "max_discount_pct": 0
     },
@@ -71140,14 +71202,14 @@
       "category": null,
       "prices": [
         {
-          "shop_name": "Olle Glad",
+          "shop_name": "Ølleglad",
           "price": 120.0,
           "url": "https://olleglad.dk/hoppy-people-kompressor-2k26-primavera-edition",
           "discount_pct": 0,
           "old_price": null
         },
         {
-          "shop_name": "Ølleglad",
+          "shop_name": "Olle Glad",
           "price": 120.0,
           "url": "https://olleglad.dk/hoppy-people-kompressor-2k26-primavera-edition",
           "discount_pct": 0,
@@ -71156,7 +71218,7 @@
       ],
       "cheapest_price": 120.0,
       "min_price": 120.0,
-      "shop": "Olle Glad",
+      "shop": "Ølleglad",
       "discount_pct": 0,
       "max_discount_pct": 0
     },
@@ -71563,14 +71625,14 @@
       "category": null,
       "prices": [
         {
-          "shop_name": "Olle Glad",
+          "shop_name": "Ølleglad",
           "price": 125.0,
           "url": "https://olleglad.dk/moersleutel-barcode-silver-laser-green",
           "discount_pct": 0,
           "old_price": null
         },
         {
-          "shop_name": "Ølleglad",
+          "shop_name": "Olle Glad",
           "price": 125.0,
           "url": "https://olleglad.dk/moersleutel-barcode-silver-laser-green",
           "discount_pct": 0,
@@ -71586,7 +71648,7 @@
       ],
       "cheapest_price": 125.0,
       "min_price": 125.0,
-      "shop": "Olle Glad",
+      "shop": "Ølleglad",
       "discount_pct": 0,
       "max_discount_pct": 0
     },
@@ -73635,14 +73697,14 @@
       "category": null,
       "prices": [
         {
-          "shop_name": "Olle Glad",
+          "shop_name": "Ølleglad",
           "price": 139.0,
           "url": "https://olleglad.dk/de-cam-kriek-2024-75-cl",
           "discount_pct": 0,
           "old_price": null
         },
         {
-          "shop_name": "Ølleglad",
+          "shop_name": "Olle Glad",
           "price": 139.0,
           "url": "https://olleglad.dk/de-cam-kriek-2024-75-cl",
           "discount_pct": 0,
@@ -73651,7 +73713,7 @@
       ],
       "cheapest_price": 139.0,
       "min_price": 139.0,
-      "shop": "Olle Glad",
+      "shop": "Ølleglad",
       "discount_pct": 0,
       "max_discount_pct": 0
     },
@@ -74615,7 +74677,7 @@
         {
           "shop_name": "Brygshoppen",
           "price": 149.0,
-          "url": "https://brygshoppen.dk/products/chimay-grande-reserve-fermentee-en-barriques-02-2024-10-5-37-5cl",
+          "url": "https://brygshoppen.dk/products/chimay-grande-reserve-fermentee-en-barriques-rhum-02-2025-10-5-37-5cl",
           "discount_pct": 0,
           "old_price": null
         }
@@ -74639,14 +74701,14 @@
       "category": null,
       "prices": [
         {
-          "shop_name": "Olle Glad",
+          "shop_name": "Ølleglad",
           "price": 149.0,
           "url": "https://olleglad.dk/madx-grind-and-funk",
           "discount_pct": 0,
           "old_price": null
         },
         {
-          "shop_name": "Ølleglad",
+          "shop_name": "Olle Glad",
           "price": 149.0,
           "url": "https://olleglad.dk/madx-grind-and-funk",
           "discount_pct": 0,
@@ -74655,7 +74717,7 @@
       ],
       "cheapest_price": 149.0,
       "min_price": 149.0,
-      "shop": "Olle Glad",
+      "shop": "Ølleglad",
       "discount_pct": 0,
       "max_discount_pct": 0
     },
@@ -75463,7 +75525,7 @@
         {
           "shop_name": "Brygshoppen",
           "price": 160.0,
-          "url": "https://brygshoppen.dk/products/bottle-brew-9-15-75cl",
+          "url": "https://brygshoppen.dk/products/bottle-brew-no-4-15-75cl",
           "discount_pct": 0,
           "old_price": null
         }
@@ -75487,14 +75549,14 @@
       "category": null,
       "prices": [
         {
-          "shop_name": "Olle Glad",
+          "shop_name": "Ølleglad",
           "price": 160.0,
           "url": "https://olleglad.dk/gaveaeske-amagerbryghus",
           "discount_pct": 0,
           "old_price": null
         },
         {
-          "shop_name": "Ølleglad",
+          "shop_name": "Olle Glad",
           "price": 160.0,
           "url": "https://olleglad.dk/gaveaeske-amagerbryghus",
           "discount_pct": 0,
@@ -75503,7 +75565,7 @@
       ],
       "cheapest_price": 160.0,
       "min_price": 160.0,
-      "shop": "Olle Glad",
+      "shop": "Ølleglad",
       "discount_pct": 0,
       "max_discount_pct": 0
     },
@@ -76148,7 +76210,7 @@
         {
           "shop_name": "Best of Beers",
           "price": 251.0,
-          "url": "https://www.bestofbeers.dk/shop/cantillon-cuvee-saint-gilloise-2025-075-l-55/",
+          "url": "https://www.bestofbeers.dk/shop/cantillon-cuvee-saint-gilloise-2024-075-l-55/",
           "discount_pct": 0,
           "old_price": null
         }
@@ -76172,14 +76234,14 @@
       "category": null,
       "prices": [
         {
-          "shop_name": "Olle Glad",
+          "shop_name": "Ølleglad",
           "price": 175.0,
           "url": "https://olleglad.dk/smagekasse",
           "discount_pct": 0,
           "old_price": null
         },
         {
-          "shop_name": "Ølleglad",
+          "shop_name": "Olle Glad",
           "price": 175.0,
           "url": "https://olleglad.dk/smagekasse",
           "discount_pct": 0,
@@ -76188,7 +76250,7 @@
       ],
       "cheapest_price": 175.0,
       "min_price": 175.0,
-      "shop": "Olle Glad",
+      "shop": "Ølleglad",
       "discount_pct": 0,
       "max_discount_pct": 0
     },
@@ -76205,14 +76267,14 @@
       "category": null,
       "prices": [
         {
-          "shop_name": "Olle Glad",
+          "shop_name": "Ølleglad",
           "price": 175.0,
           "url": "https://olleglad.dk/smagekasse-sproedt-godt",
           "discount_pct": 0,
           "old_price": null
         },
         {
-          "shop_name": "Ølleglad",
+          "shop_name": "Olle Glad",
           "price": 175.0,
           "url": "https://olleglad.dk/smagekasse-sproedt-godt",
           "discount_pct": 0,
@@ -76221,7 +76283,7 @@
       ],
       "cheapest_price": 175.0,
       "min_price": 175.0,
-      "shop": "Olle Glad",
+      "shop": "Ølleglad",
       "discount_pct": 0,
       "max_discount_pct": 0
     },
@@ -76583,14 +76645,14 @@
       "category": null,
       "prices": [
         {
-          "shop_name": "Olle Glad",
+          "shop_name": "Ølleglad",
           "price": 179.0,
           "url": "https://olleglad.dk/de-cam-fersken/persik-2023-75-cl",
           "discount_pct": 0,
           "old_price": null
         },
         {
-          "shop_name": "Ølleglad",
+          "shop_name": "Olle Glad",
           "price": 179.0,
           "url": "https://olleglad.dk/de-cam-fersken/persik-2023-75-cl",
           "discount_pct": 0,
@@ -76599,7 +76661,7 @@
       ],
       "cheapest_price": 179.0,
       "min_price": 179.0,
-      "shop": "Olle Glad",
+      "shop": "Ølleglad",
       "discount_pct": 0,
       "max_discount_pct": 0
     },
@@ -76616,14 +76678,14 @@
       "category": null,
       "prices": [
         {
-          "shop_name": "Olle Glad",
+          "shop_name": "Ølleglad",
           "price": 179.0,
           "url": "https://olleglad.dk/3-fonteinen-pruim-mirabelle-2022-75-cl",
           "discount_pct": 0,
           "old_price": null
         },
         {
-          "shop_name": "Ølleglad",
+          "shop_name": "Olle Glad",
           "price": 179.0,
           "url": "https://olleglad.dk/3-fonteinen-pruim-mirabelle-2022-75-cl",
           "discount_pct": 0,
@@ -76632,7 +76694,7 @@
       ],
       "cheapest_price": 179.0,
       "min_price": 179.0,
-      "shop": "Olle Glad",
+      "shop": "Ølleglad",
       "discount_pct": 0,
       "max_discount_pct": 0
     },
@@ -77060,8 +77122,8 @@
       "max_discount_pct": 0
     },
     {
-      "id": 20968,
-      "slug": "frederikshavn-bryghus-imperial-stout-bb-2-aar-paa-22",
+      "id": 21001,
+      "slug": "frederikshavn-bryghus-imperial-stout-bb-2-aar-paa-23",
       "description": null,
       "name": "Imperial Stout BB 2 år på fad - Imperial stout",
       "image": "https://humledrik.dk/cache/4/6/2/8/7/7/3/fit-370x370x75.webp",
@@ -77150,14 +77212,14 @@
       "category": null,
       "prices": [
         {
-          "shop_name": "Olle Glad",
+          "shop_name": "Ølleglad",
           "price": 189.0,
           "url": "https://olleglad.dk/de-cam-abrikos-2023-75-cl",
           "discount_pct": 0,
           "old_price": null
         },
         {
-          "shop_name": "Ølleglad",
+          "shop_name": "Olle Glad",
           "price": 189.0,
           "url": "https://olleglad.dk/de-cam-abrikos-2023-75-cl",
           "discount_pct": 0,
@@ -77166,7 +77228,7 @@
       ],
       "cheapest_price": 189.0,
       "min_price": 189.0,
-      "shop": "Olle Glad",
+      "shop": "Ølleglad",
       "discount_pct": 0,
       "max_discount_pct": 0
     },
@@ -77183,14 +77245,14 @@
       "category": null,
       "prices": [
         {
-          "shop_name": "Olle Glad",
+          "shop_name": "Ølleglad",
           "price": 189.0,
           "url": "https://olleglad.dk/de-cam-nectarine-lambiek-2023-75-cl",
           "discount_pct": 0,
           "old_price": null
         },
         {
-          "shop_name": "Ølleglad",
+          "shop_name": "Olle Glad",
           "price": 189.0,
           "url": "https://olleglad.dk/de-cam-nectarine-lambiek-2023-75-cl",
           "discount_pct": 0,
@@ -77199,7 +77261,7 @@
       ],
       "cheapest_price": 189.0,
       "min_price": 189.0,
-      "shop": "Olle Glad",
+      "shop": "Ølleglad",
       "discount_pct": 0,
       "max_discount_pct": 0
     },
@@ -77348,7 +77410,7 @@
         {
           "shop_name": "Brygshoppen",
           "price": 195.0,
-          "url": "https://brygshoppen.dk/products/gulden-draak-cuvee-prestige-bourbon-10-5-75cl",
+          "url": "https://brygshoppen.dk/products/gulden-draak-cuvee-prestige-laphroaig-10-5-75cl",
           "discount_pct": 0,
           "old_price": null
         }
@@ -77667,8 +77729,8 @@
       "max_discount_pct": 0
     },
     {
-      "id": 20954,
-      "slug": "brewdog-dog-f-21",
+      "id": 20987,
+      "slug": "brewdog-dog-f-22",
       "description": "Dog F fra BrewDog er af typen Imperial Stout og er på 17,5%. Den blev brygget i 2017 til bryggeriets tiårsjubilæum og er en del af den hyldede Dog-serie, hvis rødder går helt tilbage til eksperimentet Abstrakt AB:04 I glasset er den kulsort med et tyndt, mørkebrunt skum, der hurtigt lægger sig, og kulsyren er lav og næsten stille, som man kender det fra de helt store stouts. Som den første i serien er den lagret på cognacfade, og det giver en ekstra dybde, der mærkes allerede i duften med kakao, en anelse røg og et strejf af chili.",
       "name": "Dog F 17,5% 33cl",
       "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/dog-f-17-5-33cl.png?v=1790602087",
@@ -77719,32 +77781,6 @@
       "max_discount_pct": 0
     },
     {
-      "id": 20969,
-      "slug": "frederikshavn-bryghus-imperial-stout-bb-3-aar-paa-22",
-      "description": null,
-      "name": "Imperial Stout BB 3 år på fad - Imperial stout",
-      "image": "https://humledrik.dk/cache/4/6/2/8/7/7/2/fit-370x370x75.webp",
-      "type": "Imperial Stout",
-      "abv": 15.9,
-      "volume_cl": 37.5,
-      "brewery": "Frederikshavn Bryghus",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Humledrik",
-          "price": 198.0,
-          "url": "https://humledrik.dk/imperial-stout-bb-2-aar-paa-fad-imperial-stout",
-          "discount_pct": 0,
-          "old_price": null
-        }
-      ],
-      "cheapest_price": 198.0,
-      "min_price": 198.0,
-      "shop": "Humledrik",
-      "discount_pct": 0,
-      "max_discount_pct": 0
-    },
-    {
       "id": 18582,
       "slug": "colon-elle-single-wild-lambiek-fabriek",
       "description": "En wildgæret Lambic som er lagret på Gouden Carolus Whisky fade . Syrlig tør med noter",
@@ -77767,6 +77803,32 @@
       "cheapest_price": 198.0,
       "min_price": 198.0,
       "shop": "Beershoppen",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
+      "id": 21002,
+      "slug": "frederikshavn-bryghus-imperial-stout-bb-3-aar-paa-23",
+      "description": null,
+      "name": "Imperial Stout BB 3 år på fad - Imperial stout",
+      "image": "https://humledrik.dk/cache/4/6/2/8/7/7/2/fit-370x370x75.webp",
+      "type": "Imperial Stout",
+      "abv": 15.9,
+      "volume_cl": 37.5,
+      "brewery": "Frederikshavn Bryghus",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Humledrik",
+          "price": 198.0,
+          "url": "https://humledrik.dk/imperial-stout-bb-2-aar-paa-fad-imperial-stout",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 198.0,
+      "min_price": 198.0,
+      "shop": "Humledrik",
       "discount_pct": 0,
       "max_discount_pct": 0
     },
@@ -77806,7 +77868,7 @@
         {
           "shop_name": "Best of Beers",
           "price": 251.0,
-          "url": "https://www.bestofbeers.dk/shop/cantillon-iris-2026-075-l-65/",
+          "url": "https://www.bestofbeers.dk/shop/cantillon-iris-2024-075-l-65/",
           "discount_pct": 0,
           "old_price": null
         }
@@ -77870,14 +77932,14 @@
       "category": null,
       "prices": [
         {
-          "shop_name": "Olle Glad",
+          "shop_name": "Ølleglad",
           "price": 199.0,
           "url": "https://olleglad.dk/3-fonteinen-gele-belgische-perzik-2023-75-cl",
           "discount_pct": 0,
           "old_price": null
         },
         {
-          "shop_name": "Ølleglad",
+          "shop_name": "Olle Glad",
           "price": 199.0,
           "url": "https://olleglad.dk/3-fonteinen-gele-belgische-perzik-2023-75-cl",
           "discount_pct": 0,
@@ -77893,7 +77955,7 @@
       ],
       "cheapest_price": 199.0,
       "min_price": 199.0,
-      "shop": "Olle Glad",
+      "shop": "Ølleglad",
       "discount_pct": 0,
       "max_discount_pct": 0
     },
@@ -77976,14 +78038,14 @@
       "category": null,
       "prices": [
         {
-          "shop_name": "Olle Glad",
+          "shop_name": "Ølleglad",
           "price": 199.0,
           "url": "https://olleglad.dk/cantillon-saint-lamvinus-75-cl",
           "discount_pct": 0,
           "old_price": null
         },
         {
-          "shop_name": "Ølleglad",
+          "shop_name": "Olle Glad",
           "price": 199.0,
           "url": "https://olleglad.dk/cantillon-saint-lamvinus-75-cl",
           "discount_pct": 0,
@@ -77992,7 +78054,7 @@
       ],
       "cheapest_price": 199.0,
       "min_price": 199.0,
-      "shop": "Olle Glad",
+      "shop": "Ølleglad",
       "discount_pct": 0,
       "max_discount_pct": 0
     },
@@ -78484,14 +78546,14 @@
       "category": null,
       "prices": [
         {
-          "shop_name": "Olle Glad",
+          "shop_name": "Ølleglad",
           "price": 209.0,
           "url": "https://olleglad.dk/3-fonteinen-cuv-e-armand-gaston-bio-2024-75-cl",
           "discount_pct": 0,
           "old_price": null
         },
         {
-          "shop_name": "Ølleglad",
+          "shop_name": "Olle Glad",
           "price": 209.0,
           "url": "https://olleglad.dk/3-fonteinen-cuv-e-armand-gaston-bio-2024-75-cl",
           "discount_pct": 0,
@@ -78507,7 +78569,7 @@
       ],
       "cheapest_price": 209.0,
       "min_price": 209.0,
-      "shop": "Olle Glad",
+      "shop": "Ølleglad",
       "discount_pct": 0,
       "max_discount_pct": 0,
       "price_change_7d": -88.0
@@ -78525,14 +78587,14 @@
       "category": null,
       "prices": [
         {
-          "shop_name": "Olle Glad",
+          "shop_name": "Ølleglad",
           "price": 209.0,
           "url": "https://olleglad.dk/3-fonteinen-golden-blend-2022-75-cl",
           "discount_pct": 0,
           "old_price": null
         },
         {
-          "shop_name": "Ølleglad",
+          "shop_name": "Olle Glad",
           "price": 209.0,
           "url": "https://olleglad.dk/3-fonteinen-golden-blend-2022-75-cl",
           "discount_pct": 0,
@@ -78548,7 +78610,7 @@
       ],
       "cheapest_price": 209.0,
       "min_price": 209.0,
-      "shop": "Olle Glad",
+      "shop": "Ølleglad",
       "discount_pct": 0,
       "max_discount_pct": 0
     },
@@ -79040,14 +79102,14 @@
       "category": null,
       "prices": [
         {
-          "shop_name": "Olle Glad",
+          "shop_name": "Ølleglad",
           "price": 220.0,
           "url": "https://olleglad.dk/smagekasse-moerke-oel",
           "discount_pct": 0,
           "old_price": null
         },
         {
-          "shop_name": "Ølleglad",
+          "shop_name": "Olle Glad",
           "price": 220.0,
           "url": "https://olleglad.dk/smagekasse-moerke-oel",
           "discount_pct": 0,
@@ -79056,7 +79118,7 @@
       ],
       "cheapest_price": 220.0,
       "min_price": 220.0,
-      "shop": "Olle Glad",
+      "shop": "Ølleglad",
       "discount_pct": 0,
       "max_discount_pct": 0
     },
@@ -79314,14 +79376,14 @@
       "category": null,
       "prices": [
         {
-          "shop_name": "Olle Glad",
+          "shop_name": "Ølleglad",
           "price": 225.0,
           "url": "https://olleglad.dk/smagekasse-ipa",
           "discount_pct": 0,
           "old_price": null
         },
         {
-          "shop_name": "Ølleglad",
+          "shop_name": "Olle Glad",
           "price": 225.0,
           "url": "https://olleglad.dk/smagekasse-ipa",
           "discount_pct": 0,
@@ -79330,7 +79392,7 @@
       ],
       "cheapest_price": 225.0,
       "min_price": 225.0,
-      "shop": "Olle Glad",
+      "shop": "Ølleglad",
       "discount_pct": 0,
       "max_discount_pct": 0
     },
@@ -79614,14 +79676,14 @@
       "category": null,
       "prices": [
         {
-          "shop_name": "Olle Glad",
+          "shop_name": "Ølleglad",
           "price": 229.0,
           "url": "https://olleglad.dk/de-cam-pinot-noir-lambic-2023-75-cl",
           "discount_pct": 0,
           "old_price": null
         },
         {
-          "shop_name": "Ølleglad",
+          "shop_name": "Olle Glad",
           "price": 229.0,
           "url": "https://olleglad.dk/de-cam-pinot-noir-lambic-2023-75-cl",
           "discount_pct": 0,
@@ -79630,7 +79692,7 @@
       ],
       "cheapest_price": 229.0,
       "min_price": 229.0,
-      "shop": "Olle Glad",
+      "shop": "Ølleglad",
       "discount_pct": 0,
       "max_discount_pct": 0
     },
@@ -80344,14 +80406,14 @@
       "category": null,
       "prices": [
         {
-          "shop_name": "Olle Glad",
+          "shop_name": "Ølleglad",
           "price": 249.0,
           "url": "https://olleglad.dk/de-cam-chardonnay-2023-75-cl",
           "discount_pct": 0,
           "old_price": null
         },
         {
-          "shop_name": "Ølleglad",
+          "shop_name": "Olle Glad",
           "price": 249.0,
           "url": "https://olleglad.dk/de-cam-chardonnay-2023-75-cl",
           "discount_pct": 0,
@@ -80360,7 +80422,7 @@
       ],
       "cheapest_price": 249.0,
       "min_price": 249.0,
-      "shop": "Olle Glad",
+      "shop": "Ølleglad",
       "discount_pct": 0,
       "max_discount_pct": 0
     },
@@ -80613,7 +80675,7 @@
         {
           "shop_name": "Best of Beers",
           "price": 251.0,
-          "url": "https://www.bestofbeers.dk/shop/cantillon-fou-foune-2026-075-l-60/",
+          "url": "https://www.bestofbeers.dk/shop/cantillon-fou-foune-2025-075-l-60/",
           "discount_pct": 0,
           "old_price": null
         },
@@ -82383,23 +82445,23 @@
       "category": null,
       "prices": [
         {
-          "shop_name": "Beermatch",
+          "shop_name": "Øltanken",
           "price": 289.0,
-          "url": "https://www.beermatch.dk/products/salikatt-eagle-wings-amundsen-collab",
+          "url": "https://oltanken.dk/products/salikatt-x-amundsen-eagle-wings",
           "discount_pct": 0,
           "old_price": null
         },
         {
-          "shop_name": "Øltanken",
+          "shop_name": "Beermatch",
           "price": 289.0,
-          "url": "https://oltanken.dk/products/salikatt-x-amundsen-eagle-wings",
+          "url": "https://www.beermatch.dk/products/salikatt-eagle-wings-amundsen-collab",
           "discount_pct": 0,
           "old_price": null
         }
       ],
       "cheapest_price": 289.0,
       "min_price": 289.0,
-      "shop": "Beermatch",
+      "shop": "Øltanken",
       "discount_pct": 0,
       "max_discount_pct": 0
     },
@@ -85609,8 +85671,8 @@
       "max_discount_pct": 14.4
     },
     {
-      "id": 20948,
-      "slug": "ebeltoft-gaardbryggeri-saison-20x-3",
+      "id": 20981,
+      "slug": "ebeltoft-gaardbryggeri-saison-20x-4",
       "description": "Kassen indeholder 20 flasker á 33 cl. Saison fra Ebeltoft Gårdbryggeri er af typen Saison og er på 6% Saison er gårdens knastørre, læskende og aromatiske nordfranske gårdøl. Stilen stammer fra de franske og belgiske gårde, hvor øllen blev brygget til høstfolkene og skulle kunne slukke tørsten på varme dage. Den er humlet og tør. Smagen er frisk med peber og frugt fra gæren, og humlen giver citrus og lidt urter. Gæren sætter præg på hele øllen. Kulsyren er livlig og kroppen let, og eftersmagen er tør og krydret.",
       "name": "Saison 6% 20x33cl",
       "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/Kasse_default.png?v=1792314127",
@@ -85635,8 +85697,8 @@
       "max_discount_pct": 14.4
     },
     {
-      "id": 20950,
-      "slug": "ebeltoft-gaardbryggeri-wit-20x-5",
+      "id": 20983,
+      "slug": "ebeltoft-gaardbryggeri-wit-20x-6",
       "description": "Kassen indeholder 20 flasker á 33 cl. Wit fra Ebeltoft Gårdbryggeri er af typen Witbier og er på 4,7% Wit er Ebeltoft Gårdbryggeris udgave af den klassiske belgiske hvedeøl, krydret med koriander og tørret appelsinskal, og bryggeriet kalder den selv let drikkelig og velegnet til alle. Duften er frisk og krydret med appelsinskal og koriander, og smagen er let og blød med en citrusagtig friskhed, der gør den til en oplagt sommerøl. Witbier betyder hvid øl på flamsk og har navn efter det lyse, uklare udseende.",
       "name": "Wit 4,7% 20x33cl",
       "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/Kasse_default.png?v=1792314127",
@@ -85661,8 +85723,8 @@
       "max_discount_pct": 14.4
     },
     {
-      "id": 20951,
-      "slug": "ebeltoft-gaardbryggeri-imperial-stout-20x-5",
+      "id": 20984,
+      "slug": "ebeltoft-gaardbryggeri-imperial-stout-20x-6",
       "description": "Kassen indeholder 20 flasker á 33 cl. Imperial Stout fra Ebeltoft Gårdbryggeri er af typen Imperial Stout og er på 9,3% Imperial Stout er bryggeriets kraftigste mørke øl, lavet til de kolde måneder. I glasset er den næsten sort, og skummet er tæt og brunligt. Den hører til de øl, man skal give tid, både i glasset og i kælderen. Smagen er fyldig og sødmefuld med mørk chokolade, ristet kaffe og karamel, og når øllen får lidt temperatur, dukker lakrids og brændt karamel op. Havremalten giver en cremet, blød tekstur.",
       "name": "Imperial Stout 9,3% 20x33cl",
       "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/Kasse_default.png?v=1792314127",
@@ -85687,8 +85749,8 @@
       "max_discount_pct": 14.4
     },
     {
-      "id": 20952,
-      "slug": "ebeltoft-gaardbryggeri-belgian-brown-20x-5",
+      "id": 20985,
+      "slug": "ebeltoft-gaardbryggeri-belgian-brown-20x-6",
       "description": "Kassen indeholder 20 flasker á 33 cl. Belgian Brown fra Ebeltoft Gårdbryggeri er af typen Belgian Brown Ale og er på 6,8% Belgian Brown er Ebeltoft Gårdbryggeris bud på en belgisk brown ale, og Peder Zacho Hansen fra bryggeriet beskriver den selv som en let drikkelig øl med masser af smag og en let, frisk bitterhed. Ristet malt og hvedemalt giver en dyb brun farve med et rødligt skær og en fyldig smag, hvor mørk malt og karamel går hånd i hånd med et strejf af chokolade og kaffe.",
       "name": "Belgian Brown 6,8% 20x33cl",
       "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/Kasse_default.png?v=1792314127",
