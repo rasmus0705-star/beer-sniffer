@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-01T19:33:57.476456",
+  "updated_at": "2026-11-01T19:51:54.616572",
   "stats": {
     "total": 3327,
     "deals": 520,
@@ -247,8 +247,8 @@
       "max_discount_pct": 0
     },
     {
-      "id": 21592,
-      "slug": "hancock-bryggerierne-black-lager-14",
+      "id": 21627,
+      "slug": "hancock-bryggerierne-black-lager-15",
       "description": null,
       "name": "Black Lager",
       "image": "https://humledrik.dk/cache/4/8/8/3/6/0/1/fit-370x370x75.webp",
@@ -1713,8 +1713,8 @@
       "max_discount_pct": 0
     },
     {
-      "id": 21603,
-      "slug": "leo-beer-159",
+      "id": 21638,
+      "slug": "leo-beer-160",
       "description": "Leo Beer er en forfriskende lagerøl fra Thailand, kendt for sin bløde smag og let bitre afslutning. Brygget med malt, ris og humle, leverer den en afbalanceret og letdrikkelig profil, som gør den velegnet til både krydret mad og afslappede øjeblikke. Den gyldne farve og moderate alkoholprocent på 5 % gør den til en klassiker i både Thailand og blandt ølentusiaster verden over. Perfekt til grillmad, thaimad eller som en tropisk ledsager på varme dage. Hvis du er på jagt efter en velsmagende øl med international karakter og god balance, er Leo Beer et oplagt valg.",
       "name": "Leo Beer",
       "image": "https://www.vildmedvin.dk/img/1000/1000/resize/l/e/leo-beer-33-cl_large.jpg",
@@ -6653,32 +6653,6 @@
       "max_discount_pct": 14.3
     },
     {
-      "id": 21587,
-      "slug": "ebeltoft-gaardbryggeri-imperial-stout-205",
-      "description": "Imperial Stout fra Ebeltoft Gårdbryggeri er af typen Imperial Stout og er på 9,3% Imperial Stout er bryggeriets kraftigste mørke øl, lavet til de kolde måneder. I glasset er den næsten sort, og skummet er tæt og brunligt. Den hører til de øl, man skal give tid, både i glasset og i kælderen. Smagen er fyldig og sødmefuld med mørk chokolade, ristet kaffe og karamel, og når øllen får lidt temperatur, dukker lakrids og brændt karamel op. Havremalten giver en cremet, blød tekstur.",
-      "name": "Imperial Stout 9,3% 33cl",
-      "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/imperial-stout-9-3-33cl_e5717b14-1296-4555-8e23-bc8da32992e9.png?v=1753446200",
-      "type": "Imperial Stout",
-      "abv": 9.3,
-      "volume_cl": 33.0,
-      "brewery": "Ebeltoft Gårdbryggeri",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Brygshoppen",
-          "price": 30.0,
-          "url": "https://brygshoppen.dk/products/imperial-stout-9-3-33cl",
-          "discount_pct": 14.3,
-          "old_price": 35.0
-        }
-      ],
-      "cheapest_price": 30.0,
-      "min_price": 30.0,
-      "shop": "Brygshoppen",
-      "discount_pct": 14.3,
-      "max_discount_pct": 14.3
-    },
-    {
       "id": 14547,
       "slug": "brasserie-de-la-senne-petit-bulba-light-ale",
       "description": "Taras Boulba er Br. De la Senne's ikoniske humlede øl. Dette er en skøn lav alkohol variant af samme. Virkelig smagsfuld på trods af kun 2,5 %",
@@ -6703,6 +6677,32 @@
       "shop": "Beershoppen",
       "discount_pct": 0,
       "max_discount_pct": 0
+    },
+    {
+      "id": 21622,
+      "slug": "ebeltoft-gaardbryggeri-imperial-stout-206",
+      "description": "Imperial Stout fra Ebeltoft Gårdbryggeri er af typen Imperial Stout og er på 9,3% Imperial Stout er bryggeriets kraftigste mørke øl, lavet til de kolde måneder. I glasset er den næsten sort, og skummet er tæt og brunligt. Den hører til de øl, man skal give tid, både i glasset og i kælderen. Smagen er fyldig og sødmefuld med mørk chokolade, ristet kaffe og karamel, og når øllen får lidt temperatur, dukker lakrids og brændt karamel op. Havremalten giver en cremet, blød tekstur.",
+      "name": "Imperial Stout 9,3% 33cl",
+      "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/imperial-stout-9-3-33cl_e5717b14-1296-4555-8e23-bc8da32992e9.png?v=1753446200",
+      "type": "Imperial Stout",
+      "abv": 9.3,
+      "volume_cl": 33.0,
+      "brewery": "Ebeltoft Gårdbryggeri",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Brygshoppen",
+          "price": 30.0,
+          "url": "https://brygshoppen.dk/products/imperial-stout-9-3-33cl",
+          "discount_pct": 14.3,
+          "old_price": 35.0
+        }
+      ],
+      "cheapest_price": 30.0,
+      "min_price": 30.0,
+      "shop": "Brygshoppen",
+      "discount_pct": 14.3,
+      "max_discount_pct": 14.3
     },
     {
       "id": 15824,
@@ -12258,8 +12258,34 @@
       "max_discount_pct": 0
     },
     {
-      "id": 21575,
-      "slug": "ebeltoft-gaardbryggeri-saison-15",
+      "id": 15669,
+      "slug": "vault-city-lemon-ice-tea-table-sour",
+      "description": "Vault City Lemon Ice Tea Table Sour er en frisk og letdrikkelig sour, der kombinerer det bedste fra to verdener: den klassiske syrlighed fra sour-øl og den velkendte, tørstslukkende smag af citron-iste. Med sin lave alkoholprocent placerer den sig i “table sour”-kategorien, hvilket gør den ideel, når du ønsker en let og forfriskende øl uden for meget tyngde. Smagsprofilen er domineret af friske citronnoter, som giver en sprød og livlig syrlighed, mens iste-elementet tilfører en blød, let tannisk karakter, der skaber balance og dybde.",
+      "name": "Vault City, Lemon Ice Tea Table Sour",
+      "image": "https://www.vildmedvin.dk/img/1000/1000/resize/v/a/vault_city_lemon_ice_tea_table_sour.jpg",
+      "type": "Sour",
+      "abv": 3.4,
+      "volume_cl": 33.0,
+      "brewery": "Vault City",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "BeerBarrel",
+          "price": 35.0,
+          "url": "https://www.beerbarrel.dk/vare/lemon-ice-tea/",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 35.0,
+      "min_price": 35.0,
+      "shop": "BeerBarrel",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
+      "id": 21610,
+      "slug": "ebeltoft-gaardbryggeri-saison-16",
       "description": "Saison fra Ebeltoft Gårdbryggeri er af typen Saison og er på 6% Saison er gårdens knastørre, læskende og aromatiske nordfranske gårdøl. Stilen stammer fra de franske og belgiske gårde, hvor øllen blev brygget til høstfolkene og skulle kunne slukke tørsten på varme dage. Den er humlet og tør. Smagen er frisk med peber og frugt fra gæren, og humlen giver citrus og lidt urter. Gæren sætter præg på hele øllen. Kulsyren er livlig og kroppen let, og eftersmagen er tør og krydret. Med 6% er den let at drikke og stadig karakterfuld, og den bliver ved med at være frisk.",
       "name": "Saison 6% 33cl",
       "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/saison-6-33cl.png?v=1792518177",
@@ -12284,8 +12310,8 @@
       "max_discount_pct": 0
     },
     {
-      "id": 21589,
-      "slug": "ebeltoft-gaardbryggeri-belgian-brown-192",
+      "id": 21624,
+      "slug": "ebeltoft-gaardbryggeri-belgian-brown-193",
       "description": "Belgian Brown fra Ebeltoft Gårdbryggeri er af typen Belgian Brown Ale og er på 6,8% Belgian Brown er Ebeltoft Gårdbryggeris bud på en belgisk brown ale, og Peder Zacho Hansen fra bryggeriet beskriver den selv som en let drikkelig øl med masser af smag og en let, frisk bitterhed. Ristet malt og hvedemalt giver en dyb brun farve med et rødligt skær og en fyldig smag, hvor mørk malt og karamel går hånd i hånd med et strejf af chokolade og kaffe. Bitterheden er frisk og holder sødmen i skak, og kroppen er rund og fyldig, så eftersmagen ender i mørk malt uden at blive tung ved 6,8%.",
       "name": "Belgian Brown 6,8% 33cl",
       "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/belgien-brown-33cl.png?v=1753443086",
@@ -12310,8 +12336,8 @@
       "max_discount_pct": 0
     },
     {
-      "id": 21599,
-      "slug": "midtfyns-bryghus-session-neipa-ipa-33",
+      "id": 21634,
+      "slug": "midtfyns-bryghus-session-neipa-ipa-34",
       "description": null,
       "name": "Session NEIPA - IPA",
       "image": "https://humledrik.dk/cache/4/5/9/6/6/4/6/fit-370x370x75.webp",
@@ -12332,32 +12358,6 @@
       "cheapest_price": 35.0,
       "min_price": 35.0,
       "shop": "Humledrik",
-      "discount_pct": 0,
-      "max_discount_pct": 0
-    },
-    {
-      "id": 15669,
-      "slug": "vault-city-lemon-ice-tea-table-sour",
-      "description": "Vault City Lemon Ice Tea Table Sour er en frisk og letdrikkelig sour, der kombinerer det bedste fra to verdener: den klassiske syrlighed fra sour-øl og den velkendte, tørstslukkende smag af citron-iste. Med sin lave alkoholprocent placerer den sig i “table sour”-kategorien, hvilket gør den ideel, når du ønsker en let og forfriskende øl uden for meget tyngde. Smagsprofilen er domineret af friske citronnoter, som giver en sprød og livlig syrlighed, mens iste-elementet tilfører en blød, let tannisk karakter, der skaber balance og dybde.",
-      "name": "Vault City, Lemon Ice Tea Table Sour",
-      "image": "https://www.vildmedvin.dk/img/1000/1000/resize/v/a/vault_city_lemon_ice_tea_table_sour.jpg",
-      "type": "Sour",
-      "abv": 3.4,
-      "volume_cl": 33.0,
-      "brewery": "Vault City",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "BeerBarrel",
-          "price": 35.0,
-          "url": "https://www.beerbarrel.dk/vare/lemon-ice-tea/",
-          "discount_pct": 0,
-          "old_price": null
-        }
-      ],
-      "cheapest_price": 35.0,
-      "min_price": 35.0,
-      "shop": "BeerBarrel",
       "discount_pct": 0,
       "max_discount_pct": 0
     },
@@ -19219,84 +19219,6 @@
       "max_discount_pct": 0
     },
     {
-      "id": 21588,
-      "slug": "rybryg-ry-pilsner-200",
-      "description": "Ry Pilsner fra Rybryg er af typen German Pilsner og er på 5,6% Rybryg brygger en tyskinspireret pilsner med fire typer moderne amerikansk humle, og bryggeriet kalder den forfriskende med ekstra karakter og fylde. Den er strågul med hvidt skum og har mere krop end de fleste pilsnere. Den er mild med et strejf af frugt. En pilsner er en lys, bundgæret øl med tydelig humlebitterhed, og her giver den amerikanske humle en friskere og mere frugtig duft end i en traditionel tysk udgave, hvor humlen typisk er blomsteragtig og krydret.",
-      "name": "Ry Pilsner 5,6% 50cl",
-      "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/ry-pilsner.png?v=1747399627",
-      "type": "Pilsner",
-      "abv": 5.6,
-      "volume_cl": 50.0,
-      "brewery": "Rybryg",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Brygshoppen",
-          "price": 40.0,
-          "url": "https://brygshoppen.dk/products/ry-pilsner",
-          "discount_pct": 11.1,
-          "old_price": 45.0
-        }
-      ],
-      "cheapest_price": 40.0,
-      "min_price": 40.0,
-      "shop": "Brygshoppen",
-      "discount_pct": 11.1,
-      "max_discount_pct": 11.1
-    },
-    {
-      "id": 21591,
-      "slug": "midtfyns-bryghus-barley-wine-6",
-      "description": null,
-      "name": "Barley Wine",
-      "image": "https://humledrik.dk/cache/4/9/2/0/8/1/6/fit-370x370x75.webp",
-      "type": "Barley Wine",
-      "abv": 10.0,
-      "volume_cl": 50.0,
-      "brewery": "Midtfyns Bryghus",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Humledrik",
-          "price": 40.0,
-          "url": "https://humledrik.dk/barley-wine-midtfyns-bryghus",
-          "discount_pct": 0,
-          "old_price": null
-        }
-      ],
-      "cheapest_price": 40.0,
-      "min_price": 40.0,
-      "shop": "Humledrik",
-      "discount_pct": 0,
-      "max_discount_pct": 0
-    },
-    {
-      "id": 21593,
-      "slug": "midtfyns-bryghus-double-ipa-ipa-33",
-      "description": null,
-      "name": "Double IPA - IPA",
-      "image": "https://humledrik.dk/cache/4/6/0/8/6/2/1/fit-370x370x75.webp",
-      "type": "Double IPA",
-      "abv": 9.2,
-      "volume_cl": 50.0,
-      "brewery": "Midtfyns Bryghus",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Humledrik",
-          "price": 40.0,
-          "url": "https://humledrik.dk/double-ipa-ipa",
-          "discount_pct": 0,
-          "old_price": null
-        }
-      ],
-      "cheapest_price": 40.0,
-      "min_price": 40.0,
-      "shop": "Humledrik",
-      "discount_pct": 0,
-      "max_discount_pct": 0
-    },
-    {
       "id": 14735,
       "slug": "isaac-hvede-oel-birrificio-agricolo-baladin-2",
       "description": "En cloudy lys farve med en dejlig cremet skum. En lækker frisk hvedeøl med noter af abrikos, korriander og skrallede appelsiner.",
@@ -19371,6 +19293,84 @@
       "cheapest_price": 40.0,
       "min_price": 40.0,
       "shop": "Beershoppen",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
+      "id": 21623,
+      "slug": "rybryg-ry-pilsner-201",
+      "description": "Ry Pilsner fra Rybryg er af typen German Pilsner og er på 5,6% Rybryg brygger en tyskinspireret pilsner med fire typer moderne amerikansk humle, og bryggeriet kalder den forfriskende med ekstra karakter og fylde. Den er strågul med hvidt skum og har mere krop end de fleste pilsnere. Den er mild med et strejf af frugt. En pilsner er en lys, bundgæret øl med tydelig humlebitterhed, og her giver den amerikanske humle en friskere og mere frugtig duft end i en traditionel tysk udgave, hvor humlen typisk er blomsteragtig og krydret.",
+      "name": "Ry Pilsner 5,6% 50cl",
+      "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/ry-pilsner.png?v=1747399627",
+      "type": "Pilsner",
+      "abv": 5.6,
+      "volume_cl": 50.0,
+      "brewery": "Rybryg",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Brygshoppen",
+          "price": 40.0,
+          "url": "https://brygshoppen.dk/products/ry-pilsner",
+          "discount_pct": 11.1,
+          "old_price": 45.0
+        }
+      ],
+      "cheapest_price": 40.0,
+      "min_price": 40.0,
+      "shop": "Brygshoppen",
+      "discount_pct": 11.1,
+      "max_discount_pct": 11.1
+    },
+    {
+      "id": 21626,
+      "slug": "midtfyns-bryghus-barley-wine-7",
+      "description": null,
+      "name": "Barley Wine",
+      "image": "https://humledrik.dk/cache/4/9/2/0/8/1/6/fit-370x370x75.webp",
+      "type": "Barley Wine",
+      "abv": 10.0,
+      "volume_cl": 50.0,
+      "brewery": "Midtfyns Bryghus",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Humledrik",
+          "price": 40.0,
+          "url": "https://humledrik.dk/barley-wine-midtfyns-bryghus",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 40.0,
+      "min_price": 40.0,
+      "shop": "Humledrik",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
+      "id": 21628,
+      "slug": "midtfyns-bryghus-double-ipa-ipa-34",
+      "description": null,
+      "name": "Double IPA - IPA",
+      "image": "https://humledrik.dk/cache/4/6/0/8/6/2/1/fit-370x370x75.webp",
+      "type": "Double IPA",
+      "abv": 9.2,
+      "volume_cl": 50.0,
+      "brewery": "Midtfyns Bryghus",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Humledrik",
+          "price": 40.0,
+          "url": "https://humledrik.dk/double-ipa-ipa",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 40.0,
+      "min_price": 40.0,
+      "shop": "Humledrik",
       "discount_pct": 0,
       "max_discount_pct": 0
     },
@@ -24640,58 +24640,6 @@
       "max_discount_pct": 0
     },
     {
-      "id": 21571,
-      "slug": "dry-and-bitter-brewing-company-brown-owl-33",
-      "description": "Brown Owl er et bevis på, at Dry & Bitter mestrer de klassiske stilarter ligeså godt som deres IPA’er. Her er der skruet ned for humleintensiteten til fordel for en rolig kompleksitet fra malten. Den nøddeagtige karakter og de lette chokoladenoter gør den utrolig nem at drikke. Et solidt valg til dem, der vil have en ukompliceret kvalitetsøl med dybde.",
-      "name": "Brown Owl",
-      "image": "https://mlnyqjrpbd75.i.optimole.com/cb:xzKT.fcd/w:auto/h:auto/q:mauto/f:best/https://www.beerbarrel.dk/wp-content/uploads/2026/03/19.png",
-      "type": null,
-      "abv": 5.2,
-      "volume_cl": 44.0,
-      "brewery": "Dry and Bitter Brewing Company",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "BeerBarrel",
-          "price": 45.0,
-          "url": "https://www.beerbarrel.dk/vare/brown-owl/",
-          "discount_pct": 0,
-          "old_price": null
-        }
-      ],
-      "cheapest_price": 45.0,
-      "min_price": 45.0,
-      "shop": "BeerBarrel",
-      "discount_pct": 0,
-      "max_discount_pct": 0
-    },
-    {
-      "id": 21572,
-      "slug": "p-hjala-oo-235",
-      "description": "Dette er definitionen på en moderne Baltisk Porter. Põhjala formår at gøre øllen ekstremt mørk og kraftfuld, men med den renhed i udtrykket, som lagergæringen ved lave temperaturer giver. Det er ikke bare en tung øl; den har en elegance og en bær-agtig syre, der løfter den over de fleste standardstouts. Öö er en uomgængelig klassiker for enhver, der elsker komplekse mørke øl.",
-      "name": "Öö",
-      "image": "https://mlnyqjrpbd75.i.optimole.com/cb:xzKT.fcd/w:auto/h:auto/q:mauto/f:best/https://www.beerbarrel.dk/wp-content/uploads/2026/03/81.png",
-      "type": "Porter",
-      "abv": 10.5,
-      "volume_cl": 33.0,
-      "brewery": "Põhjala",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "BeerBarrel",
-          "price": 45.0,
-          "url": "https://www.beerbarrel.dk/vare/oo/",
-          "discount_pct": 0,
-          "old_price": null
-        }
-      ],
-      "cheapest_price": 45.0,
-      "min_price": 45.0,
-      "shop": "BeerBarrel",
-      "discount_pct": 0,
-      "max_discount_pct": 0
-    },
-    {
       "id": 14319,
       "slug": "valnoed-oeko-moerk-lager-aeroe-bryggeri",
       "description": "En mørk lagerøl ovre i \"bock\"-stilen. Den er lavet på pilsner -og karamelmalt. Den giver en lækker sødme og noter af valnød, malt og karamel. ØKOLOGISK brygget med rigtig valnødder",
@@ -24747,32 +24695,6 @@
       "cheapest_price": 45.0,
       "min_price": 45.0,
       "shop": "Beershoppen",
-      "discount_pct": 0,
-      "max_discount_pct": 0
-    },
-    {
-      "id": 21584,
-      "slug": "rybryg-ry-classic-60",
-      "description": "Ry Classic fra Rybryg er af typen Vienna Lager og er på 5,6% Ry Classic er brygget i klassisk wienerstil, og bryggeriet har givet den ekstra lang tid på tanken for at sikre en fyldig og afbalanceret smag. En wienerlager er en rav- til kobberfarvet lager med blød, ristet maltkarakter. Ry Classic har en let karamelduft og en blød krop, og i glasset er den varmt ravfarvet under hvidt skum med noter af karamel og brød og en diskret bitterhed. De 5,6% gør den til en solid lager, der alligevel er nem at drikke.",
-      "name": "Ry Classic 5,6% 50cl",
-      "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/ry-classic-5-6-50cl.png?v=1764503652",
-      "type": "Lager",
-      "abv": 5.6,
-      "volume_cl": 50.0,
-      "brewery": "Rybryg",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Brygshoppen",
-          "price": 45.0,
-          "url": "https://brygshoppen.dk/products/ry-classic-5-6-50cl",
-          "discount_pct": 0,
-          "old_price": null
-        }
-      ],
-      "cheapest_price": 45.0,
-      "min_price": 45.0,
-      "shop": "Brygshoppen",
       "discount_pct": 0,
       "max_discount_pct": 0
     },
@@ -24959,32 +24881,6 @@
       "max_discount_pct": 0
     },
     {
-      "id": 21602,
-      "slug": "lille-holmgaard-bryghus-opa-14",
-      "description": "OPA! PALE ALE – LILLE HOLMGÅRD BRYGHUS 🇭🇷 En øl fra kollegiet i Aarhus Historien om OPA! begynder faktisk længe før Lille Holmgård Bryghus blev til. Dengang Simon, brygmester hos Lille Holmgård, boede på kollegie i Aarhus, hvor han læste til maskinmester, blev der også brygget øl. Sammen med en kroatisk kollegiekammerat kastede Simon sig over hjemmebrygningen, og en dag stod de så med en friskbrygget øl, som skulle testes på kollegiets terrasse. Øllen blev åbnet. Der blev smagt. Og alt var godt.",
-      "name": "OPA!",
-      "image": "https://olleglad.dk/cache/4/7/6/1/5/0/7/opa-fit-800x800x100.webp",
-      "type": null,
-      "abv": 6.4,
-      "volume_cl": 44.0,
-      "brewery": "Lille Holmgård Bryghus",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Ølleglad",
-          "price": 45.0,
-          "url": "https://olleglad.dk/opa-pale-ale-44-cl",
-          "discount_pct": 0,
-          "old_price": null
-        }
-      ],
-      "cheapest_price": 45.0,
-      "min_price": 45.0,
-      "shop": "Ølleglad",
-      "discount_pct": 0,
-      "max_discount_pct": 0
-    },
-    {
       "id": 15692,
       "slug": "warpigs-lazurite-3",
       "description": "Warpigs Lazurite er en American IPA, der leverer alt det, man forventer af stilen: intens humlearoma, fast bitterhed og en balancerende maltkrop. Med 7 % alkohol og 55 IBU får du en øl med både styrke og dybde. I glasset fremstår den gylden til ravfarvet med en let uklarhed og et flot skum. Aromaen er præget af klassiske amerikanske humler med noter af citrus, grapefrugt og lette fyrrenåle. Smagen følger op med en tydelig bitterhed, som hurtigt balanceres af en let karamelliseret maltbund. Mundfølelsen er medium fyldig med en tør afslutning, der gør øllen velegnet til flere slurke.",
@@ -25033,6 +24929,58 @@
       "cheapest_price": 45.0,
       "min_price": 45.0,
       "shop": "Vild med Vin",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
+      "id": 21606,
+      "slug": "dry-and-bitter-brewing-company-brown-owl-34",
+      "description": "Brown Owl er et bevis på, at Dry & Bitter mestrer de klassiske stilarter ligeså godt som deres IPA’er. Her er der skruet ned for humleintensiteten til fordel for en rolig kompleksitet fra malten. Den nøddeagtige karakter og de lette chokoladenoter gør den utrolig nem at drikke. Et solidt valg til dem, der vil have en ukompliceret kvalitetsøl med dybde.",
+      "name": "Brown Owl",
+      "image": "https://mlnyqjrpbd75.i.optimole.com/cb:xzKT.fcd/w:auto/h:auto/q:mauto/f:best/https://www.beerbarrel.dk/wp-content/uploads/2026/03/19.png",
+      "type": null,
+      "abv": 5.2,
+      "volume_cl": 44.0,
+      "brewery": "Dry and Bitter Brewing Company",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "BeerBarrel",
+          "price": 45.0,
+          "url": "https://www.beerbarrel.dk/vare/brown-owl/",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 45.0,
+      "min_price": 45.0,
+      "shop": "BeerBarrel",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
+      "id": 21607,
+      "slug": "p-hjala-oo-237",
+      "description": "Dette er definitionen på en moderne Baltisk Porter. Põhjala formår at gøre øllen ekstremt mørk og kraftfuld, men med den renhed i udtrykket, som lagergæringen ved lave temperaturer giver. Det er ikke bare en tung øl; den har en elegance og en bær-agtig syre, der løfter den over de fleste standardstouts. Öö er en uomgængelig klassiker for enhver, der elsker komplekse mørke øl.",
+      "name": "Öö",
+      "image": "https://mlnyqjrpbd75.i.optimole.com/cb:xzKT.fcd/w:auto/h:auto/q:mauto/f:best/https://www.beerbarrel.dk/wp-content/uploads/2026/03/81.png",
+      "type": "Porter",
+      "abv": 10.5,
+      "volume_cl": 33.0,
+      "brewery": "Põhjala",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "BeerBarrel",
+          "price": 45.0,
+          "url": "https://www.beerbarrel.dk/vare/oo/",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 45.0,
+      "min_price": 45.0,
+      "shop": "BeerBarrel",
       "discount_pct": 0,
       "max_discount_pct": 0
     },
@@ -25163,6 +25111,58 @@
       "cheapest_price": 45.0,
       "min_price": 45.0,
       "shop": "Beershoppen",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
+      "id": 21619,
+      "slug": "rybryg-ry-classic-61",
+      "description": "Ry Classic fra Rybryg er af typen Vienna Lager og er på 5,6% Ry Classic er brygget i klassisk wienerstil, og bryggeriet har givet den ekstra lang tid på tanken for at sikre en fyldig og afbalanceret smag. En wienerlager er en rav- til kobberfarvet lager med blød, ristet maltkarakter. Ry Classic har en let karamelduft og en blød krop, og i glasset er den varmt ravfarvet under hvidt skum med noter af karamel og brød og en diskret bitterhed. De 5,6% gør den til en solid lager, der alligevel er nem at drikke.",
+      "name": "Ry Classic 5,6% 50cl",
+      "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/ry-classic-5-6-50cl.png?v=1764503652",
+      "type": "Lager",
+      "abv": 5.6,
+      "volume_cl": 50.0,
+      "brewery": "Rybryg",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Brygshoppen",
+          "price": 45.0,
+          "url": "https://brygshoppen.dk/products/ry-classic-5-6-50cl",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 45.0,
+      "min_price": 45.0,
+      "shop": "Brygshoppen",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
+      "id": 21637,
+      "slug": "lille-holmgaard-bryghus-opa-15",
+      "description": "OPA! PALE ALE – LILLE HOLMGÅRD BRYGHUS 🇭🇷 En øl fra kollegiet i Aarhus Historien om OPA! begynder faktisk længe før Lille Holmgård Bryghus blev til. Dengang Simon, brygmester hos Lille Holmgård, boede på kollegie i Aarhus, hvor han læste til maskinmester, blev der også brygget øl. Sammen med en kroatisk kollegiekammerat kastede Simon sig over hjemmebrygningen, og en dag stod de så med en friskbrygget øl, som skulle testes på kollegiets terrasse. Øllen blev åbnet. Der blev smagt. Og alt var godt.",
+      "name": "OPA!",
+      "image": "https://olleglad.dk/cache/4/7/6/1/5/0/7/opa-fit-800x800x100.webp",
+      "type": null,
+      "abv": 6.4,
+      "volume_cl": 44.0,
+      "brewery": "Lille Holmgård Bryghus",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Ølleglad",
+          "price": 45.0,
+          "url": "https://olleglad.dk/opa-pale-ale-44-cl",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 45.0,
+      "min_price": 45.0,
+      "shop": "Ølleglad",
       "discount_pct": 0,
       "max_discount_pct": 0
     },
@@ -31138,32 +31138,6 @@
       "max_discount_pct": 0
     },
     {
-      "id": 21598,
-      "slug": "bad-seed-brewing-neu-pilsner-33",
-      "description": null,
-      "name": "Neu - Pilsner",
-      "image": "https://humledrik.dk/cache/4/4/7/4/0/8/8/fit-370x370x75.webp",
-      "type": "Pilsner",
-      "abv": 5.0,
-      "volume_cl": 44.0,
-      "brewery": "Bad Seed Brewing",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Humledrik",
-          "price": 49.0,
-          "url": "https://humledrik.dk/neu-pilsner",
-          "discount_pct": 0,
-          "old_price": null
-        }
-      ],
-      "cheapest_price": 49.0,
-      "min_price": 49.0,
-      "shop": "Humledrik",
-      "discount_pct": 0,
-      "max_discount_pct": 0
-    },
-    {
       "id": 15612,
       "slug": "vocation-altard-state",
       "description": "Altard State fra britiske Vocation Brewery er en DDH IPA (Double Dry-Hopped India Pale Ale), der forkæler smagsløgene med en blød, saftig krop og masser af tropisk humlearoma. Den er brygget med udvalgte humler, der bringer noter af mango, fersken, citrus og passionsfrugt, mens maltbasen giver øllen en let sødme og cremet fylde. Farven er tåget gylden, og duften lokker med friske og frugtrige nuancer.",
@@ -31309,6 +31283,32 @@
           "shop_name": "Humledrik",
           "price": 49.0,
           "url": "https://humledrik.dk/double-chili-lakrids-ale-lys-ale",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 49.0,
+      "min_price": 49.0,
+      "shop": "Humledrik",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
+      "id": 21633,
+      "slug": "bad-seed-brewing-neu-pilsner-34",
+      "description": null,
+      "name": "Neu - Pilsner",
+      "image": "https://humledrik.dk/cache/4/4/7/4/0/8/8/fit-370x370x75.webp",
+      "type": "Pilsner",
+      "abv": 5.0,
+      "volume_cl": 44.0,
+      "brewery": "Bad Seed Brewing",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Humledrik",
+          "price": 49.0,
+          "url": "https://humledrik.dk/neu-pilsner",
           "discount_pct": 0,
           "old_price": null
         }
@@ -40054,32 +40054,6 @@
       "max_discount_pct": 0
     },
     {
-      "id": 21594,
-      "slug": "fur-barley-wine-barley-wine-33",
-      "description": null,
-      "name": "Fur Barley Wine - Barley Wine",
-      "image": "https://humledrik.dk/cache/4/6/0/9/7/3/5/fit-370x370x75.webp",
-      "type": "Barley Wine",
-      "abv": 9.5,
-      "volume_cl": 50.0,
-      "brewery": "Fur Bryghus",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Humledrik",
-          "price": 55.0,
-          "url": "https://humledrik.dk/fur-barley-wine-barley-wine",
-          "discount_pct": 0,
-          "old_price": null
-        }
-      ],
-      "cheapest_price": 55.0,
-      "min_price": 55.0,
-      "shop": "Humledrik",
-      "discount_pct": 0,
-      "max_discount_pct": 0
-    },
-    {
       "id": 15625,
       "slug": "dry-bitter-freestyler",
       "description": "Dry & Bitter Freestyler er en moderne New England IPA fra det danske craftbryggeri Dry & Bitter Brewing Company. Øllen er brygget i den populære NEIPA-stil, som er kendt for sin uklare fremtoning, bløde mundfølelse og aromatiske humleprofil. I glasset fremstår øllen gylden og let diset med et cremet skum. Aromaen er præget af saftige humlenoter med nuancer af tropisk frugt, mango, ananas og citrus. Smagen følger trop med en frugtig og fyldig karakter, hvor humlen bidrager med intense aromaer, mens maltbasen giver en let sødme og en blød mundfølelse.",
@@ -40095,32 +40069,6 @@
           "shop_name": "Vild med Vin",
           "price": 55.0,
           "url": "https://www.vildmedvin.dk/dry-and-bitter-freestyler",
-          "discount_pct": 0,
-          "old_price": null
-        }
-      ],
-      "cheapest_price": 55.0,
-      "min_price": 55.0,
-      "shop": "Vild med Vin",
-      "discount_pct": 0,
-      "max_discount_pct": 0
-    },
-    {
-      "id": 21604,
-      "slug": "to-oel-15-dipa-50",
-      "description": "To Øl #15 DIPA er nummer 15 i To Øls DIPA-serie, hvor bryggeriet udforsker forskellige humlekombinationer inden for den kraftige Double IPA-stil. Denne udgave lander på 9 % alkohol og er brygget som en juicy og hazy DIPA med et tydeligt fokus på aromatisk humle. Til #15 har To Øl fundet en humle frem, som bryggeriet ikke havde arbejdet med i et stykke tid. Den bidrager med citronprægede og urteagtige nuancer, der kombineres med Idaho 7 og El Dorado. Sidstnævnte duo sørger for et kraftigt tropisk modspil og giver øllen dens frugtdrevne profil.",
-      "name": "To Øl, #15 DIPA",
-      "image": "https://www.vildmedvin.dk/img/1000/1000/resize/s/k/sk_rmbillede_2026-08-19_104345-removebg.jpg",
-      "type": "Double IPA",
-      "abv": 9.0,
-      "volume_cl": 44.0,
-      "brewery": "To Øl",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Vild med Vin",
-          "price": 55.0,
-          "url": "https://www.vildmedvin.dk/to-ol-15-dipa",
           "discount_pct": 0,
           "old_price": null
         }
@@ -40180,6 +40128,58 @@
       "cheapest_price": 55.0,
       "min_price": 55.0,
       "shop": "Beershoppen",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
+      "id": 21629,
+      "slug": "fur-barley-wine-barley-wine-34",
+      "description": null,
+      "name": "Fur Barley Wine - Barley Wine",
+      "image": "https://humledrik.dk/cache/4/6/0/9/7/3/5/fit-370x370x75.webp",
+      "type": "Barley Wine",
+      "abv": 9.5,
+      "volume_cl": 50.0,
+      "brewery": "Fur Bryghus",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Humledrik",
+          "price": 55.0,
+          "url": "https://humledrik.dk/fur-barley-wine-barley-wine",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 55.0,
+      "min_price": 55.0,
+      "shop": "Humledrik",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
+      "id": 21639,
+      "slug": "to-oel-15-dipa-51",
+      "description": "To Øl #15 DIPA er nummer 15 i To Øls DIPA-serie, hvor bryggeriet udforsker forskellige humlekombinationer inden for den kraftige Double IPA-stil. Denne udgave lander på 9 % alkohol og er brygget som en juicy og hazy DIPA med et tydeligt fokus på aromatisk humle. Til #15 har To Øl fundet en humle frem, som bryggeriet ikke havde arbejdet med i et stykke tid. Den bidrager med citronprægede og urteagtige nuancer, der kombineres med Idaho 7 og El Dorado. Sidstnævnte duo sørger for et kraftigt tropisk modspil og giver øllen dens frugtdrevne profil.",
+      "name": "To Øl, #15 DIPA",
+      "image": "https://www.vildmedvin.dk/img/1000/1000/resize/s/k/sk_rmbillede_2026-08-19_104345-removebg.jpg",
+      "type": "Double IPA",
+      "abv": 9.0,
+      "volume_cl": 44.0,
+      "brewery": "To Øl",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Vild med Vin",
+          "price": 55.0,
+          "url": "https://www.vildmedvin.dk/to-ol-15-dipa",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 55.0,
+      "min_price": 55.0,
+      "shop": "Vild med Vin",
       "discount_pct": 0,
       "max_discount_pct": 0
     },
@@ -43578,8 +43578,8 @@
       "max_discount_pct": 0
     },
     {
-      "id": 21581,
-      "slug": "flying-couch-brewing-stout-stout-stout-49",
+      "id": 21616,
+      "slug": "flying-couch-brewing-stout-stout-stout-50",
       "description": "Stout Stout Stout fra Flying Couch Brewing er af typen Imperial Stout og er på 11% Flying Couch har lagt alt krudtet i malten på denne her, og navnet siger egentlig alt om ambitionen. Der er ikke pyntet med hverken frugt, kage eller fadlagring, kun en massiv maltbygning hvor bøgerøget malt får lov at sætte et diskret aftryk, og hvor havren står for fylden. I glasset er den kulsort og uigennemtrængelig med et tæt, mørkebrunt skum, og duften er dyb og intens med mørk chokolade, brændt karamel og en anelse bål i baggrunden.",
       "name": "Stout Stout Stout 11% 44cl",
       "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/stout-stout-stout-11-44cl.png?v=1788506509",
@@ -43604,8 +43604,8 @@
       "max_discount_pct": 0
     },
     {
-      "id": 21585,
-      "slug": "p-hjala-oo-236",
+      "id": 21620,
+      "slug": "p-hjala-oo-238",
       "description": "Öö fra Põhjala er af typen Imperial Baltic Porter og er på 10,5% Öö er en imperial baltisk porter, der er så mørk som de estiske vinternætter, og navnet betyder nat på estisk. Bryggeriet siger, at den er stærk nok til at holde dig varm de kolde aftener. Duften er brændt sukker, der hurtigt giver plads til mørk frugt som blommer, rosiner og friske tranebær, og til sidst en ristet røg som et fjernt bål. Kroppen er fyldig, og espressoens syrlighed mødes af karamelliseret toffee, mens røde ribs og mørk chokolade kommer frem, når glasset står lidt. De 10,5% giver en let varme.",
       "name": "Öö 10,5% 33cl",
       "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/oo-10-5-33cl.png?v=1750597033",
@@ -49094,8 +49094,8 @@
       "max_discount_pct": 0
     },
     {
-      "id": 21573,
-      "slug": "samuel-smith-winter-welcome-ale-8",
+      "id": 21608,
+      "slug": "samuel-smith-winter-welcome-ale-9",
       "description": null,
       "name": "Samuel Smith – Winter Welcome Ale – 0,55 l. – 6,0%",
       "image": "https://www.bestofbeers.dk/wp-content/uploads/2026/10/SamuelSmithWinterWelcome.jpg",
@@ -52281,32 +52281,6 @@
       "max_discount_pct": 0
     },
     {
-      "id": 21597,
-      "slug": "norm-brewing-kia-ora-ipa-33",
-      "description": null,
-      "name": "Kia Ora - IPA",
-      "image": "https://humledrik.dk/cache/4/6/3/8/6/3/0/fit-370x370x75.webp",
-      "type": "India Pale Ale (IPA)",
-      "abv": 7.0,
-      "volume_cl": 44.0,
-      "brewery": "Norm Brewing",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Humledrik",
-          "price": 65.0,
-          "url": "https://humledrik.dk/freestyle-hops-ipa",
-          "discount_pct": 0,
-          "old_price": null
-        }
-      ],
-      "cheapest_price": 65.0,
-      "min_price": 65.0,
-      "shop": "Humledrik",
-      "discount_pct": 0,
-      "max_discount_pct": 0
-    },
-    {
       "id": 18543,
       "slug": "rant-baby-bad-seed-brew",
       "description": "Rant Baby er nyeste ipa fra Bad Seed . Tappet 5. Aug. 2026 ! Brygget med Strata, Mosaic og Wakatu humle. Noter af citrus, passionsfrugt og mango. Dejlig duftende og Hazy",
@@ -52355,6 +52329,32 @@
       "cheapest_price": 65.0,
       "min_price": 65.0,
       "shop": "Beershoppen",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
+      "id": 21632,
+      "slug": "norm-brewing-kia-ora-ipa-34",
+      "description": null,
+      "name": "Kia Ora - IPA",
+      "image": "https://humledrik.dk/cache/4/6/3/8/6/3/0/fit-370x370x75.webp",
+      "type": "India Pale Ale (IPA)",
+      "abv": 7.0,
+      "volume_cl": 44.0,
+      "brewery": "Norm Brewing",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Humledrik",
+          "price": 65.0,
+          "url": "https://humledrik.dk/freestyle-hops-ipa",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 65.0,
+      "min_price": 65.0,
+      "shop": "Humledrik",
       "discount_pct": 0,
       "max_discount_pct": 0
     },
@@ -55507,8 +55507,34 @@
       "max_discount_pct": 0
     },
     {
-      "id": 21579,
-      "slug": "brewski-dan-28",
+      "id": 15976,
+      "slug": "vault-city-strawberry-skies",
+      "description": "Vault City Strawberry Skies fra Vault City Brewing er en moderne sour ale, hvor saftige jordbær, cremede toner og florale detaljer smelter sammen i en elegant og fyldig øloplevelse. Smagen domineres af modne jordbær og blød vanilje fra Madagascan vanilla beans, som giver en rund og næsten dessertagtig karakter. Hibiscus tilfører lette blomsteragtige nuancer og en friskhed, der løfter øllen og giver ekstra kompleksitet. Den balancerede syrlighed holder udtrykket levende og letdrikkeligt.",
+      "name": "Vault City, Strawberry Skies",
+      "image": "https://www.vildmedvin.dk/img/1000/1000/resize/v/a/vault_city_strawberry_skies.jpg",
+      "type": "Sour Beer",
+      "abv": 8.4,
+      "volume_cl": 44.0,
+      "brewery": "Vault City Brewing",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Vild med Vin",
+          "price": 69.0,
+          "url": "https://www.vildmedvin.dk/vault-city-strawberry-skies",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 69.0,
+      "min_price": 69.0,
+      "shop": "Vild med Vin",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
+      "id": 21614,
+      "slug": "brewski-dan-29",
       "description": "Dan fra Brewski er af typen Imperial Stout og er på 11,2% Dan har ligget på amerikanske whiskeyfade, og det kan man mærke fra første duft: vanilje, eg og en tydelig whiskeyvarme med mørk chokolade og ristet malt bagved. I glasset er den kulsort og lystæt med et lavt, mørkebrunt skum, der trækker sig tilbage til en tynd krans. I smagen kommer den ristede malt først med kakao og en anelse brændt sukker, hvorefter fadet overtager med vanillin, karamel og et strejf af whiskey. Bitterheden fra malten sørger for, at øllen ikke bliver rent sød.",
       "name": "Dan 11,2% 33cl",
       "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/dan-11-2-33cl.png?v=1788192295",
@@ -55533,8 +55559,8 @@
       "max_discount_pct": 0
     },
     {
-      "id": 21600,
-      "slug": "hertog-jan-tripel-6",
+      "id": 21635,
+      "slug": "hertog-jan-tripel-7",
       "description": null,
       "name": "Tripel",
       "image": "https://humledrik.dk/cache/4/9/2/0/6/4/1/fit-370x370x75.webp",
@@ -55555,32 +55581,6 @@
       "cheapest_price": 69.0,
       "min_price": 69.0,
       "shop": "Humledrik",
-      "discount_pct": 0,
-      "max_discount_pct": 0
-    },
-    {
-      "id": 15976,
-      "slug": "vault-city-strawberry-skies",
-      "description": "Vault City Strawberry Skies fra Vault City Brewing er en moderne sour ale, hvor saftige jordbær, cremede toner og florale detaljer smelter sammen i en elegant og fyldig øloplevelse. Smagen domineres af modne jordbær og blød vanilje fra Madagascan vanilla beans, som giver en rund og næsten dessertagtig karakter. Hibiscus tilfører lette blomsteragtige nuancer og en friskhed, der løfter øllen og giver ekstra kompleksitet. Den balancerede syrlighed holder udtrykket levende og letdrikkeligt.",
-      "name": "Vault City, Strawberry Skies",
-      "image": "https://www.vildmedvin.dk/img/1000/1000/resize/v/a/vault_city_strawberry_skies.jpg",
-      "type": "Sour Beer",
-      "abv": 8.4,
-      "volume_cl": 44.0,
-      "brewery": "Vault City Brewing",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Vild med Vin",
-          "price": 69.0,
-          "url": "https://www.vildmedvin.dk/vault-city-strawberry-skies",
-          "discount_pct": 0,
-          "old_price": null
-        }
-      ],
-      "cheapest_price": 69.0,
-      "min_price": 69.0,
-      "shop": "Vild med Vin",
       "discount_pct": 0,
       "max_discount_pct": 0
     },
@@ -60078,8 +60078,8 @@
       "max_discount_pct": 0
     },
     {
-      "id": 21570,
-      "slug": "seven-island-brewery-33",
+      "id": 21605,
+      "slug": "seven-island-brewery-34",
       "description": "Navnet refererer til det oldgræske taltegn for 666, og øllen leverer præcis den dystre tyngde, man forventer. Seven Island har begået et mindre mesterværk ved at integrere mahleb-krydderiet, som trækker aromaen væk fra den klassiske kagedessert og over i noget langt mere mystisk og krydret. Alkoholen og den massive krop er tæmmet perfekt, så de mange smagslag folder sig ud i en langvarig, symfonisk eftersmag. ΧΞΣ er en kompromisløs og sjælden øloplevelse, der skal drikkes langsomt i",
       "name": "ΧΞΣ",
       "image": "https://mlnyqjrpbd75.i.optimole.com/cb:xzKT.fcd/w:auto/h:auto/q:mauto/f:best/https://www.beerbarrel.dk/wp-content/uploads/2026/09/produktbilleder_20260906_160606_0003.png",
@@ -60104,8 +60104,8 @@
       "max_discount_pct": 0
     },
     {
-      "id": 21582,
-      "slug": "omnipollo-raw-beer-150",
+      "id": 21617,
+      "slug": "omnipollo-raw-beer-151",
       "description": "Raw Beer fra Omnipollo er af typen Double New England IPA og er på 8% Raw Beer er en eksperimenterende dobbelt IPA, der aldrig bliver kogt, og bryggeriet kalder den dobbelt IPA'ernes sushi: rå, ufiltreret og ren. Ved en raw ale koges urten ikke, som man ellers gør, og det skal bevare den rå, naturlige karakter fra korn og humle. Pilsnermalt, hvede og havre bærer den, og øllen er kraftigt tørhumlet for at få mest mulig duft og mindst mulig bitterhed. Den er uklar og blød med friske citrus- og tropiske frugtnoter og en let kornsødme. De 8% giver en fyldig krop.",
       "name": "Raw Beer 8% 44cl",
       "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/raw-beer-8.png?v=1782404785",
@@ -62056,8 +62056,8 @@
       "max_discount_pct": 0
     },
     {
-      "id": 21601,
-      "slug": "flying-guru-brewery-urd-sour-33",
+      "id": 21636,
+      "slug": "flying-guru-brewery-urd-sour-34",
       "description": null,
       "name": "Urd - Sour",
       "image": "https://humledrik.dk/cache/4/6/5/8/2/0/8/fit-370x370x75.webp",
@@ -66230,32 +66230,6 @@
       "max_discount_pct": 0
     },
     {
-      "id": 21586,
-      "slug": "frontaal-brewing-co-no-way-out-b-a-80",
-      "description": "No Way Out B. A. fra Frontaal Brewing Co. i samarbejde med Põhjala er af typen Barleywine og er på 10,5% B. står for fadlagret. Frontaal og Põhjala fra Estland lagrede deres fælles No Way Out på fade, og den fadlagrede udgave kom et år efter originalen. Põhjala er et bryggeri fra Tallinn. Barleywinen er brygget med saltet karamel og har ligget på Madeira- og Ruby Port-fade. Karamel og toffee danner bunden, med en let salt kant, og fadene har lagt tørret frugt og egetræ ovenpå. Madeira er en portugisisk hedvin fra øen af samme navn.",
-      "name": "No Way Out B.A. 10,5% 33cl",
-      "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/no-way-out-b-a-10-5-33cl.png?v=1750592682",
-      "type": "Barley Wine",
-      "abv": 10.5,
-      "volume_cl": 33.0,
-      "brewery": "Frontaal Brewing Co.",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Brygshoppen",
-          "price": 85.0,
-          "url": "https://brygshoppen.dk/products/no-way-out-b-a-10-5-33cl",
-          "discount_pct": 0,
-          "old_price": null
-        }
-      ],
-      "cheapest_price": 85.0,
-      "min_price": 85.0,
-      "shop": "Brygshoppen",
-      "discount_pct": 0,
-      "max_discount_pct": 0
-    },
-    {
       "id": 17867,
       "slug": "two-pines-track-brew-willibald",
       "description": "Denne Hazy tropiske frugt notede Neipa fra Track er brygget med Canadiske Willibald fra Ontorio. Untappd rating er 4.10",
@@ -66304,6 +66278,32 @@
       "cheapest_price": 85.0,
       "min_price": 85.0,
       "shop": "Beer Me",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
+      "id": 21621,
+      "slug": "frontaal-brewing-co-no-way-out-b-a-81",
+      "description": "No Way Out B. A. fra Frontaal Brewing Co. i samarbejde med Põhjala er af typen Barleywine og er på 10,5% B. står for fadlagret. Frontaal og Põhjala fra Estland lagrede deres fælles No Way Out på fade, og den fadlagrede udgave kom et år efter originalen. Põhjala er et bryggeri fra Tallinn. Barleywinen er brygget med saltet karamel og har ligget på Madeira- og Ruby Port-fade. Karamel og toffee danner bunden, med en let salt kant, og fadene har lagt tørret frugt og egetræ ovenpå. Madeira er en portugisisk hedvin fra øen af samme navn.",
+      "name": "No Way Out B.A. 10,5% 33cl",
+      "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/no-way-out-b-a-10-5-33cl.png?v=1750592682",
+      "type": "Barley Wine",
+      "abv": 10.5,
+      "volume_cl": 33.0,
+      "brewery": "Frontaal Brewing Co.",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Brygshoppen",
+          "price": 85.0,
+          "url": "https://brygshoppen.dk/products/no-way-out-b-a-10-5-33cl",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 85.0,
+      "min_price": 85.0,
+      "shop": "Brygshoppen",
       "discount_pct": 0,
       "max_discount_pct": 0
     },
@@ -67710,32 +67710,6 @@
       "max_discount_pct": 0
     },
     {
-      "id": 21590,
-      "slug": "o-o-brewing-400-imperial-barley-wine-33",
-      "description": null,
-      "name": "#400 Imperial - Barley Wine",
-      "image": "https://humledrik.dk/cache/4/4/7/4/0/5/5/fit-370x370x75.webp",
-      "type": "Barley Wine",
-      "abv": 11.1,
-      "volume_cl": 33.0,
-      "brewery": "O/O Brewing",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Humledrik",
-          "price": 89.0,
-          "url": "https://humledrik.dk/nr.-400",
-          "discount_pct": 0,
-          "old_price": null
-        }
-      ],
-      "cheapest_price": 89.0,
-      "min_price": 89.0,
-      "shop": "Humledrik",
-      "discount_pct": 0,
-      "max_discount_pct": 0
-    },
-    {
       "id": 18161,
       "slug": "oude-geuze-s24-25-b7",
       "description": "3 Fonteinen's classic Oude Geuze: a blend of one-, two- and three-year-old spontaneously fermented lambik, aged in oak and refermented in the bottle. Blend 7 of the 24|25 season pours with lively carbonation and notes of lemon, green apple, oak and hay, finishing bone-dry with the blendery's signature minerality.",
@@ -67758,6 +67732,32 @@
       "cheapest_price": 89.0,
       "min_price": 89.0,
       "shop": "Drikbeer",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
+      "id": 21625,
+      "slug": "o-o-brewing-400-imperial-barley-wine-34",
+      "description": null,
+      "name": "#400 Imperial - Barley Wine",
+      "image": "https://humledrik.dk/cache/4/4/7/4/0/5/5/fit-370x370x75.webp",
+      "type": "Barley Wine",
+      "abv": 11.1,
+      "volume_cl": 33.0,
+      "brewery": "O/O Brewing",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Humledrik",
+          "price": 89.0,
+          "url": "https://humledrik.dk/nr.-400",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 89.0,
+      "min_price": 89.0,
+      "shop": "Humledrik",
       "discount_pct": 0,
       "max_discount_pct": 0
     },
@@ -70838,32 +70838,6 @@
       "max_discount_pct": 0
     },
     {
-      "id": 21583,
-      "slug": "frontaal-brewing-co-10-imperial-stout-80",
-      "description": "10 - Imperial Stout fra Frontaal Brewing Co. er af typen Imperial Stout og er på 10% Øllen er brygget til Frontaals 10 års fødselsdag og har ligget på fade fra cognac, Mirabella-whisky og rom fra Barbados. Bryggeriet kalder den rig og blød, og karamel, krydderi og mørk frugt går igen i smagen. Kroppen er fyldig, og fadene giver en dybde, som en ung stout ikke har. Bryggeriet beskriver den som en modig øl til en særlig milepæl. Frontaal Brewing Co. ligger i Breda i det sydlige Holland.",
-      "name": "10 - Imperial Stout 10% 44cl",
-      "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/10-imperial-stout-10-44cl_9645d1f7-914c-43d6-b687-b07453f1aaf2.png?v=1761637026",
-      "type": "Imperial Stout",
-      "abv": 10.0,
-      "volume_cl": 44.0,
-      "brewery": "Frontaal Brewing Co.",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Brygshoppen",
-          "price": 99.0,
-          "url": "https://brygshoppen.dk/products/10-imperial-stout-10-44cl",
-          "discount_pct": 0,
-          "old_price": null
-        }
-      ],
-      "cheapest_price": 99.0,
-      "min_price": 99.0,
-      "shop": "Brygshoppen",
-      "discount_pct": 0,
-      "max_discount_pct": 0
-    },
-    {
       "id": 15629,
       "slug": "fanoe-red-wedding-2026",
       "description": "Fanø Red Wedding 2026 er en intens og fyldig barley wine fra Fanø Bryghus, brygget til dem, der sætter pris på kraftige og komplekse øl. Denne øl er en del af bryggeriets populære Wedding-serie, hvor fokus er på store, smagsrige øl med dybde og karakter. Smagsprofilen er domineret af rige malttoner med nuancer af karamel, tørret frugt og let ristede noter. Den høje maltfylde giver en blød og rund mundfølelse, mens en balancerende humlekarakter tilfører struktur og dybde til øllet.",
@@ -70914,6 +70888,32 @@
       "shop": "Best of Beers",
       "discount_pct": 34.4,
       "max_discount_pct": 34.4
+    },
+    {
+      "id": 21618,
+      "slug": "frontaal-brewing-co-10-imperial-stout-81",
+      "description": "10 - Imperial Stout fra Frontaal Brewing Co. er af typen Imperial Stout og er på 10% Øllen er brygget til Frontaals 10 års fødselsdag og har ligget på fade fra cognac, Mirabella-whisky og rom fra Barbados. Bryggeriet kalder den rig og blød, og karamel, krydderi og mørk frugt går igen i smagen. Kroppen er fyldig, og fadene giver en dybde, som en ung stout ikke har. Bryggeriet beskriver den som en modig øl til en særlig milepæl. Frontaal Brewing Co. ligger i Breda i det sydlige Holland.",
+      "name": "10 - Imperial Stout 10% 44cl",
+      "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/10-imperial-stout-10-44cl_9645d1f7-914c-43d6-b687-b07453f1aaf2.png?v=1761637026",
+      "type": "Imperial Stout",
+      "abv": 10.0,
+      "volume_cl": 44.0,
+      "brewery": "Frontaal Brewing Co.",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Brygshoppen",
+          "price": 99.0,
+          "url": "https://brygshoppen.dk/products/10-imperial-stout-10-44cl",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 99.0,
+      "min_price": 99.0,
+      "shop": "Brygshoppen",
+      "discount_pct": 0,
+      "max_discount_pct": 0
     },
     {
       "id": 18176,
@@ -80244,8 +80244,8 @@
       "max_discount_pct": 0
     },
     {
-      "id": 21595,
-      "slug": "frederikshavn-bryghus-imperial-stout-bb-2-aar-paa-33",
+      "id": 21630,
+      "slug": "frederikshavn-bryghus-imperial-stout-bb-2-aar-paa-34",
       "description": null,
       "name": "Imperial Stout BB 2 år på fad - Imperial stout",
       "image": "https://humledrik.dk/cache/4/6/2/8/7/7/3/fit-370x370x75.webp",
@@ -80681,32 +80681,6 @@
       "max_discount_pct": 46.6
     },
     {
-      "id": 21580,
-      "slug": "brewdog-dog-f-32",
-      "description": "Dog F fra BrewDog er af typen Imperial Stout og er på 17,5%. Den blev brygget i 2017 til bryggeriets tiårsjubilæum og er en del af den hyldede Dog-serie, hvis rødder går helt tilbage til eksperimentet Abstrakt AB:04 I glasset er den kulsort med et tyndt, mørkebrunt skum, der hurtigt lægger sig, og kulsyren er lav og næsten stille, som man kender det fra de helt store stouts. Som den første i serien er den lagret på cognacfade, og det giver en ekstra dybde, der mærkes allerede i duften med kakao, en anelse røg og et strejf af chili.",
-      "name": "Dog F 17,5% 33cl",
-      "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/dog-f-17-5-33cl.png?v=1790602087",
-      "type": "Imperial Stout",
-      "abv": 17.5,
-      "volume_cl": 33.0,
-      "brewery": "BrewDog",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Brygshoppen",
-          "price": 195.0,
-          "url": "https://brygshoppen.dk/products/dog-f-17-5-33cl",
-          "discount_pct": 0,
-          "old_price": null
-        }
-      ],
-      "cheapest_price": 195.0,
-      "min_price": 195.0,
-      "shop": "Brygshoppen",
-      "discount_pct": 0,
-      "max_discount_pct": 0
-    },
-    {
       "id": 17616,
       "slug": "boegedal-no-600",
       "description": "Bøgedal No. 600 fra Bøgedal Bryghus er af typen Imperial Stout og er på 10% Denne jubilæumsøl er sort og tæt i glasset med et cremet skum. Den er brygget med kakaobonnær, havreflager, chili, lakrids og muskovadosukker, alle tilsat i omhyggeligt afmålte mængder for at give dybde og fylde uden at noget enkelt element tager over. Aromaen er en eksplosion af mørk chokolade, frisk cigarstobak og en antydning af røget sukker. På ganen er øllen overraskende elegant med en blød, cremet krop, hvor kakaoen og lakridsens let søde bitterhed spiller fint op mod en diskret varme fra chilien.",
@@ -80722,6 +80696,32 @@
           "shop_name": "Brygshoppen",
           "price": 195.0,
           "url": "https://brygshoppen.dk/products/bogedal-no-600-10-75cl",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 195.0,
+      "min_price": 195.0,
+      "shop": "Brygshoppen",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
+      "id": 21615,
+      "slug": "brewdog-dog-f-33",
+      "description": "Dog F fra BrewDog er af typen Imperial Stout og er på 17,5%. Den blev brygget i 2017 til bryggeriets tiårsjubilæum og er en del af den hyldede Dog-serie, hvis rødder går helt tilbage til eksperimentet Abstrakt AB:04 I glasset er den kulsort med et tyndt, mørkebrunt skum, der hurtigt lægger sig, og kulsyren er lav og næsten stille, som man kender det fra de helt store stouts. Som den første i serien er den lagret på cognacfade, og det giver en ekstra dybde, der mærkes allerede i duften med kakao, en anelse røg og et strejf af chili.",
+      "name": "Dog F 17,5% 33cl",
+      "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/dog-f-17-5-33cl.png?v=1790602087",
+      "type": "Imperial Stout",
+      "abv": 17.5,
+      "volume_cl": 33.0,
+      "brewery": "BrewDog",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Brygshoppen",
+          "price": 195.0,
+          "url": "https://brygshoppen.dk/products/dog-f-17-5-33cl",
           "discount_pct": 0,
           "old_price": null
         }
@@ -80915,32 +80915,6 @@
       "max_discount_pct": 0
     },
     {
-      "id": 21596,
-      "slug": "frederikshavn-bryghus-imperial-stout-bb-3-aar-paa-33",
-      "description": null,
-      "name": "Imperial Stout BB 3 år på fad - Imperial stout",
-      "image": "https://humledrik.dk/cache/4/6/2/8/7/7/2/fit-370x370x75.webp",
-      "type": "Imperial Stout",
-      "abv": 15.9,
-      "volume_cl": 37.5,
-      "brewery": "Frederikshavn Bryghus",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Humledrik",
-          "price": 198.0,
-          "url": "https://humledrik.dk/imperial-stout-bb-2-aar-paa-fad-imperial-stout",
-          "discount_pct": 0,
-          "old_price": null
-        }
-      ],
-      "cheapest_price": 198.0,
-      "min_price": 198.0,
-      "shop": "Humledrik",
-      "discount_pct": 0,
-      "max_discount_pct": 0
-    },
-    {
       "id": 18582,
       "slug": "colon-elle-single-wild-lambiek-fabriek",
       "description": "En wildgæret Lambic som er lagret på Gouden Carolus Whisky fade . Syrlig tør med noter",
@@ -80963,6 +80937,32 @@
       "cheapest_price": 198.0,
       "min_price": 198.0,
       "shop": "Beershoppen",
+      "discount_pct": 0,
+      "max_discount_pct": 0
+    },
+    {
+      "id": 21631,
+      "slug": "frederikshavn-bryghus-imperial-stout-bb-3-aar-paa-34",
+      "description": null,
+      "name": "Imperial Stout BB 3 år på fad - Imperial stout",
+      "image": "https://humledrik.dk/cache/4/6/2/8/7/7/2/fit-370x370x75.webp",
+      "type": "Imperial Stout",
+      "abv": 15.9,
+      "volume_cl": 37.5,
+      "brewery": "Frederikshavn Bryghus",
+      "category": null,
+      "prices": [
+        {
+          "shop_name": "Humledrik",
+          "price": 198.0,
+          "url": "https://humledrik.dk/imperial-stout-bb-2-aar-paa-fad-imperial-stout",
+          "discount_pct": 0,
+          "old_price": null
+        }
+      ],
+      "cheapest_price": 198.0,
+      "min_price": 198.0,
+      "shop": "Humledrik",
       "discount_pct": 0,
       "max_discount_pct": 0
     },
@@ -89074,8 +89074,8 @@
       "max_discount_pct": 20.1
     },
     {
-      "id": 21574,
-      "slug": "ebeltoft-gaardbryggeri-saison-20x-14",
+      "id": 21609,
+      "slug": "ebeltoft-gaardbryggeri-saison-20x-15",
       "description": "Kassen indeholder 20 flasker á 33 cl. Saison fra Ebeltoft Gårdbryggeri er af typen Saison og er på 6% Saison er gårdens knastørre, læskende og aromatiske nordfranske gårdøl. Stilen stammer fra de franske og belgiske gårde, hvor øllen blev brygget til høstfolkene og skulle kunne slukke tørsten på varme dage. Den er humlet og tør. Smagen er frisk med peber og frugt fra gæren, og humlen giver citrus og lidt urter. Gæren sætter præg på hele øllen. Kulsyren er livlig og kroppen let, og eftersmagen er tør og krydret.",
       "name": "Saison 6% 20x33cl",
       "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/Kasse_default.png?v=1792314127",
@@ -89100,8 +89100,8 @@
       "max_discount_pct": 14.4
     },
     {
-      "id": 21576,
-      "slug": "ebeltoft-gaardbryggeri-wit-20x-16",
+      "id": 21611,
+      "slug": "ebeltoft-gaardbryggeri-wit-20x-17",
       "description": "Kassen indeholder 20 flasker á 33 cl. Wit fra Ebeltoft Gårdbryggeri er af typen Witbier og er på 4,7% Wit er Ebeltoft Gårdbryggeris udgave af den klassiske belgiske hvedeøl, krydret med koriander og tørret appelsinskal, og bryggeriet kalder den selv let drikkelig og velegnet til alle. Duften er frisk og krydret med appelsinskal og koriander, og smagen er let og blød med en citrusagtig friskhed, der gør den til en oplagt sommerøl. Witbier betyder hvid øl på flamsk og har navn efter det lyse, uklare udseende.",
       "name": "Wit 4,7% 20x33cl",
       "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/Kasse_default.png?v=1792314127",
@@ -89126,8 +89126,8 @@
       "max_discount_pct": 14.4
     },
     {
-      "id": 21577,
-      "slug": "ebeltoft-gaardbryggeri-imperial-stout-20x-16",
+      "id": 21612,
+      "slug": "ebeltoft-gaardbryggeri-imperial-stout-20x-17",
       "description": "Kassen indeholder 20 flasker á 33 cl. Imperial Stout fra Ebeltoft Gårdbryggeri er af typen Imperial Stout og er på 9,3% Imperial Stout er bryggeriets kraftigste mørke øl, lavet til de kolde måneder. I glasset er den næsten sort, og skummet er tæt og brunligt. Den hører til de øl, man skal give tid, både i glasset og i kælderen. Smagen er fyldig og sødmefuld med mørk chokolade, ristet kaffe og karamel, og når øllen får lidt temperatur, dukker lakrids og brændt karamel op. Havremalten giver en cremet, blød tekstur.",
       "name": "Imperial Stout 9,3% 20x33cl",
       "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/Kasse_default.png?v=1792314127",
@@ -89152,8 +89152,8 @@
       "max_discount_pct": 14.4
     },
     {
-      "id": 21578,
-      "slug": "ebeltoft-gaardbryggeri-belgian-brown-20x-16",
+      "id": 21613,
+      "slug": "ebeltoft-gaardbryggeri-belgian-brown-20x-17",
       "description": "Kassen indeholder 20 flasker á 33 cl. Belgian Brown fra Ebeltoft Gårdbryggeri er af typen Belgian Brown Ale og er på 6,8% Belgian Brown er Ebeltoft Gårdbryggeris bud på en belgisk brown ale, og Peder Zacho Hansen fra bryggeriet beskriver den selv som en let drikkelig øl med masser af smag og en let, frisk bitterhed. Ristet malt og hvedemalt giver en dyb brun farve med et rødligt skær og en fyldig smag, hvor mørk malt og karamel går hånd i hånd med et strejf af chokolade og kaffe.",
       "name": "Belgian Brown 6,8% 20x33cl",
       "image": "https://cdn.shopify.com/s/files/1/0509/8477/9975/files/Kasse_default.png?v=1792314127",
