@@ -12,6 +12,7 @@ from app.utils.shopify import shopify_pages
 import json as _json, os as _os
 
 SHOP_NAME = "Øltanken"
+SHOP_PLATFORM = "shopify"
 SHOP_URL = "https://oltanken.dk"
 SHOP_SHIPPING = {'price': 49, 'freeOver': 899, 'note': 'Levering til pakkeshop, 2-3 hverdage'}
 

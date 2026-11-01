@@ -8,6 +8,7 @@ from app.utils.description import clean_description
 from app.utils.shopify import shopify_pages
 
 SHOP_NAME = "Brygshoppen"
+SHOP_PLATFORM = "shopify"
 SHOP_URL = "https://brygshoppen.dk"
 SHOP_SHIPPING = None
 

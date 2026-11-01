@@ -30,20 +30,22 @@ def discover_shops(scraper_dir=None):
         try:
             with open(filepath, "r", encoding="utf-8") as f:
                 source = f.read()
-        except Exception:
-            continue
+        except OSError as exc:
+            raise RuntimeError(f"Kan ikke læse scraperfilen {filepath}: {exc}") from exc
 
         try:
             tree = ast.parse(source)
-        except SyntaxError:
-            continue
+        except SyntaxError as exc:
+            raise RuntimeError(
+                f"Syntaksfejl i scraperfilen {filepath} (linje {exc.lineno}): {exc.msg}"
+            ) from exc
 
         constants = {}
         for node in ast.iter_child_nodes(tree):
             if isinstance(node, ast.Assign):
                 for target in node.targets:
                     if isinstance(target, ast.Name) and target.id in (
-                        "SHOP_NAME", "SHOP_URL", "SHOP_SHIPPING"
+                        "SHOP_NAME", "SHOP_URL", "SHOP_SHIPPING", "SHOP_PLATFORM"
                     ):
                         try:
                             constants[target.id] = ast.literal_eval(node.value)
@@ -52,7 +54,7 @@ def discover_shops(scraper_dir=None):
                                 constants[target.id] = None
 
         if "SHOP_NAME" not in constants:
-            continue
+            raise RuntimeError(f"Scraperfilen {filepath} mangler SHOP_NAME")
 
         func_name = None
         for node in ast.iter_child_nodes(tree):
@@ -61,7 +63,7 @@ def discover_shops(scraper_dir=None):
                 break
 
         if not func_name:
-            continue
+            raise RuntimeError(f"Scraperfilen {filepath} mangler en top-level scrape_*-funktion")
 
         module_name = f"app.scrapers.{filename[:-3]}"
 
@@ -71,6 +73,7 @@ def discover_shops(scraper_dir=None):
             "function": func_name,
             "url": constants.get("SHOP_URL", ""),
             "shipping": constants.get("SHOP_SHIPPING"),
+            "platform": constants.get("SHOP_PLATFORM", ""),
         })
 
     return shops
@@ -85,6 +88,11 @@ def get_scrapers():
         func = getattr(mod, shop["function"])
         result.append((shop["name"], func))
     return result
+
+
+def get_shopify_names():
+    """Returnerer butiksnavne, der deler Shopifys rate limit pr. IP."""
+    return [shop["name"] for shop in discover_shops() if shop["platform"] == "shopify"]
 
 
 def get_shipping_js(shops=None):

@@ -14,21 +14,25 @@ import os
 import sys
 import subprocess
 import time
+from contextlib import contextmanager
 from datetime import datetime, timedelta
 from dotenv import load_dotenv
+from sqlalchemy import and_, create_engine, select
+from sqlalchemy.orm import sessionmaker
 
 # Indlæs DB_URL fra .env
 load_dotenv()
 
-from app.database import SessionLocal
-from app.models import Beer, Price, PriceHistory
+from app.database import Base, SessionLocal
+from app.models import Beer, Price, PriceHistory, PriceAlert
 from sqlalchemy import func
 from sqlalchemy.orm import joinedload
 
-from shops import get_scrapers
+from shops import get_scrapers, get_shopify_names
 
 from app.services.ingest import ingest_batch
 from app.utils.overrides import load_fejlliste, apply_overrides, write_fejlliste, load_brewery_aliases
+from app.utils.utc import utcnow_naive
 from app.services.matching import set_brewery_aliases
 from app.services.matching import (
     normalize_for_matching,
@@ -43,6 +47,84 @@ from app.services.matching import (
     required_threshold,
     MATCH_THRESHOLD,
 )
+
+
+# BEER-VÆRKTØJ: spærre mod store fald (start)
+COUNTS_FILE = "scrape_counts.json"
+FALD_GRAENSE = 0.20      # stop, hvis en butik er faldet mere end 20 % siden sidste godkendte kørsel
+FALD_MIN_FOER = 30       # kun butikker, der havde mindst så mange varer sidst
+
+
+def _indlaes_tal():
+    try:
+        with open(COUNTS_FILE, encoding="utf-8") as f:
+            return json.load(f)
+    except (OSError, ValueError):
+        return {}
+
+
+def _find_fald(results, foer, graense=FALD_GRAENSE, minimum=FALD_MIN_FOER):
+    """[(butik, før, nu)] for butikker, der er faldet mere end grænsen siden sidst."""
+    fald = []
+    for shop, nu in results.items():
+        gammel = foer.get(shop)
+        if isinstance(nu, int) and isinstance(gammel, int) and gammel >= minimum and nu < gammel * (1 - graense):
+            fald.append((shop, gammel, nu))
+    return fald
+
+
+def _gem_tal(results):
+    tal = _indlaes_tal()
+    for shop, n in results.items():
+        if isinstance(n, int) and n > 0:
+            tal[shop] = n
+    try:
+        with open(COUNTS_FILE, "w", encoding="utf-8") as f:
+            json.dump(tal, f, ensure_ascii=False, indent=1)
+    except OSError:
+        pass
+# BEER-VÆRKTØJ (slut)
+
+
+# BEER-VÆRKTØJ: bryggeri-udledning (start)
+_STIL_ORD = {"ipa", "dipa", "tipa", "neipa", "stout", "porter", "sour", "gose", "lager", "pilsner", "pils", "ale", "weisse", "weizen", "saison",
+             "lambic", "gueuze", "kriek", "witbier", "hvedeøl", "øl", "beer", "brew", "brewing", "bryg", "bryghus", "brewery", "collab", "special",
+             "limited", "imperial", "double", "triple", "pale", "india", "session"}
+
+
+def _norm_navn(s):
+    s = (s or "").replace("’", "'").replace("`", "'").replace("´", "'")
+    return " ".join(s.lower().split())
+
+
+def udled_bryggeri(items):
+    """Fyld manglende bryggeri ud fra navnet, når det begynder med et kendt bryggeri.
+    Kendt = optræder som bryggeri på mindst 2 varer og ligner ikke en stilart. Længste match vinder. Rører aldrig et udfyldt bryggeri."""
+    antal = {}
+    for it in items:
+        b = (it.get("brewery") or "").strip()
+        if b:
+            antal.setdefault(_norm_navn(b), [b, 0])[1] += 1
+    kendte = {k: v[0] for k, v in antal.items()
+              if v[1] >= 2 and 3 <= len(k) <= 40 and not any(c.isdigit() for c in k) and k not in _STIL_ORD}
+    per_foerste = {}
+    for k in kendte:
+        per_foerste.setdefault(k.split(" ", 1)[0], []).append(k)
+    for lst in per_foerste.values():
+        lst.sort(key=len, reverse=True)
+    n = 0
+    for it in items:
+        if (it.get("brewery") or "").strip():
+            continue
+        navn = _norm_navn(it.get("name"))
+        foerste = navn.split(" ", 1)[0] if navn else ""
+        for k in per_foerste.get(foerste, ()):
+            if navn.startswith(k + " ") and len(navn) > len(k) + 1:
+                it["brewery"] = kendte[k]
+                n += 1
+                break
+    return n
+# BEER-VÆRKTØJ: bryggeri-udledning (slut)
 
 
 def run_all_scrapers():
@@ -63,7 +145,7 @@ def run_all_scrapers():
 
     # Shopify deler rate limit pr. IP på tværs af butikker. Shopify-butikkerne
     # køres derfor én ad gangen i én fælles tråd; resten kører parallelt.
-    SHOPIFY = {"A Good Case", "Beermatch", "Beershoppen", "Brygshoppen", "Drikbeer", "Øltanken"}
+    SHOPIFY = set(get_shopify_names())
     seriel = [(n, f) for n, f in scrapers if n in SHOPIFY]
     parallel = [(n, f) for n, f in scrapers if n not in SHOPIFY]
 
@@ -268,7 +350,7 @@ def build_price_history(db, beer_list, days=90, min_points=2):
         print("   Ingen id'er fundet — springer prishistorik over")
         return
 
-    cutoff = datetime.utcnow() - timedelta(days=days)
+    cutoff = utcnow_naive() - timedelta(days=days)
     rows = (
         db.query(PriceHistory.beer_id, PriceHistory.price_dkk, PriceHistory.created_at)
         .filter(PriceHistory.beer_id.in_(all_ids))
@@ -304,7 +386,7 @@ def build_price_history(db, beer_list, days=90, min_points=2):
 
         # Prisaendring over de seneste ~7 dage — bruges til 📉-badge
         # paa forsiden. Tidligste pris i vinduet vs. nyeste.
-        _week_cutoff = (datetime.utcnow() - timedelta(days=8)).strftime("%Y-%m-%d")
+        _week_cutoff = (utcnow_naive() - timedelta(days=8)).strftime("%Y-%m-%d")
         _recent = [(d, p) for d, p in sorted(merged.items()) if d >= _week_cutoff]
         if len(_recent) >= 2:
             _ref_price = _recent[0][1]
@@ -349,6 +431,79 @@ def build_price_history(db, beer_list, days=90, min_points=2):
             print(f"      {_old_p:8.2f} → {_new_p:8.2f} kr   {_slug}")
         if len(_implausible_drops) > 10:
             print(f"      ... og {len(_implausible_drops) - 10} flere")
+
+
+@contextmanager
+def build_session(no_db_write=False):
+    """Åbn build-session; lokal build bruger en isoleret SQLite-kopi af databasen."""
+    if not no_db_write:
+        db = SessionLocal()
+        try:
+            yield db
+        finally:
+            db.close()
+        return
+
+    local_engine = create_engine("sqlite:///:memory:")
+    try:
+        Base.metadata.create_all(local_engine)
+        source_db = SessionLocal()
+        try:
+            print("\n📥 BEER_NO_PUSH: læser databasegrundlag til lokal SQLite-kopi...")
+            source_rows = {}
+            for model in (Beer, Price, PriceAlert):
+                source_rows[model] = [
+                    dict(row)
+                    for row in source_db.execute(select(model.__table__)).mappings()
+                ]
+
+            # Ingest skal kende seneste historikpris pr. øl/butik. Frontendens
+            # prishistorik bruger kun de seneste 90 dage, så kopien behøver ikke
+            # resten af den ofte langt større historiktabel.
+            history = PriceHistory.__table__
+            cutoff = utcnow_naive() - timedelta(days=90)
+            latest_history = (
+                select(
+                    history.c.beer_id,
+                    history.c.shop_name,
+                    func.max(history.c.created_at).label("created_at"),
+                )
+                .group_by(history.c.beer_id, history.c.shop_name)
+                .subquery()
+            )
+            latest_stmt = select(history).join(
+                latest_history,
+                and_(
+                    history.c.beer_id == latest_history.c.beer_id,
+                    history.c.shop_name == latest_history.c.shop_name,
+                    history.c.created_at == latest_history.c.created_at,
+                ),
+            )
+            recent_stmt = select(history).where(history.c.created_at >= cutoff)
+            history_rows = {
+                row["id"]: dict(row)
+                for stmt in (latest_stmt, recent_stmt)
+                for row in source_db.execute(stmt).mappings()
+            }
+            source_rows[PriceHistory] = list(history_rows.values())
+        finally:
+            source_db.close()
+
+        with local_engine.begin() as connection:
+            for model in (Beer, Price, PriceHistory, PriceAlert):
+                rows = source_rows[model]
+                if rows:
+                    connection.execute(model.__table__.insert(), rows)
+                print(f"   {model.__tablename__}: {len(rows)} rækker kopieret")
+
+        local_session_factory = sessionmaker(bind=local_engine)
+        db = local_session_factory()
+        try:
+            yield db
+        finally:
+            db.close()
+    finally:
+        local_engine.dispose()
 
 
 import re as _navne_re
@@ -452,6 +607,15 @@ def main():
         print("   typisk kun midlertidigt), eller kør med --tillad-mangler.")
         sys.exit(1)
 
+    # BEER-VÆRKTØJ: stop før ingest og push, hvis en butik er faldet kraftigt (fx blokeret midt i en hentning)
+    _fald = _find_fald(results, _indlaes_tal())
+    if _fald and "--tillad-fald" not in sys.argv:
+        print("\n❌ STOP: store fald siden sidste kørsel:")
+        for _s, _a, _b in _fald:
+            print(f"   {_s}: {_a} → {_b} ({(_b - _a) / _a * 100:+.0f} %)")
+        print("   Intet er gemt eller pushet. Prøv igen senere, eller kør med --tillad-fald, hvis faldet er reelt.")
+        sys.exit(1)
+
     # 1a2. Rens navne-stoej fra kilderne (mojibake, BEDST FOER-datoer,
     #       dublerede pak-angivelser) — facit anvendes efter og vinder.
     _renset = 0
@@ -463,6 +627,12 @@ def main():
     if _renset:
         print(f"   \U0001F9F9 {_renset} navne renset for kilde-stoej")
 
+    # BEER-VÆRKTØJ: bryggeri-udledning: udled manglende bryggeri fra navnets start (fx "Gamborg Bryghus Ein Hefeweizen").
+    #   Kører FØR facitlisten, så dine egne rettelser stadig vinder.
+    _udledt = udled_bryggeri(items)
+    if _udledt:
+        print(f"   🏭 {_udledt} manglende bryggerier udledt af navnet")
+
     # 1b. Facitliste: anvend manuelle overrides FOER matchning (facit vinder)
     print(f"\n\U0001F4D8 Anvender facitliste (fejlliste.xlsx)...")
     _facit = load_fejlliste("fejlliste.xlsx")
@@ -473,27 +643,28 @@ def main():
         apply_overrides(_it, _facit)
     print(f"   {len(_facit)} kendte rettelser i facit")
 
-    # 2. Gem i Supabase (bevarer historik)
-    print(f"\n💾 Gemmer i Supabase...")
-    _t = time.time()
-    db = SessionLocal()
-    try:
+    # 2. Ingestér og byg output. BEER_NO_PUSH bruger en lokal databasekopi,
+    # så Supabase kun læses og aldrig modtager ingest-skrivninger.
+    _no_db_write = bool(os.environ.get("BEER_NO_PUSH"))
+    if _no_db_write:
+        print("\n🧪 BEER_NO_PUSH: ingest kører kun i lokal SQLite-kopi.")
+    else:
+        print("\n💾 Gemmer i Supabase...")
+
+    with build_session(no_db_write=_no_db_write) as db:
+        _t = time.time()
         ingest_batch(db, items)
-    finally:
-        pass  # holder db åben til næste step
-    print(f"   ⏱ ingest: {time.time() - _t:.1f}s")
+        print(f"   ⏱ ingest: {time.time() - _t:.1f}s")
 
-    # 3. Byg grupperet liste fra database
-    print(f"\n🔗 Bygger grupperet ølliste...")
-    _t = time.time()
-    beer_list = build_beer_list_from_db(db)
-    print(f"   ⏱ gruppering: {time.time() - _t:.1f}s")
+        print(f"\n🔗 Bygger grupperet ølliste...")
+        _t = time.time()
+        beer_list = build_beer_list_from_db(db)
+        print(f"   ⏱ gruppering: {time.time() - _t:.1f}s")
 
-    print(f"\n📈 Bygger prishistorik...")
-    _t = time.time()
-    build_price_history(db, beer_list)
-    print(f"   ⏱ prishistorik: {time.time() - _t:.1f}s")
-    db.close()
+        print(f"\n📈 Bygger prishistorik...")
+        _t = time.time()
+        build_price_history(db, beer_list)
+        print(f"   ⏱ prishistorik: {time.time() - _t:.1f}s")
 
     # Rens navne-stoej OGSAA paa output-siden: navnene her kommer fra
     # databasen, hvor oel fra tidligere ingests stadig kan baere
@@ -572,11 +743,26 @@ def main():
     print(f"   Skrev data.json med {total_beers} unikke øl fra {len(shop_names)} butikker")
     print(f"   Aktive tilbud: {deals_count}")
     print(f"   Billigste øl: {round(cheapest, 2)} kr")
+    # BEER-VÆRKTØJ: prisfald-side: bygger prisfald.html (privat, ikke linket fra sitet).
+    #   Tilstanden (priser fra de forrige kørsler) gemmes kun ved en rigtig kørsel, ikke når BEER_NO_PUSH er sat.
+    try:
+        import prisfald
+        _pf = prisfald.byg("data.json", gem_tilstand=not os.environ.get("BEER_NO_PUSH"))
+        print(f"   📉 prisfald.html: {_pf['sidste']} fald siden sidste kørsel, {_pf['igaar']} siden i går")
+    except Exception as _e:
+        print(f"   ⚠️ prisfald.html kunne ikke bygges: {_e}")
+
+    # BEER_NO_PUSH: gem kun lokale tællere, og spring Git-push over.
+    _gem_tal(results)
+    if os.environ.get("BEER_NO_PUSH"):
+        print("\nℹ️ BEER_NO_PUSH er sat: lokal build færdig; Supabase kun læst, intet pushet.")
+        return
     print(f"\n📤 Pusher til GitHub...")
     subprocess.run(["git", "add", "data.json", "ol/", "bryggeri/", "sitemap.xml", "index.html"], check=True)
     # Prishistorik + PWA-filer. Uden check=True: en .gitignore'd fil må ikke vælte kørslen.
     _extra = [p for p in ("price_history.json", "manifest.webmanifest", "sw.js", "fonts",
-                          "icon-192.png", "icon-512.png", "icon-maskable-512.png", "apple-touch-icon.png", "logo-hero.png")
+                          "icon-192.png", "icon-512.png", "icon-maskable-512.png", "apple-touch-icon.png", "logo-hero.png",
+                          "theme.css", "theme.js", "fejlliste.xlsx", "prisfald.html")
               if os.path.exists(p)]
     if _extra:
         subprocess.run(["git", "add", *_extra])

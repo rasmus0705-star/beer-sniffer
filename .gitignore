@@ -28,6 +28,7 @@ debug_*.py
 diag.py
 diag_*.py
 test_*.py
+!tests/test_local_build_session.py
 verify_*.py
 tjek_*.py
 inspect_*.py
@@ -50,3 +51,10 @@ PROJECT_*.md
 beer_design*.zip
 beer_design_udpakket/
 .gitignore.bak*
+.projectmapignore
+scrape_counts.json
+projectmap.py
+tjek_scraper_kort.py
+shop_historik.py
+prisfald_state.json
+prisfald.py

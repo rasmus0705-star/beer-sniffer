@@ -1,6 +1,6 @@
 from sqlalchemy import Column, Integer, String, Float, Boolean, ForeignKey, DateTime
 from sqlalchemy.orm import relationship
-from datetime import datetime
+from app.utils.utc import utcnow_naive
 from app.database import Base
 
 
@@ -61,7 +61,7 @@ class PriceHistory(Base):
     price_dkk = Column(Float)
     shop_name = Column(String)
 
-    created_at = Column(DateTime, default=datetime.utcnow)
+    created_at = Column(DateTime, default=utcnow_naive)
 
     beer = relationship("Beer", back_populates="history")
 

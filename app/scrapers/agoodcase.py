@@ -7,6 +7,7 @@ from app.utils.description import clean_description
 from app.utils.shopify import shopify_pages
 
 SHOP_NAME = "A Good Case"
+SHOP_PLATFORM = "shopify"
 SHOP_URL = "https://agoodcase.dk"
 SHOP_SHIPPING = {'price': 59, 'freeOver': 499, 'note': 'Levering med Burd eller PostNord'}
 
