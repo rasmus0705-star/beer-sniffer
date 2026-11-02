@@ -712,6 +712,9 @@ def main():
     with open("data.json", "w", encoding="utf-8") as f:
         json.dump(output, f, ensure_ascii=False, indent=2)
 
+    # Pre-render current stats and featured offers so the homepage is useful before JS loads.
+    subprocess.run([sys.executable, "generate_homepage.py"], check=True)
+
     # 7. Generér individuelle øl-sider og sitemap ud fra det nye data.json
     print(f"\n🌐 Genererer øl-sider og sitemap...")
     _t = time.time()

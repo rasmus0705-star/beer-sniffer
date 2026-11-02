@@ -6,12 +6,12 @@
     <link rel="icon" href="/favicon.ico">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <title>Øltilbud i Danmark – find den laveste pris på specialøl | BeerSniffer</title>
-    <meta name="description" content="Find de bedste øltilbud i Danmark og se hvor din specialøl er billigst lige nu. Sammenlign priser på IPA, stout, pilsner og mere – opdateres dagligt.">
-    <meta name="keywords" content="øltilbud, specialøl, craft beer, billig øl, ølpriser, IPA tilbud, stout tilbud, dansk øl, brygshoppen, beershoppen, agoodcase, beermatch, drikbeer, smagekasse, øl tilbud">
+    <meta name="description" content="Sammenlign priser på 3.327+ øl fra 13 danske webshops. Find dagens bedste øltilbud — opdateres dagligt.">
     <meta property="og:title" content="BeerSniffer — Find de bedste øltilbud i Danmark">
-    <meta property="og:description" content="Sammenlign priser på specialøl fra danske webshops. Opdateres dagligt.">
+    <meta property="og:description" content="Sammenlign priser på 3.327+ øl fra 13 danske webshops. Find dagens bedste øltilbud — opdateres dagligt.">
     <meta property="og:url" content="https://beersniffer.dk/">
     <meta property="og:type" content="website">
+    <meta property="og:image" content="https://beersniffer.dk/logo-hero.png">
     <link rel="canonical" href="https://beersniffer.dk/">
     <!-- Selvhostede fonts (ingen data til Google) -->
     <link rel="preload" href="/fonts/bebas-neue-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
@@ -703,6 +703,9 @@
         .grid-wrap { padding: clamp(0.75rem, 1.5vw, 1.5rem); max-width: 100%; margin: 0; position: relative; z-index: 1; }
         .result-count { font-size: 0.72rem; color: var(--text-dim); margin-bottom: 1rem; letter-spacing: 0.12em; text-transform: uppercase; }
         .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 250px), 1fr)); gap: clamp(0.6rem, 1vw, 1rem); }
+        .static-beer { display: flex; flex-direction: column; gap: .45rem; padding: 1rem; min-height: 5rem; background: var(--surface); border: 1px solid var(--border); color: var(--text-muted); }
+        .static-beer a { color: var(--text); text-decoration: none; }
+        .static-beer span { color: var(--gold); font-size: .82rem; }
 
         .card {
             background: linear-gradient(180deg, var(--surface) 0%, var(--surface2) 100%);
@@ -1426,7 +1429,7 @@ function fmtKr(v){var n=Number(v)||0;return Math.abs(n-Math.round(n))<0.005?Math
         </div>
         <div class="brand">
             <p class="brand-tagline">Snus dig frem til de bedste <strong>øltilbud</strong> i Danmark</p>
-            <p class="brand-sub">Prissammenligning på tværs af <strong id="brand-shop-count">9</strong> danske ølbutikker</p>
+            <p class="brand-sub">Prissammenligning på tværs af <strong id="brand-shop-count">13</strong> danske ølbutikker</p>
             <div class="header-updated" id="header-updated"></div>
         </div>
     </div>
@@ -1435,7 +1438,7 @@ function fmtKr(v){var n=Number(v)||0;return Math.abs(n-Math.round(n))<0.005?Math
 <!-- HERO SEARCH -->
 <div class="hero-search">
     <div class="hero-search-inner">
-        <p class="hero-search-sub">Søg blandt <strong id="hero-beer-count">2.300+</strong> øl — opdateret dagligt</p>
+        <p class="hero-search-sub">Søg blandt <strong id="hero-beer-count">3.327</strong> øl — opdateret dagligt</p>
         <div class="hero-search-wrap">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-4.35-4.35M17 11A6 6 0 1 1 5 11a6 6 0 0 1 12 0z"/>
@@ -1463,19 +1466,28 @@ function fmtKr(v){var n=Number(v)||0;return Math.abs(n-Math.round(n))<0.005?Math
 
 <!-- STATS BAR -->
 <div class="stats-bar" role="region" aria-label="Statistik">
-    <div class="stat clickable" onclick="resetAllFilters()" role="button" tabindex="0" aria-label="Nulstil alle filtre"><div class="stat-number" id="stat-total">–</div><div class="stat-label">Øl i alt</div></div>
-    <div class="stat clickable" onclick="quickCat('deals')" role="button" tabindex="0" aria-label="Filtrer til aktive tilbud"><div class="stat-number" id="stat-deals">–</div><div class="stat-label">Aktive tilbud</div></div>
-    <div class="stat clickable" onclick="quickSort('discount')" role="button" tabindex="0" aria-label="Sorter efter størst rabat"><div class="stat-number" id="stat-max-discount">–</div><div class="stat-label">Største rabat</div></div>
-    <div class="stat clickable" onclick="quickSort('price-asc')" role="button" tabindex="0" aria-label="Sorter efter laveste pris"><div class="stat-number" id="stat-cheapest">–</div><div class="stat-label">Billigste øl (kr)</div></div>
+    <div class="stat clickable" onclick="resetAllFilters()" role="button" tabindex="0" aria-label="Nulstil alle filtre"><div class="stat-number" id="stat-total">3.327</div><div class="stat-label">Øl i alt</div></div>
+    <div class="stat clickable" onclick="quickCat('deals')" role="button" tabindex="0" aria-label="Filtrer til aktive tilbud"><div class="stat-number" id="stat-deals">520</div><div class="stat-label">Aktive tilbud</div></div>
+    <div class="stat clickable" onclick="quickSort('discount')" role="button" tabindex="0" aria-label="Sorter efter størst rabat"><div class="stat-number" id="stat-max-discount">−68 %</div><div class="stat-label">Største rabat</div></div>
+    <div class="stat clickable" onclick="quickSort('price-asc')" role="button" tabindex="0" aria-label="Sorter efter laveste pris"><div class="stat-number" id="stat-cheapest">9 kr</div><div class="stat-label">Fra</div></div>
 </div>
 
 <!-- TOP DEALS CAROUSEL -->
-<div class="top-deals-section" id="top-deals-section" style="display:none" role="region" aria-label="Bedste tilbud lige nu">
+<div class="top-deals-section" id="top-deals-section" role="region" aria-label="Bedste tilbud lige nu">
     <div class="top-deals-header">
         <span class="top-deals-title"><svg class="ic" aria-hidden="true"><use href="#i-flame"/></svg>Bedste tilbud lige nu</span>
         <a class="top-deals-see-all" href="#tilbud" role="button" onclick="quickCat('deals');return false;">Se alle tilbud →</a>
     </div>
-    <div class="top-deals-scroll" id="top-deals-scroll"></div>
+    <div class="top-deals-scroll" id="top-deals-scroll"><article class="top-card" data-href="/ol/call-the-style-police-india-black-lager-fra/"><a href="/ol/call-the-style-police-india-black-lager-fra/" aria-label="Se Call the Style Police - India Black Lager fra Baxbier"><img class="top-card-img" src="https://cdn-main.ideal.shop/images/by_hash/fa06d0bbeee7bba6b88c7d779f2a8f32b937850661c2efb565fc8d44bd9ca2fe/500-0/callthestylepolice.jpg" alt="Call the Style Police - India Black Lager fra Baxbier" loading="lazy"></a><div class="top-card-body"><div class="top-card-shop">Beer Me</div><a class="top-card-name" href="/ol/call-the-style-police-india-black-lager-fra/">Call the Style Police - India Black Lager fra Baxbier</a><div class="top-card-price">17,5 kr</div><span class="top-card-pct">−68 %</span></div></article>
+<article class="top-card" data-href="/ol/stangen-lager-lager/"><a href="/ol/stangen-lager-lager/" aria-label="Se Stangen - Lager - 5,4% Lager"><img class="top-card-img" src="https://cdn.shopify.com/s/files/1/0402/1239/8243/files/Stangen_Lager.png?v=1741079116" alt="Stangen - Lager - 5,4% Lager" loading="lazy"></a><div class="top-card-body"><div class="top-card-shop">A Good Case</div><a class="top-card-name" href="/ol/stangen-lager-lager/">Stangen - Lager - 5,4% Lager</a><div class="top-card-price">15,62 kr</div><span class="top-card-pct">−55 %</span></div></article>
+<article class="top-card" data-href="/ol/mont-blanc-la-verte-2/"><a href="/ol/mont-blanc-la-verte-2/" aria-label="Se Mont Blanc La Verte 33 cl."><img class="top-card-img" src="https://www.vildmedvin.dk/img/1000/1000/resize/m/o/mont_blanc_la_verte_33_cl.jpg" alt="Mont Blanc La Verte 33 cl." loading="lazy"></a><div class="top-card-body"><div class="top-card-shop">Vild med Vin</div><a class="top-card-name" href="/ol/mont-blanc-la-verte-2/">Mont Blanc La Verte 33 cl.</a><div class="top-card-price">16 kr</div><span class="top-card-pct">−52 %</span></div></article>
+<article class="top-card" data-href="/ol/pause-salikatt-alkoholfri/"><a href="/ol/pause-salikatt-alkoholfri/" aria-label="Se PAUSE - Salikatt - Alkoholfri - 33 cl. 0,5%"><img class="top-card-img" src="https://cdn.shopify.com/s/files/1/0600/9438/2263/files/rn-image_picker_lib_temp_daaef894-2527-4255-a2a0-418d45df9a17.jpg?v=1784117046" alt="PAUSE - Salikatt - Alkoholfri - 33 cl. 0,5%" loading="lazy"></a><div class="top-card-body"><div class="top-card-shop">Øltanken</div><a class="top-card-name" href="/ol/pause-salikatt-alkoholfri/">PAUSE - Salikatt - Alkoholfri - 33 cl. 0,5%</a><div class="top-card-price">19 kr</div><span class="top-card-pct">−51 %</span></div></article>
+<article class="top-card" data-href="/ol/de-halve-maan-sportzot-alkoholfri/"><a href="/ol/de-halve-maan-sportzot-alkoholfri/" aria-label="Se Sportzot Alkoholfri"><img class="top-card-img" src="https://www.vildmedvin.dk/img/1000/1000/resize/s/p/sportzot.jpg" alt="Sportzot Alkoholfri" loading="lazy"></a><div class="top-card-body"><div class="top-card-shop">Vild med Vin</div><a class="top-card-name" href="/ol/de-halve-maan-sportzot-alkoholfri/">Sportzot Alkoholfri</a><div class="top-card-price">19 kr</div><span class="top-card-pct">−51 %</span></div></article>
+<article class="top-card" data-href="/ol/hr-skov-sommer-frisk-oel/"><a href="/ol/hr-skov-sommer-frisk-oel/" aria-label="Se Hr. Skov, Sommer frisk øl"><img class="top-card-img" src="https://www.vildmedvin.dk/img/1000/1000/resize/s/o/sommer-frisk_hr_skov.jpg" alt="Hr. Skov, Sommer frisk øl" loading="lazy"></a><div class="top-card-body"><div class="top-card-shop">Vild med Vin</div><a class="top-card-name" href="/ol/hr-skov-sommer-frisk-oel/">Hr. Skov, Sommer frisk øl</a><div class="top-card-price">26,5 kr</div><span class="top-card-pct">−51 %</span></div></article>
+<article class="top-card" data-href="/ol/omnipollo-nebuchadnezzar/"><a href="/ol/omnipollo-nebuchadnezzar/" aria-label="Se Omnipollo - Nebuchadnezzar 0,5%"><img class="top-card-img" src="https://cdn.shopify.com/s/files/1/0776/5209/9400/files/9359B31B-2C55-4BF9-99EC-08E94A3B7999.jpg?v=1787655841" alt="Omnipollo - Nebuchadnezzar 0,5%" loading="lazy"></a><div class="top-card-body"><div class="top-card-shop">Øltanken</div><a class="top-card-name" href="/ol/omnipollo-nebuchadnezzar/">Omnipollo - Nebuchadnezzar 0,5%</a><div class="top-card-price">20 kr</div><span class="top-card-pct">−50 %</span></div></article>
+<article class="top-card" data-href="/ol/brasserie-minne-ardenne-wood-bee-gees-bourbon-barrels/"><a href="/ol/brasserie-minne-ardenne-wood-bee-gees-bourbon-barrels/" aria-label="Se Ardenne Wood Bee Gees Bourbon Barrels 2023 10% 33cl"><img class="top-card-img" src="https://cdn.shopify.com/s/files/1/0509/8477/9975/files/ardenne-wood-bee-gees-bourbon-barrels-2023-10-33cl.png?v=1705508213" alt="Ardenne Wood Bee Gees Bourbon Barrels 2023 10% 33cl" loading="lazy"></a><div class="top-card-body"><div class="top-card-shop">Brygshoppen</div><a class="top-card-name" href="/ol/brasserie-minne-ardenne-wood-bee-gees-bourbon-barrels/">Ardenne Wood Bee Gees Bourbon Barrels 2023 10% 33cl</a><div class="top-card-price">35 kr</div><span class="top-card-pct">−48 %</span></div></article>
+<article class="top-card" data-href="/ol/insight-cellars-existence-pinot-noir-lambic/"><a href="/ol/insight-cellars-existence-pinot-noir-lambic/" aria-label="Se Insight Cellars - Existence: Pinot Noir - 8,8% Lambic"><img class="top-card-img" src="https://cdn.shopify.com/s/files/1/0402/1239/8243/files/Insight_Existence.png?v=1733786901" alt="Insight Cellars - Existence: Pinot Noir - 8,8% Lambic" loading="lazy"></a><div class="top-card-body"><div class="top-card-shop">A Good Case</div><a class="top-card-name" href="/ol/insight-cellars-existence-pinot-noir-lambic/">Insight Cellars - Existence: Pinot Noir - 8,8% Lambic</a><div class="top-card-price">195 kr</div><span class="top-card-pct">−47 %</span></div></article>
+<article class="top-card" data-href="/ol/sudden-death-brewing-co-lubi-libre/"><a href="/ol/sudden-death-brewing-co-lubi-libre/" aria-label="Se Sudden Death Brewing Co. – Lübi Libre 0,5%"><img class="top-card-img" src="https://cdn.shopify.com/s/files/1/0776/5209/9400/files/CB3E28E3-3BD3-4A5F-B47D-DB6303AE806C.jpg?v=1788385282" alt="Sudden Death Brewing Co. – Lübi Libre 0,5%" loading="lazy"></a><div class="top-card-body"><div class="top-card-shop">Øltanken</div><a class="top-card-name" href="/ol/sudden-death-brewing-co-lubi-libre/">Sudden Death Brewing Co. – Lübi Libre 0,5%</a><div class="top-card-price">25 kr</div><span class="top-card-pct">−46 %</span></div></article></div>
 </div>
 
 <!-- MOBILE FILTER TOGGLE -->
@@ -1562,11 +1574,11 @@ function fmtKr(v){var n=Number(v)||0;return Math.abs(n-Math.round(n))<0.005?Math
             <div class="sidebar-title"><span><svg class="ic" aria-hidden="true"><use href="#i-percent"/></svg> Alkoholprocent</span></div>
             <div class="range-wrap">
                 <div class="dual-range-wrap">
-                    <input type="range" id="abv-min" min="0" max="15" value="0" step="0.5" aria-label="Minimum alkoholprocent">
-                    <input type="range" id="abv-max" min="0" max="15" value="15" step="0.5" aria-label="Maksimum alkoholprocent">
+                    <input type="range" id="abv-min" min="0" max="100" value="0" step="0.5" aria-label="Minimum alkoholprocent">
+                    <input type="range" id="abv-max" min="0" max="100" value="100" step="0.5" aria-label="Maksimum alkoholprocent">
                     <div class="dual-range-track"><div class="dual-range-fill" id="abv-fill"></div></div>
                 </div>
-                <div class="range-val" id="abv-val" aria-live="polite">0–15%</div>
+                <div class="range-val" id="abv-val" aria-live="polite">0–100%</div>
             </div>
         </div>
 
@@ -1578,9 +1590,9 @@ function fmtKr(v){var n=Number(v)||0;return Math.abs(n-Math.round(n))<0.005?Math
     <div class="main-content">
         <div class="active-filters" id="active-filters" aria-live="polite"></div>
         <div class="grid-wrap">
-            <div id="loading" role="status"><span class="sr-only">Henter øl...</span><div class="skeleton-grid" aria-hidden="true"><div class="skeleton-card"><div class="sk-img"></div><div class="sk-line"></div><div class="sk-line short"></div><div class="sk-line price"></div></div><div class="skeleton-card"><div class="sk-img"></div><div class="sk-line"></div><div class="sk-line short"></div><div class="sk-line price"></div></div><div class="skeleton-card"><div class="sk-img"></div><div class="sk-line"></div><div class="sk-line short"></div><div class="sk-line price"></div></div><div class="skeleton-card"><div class="sk-img"></div><div class="sk-line"></div><div class="sk-line short"></div><div class="sk-line price"></div></div><div class="skeleton-card"><div class="sk-img"></div><div class="sk-line"></div><div class="sk-line short"></div><div class="sk-line price"></div></div><div class="skeleton-card"><div class="sk-img"></div><div class="sk-line"></div><div class="sk-line short"></div><div class="sk-line price"></div></div><div class="skeleton-card"><div class="sk-img"></div><div class="sk-line"></div><div class="sk-line short"></div><div class="sk-line price"></div></div><div class="skeleton-card"><div class="sk-img"></div><div class="sk-line"></div><div class="sk-line short"></div><div class="sk-line price"></div></div></div></div>
-            <p class="result-count" id="result-count" style="display:none" aria-live="polite"></p>
-            <div class="grid" id="grid" role="list"></div>
+            <div id="loading" role="status" style="display:none" style="display:none" style="display:none" style="display:none"><span class="sr-only">Henter øl...</span><div class="skeleton-grid" aria-hidden="true"><div class="skeleton-card"><div class="sk-img"></div><div class="sk-line"></div><div class="sk-line short"></div><div class="sk-line price"></div></div><div class="skeleton-card"><div class="sk-img"></div><div class="sk-line"></div><div class="sk-line short"></div><div class="sk-line price"></div></div><div class="skeleton-card"><div class="sk-img"></div><div class="sk-line"></div><div class="sk-line short"></div><div class="sk-line price"></div></div><div class="skeleton-card"><div class="sk-img"></div><div class="sk-line"></div><div class="sk-line short"></div><div class="sk-line price"></div></div><div class="skeleton-card"><div class="sk-img"></div><div class="sk-line"></div><div class="sk-line short"></div><div class="sk-line price"></div></div><div class="skeleton-card"><div class="sk-img"></div><div class="sk-line"></div><div class="sk-line short"></div><div class="sk-line price"></div></div><div class="skeleton-card"><div class="sk-img"></div><div class="sk-line"></div><div class="sk-line short"></div><div class="sk-line price"></div></div><div class="skeleton-card"><div class="sk-img"></div><div class="sk-line"></div><div class="sk-line short"></div><div class="sk-line price"></div></div></div></div>
+            <p class="result-count" id="result-count" aria-live="polite">3.327 øl i prissammenligningen</p>
+            <div class="grid" id="grid" role="list"><article class="static-beer"><a href="/ol/hancock-black-lager/">Hancock, Black Lager</a><span>Fra 9 kr</span></article><article class="static-beer"><a href="/ol/hancock-hvidtoel/">Hancock, Hvidtøl 33 cl.</a><span>Fra 9 kr</span></article><article class="static-beer"><a href="/ol/hancock-hoekerbajer/">Hancock, Høkerbajer</a><span>Fra 11 kr</span></article><article class="static-beer"><a href="/ol/hancock-150-aars-jubilaeums-oel/">Hancock 150-års jubilæums Øl</a><span>Fra 11 kr</span></article><article class="static-beer"><a href="/ol/hancock-merry-christmas-2/">Hancock, Merry Christmas 33 cl.</a><span>Fra 11 kr</span></article><article class="static-beer"><a href="/ol/150-aars-jubilaeum-hancock/">150 års jubilæum - Hancock - 33 cl. - 5,0%</a><span>Fra 12 kr</span></article><article class="static-beer"><a href="/ol/hancock-bryggerierne-black-lager-15/">Black Lager</a><span>Fra 12 kr</span></article><article class="static-beer"><a href="/ol/tyskie-gronie-lager-24-stk-2/">Tyskie Gronie – 5,2% Lager (24 stk.)</a><span>Fra 12,46 kr</span></article><article class="static-beer"><a href="/ol/lech-premium-lager-24-stk-2/">Lech Premium – 5% Lager (24 stk.)</a><span>Fra 12,46 kr</span></article><article class="static-beer"><a href="/ol/thisted-bryghus-oeko-thy-pilsner/">Thisted Bryghus, ØKO Thy Pilsner 33 cl.</a><span>Fra 14 kr</span></article><article class="static-beer"><a href="/ol/hancock-oekologisk-pilsner/">Hancock Økologisk pilsner 33 cl.</a><span>Fra 14 kr</span></article><article class="static-beer"><a href="/ol/hancock-beer-2/">Hancock Beer 33 cl.</a><span>Fra 14 kr</span></article><article class="static-beer"><a href="/ol/hancock-old-gambrinus-light/">Hancock, Old Gambrinus Light</a><span>Fra 15 kr</span></article><article class="static-beer"><a href="/ol/skovlyst-hindbaer-blanche/">Skovlyst, Hindbær Blanche</a><span>Fra 15 kr</span></article><article class="static-beer"><a href="/ol/budvar-0-0-alkoholfri/">Budvar 0,0 Alkoholfri</a><span>Fra 15 kr</span></article><article class="static-beer"><a href="/ol/olympic-mythos-0-0-alkoholfri-lager/">Olympic - Mythos 0,0 - 0,0% Alkoholfri Lager</a><span>Fra 15,75 kr</span></article><article class="static-beer"><a href="/ol/hancock-bryggerierne-old-gambrinus-dark-bock/">Old Gambrinus Dark - Bock</a><span>Fra 16 kr</span></article><article class="static-beer"><a href="/ol/kozel-premium-lager-bohemian-lager/">Kozel - Premium Lager - 4,6% Bohemian Lager</a><span>Fra 16,62 kr</span></article><article class="static-beer"><a href="/ol/kozel-dark-dark-lager/">Kozel - Dark - 3,8% Dark Lager</a><span>Fra 16,62 kr</span></article><article class="static-beer"><a href="/ol/lemon-clausthaler-alkoholfri/">LEMON - Clausthaler - alkoholfri - 50 cl- 0,5%</a><span>Fra 17 kr</span></article></div>
             <div style="text-align:center;margin:1.5rem 0;">
                 <button id="load-more" class="cat-btn" style="display:none;margin:0 auto;">Vis flere øl ↓</button>
             </div>
@@ -1630,6 +1642,10 @@ function fmtKr(v){var n=Number(v)||0;return Math.abs(n-Math.round(n))<0.005?Math
             <a href="mailto:admin@beersniffer.dk">admin@beersniffer.dk</a>
             <a href="#" onclick="Cookiebot.renew()">🍪 Cookieindstillinger</a>
         </div>
+        <div class="footer-col">
+            <span class="footer-col-title">Søsterside</span>
+            <a href="https://romsniffer.dk/">RomSniffer — rom & whisky</a>
+        </div>
     </div>
     <div class="footer-bottom">BeerSniffer &copy; 2026 &mdash; Kun for personer over 18 år &mdash; Drik med omtanke 🍺</div>
 </footer>
@@ -1658,9 +1674,9 @@ function fmtKr(v){var n=Number(v)||0;return Math.abs(n-Math.round(n))<0.005?Math
 
     let allBeers = [];
     let currentPage = 1, totalPages = 1, totalCount = 0;
-    let activeFlags = new Set(); let currentSort = 'price-asc';
+    let activeFlags = new Set(); let currentSort = 'shops';
     let selectedShops = new Set(), selectedTypes = new Set();
-    let priceMin = 0, priceMax = 500, abvMin = 0, abvMax = 15;
+    let priceMin = 0, priceMax = 500, abvMin = 0, abvMax = 15, abvLimit = 15;
     let favorites = new Set(JSON.parse(localStorage.getItem('bs_favorites') || '[]'));
 
     const isMobile = () => window.innerWidth <= 1100;
@@ -1745,12 +1761,12 @@ function fmtKr(v){var n=Number(v)||0;return Math.abs(n-Math.round(n))<0.005?Math
         if (selectedShops.size) p.set('butik', [...selectedShops].join('|'));
         if (selectedTypes.size) p.set('type', [...selectedTypes].join('|'));
         if (activeFlags.size) p.set('filter', [...activeFlags].join(','));
-        if (currentSort !== 'price-asc') p.set('sort', currentSort);
+        if (currentSort !== 'shops') p.set('sort', currentSort);
         const pmx = parseInt(document.getElementById('price-max').max || 500);
         if (priceMin > 0) p.set('pmin', Math.round(priceMin));
         if (priceMax < pmx) p.set('pmax', Math.round(priceMax));
         if (abvMin > 0) p.set('amin', abvMin);
-        if (abvMax < 15) p.set('amax', abvMax);
+        if (abvMax < abvLimit) p.set('amax', abvMax);
         return p.toString();
     }
     function syncUrl(replace) {
@@ -1769,13 +1785,13 @@ function fmtKr(v){var n=Number(v)||0;return Math.abs(n-Math.round(n))<0.005?Math
         selectedShops = new Set(split('butik', '|'));
         selectedTypes = new Set(split('type', '|'));
         activeFlags = new Set(split('filter', ',').filter(f => VALID_FLAGS.includes(f)));
-        currentSort = VALID_SORTS.includes(p.get('sort')) ? p.get('sort') : 'price-asc';
+        currentSort = VALID_SORTS.includes(p.get('sort')) ? p.get('sort') : 'shops';
         const pMin = document.getElementById('price-min'), pMax = document.getElementById('price-max');
         const aMin = document.getElementById('abv-min'), aMax = document.getElementById('abv-max');
         pMin.value = num(p.get('pmin'), 0);
         pMax.value = num(p.get('pmax'), parseFloat(pMax.max));
         aMin.value = num(p.get('amin'), 0);
-        aMax.value = num(p.get('amax'), 15);
+        aMax.value = num(p.get('amax'), abvLimit);
         updateDualRange('price'); updateDualRange('abv');
         updateSortBtn(); updateShopBtn(); updateTypeBtn(); syncFlagButtons(); syncCatPills();
         return true;
@@ -1788,7 +1804,7 @@ function fmtKr(v){var n=Number(v)||0;return Math.abs(n-Math.round(n))<0.005?Math
     }
     function loadPrefs() {
         const p = JSON.parse(localStorage.getItem('bs_prefs') || '{}');
-        if (p.sort) currentSort = p.sort;
+        if (p.sort && VALID_SORTS.includes(p.sort)) currentSort = p.sort;
         if (p.types) selectedTypes = new Set(p.types);
         if (p.shops) selectedShops = new Set(p.shops);
         if (p.abvMin !== undefined) abvMin = p.abvMin;
@@ -2029,8 +2045,10 @@ function fmtKr(v){var n=Number(v)||0;return Math.abs(n-Math.round(n))<0.005?Math
         const pool = live.length ? live : prices;
         const tot = p => { const t = totalWithShipping(p.shop_name, p.price); return t === null ? p.price : t; };
         const min_total = pool.length ? Math.min(...pool.map(tot)) : 0;
+        const nonAlcoholic = (b.abv !== null && b.abv !== undefined && b.abv <= 0.5) || /alkoholfri|alcohol[\s-]?free/i.test(b.name || '');
+        const type = (nonAlcoholic && (!b.type || b.type === 'Beer')) ? 'Alkoholfri Øl' : b.type;
         return {
-            ...b, min_price, min_total, prices,
+            ...b, type, min_price, min_total, prices,
             max_discount_pct: b.max_discount_pct || b.discount_pct || 0,
             normalized_name: b.normalized_name || b.name,
             in_stock: prices.length ? live.length > 0 : true,
@@ -2090,12 +2108,12 @@ function fmtKr(v){var n=Number(v)||0;return Math.abs(n-Math.round(n))<0.005?Math
     }
 
     function resetAllFilters() {
-        activeFlags.clear(); selectedShops.clear(); currentSort='price-asc'; currentPage=1;
-        selectedTypes.clear(); priceMin=0; abvMin=0; abvMax=15;
+        activeFlags.clear(); selectedShops.clear(); currentSort='shops'; currentPage=1;
+        selectedTypes.clear(); priceMin=0; abvMin=0; abvMax=abvLimit;
         document.getElementById('search').value='';
         document.getElementById('price-min').value=0;
         document.getElementById('price-max').value=parseInt(document.getElementById('price-max').max);
-        document.getElementById('abv-min').value=0; document.getElementById('abv-max').value=15;
+        document.getElementById('abv-min').value=0; document.getElementById('abv-max').value=abvLimit;
         updateDualRange('price'); updateDualRange('abv'); updateSortBtn(); updateShopBtn(); updateTypeBtn();
         document.querySelectorAll('.cat-btn').forEach(b=>b.classList.remove('active'));
         syncFlagButtons();
@@ -2177,7 +2195,7 @@ function fmtKr(v){var n=Number(v)||0;return Math.abs(n-Math.round(n))<0.005?Math
                 <span class="price-row-shop">${shopH}</span>
                 ${best && multi && !oos ? '<span class="best-badge">Billigst</span>' : ''}
                 ${oos ? '<span class="oos-badge">Udsolgt</span>' : ''}
-                ${p.discount_pct ? `<span class="price-row-discount">−${p.discount_pct}%</span>` : ''}
+                ${p.discount_pct ? `<span class="price-row-discount">−${Math.round(p.discount_pct)} %</span>` : ''}
             </div>
             <div class="price-row-main">
                 <div class="price-row-left">
@@ -2186,7 +2204,7 @@ function fmtKr(v){var n=Number(v)||0;return Math.abs(n-Math.round(n))<0.005?Math
                         ${p.old_price ? `<span class="price-row-old">${fmtKr(p.old_price)} kr</span>` : ''}
                     </div>
                     ${p.old_price ? `<span class="price-row-save">${icon('tag')} Spar ${(p.old_price - p.price).toFixed(0)} kr</span>` : ''}
-                    <div class="price-row-ship">${tot !== null ? `<span class="price-row-total">Inkl. fragt: ${tot.toFixed(0)} kr</span>` : ''}${shippingBtnHTML(p.shop_name, p.price)}</div>
+                    <div class="price-row-ship"><span class="price-row-total">${tot !== null ? `Inkl. fragt: ${fmtKr(tot)} kr` : 'Fragt ukendt'}</span>${shippingBtnHTML(p.shop_name, p.price)}</div>
                 </div>
                 <div class="price-row-actions">
                     ${p.url ? `<a class="price-row-link" href="${escapeHtml(p.url)}" target="_blank" rel="sponsored noopener"
@@ -2212,8 +2230,6 @@ function fmtKr(v){var n=Number(v)||0;return Math.abs(n-Math.round(n))<0.005?Math
         const detailTarget = b.slug ? '' : ' target="_blank" rel="sponsored noopener"';
 
         let html = `<div class="card${maxDiscount > 0 ? ' has-deal' : ''}"${b.slug ? ` data-slug="${escapeHtml(b.slug)}"` : ''} ${delay >= 0 ? ` style="animation-delay:${delay}s"` : ' data-na'} role="listitem">`;
-        if (maxDiscount > 0) html += `<div class="ribbon">−${maxDiscount}%</div>`;
-
         html += `<a class="card-img-wrap" href="${detailUrl}"${detailTarget} data-track="produkt_klik" data-name="${nameH}" data-shop="${shopH}" data-price="${minPrice}" aria-label="Se ${nameH} hos BeerSniffer">`;
         html += b.image
             ? `<img class="card-img" width="300" height="155" src="${BLANK}" data-src="${escapeHtml(thumb(b.image, 420))}" alt="${nameH}" decoding="async" data-hide-err>`
@@ -2278,7 +2294,7 @@ function fmtKr(v){var n=Number(v)||0;return Math.abs(n-Math.round(n))<0.005?Math
             case 'price-per-liter': sorted.sort((a,b) => pricePerLiter(a)-pricePerLiter(b)); break;
             case 'price-per-cl':    sorted.sort((a,b) => pricePerCl(a)-pricePerCl(b)); break;
             case 'name':            sorted.sort((a,b) => a.name.localeCompare(b.name,'da')); break;
-            case 'shops':           sorted.sort((a,b) => (b.prices?.length||0)-(a.prices?.length||0)); break;
+            case 'shops':           sorted.sort((a,b) => (b.prices?.length||0)-(a.prices?.length||0) || (a.min_price||0)-(b.min_price||0)); break;
         }
         return sorted;
     }
@@ -2339,7 +2355,7 @@ function fmtKr(v){var n=Number(v)||0;return Math.abs(n-Math.round(n))<0.005?Math
                         ${best.old_price ? `<span class="top-card-old">${fmtKr(best.old_price)} kr</span>` : ''}
                     </div>
                 </div>
-                <div class="top-card-pct">−${deal.max_discount_pct}%</div>
+                <div class="top-card-pct">−${Math.round(deal.max_discount_pct)} %</div>
                 ${best.url ? `<a class="top-card-link" href="${escapeHtml(best.url)}" target="_blank" rel="sponsored noopener"
                     aria-label="Køb ${nameH} hos ${shopH}"
                     data-track="koeb_klik" data-name="${nameH}" data-shop="${shopH}" data-price="${best.price||0}" data-place="top_deals" data-rabat="${deal.max_discount_pct||0}">Køb →</a>` : ''}
@@ -2432,7 +2448,7 @@ function fmtKr(v){var n=Number(v)||0;return Math.abs(n-Math.round(n))<0.005?Math
         if (sv) addChip('"' + sv + '"', 'search', '', 'search');
         const pm = parseInt(document.getElementById('price-max').max||500);
         if (priceMin>0||priceMax<pm) addChip(`${Math.round(priceMin)}–${Math.round(priceMax)} kr`, 'price', '', 'banknote');
-        if (abvMin>0||abvMax<15) addChip(`${abvMin.toFixed(1)}–${abvMax.toFixed(1)}%`, 'abv', '', 'percent');
+        if (abvMin>0||abvMax<abvLimit) addChip(`${abvMin.toFixed(1)}–${abvMax.toFixed(1)}%`, 'abv', '', 'percent');
         container.innerHTML = chips.length ? '<span class="active-filters-label">Aktive filtre:</span>'+chips.join('') : '';
         if (sc.length) { sidebarSection.style.display='block'; sidebarChips.innerHTML=sc.join(''); }
         else { sidebarSection.style.display='none'; sidebarChips.innerHTML=''; }
@@ -2446,7 +2462,7 @@ function fmtKr(v){var n=Number(v)||0;return Math.abs(n-Math.round(n))<0.005?Math
         else if (type==='type') { selectedTypes.delete(value); updateTypeBtn(); syncCatPills(); syncFlagButtons(); }
         else if (type==='search') { document.getElementById('search').value=''; }
         else if (type==='price') { priceMin=0; priceMax=parseInt(document.getElementById('price-max').max||500); document.getElementById('price-min').value=0; document.getElementById('price-max').value=priceMax; updateDualRange('price'); }
-        else if (type==='abv') { abvMin=0; abvMax=15; document.getElementById('abv-min').value=0; document.getElementById('abv-max').value=15; updateDualRange('abv'); }
+        else if (type==='abv') { abvMin=0; abvMax=abvLimit; document.getElementById('abv-min').value=0; document.getElementById('abv-max').value=abvLimit; updateDualRange('abv'); }
         currentPage=1; savePrefs(); renderGrid(); renderActiveFilters();
     };
 
@@ -2534,8 +2550,8 @@ function fmtKr(v){var n=Number(v)||0;return Math.abs(n-Math.round(n))<0.005?Math
             document.getElementById('stat-total').textContent = stats.total||allBeers.length;
             document.getElementById('stat-deals').textContent = stats.deals||allBeers.filter(b=>b.max_discount_pct>0).length;
             const maxDiscount = Math.max(...allBeers.map(b=>b.max_discount_pct||0),0);
-            document.getElementById('stat-max-discount').textContent = maxDiscount>0?maxDiscount+'%':'–';
-            document.getElementById('stat-cheapest').textContent = (stats.cheapest||Math.min(...allBeers.filter(b=>b.min_price).map(b=>b.min_price))).toFixed(0);
+            document.getElementById('stat-max-discount').textContent = maxDiscount>0?'−'+Math.round(maxDiscount)+' %':'–';
+            document.getElementById('stat-cheapest').textContent = fmtKr(stats.cheapest||Math.min(...allBeers.filter(b=>b.min_price).map(b=>b.min_price))) + ' kr';
             document.getElementById('hero-beer-count').textContent = (stats.total||allBeers.length).toLocaleString('da-DK');
             if (stats.shops) { const sc = document.getElementById('brand-shop-count'); if (sc) sc.textContent = stats.shops; }
 
@@ -2574,6 +2590,14 @@ function fmtKr(v){var n=Number(v)||0;return Math.abs(n-Math.round(n))<0.005?Math
             document.getElementById('clear-types').addEventListener('click', e => { e.stopPropagation(); selectedTypes.clear(); currentPage=1; updateTypeBtn(); savePrefs(); renderGrid(); renderActiveFilters(); });
 
             loadPrefs(); updateShopBtn(); updateTypeBtn(); updateSortBtn();
+
+            // The default range must include all products, including high-strength beer.
+            const maxAbv = Math.ceil(Math.max(...allBeers.map(b => Number(b.abv) || 0), 15) * 2) / 2;
+            abvLimit = maxAbv;
+            document.getElementById('abv-min').max = maxAbv;
+            document.getElementById('abv-max').max = maxAbv;
+            if (abvMax === 15) abvMax = maxAbv; // 15 was the old slider ceiling, not an active filter
+            document.getElementById('abv-max').value = abvMax;
 
             // Rundes op til nærmeste 10 — skyderen har step=10 og ville ellers klikke ned og skjule de dyreste øl
             const maxP = Math.ceil(Math.max(...allBeers.filter(b=>b.min_price).map(b=>b.min_price),500) / 10) * 10;
