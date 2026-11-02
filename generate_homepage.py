@@ -16,6 +16,11 @@ def esc(value: object) -> str:
     return html.escape(str(value or ""), quote=True)
 
 
+def fmt_price(value: object) -> str:
+    amount = float(value or 0)
+    return (f"{amount:.0f}" if amount.is_integer() else f"{amount:.2f}").replace(".", ",")
+
+
 def main() -> None:
     data = json.loads((ROOT / "data.json").read_text(encoding="utf-8"))
     stats = data.get("stats", {})
@@ -65,13 +70,18 @@ def main() -> None:
         product_url = "/ol/" + esc(beer.get("slug")) + "/" if beer.get("slug") else "#produkter"
         image = beer.get("image")
         image_html = f'<img class="top-card-img" src="{esc(image)}" alt="{esc(beer.get("name"))}" loading="lazy">' if image else '<div class="top-card-img-placeholder" aria-hidden="true">ØL</div>'
+        old_price_html = f'<span class="top-card-old">{fmt_price(price.get("old_price"))} kr</span>' if price.get("old_price") else ""
+        buy_html = f'<a class="top-card-link" href="{esc(price.get("url"))}" target="_blank" rel="sponsored noopener">Køb →</a>' if price.get("url") else ""
         cards.append(
             f'<article class="top-card" data-href="{product_url}">'
             f'<a href="{product_url}" aria-label="Se {esc(beer.get("name"))}">{image_html}</a>'
             f'<div class="top-card-body"><div class="top-card-shop">{esc(price.get("shop_name"))}</div>'
             f'<a class="top-card-name" href="{product_url}">{esc(beer.get("name"))}</a>'
-            f'<div class="top-card-price">{esc(format(float(amount), "g").replace(".", ","))} kr</div>'
-            f'<span class="top-card-pct">−{round(beer.get("max_discount_pct") or 0)} %</span></div></article>'
+            f'<div class="top-card-prices"><span class="top-card-price">{fmt_price(amount)} kr</span>'
+            f'{old_price_html}</div>'
+            f'<span class="top-card-pct">−{round(beer.get("max_discount_pct") or 0)} %</span>'
+            f'{buy_html}'
+            f'</div></article>'
         )
     static_offers = '\n'.join(cards)
     page = re.sub(
@@ -101,7 +111,7 @@ def main() -> None:
         name = esc(beer.get("name"))
         slug = esc(beer.get("slug"))
         price = beer.get("min_price") or 0
-        sample.append(f'<article class="static-beer"><a href="/ol/{slug}/">{name}</a><span>Fra {format(float(price), "g").replace(".", ",")} kr</span></article>')
+        sample.append(f'<article class="static-beer"><a href="/ol/{slug}/">{name}</a><span>Fra {fmt_price(price)} kr</span></article>')
     page = re.sub(
         r'(<div class="grid" id="grid" role="list">).*?(</div>\s*<div style="text-align:center;margin:1.5rem 0;">)',
         lambda match: match.group(1) + ''.join(sample) + match.group(2),

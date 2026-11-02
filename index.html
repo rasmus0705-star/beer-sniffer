@@ -443,6 +443,18 @@
         }
         .top-card-link:hover { background: var(--discount); color: #000; }
 
+        /* Prioritér resultaterne, når besøgende søger eller filtrerer. */
+        body.has-active-query #top-deals-section { display: none !important; }
+        body.has-active-query header .header-inner { padding: 0.45rem 1rem; gap: 0.65rem; }
+        body.has-active-query .logo-img { width: 78px; }
+        body.has-active-query .brand-tagline,
+        body.has-active-query .brand-sub,
+        body.has-active-query .header-updated,
+        body.has-active-query .hero-search-sub,
+        body.has-active-query .category-bar { display: none; }
+        body.has-active-query .hero-search { padding: 0.45rem 1rem; }
+        body.has-active-query .hero-search-input { padding-top: 0.65rem; padding-bottom: 0.65rem; }
+
         .mobile-filter-toggle { display: none; }
 
         .layout-wrap { display: flex; max-width: 100%; margin: 0 auto; min-height: 80vh; }
@@ -593,31 +605,6 @@
             min-height: 44px;
         }
         .sidebar-reset:hover { transform: translateY(-1px); box-shadow: 0 6px 18px rgba(212,98,10,0.35); }
-        .sidebar-chips { display: flex; flex-wrap: wrap; gap: 0.35rem; }
-        .sidebar-chip {
-            background: rgba(200,146,14,0.15);
-            border: 1px solid var(--gold-dim);
-            color: var(--gold-light);
-            padding: 0.3rem 0.6rem;
-            border-radius: 999px;
-            font-size: 0.72rem;
-            display: inline-flex;
-            align-items: center;
-            gap: 0.35rem;
-            cursor: pointer;
-            transition: all 0.15s;
-            min-height: 32px;
-        }
-        .sidebar-chip:hover { background: rgba(200,146,14,0.25); border-color: var(--gold); }
-        .sidebar-chip .x { font-weight: 700; opacity: 0.6; font-size: 0.78rem; line-height: 1; }
-        .sidebar-chip:hover .x { opacity: 1; color: #e05050; }
-        .sidebar-active-filters {
-            background: rgba(200,146,14,0.04);
-            margin: -1.25rem -1rem 1.3rem;
-            padding: 1rem;
-            border-radius: 0 0 12px 12px;
-            border-bottom: 1px solid var(--border) !important;
-        }
         .main-content { flex: 1; min-width: 0; }
 
         .range-wrap { display: flex; flex-direction: column; gap: 0.4rem; }
@@ -1388,6 +1375,19 @@ function fmtKr(v){var n=Number(v)||0;return Math.abs(n-Math.round(n))<0.005?Math
 <link rel="stylesheet" href="/theme.css">
 </head>
 <body>
+<script>
+    (function () {
+        const p = new URLSearchParams(location.search);
+        let active = ['q','filter','butik','type','pmin','pmax','amin','amax'].some(k => p.has(k));
+        try {
+            const saved = JSON.parse(localStorage.getItem('bs_prefs') || '{}');
+            active = active || !!((saved.flags || []).length || (saved.types || []).length || (saved.shops || []).length || (saved.abvMin || 0) > 0);
+        } catch (_) {}
+        if (active) {
+            document.body.classList.add('has-active-query');
+        }
+    })();
+</script>
 <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><defs>
 <symbol id="i-flame" viewBox="0 0 24 24"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"/></symbol>
 <symbol id="i-heart" viewBox="0 0 24 24"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></symbol>
@@ -1475,19 +1475,19 @@ function fmtKr(v){var n=Number(v)||0;return Math.abs(n-Math.round(n))<0.005?Math
 <!-- TOP DEALS CAROUSEL -->
 <div class="top-deals-section" id="top-deals-section" role="region" aria-label="Bedste tilbud lige nu">
     <div class="top-deals-header">
-        <span class="top-deals-title"><svg class="ic" aria-hidden="true"><use href="#i-flame"/></svg>Bedste tilbud lige nu</span>
-        <a class="top-deals-see-all" href="#tilbud" role="button" onclick="quickCat('deals');return false;">Se alle tilbud →</a>
+        <span class="top-deals-title"><svg class="ic" aria-hidden="true"><use href="#i-flame"/></svg>Dagens fund</span>
+        <a class="top-deals-see-all" href="#tilbud" role="button" onclick="quickCat('deals');return false;">Flere tilbud →</a>
     </div>
-    <div class="top-deals-scroll" id="top-deals-scroll"><article class="top-card" data-href="/ol/call-the-style-police-india-black-lager-fra/"><a href="/ol/call-the-style-police-india-black-lager-fra/" aria-label="Se Call the Style Police - India Black Lager fra Baxbier"><img class="top-card-img" src="https://cdn-main.ideal.shop/images/by_hash/fa06d0bbeee7bba6b88c7d779f2a8f32b937850661c2efb565fc8d44bd9ca2fe/500-0/callthestylepolice.jpg" alt="Call the Style Police - India Black Lager fra Baxbier" loading="lazy"></a><div class="top-card-body"><div class="top-card-shop">Beer Me</div><a class="top-card-name" href="/ol/call-the-style-police-india-black-lager-fra/">Call the Style Police - India Black Lager fra Baxbier</a><div class="top-card-price">17,5 kr</div><span class="top-card-pct">−68 %</span></div></article>
-<article class="top-card" data-href="/ol/stangen-lager-lager/"><a href="/ol/stangen-lager-lager/" aria-label="Se Stangen - Lager - 5,4% Lager"><img class="top-card-img" src="https://cdn.shopify.com/s/files/1/0402/1239/8243/files/Stangen_Lager.png?v=1741079116" alt="Stangen - Lager - 5,4% Lager" loading="lazy"></a><div class="top-card-body"><div class="top-card-shop">A Good Case</div><a class="top-card-name" href="/ol/stangen-lager-lager/">Stangen - Lager - 5,4% Lager</a><div class="top-card-price">15,62 kr</div><span class="top-card-pct">−55 %</span></div></article>
-<article class="top-card" data-href="/ol/mont-blanc-la-verte-2/"><a href="/ol/mont-blanc-la-verte-2/" aria-label="Se Mont Blanc La Verte 33 cl."><img class="top-card-img" src="https://www.vildmedvin.dk/img/1000/1000/resize/m/o/mont_blanc_la_verte_33_cl.jpg" alt="Mont Blanc La Verte 33 cl." loading="lazy"></a><div class="top-card-body"><div class="top-card-shop">Vild med Vin</div><a class="top-card-name" href="/ol/mont-blanc-la-verte-2/">Mont Blanc La Verte 33 cl.</a><div class="top-card-price">16 kr</div><span class="top-card-pct">−52 %</span></div></article>
-<article class="top-card" data-href="/ol/pause-salikatt-alkoholfri/"><a href="/ol/pause-salikatt-alkoholfri/" aria-label="Se PAUSE - Salikatt - Alkoholfri - 33 cl. 0,5%"><img class="top-card-img" src="https://cdn.shopify.com/s/files/1/0600/9438/2263/files/rn-image_picker_lib_temp_daaef894-2527-4255-a2a0-418d45df9a17.jpg?v=1784117046" alt="PAUSE - Salikatt - Alkoholfri - 33 cl. 0,5%" loading="lazy"></a><div class="top-card-body"><div class="top-card-shop">Øltanken</div><a class="top-card-name" href="/ol/pause-salikatt-alkoholfri/">PAUSE - Salikatt - Alkoholfri - 33 cl. 0,5%</a><div class="top-card-price">19 kr</div><span class="top-card-pct">−51 %</span></div></article>
-<article class="top-card" data-href="/ol/de-halve-maan-sportzot-alkoholfri/"><a href="/ol/de-halve-maan-sportzot-alkoholfri/" aria-label="Se Sportzot Alkoholfri"><img class="top-card-img" src="https://www.vildmedvin.dk/img/1000/1000/resize/s/p/sportzot.jpg" alt="Sportzot Alkoholfri" loading="lazy"></a><div class="top-card-body"><div class="top-card-shop">Vild med Vin</div><a class="top-card-name" href="/ol/de-halve-maan-sportzot-alkoholfri/">Sportzot Alkoholfri</a><div class="top-card-price">19 kr</div><span class="top-card-pct">−51 %</span></div></article>
-<article class="top-card" data-href="/ol/hr-skov-sommer-frisk-oel/"><a href="/ol/hr-skov-sommer-frisk-oel/" aria-label="Se Hr. Skov, Sommer frisk øl"><img class="top-card-img" src="https://www.vildmedvin.dk/img/1000/1000/resize/s/o/sommer-frisk_hr_skov.jpg" alt="Hr. Skov, Sommer frisk øl" loading="lazy"></a><div class="top-card-body"><div class="top-card-shop">Vild med Vin</div><a class="top-card-name" href="/ol/hr-skov-sommer-frisk-oel/">Hr. Skov, Sommer frisk øl</a><div class="top-card-price">26,5 kr</div><span class="top-card-pct">−51 %</span></div></article>
-<article class="top-card" data-href="/ol/omnipollo-nebuchadnezzar/"><a href="/ol/omnipollo-nebuchadnezzar/" aria-label="Se Omnipollo - Nebuchadnezzar 0,5%"><img class="top-card-img" src="https://cdn.shopify.com/s/files/1/0776/5209/9400/files/9359B31B-2C55-4BF9-99EC-08E94A3B7999.jpg?v=1787655841" alt="Omnipollo - Nebuchadnezzar 0,5%" loading="lazy"></a><div class="top-card-body"><div class="top-card-shop">Øltanken</div><a class="top-card-name" href="/ol/omnipollo-nebuchadnezzar/">Omnipollo - Nebuchadnezzar 0,5%</a><div class="top-card-price">20 kr</div><span class="top-card-pct">−50 %</span></div></article>
-<article class="top-card" data-href="/ol/brasserie-minne-ardenne-wood-bee-gees-bourbon-barrels/"><a href="/ol/brasserie-minne-ardenne-wood-bee-gees-bourbon-barrels/" aria-label="Se Ardenne Wood Bee Gees Bourbon Barrels 2023 10% 33cl"><img class="top-card-img" src="https://cdn.shopify.com/s/files/1/0509/8477/9975/files/ardenne-wood-bee-gees-bourbon-barrels-2023-10-33cl.png?v=1705508213" alt="Ardenne Wood Bee Gees Bourbon Barrels 2023 10% 33cl" loading="lazy"></a><div class="top-card-body"><div class="top-card-shop">Brygshoppen</div><a class="top-card-name" href="/ol/brasserie-minne-ardenne-wood-bee-gees-bourbon-barrels/">Ardenne Wood Bee Gees Bourbon Barrels 2023 10% 33cl</a><div class="top-card-price">35 kr</div><span class="top-card-pct">−48 %</span></div></article>
-<article class="top-card" data-href="/ol/insight-cellars-existence-pinot-noir-lambic/"><a href="/ol/insight-cellars-existence-pinot-noir-lambic/" aria-label="Se Insight Cellars - Existence: Pinot Noir - 8,8% Lambic"><img class="top-card-img" src="https://cdn.shopify.com/s/files/1/0402/1239/8243/files/Insight_Existence.png?v=1733786901" alt="Insight Cellars - Existence: Pinot Noir - 8,8% Lambic" loading="lazy"></a><div class="top-card-body"><div class="top-card-shop">A Good Case</div><a class="top-card-name" href="/ol/insight-cellars-existence-pinot-noir-lambic/">Insight Cellars - Existence: Pinot Noir - 8,8% Lambic</a><div class="top-card-price">195 kr</div><span class="top-card-pct">−47 %</span></div></article>
-<article class="top-card" data-href="/ol/sudden-death-brewing-co-lubi-libre/"><a href="/ol/sudden-death-brewing-co-lubi-libre/" aria-label="Se Sudden Death Brewing Co. – Lübi Libre 0,5%"><img class="top-card-img" src="https://cdn.shopify.com/s/files/1/0776/5209/9400/files/CB3E28E3-3BD3-4A5F-B47D-DB6303AE806C.jpg?v=1788385282" alt="Sudden Death Brewing Co. – Lübi Libre 0,5%" loading="lazy"></a><div class="top-card-body"><div class="top-card-shop">Øltanken</div><a class="top-card-name" href="/ol/sudden-death-brewing-co-lubi-libre/">Sudden Death Brewing Co. – Lübi Libre 0,5%</a><div class="top-card-price">25 kr</div><span class="top-card-pct">−46 %</span></div></article></div>
+    <div class="top-deals-scroll" id="top-deals-scroll"><article class="top-card" data-href="/ol/call-the-style-police-india-black-lager-fra/"><a href="/ol/call-the-style-police-india-black-lager-fra/" aria-label="Se Call the Style Police - India Black Lager fra Baxbier"><img class="top-card-img" src="https://cdn-main.ideal.shop/images/by_hash/fa06d0bbeee7bba6b88c7d779f2a8f32b937850661c2efb565fc8d44bd9ca2fe/500-0/callthestylepolice.jpg" alt="Call the Style Police - India Black Lager fra Baxbier" loading="lazy"></a><div class="top-card-body"><div class="top-card-shop">Beer Me</div><a class="top-card-name" href="/ol/call-the-style-police-india-black-lager-fra/">Call the Style Police - India Black Lager fra Baxbier</a><div class="top-card-prices"><span class="top-card-price">17,50 kr</span><span class="top-card-old">55 kr</span></div><span class="top-card-pct">−68 %</span><a class="top-card-link" href="https://www.partner-ads.com/dk/klikbanner.php?bannerid=74625&amp;partnerid=56605&amp;htmlurl=https://www.beer-me.dk/vare/call-the-style-police-india-black-lager-fra-baxbier" target="_blank" rel="sponsored noopener">Køb →</a></div></article>
+<article class="top-card" data-href="/ol/stangen-lager-lager/"><a href="/ol/stangen-lager-lager/" aria-label="Se Stangen - Lager - 5,4% Lager"><img class="top-card-img" src="https://cdn.shopify.com/s/files/1/0402/1239/8243/files/Stangen_Lager.png?v=1741079116" alt="Stangen - Lager - 5,4% Lager" loading="lazy"></a><div class="top-card-body"><div class="top-card-shop">A Good Case</div><a class="top-card-name" href="/ol/stangen-lager-lager/">Stangen - Lager - 5,4% Lager</a><div class="top-card-prices"><span class="top-card-price">15,62 kr</span><span class="top-card-old">35 kr</span></div><span class="top-card-pct">−55 %</span><a class="top-card-link" href="https://agoodcase.dk/products/stangen-lager-5-4-lager-24-stk" target="_blank" rel="sponsored noopener">Køb →</a></div></article>
+<article class="top-card" data-href="/ol/mont-blanc-la-verte-2/"><a href="/ol/mont-blanc-la-verte-2/" aria-label="Se Mont Blanc La Verte 33 cl."><img class="top-card-img" src="https://www.vildmedvin.dk/img/1000/1000/resize/m/o/mont_blanc_la_verte_33_cl.jpg" alt="Mont Blanc La Verte 33 cl." loading="lazy"></a><div class="top-card-body"><div class="top-card-shop">Vild med Vin</div><a class="top-card-name" href="/ol/mont-blanc-la-verte-2/">Mont Blanc La Verte 33 cl.</a><div class="top-card-prices"><span class="top-card-price">16 kr</span><span class="top-card-old">33 kr</span></div><span class="top-card-pct">−52 %</span><a class="top-card-link" href="https://www.vildmedvin.dk/mont-blanc-la-verte-33-cl" target="_blank" rel="sponsored noopener">Køb →</a></div></article>
+<article class="top-card" data-href="/ol/pause-salikatt-alkoholfri/"><a href="/ol/pause-salikatt-alkoholfri/" aria-label="Se PAUSE - Salikatt - Alkoholfri - 33 cl. 0,5%"><img class="top-card-img" src="https://cdn.shopify.com/s/files/1/0600/9438/2263/files/rn-image_picker_lib_temp_daaef894-2527-4255-a2a0-418d45df9a17.jpg?v=1784117046" alt="PAUSE - Salikatt - Alkoholfri - 33 cl. 0,5%" loading="lazy"></a><div class="top-card-body"><div class="top-card-shop">Øltanken</div><a class="top-card-name" href="/ol/pause-salikatt-alkoholfri/">PAUSE - Salikatt - Alkoholfri - 33 cl. 0,5%</a><div class="top-card-prices"><span class="top-card-price">19 kr</span><span class="top-card-old">39 kr</span></div><span class="top-card-pct">−51 %</span><a class="top-card-link" href="https://oltanken.dk/products/salikatt-pause-0-5" target="_blank" rel="sponsored noopener">Køb →</a></div></article>
+<article class="top-card" data-href="/ol/de-halve-maan-sportzot-alkoholfri/"><a href="/ol/de-halve-maan-sportzot-alkoholfri/" aria-label="Se Sportzot Alkoholfri"><img class="top-card-img" src="https://www.vildmedvin.dk/img/1000/1000/resize/s/p/sportzot.jpg" alt="Sportzot Alkoholfri" loading="lazy"></a><div class="top-card-body"><div class="top-card-shop">Vild med Vin</div><a class="top-card-name" href="/ol/de-halve-maan-sportzot-alkoholfri/">Sportzot Alkoholfri</a><div class="top-card-prices"><span class="top-card-price">19 kr</span><span class="top-card-old">39 kr</span></div><span class="top-card-pct">−51 %</span><a class="top-card-link" href="https://www.vildmedvin.dk/sportzot-alkoholfri" target="_blank" rel="sponsored noopener">Køb →</a></div></article>
+<article class="top-card" data-href="/ol/hr-skov-sommer-frisk-oel/"><a href="/ol/hr-skov-sommer-frisk-oel/" aria-label="Se Hr. Skov, Sommer frisk øl"><img class="top-card-img" src="https://www.vildmedvin.dk/img/1000/1000/resize/s/o/sommer-frisk_hr_skov.jpg" alt="Hr. Skov, Sommer frisk øl" loading="lazy"></a><div class="top-card-body"><div class="top-card-shop">Vild med Vin</div><a class="top-card-name" href="/ol/hr-skov-sommer-frisk-oel/">Hr. Skov, Sommer frisk øl</a><div class="top-card-prices"><span class="top-card-price">26,50 kr</span><span class="top-card-old">54 kr</span></div><span class="top-card-pct">−51 %</span><a class="top-card-link" href="https://www.vildmedvin.dk/hr-skov-sommer-frisk-ol" target="_blank" rel="sponsored noopener">Køb →</a></div></article>
+<article class="top-card" data-href="/ol/omnipollo-nebuchadnezzar/"><a href="/ol/omnipollo-nebuchadnezzar/" aria-label="Se Omnipollo - Nebuchadnezzar 0,5%"><img class="top-card-img" src="https://cdn.shopify.com/s/files/1/0776/5209/9400/files/9359B31B-2C55-4BF9-99EC-08E94A3B7999.jpg?v=1787655841" alt="Omnipollo - Nebuchadnezzar 0,5%" loading="lazy"></a><div class="top-card-body"><div class="top-card-shop">Øltanken</div><a class="top-card-name" href="/ol/omnipollo-nebuchadnezzar/">Omnipollo - Nebuchadnezzar 0,5%</a><div class="top-card-prices"><span class="top-card-price">20 kr</span><span class="top-card-old">40 kr</span></div><span class="top-card-pct">−50 %</span><a class="top-card-link" href="https://oltanken.dk/products/omnipollo-nebuchadnezzar-0-5" target="_blank" rel="sponsored noopener">Køb →</a></div></article>
+<article class="top-card" data-href="/ol/brasserie-minne-ardenne-wood-bee-gees-bourbon-barrels/"><a href="/ol/brasserie-minne-ardenne-wood-bee-gees-bourbon-barrels/" aria-label="Se Ardenne Wood Bee Gees Bourbon Barrels 2023 10% 33cl"><img class="top-card-img" src="https://cdn.shopify.com/s/files/1/0509/8477/9975/files/ardenne-wood-bee-gees-bourbon-barrels-2023-10-33cl.png?v=1705508213" alt="Ardenne Wood Bee Gees Bourbon Barrels 2023 10% 33cl" loading="lazy"></a><div class="top-card-body"><div class="top-card-shop">Brygshoppen</div><a class="top-card-name" href="/ol/brasserie-minne-ardenne-wood-bee-gees-bourbon-barrels/">Ardenne Wood Bee Gees Bourbon Barrels 2023 10% 33cl</a><div class="top-card-prices"><span class="top-card-price">35 kr</span><span class="top-card-old">67 kr</span></div><span class="top-card-pct">−48 %</span><a class="top-card-link" href="https://brygshoppen.dk/products/ardenne-wood-bee-gees-calvados-barrels-2023-10-33cl" target="_blank" rel="sponsored noopener">Køb →</a></div></article>
+<article class="top-card" data-href="/ol/insight-cellars-existence-pinot-noir-lambic/"><a href="/ol/insight-cellars-existence-pinot-noir-lambic/" aria-label="Se Insight Cellars - Existence: Pinot Noir - 8,8% Lambic"><img class="top-card-img" src="https://cdn.shopify.com/s/files/1/0402/1239/8243/files/Insight_Existence.png?v=1733786901" alt="Insight Cellars - Existence: Pinot Noir - 8,8% Lambic" loading="lazy"></a><div class="top-card-body"><div class="top-card-shop">A Good Case</div><a class="top-card-name" href="/ol/insight-cellars-existence-pinot-noir-lambic/">Insight Cellars - Existence: Pinot Noir - 8,8% Lambic</a><div class="top-card-prices"><span class="top-card-price">195 kr</span><span class="top-card-old">365 kr</span></div><span class="top-card-pct">−47 %</span><a class="top-card-link" href="https://agoodcase.dk/products/insight-cellars-existence-pinot-noir-7-lambic" target="_blank" rel="sponsored noopener">Køb →</a></div></article>
+<article class="top-card" data-href="/ol/sudden-death-brewing-co-lubi-libre/"><a href="/ol/sudden-death-brewing-co-lubi-libre/" aria-label="Se Sudden Death Brewing Co. – Lübi Libre 0,5%"><img class="top-card-img" src="https://cdn.shopify.com/s/files/1/0776/5209/9400/files/CB3E28E3-3BD3-4A5F-B47D-DB6303AE806C.jpg?v=1788385282" alt="Sudden Death Brewing Co. – Lübi Libre 0,5%" loading="lazy"></a><div class="top-card-body"><div class="top-card-shop">Øltanken</div><a class="top-card-name" href="/ol/sudden-death-brewing-co-lubi-libre/">Sudden Death Brewing Co. – Lübi Libre 0,5%</a><div class="top-card-prices"><span class="top-card-price">25 kr</span><span class="top-card-old">46 kr</span></div><span class="top-card-pct">−46 %</span><a class="top-card-link" href="https://oltanken.dk/products/sudden-death-brewing-co-lubi-libre-0-5" target="_blank" rel="sponsored noopener">Køb →</a></div></article></div>
 </div>
 
 <!-- MOBILE FILTER TOGGLE -->
@@ -1506,14 +1506,6 @@ function fmtKr(v){var n=Number(v)||0;return Math.abs(n-Math.round(n))<0.005?Math
         <div class="sidebar-mobile-header">
             <span style="font-family:'Bebas Neue',sans-serif;font-size:1.2rem;letter-spacing:0.1em;color:var(--gold)">FILTRE</span>
             <button class="sidebar-mobile-close" id="mobile-filter-close" aria-label="Luk filtre">✕</button>
-        </div>
-
-        <div class="sidebar-section sidebar-active-filters" id="sidebar-active-filters" style="display:none">
-            <div class="sidebar-title">
-                <span><svg class="ic" aria-hidden="true"><use href="#i-funnel"/></svg> Aktive filtre</span>
-                <button class="sidebar-clear-link" id="sidebar-clear-all">Ryd alle</button>
-            </div>
-            <div class="sidebar-chips" id="sidebar-chips"></div>
         </div>
 
         <div class="sidebar-section">
@@ -1590,7 +1582,7 @@ function fmtKr(v){var n=Number(v)||0;return Math.abs(n-Math.round(n))<0.005?Math
     <div class="main-content">
         <div class="active-filters" id="active-filters" aria-live="polite"></div>
         <div class="grid-wrap">
-            <div id="loading" role="status" style="display:none" style="display:none" style="display:none" style="display:none"><span class="sr-only">Henter øl...</span><div class="skeleton-grid" aria-hidden="true"><div class="skeleton-card"><div class="sk-img"></div><div class="sk-line"></div><div class="sk-line short"></div><div class="sk-line price"></div></div><div class="skeleton-card"><div class="sk-img"></div><div class="sk-line"></div><div class="sk-line short"></div><div class="sk-line price"></div></div><div class="skeleton-card"><div class="sk-img"></div><div class="sk-line"></div><div class="sk-line short"></div><div class="sk-line price"></div></div><div class="skeleton-card"><div class="sk-img"></div><div class="sk-line"></div><div class="sk-line short"></div><div class="sk-line price"></div></div><div class="skeleton-card"><div class="sk-img"></div><div class="sk-line"></div><div class="sk-line short"></div><div class="sk-line price"></div></div><div class="skeleton-card"><div class="sk-img"></div><div class="sk-line"></div><div class="sk-line short"></div><div class="sk-line price"></div></div><div class="skeleton-card"><div class="sk-img"></div><div class="sk-line"></div><div class="sk-line short"></div><div class="sk-line price"></div></div><div class="skeleton-card"><div class="sk-img"></div><div class="sk-line"></div><div class="sk-line short"></div><div class="sk-line price"></div></div></div></div>
+            <div id="loading" role="status" style="display:none" style="display:none" style="display:none" style="display:none" style="display:none" style="display:none"><span class="sr-only">Henter øl...</span><div class="skeleton-grid" aria-hidden="true"><div class="skeleton-card"><div class="sk-img"></div><div class="sk-line"></div><div class="sk-line short"></div><div class="sk-line price"></div></div><div class="skeleton-card"><div class="sk-img"></div><div class="sk-line"></div><div class="sk-line short"></div><div class="sk-line price"></div></div><div class="skeleton-card"><div class="sk-img"></div><div class="sk-line"></div><div class="sk-line short"></div><div class="sk-line price"></div></div><div class="skeleton-card"><div class="sk-img"></div><div class="sk-line"></div><div class="sk-line short"></div><div class="sk-line price"></div></div><div class="skeleton-card"><div class="sk-img"></div><div class="sk-line"></div><div class="sk-line short"></div><div class="sk-line price"></div></div><div class="skeleton-card"><div class="sk-img"></div><div class="sk-line"></div><div class="sk-line short"></div><div class="sk-line price"></div></div><div class="skeleton-card"><div class="sk-img"></div><div class="sk-line"></div><div class="sk-line short"></div><div class="sk-line price"></div></div><div class="skeleton-card"><div class="sk-img"></div><div class="sk-line"></div><div class="sk-line short"></div><div class="sk-line price"></div></div></div></div>
             <p class="result-count" id="result-count" aria-live="polite">3.327 øl i prissammenligningen</p>
             <div class="grid" id="grid" role="list"><article class="static-beer"><a href="/ol/hancock-black-lager/">Hancock, Black Lager</a><span>Fra 9 kr</span></article><article class="static-beer"><a href="/ol/hancock-hvidtoel/">Hancock, Hvidtøl 33 cl.</a><span>Fra 9 kr</span></article><article class="static-beer"><a href="/ol/hancock-hoekerbajer/">Hancock, Høkerbajer</a><span>Fra 11 kr</span></article><article class="static-beer"><a href="/ol/hancock-150-aars-jubilaeums-oel/">Hancock 150-års jubilæums Øl</a><span>Fra 11 kr</span></article><article class="static-beer"><a href="/ol/hancock-merry-christmas-2/">Hancock, Merry Christmas 33 cl.</a><span>Fra 11 kr</span></article><article class="static-beer"><a href="/ol/150-aars-jubilaeum-hancock/">150 års jubilæum - Hancock - 33 cl. - 5,0%</a><span>Fra 12 kr</span></article><article class="static-beer"><a href="/ol/hancock-bryggerierne-black-lager-15/">Black Lager</a><span>Fra 12 kr</span></article><article class="static-beer"><a href="/ol/tyskie-gronie-lager-24-stk-2/">Tyskie Gronie – 5,2% Lager (24 stk.)</a><span>Fra 12,46 kr</span></article><article class="static-beer"><a href="/ol/lech-premium-lager-24-stk-2/">Lech Premium – 5% Lager (24 stk.)</a><span>Fra 12,46 kr</span></article><article class="static-beer"><a href="/ol/thisted-bryghus-oeko-thy-pilsner/">Thisted Bryghus, ØKO Thy Pilsner 33 cl.</a><span>Fra 14 kr</span></article><article class="static-beer"><a href="/ol/hancock-oekologisk-pilsner/">Hancock Økologisk pilsner 33 cl.</a><span>Fra 14 kr</span></article><article class="static-beer"><a href="/ol/hancock-beer-2/">Hancock Beer 33 cl.</a><span>Fra 14 kr</span></article><article class="static-beer"><a href="/ol/hancock-old-gambrinus-light/">Hancock, Old Gambrinus Light</a><span>Fra 15 kr</span></article><article class="static-beer"><a href="/ol/skovlyst-hindbaer-blanche/">Skovlyst, Hindbær Blanche</a><span>Fra 15 kr</span></article><article class="static-beer"><a href="/ol/budvar-0-0-alkoholfri/">Budvar 0,0 Alkoholfri</a><span>Fra 15 kr</span></article><article class="static-beer"><a href="/ol/olympic-mythos-0-0-alkoholfri-lager/">Olympic - Mythos 0,0 - 0,0% Alkoholfri Lager</a><span>Fra 15,75 kr</span></article><article class="static-beer"><a href="/ol/hancock-bryggerierne-old-gambrinus-dark-bock/">Old Gambrinus Dark - Bock</a><span>Fra 16 kr</span></article><article class="static-beer"><a href="/ol/kozel-premium-lager-bohemian-lager/">Kozel - Premium Lager - 4,6% Bohemian Lager</a><span>Fra 16,62 kr</span></article><article class="static-beer"><a href="/ol/kozel-dark-dark-lager/">Kozel - Dark - 3,8% Dark Lager</a><span>Fra 16,62 kr</span></article><article class="static-beer"><a href="/ol/lemon-clausthaler-alkoholfri/">LEMON - Clausthaler - alkoholfri - 50 cl- 0,5%</a><span>Fra 17 kr</span></article></div>
             <div style="text-align:center;margin:1.5rem 0;">
@@ -2432,14 +2424,11 @@ function fmtKr(v){var n=Number(v)||0;return Math.abs(n-Math.round(n))<0.005?Math
     // Active filter chips
     function renderActiveFilters() {
         const container = document.getElementById('active-filters');
-        const sidebarChips = document.getElementById('sidebar-chips');
-        const sidebarSection = document.getElementById('sidebar-active-filters');
-        const chips = [], sc = [];
+        const chips = [];
         const flagMeta = { 'deals':['flame','Tilbud'], 'favs':['heart','Favoritter'], 'alcohol-free':['ban','Alkoholfri'], 'smagekasse':['package','Smagekasser'], 'in-stock':['check','På lager'] };
         const addChip = (label, type, value, ic) => {
             const l = escapeHtml(label), v = escapeHtml(value || ''), i = ic ? icon(ic) : '';
             chips.push(`<span class="filter-chip">${i}${l}<span class="x" role="button" tabindex="0" aria-label="Fjern filter: ${l}" data-clear="${type}" data-value="${v}">${icon('x')}</span></span>`);
-            sc.push(`<span class="sidebar-chip" role="button" tabindex="0" aria-label="Fjern filter: ${l}" data-clear="${type}" data-value="${v}">${i}${l}<span class="x" aria-hidden="true">${icon('x')}</span></span>`);
         };
         activeFlags.forEach(f => { const m = flagMeta[f] || ['', f]; addChip(m[1], 'flag', f, m[0]); });
         selectedShops.forEach(shop => addChip(shop, 'shop', shop, 'store'));
@@ -2450,8 +2439,9 @@ function fmtKr(v){var n=Number(v)||0;return Math.abs(n-Math.round(n))<0.005?Math
         if (priceMin>0||priceMax<pm) addChip(`${Math.round(priceMin)}–${Math.round(priceMax)} kr`, 'price', '', 'banknote');
         if (abvMin>0||abvMax<abvLimit) addChip(`${abvMin.toFixed(1)}–${abvMax.toFixed(1)}%`, 'abv', '', 'percent');
         container.innerHTML = chips.length ? '<span class="active-filters-label">Aktive filtre:</span>'+chips.join('') : '';
-        if (sc.length) { sidebarSection.style.display='block'; sidebarChips.innerHTML=sc.join(''); }
-        else { sidebarSection.style.display='none'; sidebarChips.innerHTML=''; }
+        document.body.classList.toggle('has-active-query', chips.length > 0);
+        const offers = document.getElementById('top-deals-section');
+        offers.style.display = chips.length || !document.getElementById('top-deals-scroll').children.length ? 'none' : 'block';
         const mc = document.getElementById('mobile-filter-count');
         if (mc) { if (chips.length) { mc.style.display='inline-block'; mc.textContent=chips.length; } else mc.style.display='none'; }
     }
@@ -2547,8 +2537,8 @@ function fmtKr(v){var n=Number(v)||0;return Math.abs(n-Math.round(n))<0.005?Math
             detectFavDrops();
             const stats = raw.stats||{};
 
-            document.getElementById('stat-total').textContent = stats.total||allBeers.length;
-            document.getElementById('stat-deals').textContent = stats.deals||allBeers.filter(b=>b.max_discount_pct>0).length;
+            document.getElementById('stat-total').textContent = (stats.total||allBeers.length).toLocaleString('da-DK');
+            document.getElementById('stat-deals').textContent = (stats.deals||allBeers.filter(b=>b.max_discount_pct>0).length).toLocaleString('da-DK');
             const maxDiscount = Math.max(...allBeers.map(b=>b.max_discount_pct||0),0);
             document.getElementById('stat-max-discount').textContent = maxDiscount>0?'−'+Math.round(maxDiscount)+' %':'–';
             document.getElementById('stat-cheapest').textContent = fmtKr(stats.cheapest||Math.min(...allBeers.filter(b=>b.min_price).map(b=>b.min_price))) + ' kr';
@@ -2652,7 +2642,6 @@ function fmtKr(v){var n=Number(v)||0;return Math.abs(n-Math.round(n))<0.005?Math
         document.getElementById('mobile-backdrop').addEventListener('click', closeSidebar);
 
         document.getElementById('reset-btn').addEventListener('click', resetAllFilters);
-        document.getElementById('sidebar-clear-all').addEventListener('click', resetAllFilters);
 
         let searchTimer;
         document.getElementById('search').addEventListener('input', function() {
