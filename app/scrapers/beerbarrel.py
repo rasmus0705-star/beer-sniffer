@@ -342,7 +342,10 @@ def scrape_beerbarrel():
         _cache_save(cache)
     print(f'  [BeerBarrel] {len(results)} øl ({fetched} produktsider hentet, {len(failed)} fejlede)')
     for u, why in failed[:10]:
-        print(f'    FEJL {why}: {u}')
+        if why == 'ingen fakta i HTML':
+            print(f'    ⚠️ ADVARSEL {why}; varen beholdes uden ekstra fakta: {u}')
+        else:
+            print(f'    FEJL {why}: {u}')
     return results
 
 

@@ -204,7 +204,7 @@ def ingest_batch(db: Session, items: list[dict]):
 
         last_price = latest_hist.get((beer.id, item["shop_name"]))
 
-        if last_price is None or last_price != item["price"]:
+        if not item.get("_stale_cache") and (last_price is None or last_price != item["price"]):
             new_histories.append(PriceHistory(
                 beer_id=beer.id,
                 price_dkk=item["price"],
@@ -222,9 +222,12 @@ def ingest_batch(db: Session, items: list[dict]):
     db.add_all(new_prices)
     db.add_all(new_histories)
 
+    stale_shops = {it.get("shop_name") for it in items if it.get("_stale_cache")}
     alerts = db.query(PriceAlert).filter(PriceAlert.active == True).all()
     for alert in alerts:
         for price in new_prices:
+            if price.shop_name in stale_shops:
+                continue
             if price.beer_id == alert.beer_id and price.price_dkk <= alert.target_price:
                 print(f"🔥 ALERT: beer_id {alert.beer_id} now {price.price_dkk} kr")
                 alert.active = False

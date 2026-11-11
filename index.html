@@ -835,6 +835,8 @@
         .price-row:hover { border-color: var(--gold-dim); }
         .price-row-cheapest { border: 2px solid var(--gold); background: linear-gradient(135deg, rgba(200,146,14,0.12), rgba(212,98,10,0.05)); }
         .price-row-cheapest.has-discount { border-color: #3dba6f; background: linear-gradient(135deg, rgba(61,186,111,0.15), rgba(200,146,14,0.05)); }
+        .price-row-stale { border-style: dashed; }
+        .price-row-stale-note { color: #d8c79f; font-size: 0.68rem; white-space: nowrap; }
         .price-row-header { display: flex; justify-content: space-between; align-items: center; gap: 0.4rem; min-width: 0; }
         .price-row-shop {
             font-size: 0.62rem;
@@ -2024,13 +2026,15 @@ function fmtKr(v){var n=Number(v)||0;return Math.abs(n-Math.round(n))<0.005?Math
             shop_name: p.shop_name || p.shop || '',
             price: p.price_dkk || p.price || 0,
             url: p.url || '',
-            discount_pct: p.discount_pct || 0,
-            old_price: p.old_price || null,
+            stale: p.stale === true,
+            fetched_at: p.fetched_at || null,
+            discount_pct: p.stale ? 0 : (p.discount_pct || 0),
+            old_price: p.stale ? null : (p.old_price || null),
             available: toBool(p.available ?? p.in_stock),
         })).filter(p => {
             const k = p.shop_name + '|' + p.price;
             if (seen.has(k)) return false; seen.add(k); return true;
-        }).sort((a, c) => ((a.available === false) - (c.available === false)) || (a.price - c.price));
+        }).sort((a, c) => ((a.available === false) - (c.available === false)) || (a.stale - c.stale) || (a.price - c.price));
         const anyOos = prices.some(p => p.available === false);
         const min_price = (anyOos && prices[0]) ? prices[0].price : (b.cheapest_price || b.min_price || (prices[0] ? prices[0].price : 0));
         const live = prices.filter(p => p.available !== false);
@@ -2181,11 +2185,13 @@ function fmtKr(v){var n=Number(v)||0;return Math.abs(n-Math.round(n))<0.005?Math
         const nameH = escapeHtml(b.name), shopH = escapeHtml(p.shop_name);
         const oos = p.available === false;
         const tot = totalWithShipping(p.shop_name, p.price);
-        const cls = 'price-row' + (best ? ' price-row-cheapest' : '') + (best && p.discount_pct ? ' has-discount' : '') + (oos ? ' price-row-oos' : '');
+        const cls = 'price-row' + (best && !p.stale ? ' price-row-cheapest' : '') + (best && p.discount_pct ? ' has-discount' : '') + (oos ? ' price-row-oos' : '') + (p.stale ? ' price-row-stale' : '');
+        const staleDate = p.stale && p.fetched_at ? new Intl.DateTimeFormat('da-DK', { day: 'numeric', month: 'short' }).format(new Date(p.fetched_at)) : '';
         return `<div class="${cls}">
             <div class="price-row-header">
                 <span class="price-row-shop">${shopH}</span>
-                ${best && multi && !oos ? '<span class="best-badge">Billigst</span>' : ''}
+                ${p.stale ? `<span class="price-row-stale-note">Prisdata fra ${staleDate}</span>` : ''}
+                ${best && multi && !oos && !p.stale ? '<span class="best-badge">Billigst</span>' : ''}
                 ${oos ? '<span class="oos-badge">Udsolgt</span>' : ''}
                 ${p.discount_pct ? `<span class="price-row-discount">−${Math.round(p.discount_pct)} %</span>` : ''}
             </div>

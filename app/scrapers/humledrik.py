@@ -190,6 +190,9 @@ def _fetch_list(session):
         url = LIST_URL if p == 0 else f'{LIST_URL}?p={p}'
         try:
             r = session.get(url, headers=HEADERS, timeout=20)
+            if r.status_code == 404:
+                print(f'  [Humledrik] side {p + 1} findes ikke — afslutter pagineringen normalt')
+                break
             r.raise_for_status()
         except requests.RequestException as e:
             print(f'  [Humledrik] fejl på side {p + 1}: {e}')

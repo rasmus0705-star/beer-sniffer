@@ -91,7 +91,7 @@ def get_scrapers():
 
 
 def get_shopify_names():
-    """Returnerer butiksnavne, der deler Shopifys rate limit pr. IP."""
+    """Returnerer butiksnavne med Shopify-scrapers, som køres serielt."""
     return [shop["name"] for shop in discover_shops() if shop["platform"] == "shopify"]
 
 

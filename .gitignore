@@ -15,6 +15,7 @@ _udklip.txt
 # Lokale scraper-caches (vol/abv ændrer sig ikke)
 _pagecache_*.json
 _cache_*.json
+cache/shops/
 
 # Backups - git er backup nok (dækker .bak, .bak2, .bak3, .bak5 ...)
 *.bak*
@@ -29,6 +30,7 @@ diag.py
 diag_*.py
 test_*.py
 !tests/test_local_build_session.py
+!tests/test_shopify_resilience.py
 verify_*.py
 tjek_*.py
 inspect_*.py

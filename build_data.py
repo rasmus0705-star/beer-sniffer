@@ -127,13 +127,17 @@ def udled_bryggeri(items):
 # BEER-VÆRKTØJ: bryggeri-udledning (slut)
 
 
-def run_all_scrapers():
+def run_all_scrapers(*, scrapers_override=None, shopify_names_override=None,
+                     cache_dir=None, sleep_fn=time.sleep, shop_pause=(15, 30)):
     """Kører alle scrapers parallelt. Hver scraper rammer sin egen butik,
     så den enkelte butik belastes ikke mere end før. Resultaterne samles
     i samme rækkefølge som get_scrapers(), så ingest/matching er uændret."""
     from concurrent.futures import ThreadPoolExecutor
+    import random
+    from app.utils.scrape_cache import load_shop_cache, save_shop_cache
+    from app.utils.shopify import ShopifyFejl
 
-    scrapers = get_scrapers()
+    scrapers = scrapers_override if scrapers_override is not None else get_scrapers()
 
     def _koer(name, func):
         t0 = time.time()
@@ -143,18 +147,37 @@ def run_all_scrapers():
         except Exception as e:
             return name, [], e, time.time() - t0
 
-    # Shopify deler rate limit pr. IP på tværs af butikker. Shopify-butikkerne
-    # køres derfor én ad gangen i én fælles tråd; resten kører parallelt.
-    SHOPIFY = set(get_shopify_names())
+    # Shopify-kilderne kører serielt. Ved to side-1 429-fejl i træk åbnes
+    # kredsløbsafbryderen, og resten bruger kun en gyldig cache (højst 72 timer).
+    SHOPIFY = set(shopify_names_override if shopify_names_override is not None else get_shopify_names())
     seriel = [(n, f) for n, f in scrapers if n in SHOPIFY]
     parallel = [(n, f) for n, f in scrapers if n not in SHOPIFY]
 
     def _koer_seriel():
         ud = {}
+        blocked = False
+        consecutive_first_page_429 = 0
         for i, (name, func) in enumerate(seriel):
+            if blocked:
+                ud[name] = (name, [], ShopifyFejl(
+                    "sprunget over efter to Shopify 429-fejl på side 1", status_code=429, page=1
+                ), 0.0)
+                continue
             if i:
-                time.sleep(2)
-            ud[name] = _koer(name, func)
+                wait = random.uniform(*shop_pause)
+                if wait:
+                    print(f"   ⏳ Shopify-pause før {name}: {wait:.0f}s")
+                    sleep_fn(wait)
+            result = _koer(name, func)
+            _name, items, err, _sek = result
+            if err and getattr(err, "status_code", None) == 429 and getattr(err, "page", None) == 1:
+                consecutive_first_page_429 += 1
+                if consecutive_first_page_429 >= 2:
+                    blocked = True
+                    print("   🛑 Shopify-afbryder slået til efter to 429-fejl på første side; springer resterende butikker over.")
+            else:
+                consecutive_first_page_429 = 0
+            ud[name] = result
         return ud
 
     print(f"\n🍺 Kører {len(parallel)} scrapers parallelt + {len(seriel)} Shopify-butikker i rækkefølge...")
@@ -169,18 +192,35 @@ def run_all_scrapers():
 
     all_items = []
     results = {}
+    errors = {}
+    fallback_info = {}
     print(f"\n⏱ Tid pr. scraper:")
     for name, items, err, sek in resultater:
+        if name in SHOPIFY:
+            if not err and items:
+                fetched_at = save_shop_cache(name, items, cache_dir=cache_dir)
+                if fetched_at:
+                    print(f"   💾 {name}: frisk cache gemt ({fetched_at})")
+            else:
+                cached = load_shop_cache(name, cache_dir=cache_dir)
+                if cached:
+                    items, fetched_at = cached
+                    fallback_info[name] = {"fetched_at": fetched_at, "error": str(err or "tomt resultat")}
+                    age_text = datetime.fromisoformat(fetched_at).astimezone().strftime("%d-%m %H:%M")
+                    print(f"   ♻️ {name}: {len(items)} produkter fra cache (hentet {age_text}) — {err or 'tomt resultat'}")
+                    err = None
         if err:
-            results[name] = f"FEJL: {err}"
+            results[name] = 0 if not items else None
+            errors[name] = str(err)
             print(f"   ❌ {name}: {err} ({sek:.1f}s)")
         else:
             all_items.extend(items)
             results[name] = len(items)
-            _ikon = "✅" if items else "⚠️"
-            print(f"   {_ikon} {name}: {len(items)} produkter ({sek:.1f}s)")
+            if name not in fallback_info:
+                _ikon = "✅" if items else "⚠️"
+                print(f"   {_ikon} {name}: {len(items)} produkter ({sek:.1f}s)")
 
-    return all_items, results
+    return all_items, results, fallback_info, errors
 
 
 def build_beer_list_from_db(db):
@@ -579,7 +619,99 @@ def sanitize_item_names(item, strip_kategori=False):
             item[_f] = _v
 
 
+def simulate_shopify_429(names):
+    """Offline dry-run of the Shopify circuit breaker, cache, age gate and guard."""
+    from datetime import datetime, timedelta, timezone
+    from tempfile import TemporaryDirectory
+    from app.utils.scrape_cache import save_shop_cache
+    from app.utils.shopify import ShopifyFejl
+
+    all_scrapers = get_scrapers()
+    shopify_names = get_shopify_names()
+    selected = [name.strip() for name in names.split(",") if name.strip()]
+    unknown = sorted(set(selected) - set(shopify_names))
+    if len(selected) < 2 or unknown:
+        raise ValueError(f"Angiv mindst to kendte Shopify-butikker. Ukendte: {', '.join(unknown) or 'ingen'}")
+
+    # The selected failures run first in this isolated harness, so the dry-run
+    # deterministically tests the two-failure breaker without touching a shop.
+    reordered = [(n, f) for n, f in all_scrapers if n in selected]
+    reordered += [(n, f) for n, f in all_scrapers if n not in selected]
+    fixtures = {name: [{"name": f"Testøl {name}", "price": 25.0, "shop_name": name}]
+                for name, _ in reordered}
+
+    def run_simulation(expired_shop=None):
+        with TemporaryDirectory(prefix="beersniffer-429-") as temp_cache:
+            old = datetime.now(timezone.utc) - timedelta(hours=73)
+            recent = datetime.now(timezone.utc) - timedelta(hours=1)
+            for shop in shopify_names:
+                save_shop_cache(shop, fixtures[shop], cache_dir=temp_cache,
+                                now=old if shop == expired_shop else recent)
+
+            simulated = []
+            for shop, _func in reordered:
+                if shop in shopify_names:
+                    if shop in selected:
+                        def fail(shop=shop):
+                            raise ShopifyFejl(f"SIMULERET HTTP 429 for {shop}", status_code=429, page=1)
+                        simulated.append((shop, fail))
+                    else:
+                        simulated.append((shop, lambda shop=shop: fixtures[shop]))
+                else:
+                    simulated.append((shop, lambda shop=shop: fixtures[shop]))
+            return run_all_scrapers(
+                scrapers_override=simulated,
+                shopify_names_override=shopify_names,
+                cache_dir=temp_cache,
+                sleep_fn=lambda _seconds: None,
+                shop_pause=(0, 0),
+            )
+
+    items, results, fallback, errors = run_simulation()
+    if any(name not in fallback for name in shopify_names):
+        raise AssertionError("Cachefallback/afbryder blev ikke brugt for alle Shopify-butikker")
+    if any(not item.get("_stale_cache") for item in items if item["shop_name"] in shopify_names):
+        raise AssertionError("Fallback-produkter blev ikke markeret som forældede")
+    if errors:
+        raise AssertionError(f"Frisk cache skulle forhindre manglende butikker: {errors}")
+    if _find_fald(results, results):
+        raise AssertionError("Fallback-tællinger udløste fejlagtigt faldtjekket")
+    print("✅ Simulering: to 429-fejl slog afbryderen til; resten blev sprunget over.")
+    print("✅ Simulering: gyldig cache blev indlæst og markeret forældet; faldtjekket accepterede tællingerne.")
+
+    items, results, fallback, errors = run_simulation(expired_shop=shopify_names[-1])
+    if results.get(shopify_names[-1]) != 0 or shopify_names[-1] in fallback:
+        raise AssertionError("Cache ældre end 72 timer skulle tælle som manglende butik")
+    missing = [name for name, count in results.items() if not isinstance(count, int) or count == 0]
+    if shopify_names[-1] not in missing:
+        raise AssertionError("STOP-værnet fangede ikke den udløbne cache")
+    print("✅ Simulering: cache ældre end 72 timer blev afvist og ville stoppe buildet.")
+
+    # A successful offline run also verifies that live results refresh every cache.
+    with TemporaryDirectory(prefix="beersniffer-cache-") as temp_cache:
+        offline_all = [(shop, lambda shop=shop: fixtures[shop]) for shop, _func in reordered]
+        run_all_scrapers(
+            scrapers_override=offline_all,
+            shopify_names_override=shopify_names,
+            cache_dir=temp_cache,
+            sleep_fn=lambda _seconds: None,
+            shop_pause=(0, 0),
+        )
+        from app.utils.scrape_cache import load_shop_cache
+        if any(load_shop_cache(shop, cache_dir=temp_cache) is None for shop in shopify_names):
+            raise AssertionError("En vellykket butikskørsel gemte ikke alle Shopify-cacher")
+    print("✅ Simulering: vellykkede resultater opdaterede alle Shopify-cachefiler.")
+
+
 def main():
+    simulation_arg = next((arg for arg in sys.argv if arg.startswith("--simuler-429=")), None)
+    if simulation_arg is None and "--simuler-429" in sys.argv:
+        index = sys.argv.index("--simuler-429")
+        simulation_arg = sys.argv[index + 1] if index + 1 < len(sys.argv) else ""
+    if simulation_arg is not None:
+        simulate_shopify_429(simulation_arg.split("=", 1)[1] if simulation_arg.startswith("--simuler-429=") else simulation_arg)
+        return
+
     start_time = time.time()
     print("=" * 60)
     print(f"🍺 BeerSniffer — Daglig opdatering")
@@ -587,24 +719,29 @@ def main():
     print("=" * 60)
 
     # 1. Kør alle scrapers
-    items, results = run_all_scrapers()
+    items, results, fallback_info, scrape_errors = run_all_scrapers()
 
     print(f"\n📊 Scraping resultat:")
     for shop, count in results.items():
-        print(f"   {shop}: {count}")
+        if shop in fallback_info:
+            entry = fallback_info[shop]
+            age_text = datetime.fromisoformat(entry["fetched_at"]).astimezone().strftime("%d-%m %H:%M")
+            print(f"   ♻️ {shop}: {count} fra cache hentet {age_text} — {entry['error']}")
+        elif shop in scrape_errors:
+            print(f"   ❌ {shop}: {scrape_errors[shop]}")
+        else:
+            print(f"   {shop}: {count}")
     print(f"   TOTAL: {len(items)} produkter")
 
     if not items:
         print("\n❌ Ingen items hentet — afbryder")
         return
 
-    # Stop FØR ingest/push, hvis en butik mangler — ellers forsvinder dens
-    # priser fra sitet. Overstyr med: python build_data.py --tillad-mangler
+    # Stop før ingest/push hvis en kilde mangler både live data og en frisk cache.
     _mangler = [s for s, c in results.items() if not isinstance(c, int) or c == 0]
-    if _mangler and "--tillad-mangler" not in sys.argv:
+    if _mangler:
         print(f"\n❌ STOP: ingen produkter fra {', '.join(_mangler)}.")
-        print("   Intet er gemt eller pushet. Prøv igen senere (Shopify bremser")
-        print("   typisk kun midlertidigt), eller kør med --tillad-mangler.")
+        print("   Intet er gemt eller pushet. Manglende butikker har ingen gyldig cache under 72 timer.")
         sys.exit(1)
 
     # BEER-VÆRKTØJ: stop før ingest og push, hvis en butik er faldet kraftigt (fx blokeret midt i en hentning)
@@ -661,6 +798,20 @@ def main():
         beer_list = build_beer_list_from_db(db)
         print(f"   ⏱ gruppering: {time.time() - _t:.1f}s")
 
+        # Cached shop prices remain visible but are explicitly marked stale.
+        # Their discount must not be presented as a current offer.
+        for beer in beer_list:
+            fresh_discounts = []
+            for price in beer.get("prices", []):
+                stale = fallback_info.get(price.get("shop_name"))
+                if stale:
+                    price["stale"] = True
+                    price["fetched_at"] = stale["fetched_at"]
+                elif price.get("discount_pct"):
+                    fresh_discounts.append(price["discount_pct"])
+            beer["max_discount_pct"] = max(fresh_discounts, default=0)
+            beer["discount_pct"] = beer["max_discount_pct"]
+
         print(f"\n📈 Bygger prishistorik...")
         _t = time.time()
         build_price_history(db, beer_list)
@@ -704,6 +855,7 @@ def main():
             "shop_names": shop_names,
             "types": types,
             "cheapest": round(cheapest, 0),
+            "stale_shops": sorted(fallback_info),
         },
         "beers": beer_list,
     }
@@ -730,7 +882,7 @@ def main():
         print("   data.json er stadig skrevet korrekt — kør generatorerne manuelt for at se fejlen.")
 
     # 8. Opdater facitliste (bevarer dine rettelser, flagger nye huller)
-    _stats = write_fejlliste(items, _facit, "fejlliste.xlsx")
+    _stats = write_fejlliste([it for it in items if not it.get("_stale_cache")], _facit, "fejlliste.xlsx")
     print(f"\U0001F4DD fejlliste.xlsx opdateret: {_stats['rows']} raekker, {_stats['mangler']} mangler")
 
     # 9. Stempl DATA_VERSION i index.html — så CDN-cachen invalideres
