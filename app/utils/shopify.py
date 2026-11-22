@@ -3,6 +3,7 @@ from datetime import datetime, timezone
 from email.utils import parsedate_to_datetime
 import random
 import time
+import os
 
 import requests
 
@@ -13,6 +14,15 @@ REQUEST_TIMEOUT = 20
 MAX_ATTEMPTS = 2
 MAX_RETRY_AFTER = 120
 FALLBACK_RETRY_AFTER = 30
+DIAGNOSTIC_BODY_LIMIT = 240
+WEB_BOT_AUTH_KEYS = {
+    "A Good Case": "AGOODCASE",
+    "Beermatch": "BEERMATCH",
+    "Beershoppen": "BEERSHOPPEN",
+    "Brygshoppen": "BRYGSHOPPEN",
+    "Drikbeer": "DRIKBEER",
+    "Øltanken": "OELTANKEN",
+}
 
 
 class ShopifyFejl(Exception):
@@ -39,6 +49,47 @@ def _retry_after_seconds(response):
     return FALLBACK_RETRY_AFTER
 
 
+def _response_diagnostics(response):
+    """Return a short, useful summary of a storefront error response."""
+    interesting = ("Retry-After", "Content-Type", "Server", "Powered-By",
+                  "X-Request-Id", "CF-Ray")
+    headers = [f"{name}={response.headers.get(name)}" for name in interesting
+               if response.headers.get(name)]
+    body = " ".join((getattr(response, "text", "") or "").split())
+    if len(body) > DIAGNOSTIC_BODY_LIMIT:
+        body = body[:DIAGNOSTIC_BODY_LIMIT] + "…"
+    parts = []
+    if headers:
+        parts.append("headers: " + ", ".join(headers))
+    if body:
+        parts.append("body: " + body)
+    return "; ".join(parts) or "intet response-body eller diagnostiske headers"
+
+
+def _authorized_headers(shop, headers):
+    """Add optional Shopify-issued Web Bot Auth values from local environment."""
+    result = dict(headers)
+    key = WEB_BOT_AUTH_KEYS.get(shop)
+    if not key:
+        return result
+    prefix = f"BEERSNIFFER_SHOPIFY_{key}"
+    signature_input = os.getenv(f"{prefix}_SIGNATURE_INPUT", "").strip()
+    signature = os.getenv(f"{prefix}_SIGNATURE", "").strip()
+    if not signature_input and not signature:
+        return result
+    if not signature_input or not signature:
+        raise ShopifyFejl(
+            f"{shop}: Web Bot Auth-konfiguration er ufuldstændig; sæt både "
+            f"{prefix}_SIGNATURE_INPUT og {prefix}_SIGNATURE"
+        )
+    result["Signature-Input"] = signature_input
+    result["Signature"] = signature
+    result["Signature-Agent"] = os.getenv(
+        f"{prefix}_SIGNATURE_AGENT", '"https://shopify.com"'
+    ).strip()
+    return result
+
+
 def _hent_side(session, url, shop, page):
     last_error = "ukendt fejl"
     for attempt in range(1, MAX_ATTEMPTS + 1):
@@ -52,13 +103,21 @@ def _hent_side(session, url, shop, page):
             raise ShopifyFejl(f"{shop}: {last_error} på side {page}", page=page) from exc
 
         if response.status_code == 429:
-            last_error = "HTTP 429"
+            diagnostic = _response_diagnostics(response)
+            last_error = f"HTTP 429 ({diagnostic})"
+            if "local_rate_limited" in (getattr(response, "text", "") or "").lower():
+                raise ShopifyFejl(
+                    f"{shop}: Shopify bot-filter afviste kaldet (local_rate_limited; "
+                    f"{diagnostic}). Brug butiksejerens Web Bot Auth-signatur eller et "
+                    f"godkendt produktfeed; ventetid løser ikke denne afvisning. På side {page}",
+                    status_code=429, page=page,
+                )
             if attempt < MAX_ATTEMPTS:
                 wait = _retry_after_seconds(response)
-                print(f"   ⏳ {shop}: HTTP 429 — venter {wait}s som Shopify beder om, prøver én gang til...")
+                print(f"   ⏳ {shop}: HTTP 429 — {diagnostic} — venter {wait}s som serveren beder om, prøver én gang til...")
                 time.sleep(wait)
                 continue
-            raise ShopifyFejl(f"{shop}: gav op efter {attempt} forsøg (HTTP 429) på side {page}",
+            raise ShopifyFejl(f"{shop}: gav op efter {attempt} forsøg (HTTP 429; {diagnostic}) på side {page}",
                               status_code=429, page=page)
 
         if response.status_code >= 500:
@@ -86,7 +145,7 @@ def _hent_side(session, url, shop, page):
 def shopify_pages(base_url, shop, headers, limit=LIMIT):
     """Yield pages; make at most one retry for a throttled or transient request."""
     session = requests.Session()
-    session.headers.update(headers)
+    session.headers.update(_authorized_headers(shop, headers))
     page = 1
     while True:
         url = f"{base_url.rstrip('/')}/products.json?limit={limit}&page={page}"

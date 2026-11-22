@@ -1,5 +1,6 @@
 @echo off
 chcp 65001 > nul
+set PYTHONUTF8=1
 cd /d C:\Kodning\beer-sniffer
 echo.
 echo ============================================================
@@ -31,8 +32,11 @@ echo.
 REM ---- Koer build_data.py (scraper + facit + data.json) ----
 echo [1/4] Scraper alle butikker, anvender facit og bygger data.json...
 echo.
-python build_data.py
-if errorlevel 1 (
+if not exist logs mkdir logs
+python -u build_data.py > logs\seneste_scrape.log 2>&1
+set BUILD_EXIT=%errorlevel%
+type logs\seneste_scrape.log
+if not "%BUILD_EXIT%"=="0" (
     echo.
     echo FEJL: build_data.py fejlede
     pause
@@ -46,7 +50,7 @@ REM ol/            = individuelle oel-sider med dagens priser
 REM sitemap.xml    = regenereres hvert build
 echo.
 echo [2/4] Tilfoejer build-outputs til git...
-git add data.json price_history.json fejlliste.xlsx index.html ol/ bryggeri/ sitemap.xml
+git add data.json price_history.json fejlliste.xlsx index.html ol/ bryggeri/ sitemap.xml opdater.bat
 git add -A bryggeri/
 REM ---- Commit (kun hvis der er aendringer) ----
 echo.

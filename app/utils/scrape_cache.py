@@ -7,7 +7,7 @@ import re
 import tempfile
 import unicodedata
 
-CACHE_MAX_AGE = timedelta(hours=72)
+CACHE_MAX_AGE = timedelta(days=14)
 
 
 def _shop_key(shop):
@@ -42,7 +42,7 @@ def save_shop_cache(shop, products, *, cache_dir=None, now=None):
 
 
 def load_shop_cache(shop, *, cache_dir=None, now=None, max_age=CACHE_MAX_AGE):
-    """Return (marked_products, fetched_at) when the cache is valid and <=72h old."""
+    """Return (marked_products, fetched_at) when the cache is valid and <=14 days old."""
     path = _cache_path(shop, cache_dir)
     try:
         payload = json.loads(path.read_text(encoding="utf-8"))
@@ -69,3 +69,55 @@ def load_shop_cache(shop, *, cache_dir=None, now=None, max_age=CACHE_MAX_AGE):
         marked["_cache_fetched_at"] = fetched_text
         result.append(marked)
     return (result, fetched_text) if result else None
+
+
+def seed_shop_caches_from_snapshot(shops=None, *, snapshot_path="data.json", cache_dir=None, now=None):
+    """Seed per-shop caches from the last good generated snapshot, if it is recent."""
+    try:
+        snapshot = json.loads(Path(snapshot_path).read_text(encoding="utf-8"))
+        updated_at = datetime.fromisoformat(snapshot["updated_at"])
+        if updated_at.tzinfo is None:
+            updated_at = updated_at.replace(tzinfo=datetime.now().astimezone().tzinfo)
+        updated_at = updated_at.astimezone(timezone.utc)
+        current = now or datetime.now(timezone.utc)
+        if current.tzinfo is None:
+            current = current.replace(tzinfo=timezone.utc)
+        age = current - updated_at
+        if age < timedelta(minutes=-5) or age > CACHE_MAX_AGE:
+            return {}
+    except (OSError, ValueError, TypeError, KeyError, json.JSONDecodeError):
+        return {}
+
+    selected = set(shops) if shops is not None else None
+    grouped = {}
+    beer_fields = ("name", "brewery", "volume_cl", "abv", "type", "image", "description", "category")
+    for beer in snapshot.get("beers", []):
+        if not isinstance(beer, dict):
+            continue
+        common = {key: beer[key] for key in beer_fields if key in beer}
+        for price in beer.get("prices", []):
+            if not isinstance(price, dict) or price.get("stale"):
+                continue
+            shop = price.get("shop_name")
+            if not shop or (selected is not None and shop not in selected):
+                continue
+            grouped.setdefault(shop, []).append({**common, **price})
+
+    seeded = {}
+    for shop, products in grouped.items():
+        path = _cache_path(shop, cache_dir)
+        existing_at = None
+        try:
+            payload = json.loads(path.read_text(encoding="utf-8"))
+            existing_at = datetime.fromisoformat(payload["hentet"])
+            if existing_at.tzinfo is None:
+                existing_at = existing_at.replace(tzinfo=timezone.utc)
+            existing_at = existing_at.astimezone(timezone.utc)
+        except (OSError, ValueError, TypeError, KeyError, json.JSONDecodeError):
+            pass
+        if existing_at is not None and existing_at >= updated_at:
+            continue
+        fetched_at = save_shop_cache(shop, products, cache_dir=cache_dir, now=updated_at)
+        if fetched_at:
+            seeded[shop] = len(products)
+    return seeded

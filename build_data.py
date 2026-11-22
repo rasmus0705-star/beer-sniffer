@@ -148,7 +148,7 @@ def run_all_scrapers(*, scrapers_override=None, shopify_names_override=None,
             return name, [], e, time.time() - t0
 
     # Shopify-kilderne kører serielt. Ved to side-1 429-fejl i træk åbnes
-    # kredsløbsafbryderen, og resten bruger kun en gyldig cache (højst 72 timer).
+    # kredsløbsafbryderen, og resten bruger kun en gyldig cache (højst 14 dage).
     SHOPIFY = set(shopify_names_override if shopify_names_override is not None else get_shopify_names())
     seriel = [(n, f) for n, f in scrapers if n in SHOPIFY]
     parallel = [(n, f) for n, f in scrapers if n not in SHOPIFY]
@@ -642,7 +642,7 @@ def simulate_shopify_429(names):
 
     def run_simulation(expired_shop=None):
         with TemporaryDirectory(prefix="beersniffer-429-") as temp_cache:
-            old = datetime.now(timezone.utc) - timedelta(hours=73)
+            old = datetime.now(timezone.utc) - timedelta(days=15)
             recent = datetime.now(timezone.utc) - timedelta(hours=1)
             for shop in shopify_names:
                 save_shop_cache(shop, fixtures[shop], cache_dir=temp_cache,
@@ -681,11 +681,11 @@ def simulate_shopify_429(names):
 
     items, results, fallback, errors = run_simulation(expired_shop=shopify_names[-1])
     if results.get(shopify_names[-1]) != 0 or shopify_names[-1] in fallback:
-        raise AssertionError("Cache ældre end 72 timer skulle tælle som manglende butik")
+        raise AssertionError("Cache ældre end 14 dage skulle tælle som manglende butik")
     missing = [name for name, count in results.items() if not isinstance(count, int) or count == 0]
     if shopify_names[-1] not in missing:
         raise AssertionError("STOP-værnet fangede ikke den udløbne cache")
-    print("✅ Simulering: cache ældre end 72 timer blev afvist og ville stoppe buildet.")
+    print("✅ Simulering: cache ældre end 14 dage blev afvist og ville stoppe buildet.")
 
     # A successful offline run also verifies that live results refresh every cache.
     with TemporaryDirectory(prefix="beersniffer-cache-") as temp_cache:
@@ -718,6 +718,11 @@ def main():
     print(f"   Tidspunkt: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
     print("=" * 60)
 
+    from app.utils.scrape_cache import seed_shop_caches_from_snapshot
+    seeded = seed_shop_caches_from_snapshot(get_shopify_names())
+    for shop, count in seeded.items():
+        print(f"♻️ {shop}: cache initialiseret fra seneste data.json ({count} produkter)")
+
     # 1. Kør alle scrapers
     items, results, fallback_info, scrape_errors = run_all_scrapers()
 
@@ -741,7 +746,7 @@ def main():
     _mangler = [s for s, c in results.items() if not isinstance(c, int) or c == 0]
     if _mangler:
         print(f"\n❌ STOP: ingen produkter fra {', '.join(_mangler)}.")
-        print("   Intet er gemt eller pushet. Manglende butikker har ingen gyldig cache under 72 timer.")
+        print("   Intet er gemt eller pushet. Manglende butikker har ingen gyldig cache under 14 dage.")
         sys.exit(1)
 
     # BEER-VÆRKTØJ: stop før ingest og push, hvis en butik er faldet kraftigt (fx blokeret midt i en hentning)
