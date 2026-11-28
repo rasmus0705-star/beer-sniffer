@@ -11,6 +11,7 @@ Kør med: python build_data.py
 
 import json
 import os
+import re
 import sys
 import subprocess
 import time
@@ -28,7 +29,7 @@ from app.models import Beer, Price, PriceHistory, PriceAlert
 from sqlalchemy import func
 from sqlalchemy.orm import joinedload
 
-from shops import get_scrapers, get_shopify_names
+from shops import DISABLED_SHOPS, get_scrapers, get_shopify_names
 
 from app.services.ingest import ingest_batch
 from app.utils.overrides import load_fejlliste, apply_overrides, write_fejlliste, load_brewery_aliases
@@ -235,8 +236,12 @@ def build_beer_list_from_db(db):
     counter = 0
 
     for beer in beers:
-        if not beer.prices:
+        beer_prices = [p for p in beer.prices if p.shop_name not in DISABLED_SHOPS]
+        if not beer_prices:
             continue
+
+        description = re.sub(r"\bBeermatch\s+Notes\b", "", beer.description or "",
+                             flags=re.IGNORECASE).strip()
 
         norm = normalize_for_matching(beer.name)
         fp = style_fingerprint(beer.name)
@@ -285,13 +290,13 @@ def build_beer_list_from_db(db):
             if beer.id < target["id"]:
                 target["id"] = beer.id
                 target["slug"] = beer.slug
-            if beer.description and (
+            if description and (
                 not target.get("description")
-                or len(beer.description) > len(target["description"])
+                or len(description) > len(target["description"])
             ):
-                target["description"] = beer.description
+                target["description"] = description
             target.setdefault("_all_ids", [target["id"]]).append(beer.id)
-            for p in beer.prices:
+            for p in beer_prices:
                 target["prices"].append({
                     "shop_name": p.shop_name,
                     "price": p.price_dkk,
@@ -316,7 +321,7 @@ def build_beer_list_from_db(db):
             grouped[key] = {
                 "id": beer.id,
                 "slug": beer.slug,
-                "description": beer.description,
+                "description": description,
                 "_all_ids": [beer.id],
                 "name": beer.name,
                 "image": beer.image,
@@ -335,7 +340,7 @@ def build_beer_list_from_db(db):
                         "discount_pct": p.discount_pct or 0,
                         "old_price": p.old_price if hasattr(p, "old_price") else None,
                     }
-                    for p in beer.prices
+                    for p in beer_prices
                 ],
             }
 
@@ -394,6 +399,7 @@ def build_price_history(db, beer_list, days=90, min_points=2):
     rows = (
         db.query(PriceHistory.beer_id, PriceHistory.price_dkk, PriceHistory.created_at)
         .filter(PriceHistory.beer_id.in_(all_ids))
+        .filter(PriceHistory.shop_name.notin_(DISABLED_SHOPS))
         .filter(PriceHistory.created_at >= cutoff)
         .all()
     )

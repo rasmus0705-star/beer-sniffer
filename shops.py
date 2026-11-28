@@ -14,6 +14,8 @@ import ast
 import importlib
 import os
 
+DISABLED_SHOPS = {"Beermatch"}
+
 
 def discover_shops(scraper_dir=None):
     """Scanner app/scrapers/ og returnerer metadata for alle filer med SHOP_NAME."""
@@ -55,6 +57,8 @@ def discover_shops(scraper_dir=None):
 
         if "SHOP_NAME" not in constants:
             raise RuntimeError(f"Scraperfilen {filepath} mangler SHOP_NAME")
+        if constants["SHOP_NAME"] in DISABLED_SHOPS:
+            continue
 
         func_name = None
         for node in ast.iter_child_nodes(tree):

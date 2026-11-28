@@ -1,14 +1,13 @@
 {
   "updated_at": "2026-11-01T19:51:54.616572",
   "stats": {
-    "total": 3327,
-    "deals": 520,
-    "shops": 13,
+    "total": 3257,
+    "deals": 511,
+    "shops": 12,
     "shop_names": [
       "A Good Case",
       "Beer Me",
       "BeerBarrel",
-      "Beermatch",
       "Beershoppen",
       "Best of Beers",
       "Brygshoppen",
@@ -87,7 +86,8 @@
       "Øl",
       "Ølpakker"
     ],
-    "cheapest": 9.0
+    "cheapest": 9.0,
+    "stale_shops": []
   },
   "beers": [
     {
@@ -4304,32 +4304,6 @@
       "max_discount_pct": 0
     },
     {
-      "id": 18896,
-      "slug": "pohjala-prenzlauer-0-non-alcoholic",
-      "description": "Country: Estland Untappd Ratings: 3,21 Brewery Notes: A rich and creamy non-alcoholic sour beer, brewed with raspberries",
-      "name": "Pohjala - Prenzlauer 0 (Non-Alcoholic)",
-      "image": "https://cdn.shopify.com/s/files/1/0551/6600/9423/files/A1546741-4A4B-40C5-A1EB-C6723B5ABDFA.jpg?v=1788380869",
-      "type": "New England IPA",
-      "abv": 0.5,
-      "volume_cl": 33.0,
-      "brewery": "Pohjala",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Beermatch",
-          "price": 28.0,
-          "url": "https://www.beermatch.dk/products/pohjala-prenzlauer-0-non-alcoholic",
-          "discount_pct": 0,
-          "old_price": null
-        }
-      ],
-      "cheapest_price": 28.0,
-      "min_price": 28.0,
-      "shop": "Beermatch",
-      "discount_pct": 0,
-      "max_discount_pct": 0
-    },
-    {
       "id": 12845,
       "slug": "brasserie-du-bocq-blanche-de-namur",
       "description": "Blanche de Namur fra Brasserie du Bocq er af typen Witbier og er på 4,5% Bryggeriet skriver, at Blanche de Namur blev kåret til verdens bedste hvedeøl i 2009. Untappd beskriver en let, uklar og blød hvedeøl i bleg blond farve, hvor uklarheden viser sig, når den er kold, og kan forsvinde, når den bliver varmere. Duften er frugtig med koriander og bitter appelsin, og smagen er mild og blød med en let syrlig kant, en pudret mundfølelse og lidt bitterhed på 11 IBU. Bryggeriet anbefaler 2-4 °C og foreslår vildt, rødt kød og krydret hvidt kød til. Flasken er på 33cl.",
@@ -7225,13 +7199,6 @@
           "url": "https://brygshoppen.dk/products/saison-dupont-33cl",
           "discount_pct": 0,
           "old_price": null
-        },
-        {
-          "shop_name": "Beermatch",
-          "price": 34.0,
-          "url": "https://www.beermatch.dk/products/brasserie-dupont-saison-dupont-1",
-          "discount_pct": 0,
-          "old_price": null
         }
       ],
       "cheapest_price": 31.0,
@@ -8031,32 +7998,6 @@
       "max_discount_pct": 0
     },
     {
-      "id": 14204,
-      "slug": "easter-egg-omnipollo",
-      "description": "Svenske Omnipollo har lavet et flydende påske æg på dåse !! En mørk porter med chokolade noter og nogen sødme",
-      "name": "Easter Egg - Omnipollo - 33 cl- 5,0%",
-      "image": "https://cdn.shopify.com/s/files/1/0600/9438/2263/files/easteregg.jpg?v=1774873586",
-      "type": "Beer",
-      "abv": 5.0,
-      "volume_cl": 33.0,
-      "brewery": "Omnipollo",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Beermatch",
-          "price": 32.0,
-          "url": "https://www.beermatch.dk/products/omnipollo-drip",
-          "discount_pct": 0,
-          "old_price": null
-        }
-      ],
-      "cheapest_price": 32.0,
-      "min_price": 32.0,
-      "shop": "Beermatch",
-      "discount_pct": 0,
-      "max_discount_pct": 0
-    },
-    {
       "id": 13261,
       "slug": "brouwerij-st-bernardus-st-bernardus-tripel-2",
       "description": "St. Bernardus Tripel fra Brouwerij St. Bernardus er af typen Belgian Tripel og er på 8% Selv med 8% er St. Bernardus Tripel let i kroppen, og det er blomster og frugt, der fører smagen. Den er gyldenblond med et tæt, cremet skum. Duften er svagt sød, smagen er blomsteragtig og frugtig, og bitterheden på 25 IBU og sødmen holder hinanden i skak. Kroppen er let, så øllen går ned lettere, end tallet på etiketten antyder, og blomsterne i duften er det, der bliver hængende efter det første glas. Flasken er på 33cl og er en god måde at smage bryggeriets tripel på uden at åbne en stor flaske.",
@@ -8469,13 +8410,6 @@
           "shop_name": "Brygshoppen",
           "price": 33.0,
           "url": "https://brygshoppen.dk/products/corsendonk-christmas-8-1-33cl",
-          "discount_pct": 0,
-          "old_price": null
-        },
-        {
-          "shop_name": "Beermatch",
-          "price": 34.0,
-          "url": "https://www.beermatch.dk/products/corsendonk-corsendonk-christmas-ale-2025",
           "discount_pct": 0,
           "old_price": null
         },
@@ -9544,32 +9478,6 @@
       "cheapest_price": 34.0,
       "min_price": 34.0,
       "shop": "Vild med Vin",
-      "discount_pct": 0,
-      "max_discount_pct": 0
-    },
-    {
-      "id": 16898,
-      "slug": "o-o-brewing-porter-porter",
-      "description": "Type: Porter (Engelsk) Alkohol: 5,4 % Størrelse: 330 ml. Land: Sverige Untappd: 3,53 Fra Bryggeriet: -",
-      "name": "O/O Brewing - Porter Porter",
-      "image": "https://cdn.shopify.com/s/files/1/0551/6600/9423/files/D211515C-83CB-41F3-A11F-FBD490663E04.jpg?v=1777995390",
-      "type": "Porter",
-      "abv": 5.4,
-      "volume_cl": 33.0,
-      "brewery": "O/O Brewing",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Beermatch",
-          "price": 34.0,
-          "url": "https://www.beermatch.dk/products/o-o-brewing-porter-porter",
-          "discount_pct": 0,
-          "old_price": null
-        }
-      ],
-      "cheapest_price": 34.0,
-      "min_price": 34.0,
-      "shop": "Beermatch",
       "discount_pct": 0,
       "max_discount_pct": 0
     },
@@ -14488,13 +14396,6 @@
           "url": "https://www.vildmedvin.dk/gouden-carolus-christmas-33-cl",
           "discount_pct": 0,
           "old_price": null
-        },
-        {
-          "shop_name": "Beermatch",
-          "price": 39.0,
-          "url": "https://www.beermatch.dk/products/het-anker-gouden-carolus-christmas",
-          "discount_pct": 0,
-          "old_price": null
         }
       ],
       "cheapest_price": 37.0,
@@ -16469,32 +16370,6 @@
       "max_discount_pct": 0
     },
     {
-      "id": 16906,
-      "slug": "stigbergets-dont-believe-a-word-whiplash-collab",
-      "description": "brygget i samarbejde med Whiplash Country: Sweden / Rep. of Ireland Untappd Ratings: 3,83 Brewery Notes: BEHIND THIS BEER Maybe it was coincidence, or maybe it was the luck of the Irish, but our pals over at Whiplash found themselves in GBG recently and we had an empty tank. Dublin-based Whiplash make some mean pale ales and session beers, we make some pretty decent hazy and New England style IPAs, so we both made a departure and settled in the land of the West Coast style DIPA.",
-      "name": "Stigbergets - Don’t Believe A Word (Whiplash Collab)",
-      "image": "https://cdn.shopify.com/s/files/1/0551/6600/9423/files/FCA2DE7B-4F7E-41B1-8317-6ADB77A86973.jpg?v=1770049549",
-      "type": "Double IPA",
-      "abv": 8.5,
-      "volume_cl": 44.0,
-      "brewery": "Stigbergets",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Beermatch",
-          "price": 39.0,
-          "url": "https://www.beermatch.dk/products/stigbergets-don-t-believe-a-word-whiplash-collab",
-          "discount_pct": 41.8,
-          "old_price": 67.0
-        }
-      ],
-      "cheapest_price": 39.0,
-      "min_price": 39.0,
-      "shop": "Beermatch",
-      "discount_pct": 41.8,
-      "max_discount_pct": 41.8
-    },
-    {
       "id": 17077,
       "slug": "creature-comforts-fall",
       "description": "A traditional Märzen-style Oktoberfest with toasty malt character and light hop expression. This golden lager is smooth from the lagering process, malt-accented, medium-strong, and perfect for autumn celebrations.",
@@ -16569,32 +16444,6 @@
       "cheapest_price": 39.0,
       "min_price": 39.0,
       "shop": "Vild med Vin",
-      "discount_pct": 0,
-      "max_discount_pct": 0
-    },
-    {
-      "id": 14280,
-      "slug": "oerbier-de-dolle-brouwers",
-      "description": "2025 Vintage Country: Belgium Untappd Rating: 4,03 Brewery Notes: Oerbier means original, from the source. This beer has been brewed in small scale (5 gallons) at home in a copper wash kettle, by two brothers who were students at the time. They took over an old brewery which was out of business and said: \"If we don't bring the brewery back to life, nobody will!\". It was also a unique opportunity to create some interesting brews, so why not try it? Therefore we went ahead. We did the main work ourselves and kept the scale of the brewery as it was.",
-      "name": "Oerbier - De Dolle Brouwers - 33 cl. - 9%",
-      "image": "https://cdn.shopify.com/s/files/1/0600/9438/2263/files/oerbier.jpg?v=1751457583",
-      "type": "Beer",
-      "abv": 9.0,
-      "volume_cl": 33.0,
-      "brewery": "De Dolle Brouwers",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Beermatch",
-          "price": 39.0,
-          "url": "https://www.beermatch.dk/products/de-dolle-oerbier",
-          "discount_pct": 0,
-          "old_price": null
-        }
-      ],
-      "cheapest_price": 39.0,
-      "min_price": 39.0,
-      "shop": "Beermatch",
       "discount_pct": 0,
       "max_discount_pct": 0
     },
@@ -17115,32 +16964,6 @@
       "cheapest_price": 39.0,
       "min_price": 39.0,
       "shop": "Vild med Vin",
-      "discount_pct": 0,
-      "max_discount_pct": 0
-    },
-    {
-      "id": 18897,
-      "slug": "mash-gang-chug-ipa-non-alcoholic",
-      "description": "Country: England Untappd Ratings: 3,47 Brewery Notes: A modern approach to a classic combination of hops. Citra and El Dorado create a tropical torrent providing your palate with a perfect, unparalleled drinking experience. Heroic in haze, full flavoured and never brewed by halves.",
-      "name": "Mash Gang - Chug IPA (Non-Alcoholic)",
-      "image": "https://cdn.shopify.com/s/files/1/0551/6600/9423/files/2AE82BF4-D63D-4504-928A-6EED8016AFBA.jpg?v=1788380606",
-      "type": "India Pale Ale (IPA)",
-      "abv": 0.5,
-      "volume_cl": 44.0,
-      "brewery": "Mash Gang",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Beermatch",
-          "price": 39.0,
-          "url": "https://www.beermatch.dk/products/mash-gang-chug-ipa-non-alcoholic",
-          "discount_pct": 0,
-          "old_price": null
-        }
-      ],
-      "cheapest_price": 39.0,
-      "min_price": 39.0,
-      "shop": "Beermatch",
       "discount_pct": 0,
       "max_discount_pct": 0
     },
@@ -23308,13 +23131,6 @@
       "category": null,
       "prices": [
         {
-          "shop_name": "Beermatch",
-          "price": 45.0,
-          "url": "https://www.beermatch.dk/products/omnipollo-strawberry-daiquiri",
-          "discount_pct": 0,
-          "old_price": null
-        },
-        {
           "shop_name": "Brygshoppen",
           "price": 72.0,
           "url": "https://brygshoppen.dk/products/strawberry-daiquiri-6-33cl",
@@ -23322,9 +23138,9 @@
           "old_price": null
         }
       ],
-      "cheapest_price": 45.0,
-      "min_price": 45.0,
-      "shop": "Beermatch",
+      "cheapest_price": 72.0,
+      "min_price": 72.0,
+      "shop": "Brygshoppen",
       "discount_pct": 0,
       "max_discount_pct": 0
     },
@@ -26896,13 +26712,6 @@
           "url": "https://agoodcase.dk/products/stepping-stone-solar-6-7-new-england-ipa",
           "discount_pct": 18.3,
           "old_price": 56.0
-        },
-        {
-          "shop_name": "Beermatch",
-          "price": 59.0,
-          "url": "https://www.beermatch.dk/products/stepping-stone-solar",
-          "discount_pct": 0,
-          "old_price": null
         }
       ],
       "cheapest_price": 45.75,
@@ -27990,32 +27799,6 @@
       "shop": "Øltanken",
       "discount_pct": 30.3,
       "max_discount_pct": 30.3
-    },
-    {
-      "id": 20353,
-      "slug": "funky-fluid-arriba",
-      "description": "Country: Polen Untappd Ratings: 3,63 Brewery Notes: Hola Amigos! We've got a taste of a Mexican getaway for you. Arriba! is a light lager brewed with corn flakes, dry hopped with Motueka, and finished with a splash of lime juice and sea salt. ¡Salud! 11blg",
-      "name": "Funky Fluid - Arriba!",
-      "image": "https://cdn.shopify.com/s/files/1/0551/6600/9423/files/FF2E1CD0-610F-4974-8512-76B9D75693CC.jpg?v=1791728421",
-      "type": "Lager",
-      "abv": 4.5,
-      "volume_cl": 50.0,
-      "brewery": "Funky Fluid",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Beermatch",
-          "price": 46.0,
-          "url": "https://www.beermatch.dk/products/funky-fluid-arriba",
-          "discount_pct": 0,
-          "old_price": null
-        }
-      ],
-      "cheapest_price": 46.0,
-      "min_price": 46.0,
-      "shop": "Beermatch",
-      "discount_pct": 0,
-      "max_discount_pct": 0
     },
     {
       "id": 19524,
@@ -30228,32 +30011,6 @@
       "max_discount_pct": 0
     },
     {
-      "id": 16877,
-      "slug": "thyras-bryg-det-var-bockers",
-      "description": "Country: Danmark Untappd Rating: 3,31 Brewery Notes: Det var Bockers! er en tysk inspireret doppelbock med en dejlig læskende maltkrop. Den er særdeles velegnet som madøl, både til at braisere med, til at drikke under madlavning og selvfølgelig som ledsager til måltidet. Bør nydes ved 6-8 grader og i godt selskab. .",
-      "name": "Thyras Bryg - Det Var Bockers!",
-      "image": "https://cdn.shopify.com/s/files/1/0551/6600/9423/files/F25EA468-A789-4588-9344-E694C315950A.jpg?v=1780402225",
-      "type": "Bock",
-      "abv": 6.5,
-      "volume_cl": 44.0,
-      "brewery": "Thyras Bryg",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Beermatch",
-          "price": 49.0,
-          "url": "https://www.beermatch.dk/products/thyras-bryg-det-var-bockers",
-          "discount_pct": 0,
-          "old_price": null
-        }
-      ],
-      "cheapest_price": 49.0,
-      "min_price": 49.0,
-      "shop": "Beermatch",
-      "discount_pct": 0,
-      "max_discount_pct": 0
-    },
-    {
       "id": 16999,
       "slug": "underwood-rising-sun",
       "description": "Underwood's Japanese-style rice lager: light grain sweetness, a snappy dry finish and crystal-clean 5% drinkability from the Kyiv brewery.",
@@ -32108,13 +31865,6 @@
           "old_price": null
         },
         {
-          "shop_name": "Beermatch",
-          "price": 59.0,
-          "url": "https://www.beermatch.dk/products/gamma-big-doink-1",
-          "discount_pct": 0,
-          "old_price": null
-        },
-        {
           "shop_name": "Beer Me",
           "price": 60.0,
           "url": "https://www.partner-ads.com/dk/klikbanner.php?bannerid=74625&partnerid=56605&htmlurl=https://www.beer-me.dk/vare/big-doink-double-ipa-fra-gamma",
@@ -32151,13 +31901,6 @@
           "shop_name": "Beershoppen",
           "price": 60.0,
           "url": "https://beershoppen.dk/products/airplane-mode-44cl-6-8-ipa-fuerst-wiacek",
-          "discount_pct": 0,
-          "old_price": null
-        },
-        {
-          "shop_name": "Beermatch",
-          "price": 65.0,
-          "url": "https://www.beermatch.dk/products/fuerst-wiacek-hard-lunch",
           "discount_pct": 0,
           "old_price": null
         }
@@ -34873,32 +34616,6 @@
       "max_discount_pct": 0
     },
     {
-      "id": 20435,
-      "slug": "salikatt-slam-dunk",
-      "description": "Type: New England Double IPA Alkohol: 8 % Størrelse: 440 ml. Land: Norge Untappd: 4,19 Obs! Indeholder Laktos Beermatchs Noter: Nærmest en legende blandt europæisk produceret IPAs. Vanvittig god balance mellem sødme, juice og humle. Lækker mundfylde. Det her er af en meget høj standard. Bryggeriets Noter: S lam Dunk is a high intensity new england style double ipa. The beer is brewed mainly with Citra and Mosaic hops on top of a soft malt base with some addidional body and sweetness from lactose to balance the high hopping rates. We hope you enjoy this hop juice!",
-      "name": "Salikatt - Slam Dunk",
-      "image": "https://cdn.shopify.com/s/files/1/0551/6600/9423/files/674B333A-E003-4B09-993D-9D164FDC2CED.jpg?v=1791728392",
-      "type": "Double IPA",
-      "abv": 8.0,
-      "volume_cl": 44.0,
-      "brewery": "Salikatt",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Beermatch",
-          "price": 50.0,
-          "url": "https://www.beermatch.dk/products/salikatt-slam-dunk-2",
-          "discount_pct": 23.1,
-          "old_price": 65.0
-        }
-      ],
-      "cheapest_price": 50.0,
-      "min_price": 50.0,
-      "shop": "Beermatch",
-      "discount_pct": 23.1,
-      "max_discount_pct": 23.1
-    },
-    {
       "id": 19376,
       "slug": "vault-city-brewing-lychee-pear-rose-lemonade",
       "description": "Lychee, Pear & Rose Lemonade fra Vault City Brewing er af typen Fruited Sour og er på 4,6% Navnet lover lemonade, og det er præcis sådan, den skal drikkes. Vault City kalder den selv en session sour, altså en øl med moderat styrke, som man sagtens kan nyde et par af i træk, når solen står højt. Sød pære og eksotisk litchi bærer smagen, mens frisk citron giver den syrlige kant, man kender fra en hjemmelavet lemonade. Rosenblade er trukket i øllen, og de lægger en diskret, blomsteragtig duft oven på frugten, så den aldrig tager over, men gør helheden lidt mere elegant.",
@@ -36044,13 +35761,6 @@
           "url": "https://www.vildmedvin.dk/sibeeria-coffee-ipa",
           "discount_pct": 0,
           "old_price": null
-        },
-        {
-          "shop_name": "Beermatch",
-          "price": 54.0,
-          "url": "https://www.beermatch.dk/products/sibeeria-coffee-ipa-candycane-coffee",
-          "discount_pct": 0,
-          "old_price": null
         }
       ],
       "cheapest_price": 52.0,
@@ -36446,32 +36156,6 @@
       "cheapest_price": 52.0,
       "min_price": 52.0,
       "shop": "BeerBarrel",
-      "discount_pct": 0,
-      "max_discount_pct": 0
-    },
-    {
-      "id": 20081,
-      "slug": "sibeeria-smoke-lady-namachan-collab",
-      "description": "brygget i samarbejde med Namachan Brewing Country: Tjekkiet / Japan Untappd Ratings: 3,72 Brewery Notes: Japanese collaboration. This boldly smoked dark lager draws inspiration from the famous rauchbier brewed by Tokyo’s Namachan Brewery. Expect an intense smoky character layered with notes of chocolate and nuts, creating a rich yet balanced drinking experience. A playful thought experiment in liquid form—this is what Tokyo might taste like if it were Bamberg.",
-      "name": "Sibeeria - Smoke Lady (Namachan Collab)",
-      "image": "https://cdn.shopify.com/s/files/1/0551/6600/9423/files/E5776BAE-5F84-4C44-9833-3BC6E128F4DF.jpg?v=1790796143",
-      "type": null,
-      "abv": 5.5,
-      "volume_cl": 50.0,
-      "brewery": "Sibeeria",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Beermatch",
-          "price": 52.0,
-          "url": "https://www.beermatch.dk/products/sibeeria-smoke-lady-namachan-collab",
-          "discount_pct": 0,
-          "old_price": null
-        }
-      ],
-      "cheapest_price": 52.0,
-      "min_price": 52.0,
-      "shop": "Beermatch",
       "discount_pct": 0,
       "max_discount_pct": 0
     },
@@ -38552,13 +38236,6 @@
           "old_price": null
         },
         {
-          "shop_name": "Beermatch",
-          "price": 59.0,
-          "url": "https://www.beermatch.dk/products/vault-city-storre-sjampanje-brus",
-          "discount_pct": 0,
-          "old_price": 0.0
-        },
-        {
           "shop_name": "Brygshoppen",
           "price": 60.0,
           "url": "https://brygshoppen.dk/products/storre-sjampanjebrus-6-44cl",
@@ -39405,32 +39082,6 @@
       "cheapest_price": 55.0,
       "min_price": 55.0,
       "shop": "Øltanken",
-      "discount_pct": 0,
-      "max_discount_pct": 0
-    },
-    {
-      "id": 16904,
-      "slug": "gamma-to-doink-to-oel-collab",
-      "description": "brygget i samarbejde med To Øl CPH Country: Danmark Untappd Rating: - not yet - Brewery Notes: One of five collaboration DOINKS we've brewed for Great Doink Day 2026! This time, we've put a big twist on the malts, and through our shared love of classic red ales, have brewed a red IPA version of Doink - the hops remain as Cashmere, Columbus, Citra and Mosaic as always - we can't wait to try the final result at Great Doink Day 2026",
-      "name": "Gamma - To Doink (To Øl Collab)",
-      "image": "https://cdn.shopify.com/s/files/1/0551/6600/9423/files/386C7378-9DDF-4D04-81A4-F6F67FC4106D.jpg?v=1777616102",
-      "type": "India Pale Ale (IPA)",
-      "abv": 6.5,
-      "volume_cl": 44.0,
-      "brewery": "Gamma",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Beermatch",
-          "price": 55.0,
-          "url": "https://www.beermatch.dk/products/gamma-to-doink-to-ol-collab",
-          "discount_pct": 0,
-          "old_price": null
-        }
-      ],
-      "cheapest_price": 55.0,
-      "min_price": 55.0,
-      "shop": "Beermatch",
       "discount_pct": 0,
       "max_discount_pct": 0
     },
@@ -42214,32 +41865,6 @@
       "max_discount_pct": 20.0
     },
     {
-      "id": 16881,
-      "slug": "sharktor-brewing-sherbet-sour",
-      "description": "Country: Danmark Untappd Rating: - Brewery Notes: Pineapple, Lime & Vanilla Sour",
-      "name": "Sharktor Brewing - Sherbet Sour",
-      "image": "https://cdn.shopify.com/s/files/1/0551/6600/9423/files/BC44C398-6678-4C96-BBB8-5F44AC59583A.jpg?v=1780308894",
-      "type": "Sour",
-      "abv": 6.0,
-      "volume_cl": 44.0,
-      "brewery": "Sharktor Brewing",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Beermatch",
-          "price": 56.0,
-          "url": "https://www.beermatch.dk/products/sharktor-brewing-sherbet-sour",
-          "discount_pct": 0,
-          "old_price": null
-        }
-      ],
-      "cheapest_price": 56.0,
-      "min_price": 56.0,
-      "shop": "Beermatch",
-      "discount_pct": 0,
-      "max_discount_pct": 0
-    },
-    {
       "id": 21465,
       "slug": "cigar-city-brewing-guayabera-citra-ale",
       "description": "Guayabera er en frisk og humlearomatisk Pale Ale fra Cigar City Brewing, brygget udelukkende med Citra-humle. Det giver en dejlig citruspræget smagsoplevelse med noter af mandarin, lime og bær. Øllen er tør, sprød og letdrikkelig med en behagelig bitterhed og masser af frisk humlekarakter. En fantastisk Pale Ale til dig, der elsker Citra-humle.",
@@ -42266,32 +41891,6 @@
       "max_discount_pct": 0
     },
     {
-      "id": 16919,
-      "slug": "vault-city-sjampanje-brus",
-      "description": "brygget i samarbejde med Væskebalancen Type: Session Sour Alkohol: 4,8 % Størrelse: 440 ml. Land: Skotland / Danmark Untappd Rating: 4,08 OBS! Denne øl kan også fås med April månedspakken Fra Bryggeriet: Brewed in collaboration with our pals at Væskebalancen, this mixed fermentation sour beer is inspired by an iconic Danish ice lolly, with outer layers of juicy pineapple and lemon covering a soft, creamy vanilla centre.",
-      "name": "Vault City - Sjampanje Brus",
-      "image": "https://cdn.shopify.com/s/files/1/0551/6600/9423/files/560BB4B4-9C75-4CA9-B3A4-3EA7361134ED.jpg?v=1773996417",
-      "type": "Sour",
-      "abv": 4.8,
-      "volume_cl": 44.0,
-      "brewery": "Vault City",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Beermatch",
-          "price": 56.0,
-          "url": "https://www.beermatch.dk/products/vault-city-sjampanje-brus",
-          "discount_pct": 0,
-          "old_price": 0.0
-        }
-      ],
-      "cheapest_price": 56.0,
-      "min_price": 56.0,
-      "shop": "Beermatch",
-      "discount_pct": 0,
-      "max_discount_pct": 0
-    },
-    {
       "id": 15938,
       "slug": "vault-city-brewing-x-vaeskebalancen-stoerre-sjampanjebrus-modern",
       "description": null,
@@ -42314,32 +41913,6 @@
       "cheapest_price": 56.0,
       "min_price": 56.0,
       "shop": "Best of Beers",
-      "discount_pct": 0,
-      "max_discount_pct": 0
-    },
-    {
-      "id": 15538,
-      "slug": "salikatt-aurelius",
-      "description": "Aurelius fra Salikatt Bryggeri i Stavanger er en Vienna Lager brygget i klassisk stil. Øllen fremstår klar og gylden med et let kobberrødt skær og en afrundet maltprofil. Smagen er ren og sprød med en mild sødme fra malten, afbalanceret af en diskret bitterhed. Alkoholprocenten ligger på 5 %, hvilket gør den til en frisk og tilgængelig lagerøl, som egner sig til mange anledninger. Vienna Lager er en traditionsrig ølstil med oprindelse i Østrig, kendt for sin harmoniske smag og elegante balance.",
-      "name": "Salikatt Aurelius",
-      "image": "https://www.vildmedvin.dk/img/1000/1000/resize/s/a/salikatt_aurelius.jpg",
-      "type": "Lager Øl",
-      "abv": 5.0,
-      "volume_cl": 44.0,
-      "brewery": "Salikatt",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Beermatch",
-          "price": 56.0,
-          "url": "https://www.beermatch.dk/products/salikatt-aurelius",
-          "discount_pct": 0,
-          "old_price": null
-        }
-      ],
-      "cheapest_price": 56.0,
-      "min_price": 56.0,
-      "shop": "Beermatch",
       "discount_pct": 0,
       "max_discount_pct": 0
     },
@@ -44067,13 +43640,6 @@
           "url": "https://www.vildmedvin.dk/observatoriet-tableau",
           "discount_pct": 0,
           "old_price": null
-        },
-        {
-          "shop_name": "Beermatch",
-          "price": 59.0,
-          "url": "https://www.beermatch.dk/products/observatoriet-tableau-1",
-          "discount_pct": 0,
-          "old_price": 0.0
         }
       ],
       "cheapest_price": 59.0,
@@ -44388,7 +43954,7 @@
     {
       "id": 15970,
       "slug": "funky-fluid-gelato-tiki-taka-spain",
-      "description": "Type: Smoothie / Pastry Sour (with Tangerine, Orange and Strawberry) Country: Poland Untappd Ratings: 3,87 Beermatch Notes Funky Fluid is celebration this years FIFA World Cup with a series of beers of national teams that will competing in this years World Cup in the US, Mexico and Canada. Who do you think will win ? Is also available as a bundle with 6 - or all 8 beers in the series. Brewery Notes: Frutas de Temporada Ice Cream Sour w. tangerine, orange & strawberry Additional Stats Section Refreshment: 99 Siesta Efficiency: 99 18blg",
+      "description": "Type: Smoothie / Pastry Sour (with Tangerine, Orange and Strawberry) Country: Poland Untappd Ratings: 3,87  Funky Fluid is celebration this years FIFA World Cup with a series of beers of national teams that will competing in this years World Cup in the US, Mexico and Canada. Who do you think will win ? Is also available as a bundle with 6 - or all 8 beers in the series. Brewery Notes: Frutas de Temporada Ice Cream Sour w. tangerine, orange & strawberry Additional Stats Section Refreshment: 99 Siesta Efficiency: 99 18blg",
       "name": "Funky Fluid, Gelato Tiki Taka Spain",
       "image": "https://www.vildmedvin.dk/img/1000/1000/resize/f/u/funky_fluid_gelato_tiki_taka_spain.jpg",
       "type": "Sour Beer",
@@ -49727,32 +49293,6 @@
       "max_discount_pct": 0
     },
     {
-      "id": 16901,
-      "slug": "gamma-bad-doink-bad-seed-collab",
-      "description": "brygget i samarbejde med Bad Seed Brewing Country: Danmark Untappd Rating: - not yet - Brewery Notes: One of five collaboration DOINKS we've brewed for Great Doink Day 2026! Bad Seed excel at brewing west coast IPA's, so naturally we've brewed a new school West Coast DIPA. Super light malt body and mouthfeel, with a solid bitterness at the end - the hops remain as Cashmere, Columbus, Citra and Mosaic as always - we can't wait to try the final result at Great Doink Day 2026",
-      "name": "Gamma - Bad Doink (Bad Seed Collab)",
-      "image": "https://cdn.shopify.com/s/files/1/0551/6600/9423/files/4D5E681B-7542-4724-A65D-23ED284DC627.jpg?v=1777616102",
-      "type": "Double IPA",
-      "abv": 8.2,
-      "volume_cl": 44.0,
-      "brewery": "Gamma",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Beermatch",
-          "price": 62.0,
-          "url": "https://www.beermatch.dk/products/gamma-bad-doink-bad-seed-collab",
-          "discount_pct": 0,
-          "old_price": null
-        }
-      ],
-      "cheapest_price": 62.0,
-      "min_price": 62.0,
-      "shop": "Beermatch",
-      "discount_pct": 0,
-      "max_discount_pct": 0
-    },
-    {
       "id": 13223,
       "slug": "bierbrouwerij-de-koningshoeven-la-trappe-tripel",
       "description": "La Trappe Tripel fra Bierbrouwerij De Koningshoeven er af typen Tripel og er på 8% Denne lys ale præsenterer sig med en gylden farve og et fint skumlag, der lover en klassisk tripel-oplevelse. La Trappe Tripel er en kraftfuld øl i La Trappe serien, der repræsenterer den traditionelle belgiske tripel-stil brygget med hollandsk trappist-præcision og karakter. Øllen har en indbydende og elegant fremtoning med den karakteristiske tripel-elegance, der lover kompleksitet og balance. Smagsprofilen byder på en frugtig aroma af fersken og abrikoser, der giver øllen en indbydende og kompleks duft.",
@@ -49827,32 +49367,6 @@
       "cheapest_price": 62.0,
       "min_price": 62.0,
       "shop": "Øltanken",
-      "discount_pct": 0,
-      "max_discount_pct": 0
-    },
-    {
-      "id": 17881,
-      "slug": "fuerst-wiacek-false-flat",
-      "description": "Country: Denmark Untappd Ratings: 3,97 Brewery Notes: IPA – Dry hopped with Nectaron, Mosaic & Sabro.",
-      "name": "Fuerst Wiacek - False Flat",
-      "image": "https://cdn.shopify.com/s/files/1/0551/6600/9423/files/D875D167-D3D6-4ECF-B89B-72C9FD24CB9B.jpg?v=1783815085",
-      "type": "New England IPA",
-      "abv": 6.2,
-      "volume_cl": 44.0,
-      "brewery": "Fuerst Wiacek",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Beermatch",
-          "price": 62.0,
-          "url": "https://www.beermatch.dk/products/fuerst-wiacek-false-flat",
-          "discount_pct": 0,
-          "old_price": null
-        }
-      ],
-      "cheapest_price": 62.0,
-      "min_price": 62.0,
-      "shop": "Beermatch",
       "discount_pct": 0,
       "max_discount_pct": 0
     },
@@ -50556,58 +50070,6 @@
       "max_discount_pct": 0
     },
     {
-      "id": 16868,
-      "slug": "salikatt-feedwater-westum-collab",
-      "description": "brewed in collaboration with Westum Hjemmebryggeri Country: Norway Untappd Ratings: 4,17 Brewery Notes: Feedwater is a new collaboration beer brewed with our friend and talented home brewer, Espen Westum. We've brewed several beers with Espen before, and this time we went for a soft and saturated double IPA, hopped with our selected Mosaic, Galaxy, and Nelson Sauvin hops. Cheers!",
-      "name": "Salikatt - Feedwater (Westum Collab)",
-      "image": "https://cdn.shopify.com/s/files/1/0551/6600/9423/files/C49F9540-1E41-4AA2-8B65-C4B71F756659.jpg?v=1782128453",
-      "type": "Double IPA",
-      "abv": 8.0,
-      "volume_cl": 44.0,
-      "brewery": "Salikatt",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Beermatch",
-          "price": 64.0,
-          "url": "https://www.beermatch.dk/products/salikatt-feedwater-westum-collab",
-          "discount_pct": 0,
-          "old_price": null
-        }
-      ],
-      "cheapest_price": 64.0,
-      "min_price": 64.0,
-      "shop": "Beermatch",
-      "discount_pct": 0,
-      "max_discount_pct": 0
-    },
-    {
-      "id": 16875,
-      "slug": "thyras-bryg-barrel-aged-50",
-      "description": "Country: Danmark Untappd Rating: 4,00 Brewery Notes: En andel af 50, brygget i anledning af bryggerens 50års fødselsdag, blev lagt på bourbon-fad, hvor den lå og hyggede sig i et års tid. Det har skabt en yderligere dybde og kompleksitet i øllen. Den er perfekt til langsom nydelse og god tid.",
-      "name": "Thyras Bryg - Barrel Aged 50",
-      "image": "https://cdn.shopify.com/s/files/1/0551/6600/9423/files/062B87D0-62D4-4C89-A4E9-7CF6D7C6CC1E.jpg?v=1780402226",
-      "type": "Imperial Stout",
-      "abv": 9.5,
-      "volume_cl": 33.0,
-      "brewery": "Thyras Bryg",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Beermatch",
-          "price": 64.0,
-          "url": "https://www.beermatch.dk/products/thyras-bryg-barrel-aged-50",
-          "discount_pct": 0,
-          "old_price": null
-        }
-      ],
-      "cheapest_price": 64.0,
-      "min_price": 64.0,
-      "shop": "Beermatch",
-      "discount_pct": 0,
-      "max_discount_pct": 0
-    },
-    {
       "id": 13142,
       "slug": "amager-bryghus-worlds-best",
       "description": "World's Best fra Amager Bryghus er af typen Imperial Pastry Stout og er på 11%. World's Best er brygget sammen med Bådin Bryggeri og er en øl, der skal smage som den norske kvæfjordkage. Kagen kommer fra Harstad i det nordlige Norge og består af svampebund, marengs, mandler, creme og flødeskum. Den blev i 2002 kåret til Norges yndlingskage i en radioafstemning. Øllen er mørk med et tæt, cremet skum og smager af mørk chokolade, ristede mandler og vaniljecreme. Sødmen er tydelig, og mundfølelsen er fyldig og blød. Der er brugt mandelekstrakt og vaniljeekstrakt, og øllen indeholder laktose.",
@@ -50954,13 +50416,6 @@
           "url": "https://brygshoppen.dk/products/mega-rodgrod-med-flode-9-44cl",
           "discount_pct": 0,
           "old_price": null
-        },
-        {
-          "shop_name": "Beermatch",
-          "price": 67.0,
-          "url": "https://www.beermatch.dk/products/vault-city-mega-rodgrod-med-flode",
-          "discount_pct": 0,
-          "old_price": 0.0
         }
       ],
       "cheapest_price": 65.0,
@@ -51251,13 +50706,6 @@
           "url": "https://brygshoppen.dk/products/kaempe-kjobenhavner-stang-9-44cl",
           "discount_pct": 0,
           "old_price": null
-        },
-        {
-          "shop_name": "Beermatch",
-          "price": 67.0,
-          "url": "https://www.beermatch.dk/products/vault-city-kaempe-kjobenhavner-stang",
-          "discount_pct": 0,
-          "old_price": 0.0
         }
       ],
       "cheapest_price": 65.0,
@@ -53688,32 +53136,6 @@
       "max_discount_pct": 0
     },
     {
-      "id": 16885,
-      "slug": "equilibrium-mc2",
-      "description": "Country: USA Untappd Ratings: 4,20 Brewery Notes: MC² is Photon’s big brother. We literally took Photon’s hopping rate and squared it. This DIPA is our tribute to the amazing relationship that energy and mass are balanced, proportional to the speed of a photon squared. It pours a hazy tangerine color, releasing bright tropical notes of mango, pineapple, and apricot. MC² tastes like succulent mango juice loaded with chewy hop resins. It’s very drinkable for 8.0%; be careful, this one can sneak up on you.",
-      "name": "Equilibrium - MC2",
-      "image": "https://cdn.shopify.com/s/files/1/0551/6600/9423/files/BFD97AD0-4807-4D0B-B164-8DD2A1F49F08.jpg?v=1779451873",
-      "type": "Double IPA",
-      "abv": 8.0,
-      "volume_cl": 47.3,
-      "brewery": "Equilibrium",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Beermatch",
-          "price": 67.0,
-          "url": "https://www.beermatch.dk/products/equilibrium-mc2",
-          "discount_pct": 0,
-          "old_price": null
-        }
-      ],
-      "cheapest_price": 67.0,
-      "min_price": 67.0,
-      "shop": "Beermatch",
-      "discount_pct": 0,
-      "max_discount_pct": 0
-    },
-    {
       "id": 17545,
       "slug": "vault-city-mandarin-mango-pineapple-punch",
       "description": "Vault City Mandarin Mango & Pineapple Punch er en frugtdrevet sour ale, hvor tre tropiske frugter smelter sammen i en intens og saftig smagsoplevelse. Brygget er inspireret af en klassisk frugtpunch og leverer den karakteristiske fyldige stil, som Vault City er kendt for. Mandarin bidrager med friske citrusnoter og en let sødme, mens Mango tilfører blød, eksotisk frugt og en cremet mundfølelse. Ananas afrunder smagsprofilen med en frisk syrlighed og tropisk karakter, der skaber en flot balance mellem sødme og syre.",
@@ -54425,13 +53847,6 @@
           "old_price": null
         },
         {
-          "shop_name": "Beermatch",
-          "price": 76.0,
-          "url": "https://www.beermatch.dk/products/observatoriet-vieux",
-          "discount_pct": 0,
-          "old_price": null
-        },
-        {
           "shop_name": "Ølleglad",
           "price": 79.0,
           "url": "https://olleglad.dk/observatoriet-glarbo-37-5-cl",
@@ -54878,32 +54293,6 @@
       "cheapest_price": 69.0,
       "min_price": 69.0,
       "shop": "Drikbeer",
-      "discount_pct": 0,
-      "max_discount_pct": 0
-    },
-    {
-      "id": 13375,
-      "slug": "fermenterarna-hoppy-holiday-triple-ipa",
-      "description": "Triplic er en kraftfuld Triple IPA med høj humlemætning og fyldig mundfølelse. Øllen byder på intense noter af tropisk frugt, citrus og moden stenfrugt, balanceret af en solid maltbase og en varmende alkoholkarakter. En stor og aromatisk IPA med masser af dybde og kompleksitet. INFORMATION Stil: Triple IPA Størrelse: 44 cl Alkoholprocent: 9,5 % Allergener: BYGMALT, HAVRE, HVEDE Best before datoen er 16/02-2027. NB: Fri fragt ved køb over 499 kr. ellers pålægges der 59 kr. i fragt.",
-      "name": "Fermenterarna - Hoppy Holiday - 9,5% Triple IPA",
-      "image": "https://cdn.shopify.com/s/files/1/0402/1239/8243/files/Fermenterarna_HoppyHolidays.png?v=1776669421",
-      "type": "India Pale Ale (IPA)",
-      "abv": 9.5,
-      "volume_cl": 44.0,
-      "brewery": "Fermenterarna",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Beermatch",
-          "price": 69.0,
-          "url": "https://www.beermatch.dk/products/fermenterarna-hoppy-holiday",
-          "discount_pct": 0,
-          "old_price": null
-        }
-      ],
-      "cheapest_price": 69.0,
-      "min_price": 69.0,
-      "shop": "Beermatch",
       "discount_pct": 0,
       "max_discount_pct": 0
     },
@@ -58710,7 +58099,7 @@
     {
       "id": 15968,
       "slug": "funky-fluid-gelato-xtreme-tricolore-france",
-      "description": "Type: Smoothie / Pastry Sour (with Sour Cherry, Blueberry, Raspberry, Cocoa Nibs) Country: Poland Untappd Ratings: 4,21 Beermatch Notes Funky Fluid is celebration this years FIFA World Cup with a series of beers of national teams that will competing in this years World Cup in the US, Mexico and Canada. Who do you think will win ? Is also available as a bundle with 6 - or all 8 beers in the series. Brewery Notes: Black Forest Cake Double Fruited Triple Ice Cream Sour w. sour cherry, blueberry, raspberry & cocoa nibs Additional Stats Section: Fruit Load: 99 Reinheitsgebot: 1 30blg",
+      "description": "Type: Smoothie / Pastry Sour (with Sour Cherry, Blueberry, Raspberry, Cocoa Nibs) Country: Poland Untappd Ratings: 4,21  Funky Fluid is celebration this years FIFA World Cup with a series of beers of national teams that will competing in this years World Cup in the US, Mexico and Canada. Who do you think will win ? Is also available as a bundle with 6 - or all 8 beers in the series. Brewery Notes: Black Forest Cake Double Fruited Triple Ice Cream Sour w. sour cherry, blueberry, raspberry & cocoa nibs Additional Stats Section: Fruit Load: 99 Reinheitsgebot: 1 30blg",
       "name": "Gelato XTREME: Green Fluff - 50cl, 8,0%, Imperial Pastry Sour - Funky Fluid",
       "image": "https://cdn.shopify.com/s/files/1/0600/9438/2263/files/rn-image_picker_lib_temp_2e717459-b7d5-41ac-8832-83387ee50434.jpg?v=1788941648",
       "type": "Sour",
@@ -58760,13 +58149,6 @@
       "category": null,
       "prices": [
         {
-          "shop_name": "Beermatch",
-          "price": 74.0,
-          "url": "https://www.beermatch.dk/products/bad-seed-brewing-fin-diesel",
-          "discount_pct": 0,
-          "old_price": null
-        },
-        {
           "shop_name": "Beershoppen",
           "price": 75.0,
           "url": "https://beershoppen.dk/products/fin-diesel-bad-seed-brew-44-cl-8-2",
@@ -58774,9 +58156,9 @@
           "old_price": null
         }
       ],
-      "cheapest_price": 74.0,
-      "min_price": 74.0,
-      "shop": "Beermatch",
+      "cheapest_price": 75.0,
+      "min_price": 75.0,
+      "shop": "Beershoppen",
       "discount_pct": 0,
       "max_discount_pct": 0
     },
@@ -58914,32 +58296,6 @@
       "cheapest_price": 74.0,
       "min_price": 74.0,
       "shop": "Øltanken",
-      "discount_pct": 0,
-      "max_discount_pct": 0
-    },
-    {
-      "id": 16900,
-      "slug": "observatoriet-audacia-oak-juice",
-      "description": "Country: Denmark Untappd Rating: 4,27 Brewery Notes: -",
-      "name": "Observatoriet - Audacia Oak Juice",
-      "image": "https://cdn.shopify.com/s/files/1/0551/6600/9423/files/FB4DCB6D-4FA3-45A7-B2BE-FB029523B7DE.jpg?v=1762106802",
-      "type": "Sour",
-      "abv": 6.5,
-      "volume_cl": 37.5,
-      "brewery": "Observatoriet",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Beermatch",
-          "price": 74.0,
-          "url": "https://www.beermatch.dk/products/observatoriet-audacia-oak-juice",
-          "discount_pct": 0,
-          "old_price": null
-        }
-      ],
-      "cheapest_price": 74.0,
-      "min_price": 74.0,
-      "shop": "Beermatch",
       "discount_pct": 0,
       "max_discount_pct": 0
     },
@@ -59207,13 +58563,6 @@
           "shop_name": "Humledrik",
           "price": 89.0,
           "url": "https://humledrik.dk/st.bernardus-abt-12-quadrupel-brouwerij-st.bernardus",
-          "discount_pct": 0,
-          "old_price": null
-        },
-        {
-          "shop_name": "Beermatch",
-          "price": 89.0,
-          "url": "https://www.beermatch.dk/products/st-bernardus-abt-12-kopi",
           "discount_pct": 0,
           "old_price": null
         }
@@ -61409,13 +60758,6 @@
           "url": "https://humledrik.dk/flux-phase-6-ipa-verdant-brewing-co",
           "discount_pct": 0,
           "old_price": null
-        },
-        {
-          "shop_name": "Beermatch",
-          "price": 76.0,
-          "url": "https://www.beermatch.dk/products/verdant-flux-phase-6-track-collab",
-          "discount_pct": 0,
-          "old_price": null
         }
       ],
       "cheapest_price": 76.0,
@@ -62335,13 +61677,6 @@
       "category": null,
       "prices": [
         {
-          "shop_name": "Beermatch",
-          "price": 79.0,
-          "url": "https://www.beermatch.dk/products/de-dolle-oerbier-reserva-2024",
-          "discount_pct": 0,
-          "old_price": null
-        },
-        {
           "shop_name": "Humledrik",
           "price": 89.0,
           "url": "https://humledrik.dk/oerbier-special-reserva-2024-flanders-oud-bruin-de-dolle-brouwers",
@@ -62363,9 +61698,9 @@
           "old_price": null
         }
       ],
-      "cheapest_price": 79.0,
-      "min_price": 79.0,
-      "shop": "Beermatch",
+      "cheapest_price": 89.0,
+      "min_price": 89.0,
+      "shop": "Humledrik",
       "discount_pct": 0,
       "max_discount_pct": 0
     },
@@ -62864,32 +62199,6 @@
       "max_discount_pct": 0
     },
     {
-      "id": 15647,
-      "slug": "vault-city-you-wont-believe-its-not-crumble",
-      "description": "brygget i samarbejde med Sudden Death Type: Smoothie / Pastry Sour Alkohol: 6 % Størrelse: 440 ml. Land: Skotland / Tyskland Untappd Rating: 4,27 Fra Bryggeriet: Brought to you with our pals at Sudden Death Brewing Co., this smoothie sour is fresh out the oven. Jam packed with unfermented cherries, strawberries plums and apples, then layered with cinnamon warmth and pastry sweetness. “I genuinely can’t believe it’s not crumble!” – Joe Cruickshank, Sour Beer Enthusiast. Sour Scale:3 Allergens: Malted Barley & Oats (Gluten)",
-      "name": "Vault City, You Won't Believe It's Not Crumble",
-      "image": "https://www.vildmedvin.dk/img/1000/1000/resize/v/a/vault_city_you_won_t_believe_it_s_not_crumble.jpg",
-      "type": "Sour Beer",
-      "abv": 6.0,
-      "volume_cl": 44.0,
-      "brewery": "Vault City",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Beermatch",
-          "price": 79.0,
-          "url": "https://www.beermatch.dk/products/vault-city-you-wont-believe-its-not-a-crumble-sudden-death-collab",
-          "discount_pct": 0,
-          "old_price": 0.0
-        }
-      ],
-      "cheapest_price": 79.0,
-      "min_price": 79.0,
-      "shop": "Beermatch",
-      "discount_pct": 0,
-      "max_discount_pct": 0
-    },
-    {
       "id": 21444,
       "slug": "evil-twin-nyc-make-it-fruity-tanghulu",
       "description": "Make It Fruity Tanghulu is a fruited sour from Evil Twin NYC with strawberry, grape and tangerine. Tanghulu is the Chinese street snack of candied fruit on a stick.",
@@ -62938,32 +62247,6 @@
       "cheapest_price": 79.0,
       "min_price": 79.0,
       "shop": "Humledrik",
-      "discount_pct": 0,
-      "max_discount_pct": 0
-    },
-    {
-      "id": 16929,
-      "slug": "holy-goat-solar-tomb",
-      "description": "Country: Scotland Untappd Rating: 4,00 Brewery Notes: Golden sour with pineapple & passionfruit This blended golden sour beer was fermented with our ultra-tropical Brettanomyces house cultures, and conditioned 220g/l of pineapple and passionfruit puree for one month. Brewed with locally grown malted barley, wheat and oats this super juicy base beer provided flavours of mango, passionfruit and tinned pineapple which were further intensified with the fruit additions.",
-      "name": "Holy Goat - Solar Tomb",
-      "image": "https://cdn.shopify.com/s/files/1/0551/6600/9423/files/DB6D170F-165A-4D84-8AF2-ECE22D197F12.jpg?v=1769002262",
-      "type": "Sour",
-      "abv": 5.3,
-      "volume_cl": 37.5,
-      "brewery": "Holy Goat",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Beermatch",
-          "price": 79.0,
-          "url": "https://www.beermatch.dk/products/holy-goat-solar-tomb",
-          "discount_pct": 0,
-          "old_price": null
-        }
-      ],
-      "cheapest_price": 79.0,
-      "min_price": 79.0,
-      "shop": "Beermatch",
       "discount_pct": 0,
       "max_discount_pct": 0
     },
@@ -63276,32 +62559,6 @@
       "cheapest_price": 79.0,
       "min_price": 79.0,
       "shop": "Humledrik",
-      "discount_pct": 0,
-      "max_discount_pct": 0
-    },
-    {
-      "id": 18592,
-      "slug": "elmeleven-cloudwater-brew-co-nothing-to-declare-pulp",
-      "description": "brygget i samarbejde med Cloudwater Brew Co. Type: Smoothie / Pastry Sour (med Banan, Kokos, Vanilje og Kanel) Alkohol: 5 % Størrelse: 440 ml. Land: Sverige / England Untappd Rating: 4,32 Fra Bryggeriet: Banana Coconut Vanilla and a Whisper of Cinnamon PULP! Loaded with banana, coconut and vanilla ice cream and just the right amount of cinnamon! Store cold, flip can to mix before serving. This beer is vegan.",
-      "name": "Elmeleven × Cloudwater Brew Co. - Nothing To Declare (PULP)",
-      "image": "https://cdn.shopify.com/s/files/1/0776/5209/9400/files/DE6DD58A-E45B-401F-AED8-6DFF07E1B14A.jpg?v=1786700132",
-      "type": "Sour",
-      "abv": 5.0,
-      "volume_cl": 44.0,
-      "brewery": "Elmeleven × Cloudwater Brew Co.",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Beermatch",
-          "price": 79.0,
-          "url": "https://www.beermatch.dk/products/elmeleven-nothing-to-declare-pulp-cloudwater-collab",
-          "discount_pct": 0,
-          "old_price": 0.0
-        }
-      ],
-      "cheapest_price": 79.0,
-      "min_price": 79.0,
-      "shop": "Beermatch",
       "discount_pct": 0,
       "max_discount_pct": 0
     },
@@ -65797,13 +65054,6 @@
       "category": null,
       "prices": [
         {
-          "shop_name": "Beermatch",
-          "price": 85.0,
-          "url": "https://www.beermatch.dk/products/omnipollo-steal-this-beer-deep-fried-collab",
-          "discount_pct": 0,
-          "old_price": null
-        },
-        {
           "shop_name": "Beershoppen",
           "price": 90.0,
           "url": "https://beershoppen.dk/products/steal-this-beer-omnipollo-44-cl-8-0",
@@ -65811,9 +65061,9 @@
           "old_price": null
         }
       ],
-      "cheapest_price": 85.0,
-      "min_price": 85.0,
-      "shop": "Beermatch",
+      "cheapest_price": 90.0,
+      "min_price": 90.0,
+      "shop": "Beershoppen",
       "discount_pct": 0,
       "max_discount_pct": 0
     },
@@ -66069,58 +65319,6 @@
       "cheapest_price": 85.0,
       "min_price": 85.0,
       "shop": "Beershoppen",
-      "discount_pct": 0,
-      "max_discount_pct": 0
-    },
-    {
-      "id": 16876,
-      "slug": "thyras-bryg-sort-ba-brewsketeers-collab",
-      "description": "brygget i samarbejde med Brewsketeers Country: Danmark Untappd Rating: 3,99 Brewery Notes: Denne udgave af SORT har ligget på Stauning Whiskey-fade i et år, for at give endnu mere kompleksitet og dybde til SORT. SORT er et collab mellem Brewsketeers og Thyras Bryg. Oprindeligt udgivet i starten af 2025 i en ikke-fadlagret version. En andel af den oprindelige øl blev smidt på to whiskey-fade fra Stauning. Efter et år på fadet blev de blended sammen igen.",
-      "name": "Thyras Bryg - Sort BA (Brewsketeers Collab)",
-      "image": "https://cdn.shopify.com/s/files/1/0551/6600/9423/files/B241EBB4-4291-4FA6-A930-7BCC60C60155.jpg?v=1780402227",
-      "type": "Imperial Stout",
-      "abv": 11.0,
-      "volume_cl": 44.0,
-      "brewery": "Thyras Bryg",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Beermatch",
-          "price": 85.0,
-          "url": "https://www.beermatch.dk/products/thyras-bryg-sort-ba-brewsketeers-collab",
-          "discount_pct": 0,
-          "old_price": null
-        }
-      ],
-      "cheapest_price": 85.0,
-      "min_price": 85.0,
-      "shop": "Beermatch",
-      "discount_pct": 0,
-      "max_discount_pct": 0
-    },
-    {
-      "id": 16909,
-      "slug": "trillium-melcher-street",
-      "description": "Country: USA Untappd Rating: 4,24 Brewery Notes: This popular edition in our “Street” series of India Pale Ales spotlights the remarkably complex Mosaic hop. Melcher Street is hazy, pale orange in appearance and emits aromatic qualities of grapefruit, mild-earthy pine, and mango on the nose. Dank flavors of pine and green hop, along with juicy notes of tropical fruit, melon, and peach, are accentuated with crisp malt character, mild bitterness, and a soft, effervescent mouthfeel.",
-      "name": "Trillium - Melcher Street",
-      "image": "https://cdn.shopify.com/s/files/1/0551/6600/9423/files/FA7B8E0F-EE9F-4AB3-A516-79A3508DFEC5.jpg?v=1774799177",
-      "type": "New England IPA",
-      "abv": 7.2,
-      "volume_cl": 47.3,
-      "brewery": "Trillium",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Beermatch",
-          "price": 85.0,
-          "url": "https://www.beermatch.dk/products/trillium-melcher-street",
-          "discount_pct": 0,
-          "old_price": 0.0
-        }
-      ],
-      "cheapest_price": 85.0,
-      "min_price": 85.0,
-      "shop": "Beermatch",
       "discount_pct": 0,
       "max_discount_pct": 0
     },
@@ -67316,32 +66514,6 @@
       "cheapest_price": 89.0,
       "min_price": 89.0,
       "shop": "Beer Me",
-      "discount_pct": 0,
-      "max_discount_pct": 0
-    },
-    {
-      "id": 16910,
-      "slug": "trillium-mettle",
-      "description": "Country: USA Untappd Rating: 4,33 Brewery Notes: In the spirit of tenacity and camaraderie, Mettle was first created to highlight the milestone of our inaugural year as a brewery. With an intense dual dry-hop treatment of Amarillo and Citra, this medium-bodied Double IPA beckons with aromatics of peach and nectarine. A fusion of grape juice and candied citrus greet the palate while accents of white-wine, grassy hop, and a mellow bitterness reveal themselves on a smooth, dry finish.",
-      "name": "Trillium - Mettle",
-      "image": "https://cdn.shopify.com/s/files/1/0551/6600/9423/files/621EE58B-DAC9-4013-A37A-FB82632C0211.jpg?v=1774799177",
-      "type": "Double IPA",
-      "abv": 8.4,
-      "volume_cl": 47.3,
-      "brewery": "Trillium",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Beermatch",
-          "price": 89.0,
-          "url": "https://www.beermatch.dk/products/trillium-mettle",
-          "discount_pct": 0,
-          "old_price": 0.0
-        }
-      ],
-      "cheapest_price": 89.0,
-      "min_price": 89.0,
-      "shop": "Beermatch",
       "discount_pct": 0,
       "max_discount_pct": 0
     },
@@ -69970,13 +69142,6 @@
       "category": null,
       "prices": [
         {
-          "shop_name": "Beermatch",
-          "price": 99.0,
-          "url": "https://www.beermatch.dk/products/rygr-brygghus-valhall-hiernagla-peated-whisky-cask",
-          "discount_pct": 28.8,
-          "old_price": 139.0
-        },
-        {
           "shop_name": "Humledrik",
           "price": 149.0,
           "url": "https://humledrik.dk/valhall-hiernagla-whisky-cask-barley-wine-rygr-bryghus-berserk",
@@ -69984,11 +69149,11 @@
           "old_price": null
         }
       ],
-      "cheapest_price": 99.0,
-      "min_price": 99.0,
-      "shop": "Beermatch",
-      "discount_pct": 28.8,
-      "max_discount_pct": 28.8,
+      "cheapest_price": 149.0,
+      "min_price": 149.0,
+      "shop": "Humledrik",
+      "discount_pct": 0,
+      "max_discount_pct": 0,
       "price_change_7d": 50.0
     },
     {
@@ -70210,136 +69375,6 @@
       "cheapest_price": 99.0,
       "min_price": 99.0,
       "shop": "Humledrik",
-      "discount_pct": 0,
-      "max_discount_pct": 0
-    },
-    {
-      "id": 16888,
-      "slug": "brasserie-du-bas-canada-ddh-constantin",
-      "description": "Country: Canada Untappd Ratings: 4,31 Brewery Notes: Version Double Dry Hopped de Néron. DDH Double IPA with Citra, Galaxy & Amarillo hops.",
-      "name": "Brasserie Du Bas-Canada - DDH Constantin",
-      "image": "https://cdn.shopify.com/s/files/1/0551/6600/9423/files/665B92E0-D9C4-41BB-B248-975A58316AA1.jpg?v=1779451874",
-      "type": "Double IPA",
-      "abv": 8.2,
-      "volume_cl": 47.3,
-      "brewery": "Brasserie Du Bas-Canada",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Beermatch",
-          "price": 99.0,
-          "url": "https://www.beermatch.dk/products/brasserie-du-bas-canada-ddh-constantin",
-          "discount_pct": 0,
-          "old_price": null
-        }
-      ],
-      "cheapest_price": 99.0,
-      "min_price": 99.0,
-      "shop": "Beermatch",
-      "discount_pct": 0,
-      "max_discount_pct": 0
-    },
-    {
-      "id": 16891,
-      "slug": "bad-bones-extra-dry-hopped-brain-damage",
-      "description": "Country: Canada Untappd Ratings: 4,36 Brewery Notes: MOTUEKA & RIWAKA - 9+ LBS/BBL",
-      "name": "Bad Bones - Extra Dry-Hopped Brain Damage",
-      "image": "https://cdn.shopify.com/s/files/1/0551/6600/9423/files/F7D75443-8FED-4C01-AB6B-D0DA2117EFDB.jpg?v=1779182492",
-      "type": "New England IPA",
-      "abv": 6.8,
-      "volume_cl": 47.3,
-      "brewery": "Bad Bones",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Beermatch",
-          "price": 99.0,
-          "url": "https://www.beermatch.dk/products/bad-bones-extra-dry-hopped-brain-damage",
-          "discount_pct": 0,
-          "old_price": null
-        }
-      ],
-      "cheapest_price": 99.0,
-      "min_price": 99.0,
-      "shop": "Beermatch",
-      "discount_pct": 0,
-      "max_discount_pct": 0
-    },
-    {
-      "id": 16893,
-      "slug": "bad-bones-overcapacity",
-      "description": "Country: Canada Untappd Ratings: 4,15 Brewery Notes: EXTRA HOPPY ALE - CITRA, CITRA INCOGNITO & CITRA HYPERBOOST",
-      "name": "Bad Bones - Overcapacity",
-      "image": "https://cdn.shopify.com/s/files/1/0551/6600/9423/files/E57E6731-91BF-4A2C-B9B9-ABA3DBA24DD0.jpg?v=1779182492",
-      "type": "American Pale Ale",
-      "abv": 6.2,
-      "volume_cl": 47.3,
-      "brewery": "Bad Bones",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Beermatch",
-          "price": 99.0,
-          "url": "https://www.beermatch.dk/products/bad-bones-overcapacity",
-          "discount_pct": 0,
-          "old_price": null
-        }
-      ],
-      "cheapest_price": 99.0,
-      "min_price": 99.0,
-      "shop": "Beermatch",
-      "discount_pct": 0,
-      "max_discount_pct": 0
-    },
-    {
-      "id": 16938,
-      "slug": "drekker-madam-mumble-the-fortune-teller",
-      "description": "brewed in collaboration with Messorem Type: Smoothie/Pastry Sour (with pineapple, passionfruit, mango, calamansi, cara cara orange, peach and tropical gummy candy) Country: USA / Canada Untappd: 4,19 Brewery Notes: STEP RIGHT UP AND GAZE INTO THE BUBBLING VOID! Behold… Madam Mumble: the disoriented diviner of DrekkerFest 11! Brewed with our mystical mates of the north at Messorum, she’s summoned a Tropical Gummy Sour so dazzling, it tastes like the inside of a tarot deck read by Lisa Frank.",
-      "name": "Drekker - Madam Mumble: The Fortune Teller",
-      "image": "https://cdn.shopify.com/s/files/1/0551/6600/9423/files/026A0ED2-740D-4666-9359-4362A905DC46.jpg?v=1764338065",
-      "type": "Sour",
-      "abv": 6.4,
-      "volume_cl": 47.3,
-      "brewery": "Drekker",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Beermatch",
-          "price": 99.0,
-          "url": "https://www.beermatch.dk/products/drekker-madam-mumble-the-fortune-teller",
-          "discount_pct": 0,
-          "old_price": 0.0
-        }
-      ],
-      "cheapest_price": 99.0,
-      "min_price": 99.0,
-      "shop": "Beermatch",
-      "discount_pct": 0,
-      "max_discount_pct": 0
-    },
-    {
-      "id": 16939,
-      "slug": "drekker-circue-du-swerve-the-contortionist-arpus-collab",
-      "description": "brewed in collaboration with Arpus Brewing Co. Type: Smoothie/Pastry Sour (with Tayberry, Strawberry, Raspberry, Marshmallow and Vanilla) Country: USA / Latvia Untappd: 4,24 Brewery Notes: ROLL UP, ROLL UP AND TRY TO KEEP UP. Now spiraling into the spotlight, twisting through the laws of physics and flavor alike, it’s the one, the only… Cirque Du Swerve! This bendy little freak was brewed with our flexible friends at Ārpus Brewing Co. all the way from Latvia, and it’s twisted in all the right ways.",
-      "name": "Drekker - Circue du Swerve: The Contortionist (Arpus Collab)",
-      "image": "https://cdn.shopify.com/s/files/1/0551/6600/9423/files/72DFF702-474F-4683-9D31-3753863A64B9.jpg?v=1764313407",
-      "type": "Sour",
-      "abv": 6.3,
-      "volume_cl": 47.3,
-      "brewery": "Drekker",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Beermatch",
-          "price": 99.0,
-          "url": "https://www.beermatch.dk/products/drekker-circue-du-swerve-the-contortionist-arpus-collab",
-          "discount_pct": 0,
-          "old_price": 0.0
-        }
-      ],
-      "cheapest_price": 99.0,
-      "min_price": 99.0,
-      "shop": "Beermatch",
       "discount_pct": 0,
       "max_discount_pct": 0
     },
@@ -70782,32 +69817,6 @@
       "cheapest_price": 99.0,
       "min_price": 99.0,
       "shop": "Vild med Vin",
-      "discount_pct": 0,
-      "max_discount_pct": 0
-    },
-    {
-      "id": 16892,
-      "slug": "bad-bones-malpractice",
-      "description": "Country: Canada Untappd Ratings: 4,17 Brewery Notes: Citra & Rakau",
-      "name": "Bad Bones - Malpractice",
-      "image": "https://cdn.shopify.com/s/files/1/0551/6600/9423/files/1AE9EE22-9E46-4E9B-9A61-31C00104D9A9.jpg?v=1779182491",
-      "type": "New England IPA",
-      "abv": 6.8,
-      "volume_cl": 47.3,
-      "brewery": "Bad Bones",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Beermatch",
-          "price": 99.0,
-          "url": "https://www.beermatch.dk/products/bad-bones-malpractice",
-          "discount_pct": 0,
-          "old_price": null
-        }
-      ],
-      "cheapest_price": 99.0,
-      "min_price": 99.0,
-      "shop": "Beermatch",
       "discount_pct": 0,
       "max_discount_pct": 0
     },
@@ -72100,58 +71109,6 @@
       "max_discount_pct": 0
     },
     {
-      "id": 16889,
-      "slug": "bad-bones-the-pain",
-      "description": "Country: Canada Untappd Ratings: 4,36 Brewery Notes: Nelson Sauvin & Rakau",
-      "name": "Bad Bones - The Pain",
-      "image": "https://cdn.shopify.com/s/files/1/0551/6600/9423/files/C1869DCA-6592-4DC0-8B09-7F21750A3CA3.jpg?v=1779182494",
-      "type": "Double IPA",
-      "abv": 8.1,
-      "volume_cl": 47.3,
-      "brewery": "Bad Bones",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Beermatch",
-          "price": 105.0,
-          "url": "https://www.beermatch.dk/products/bad-bones-the-pain",
-          "discount_pct": 0,
-          "old_price": null
-        }
-      ],
-      "cheapest_price": 105.0,
-      "min_price": 105.0,
-      "shop": "Beermatch",
-      "discount_pct": 0,
-      "max_discount_pct": 0
-    },
-    {
-      "id": 16890,
-      "slug": "bad-bones-pharmacy",
-      "description": "Country: Canada Untappd Ratings: 4,31 Brewery Notes: MOTUEKA & PEACHARINE",
-      "name": "Bad Bones - Pharmacy",
-      "image": "https://cdn.shopify.com/s/files/1/0551/6600/9423/files/04AF2536-D65F-4511-B948-58A853B66233.jpg?v=1779182492",
-      "type": "Double IPA",
-      "abv": 8.7,
-      "volume_cl": 47.3,
-      "brewery": "Bad Bones",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Beermatch",
-          "price": 105.0,
-          "url": "https://www.beermatch.dk/products/bad-bones-pharmacy",
-          "discount_pct": 0,
-          "old_price": null
-        }
-      ],
-      "cheapest_price": 105.0,
-      "min_price": 105.0,
-      "shop": "Beermatch",
-      "discount_pct": 0,
-      "max_discount_pct": 0
-    },
-    {
       "id": 19124,
       "slug": "messorem-x-obercreek-collab-found-dead-at-the",
       "description": "<p>Messorem x Obercreek Brewing Company<br />\nDouble IPA – Nelson Sauvin, Krush, Citra, Citra Dynaboost, Simcoe</p>",
@@ -72613,13 +71570,6 @@
       "category": null,
       "prices": [
         {
-          "shop_name": "Beermatch",
-          "price": 109.0,
-          "url": "https://www.beermatch.dk/products/brasserie-fantome-fantome-saison-75-cl",
-          "discount_pct": 0,
-          "old_price": null
-        },
-        {
           "shop_name": "Best of Beers",
           "price": 111.0,
           "url": "https://www.bestofbeers.dk/shop/brasserie-fantome-saison-075-l-80/",
@@ -72627,9 +71577,9 @@
           "old_price": null
         }
       ],
-      "cheapest_price": 109.0,
-      "min_price": 109.0,
-      "shop": "Beermatch",
+      "cheapest_price": 111.0,
+      "min_price": 111.0,
+      "shop": "Best of Beers",
       "discount_pct": 0,
       "max_discount_pct": 0
     },
@@ -72781,58 +71731,6 @@
       "cheapest_price": 109.0,
       "min_price": 109.0,
       "shop": "Drikbeer",
-      "discount_pct": 0,
-      "max_discount_pct": 0
-    },
-    {
-      "id": 16936,
-      "slug": "beer-gift-box-2-or-3-beers",
-      "description": "Here is the perfect gift box for a Christmas gift, host gift for christmas or new years or just a gift for someone who likes great beer. 2 beers or 3 beers, Normal or Deluxe? The Normal boxes are for the regular beer drinker. Nothing too fancy or experimenting, just good solid quality beers. The Deluxe boxes are for people that appreciate beer a little more. People that talk alot about beers, and also are not afraid of various beer styles.",
-      "name": "Beer Gift Box (2 or 3 beers)",
-      "image": "https://cdn.shopify.com/s/files/1/0551/6600/9423/files/391F7040-FA70-4AD7-834C-33C48A073B07.jpg?v=1765452658",
-      "type": null,
-      "abv": null,
-      "volume_cl": null,
-      "brewery": null,
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Beermatch",
-          "price": 109.0,
-          "url": "https://www.beermatch.dk/products/beer-gift-box-2-or-3-beers",
-          "discount_pct": 0,
-          "old_price": null
-        }
-      ],
-      "cheapest_price": 109.0,
-      "min_price": 109.0,
-      "shop": "Beermatch",
-      "discount_pct": 0,
-      "max_discount_pct": 0
-    },
-    {
-      "id": 16947,
-      "slug": "puhaste-embus-bourbon-ba-silver-series-alive-collab",
-      "description": "brewed in collaboration with Alive Brewing Country: Estonia / Singapore Untappd: 4,19 Notes from the Brewery A black barley wine aged in bourbon barrels. Brewed in collaboration with Alive Brewing.",
-      "name": "Puhaste - Embus Bourbon BA (Silver Series) (Alive Collab)",
-      "image": "https://cdn.shopify.com/s/files/1/0551/6600/9423/files/A93A961A-50FC-420D-9418-C23357889700.jpg?v=1761922050",
-      "type": "Barley Wine",
-      "abv": 14.8,
-      "volume_cl": 33.0,
-      "brewery": "Puhaste",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Beermatch",
-          "price": 109.0,
-          "url": "https://www.beermatch.dk/products/puhaste-embus-bourbon-ba-silver-series-alive-collab",
-          "discount_pct": 0,
-          "old_price": null
-        }
-      ],
-      "cheapest_price": 109.0,
-      "min_price": 109.0,
-      "shop": "Beermatch",
       "discount_pct": 0,
       "max_discount_pct": 0
     },
@@ -72989,32 +71887,6 @@
       "cheapest_price": 109.0,
       "min_price": 109.0,
       "shop": "Drikbeer",
-      "discount_pct": 0,
-      "max_discount_pct": 0
-    },
-    {
-      "id": 14425,
-      "slug": "messorem-temporalis-0050",
-      "description": "Temporalis #0059 er en intens Triple New England IPA brygget med et eksklusivt udvalg af moderne humler: Citra, Citra Cryo, Citra Dynaboost, Riwaka, Nelson Sauvin, Motueka og Sabro Liquid Lupulin . Kombinationen giver en eksplosiv aroma af moden mango, passionsfrugt, fersken, hvid drue, lime og kokos, mens den silkebløde krop og den lave bitterhed gør øllen imponerende balanceret trods sine 10 %. En stor, saftig TIPA, der viser, hvorfor Messorem er blandt verdens mest eftertragtede IPA-bryggerier.",
-      "name": "Messorem - Temporalis #0050",
-      "image": "https://cdn.shopify.com/s/files/1/0776/5209/9400/files/337A3501-48C3-49E1-87C0-4D6452EB10C8.jpg?v=1774644066",
-      "type": "New England IPA",
-      "abv": 10.0,
-      "volume_cl": 47.3,
-      "brewery": "Messorem",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Beermatch",
-          "price": 109.0,
-          "url": "https://www.beermatch.dk/products/messorem-temporalis-0060",
-          "discount_pct": 0,
-          "old_price": null
-        }
-      ],
-      "cheapest_price": 109.0,
-      "min_price": 109.0,
-      "shop": "Beermatch",
       "discount_pct": 0,
       "max_discount_pct": 0
     },
@@ -73754,32 +72626,6 @@
       "shop": "Brygshoppen",
       "discount_pct": 11.5,
       "max_discount_pct": 11.5
-    },
-    {
-      "id": 16918,
-      "slug": "omnipollo-dengars-church-no-damson-emperors-collab",
-      "description": "brygget i samarbejde med Emperor’s Brewery Type: Imperial Pastry Stout (med Vanilje og Kokos) Alkohol: 11 % Størrelse: 330 ml. Land: Sverige / England Untappd: 4,26 Fra bryggeriet : We first met Damian (Emperors) back in 2018 at a tap takeover in Buxton. Fast forward a couple of years and Damian re-appears on our radar as the only private collector in the world to hold kegs of our imperial porter Lorelei. ~~~ Fast forward a couple of more years and Damian brews some of the best imperial stouts we’ve had. The beer we brewed together is loosely based on one of them called DENGAR's DAMSON STOUT.",
-      "name": "Omnipollo - Dengar’s Church (No Damson) (Emperor’s Collab)",
-      "image": "https://cdn.shopify.com/s/files/1/0551/6600/9423/files/655D7656-0D93-4ED3-80E1-539CCE734CF5.jpg?v=1774358475",
-      "type": "Imperial Stout",
-      "abv": 11.0,
-      "volume_cl": 33.0,
-      "brewery": "Omnipollo",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Beermatch",
-          "price": 115.0,
-          "url": "https://www.beermatch.dk/products/omnipollo-dengar-s-church-no-damson-emperor-s-collab",
-          "discount_pct": 0,
-          "old_price": 0.0
-        }
-      ],
-      "cheapest_price": 115.0,
-      "min_price": 115.0,
-      "shop": "Beermatch",
-      "discount_pct": 0,
-      "max_discount_pct": 0
     },
     {
       "id": 16587,
@@ -74532,32 +73378,6 @@
       "cheapest_price": 121.0,
       "min_price": 121.0,
       "shop": "Best of Beers",
-      "discount_pct": 0,
-      "max_discount_pct": 0
-    },
-    {
-      "id": 16946,
-      "slug": "bad-seed-brewing-hypocrite",
-      "description": "2025 Small Batch Series Country: Denmark Untappd Ratings: 4,24 Brewery Notes: Hypocrite is a Long Boiled Double Mashed Russian Imperial Stout - a modern take on the strong Russian Imperial Stouts of England. Fermented with an English Ale Yeast, and laid to rest in Heaven Hill bourbon barrels for 39 months. Flavors of chocolate, liquorice and dark fruits intertwine with the complexity of the yearslong aging in Bourbon Barrels with notes of vanilla, coconut and charred oak. Brewed in April 2022.",
-      "name": "Bad Seed Brewing - Hypocrite",
-      "image": "https://cdn.shopify.com/s/files/1/0551/6600/9423/files/65FA8999-59C7-4BDC-9A2F-F4DB45319734.jpg?v=1761899999",
-      "type": "Imperial Stout",
-      "abv": 14.0,
-      "volume_cl": 33.0,
-      "brewery": "Bad Seed Brewing",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Beermatch",
-          "price": 122.0,
-          "url": "https://www.beermatch.dk/products/bottle-logic-darkstar-november-kopi",
-          "discount_pct": 0,
-          "old_price": null
-        }
-      ],
-      "cheapest_price": 122.0,
-      "min_price": 122.0,
-      "shop": "Beermatch",
       "discount_pct": 0,
       "max_discount_pct": 0
     },
@@ -75440,32 +74260,6 @@
       "shop": "Humledrik",
       "discount_pct": 7.0,
       "max_discount_pct": 7.0
-    },
-    {
-      "id": 19488,
-      "slug": "funky-fluid-one-and-true",
-      "description": "Country: Polen Untappd Rating: 4,32 Brewery Notes: A non-adjunct Barley Wine aged for 30 months in a Woodford Double Oaked bourbon barrel. This special barrel is packed with notes of caramel, dried fruits and marshmallows. 36blg",
-      "name": "Funky Fluid - One And True",
-      "image": "https://cdn.shopify.com/s/files/1/0551/6600/9423/files/374B7345-28C9-48D7-9C61-CEEE385CCE04.jpg?v=1789981361",
-      "type": "Barley Wine",
-      "abv": 15.0,
-      "volume_cl": 33.0,
-      "brewery": "Funky Fluid",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Beermatch",
-          "price": 129.0,
-          "url": "https://www.beermatch.dk/products/funky-fluid-one-and-true",
-          "discount_pct": 0,
-          "old_price": null
-        }
-      ],
-      "cheapest_price": 129.0,
-      "min_price": 129.0,
-      "shop": "Beermatch",
-      "discount_pct": 0,
-      "max_discount_pct": 0
     },
     {
       "id": 19771,
@@ -77749,32 +76543,6 @@
       "max_discount_pct": 0
     },
     {
-      "id": 16883,
-      "slug": "omnipollo-andromeda-2026-3-sons-bottle-logic-collab",
-      "description": "brygget i samarbejde med 3 Sons og Bottle Logic Type: Imperial Pastry Stout (barrel aged) (with Coconut) Alkohol: 12,4 % Størrelse: 330 ml. Land: Sverige/USA Untappd: 4,29 Fra Bryggeriet: -",
-      "name": "Omnipollo - Andromeda 2026 (3 Sons & Bottle Logic Collab)",
-      "image": "https://cdn.shopify.com/s/files/1/0551/6600/9423/files/14E75F93-513C-4873-BB0C-CDE9E048D7F9.jpg?v=1779453557",
-      "type": "Imperial Stout",
-      "abv": 12.4,
-      "volume_cl": 33.0,
-      "brewery": "Omnipollo",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Beermatch",
-          "price": 149.0,
-          "url": "https://www.beermatch.dk/products/omnipollo-andromeda-2026-3-sons-bottle-logic-collab",
-          "discount_pct": 0,
-          "old_price": null
-        }
-      ],
-      "cheapest_price": 149.0,
-      "min_price": 149.0,
-      "shop": "Beermatch",
-      "discount_pct": 0,
-      "max_discount_pct": 0
-    },
-    {
       "id": 14464,
       "slug": "the-bruery-on-the-first-light-of-the",
       "description": "Et dekadent blend af Buffalo Trace rye-fadlagret Bayonet og to romfadlagrede Imperial Stouts, løftet med en generøs bananas foster-inspiration. Bananer, karamelliseret brun farin og varm kanel smelter sammen med blød vanilje og dybe fadnoter af krydret rom og whiskey. Resultatet er en intens, dessertagtig stout med stor fylde, varm sødme og lag på lag af rige smagsnuancer.",
@@ -78456,13 +77224,6 @@
           "url": "https://beershoppen.dk/products/bourbon-county-ba-goose-island-arg-2020-50-cl-14-2",
           "discount_pct": 0,
           "old_price": null
-        },
-        {
-          "shop_name": "Beermatch",
-          "price": 175.0,
-          "url": "https://www.beermatch.dk/products/goose-island-bourbon-county-brand-stout-midnight-orange-2018",
-          "discount_pct": 0,
-          "old_price": null
         }
       ],
       "cheapest_price": 159.0,
@@ -78501,32 +77262,6 @@
       "cheapest_price": 159.0,
       "min_price": 159.0,
       "shop": "Øltanken",
-      "discount_pct": 0,
-      "max_discount_pct": 0
-    },
-    {
-      "id": 13609,
-      "slug": "omnipollo-three-times-three-vol-8-imperial-stout",
-      "description": "brewed in collaboration with Hair of the Dog Brewing Co., Närke Kulturbryggeri, Kuhnhenn Brewing Co., Anchorage Brewing Co., 3 Sons Brewing Co., Pulpit Rock Brewing Co., Fidens Brewing Co., Lyric Brewing Co. Type: Imperial Pastry Stout (?) Country: Sweden / USA Untappd Rating: - not yet rated - Brewery Notes: -",
-      "name": "Omnipollo – Three Times Three Vol. 8 – Imperial Stout – 0,44 l. – 11,0%",
-      "image": "https://www.bestofbeers.dk/wp-content/uploads/2026/04/OmnipolloThreeTimesThreeVol8.jpg",
-      "type": "Imperial Stout",
-      "abv": 11.0,
-      "volume_cl": 44.0,
-      "brewery": "Omnipollo",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Beermatch",
-          "price": 159.0,
-          "url": "https://www.beermatch.dk/products/omnipollo-three-times-three-vol-8",
-          "discount_pct": 0,
-          "old_price": 0.0
-        }
-      ],
-      "cheapest_price": 159.0,
-      "min_price": 159.0,
-      "shop": "Beermatch",
       "discount_pct": 0,
       "max_discount_pct": 0
     },
@@ -78702,13 +77437,6 @@
           "shop_name": "Øltanken",
           "price": 160.0,
           "url": "https://oltanken.dk/products/goose-island-beer-co-bourbon-county-brand-stout-2022",
-          "discount_pct": 0,
-          "old_price": null
-        },
-        {
-          "shop_name": "Beermatch",
-          "price": 199.0,
-          "url": "https://www.beermatch.dk/products/goose-island-bourbon-county-brand-stout-chocolate-prailine-2025",
           "discount_pct": 0,
           "old_price": null
         }
@@ -79058,32 +77786,6 @@
       "max_discount_pct": 8.0
     },
     {
-      "id": 14480,
-      "slug": "funky-fluid-x-moska-master-blend-05",
-      "description": "brygget i samarbejde med Moksa Brewing Co. Country: Polen / USA Untappd Rating: 4,29 Brewery Notes: Our (so far) most exclusive collab. A blend of an Imperial Stout from Moksa Brewing (40 Plato, aged 24 months in Weller bourbon barrels) and ours (36 Plato, aged 42 months in a Woodford Double Oaked barrels), infused with whole vanilla beans.",
-      "name": "Funky Fluid x Moska - Master Blend #05:",
-      "image": "https://cdn.shopify.com/s/files/1/0776/5209/9400/files/90FBD920-68DC-4183-BDB8-ED8D6EFF8E67.jpg?v=1769887612",
-      "type": "Imperial Stout",
-      "abv": 15.0,
-      "volume_cl": 33.0,
-      "brewery": "Funky Fluid x Moska",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Beermatch",
-          "price": 165.0,
-          "url": "https://www.beermatch.dk/products/funky-fluid-master-blend-5-moksa-collab",
-          "discount_pct": 0,
-          "old_price": null
-        }
-      ],
-      "cheapest_price": 165.0,
-      "min_price": 165.0,
-      "shop": "Beermatch",
-      "discount_pct": 0,
-      "max_discount_pct": 0
-    },
-    {
       "id": 20299,
       "slug": "funky-fluid-8th-anniversary",
       "description": "Funky Fluid fejrer 8 år med manér. En massiv jubilæumsblend af Imperial Stout og Barley Wine, nøje udvalgt fra fade efter både bourbon og cognac. Efter fadlagringen er blendet fyldt med generøse mængder kokos, kakaonibs, pekannødder, ahornsirup og vanilje. Resultatet er en tæt og dekadent dessertbombe med mørk chokolade, ristet kokos, nødder, sød vanilje, maple og varme noter fra spiritusfadet. En seriøs jubilæumsøl på hele 15 %.",
@@ -79261,32 +77963,6 @@
       "max_discount_pct": 15.5
     },
     {
-      "id": 16931,
-      "slug": "jackie-os-endolith",
-      "description": "2025 Vintage of Endolith Country: USA Untappd Ratings: 4,38 Brewery Notes: NOW IN CANS! This bourbon barrel aged Barleywine style ale was brewed with Maris Otter, Munich, brown sugar, and lots of caramel malt. Ten malts, a long boil, and barrel aging came together to create a complex Barleywine with notes of rich caramel, oolong tea, bruleed sugar, and well-aged spirit. This vintage of Endolith was aged in a blend of Baker's and Maker's casks for 24 months that lent a supple mouthfeel from their inclusion of rye and wheat.",
-      "name": "Jackie O's - Endolith",
-      "image": "https://cdn.shopify.com/s/files/1/0551/6600/9423/files/E9F0AC70-A98D-4FBB-90B4-879FD1C1554F.jpg?v=1765813134",
-      "type": "Barley Wine",
-      "abv": 13.3,
-      "volume_cl": 3.55,
-      "brewery": "Jackie O's",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Beermatch",
-          "price": 169.0,
-          "url": "https://www.beermatch.dk/products/jackie-os-endolith",
-          "discount_pct": 0,
-          "old_price": null
-        }
-      ],
-      "cheapest_price": 169.0,
-      "min_price": 169.0,
-      "shop": "Beermatch",
-      "discount_pct": 0,
-      "max_discount_pct": 0
-    },
-    {
       "id": 17080,
       "slug": "hildegard-gray-winds-fly-by-night",
       "description": "Exceptional 2022 vintage featuring blackberries and jostaberries aged on the oldest barrel of wild ale for deep fruit and funk character.",
@@ -79417,32 +78093,6 @@
       "max_discount_pct": 0
     },
     {
-      "id": 16952,
-      "slug": "alesong-single-origin",
-      "description": "Country: USA Untappd Rating: 4,02 Brewery Notes: Goschie barley and hops are joined by Goschie Riesling and fermented spontaneously using the microflora naturally occurring on those grapes for a truly \"estate-grown\" offering.",
-      "name": "Alesong - Single Origin",
-      "image": "https://cdn.shopify.com/s/files/1/0551/6600/9423/files/B7A2D9B5-29AD-446D-802C-3150875FE66C.jpg?v=1754994536",
-      "type": "Sour",
-      "abv": 6.0,
-      "volume_cl": 50.0,
-      "brewery": "Alesong",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Beermatch",
-          "price": 174.0,
-          "url": "https://www.beermatch.dk/products/alesong-single-origin",
-          "discount_pct": 0,
-          "old_price": null
-        }
-      ],
-      "cheapest_price": 174.0,
-      "min_price": 174.0,
-      "shop": "Beermatch",
-      "discount_pct": 0,
-      "max_discount_pct": 0
-    },
-    {
       "id": 13590,
       "slug": "cantillon-cuvee-saint-gilloise-2025",
       "description": "2025 vintage Type: Lambic - Traditional Alkohol: 5.5 % Størrelse: 750 ml. Land: Belgien Untappd: 4,26 Fra Bryggeriet: \"",
@@ -79454,13 +78104,6 @@
       "brewery": "Cantillon",
       "category": null,
       "prices": [
-        {
-          "shop_name": "Beermatch",
-          "price": 175.0,
-          "url": "https://www.beermatch.dk/products/cantillon-cuvee-saint-gilloise-75-cl-2025",
-          "discount_pct": 0,
-          "old_price": null
-        },
         {
           "shop_name": "Humledrik",
           "price": 199.0,
@@ -79476,9 +78119,9 @@
           "old_price": null
         }
       ],
-      "cheapest_price": 175.0,
-      "min_price": 175.0,
-      "shop": "Beermatch",
+      "cheapest_price": 199.0,
+      "min_price": 199.0,
+      "shop": "Humledrik",
       "discount_pct": 0,
       "max_discount_pct": 0
     },
@@ -79505,32 +78148,6 @@
       "cheapest_price": 175.0,
       "min_price": 175.0,
       "shop": "Beer Me",
-      "discount_pct": 0,
-      "max_discount_pct": 0
-    },
-    {
-      "id": 16666,
-      "slug": "bourbon-county-ba-goose-island-aarg-2018",
-      "description": "2018 vintage of Bourbon Country Brand Coffee Barleywine Country: USA Untappd: 4,29 Get 20 % off this beer - use code: Goose20 (only in January) Notes from the Brewery Working with our friends at Intelligentsia, we flew down to Guatemala to source some of the world's best coffee to use as we release the first-ever Coffee Barleywine. The beer is an English-style Barleywine, meaning malt forward, and aged in 4+ year old Heaven Hill Bourbon barrels before adding La Soledad coffee beans right before packaging to retain a bold coffee aroma and flavor.",
-      "name": "Bourbon County BA - Goose Island Årg. 2018 - 50 cl. 15,2%",
-      "image": "https://cdn.shopify.com/s/files/1/0600/9438/2263/files/gooseisland2.jpg?v=1751899836",
-      "type": "Beer",
-      "abv": 15.2,
-      "volume_cl": 50.0,
-      "brewery": "Goose Island  Årg. 2018",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Beermatch",
-          "price": 175.0,
-          "url": "https://www.beermatch.dk/products/goose-island-bourbon-county-brand-coffee-barleywine-2018",
-          "discount_pct": 0,
-          "old_price": null
-        }
-      ],
-      "cheapest_price": 175.0,
-      "min_price": 175.0,
-      "shop": "Beermatch",
       "discount_pct": 0,
       "max_discount_pct": 0
     },
@@ -79843,32 +78460,6 @@
       "cheapest_price": 179.0,
       "min_price": 179.0,
       "shop": "Øltanken",
-      "discount_pct": 0,
-      "max_discount_pct": 0
-    },
-    {
-      "id": 16870,
-      "slug": "oelrejsen-til-prag-og-andre-byer-i-tjekkiet",
-      "description": "Bog, Hæftet. På Dansk (In Danish) Skrevet af Carsten Berthelsen og Kasper Mundt-Nielsen Udgivet 1/7-2025 Beskrivelse: En inspirerende rejse gennem Tjekkiets øltraditioner med fokus på lagerøllets genopblomstring og dens rødder i pilsnerstilen. En fortælling om at genfinde og værne om pilsnerøllens oprindelse og ægte karakter i Tjekkiet. Bogens forfattere har taget på en pilgrimsfærd til Tjekkiet, drevet af lagerøllets voksende popularitet.",
-      "name": "Ølrejsen Til Prag - og andre byer i Tjekkiet (BOG)",
-      "image": "https://cdn.shopify.com/s/files/1/0551/6600/9423/files/3210C150-6DD8-42B2-8554-CEB46BF6612B.jpg?v=1782128454",
-      "type": null,
-      "abv": null,
-      "volume_cl": null,
-      "brewery": "Ølrejsen Til Prag",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Beermatch",
-          "price": 179.0,
-          "url": "https://www.beermatch.dk/products/olrejsen-til-prag-og-andre-byer-i-tjekkiet",
-          "discount_pct": 0,
-          "old_price": null
-        }
-      ],
-      "cheapest_price": 179.0,
-      "min_price": 179.0,
-      "shop": "Beermatch",
       "discount_pct": 0,
       "max_discount_pct": 0
     },
@@ -80542,13 +79133,6 @@
       "category": null,
       "prices": [
         {
-          "shop_name": "Beermatch",
-          "price": 195.0,
-          "url": "https://www.beermatch.dk/products/fano-bryghus-black-wedding-limited-edition-2025-pre-order",
-          "discount_pct": 0,
-          "old_price": 0.0
-        },
-        {
           "shop_name": "Beershoppen",
           "price": 210.0,
           "url": "https://beershoppen.dk/products/white-wedding-limited-24-month-50-cl-14-6",
@@ -80570,9 +79154,9 @@
           "old_price": null
         }
       ],
-      "cheapest_price": 195.0,
-      "min_price": 195.0,
-      "shop": "Beermatch",
+      "cheapest_price": 210.0,
+      "min_price": 210.0,
+      "shop": "Beershoppen",
       "discount_pct": 0,
       "max_discount_pct": 0
     },
@@ -80979,13 +79563,6 @@
       "category": null,
       "prices": [
         {
-          "shop_name": "Beermatch",
-          "price": 199.0,
-          "url": "https://www.beermatch.dk/products/cantillon-iris-75-cl-1",
-          "discount_pct": 0,
-          "old_price": null
-        },
-        {
           "shop_name": "Øltanken",
           "price": 205.0,
           "url": "https://oltanken.dk/products/cantillon-iris-03-2026",
@@ -81007,9 +79584,9 @@
           "old_price": null
         }
       ],
-      "cheapest_price": 199.0,
-      "min_price": 199.0,
-      "shop": "Beermatch",
+      "cheapest_price": 205.0,
+      "min_price": 205.0,
+      "shop": "Øltanken",
       "discount_pct": 0,
       "max_discount_pct": 0
     },
@@ -81175,58 +79752,6 @@
       "cheapest_price": 199.0,
       "min_price": 199.0,
       "shop": "Brygshoppen",
-      "discount_pct": 0,
-      "max_discount_pct": 0
-    },
-    {
-      "id": 16871,
-      "slug": "oelrejsen-til-bruxelles-og-antwerpen-bog",
-      "description": "Bog, Hæftet. På Dansk (In Danish) Skrevet af Carsten Berthelsen og Kasper Mundt-Nielsen Udgivet 2/6-2026 Beskrivelse: Tag med på en ølrejse gennem Belgien, hvor landets rige ølkultur udfolder sig i både historiske klostre og moderne bryggerier. Oplev, hvordan Belgien stadig sætter standarden for ølverdenen med sine unikke stilarter og traditionsrige brygmetoder. En rejse ind i hjertet af Belgisk ølkultur og dens betydning for verdens ølscene.",
-      "name": "Ølrejsen Til Bruxelles og Antwerpen (BOG)",
-      "image": "https://cdn.shopify.com/s/files/1/0551/6600/9423/files/936B4060-0E95-4545-8957-013694CEE50E.jpg?v=1782128453",
-      "type": null,
-      "abv": null,
-      "volume_cl": null,
-      "brewery": null,
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Beermatch",
-          "price": 199.0,
-          "url": "https://www.beermatch.dk/products/olrejsen-til-bruxelles-og-antwerpen-bog",
-          "discount_pct": 0,
-          "old_price": null
-        }
-      ],
-      "cheapest_price": 199.0,
-      "min_price": 199.0,
-      "shop": "Beermatch",
-      "discount_pct": 0,
-      "max_discount_pct": 0
-    },
-    {
-      "id": 16912,
-      "slug": "cantillon-saint-lamvinus-2024",
-      "description": "2024 vintage Type: Lambic - med druer Alkohol: 7,5 % Størrelse: 750 ml. Land: Belgien Untappd: 4,26 Fra Bryggeriet: Blend of lambics aged on average 16 to 18 months and of Merlot grapes. The year’s blend, bottled November 2024, was exceptionally made with Merlot (55%), Grenache Noir (35%), and Syrah (10%). Lambic can be rightly considered the missing link between the worlds of wine and beer, and Saint Lamvinus takes this one step further by adding grapes normally intended for wine production. Intense, fruity beer that lingers on the palate and has a clear connection to its winemaking origins.",
-      "name": "Cantillon - Saint Lamvinus (75 cl.) (2024)",
-      "image": "https://cdn.shopify.com/s/files/1/0551/6600/9423/files/EA0E5F50-D241-41AF-B774-FC2F6BDA1A79.jpg?v=1723750378",
-      "type": "Lambic",
-      "abv": 7.5,
-      "volume_cl": 75.0,
-      "brewery": "Cantillon",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Beermatch",
-          "price": 199.0,
-          "url": "https://www.beermatch.dk/products/cantillon-saint-lamvinus-75-cl-2024",
-          "discount_pct": 0,
-          "old_price": null
-        }
-      ],
-      "cheapest_price": 199.0,
-      "min_price": 199.0,
-      "shop": "Beermatch",
       "discount_pct": 0,
       "max_discount_pct": 0
     },
@@ -82469,58 +80994,6 @@
       "max_discount_pct": 0
     },
     {
-      "id": 16958,
-      "slug": "finback-bqe-double-banana-coconut",
-      "description": "2022 Vintage Country: USA Untappd Ratings: 4,23 Brewery Notes: Imperial stout with cacao nibs, Invisible Force Brazil Yuki Minami Coffee, banana and coconut. Aged in bourbon barrels 2022.",
-      "name": "Finback - BQE (Double Banana Coconut)",
-      "image": "https://cdn.shopify.com/s/files/1/0551/6600/9423/files/1FDB98A7-6B81-4AE9-8D59-651DB25EEC23.jpg?v=1754925272",
-      "type": "Dubbel",
-      "abv": 14.8,
-      "volume_cl": 50.0,
-      "brewery": "Finback",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Beermatch",
-          "price": 225.0,
-          "url": "https://www.beermatch.dk/products/finback-bqe-double-banana-coconut",
-          "discount_pct": 24.7,
-          "old_price": 299.0
-        }
-      ],
-      "cheapest_price": 225.0,
-      "min_price": 225.0,
-      "shop": "Beermatch",
-      "discount_pct": 24.7,
-      "max_discount_pct": 24.7
-    },
-    {
-      "id": 16959,
-      "slug": "finback-ba-blueberry-drip",
-      "description": "2022 Vintage Country: USA Untappd Ratings: 4,24 Brewery Notes: Imperial snacky stout with blueberry, vanilla, coffee and peanut butter. Aged in bourbon barrels.",
-      "name": "Finback - BA Blueberry Drip",
-      "image": "https://cdn.shopify.com/s/files/1/0551/6600/9423/files/D79B435C-8DB2-49A4-821B-C9ABA88BBBF2.jpg?v=1754925271",
-      "type": "Imperial Stout",
-      "abv": 13.2,
-      "volume_cl": 50.0,
-      "brewery": "Finback",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Beermatch",
-          "price": 225.0,
-          "url": "https://www.beermatch.dk/products/finback-ba-blueberry-drip",
-          "discount_pct": 24.7,
-          "old_price": 299.0
-        }
-      ],
-      "cheapest_price": 225.0,
-      "min_price": 225.0,
-      "shop": "Beermatch",
-      "discount_pct": 24.7,
-      "max_discount_pct": 24.7
-    },
-    {
       "id": 19879,
       "slug": "blackout-brewing-smagssaet",
       "description": null,
@@ -82741,13 +81214,6 @@
       "category": null,
       "prices": [
         {
-          "shop_name": "Beermatch",
-          "price": 229.0,
-          "url": "https://www.beermatch.dk/products/penyllan-carolyn-2020-vintage",
-          "discount_pct": 0,
-          "old_price": null
-        },
-        {
           "shop_name": "ØL2GO",
           "price": 230.0,
           "url": "https://ol2go.dk/vare/penyllan-carolyn-vintage-2020/",
@@ -82755,9 +81221,9 @@
           "old_price": null
         }
       ],
-      "cheapest_price": 229.0,
-      "min_price": 229.0,
-      "shop": "Beermatch",
+      "cheapest_price": 230.0,
+      "min_price": 230.0,
+      "shop": "ØL2GO",
       "discount_pct": 0,
       "max_discount_pct": 0
     },
@@ -83464,13 +81930,6 @@
       "category": null,
       "prices": [
         {
-          "shop_name": "Beermatch",
-          "price": 249.0,
-          "url": "https://www.beermatch.dk/products/penyllan-lucia-2019-vintage",
-          "discount_pct": 0,
-          "old_price": null
-        },
-        {
           "shop_name": "ØL2GO",
           "price": 250.0,
           "url": "https://ol2go.dk/vare/penyllan-lucia-vintage-2019/",
@@ -83478,9 +81937,9 @@
           "old_price": null
         }
       ],
-      "cheapest_price": 249.0,
-      "min_price": 249.0,
-      "shop": "Beermatch",
+      "cheapest_price": 250.0,
+      "min_price": 250.0,
+      "shop": "ØL2GO",
       "discount_pct": 0,
       "max_discount_pct": 0
     },
@@ -83559,32 +82018,6 @@
       "cheapest_price": 249.0,
       "min_price": 249.0,
       "shop": "Øltanken",
-      "discount_pct": 0,
-      "max_discount_pct": 0
-    },
-    {
-      "id": 16873,
-      "slug": "penyllan-frances-2017-vintage",
-      "description": "<p>Foudre‑lagret amber ale lagret på vilde hindbær fra Bornholm<br />\nDenne lækre dame har fået tre små infusioner af hindbær over tre forskellige sæsoner. Hun skænkes rustikt ravfarvet med røde nuancer og et blødt, off‑white skum. Fin, delikat karbonering og en glat mundfølelse.<br />\nAromaen er lys og udtryksfuld, ledet af hindbær og abrikosmarmelade, florale noter af rose og et blødt indtryk af karamelliseret sukker. På paletten ligger lag af jordbærmarmelade og en konfektagtig sødme af candyfloss og Turkish delight, balanceret af en blid nøddeagtighed og en vedvarende syrlighed</p>",
-      "name": "Penyllan - Frances (2017 Vintage)",
-      "image": "https://cdn.shopify.com/s/files/1/0551/6600/9423/files/IMG-6713.jpg?v=1781525784",
-      "type": "Sour",
-      "abv": 6.0,
-      "volume_cl": 75.0,
-      "brewery": "Penyllan",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Beermatch",
-          "price": 249.0,
-          "url": "https://www.beermatch.dk/products/penyllan-frances-2017-vintage",
-          "discount_pct": 0,
-          "old_price": null
-        }
-      ],
-      "cheapest_price": 249.0,
-      "min_price": 249.0,
-      "shop": "Beermatch",
       "discount_pct": 0,
       "max_discount_pct": 0
     },
@@ -83744,32 +82177,6 @@
       "shop": "Beershoppen",
       "discount_pct": 0,
       "max_discount_pct": 0
-    },
-    {
-      "id": 19369,
-      "slug": "fanoe-bryghus-white-black-wedding-bundle-ltd-edition",
-      "description": "Det her er en bundle med både White og Black Wedding! Type: Imperial Stout - Barrel Aged Alkohol: 14,6 % + Størrelse: 500 ml. Land: Danmark Untappd: - Fra bryggeriet :",
-      "name": "Fanø Bryghus - White & Black Wedding Bundle (Ltd. Edition 2025 - 24 Mth BA) - SPECIAL OFFER",
-      "image": "https://cdn.shopify.com/s/files/1/0551/6600/9423/files/7E51A3FB-D13C-42DF-AC9F-6F5D606A7891.jpg?v=1789110475",
-      "type": "Imperial Stout",
-      "abv": null,
-      "volume_cl": null,
-      "brewery": "Fanø Bryghus",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Beermatch",
-          "price": 250.0,
-          "url": "https://www.beermatch.dk/products/fano-bryghus-white-black-wedding-ltd-edition-2025-24-mth-ba-special-offer",
-          "discount_pct": 35.9,
-          "old_price": 390.0
-        }
-      ],
-      "cheapest_price": 250.0,
-      "min_price": 250.0,
-      "shop": "Beermatch",
-      "discount_pct": 35.9,
-      "max_discount_pct": 35.9
     },
     {
       "id": 19333,
@@ -84018,32 +82425,6 @@
       "shop": "Vild med Vin",
       "discount_pct": 0,
       "max_discount_pct": 0
-    },
-    {
-      "id": 16960,
-      "slug": "bottle-logic-foeldaanroll",
-      "description": "Type: Barleywine - English (Barrel Aged) (Med Hindbær) Alkohol: 12,3 % Størrelse: 500 ml. Land: USA Untappd: 4,22 Fra Bryggeriet: Raspberry Danish-inspired Barleywine • 12.3% ABV • This beer debuted at Week of Logic 2024 as \"Painted By A Madman.\" Føldånroll is a barleywine that’s as layered as your favorite Danish! Aged to perfection in bourbon barrels, this beer blends the best of both worlds: the warm, caramel notes of an English-style barleywine, the vibrant burst of raspberry, and the tart richness of cream cheese.",
-      "name": "Bottle Logic - Føldånroll",
-      "image": "https://cdn.shopify.com/s/files/1/0551/6600/9423/files/56A91342-51A4-4651-91CA-6DECA437DA49.png?v=1732797428",
-      "type": "Imperial Stout",
-      "abv": 12.3,
-      "volume_cl": 50.0,
-      "brewery": "Bottle Logic",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Beermatch",
-          "price": 255.0,
-          "url": "https://www.beermatch.dk/products/bottle-logic-foldanroll",
-          "discount_pct": 24.8,
-          "old_price": 339.0
-        }
-      ],
-      "cheapest_price": 255.0,
-      "min_price": 255.0,
-      "shop": "Beermatch",
-      "discount_pct": 24.8,
-      "max_discount_pct": 24.8
     },
     {
       "id": 19823,
@@ -85471,32 +83852,6 @@
       "max_discount_pct": 10.0
     },
     {
-      "id": 16954,
-      "slug": "bottle-logic-teraphobia-voodoo-brewing-collab",
-      "description": "2024 Vintage Brewed in collaboration with Voodoo Brewing Co. Type: Imperial Pastry Stout (Barrel Aged) with flavors of Vanilla and Bruléed Figs Country: USA Untappd Ratings: 4,29 Brewery Notes: Bourbon Barrel-Aged Imperial Stout collaboration with Voo Doo Brewing featuring Madagascar Vanilla and Brûléed Figs • 14.5% ABV • This Halloween, we’re summoning Teraphobia from its two-year slumber in Heaven Hill and Rye casks.",
-      "name": "Bottle Logic - Teraphobia (Voodoo Brewing Collab)",
-      "image": "https://cdn.shopify.com/s/files/1/0551/6600/9423/files/E2A9FE9D-A5CC-47D3-B9C0-50B0E4E2FDA5.jpg?v=1754944015",
-      "type": "Imperial Stout",
-      "abv": 14.5,
-      "volume_cl": 50.0,
-      "brewery": "Bottle Logic",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Beermatch",
-          "price": 285.0,
-          "url": "https://www.beermatch.dk/products/bottle-logic-teraphobia",
-          "discount_pct": 24.8,
-          "old_price": 379.0
-        }
-      ],
-      "cheapest_price": 285.0,
-      "min_price": 285.0,
-      "shop": "Beermatch",
-      "discount_pct": 24.8,
-      "max_discount_pct": 24.8
-    },
-    {
       "id": 14271,
       "slug": "lille-holmgaard-smagekasse-med-6-oel",
       "description": "En lækker smagekasse som er perfekt til dig, som ønsker en klassisk øloplevelse i høj kvalitet. Lille Holmgård Bryghus går meget op i at beholde værdierne i hver ølstil. OPA! IPA - IPA - 6,4% En Hazy IPA uden fikumdik. Den er klassisk med en fin bitterhed og dejlig juicyness. Jønnes Favorit - Hvedeøl - 5,5% Jønne er vild med denne friske hvedeøl. Han er vild med den lette krop, med citrus noter og banan noter. Bryggerens Double Trouble - Dubbel - 7,2% En nydelig dubbel. Sødelig, mørk, dyb i smagen hvor man finder den dejlige ristede malt.",
@@ -85590,13 +83945,6 @@
           "shop_name": "Øltanken",
           "price": 289.0,
           "url": "https://oltanken.dk/products/salikatt-x-amundsen-eagle-wings",
-          "discount_pct": 0,
-          "old_price": null
-        },
-        {
-          "shop_name": "Beermatch",
-          "price": 289.0,
-          "url": "https://www.beermatch.dk/products/salikatt-eagle-wings-amundsen-collab",
           "discount_pct": 0,
           "old_price": null
         }
@@ -87038,58 +85386,6 @@
       "max_discount_pct": 0
     },
     {
-      "id": 21537,
-      "slug": "maanedspakken-november",
-      "description": "Har du svært ved at vælge hvilke øl du skal købe? Har du brug for en guidende hånd? Eller vil du bare have en pakke med nogle rigtige gode øl af forskellige slags. Så er månedspakken den oplagte mulighed. Med månedspakken kommer vi helt rundt I krogene af vores sortiment. Månedspakken indeholder altid noget humlet øl, lidt mørkt og lidt surt, samt noget let drikkeligt og/eller noget mere specielt. Her er noget for en hver smag. Her vil også nogle gange være eksklusive øl, som kun kan fås i månedspakken.",
-      "name": "Månedspakken - November",
-      "image": "https://cdn.shopify.com/s/files/1/0551/6600/9423/files/IMG_8007.jpg?v=1793547917",
-      "type": "Double IPA",
-      "abv": null,
-      "volume_cl": null,
-      "brewery": "Månedspakken",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Beermatch",
-          "price": 343.0,
-          "url": "https://www.beermatch.dk/products/manedspakken-november-2",
-          "discount_pct": 0,
-          "old_price": null
-        }
-      ],
-      "cheapest_price": 343.0,
-      "min_price": 343.0,
-      "shop": "Beermatch",
-      "discount_pct": 0,
-      "max_discount_pct": 0
-    },
-    {
-      "id": 16941,
-      "slug": "the-bruery-black-tuesday-grand-reserve-2021",
-      "description": "Country: USA Untappd Rating: 4,45 Brewery Notes: Triple barrel-aged imperial stout Complex, decadent, and massive, Black Tuesday is the perfect base for experimentation— which is why this triple barrel-aged iteration is fittingly dubbed “Grand Reserve.” For the 2021 release, we took the classic Black Tuesday, aged in new-to-us bourbon barrels for a year, and aged it in separate bourbon barrels for an additional year, before transferring it yet again to apple brandy barrels for a final year. Triple the barrel aging, triple the complexity, triple the grandness.",
-      "name": "The Bruery - Black Tuesday Grand Reserve 2021",
-      "image": "https://cdn.shopify.com/s/files/1/0551/6600/9423/files/B9716B31-EDC9-4872-AC73-374FEAEEA602.jpg?v=1764313407",
-      "type": "Imperial Stout",
-      "abv": 21.3,
-      "volume_cl": 37.5,
-      "brewery": "The Bruery",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Beermatch",
-          "price": 349.0,
-          "url": "https://www.beermatch.dk/products/the-bruery-black-tuesday-grand-reserve-2021",
-          "discount_pct": 0,
-          "old_price": 0.0
-        }
-      ],
-      "cheapest_price": 349.0,
-      "min_price": 349.0,
-      "shop": "Beermatch",
-      "discount_pct": 0,
-      "max_discount_pct": 0
-    },
-    {
       "id": 18546,
       "slug": "wildflower-brewing-blending-bundle",
       "description": "Wildflower Brewing & Blending - Certified Organic Table Beer Wildflower Brewing & Blending - Foudre Beer #3 Wildflower Brewing & Blending - Hive: Post Brood Wildflower Brewing & Blending × Garage Project - Flower Shoppe",
@@ -87610,58 +85906,6 @@
       "max_discount_pct": 43.6
     },
     {
-      "id": 16933,
-      "slug": "fremont-bba-dark-star-coffee-edition-2015",
-      "description": "2015 vintage Land: USA Untappd: 4,51 NOTE: This beer is very limited and exclusive. No discount codes can be used to buy this beer. Fra Bryggeriet: -",
-      "name": "Fremont - BBA Dark Star - Coffee Edition (2015)",
-      "image": "https://cdn.shopify.com/s/files/1/0551/6600/9423/files/05F67375-D5B0-4C5E-84C5-024185C2E567.jpg?v=1765813134",
-      "type": "Imperial Stout",
-      "abv": 14.5,
-      "volume_cl": 65.0,
-      "brewery": "Fremont",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Beermatch",
-          "price": 399.0,
-          "url": "https://www.beermatch.dk/products/fremont-bba-dark-star-coffee-edition-2015-pre-order-very-few-in-stock",
-          "discount_pct": 0,
-          "old_price": 0.0
-        }
-      ],
-      "cheapest_price": 399.0,
-      "min_price": 399.0,
-      "shop": "Beermatch",
-      "discount_pct": 0,
-      "max_discount_pct": 0
-    },
-    {
-      "id": 16934,
-      "slug": "fremont-coconut-cacao-ba-dark-star-2022",
-      "description": "2022 vintage Type: Imperial Oatmeal Stout (with Cacao and Coconut) (Barrel Aged) Land: USA Untappd: 4,42 NOTE: This beer is very limited and exclusive. No discount codes can be used to buy this beer. Fra Bryggeriet: Imperial Oatmeal Stout with Coconut and Cacao Aged in Bourbon Barrels This year’s release is a blend of 24, 18, 12, and 8-month Bourbon Barrel-Aged Dark Star in 7-12-year old Kentucky bourbon barrels. This special edition adds coconut and cacao to complement the smooth oats and bring you a stout delight wrapped in the gentle embrace of bourbon barrel-aged warmth.",
-      "name": "Fremont - Coconut Cacao BA Dark Star 2022",
-      "image": "https://cdn.shopify.com/s/files/1/0551/6600/9423/files/IMG-4139.jpg?v=1692378750",
-      "type": "Imperial Stout",
-      "abv": 13.5,
-      "volume_cl": 65.0,
-      "brewery": "Fremont",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Beermatch",
-          "price": 399.0,
-          "url": "https://www.beermatch.dk/products/fremont-coconut-cacao-ba-dark-star-2022-pre-order-very-few-in-stock",
-          "discount_pct": 0,
-          "old_price": 0.0
-        }
-      ],
-      "cheapest_price": 399.0,
-      "min_price": 399.0,
-      "shop": "Beermatch",
-      "discount_pct": 0,
-      "max_discount_pct": 0
-    },
-    {
       "id": 14485,
       "slug": "omnipollo-empire",
       "description": "Triple Barrel Aged Imperial Stout – en helt særlig øl, lagret i tre faser over flere år. Først 9 måneder på Willett Bourbon-fade, derefter 16 måneder på romfade og til sidst 9 måneder på ahorn-bourbonfade med vanilje fra Comorerne, Papua Ny Guinea og vulkansk vanilje fra Vanuatu. En episk, stout med dyb kompleksitet, varme og vanilje i verdensklasse. 14,8 % 37,5 cl.",
@@ -88078,32 +86322,6 @@
       "max_discount_pct": 0
     },
     {
-      "id": 21267,
-      "slug": "side-project-tete-de-cuvee-2024-vintage",
-      "description": "Type: Farmhouse Ale - Saison Alkohol: 7 % Størrelse: 750 ml. Land: USA Untappd Rating: 4,27 Beermatch's Notes: Side Project er det 18. højest rated bryggeri in verden i følge brugerne af Untappd. 12. bedste hvis man fraregner mjød bryggerier. De er anerkendt over hele verden og meget eftertragtede i ølnørde kredse, for deres kompromisløse tilgang til især barrel aging og det er især deres Stout og Barleywine ølfolket tørster efter.. Side Project har tilmed den højest rated øl på hele Untappd. Vi er yderst stolte af igen at have dem på shoppen.",
-      "name": "Side Project - Tête de Cuvée (2024 Vintage) (75 cl.)",
-      "image": "https://cdn.shopify.com/s/files/1/0551/6600/9423/files/B31FC2DB-94FF-456E-BA20-F2E9948E06E8.jpg?v=1792953778",
-      "type": "Saison",
-      "abv": 7.0,
-      "volume_cl": 75.0,
-      "brewery": "Side Project",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Beermatch",
-          "price": 429.0,
-          "url": "https://www.beermatch.dk/products/side-project-tete-de-cuvee-2024-vintage-75-cl",
-          "discount_pct": 0,
-          "old_price": null
-        }
-      ],
-      "cheapest_price": 429.0,
-      "min_price": 429.0,
-      "shop": "Beermatch",
-      "discount_pct": 0,
-      "max_discount_pct": 0
-    },
-    {
       "id": 21401,
       "slug": "jule-special-smagekasse-12-stk",
       "description": "Er du klar til at gå på opdagelse i julens spændende øl-univers? 🍻 Med vores Jule Special Smagekasse får du 12 forskellige specialøl, der byder på masser af smag, spændende ølstile og hyggelige overraskelser. Her finder du ikke kun klassiske juleøl, men også øl af høj kvalitet, der passer perfekt til årstiden og inviterer dig til at prøve noget nyt. Kassen er skabt til dig, der elsker at udforske øllets mange nuancer, udfordre dine smagsløg og måske finde en ny favorit undervejs. Nogle øl vil føles velkendte, mens andre måske overrasker dig på den bedst tænkelige måde.",
@@ -88130,58 +86348,6 @@
       "max_discount_pct": 42.4
     },
     {
-      "id": 16940,
-      "slug": "timber-ales-ba-among-monsters-blue-metallic-wax",
-      "description": "brewed in collaboration with The Seed - A Living Beer Project Country: USA Untappd Rating: 4,46 Brewery Notes: Our Imperial Stout collaboration with our friends from The Seed aged for 22 months in Saz Rye barrels before being conditioned on a blend of Ugandan and Madagascar vanilla beans",
-      "name": "Timber Ales - BA Among Monsters (Blue Metallic Wax)",
-      "image": "https://cdn.shopify.com/s/files/1/0551/6600/9423/files/6338F6A4-A71A-4474-86AE-706D73AB2EB9.jpg?v=1764313407",
-      "type": "Imperial Stout",
-      "abv": 12.5,
-      "volume_cl": 50.0,
-      "brewery": "Timber Ales",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Beermatch",
-          "price": 429.0,
-          "url": "https://www.beermatch.dk/products/timber-ales-ba-among-monsters-blue-metallic-wax",
-          "discount_pct": 0,
-          "old_price": 0.0
-        }
-      ],
-      "cheapest_price": 429.0,
-      "min_price": 429.0,
-      "shop": "Beermatch",
-      "discount_pct": 0,
-      "max_discount_pct": 0
-    },
-    {
-      "id": 16943,
-      "slug": "private-press-cosmic-echoes-batch-4",
-      "description": "2024 (batch 4) vintage Type: American Strong Ale / Barleywine Stout Blend (Barrel Aged - many different barrels including a barrel that held a Quad and Munichwine) Country: USA Untappd: 4,38 Brewery Notes: Cosmic Echoes returns with another dynamic blend showcasing a fusion of two stouts, a barleywine, and a barrel that held both quad and munichwine together. This is always one of our favorite blends to compose, and this vintage may be our new favorite.",
-      "name": "Private Press - Cosmic Echoes (Batch 4)",
-      "image": "https://cdn.shopify.com/s/files/1/0551/6600/9423/files/AB605FD0-C900-49CD-BD3F-1F5626353984.jpg?v=1762340337",
-      "type": "Imperial Stout",
-      "abv": 16.3,
-      "volume_cl": 50.0,
-      "brewery": "Private Press",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Beermatch",
-          "price": 429.0,
-          "url": "https://www.beermatch.dk/products/private-press-cosmic-echoes-batch-4",
-          "discount_pct": 0,
-          "old_price": 0.0
-        }
-      ],
-      "cheapest_price": 429.0,
-      "min_price": 429.0,
-      "shop": "Beermatch",
-      "discount_pct": 0,
-      "max_discount_pct": 0
-    },
-    {
       "id": 15152,
       "slug": "oelpakke-blandet-smagning",
       "description": "Er du nysgerrig på øllets mange forskellige stilarter, eller elsker du bare at prøve noget nyt? Med vores Ølpakke - Blandet Smagning får du 12 forskellige øl, der giver dig mulighed for at udforske øllets alsidige univers. Pakken sammensættes med øl fra forskellige producenter og inden for forskellige øltyper, så du får en varieret smagsoplevelse med masser af spændende indtryk. Øl kan byde på et væld af smagsnuancer, fra friske og lette udtryk til mere fyldige, maltede, humlede eller ristede karakterer.",
@@ -88204,32 +86370,6 @@
       "cheapest_price": 437.0,
       "min_price": 437.0,
       "shop": "Vild med Vin",
-      "discount_pct": 0,
-      "max_discount_pct": 0
-    },
-    {
-      "id": 16932,
-      "slug": "private-press-electric-roads-batch-5",
-      "description": "Batch 5 vintage Country: USA Untappd: 4,53 NOTE: This beer is very limited and exclusive. No discount codes can be used to buy this beer. Brewery Notes: Double barrel-aged barleywine.",
-      "name": "Private Press - Electric Roads (Batch 5)",
-      "image": "https://cdn.shopify.com/s/files/1/0551/6600/9423/files/52EB523A-7A86-465B-8DD9-096DE16BBF3B.jpg?v=1765813133",
-      "type": "Barley Wine",
-      "abv": 16.7,
-      "volume_cl": 50.0,
-      "brewery": "Private Press",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Beermatch",
-          "price": 439.0,
-          "url": "https://www.beermatch.dk/products/private-press-electric-roads-batch-5-pre-order",
-          "discount_pct": 0,
-          "old_price": 0.0
-        }
-      ],
-      "cheapest_price": 439.0,
-      "min_price": 439.0,
-      "shop": "Beermatch",
       "discount_pct": 0,
       "max_discount_pct": 0
     },
@@ -88918,32 +87058,6 @@
       "max_discount_pct": 0
     },
     {
-      "id": 16935,
-      "slug": "3-sons-coconut-daydreams-very-few-in-stock",
-      "description": "Country: USA Untappd Rating: 4,46 !! NOTE: This beer may contain coconut sediments This beer is very limited and exclusive. No discount codes can be used to buy this beer. Brewery Notes: Introducing, Coconut Daydreams!! A bourbon barrel aged imperial stout aged in Heaven Hill barrels for 18 months before being treated with raw coconut flakes, sweet toasted coconut, and Mostra Ghost Bear espresso blend coffee!!",
-      "name": "3 Sons - Coconut Daydreams (VERY FEW IN STOCK)",
-      "image": "https://cdn.shopify.com/s/files/1/0551/6600/9423/files/2779BA3B-23DD-4510-AB1C-7D2570A3C6DB.jpg?v=1765813134",
-      "type": "Imperial Stout",
-      "abv": 14.8,
-      "volume_cl": 50.0,
-      "brewery": "3 Sons",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Beermatch",
-          "price": 569.0,
-          "url": "https://www.beermatch.dk/products/3-sons-coconut-daydreams-pre-order-very-few-in-stock",
-          "discount_pct": 0,
-          "old_price": 0.0
-        }
-      ],
-      "cheapest_price": 569.0,
-      "min_price": 569.0,
-      "shop": "Beermatch",
-      "discount_pct": 0,
-      "max_discount_pct": 0
-    },
-    {
       "id": 19307,
       "slug": "vault-city-brewing-bundle-10-cans",
       "description": null,
@@ -89308,32 +87422,6 @@
       "max_discount_pct": 14.4
     },
     {
-      "id": 21268,
-      "slug": "side-project-anabasis-blend-7",
-      "description": "Type: Barleywine - American Alkohol: 14 % Størrelse: 750 ml. Land: USA Untappd Rating: 4,35 Beermatch's Notes: Side Project er det 18. højest rated bryggeri in verden i følge brugerne af Untappd. 12. bedste hvis man fraregner mjød bryggerier. De er anerkendt over hele verden og meget eftertragtede i ølnørde kredse, for deres kompromisløse tilgang til især barrel aging og det er især deres Stout og Barleywine ølfolket tørster efter.. Side Project har tilmed den højest rated øl på hele Untappd. Vi er yderst stolte af igen at have dem på shoppen.",
-      "name": "Side Project - Anabasis (Blend #7) (75 cl.)",
-      "image": "https://cdn.shopify.com/s/files/1/0551/6600/9423/files/853A624F-3A5A-4021-850F-EAA3DD318280.jpg?v=1792953778",
-      "type": "Barley Wine",
-      "abv": 14.0,
-      "volume_cl": 75.0,
-      "brewery": "Side Project",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Beermatch",
-          "price": 629.0,
-          "url": "https://www.beermatch.dk/products/side-project-anabasis-blend-7-75-cl",
-          "discount_pct": 0,
-          "old_price": null
-        }
-      ],
-      "cheapest_price": 629.0,
-      "min_price": 629.0,
-      "shop": "Beermatch",
-      "discount_pct": 0,
-      "max_discount_pct": 0
-    },
-    {
       "id": 15131,
       "slug": "perennial-barrel-aged-sump-2026",
       "description": "BA Sump er en dekadent kaffestout, lagret 33–36 måneder på Wild Turkey Rare Breed- og Weller bourbonfade, før den afsluttes med Sump-kaffe. Årets blend er brygget med Columbia- og Excelso-kaffebønner, som tilfører dybe noter af friskristet kaffe, mørk chokolade og ristede malte. Fadlagringen giver varme lag af bourbon, vanilje og egetræ, mens den fyldige krop og bløde sødme skaber en intens og afrundet oplevelse. En kompleks og fyldig stout med masser af kaffe- og fadkarakter.",
@@ -89490,32 +87578,6 @@
       "max_discount_pct": 9.7
     },
     {
-      "id": 21269,
-      "slug": "side-project-continuance-blend-7",
-      "description": "Type: Barleywine Alkohol: 15 % Størrelse: 750 ml. Land: USA Untappd Rating: 4,48 Beermatch's Notes: Side Project er det 18. højest rated bryggeri in verden i følge brugerne af Untappd. 12. bedste hvis man fraregner mjød bryggerier. De er anerkendt over hele verden og meget eftertragtede i ølnørde kredse, for deres kompromisløse tilgang til især barrel aging og det er især deres Stout og Barleywine ølfolket tørster efter.. Side Project har tilmed den højest rated øl på hele Untappd. Vi er yderst stolte af igen at have dem på shoppen.",
-      "name": "Side Project - Continuance (Blend #7) (75 cl.)",
-      "image": "https://cdn.shopify.com/s/files/1/0551/6600/9423/files/4EB06700-1B17-4CB8-8DE5-423E529771BF.jpg?v=1792953778",
-      "type": "Barley Wine",
-      "abv": 15.0,
-      "volume_cl": 75.0,
-      "brewery": "Side Project",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Beermatch",
-          "price": 849.0,
-          "url": "https://www.beermatch.dk/products/side-project-continuance-blend-7-75-cl",
-          "discount_pct": 0,
-          "old_price": null
-        }
-      ],
-      "cheapest_price": 849.0,
-      "min_price": 849.0,
-      "shop": "Beermatch",
-      "discount_pct": 0,
-      "max_discount_pct": 0
-    },
-    {
       "id": 14381,
       "slug": "side-project-marple-lions-ba",
       "description": "✳️ Peanutbutter, banan og Vanilje. Fadlagret Missouri imperial stout udgave af Marble Lions. I 1957 placerede Elvis Presley to marmorløver på trappen foran Graceland; disse ikoniske statuer blev senere et populært sted at tage billeder for besøgende. I 2025, mens de arbejdede på et navn til en øl inspireret af Elvis Presleys yndlingssandwich med peanutbutter og banan, besluttede Side Project at kalde deres nye stout Marble Lions efter disse ikoniske statuer ved Graceland.",
@@ -89566,32 +87628,6 @@
       "shop": "Humledrik",
       "discount_pct": 10.0,
       "max_discount_pct": 10.0
-    },
-    {
-      "id": 18898,
-      "slug": "beermatch-budget-julekalender-advent-calender-24-beers",
-      "description": "OBS! Dette er den budget udgaven af vores julekalender. Det betyder stadig at her er tale om craft beer. Du får INGEN supermarkeds fylde øl og makro lagers i denne kalender, men stadig øl fra anerkendte bryggerier fra ind og udland. Dog er der tale om øl i den billigere ende af prisskalaen, samt øl der kan være tæt på sidste salgsdato. Det er ikke nødvendigvis de samme øl der er i alle kalendere. Julekalenderen indeholder 24 forskellige øl af alle forskellige stilarter - og størstedelen af øllene er jule inspirerede øl. Vilkår Vi sender - eller du kan afhente din kalender fra midt November.",
-      "name": "Beermatch \"Budget\" Julekalender (Advent Calender) (24 Beers)",
-      "image": "https://cdn.shopify.com/s/files/1/0551/6600/9423/files/beer-advent-calendar.png?v=1755163519",
-      "type": null,
-      "abv": null,
-      "volume_cl": null,
-      "brewery": null,
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Beermatch",
-          "price": 899.0,
-          "url": "https://www.beermatch.dk/products/beermatch-budget-julekalender-advent-calender-24-beers-2026-early-bird-tilbud-kopi",
-          "discount_pct": 0,
-          "old_price": 0.0
-        }
-      ],
-      "cheapest_price": 899.0,
-      "min_price": 899.0,
-      "shop": "Beermatch",
-      "discount_pct": 0,
-      "max_discount_pct": 0
     },
     {
       "id": 17046,
@@ -89828,32 +87864,6 @@
       "max_discount_pct": 0
     },
     {
-      "id": 20083,
-      "slug": "beermatch-julekalender-advent-calender-24-beers-2026",
-      "description": "OBS! Dette er den klassiske julekalender - med øl af højere kvalitet. Ved et køb af kalenderen har du mulighed for at vinde 2x billetter til Ølfestivalen 2027 i Lokomotivværkstedet i København arrangeret af Danske Ølentusiaster, samt 1x bog “Ølrejsen til Bruxelles og Antwerpen” (læs mere længere nede). Julekalenderen indeholder 24 forskellige øl af alle forskellige stilarter - og hovedsageligt jule inspirerede øl. -- Du kan følge med i Julekalenderen på YouTube. Hver øl vil blive præsenteret mellem 1. og 24. december, med et afsnit om dagen. Det bliver både informativt og sjovt.",
-      "name": "Beermatch Julekalender (Advent Calender) (24 Beers) (2026)",
-      "image": "https://cdn.shopify.com/s/files/1/0551/6600/9423/files/l-advents-kalender.png?v=1783975189",
-      "type": null,
-      "abv": null,
-      "volume_cl": null,
-      "brewery": null,
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Beermatch",
-          "price": 1549.0,
-          "url": "https://www.beermatch.dk/products/beermatch-julekalender-advent-calender-24-beers-2026",
-          "discount_pct": 0,
-          "old_price": 0.0
-        }
-      ],
-      "cheapest_price": 1549.0,
-      "min_price": 1549.0,
-      "shop": "Beermatch",
-      "discount_pct": 0,
-      "max_discount_pct": 0
-    },
-    {
       "id": 19592,
       "slug": "cantillon-blaabaer-2026-pickup-only",
       "description": "Blåbær 2019 is Cantillon's bilberry lambic, first brewed in 2005 for Ølbutikken in Copenhagen and released just once a year. Fresh European bilberries, the Danish blåbær, go straight into the barrel with the lambic at roughly 300 to 350 grams of fruit per litre. This one has seven years in the bottle. Pickup on Thursday 8 October at Mig & Ølsnedkeren, Mejlgade 12, Aarhus. Shipping is only available during the subscriber pre-sale on Friday 2 October, 12:00 to 14:00, and shipped bottles go out the week after Blåbær Day on October 8. From 14:00 this bottle is pickup only.",
@@ -89878,32 +87888,6 @@
       "shop": "Drikbeer",
       "discount_pct": 0,
       "max_discount_pct": 0
-    },
-    {
-      "id": 21266,
-      "slug": "side-project-bundle-2-barleywines-1-farmhouse-3",
-      "description": "Bundlen består af: Continuance Blend #7 Type: Barleywine Alkohol: 15 % Størrelse: 750 ml. Land: USA Untappd Rating: 4,48 Anabasis Blend #7 Type: Barleywine - American Alkohol: 14 % Størrelse: 750 ml. Land: USA Untappd Rating: 4,35 Tête de Cuvée - 2024 Vintage Type: Farmhouse Ale - Saison Alkohol: 7 % Størrelse: 750 ml. Land: USA Untappd Rating: 4,27 Normal Pris: 1907 kr. Som Bundle Kun: 1699 kr. Beermatch's Notes: Side Project er det 18. højest rated bryggeri in verden i følge brugerne af Untappd. 12. bedste hvis man fraregner mjød bryggerier.",
-      "name": "Side Project Bundle (2 Barleywines, 1 Farmhouse) (3 x 75 cl.)",
-      "image": "https://cdn.shopify.com/s/files/1/0551/6600/9423/files/C2B43DA2-FBC1-4E56-A9B4-8527A2E215BF.jpg?v=1792953778",
-      "type": "Saison",
-      "abv": null,
-      "volume_cl": null,
-      "brewery": "Side Project",
-      "category": null,
-      "prices": [
-        {
-          "shop_name": "Beermatch",
-          "price": 1699.0,
-          "url": "https://www.beermatch.dk/products/side-project-bundle-2-barleywines-1-farmhouse",
-          "discount_pct": 10.9,
-          "old_price": 1907.0
-        }
-      ],
-      "cheapest_price": 1699.0,
-      "min_price": 1699.0,
-      "shop": "Beermatch",
-      "discount_pct": 10.9,
-      "max_discount_pct": 10.9
     },
     {
       "id": 20096,
